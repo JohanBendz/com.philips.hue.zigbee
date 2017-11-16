@@ -5,7 +5,7 @@
         "en": "Philips Hue ZigBee"
     },
     "description": {
-        "en": "Philips Hue bulbs support without Bridge"
+        "en": "Philips Hue bulbs support without Bridge. I would like to credit Richard Slater for his icons that where used when creating this app (https://thenounproject.com/richard.slater)"
     },
     "category": "lights",
     "version": "1.0.0",
@@ -13,6 +13,13 @@
     "author": {
         "name": "Sebastian Johansson",
         "email": "sebastian.johansson@hibbisoft.com"
+    },
+    "contributing": {
+        "donate": {
+            "paypal": {
+                "username": "paypal.me/johanssonsebastian"
+            }
+        }
     },
     "images": {
         "large": "assets/images/large.jpg",
@@ -23,8 +30,8 @@
         {
           "id": "LTW012",
           "name": {
-            "en": "Hue White Ambiance 6W B39 E14",
-            "nl": "Hue White Ambiance 6W B39 E14"
+            "en": "LTW012 6W B39 E14",
+            "nl": "LTW012 6W B39 E14"
           },
           "class": "light",
           "capabilities": [
@@ -68,7 +75,55 @@
               }
             }
           ]
-        }
+        },
+        {
+            "id": "LWB010",
+            "name": {
+              "en": "LWB010 E27 806 lm",
+              "nl": "LWB010 E27 806 lm"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim"
+            ],
+            "images": {
+              "large": "drivers/LWB010/assets/images/large.png",
+              "small": "drivers/LWB010/assets/images/small.png"
+            },
+            "zigbee": {
+              "manufacturerName": "Philips",
+              "productId": "LWB010",
+              "deviceId": 256,
+              "profileId": 49246,
+              "learnmode": {
+                "instruction": {
+                  "en": "Plug in the Plug, or toggle the Plug to start pairing.\n\nIf pairing does not automatically start, try turning the Plug on and off 6 times.",
+                  "nl": "Stop de Plug in het stopcontact of zet de Plug uit en weer aan om hem toe te voegen.\n\nWordt de Plug niet automatisch toegevoegd, probeer hem dan 6 keer aan en uit te zetten."
+                }
+              }
+            }
+            ,
+            "settings": [
+              {
+                "id": "transition_time",
+                "type": "number",
+                "label": {
+                  "en": "Transition Time",
+                  "nl": "Overgangstijd"
+                },
+                "hint": {
+                  "en": "This setting determines the time in seconds it takes to dim from one level to another.",
+                  "nl": "Deze instelling bepaalt de duur in seconden van het dimmen van een niveau naar een ander."
+                },
+                "value": 1,
+                "attr": {
+                  "min": 0,
+                  "max": 6553
+                }
+              }
+            ]
+          }
       ],
       "flow": {}
 }
