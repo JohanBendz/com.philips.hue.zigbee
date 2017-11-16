@@ -1,0 +1,12 @@
+[
+  {
+    "id": "invertWindowCoveringsDirection",
+    "zwaveDevice": "ZwaveWindowCoveringsDevice",
+    "type": "checkbox",
+    "label": {
+      "en": "Invert shutter movement direction",
+      "nl": "Keer rolluik beweging om"
+    },
+    "value": false
+  }
+]
