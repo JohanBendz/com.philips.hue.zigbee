@@ -30,7 +30,7 @@
         {
           "id": "LTW012",
           "name": {
-            "en": "LTW012 6W B39 E14"
+            "en": "LTW012"
           },
           "class": "light",
           "capabilities": [
@@ -75,7 +75,7 @@
         {
             "id": "LWB010",
             "name": {
-              "en": "LWB010 E27 806 lm"
+              "en": "LWB010"
             },
             "class": "light",
             "capabilities": [
@@ -117,5 +117,20 @@
             ]
           }
       ],
-      "flow": {}
+      "flow": { "actions": [
+        {
+          "id": "alert_mode",
+          "title": {
+            "en": "Enable alert mode"
+          },
+          "args": [
+            {
+              "name": "device",
+              "type": "device",
+              "filter": "driver_id=LTW012"
+            }
+          ]
+        }
+        ]
+    }
 }
