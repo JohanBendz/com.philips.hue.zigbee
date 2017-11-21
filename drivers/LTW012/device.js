@@ -1,9 +1,10 @@
 'use strict';
 
 const ZigBeeLightDevice = require('homey-meshdriver').ZigBeeLightDevice;
+const HueAmbiance = require('../HueAmbiance.js');
 
-class PhiliphsHueWhiteAmbianceZigBee extends ZigBeeLightDevice {
-    
+class LTW012 extends HueAmbiance {
+
 }
 
-module.exports = PhiliphsHueWhiteAmbianceZigBee;
+module.exports = LTW012;
