@@ -28,9 +28,9 @@
       "speech": [],
       "drivers": [
         {
-          "id": "LTW012",
+          "id": "hue_ambiance_candle",
           "name": {
-            "en": "LTW012 6W B39 E14"
+            "en": "Hue Ambiance Candle"
           },
           "class": "light",
           "capabilities": [
@@ -73,9 +73,9 @@
           ]
         },
         {
-            "id": "LWB010",
+            "id": "hue_white_lamp",
             "name": {
-              "en": "LWB010 E27 806 lm"
+              "en": "Hue White"
             },
             "class": "light",
             "capabilities": [
@@ -83,13 +83,61 @@
               "dim"
             ],
             "images": {
-              "large": "drivers/LWB010/assets/images/large.png",
-              "small": "drivers/LWB010/assets/images/small.png"
+              "large": "drivers/LWB000/assets/images/large.png",
+              "small": "drivers/LWB000/assets/images/small.png"
             },
             "zigbee": {
               "manufacturerName": "Philips",
-              "productId": "LWB010",
+              "productId": [ "LWB010", "LWB014", "LWB004", "LWB006", "LWB007"],
               "deviceId": 256,
+              "profileId": 49246,
+              "learnmode": {
+                "instruction": {
+                  "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+                }
+              }
+            }
+            ,
+            "settings": [
+              {
+                "id": "transition_time",
+                "type": "number",
+                "label": {
+                  "en": "Transition Time"
+                },
+                "hint": {
+                  "en": "This setting determines the time in seconds it takes to dim from one level to another."
+                },
+                "value": 1,
+                "attr": {
+                  "min": 0,
+                  "max": 6553
+                }
+              }
+            ]
+          },
+          {
+            "id": "hue_color_lamp_a19",
+            "name": {
+              "en": "Hue bulb A19"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_hue",
+              "light_saturation",
+              "light_temperature",
+              "light_mode"
+            ],
+            "images": {
+              "large": "drivers/LCT000/assets/images/large.png",
+              "small": "drivers/LCT000/assets/images/small.png"
+            },
+            "zigbee": {
+              "manufacturerName": "Philips",
+              "productId": [  "LCT001", "LCT007", "LCT010", "LCT014","LCT015", "LCT016"],
+              "deviceId": 528,
               "profileId": 49246,
               "learnmode": {
                 "instruction": {
