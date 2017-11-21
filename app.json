@@ -165,5 +165,20 @@
             ]
           }
       ],
-      "flow": {}
+      "flow": { "actions": [
+        {
+          "id": "alert_mode",
+          "title": {
+            "en": "Enable alert mode"
+          },
+          "args": [
+            {
+              "name": "device",
+              "type": "device",
+              "filter": "driver_id=LTW012"
+            }
+          ]
+        }
+        ]
+    }
 }
