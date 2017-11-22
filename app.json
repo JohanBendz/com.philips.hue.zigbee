@@ -28,7 +28,7 @@
       "speech": [],
       "drivers": [
         {
-          "id": "hue_ambiance_candle",
+          "id": "LTW012",
           "name": {
             "en": "Hue Ambiance Candle"
           },
@@ -73,7 +73,7 @@
           ]
         },
         {
-            "id": "hue_white_lamp",
+            "id": "LWB000",
             "name": {
               "en": "Hue White"
             },
@@ -117,7 +117,7 @@
             ]
           },
           {
-            "id": "hue_color_lamp_a19",
+            "id": "LCT000",
             "name": {
               "en": "Hue bulb A19"
             },
