@@ -73,6 +73,195 @@
           ]
         },
         {
+          "id": "LCT012",
+          "name": {
+            "en": "Hue Color Candle"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_temperature",
+            "light_mode"
+          ],
+          "images": {
+            "large": "drivers/LCT012/assets/images/large.png",
+            "small": "drivers/LCT012/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": "LCT012",
+            "deviceId": 528,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
+          "id": "LST002",
+          "name": {
+            "en": "Hue LightStrips Plus"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_temperature",
+            "light_mode"
+          ],
+          "images": {
+            "large": "drivers/LST002/assets/images/large.png",
+            "small": "drivers/LST002/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": "LST002",
+            "deviceId": 528,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
+          "id": "LST001",
+          "name": {
+            "en": "Hue LightStrip"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_temperature",
+            "light_mode"
+          ],
+          "images": {
+            "large": "drivers/LST001/assets/images/large.png",
+            "small": "drivers/LST001/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": "LST001",
+            "deviceId": 512,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
+          "id": "LTW000",
+          "name": {
+            "en": "Hue A19 White Ambiance"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_temperature"
+          ],
+          "images": {
+            "large": "drivers/LTW000/assets/images/large.png",
+            "small": "drivers/LTW000/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": [ "LTW001", "LTW004", "LTW010", "LTW015"],
+            "deviceId": 544,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
             "id": "LWB000",
             "name": {
               "en": "Hue White"
