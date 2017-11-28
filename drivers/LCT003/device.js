@@ -3,8 +3,8 @@
 const ZigBeeLightDevice = require('homey-meshdriver').ZigBeeLightDevice;
 const HueColor = require('../HueColor.js');
 
-class LST002 extends HueColor {
+class LCT003 extends HueColor {
 
 }
 
-module.exports = LST002;
+module.exports = LCT003;

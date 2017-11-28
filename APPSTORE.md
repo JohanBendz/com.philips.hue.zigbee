@@ -13,6 +13,8 @@ Untested:
 * Hue color candle (LCT012)
 * Hue LightStrips Plus (LST002)
 * Hue LightStrips (LST001)
+* Hue Ambiance Spot (LTW013,LTW014)
+* Hue Living Colors Bloom (LLC011,LLC012)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
