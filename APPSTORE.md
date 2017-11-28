@@ -15,6 +15,8 @@ Untested:
 * Hue LightStrips (LST001)
 * Hue Ambiance Spot (LTW013,LTW014)
 * Hue Living Colors Bloom (LLC011,LLC012)
+* Hue Living Colors Iris (LLC010)
+* Hue Spot GU10 (LCT003)
 
 Please report test-results to huezigbee@hibbisoft.se.
 

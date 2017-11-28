@@ -214,6 +214,54 @@
           ]
         },
         {
+          "id": "LCT003",
+          "name": {
+            "en": "Hue Spot GU10"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_temperature",
+            "light_mode"
+          ],
+          "images": {
+            "large": "drivers/LCT003/assets/images/large.png",
+            "small": "drivers/LCT003/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": "LCT003",
+            "deviceId": 528,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
           "id": "LST001",
           "name": {
             "en": "Hue LightStrips"
@@ -259,7 +307,8 @@
               }
             }
           ]
-        },{
+        },
+        {
           "id": "LLC011",
           "name": {
             "en": "Hue Living Colors Bloom"
@@ -279,6 +328,53 @@
           "zigbee": {
             "manufacturerName": "Philips",
             "productId": ["LLC011", "LLC012"],
+            "deviceId": 512,
+            "profileId": 49246,
+            "learnmode": {
+              "instruction": {
+                "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+              }
+            }
+          }
+          ,
+          "settings": [
+            {
+              "id": "transition_time",
+              "type": "number",
+              "label": {
+                "en": "Transition Time"
+              },
+              "hint": {
+                "en": "This setting determines the time in seconds it takes to dim from one level to another."
+              },
+              "value": 1,
+              "attr": {
+                "min": 0,
+                "max": 6553
+              }
+            }
+          ]
+        },
+        {
+          "id": "LLC010",
+          "name": {
+            "en": "Hue Living Colors Iris"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_mode"
+          ],
+          "images": {
+            "large": "drivers/LLC010/assets/images/large.png",
+            "small": "drivers/LLC010/assets/images/small.png"
+          },
+          "zigbee": {
+            "manufacturerName": "Philips",
+            "productId": "LLC010",
             "deviceId": 512,
             "profileId": 49246,
             "learnmode": {
