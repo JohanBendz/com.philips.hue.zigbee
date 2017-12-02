@@ -22,7 +22,7 @@ Please report test-results to huezigbee@hibbisoft.se.
 
 More bulbs will be added and please make requests if yo are missing a lamp.
 
-NOTE: If the bulbs have been used with a bridge prior to connecting them directly to Homey. You will need to reset the bulb with the Philips Hue bridge before being able to add them. You can also reset the bulb with a Philips Hue Remote (8718696743157).
+NOTE: If the bulbs have been used with a bridge prior to connecting them directly to Homey. You will need to reset the bulb with the Philips Hue bridge before being able to add them. You can also reset the bulb with a Philips Hue Remote [8718696743157](https://www.google.nl/search?q=8718696743157).
 
 Shout out to:
 Robin Overgaard for lending me bulbs for further development.
