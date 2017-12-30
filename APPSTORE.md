@@ -1,10 +1,12 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
-Currently Supported bulbs:
+Currently Supported bulbs/devices:
 
 Tested:
 * Hue Ambiance Candle (LTW012)
-* Hue White Bulb (LWB010) 
+* Hue White Bulb (LWB010)
+* Hue Dimmer Switch
+* Hue Motion Sensor
 
 Untested:
 * Hue White Bulb (LWB014,LWB004,LWB006,LWB007)
@@ -17,12 +19,10 @@ Untested:
 * Hue Living Colors Bloom (LLC011,LLC012)
 * Hue Living Colors Iris (LLC010)
 * Hue Spot GU10 (LCT003)
+* Hue Go (LLC020)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
 More bulbs will be added and please make requests if yo are missing a lamp.
 
 NOTE: If the bulbs have been used with a bridge prior to connecting them directly to Homey. You will need to reset the bulb with the Philips Hue bridge before being able to add them. You can also reset the bulb with a Philips Hue Remote (8718696743157).
-
-Shout out to:
-Robin Overgaard for lending me bulbs for further development.
