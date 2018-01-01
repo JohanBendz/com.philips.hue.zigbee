@@ -749,6 +749,96 @@
               }
       
             ]
+          },
+          {
+            "id": "HML003",
+            "name": {
+              "en": "Hue Phoenix Pendant"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature"
+            ],
+            "images": {
+              "large": "drivers/HML003/assets/images/large.png",
+              "small": "drivers/HML003/assets/images/small.png"
+            },
+            "zigbee": {
+              "manufacturerName": "Philips",
+              "productId": [ "LLM010", "LLM011", "LLM012"],
+              "deviceId": 544,
+              "profileId": 49246,
+              "learnmode": {
+                "instruction": {
+                  "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+                }
+              }
+            }
+            ,
+            "settings": [
+              {
+                "id": "transition_time",
+                "type": "number",
+                "label": {
+                  "en": "Transition Time"
+                },
+                "hint": {
+                  "en": "This setting determines the time in seconds it takes to dim from one level to another."
+                },
+                "value": 1,
+                "attr": {
+                  "min": 0,
+                  "max": 6553
+                }
+              }
+            ]
+          },
+          {
+            "id": "HML005",
+            "name": {
+              "en": "Hue Phoenix Table"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature"
+            ],
+            "images": {
+              "large": "drivers/HML005/assets/images/large.png",
+              "small": "drivers/HML005/assets/images/small.png"
+            },
+            "zigbee": {
+              "manufacturerName": "Philips",
+              "productId": [ "LLM010", "LLM011", "LLM012"],
+              "deviceId": 544,
+              "profileId": 49246,
+              "learnmode": {
+                "instruction": {
+                  "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+                }
+              }
+            }
+            ,
+            "settings": [
+              {
+                "id": "transition_time",
+                "type": "number",
+                "label": {
+                  "en": "Transition Time"
+                },
+                "hint": {
+                  "en": "This setting determines the time in seconds it takes to dim from one level to another."
+                },
+                "value": 1,
+                "attr": {
+                  "min": 0,
+                  "max": 6553
+                }
+              }
+            ]
           }
         ]
       ,

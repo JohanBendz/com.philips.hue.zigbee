@@ -20,6 +20,8 @@ Untested:
 * Hue Living Colors Iris (LLC010)
 * Hue Spot GU10 (LCT003)
 * Hue Go (LLC020)
+* Hue Phoenix Pendant (HML003)
+* Hue Phoenix Table (HML005)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
