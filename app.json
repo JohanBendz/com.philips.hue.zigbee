@@ -631,8 +631,8 @@
               }
             },
             "images": {
-              "large": "drivers/motionsensor/assets/images/large.jpg",
-              "small": "drivers/motionsensor/assets/images/small.jpg"
+              "large": "drivers/SML001/assets/images/large.jpg",
+              "small": "drivers/SML001/assets/images/small.jpg"
             },
             "settings": [
               {
