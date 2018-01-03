@@ -27,4 +27,15 @@ Please report test-results to huezigbee@hibbisoft.se.
 
 More bulbs will be added and please make requests if yo are missing a lamp.
 
+Release notes:
+    v 1.3.0:
+        - Release notes :)
+        - Added support for: 
+            Hue Dimmer Switch
+            Hue Motion Sensor
+            Hue Phoenix Pendant
+            Hue Phoenix Table
+            Hue Go
+
+
 NOTE: If the bulbs have been used with a bridge prior to connecting them directly to Homey. You will need to reset the bulb with the Philips Hue bridge before being able to add them. You can also reset the bulb with a Philips Hue Remote (8718696743157).
