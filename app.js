@@ -7,7 +7,7 @@ class PhilipsHueApp extends Homey.App {
 	onInit() {
 		
 		this.log('Philips Hue app initiating...');
-		FlowActions.init();		
+		//FlowActions.init();		
 	}	
 }
 
