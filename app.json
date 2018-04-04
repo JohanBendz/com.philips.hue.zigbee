@@ -655,10 +655,10 @@
                 "id": "minReportMotion",
                 "type": "number",
                 "label": {
-                  "en": "Min report interval for motion (ms)"
+                  "en": "Min report interval for motion (s)"
                 },
                 "hint": {
-                  "en": "Min interval before a report is sent to Homey (ms)"
+                  "en": "Min interval before a report is sent to Homey (s)"
                 },
                 "value": 1,
                 "attr": {
@@ -671,10 +671,10 @@
                 "id": "maxReportMotion",
                 "type": "number",
                 "label": {
-                  "en": "Max report interval for motion (ms)"
+                  "en": "Max report interval for motion (s)"
                 },
                 "hint": {
-                  "en": "Max interval before a report is sent to Homey (ms)"
+                  "en": "Max interval before a report is sent to Homey (s)"
                 },
                 "value": 300,
                 "attr": {
@@ -687,10 +687,10 @@
                 "id": "minReportLux",
                 "type": "number",
                 "label": {
-                  "en": "Min report interval for lux (ms)"
+                  "en": "Min report interval for lux (s)"
                 },
                 "hint": {
-                  "en": "Min interval before a report is sent to Homey (ms)"
+                  "en": "Min interval before a report is sent to Homey (s)"
                 },
                 "value": 300,
                 "attr": {
@@ -703,10 +703,10 @@
                 "id": "maxReportLux",
                 "type": "number",
                 "label": {
-                  "en": "Max report interval for lux (ms)"
+                  "en": "Max report interval for lux (s)"
                 },
                 "hint": {
-                  "en": "Max interval before a report is sent to Homey (ms)"
+                  "en": "Max interval before a report is sent to Homey (s)"
                 },
                 "value": 900,
                 "attr": {
@@ -719,10 +719,10 @@
                 "id": "minReportTemp",
                 "type": "number",
                 "label": {
-                  "en": "Min report interval for temperature (ms)"
+                  "en": "Min report interval for temperature (s)"
                 },
                 "hint": {
-                  "en": "Min interval before a report is sent to Homey (ms)"
+                  "en": "Min interval before a report is sent to Homey (s)"
                 },
                 "value": 1800,
                 "attr": {
@@ -735,10 +735,10 @@
                 "id": "maxReportTemp",
                 "type": "number",
                 "label": {
-                  "en": "Max report interval for temperature (ms)"
+                  "en": "Max report interval for temperature (s)"
                 },
                 "hint": {
-                  "en": "Max interval before a report is sent to Homey (ms)"
+                  "en": "Max interval before a report is sent to Homey (s)"
                 },
                 "value": 3600,
                 "attr": {
