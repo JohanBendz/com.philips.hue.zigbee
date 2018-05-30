@@ -18,6 +18,7 @@ Tested:
 * Hue A19 Bulb (Color) (LCT001, LCT015)
 * Hue Dimmer Switch
 * Hue Motion Sensor
+* Hue Living Colors Iris (LLC010)
 
 Untested:
 * Hue White Bulb (LWB014,LWB004,LWB006,LWB007)
@@ -28,7 +29,6 @@ Untested:
 * Hue LightStrips (LST001)
 * Hue Ambiance Spot (LTW013,LTW014)
 * Hue Living Colors Bloom (LLC011,LLC012)
-* Hue Living Colors Iris (LLC010)
 * Hue Spot GU10 (LCT003)
 * Hue Go (LLC020)
 * Hue Phoenix Pendant (HML003)
