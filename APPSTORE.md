@@ -1,6 +1,15 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+v1.4.0
+Changed color light to use XY ZigBee light device
+Added support for:
+Hue Beyond Table
+Hue Beyond Pendant
+Hue Beyond Ceiling
+Hue Fair Ceiling Lamp
+Hue Being Ceiling Lamp
+
 v 1.3.0: - Release notes :) - Added support for:
 Hue Dimmer Switch
 Hue Motion Sensor
@@ -34,10 +43,18 @@ Untested:
 - Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Phoenix Pendant (HML003)
 - Hue Phoenix Table (HML005)
+- Hue Beyond Table (HBL001)
+- Hue Beyond Pendant (HBL002)
+- Hue Beyond Ceiling (HBL003)
+- Hue Fair Ceiling Lamp (LTC002)
+- Hue Being Ceiling Lamp (LTC001)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
 More bulbs will be added and please make requests if yo are missing a lamp.
+
+Thanks for contributing:
+https://github.com/tidemann
 
 How to transfer light from hue bridge to Homey by Jesper P:
 Hue lights are also resettable with the round Hue remote (i.e. Living colors gen 2 Remote).
