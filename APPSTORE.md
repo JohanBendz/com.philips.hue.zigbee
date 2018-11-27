@@ -1,6 +1,13 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+v1.4.0
+Changed color light to use XY ZigBee light device
+Added support for:
+Hue Beyond Table
+Hue Beyond Pendant
+Hue Beyond Ceiling
+
 v 1.3.0: - Release notes :) - Added support for:
 Hue Dimmer Switch
 Hue Motion Sensor
@@ -34,6 +41,9 @@ Untested:
 - Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Phoenix Pendant (HML003)
 - Hue Phoenix Table (HML005)
+- Hue Beyond Table (HBL001)
+- Hue Beyond Pendant (HBL002)
+- Hue Beyond Ceiling (HBL003)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
