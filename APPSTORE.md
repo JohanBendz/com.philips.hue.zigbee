@@ -30,6 +30,7 @@ Tested:
 - Hue Go (LLC020)
 - Hue Runner (x3 Hue Spot GU10)
 - Hue Spot GU10 (LCT003)
+- Hue Living Colors Bloom (LLC011,LLC012)
 
 Untested:
 
@@ -40,7 +41,6 @@ Untested:
 - Hue LightStrips Plus (LST002)
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
-- Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Phoenix Pendant (HML003)
 - Hue Phoenix Table (HML005)
 - Hue Beyond Table (HBL001)
