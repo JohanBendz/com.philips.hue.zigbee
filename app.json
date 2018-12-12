@@ -26,6 +26,7 @@
     "small": "assets/images/small.jpg"
   },
   "speech": [],
+  "permissions": ["homey:wireless:zigbee"],
   "drivers": [
     {
       "id": "LTW012",

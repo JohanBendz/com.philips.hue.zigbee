@@ -1,25 +1,21 @@
 'use strict';
 
+const util = require('./../../../../util');
+
 const maxDim = 254;
 
 module.exports = {
-	set: 'moveToLevel',
-	setParser(value) {
+	set: 'moveToLevelWithOnOff',
+	setParser(value, opts = {}) {
 		if (value === 0) {
-			return this.triggerCapabilityListener('onoff', false)
-				.then(() => null)
-				.catch(err => new Error('failed_to_trigger_onoff'));
+			this.setCapabilityValue('onoff', false);
 		} else if (this.getCapabilityValue('onoff') === false && value > 0) {
-			return this.triggerCapabilityListener('onoff', true)
-				.then(() => ({
-					level: Math.round(value * maxDim),
-					transtime: this.getSetting('transition_time') ? Math.round(this.getSetting('transition_time') * 10) : 0,
-				}))
-				.catch(err => new Error('failed_to_trigger_onoff`', err));
+			this.setCapabilityValue('onoff', true);
 		}
+
 		return {
 			level: Math.round(value * maxDim),
-			transtime: this.getSetting('transition_time') ? Math.round(this.getSetting('transition_time') * 10) : 0,
+			transtime: util.calculateZigBeeDimDuration(opts, this.getSettings()),
 		};
 	},
 	get: 'currentLevel',
