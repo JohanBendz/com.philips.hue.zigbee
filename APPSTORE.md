@@ -10,6 +10,7 @@ Hue Beyond Ceiling
 Hue Fair Ceiling Lamp
 Hue Being Ceiling Lamp
 Hue Sana Wall Light
+Hue Dimmer Switch (RWL020 US version)
 
 v 1.3.0: - Release notes :) - Added support for:
 Hue Dimmer Switch
@@ -25,12 +26,13 @@ Tested:
 - Hue Ambiance Candle (LTW012)
 - Hue White Bulb (LWB010)
 - Hue A19 Bulb (Color) (LCT001, LCT015)
-- Hue Dimmer Switch
+- Hue Dimmer Switch (RWL021)
 - Hue Motion Sensor
 - Hue Living Colors Iris (LLC010)
 - Hue Go (LLC020)
 - Hue Runner (x3 Hue Spot GU10)
 - Hue Spot GU10 (LCT003)
+- Hue Living Colors Bloom (LLC011,LLC012)
 
 Untested:
 
@@ -41,7 +43,6 @@ Untested:
 - Hue LightStrips Plus (LST002)
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
-- Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Phoenix Pendant (HML003)
 - Hue Phoenix Table (HML005)
 - Hue Beyond Table (HBL001)
@@ -50,6 +51,7 @@ Untested:
 - Hue Fair Ceiling Lamp (LTC002)
 - Hue Being Ceiling Lamp (LTC001)
 - Hue Sana Wall Light (LCW001)
+- Hue Dimmer Switch (RWL020)
 
 Please report test-results to huezigbee@hibbisoft.se.
 

@@ -844,7 +844,7 @@
       "capabilities": [],
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["RWL021"],
+        "productId": ["RWL021", "RWL020"],
         "deviceId": [2080, 2096],
         "profileId": 49246,
         "learnmode": {
