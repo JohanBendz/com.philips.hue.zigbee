@@ -9,6 +9,7 @@ Hue Beyond Pendant
 Hue Beyond Ceiling
 Hue Fair Ceiling Lamp
 Hue Being Ceiling Lamp
+Hue Sana Wall Light
 
 v 1.3.0: - Release notes :) - Added support for:
 Hue Dimmer Switch
@@ -48,6 +49,7 @@ Untested:
 - Hue Beyond Ceiling (HBL003)
 - Hue Fair Ceiling Lamp (LTC002)
 - Hue Being Ceiling Lamp (LTC001)
+- Hue Sana Wall Light (LCW001)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
