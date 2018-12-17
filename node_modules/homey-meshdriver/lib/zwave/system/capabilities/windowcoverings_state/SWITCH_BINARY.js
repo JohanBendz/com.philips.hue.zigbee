@@ -65,6 +65,7 @@ function determineAndSaveState(value) {
 			break;
 	}
 
-	// Save latest known position state
+	// Save latest known position state and return it
 	this.windowCoveringsPosition = result;
+	return result;
 }

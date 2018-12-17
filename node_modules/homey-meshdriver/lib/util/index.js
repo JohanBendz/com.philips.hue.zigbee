@@ -37,6 +37,28 @@ function calculateZwaveDimDuration(duration) {
 	return 254;
 }
 
+/**
+ * Calculate a transtime value for ZigBee clusters, it takes two parameters, opts and settings. Opts is the opts object
+ * provided by a capbilityListener which can hold a duration property (in miliseconds), settings is an object which can
+ * hold a 'transition_time' property (in seconds). If none are available, the default is 0. The valid value range is
+ * 0 - 6553.
+ * @param opts {object}
+ * @param opts.duration {number} - Duration property in miliseconds (preferred over 'transition_time')
+ * @param settings {object}
+ * @param settings.transition_time {number} - Transition time property in seconds
+ * @returns {number}
+ */
+function calculateZigBeeDimDuration(opts = {}, settings = {}) {
+	let transtime = 0;
+	if (opts.hasOwnProperty('duration')) {
+		transtime = opts.duration / 100;
+	} else if (typeof settings.transition_time === 'number') {
+		transtime = Math.round(settings.transition_time * 10);
+	}
+	// Cap the range between 0 and 6553
+	return Math.max(Math.min(transtime, 6553), 0);
+}
+
 
 /**
  * Utility class with several color and range conversion methods.
@@ -49,4 +71,5 @@ module.exports = {
 	convertRGBToHSV: color.convertRGBToHSV,
 	mapValueRange,
 	calculateZwaveDimDuration,
+	calculateZigBeeDimDuration,
 };
