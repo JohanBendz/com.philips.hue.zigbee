@@ -11,6 +11,7 @@ Hue Fair Ceiling Lamp
 Hue Being Ceiling Lamp
 Hue Sana Wall Light
 Hue Dimmer Switch (RWL020 US version)
+Hue Aurelle Rectangle Panel Light
 
 v 1.3.0: - Release notes :) - Added support for:
 Hue Dimmer Switch
@@ -52,6 +53,7 @@ Untested:
 - Hue Being Ceiling Lamp (LTC001)
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
+- Hue Aurelle Rectangle Panel Light (LTC015)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
