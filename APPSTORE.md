@@ -1,11 +1,13 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
-v1.4.1
+v1.4.2
 Added references to installed packages
+Force added dependencies to repository
 
 v1.4.0
 Changed color light to use XY ZigBee light device
+
 Added support for:
 Hue Beyond Table
 Hue Beyond Pendant
