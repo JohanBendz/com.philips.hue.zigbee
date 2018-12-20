@@ -1,5 +1,3 @@
-import { ZigBeeXYLightDevice } from "homey-meshdriver";
-
 ("use strict");
 
 const HueColor = require("../HueColor.js");

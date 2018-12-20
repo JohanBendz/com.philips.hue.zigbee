@@ -1,29 +1,34 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
-v1.4.2
-Added references to installed packages
-Force added dependencies to repository
+v1.4.3
+
+- Added references to installed packages
+- Force added dependencies to repository
+- Fixed bug regarding LST001, thanks Andreas Pardeike
 
 v1.4.0
-Changed color light to use XY ZigBee light device
+
+- Changed color light to use XY ZigBee light device
 
 Added support for:
-Hue Beyond Table
-Hue Beyond Pendant
-Hue Beyond Ceiling
-Hue Fair Ceiling Lamp
-Hue Being Ceiling Lamp
-Hue Sana Wall Light
-Hue Dimmer Switch (RWL020 US version)
-Hue Aurelle Rectangle Panel Light
+
+- Hue Beyond Table
+- Hue Beyond Pendant
+- Hue Beyond Ceiling
+- Hue Fair Ceiling Lamp
+- Hue Being Ceiling Lamp
+- Hue Sana Wall Light
+- Hue Dimmer Switch (RWL020 US version)
+- Hue Aurelle Rectangle Panel Light
 
 v 1.3.0: - Release notes :) - Added support for:
-Hue Dimmer Switch
-Hue Motion Sensor
-Hue Phoenix Pendant
-Hue Phoenix Table
-Hue Go
+
+- Hue Dimmer Switch
+- Hue Motion Sensor
+- Hue Phoenix Pendant
+- Hue Phoenix Table
+- Hue Go
 
 Currently Supported bulbs/devices:
 
