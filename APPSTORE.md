@@ -1,6 +1,10 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+v1.4.4
+
+- Added support for Hue play bar (thanks to Simon Skog for the contribution)
+
 v1.4.3
 
 - Added references to installed packages
@@ -71,6 +75,7 @@ More bulbs will be added and please make requests if yo are missing a lamp.
 
 Thanks for contributing:
 https://github.com/tidemann
+https://github.com/Sparc0
 
 How to transfer light from hue bridge to Homey by Jesper P:
 Hue lights are also resettable with the round Hue remote (i.e. Living colors gen 2 Remote).

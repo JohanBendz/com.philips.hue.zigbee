@@ -8,7 +8,7 @@
     "en": "Philips Hue bulbs support without Bridge. I would like to credit Richard Slater for his icons that where used when creating this app (https://thenounproject.com/richard.slater)"
   },
   "category": "lights",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -806,7 +806,7 @@
     {
       "id": "LTC001",
       "name": {
-        "en": "Philips Hue Being Ceiling Lamp"
+        "en": "Hue Being Ceiling Lamp"
       },
       "class": "light",
       "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
@@ -846,7 +846,7 @@
     {
       "id": "LTC002",
       "name": {
-        "en": "Philips Hue Fair Ceiling Lamp"
+        "en": "Hue Fair Ceiling Lamp"
       },
       "class": "light",
       "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
