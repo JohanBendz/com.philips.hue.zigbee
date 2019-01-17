@@ -8,7 +8,7 @@ class Log {
 
 		this._capturedExceptions = [];
 		this._capturedMessages = [];
-		
+
 		if( typeof global.Homey === 'undefined' ) {
 			try {
 				this._homey = require('homey');
@@ -22,7 +22,7 @@ class Log {
 		
 		if( typeof this._homey === 'undefined' )
 			return console.error('Error: Homey not found');
-				
+
 		if( typeof this._homey.env.HOMEY_LOG_URL === 'string' ) {
 			this.init( this._homey.env.HOMEY_LOG_URL );
 		}
@@ -34,7 +34,7 @@ class Log {
 	}
 
 	init( url, opts ) {
-		
+
 		if( process.env.DEBUG === '1' && this._homey.env.HOMEY_LOG_FORCE !== '1' )
 			return this._log('App is running in debug mode, disabling log');
 
@@ -48,10 +48,22 @@ class Log {
 			homeyVersion	: this._homey.version
 		});
 
+		if (this._homey.hasOwnProperty('ManagerCloud')) { // SDKv2
+			this._homey.ManagerCloud.getHomeyId(this.setHomeyIdTag.bind(this))
+		} else if (this._homey.hasOwnProperty('manager')) { // SDKv1
+			this._homey.manager('cloud').getHomeyId(this.setHomeyIdTag.bind(this))
+		}
+
 		this._log(`App ${this._homey.manifest.id} v${this._homey.manifest.version} logging...`);
 
 		return this;
 
+	}
+
+	setHomeyIdTag(err, result) {
+		if (!err && typeof result === 'string') {
+			this.setTags({ homeyId: result })
+		}
 	}
 
 	setTags( tags ) {
