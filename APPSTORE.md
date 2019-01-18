@@ -4,6 +4,7 @@ Release notes:
 v1.4.4
 
 - Added support for Hue play bar (thanks to Simon Skog for the contribution)
+- Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
 v1.4.3
 
