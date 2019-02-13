@@ -1,6 +1,12 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+v1.4.4
+
+Added support for:
+
+- Hue Phoenix Wall
+
 v1.4.3
 
 - Added references to installed packages
@@ -55,6 +61,7 @@ Untested:
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
 - Hue Phoenix Pendant (HML003)
+- Hue Phoenix Wall (HML004)
 - Hue Phoenix Table (HML005)
 - Hue Beyond Table (HBL001)
 - Hue Beyond Pendant (HBL002)
