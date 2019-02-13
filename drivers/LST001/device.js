@@ -1,11 +1,7 @@
-import { ZigBeeXYLightDevice } from 'homey-meshdriver';
+("use strict");
 
-'use strict';
+const HueColor = require("../HueColor.js");
 
-const ZigBeeLightDevice = require('homey-meshdriver').ZigBeeLightDevice;
-
-class LST001 extends ZigBeeXYLightDevice {
-
-}
+class LST001 extends HueColor {}
 
 module.exports = LST001;

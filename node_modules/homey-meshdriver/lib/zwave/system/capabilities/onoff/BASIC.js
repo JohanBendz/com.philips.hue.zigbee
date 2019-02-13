@@ -8,7 +8,7 @@ module.exports = {
 	}),
 	report: 'BASIC_REPORT',
 	reportParser(report) {
-		if (report && report.hasOwnProperty('Value')) return report.Value === 255;
+		if (report && report.hasOwnProperty('Value')) return report.Value > 0;
 		return null;
 	},
 };

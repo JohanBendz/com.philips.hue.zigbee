@@ -2,7 +2,8 @@
 
 const util = require('./../../../../util');
 
-const FACTORY_DEFAULT_DIMMING_DURATION = 'Factory default';
+const FACTORY_DEFAULT_DIMMING_DURATION_V2 = 'Factory default';
+const FACTORY_DEFAULT_DIMMING_DURATION_V4 = 'Default';
 
 module.exports = {
 	get: 'SWITCH_MULTILEVEL_GET',
@@ -17,7 +18,15 @@ module.exports = {
 		};
 	},
 	setParserV2(value, options) {
-		const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : FACTORY_DEFAULT_DIMMING_DURATION);
+		const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : FACTORY_DEFAULT_DIMMING_DURATION_V2);
+		if (this.hasCapability('onoff')) this.setCapabilityValue('onoff', value > 0);
+		return {
+			Value: Math.round(value * 99),
+			'Dimming Duration': duration,
+		};
+	},
+	setParserV4(value, options) {
+		const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : FACTORY_DEFAULT_DIMMING_DURATION_V4);
 		if (this.hasCapability('onoff')) this.setCapabilityValue('onoff', value > 0);
 		return {
 			Value: Math.round(value * 99),
