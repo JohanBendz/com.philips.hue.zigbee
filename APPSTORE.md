@@ -70,7 +70,7 @@ Untested:
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
 - Hue Aurelle Rectangle Panel Light (LTC015)
-- Hue Outdoor Lightstrip (LST003)
+- Hue Outdoor Lightstrip (LST003 and LST004)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
