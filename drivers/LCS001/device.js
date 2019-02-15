@@ -2,6 +2,6 @@
 
 const HueColor = require("../HueColor.js");
 
-class HBL001 extends HueColor {}
+class LCS001 extends HueColor {}
 
-module.exports = HBL001;
+module.exports = LCS001;
