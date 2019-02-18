@@ -12,7 +12,7 @@
     "json-stringify-safe": "^5.0.1",
     "lsmod": "^1.0.0",
     "stack-trace": "0.0.10",
-    "uuid": "^3.2.1"
+    "uuid": "^3.3.2"
   },
   "devDependencies": {},
   "scripts": {

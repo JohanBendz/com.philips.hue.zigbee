@@ -49,7 +49,7 @@ module.exports = {
 
 		if (report && report.hasOwnProperty('Value (Raw)')) {
 			if (report['Value (Raw)'][0] === 255) return invertDirection ? 0 : 1;
-			return invertDirection ? (100 - report['Value (Raw)'][0]) / 99 : report['Value (Raw)'][0] / 99;
+			return invertDirection ? (99 - report['Value (Raw)'][0]) / 99 : report['Value (Raw)'][0] / 99;
 		}
 		return null;
 	},
@@ -58,7 +58,7 @@ module.exports = {
 
 		if (report && report.hasOwnProperty('Current Value (Raw)')) {
 			if (report['Current Value (Raw)'][0] === 255) return invertDirection ? 0 : 1;
-			return invertDirection ? (100 - report['Current Value (Raw)'][0]) / 99 : report['Current Value (Raw)'][0] / 99;
+			return invertDirection ? (99 - report['Current Value (Raw)'][0]) / 99 : report['Current Value (Raw)'][0] / 99;
 		}
 		return null;
 	},
