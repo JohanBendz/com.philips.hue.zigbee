@@ -1,11 +1,18 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+
 v1.4.4
 
 Added support for:
-
+- Hue Phoenix Wall
+- Hue Amaze Pendant
+- Hue play bar (thanks to Simon Skog for the contribution)
+- Hue Struana Ceiling
+- Hue Lily Outdoor Spot
 - Hue Outdoor Lightstrip
+Fixes:
+- Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
 v1.4.3
 
@@ -61,6 +68,7 @@ Untested:
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
 - Hue Phoenix Pendant (HML003)
+- Hue Phoenix Wall (HML004)
 - Hue Phoenix Table (HML005)
 - Hue Beyond Table (HBL001)
 - Hue Beyond Pendant (HBL002)
@@ -71,6 +79,9 @@ Untested:
 - Hue Dimmer Switch (RWL020)
 - Hue Aurelle Rectangle Panel Light (LTC015)
 - Hue Outdoor Lightstrip (LST003 and LST004)
+- Hue Lily Outdoor Spot (LCS001)
+- Hue Struana Ceiling (LTC012)
+- Hue Amaze Pendant (LTP002)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
@@ -78,6 +89,7 @@ More bulbs will be added and please make requests if yo are missing a lamp.
 
 Thanks for contributing:
 https://github.com/tidemann
+https://github.com/Sparc0
 
 How to transfer light from hue bridge to Homey by Jesper P:
 Hue lights are also resettable with the round Hue remote (i.e. Living colors gen 2 Remote).
