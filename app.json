@@ -8,7 +8,7 @@
     "en": "Philips Hue bulbs support without Bridge. I would like to credit Richard Slater for his icons that where used when creating this app (https://thenounproject.com/richard.slater)"
   },
   "category": "lights",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -28,6 +28,86 @@
   "speech": [],
   "permissions": [],
   "drivers": [
+       {
+      "id": "LTP002",
+      "name": {
+        "en": "Hue Amaze Pendant"
+      },
+      "class": "light",
+      "capabilities": ["onoff", "dim", "light_temperature"],
+      "images": {
+        "large": "drivers/LTP002/assets/images/large.png",
+        "small": "drivers/LTP002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LTP002",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "HML004",
+      "name": {
+        "en": "Hue Phoenix Wall Light"
+      },
+      "class": "light",
+      "capabilities": ["onoff", "dim", "light_temperature"],
+      "images": {
+        "large": "drivers/HML004/assets/images/large.png",
+        "small": "drivers/HML004/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "HML004",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
     {
       "id": "LTC012",
       "name": {
@@ -216,6 +296,53 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": "LCT012",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LCT024",
+      "name": {
+        "en": "Hue Play light bar"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "drivers/LCT024/assets/images/large.png",
+        "small": "drivers/LCT024/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCT024",
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
@@ -799,7 +926,7 @@
     {
       "id": "LTC001",
       "name": {
-        "en": "Philips Hue Being Ceiling Lamp"
+        "en": "Hue Being Ceiling Lamp"
       },
       "class": "light",
       "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
@@ -839,7 +966,7 @@
     {
       "id": "LTC002",
       "name": {
-        "en": "Philips Hue Fair Ceiling Lamp"
+        "en": "Hue Fair Ceiling Lamp"
       },
       "class": "light",
       "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
