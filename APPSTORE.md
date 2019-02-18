@@ -1,10 +1,12 @@
 This app supports setting up your Philips Hue lights to your Homey without having a Philips Hue bridge.
 
 Release notes:
+
 v1.4.4
 
 Added support for:
 - Hue Phoenix Wall
+- Hue Amaze Pendant
 - Added support for Hue play bar (thanks to Simon Skog for the contribution)
 Fixes:
 - Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
@@ -73,6 +75,7 @@ Untested:
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
 - Hue Aurelle Rectangle Panel Light (LTC015)
+- Hue Amaze Pendant (LTP002)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
