@@ -3,7 +3,10 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 Release notes:
 v1.4.4
 
+Added support for:
+- Hue Phoenix Wall
 - Added support for Hue play bar (thanks to Simon Skog for the contribution)
+Fixes:
 - Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
 v1.4.3
@@ -60,6 +63,7 @@ Untested:
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
 - Hue Phoenix Pendant (HML003)
+- Hue Phoenix Wall (HML004)
 - Hue Phoenix Table (HML005)
 - Hue Beyond Table (HBL001)
 - Hue Beyond Pendant (HBL002)
