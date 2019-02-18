@@ -8,7 +8,8 @@ Added support for:
 - Hue Phoenix Wall
 - Hue Amaze Pendant
 - Added support for Hue play bar (thanks to Simon Skog for the contribution)
-- Hue Struana Ceiling 
+- Hue Struana Ceiling
+- Hue Lily Outdoor Spot
 Fixes:
 - Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
@@ -76,6 +77,7 @@ Untested:
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
 - Hue Aurelle Rectangle Panel Light (LTC015)
+- Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
 
