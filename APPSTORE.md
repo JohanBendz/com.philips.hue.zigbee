@@ -4,8 +4,10 @@ Release notes:
 v1.4.4
 
 Added support for:
-
 - Hue Phoenix Wall
+- Added support for Hue play bar (thanks to Simon Skog for the contribution)
+Fixes:
+- Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
 v1.4.3
 
@@ -78,6 +80,7 @@ More bulbs will be added and please make requests if yo are missing a lamp.
 
 Thanks for contributing:
 https://github.com/tidemann
+https://github.com/Sparc0
 
 How to transfer light from hue bridge to Homey by Jesper P:
 Hue lights are also resettable with the round Hue remote (i.e. Living colors gen 2 Remote).
