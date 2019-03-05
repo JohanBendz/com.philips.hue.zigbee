@@ -22,6 +22,7 @@ module.exports = {
                 return true;
             }
             if (report['Event (Parsed)'] === 'Event inactive' && (!report.hasOwnProperty('Event Parameter') ||
+                typeof report['Event Parameter'][0] === 'undefined' ||
                 report['Event Parameter'][0] === 3 ||
                 report['Event Parameter'][0] === 4 ||
                 report['Event Parameter'][0] === 9)) {

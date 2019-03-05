@@ -17,6 +17,7 @@ module.exports = {
 			}
 
 			if (report['Event (Parsed)'] === 'Event inactive' && (!report.hasOwnProperty('Event Parameter') ||
+                	typeof report['Event Parameter'][0] === 'undefined' ||
 					report['Event Parameter'][0] === 7 ||
 					report['Event Parameter'][0] === 8)) {
 				return false;

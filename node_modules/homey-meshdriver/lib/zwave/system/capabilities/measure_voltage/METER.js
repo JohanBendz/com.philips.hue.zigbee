@@ -68,9 +68,8 @@ module.exports = {
 			report.hasOwnProperty('Properties2') &&
 			report.Properties2.hasOwnProperty('Scale bits 10') &&
 			report.Properties2['Scale bits 10'] === 0 &&
-			report.hasOwnProperty('Scale 2') === false ||
-			report.hasOwnProperty('Scale 2')
-			&& report['Scale 2'] === 0) {
+			(report.hasOwnProperty('Scale 2') === false || report['Scale 2'] === 0)
+		) {
 			return report['Meter Value (Parsed)'];
 		}
 		return null;
