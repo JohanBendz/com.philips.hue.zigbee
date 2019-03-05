@@ -14,6 +14,10 @@ Added support for:
 Fixes:
 - Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
+Also big thanks to Johan Bendz for contributing to the app.
+
+Motion Sensor seems to be fixed in v2.0.5-rc.2.
+
 v1.4.3
 
 - Added references to installed packages
@@ -90,6 +94,7 @@ More bulbs will be added and please make requests if yo are missing a lamp.
 Thanks for contributing:
 https://github.com/tidemann
 https://github.com/Sparc0
+https://github.com/JohanBendz
 
 How to transfer light from hue bridge to Homey by Jesper P:
 Hue lights are also resettable with the round Hue remote (i.e. Living colors gen 2 Remote).
