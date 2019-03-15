@@ -28,7 +28,150 @@
   "speech": [],
   "permissions": [],
   "drivers": [
-       {
+    {
+      "id": "SML002",
+      "name": {
+        "en": "Outdoor Sensor"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery"
+      ],
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": ["SML001"],
+        "deviceId": 2128,
+        "profileId": 49246,
+        "learnmode": {
+          "image": "/drivers/SML002/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+          }
+        }
+      },
+      "images": {
+        "large": "drivers/SML002/assets/images/large.jpg",
+        "small": "drivers/SML002/assets/images/small.jpg"
+      },
+      "settings": [
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Battery Low Alarm Voltage Threshold (volt)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 2.9,
+          "attr": {
+            "step": 0.1,
+            "min": 0,
+            "max": 6553
+          }
+        },
+        {
+          "id": "minReportMotion",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for motion (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 1,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportMotion",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for motion (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportLux",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportLux",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 900,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 1800,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 3600,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        }
+      ]
+    },
+    {
       "id": "LTP002",
       "name": {
         "en": "Hue Amaze Pendant"
