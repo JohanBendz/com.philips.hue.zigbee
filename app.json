@@ -28,7 +28,7 @@
   "speech": [],
   "permissions": [],
   "drivers": [
-           {
+      {
       "id": "1743630P7",
       "name": {
         "en": "Hue Outdoor Welcome Floodlight"
