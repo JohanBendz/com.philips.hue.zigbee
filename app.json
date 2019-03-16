@@ -42,7 +42,7 @@
       ],
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["SML001"],
+        "productId": ["SML002"],
         "deviceId": 2128,
         "profileId": 49246,
         "learnmode": {
