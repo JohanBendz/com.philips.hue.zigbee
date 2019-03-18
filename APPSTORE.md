@@ -2,6 +2,10 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.5
+
+- Fixed icons for HML004 and LTC012
+
 v1.4.4
 
 Added support for:
