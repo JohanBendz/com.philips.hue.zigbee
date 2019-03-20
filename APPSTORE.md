@@ -2,6 +2,11 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.5
+
+Added support for:
+- Hue Still Ceiling
+
 v1.4.4
 
 Added support for:
@@ -86,6 +91,7 @@ Untested:
 - Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
+- Hue Still Ceiling (LTC003)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
