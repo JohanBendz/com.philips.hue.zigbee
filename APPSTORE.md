@@ -7,6 +7,9 @@ v1.4.5
 Added support for:
 - Hue Outdoor Sensor
 
+New feature:
+- Temperature Offset for Motion Sensor and Outdoor Sensor
+
 v1.4.4
 
 Added support for:
