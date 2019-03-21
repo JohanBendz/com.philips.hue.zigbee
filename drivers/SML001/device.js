@@ -41,9 +41,10 @@ class MotionSensor extends ZigBeeDevice {
 				this.maxReportTemp= this.getSetting('maxReportTemp') || 3600;
 		
 				this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', this.minReportTemp, this.maxReportTemp, 10, data2 => {
-					this.log('measuredValue temperature', data2);
+					const temperatureOffset = this.getSetting('temperature_offset') || 0;
+					this.log('measuredValue temperature', data2, '+ temperature offset', temperatureOffset);
 					const temperature = Math.round((data2 / 100) * 10) / 10;
-					this.setCapabilityValue('measure_temperature', temperature);
+					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
 				}, 1);
 		
 				// measure_luminance
@@ -96,9 +97,10 @@ class MotionSensor extends ZigBeeDevice {
 						this.log('maxReportTemp: ', newSettingsObj.maxReportTemp);
 						if (newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) {
 							this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', newSettingsObj.minReportTemp, newSettingsObj.maxReportTemp, 10, data2 => {
-								this.log('measuredValue', data2);
+								const temperatureOffset = this.getSetting('temperature_offset') || 0;
+								this.log('measuredValue', data2, '+ temperature offset', temperatureOffset);
 								const temperature = Math.round((data2 / 100) * 10) / 10;
-								this.setCapabilityValue('measure_temperature', temperature);
+								this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
 							}, 1);
 						}
 					}
