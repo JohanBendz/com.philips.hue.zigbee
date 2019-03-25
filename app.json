@@ -42,7 +42,9 @@
       ],
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["SML002"],
+        "productId": [
+          "SML002"
+        ],
         "deviceId": 2128,
         "profileId": 49246,
         "learnmode": {
@@ -172,12 +174,147 @@
       ]
     },
     {
+      "id": "1743630P7",
+      "name": {
+        "en": "Hue Outdoor Welcome Floodlight"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "images": {
+        "large": "drivers/1743630P7/assets/images/large.png",
+        "small": "drivers/1743630P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1743630P7",
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LTC011",
+      "name": {
+        "en": "Hue Cher Ceiling"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "drivers/LTC011/assets/images/large.png",
+        "small": "drivers/LTC011/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LTC011",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LTC003",
+      "name": {
+        "en": "Hue Still Ceiling"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "drivers/LTC003/assets/images/large.png",
+        "small": "drivers/LTC003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LTC003",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LTP002",
       "name": {
         "en": "Hue Amaze Pendant"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTP002/assets/images/large.png",
         "small": "drivers/LTP002/assets/images/small.png"
@@ -217,7 +354,11 @@
         "en": "Hue Phoenix Wall Light"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/HML004/assets/images/large.png",
         "small": "drivers/HML004/assets/images/small.png"
@@ -257,7 +398,11 @@
         "en": "Hue Struana Ceiling"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTC012/assets/images/large.png",
         "small": "drivers/LTC012/assets/images/small.png"
@@ -394,7 +539,11 @@
         "en": "Hue Ambiance Candle"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTW012/assets/images/large.png",
         "small": "drivers/LTW012/assets/images/small.png"
@@ -434,14 +583,21 @@
         "en": "Hue Ambiance Spot"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTW013/assets/images/large.png",
         "small": "drivers/LTW013/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LTW013", "LTW014"],
+        "productId": [
+          "LTW013",
+          "LTW014"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -956,7 +1112,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LLC011", "LLC012"],
+        "productId": [
+          "LLC011",
+          "LLC012"
+        ],
         "deviceId": 512,
         "profileId": 49246,
         "learnmode": {
@@ -1035,14 +1194,23 @@
         "en": "Hue A19 White Ambiance"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTW000/assets/images/large.png",
         "small": "drivers/LTW000/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LTW001", "LTW004", "LTW010", "LTW015"],
+        "productId": [
+          "LTW001",
+          "LTW004",
+          "LTW010",
+          "LTW015"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1075,14 +1243,23 @@
         "en": "Hue White"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim"],
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
       "images": {
         "large": "drivers/LWB000/assets/images/large.png",
         "small": "drivers/LWB000/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LWB010", "LWB014", "LWB004", "LWB006", "LWB007"],
+        "productId": [
+          "LWB010",
+          "LWB014",
+          "LWB004",
+          "LWB006",
+          "LWB007"
+        ],
         "deviceId": 256,
         "profileId": 49246,
         "learnmode": {
@@ -1169,14 +1346,21 @@
         "en": "Hue Being Ceiling Lamp"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
       "images": {
         "large": "drivers/LTC001/assets/images/large.png",
         "small": "drivers/LTC001/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LTC001"],
+        "productId": [
+          "LTC001"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1209,14 +1393,21 @@
         "en": "Hue Fair Ceiling Lamp"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature", "light_mode"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
       "images": {
         "large": "drivers/LTC002/assets/images/large.png",
         "small": "drivers/LTC002/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LTC002"],
+        "productId": [
+          "LTC002"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1249,14 +1440,20 @@
         "en": "Hue Aurelle Rectangle Panel Light"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/LTC015/assets/images/large.png",
         "small": "drivers/LTC015/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LTC015"],
+        "productId": [
+          "LTC015"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1292,8 +1489,14 @@
       "capabilities": [],
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["RWL021", "RWL020"],
-        "deviceId": [2080, 2096],
+        "productId": [
+          "RWL021",
+          "RWL020"
+        ],
+        "deviceId": [
+          2080,
+          2096
+        ],
         "profileId": 49246,
         "learnmode": {
           "image": "/drivers/RWL000/assets/icon.svg",
@@ -1321,7 +1524,9 @@
       ],
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["SML001"],
+        "productId": [
+          "SML001"
+        ],
         "deviceId": 2128,
         "profileId": 49246,
         "learnmode": {
@@ -1456,14 +1661,22 @@
         "en": "Hue Phoenix Pendant"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/HML003/assets/images/large.png",
         "small": "drivers/HML003/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LLM010", "LLM011", "LLM012"],
+        "productId": [
+          "LLM010",
+          "LLM011",
+          "LLM012"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1496,14 +1709,22 @@
         "en": "Hue Phoenix Table"
       },
       "class": "light",
-      "capabilities": ["onoff", "dim", "light_temperature"],
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
       "images": {
         "large": "drivers/HML005/assets/images/large.png",
         "small": "drivers/HML005/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": ["LLM010", "LLM011", "LLM012"],
+        "productId": [
+          "LLM010",
+          "LLM011",
+          "LLM012"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {

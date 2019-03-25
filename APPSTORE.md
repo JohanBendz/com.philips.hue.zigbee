@@ -6,6 +6,11 @@ v1.4.5
 
 Added support for:
 - Hue Outdoor Sensor
+- Hue Outdoor Welcome Floodlight 
+- Hue Cher Ceiling
+- Hue Still Ceiling
+- Images of LTC001 and LTC002 had been switched.
+- Fixed icons for HML004 and LTC012
 
 v1.4.4
 
@@ -92,6 +97,9 @@ Untested:
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
 - Hue Outsoor Sensor (SML002)
+- Hue Outdoor Welcome Floodlight (1743630P7)
+- Hue Still Ceiling (LTC003)
+- Hue Cher Ceiling (LTC011)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
