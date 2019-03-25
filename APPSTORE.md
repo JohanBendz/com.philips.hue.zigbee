@@ -5,7 +5,9 @@ Release notes:
 v1.4.5
 
 Added support for:
-- Hue Still Ceiling
+- Hue Still Ceiling (LTC003)
+- Images of LTC001 and LTC002 had been switched.
+- Fixed icons for HML004 and LTC012
 
 v1.4.4
 
