@@ -5,7 +5,10 @@ Release notes:
 v1.4.5
 
 Added support for:
-- Hue Cher Ceiling
+- Hue Cher Ceiling (LTC011)
+- Hue Still Ceiling (LTC003)
+- Images of LTC001 and LTC002 had been switched.
+- Fixed icons for HML004 and LTC012
 
 v1.4.4
 
@@ -91,6 +94,8 @@ Untested:
 - Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
+- Hue Still Ceiling (LTC003)
+- Hue Cher Ceiling (LTC011)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
