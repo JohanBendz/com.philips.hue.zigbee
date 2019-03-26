@@ -12,6 +12,9 @@ Added support for:
 - Images of LTC001 and LTC002 had been switched.
 - Fixed icons for HML004 and LTC012
 
+New feature:
+- Temperature Offset for Motion Sensor and Outdoor Sensor
+
 v1.4.4
 
 Added support for:
