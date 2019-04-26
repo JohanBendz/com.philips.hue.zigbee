@@ -3,7 +3,7 @@
 const Homey = require('homey');
 const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
 
-class MotionSensor extends ZigBeeDevice {
+class OutdoorSensor extends ZigBeeDevice {
 	onMeshInit()
 	{
 		this.printNode();
@@ -123,4 +123,4 @@ class MotionSensor extends ZigBeeDevice {
 			}
 }
 
-module.exports = MotionSensor;
+module.exports = OutdoorSensor;
