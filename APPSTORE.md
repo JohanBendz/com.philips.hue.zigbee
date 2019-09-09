@@ -2,12 +2,23 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
-v1.4.5
+v1.4.6
 
 Added support for:
 - Hue White GU10 PF
 
-Changed name of LCT003 from "Hue Spot GU10" to "Hue Connected Lamp GU10"
+v1.4.5
+
+Added support for:
+- Hue Outdoor Sensor
+- Hue Outdoor Welcome Floodlight 
+- Hue Cher Ceiling
+- Hue Still Ceiling
+- Images of LTC001 and LTC002 had been switched.
+- Fixed icons for HML004 and LTC012
+
+New feature:
+- Temperature Offset for Motion Sensor and Outdoor Sensor
 
 v1.4.4
 
@@ -94,6 +105,10 @@ Untested:
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
 - Hue White GU10 PF (LWG001)
+- Hue Outsoor Sensor (SML002)
+- Hue Outdoor Welcome Floodlight (1743630P7)
+- Hue Still Ceiling (LTC003)
+- Hue Cher Ceiling (LTC011)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
