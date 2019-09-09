@@ -6,6 +6,7 @@ v1.4.6
 
 Added support for:
 - Hue White GU10 PF
+- Hue Fair Pendant
 
 v1.4.5
 
@@ -104,6 +105,7 @@ Untested:
 - Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
+- Hue Fair Pendant (LTP003)
 - Hue White GU10 PF (LWG001)
 - Hue Outsoor Sensor (SML002)
 - Hue Outdoor Welcome Floodlight (1743630P7)
