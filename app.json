@@ -59,7 +59,7 @@
         "small": "drivers/SML002/assets/images/small.jpg"
       },
       "settings": [
-         {
+        {
           "id": "temperature_offset",
           "type": "number",
           "label": {
@@ -756,6 +756,53 @@
         "productId": "LCT012",
         "deviceId": 528,
         "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LCG002",
+      "name": {
+        "en": "Hue Color Spot GU10"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "drivers/LCG002/assets/images/large.png",
+        "small": "drivers/LCG002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCG002",
+        "deviceId": 269,
+        "profileId": 260,
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -1647,7 +1694,7 @@
         "small": "drivers/SML001/assets/images/small.jpg"
       },
       "settings": [
-         {
+        {
           "id": "temperature_offset",
           "type": "number",
           "label": {
