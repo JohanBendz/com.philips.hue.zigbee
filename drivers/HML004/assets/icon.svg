@@ -1,63 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.2"
    id="Layer_1"
    x="0px"
    y="0px"
    viewBox="0 0 50.5 50.5"
-   xml:space="preserve"
-   sodipodi:docname="icon.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"><metadata
+   xml:space="preserve"><metadata
    id="metadata15"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
-   id="defs13" /><sodipodi:namedview
-   pagecolor="#ffffff"
-   bordercolor="#666666"
-   borderopacity="1"
-   objecttolerance="10"
-   gridtolerance="10"
-   guidetolerance="10"
-   inkscape:pageopacity="0"
-   inkscape:pageshadow="2"
-   inkscape:window-width="1680"
-   inkscape:window-height="987"
-   id="namedview11"
-   showgrid="false"
-   inkscape:zoom="4.6732673"
-   inkscape:cx="25.25"
-   inkscape:cy="25.25"
-   inkscape:window-x="1672"
-   inkscape:window-y="-8"
-   inkscape:window-maximized="1"
-   inkscape:current-layer="Layer_1" />
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs13" />
 
 
 
 
-<ellipse
-   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#828282;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-   id="path825"
-   ry="20.756355"
-   rx="17.760593"
-   cy="24.608053"
-   cx="25.463984" /><ellipse
-   cx="26.319914"
-   cy="24.608053"
-   rx="16.262712"
-   ry="18.616526"
-   id="ellipse853"
-   style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:#828282;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" /><path
-   style="opacity:1;fill:#f0f0f0;fill-opacity:0.89898993;stroke:#828282;stroke-width:0.04279661;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83333333"
-   d="m 24.358344,42.906347 c -3.253744,-0.43219 -5.86975,-1.82101 -8.63059,-4.581929 -2.864049,-2.864129 -4.59599,-6.352763 -5.259455,-10.594072 -0.346715,-2.21643 -0.131547,-6.293962 0.445587,-8.44408 1.683579,-6.272193 6.214428,-11.1429454 11.768317,-12.6511764 1.872545,-0.508514 5.402878,-0.508514 7.275424,0 7.021639,1.906818 11.995404,8.7627614 12.355751,17.0314364 0.127277,2.920538 -0.145973,4.910596 -1.047622,7.629734 -1.490833,4.49596 -4.670395,8.276848 -8.671174,10.31108 -2.135766,1.085951 -5.657992,1.641472 -8.236238,1.299007 z"
-   id="path923"
-   inkscape:connector-curvature="0" /></svg>
+<path
+   d="m 24.358344,42.906347 c -3.253744,-0.43219 -5.86975,-1.82101 -8.63059,-4.581929 -2.864049,-2.864129 -4.59599,-6.352763 -5.259455,-10.594072 -0.346715,-2.21643 -0.131547,-6.293962 0.445587,-8.44408 1.683579,-6.272193 6.214428,-11.1429454 11.768317,-12.6511764 1.872545,-0.508514 5.402878,-0.508514 7.275424,0 7.021639,1.906818 11.995404,8.7627614 12.355751,17.0314364 0.127277,2.920538 -0.145973,4.910596 -1.047622,7.629734 -1.490833,4.49596 -4.670395,8.276848 -8.671174,10.31108 -2.135766,1.085951 -5.657992,1.641472 -8.236238,1.299007 z M 42.582626,24.608053 A 16.262712,18.616526 0 0 1 26.319914,43.224579 16.262712,18.616526 0 0 1 10.057201,24.608053 16.262712,18.616526 0 0 1 26.319914,5.9915276 16.262712,18.616526 0 0 1 42.582626,24.608053 Z m 0.641951,0 A 17.760593,20.756355 0 0 1 25.463984,45.364408 17.760593,20.756355 0 0 1 7.7033901,24.608053 17.760593,20.756355 0 0 1 25.463984,3.8516979 17.760593,20.756355 0 0 1 43.224577,24.608053 Z"
+   style="opacity:1;fill:none;fill-opacity:0.89898993;stroke:#000000;stroke-width:0.139;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+   id="path923" /></svg>
