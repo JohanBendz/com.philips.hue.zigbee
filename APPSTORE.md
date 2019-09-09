@@ -7,7 +7,8 @@ v1.4.6
 Added support for:
 - Hue White GU10 PF
 - Hue Fair Pendant
--  LWF002
+- Hue White (LWF002)
+- Hue Color Spot GU10
 
 v1.4.5
 
@@ -112,6 +113,7 @@ Untested:
 - Hue Outsoor Sensor (SML002)
 - Hue Outdoor Welcome Floodlight (1743630P7)
 - Hue Cher Ceiling (LTC011)
+- Hue Color Spot GU10 (LCG002)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
