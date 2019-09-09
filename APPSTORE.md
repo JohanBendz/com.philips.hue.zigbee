@@ -7,6 +7,7 @@ v1.4.6
 Added support for:
 - Hue White GU10 PF
 - Hue Fair Pendant
+-  LWF002
 
 v1.4.5
 
@@ -80,6 +81,8 @@ Tested:
 - Hue Runner (x3 Hue Spot GU10)
 - Hue Connected Lamp GU10 (LCT003)
 - Hue Living Colors Bloom (LLC011,LLC012)
+- Hue Fair Ceiling Lamp (LTC002)
+- Hue Still Ceiling (LTC003)
 
 Untested:
 
@@ -96,7 +99,6 @@ Untested:
 - Hue Beyond Table (HBL001)
 - Hue Beyond Pendant (HBL002)
 - Hue Beyond Ceiling (HBL003)
-- Hue Fair Ceiling Lamp (LTC002)
 - Hue Being Ceiling Lamp (LTC001)
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
@@ -109,7 +111,6 @@ Untested:
 - Hue White GU10 PF (LWG001)
 - Hue Outsoor Sensor (SML002)
 - Hue Outdoor Welcome Floodlight (1743630P7)
-- Hue Still Ceiling (LTC003)
 - Hue Cher Ceiling (LTC011)
 
 Please report test-results to huezigbee@hibbisoft.se.
