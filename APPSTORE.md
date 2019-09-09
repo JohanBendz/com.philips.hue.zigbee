@@ -2,6 +2,11 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.6
+
+Added support for:
+- Hue White GU10 PF
+
 v1.4.5
 
 Added support for:
@@ -72,7 +77,7 @@ Tested:
 - Hue Living Colors Iris (LLC010)
 - Hue Go (LLC020)
 - Hue Runner (x3 Hue Spot GU10)
-- Hue Spot GU10 (LCT003)
+- Hue Connected Lamp GU10 (LCT003)
 - Hue Living Colors Bloom (LLC011,LLC012)
 
 Untested:
@@ -99,6 +104,7 @@ Untested:
 - Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
+- Hue White GU10 PF (LWG001)
 - Hue Outsoor Sensor (SML002)
 - Hue Outdoor Welcome Floodlight (1743630P7)
 - Hue Still Ceiling (LTC003)
