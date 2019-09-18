@@ -9,6 +9,7 @@ Added support for:
 - Hue Fair Pendant
 - Hue White (LWF002)
 - Hue Color Spot GU10
+- Hue Filament G93 (thanks for contributing Gemeni123)
 
 v1.4.5
 
@@ -114,6 +115,7 @@ Untested:
 - Hue Outdoor Welcome Floodlight (1743630P7)
 - Hue Cher Ceiling (LTC011)
 - Hue Color Spot GU10 (LCG002)
+- Hue Filament G93 (LWO001)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
