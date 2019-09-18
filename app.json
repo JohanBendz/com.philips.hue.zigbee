@@ -8,7 +8,7 @@
     "en": "Philips Hue bulbs support without Bridge. I would like to credit Richard Slater for his icons that where used when creating this app (https://thenounproject.com/richard.slater)"
   },
   "category": "lights",
-  "version": "1.4.5",
+  "version": "1.4.6",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -59,7 +59,7 @@
         "small": "drivers/SML002/assets/images/small.jpg"
       },
       "settings": [
-         {
+        {
           "id": "temperature_offset",
           "type": "number",
           "label": {
@@ -252,6 +252,50 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": "LTC011",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LTP003",
+      "name": {
+        "en": "Hue Fair Pendant"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "images": {
+        "large": "drivers/LTP003/assets/images/large.png",
+        "small": "drivers/LTP003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LTP003",
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -737,6 +781,53 @@
       ]
     },
     {
+      "id": "LCG002",
+      "name": {
+        "en": "Hue Color Spot GU10"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "drivers/LCG002/assets/images/large.png",
+        "small": "drivers/LCG002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCG002",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LCT024",
       "name": {
         "en": "Hue Play light bar"
@@ -878,9 +969,95 @@
       ]
     },
     {
+      "id": "LWG001",
+      "name": {
+        "en": "Hue White GU10 PF"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "images": {
+        "large": "drivers/LWG001/assets/images/large.png",
+        "small": "drivers/LWG001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LWG001",
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LWO001",
+      "name": {
+        "en": "Hue Filament G93"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "images": {
+        "large": "drivers/LWO001/assets/images/large.png",
+        "small": "drivers/LWO001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LWO001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LCT003",
       "name": {
-        "en": "Hue Spot GU10"
+        "en": "Hue Connected Lamp GU10"
       },
       "class": "light",
       "capabilities": [
@@ -1276,7 +1453,8 @@
           "LWB014",
           "LWB004",
           "LWB006",
-          "LWB007"
+          "LWB007",
+          "LWF002"
         ],
         "deviceId": 256,
         "profileId": 49246,
@@ -1559,7 +1737,7 @@
         "small": "drivers/SML001/assets/images/small.jpg"
       },
       "settings": [
-         {
+        {
           "id": "temperature_offset",
           "type": "number",
           "label": {
