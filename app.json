@@ -1248,7 +1248,7 @@
     {
       "id": "LLC011",
       "name": {
-        "en": "Hue Living Colors Bloom"
+        "en": "Hue Living Colors Bloom/Aura"
       },
       "class": "light",
       "capabilities": [
@@ -1266,7 +1266,8 @@
         "manufacturerName": "Philips",
         "productId": [
           "LLC011",
-          "LLC012"
+          "LLC012",
+          "LLC014"
         ],
         "deviceId": 512,
         "profileId": 49246,
