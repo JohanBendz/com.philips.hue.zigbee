@@ -11,6 +11,8 @@ Added support for:
 - Hue Color Spot GU10
 - Hue Filament G93 (thanks for contributing Gemeni123)
 - Hue Living Colors Aura
+- Hue Lucca Outdoor
+- Hue Lucca Piedestal
 
 v1.4.5
 
@@ -118,6 +120,8 @@ Untested:
 - Hue Color Spot GU10 (LCG002)
 - Hue Filament G93 (LWO001)
 - Hue Living Colors Aura (LLC014)
+- Hue Lucca Outdoor (LWW002)
+- Hue Lucca Piedestal (LWW001)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
