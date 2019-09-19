@@ -194,7 +194,7 @@
     {
       "id": "1743630P7",
       "name": {
-        "en": "Hue Outdoor Welcome Floodlight"
+        "en": "Hue Welcome Floodlight"
       },
       "class": "light",
       "capabilities": [
@@ -209,6 +209,53 @@
         "manufacturerName": "Philips",
         "productId": "1743630P7",
         "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "1743530P7",
+      "name": {
+        "en": "Hue Discover Floodlight"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "images": {
+        "large": "drivers/1743530P7/assets/images/large.png",
+        "small": "drivers/1743530P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1743530P7",
+        "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
           "instruction": {

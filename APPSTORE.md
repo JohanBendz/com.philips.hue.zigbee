@@ -11,6 +11,7 @@ Added support for:
 - Hue Color Spot GU10
 - Hue Filament G93 (thanks for contributing Gemeni123)
 - Hue Living Colors Aura
+- Hue Discover floodlight
 
 v1.4.5
 
@@ -113,11 +114,12 @@ Untested:
 - Hue Fair Pendant (LTP003)
 - Hue White GU10 PF (LWG001)
 - Hue Outsoor Sensor (SML002)
-- Hue Outdoor Welcome Floodlight (1743630P7)
+- Hue Welcome Floodlight (1743630P7)
 - Hue Cher Ceiling (LTC011)
 - Hue Color Spot GU10 (LCG002)
 - Hue Filament G93 (LWO001)
 - Hue Living Colors Aura (LLC014)
+- Hue Discover floodlight (1743530P7)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
