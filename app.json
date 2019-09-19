@@ -1591,7 +1591,7 @@
     {
       "id": "LTC015",
       "name": {
-        "en": "Hue Aurelle Rectangle Panel Light"
+        "en": "Hue Aurelle Panel Light"
       },
       "class": "light",
       "capabilities": [
@@ -1606,7 +1606,10 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "LTC015"
+          "LTC012",
+          "LTC015",
+          "LTC013",
+          "LTC016"
         ],
         "deviceId": 544,
         "profileId": 49246,
