@@ -10,6 +10,7 @@ Added support for:
 - Hue White (LWF002)
 - Hue Color Spot GU10
 - Hue Filament G93 (thanks for contributing Gemeni123)
+- Hue Living Colors Aura
 
 v1.4.5
 
@@ -116,6 +117,7 @@ Untested:
 - Hue Cher Ceiling (LTC011)
 - Hue Color Spot GU10 (LCG002)
 - Hue Filament G93 (LWO001)
+- Hue Living Colors Aura (LLC014)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
