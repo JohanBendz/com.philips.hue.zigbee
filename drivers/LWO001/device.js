@@ -2,6 +2,6 @@
 
 const HueWhite  = require("../HueWhite.js");
 
-class LWG001 extends HueWhite {}
+class LWO001 extends HueWhite {}
 
-module.exports = LWG001;
+module.exports = LWO001;
