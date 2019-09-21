@@ -10,6 +10,7 @@ Added support for:
 - Hue White (LWF002)
 - Hue Color Spot GU10
 - Hue Filament G93 (thanks for contributing Gemeni123)
+- Hue Filament A60 (thanks for contributing Gemeni123)
 - Hue Living Colors Aura
 - Hue Lucca Outdoor Post
 - Hue Lucca Outdoor Garden Light
@@ -122,6 +123,7 @@ Untested:
 - Hue Living Colors Aura (LLC014)
 - Hue Lucca Outdoor Post (LWW002)
 - Hue Lucca Outdoor Garden Light (LWW001)
+- Hue Filament A60 (LWA004)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
