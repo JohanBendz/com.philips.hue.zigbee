@@ -18,6 +18,7 @@ Added support for:
 - Hue Spot GU10 with Bluetooth 
 - Hue Impress Outdoor Pedestal Light
 - Hue Impress Outdoor Wall Light
+- Hue Adore Bathroom mirror light
 
 v1.4.5
 
@@ -132,6 +133,7 @@ Untested:
 - Hue Spot GU10 with Bluetooth (LWG004)
 - Hue Impress Outdoor Pedestal Light (1743130P7)
 - Hue Impress Outdoor Wall Light (1743030P7,1742930P7)
+- Hue Adore Bathroom mirror light (LTW017)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
