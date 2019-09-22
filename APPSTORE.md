@@ -17,6 +17,7 @@ Added support for:
 - Hue White Ambience Adore Bathroom Ceiling (thanks for contributing Gemeni123)
 - Hue Spot GU10 with Bluetooth 
 - Hue Impress Outdoor Pedestal Light
+- Hue Impress Outdoor Wall Light
 
 v1.4.5
 
@@ -130,6 +131,7 @@ Untested:
 - Hue White Ambience Adore Bathroom Ceiling (LTC021)
 - Hue Spot GU10 with Bluetooth (LWG004)
 - Hue Impress Outdoor Pedestal Light (1743130P7)
+- Hue Impress Outdoor Wall Light (1743030P7,1742930P7)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
