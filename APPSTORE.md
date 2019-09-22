@@ -14,6 +14,8 @@ Added support for:
 - Hue Living Colors Aura
 - Hue Lucca Outdoor Post
 - Hue Lucca Outdoor Garden Light
+- Hue White Ambience Adore Bathroom Ceiling (thanks for contributing Gemeni123)
+- Hue Spot GU10 with Bluetooth 
 
 v1.4.5
 
@@ -124,6 +126,8 @@ Untested:
 - Hue Lucca Outdoor Post (LWW002)
 - Hue Lucca Outdoor Garden Light (LWW001)
 - Hue Filament A60 (LWA004)
+- Hue White Ambience Adore Bathroom Ceiling (LTC021)
+- Hue Spot GU10 with Bluetooth (LWG004)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
