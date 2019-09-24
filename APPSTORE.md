@@ -16,6 +16,9 @@ Added support for:
 - Hue Lucca Outdoor Garden Light
 - Hue White Ambience Adore Bathroom Ceiling (thanks for contributing Gemeni123)
 - Hue Spot GU10 with Bluetooth 
+- Hue Impress Outdoor Pedestal Light
+- Hue Impress Outdoor Wall Light
+- Hue Adore Bathroom mirror light
 
 v1.4.5
 
@@ -128,6 +131,9 @@ Untested:
 - Hue Filament A60 (LWA004)
 - Hue White Ambience Adore Bathroom Ceiling (LTC021)
 - Hue Spot GU10 with Bluetooth (LWG004)
+- Hue Impress Outdoor Pedestal Light (1743130P7)
+- Hue Impress Outdoor Wall Light (1743030P7,1742930P7)
+- Hue Adore Bathroom mirror light (LTW017)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
