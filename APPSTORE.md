@@ -2,6 +2,26 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.6
+
+Added support for:
+- Hue White GU10 PF
+- Hue Fair Pendant
+- Hue White (LWF002)
+- Hue Color Spot GU10
+- Hue Filament G93 (thanks for contributing Gemeni123)
+- Hue Filament A60 (thanks for contributing Gemeni123)
+- Hue Living Colors Aura
+- Hue Lucca Outdoor Post
+- Hue Lucca Outdoor Garden Light
+- Hue White Ambience Adore Bathroom Ceiling (thanks for contributing Gemeni123)
+- Hue Spot GU10 with Bluetooth 
+- Hue Impress Outdoor Pedestal Light
+- Hue Impress Outdoor Wall Light
+- Hue Adore Bathroom mirror light
+- Hue Aurelle Square (thanks for contributing Gemeni123)
+- Hue Ensis Pendant (thanks for contributing Gemeni123)
+
 v1.4.5
 
 Added support for:
@@ -72,8 +92,10 @@ Tested:
 - Hue Living Colors Iris (LLC010)
 - Hue Go (LLC020)
 - Hue Runner (x3 Hue Spot GU10)
-- Hue Spot GU10 (LCT003)
+- Hue Connected Lamp GU10 (LCT003)
 - Hue Living Colors Bloom (LLC011,LLC012)
+- Hue Fair Ceiling Lamp (LTC002)
+- Hue Still Ceiling (LTC003)
 
 Untested:
 
@@ -90,7 +112,6 @@ Untested:
 - Hue Beyond Table (HBL001)
 - Hue Beyond Pendant (HBL002)
 - Hue Beyond Ceiling (HBL003)
-- Hue Fair Ceiling Lamp (LTC002)
 - Hue Being Ceiling Lamp (LTC001)
 - Hue Sana Wall Light (LCW001)
 - Hue Dimmer Switch (RWL020)
@@ -99,10 +120,25 @@ Untested:
 - Hue Lily Outdoor Spot (LCS001)
 - Hue Struana Ceiling (LTC012)
 - Hue Amaze Pendant (LTP002)
+- Hue Fair Pendant (LTP003)
+- Hue White GU10 PF (LWG001)
 - Hue Outsoor Sensor (SML002)
 - Hue Outdoor Welcome Floodlight (1743630P7)
-- Hue Still Ceiling (LTC003)
 - Hue Cher Ceiling (LTC011)
+- Hue Color Spot GU10 (LCG002)
+- Hue Filament G93 (LWO001)
+- Hue Living Colors Aura (LLC014)
+- Hue Lucca Outdoor Post (LWW002)
+- Hue Lucca Outdoor Garden Light (LWW001)
+- Hue Filament A60 (LWA004)
+- Hue White Ambience Adore Bathroom Ceiling (LTC021)
+- Hue Spot GU10 with Bluetooth (LWG004)
+- Hue Impress Outdoor Pedestal Light (1743130P7)
+- Hue Impress Outdoor Wall Light (1743030P7,1742930P7)
+- Hue Adore Bathroom mirror light (LTW017)
+- Hue Aurelle Square (LTC014)
+- Hue Econic light (1743830P7)
+- Hue Ensis Pendant (4090331P9)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
