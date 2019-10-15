@@ -1779,6 +1779,11 @@
       },
       "class": "sensor",
       "capabilities": [],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
