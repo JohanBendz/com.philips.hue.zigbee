@@ -40,6 +40,9 @@
         "measure_luminance",
         "measure_battery"
       ],
+      "energy": {
+        "batteries": [ "AA", "AA" ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
