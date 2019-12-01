@@ -40,6 +40,12 @@
         "measure_luminance",
         "measure_battery"
       ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
@@ -1817,6 +1823,11 @@
       },
       "class": "sensor",
       "capabilities": [],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
@@ -1852,6 +1863,12 @@
         "measure_luminance",
         "measure_battery"
       ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
