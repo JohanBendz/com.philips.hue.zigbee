@@ -7,6 +7,7 @@ v1.4.7
 Added support for:
 - HUE 9W A60 E27 EUR White (thx Gemini123)
 - Hue White Ambiance GU10 with Bluetooth (thx Schnaaf)
+- Hue smart plug (thx KrakenTyio)
 Changes:
 - Added battery types for Energy (thx JohanBendz)
 
