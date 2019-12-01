@@ -11,6 +11,7 @@ Added support for:
 - Hue Filament ST64 (thx bramoosterhuis)
 Changes:
 - Added battery types for Energy (thx JohanBendz)
+- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
 
 v1.4.6
 

@@ -1957,7 +1957,7 @@
           "hint": {
             "en": "Min interval before a report is sent to Homey (s)"
           },
-          "value": 1,
+          "value": 5,
           "attr": {
             "step": 1,
             "min": 1,
@@ -1989,7 +1989,7 @@
           "hint": {
             "en": "Min interval before a report is sent to Homey (s)"
           },
-          "value": 300,
+          "value": 1,
           "attr": {
             "step": 1,
             "min": 1,
