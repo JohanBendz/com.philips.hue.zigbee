@@ -2,6 +2,10 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.7
+
+- HUE 9W A60 E27 EUR White (thx Gemini123)
+
 v1.4.6
 
 Added support for:
