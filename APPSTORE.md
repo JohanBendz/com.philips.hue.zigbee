@@ -12,6 +12,7 @@ Added support for:
 Changes:
 - Added battery types for Energy (thx JohanBendz)
 - Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
+- Added energy consumption to the devices that had any data defined on meethue.com
 
 v1.4.6
 
