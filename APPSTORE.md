@@ -12,6 +12,7 @@ Added support for:
 - Hue Go Bluetooth (thx Schnaaf)
 - Hue E27 W&C Ambiance BT (thx Schnaaf)
 - Hue E27 White Ambiance BT (thx Schnaaf)
+
 Changes:
 - Added battery types for Energy (thx JohanBendz)
 - Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
