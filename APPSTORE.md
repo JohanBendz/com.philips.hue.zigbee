@@ -2,6 +2,18 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.7
+
+Added support for:
+- HUE 9W A60 E27 EUR White (thx Gemini123)
+- Hue White Ambiance GU10 with Bluetooth (thx Schnaaf)
+- Hue smart plug (thx KrakenTyio)
+- Hue Filament ST64 (thx bramoosterhuis)
+Changes:
+- Added battery types for Energy (thx JohanBendz)
+- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
+- Added energy consumption to the devices that had any data defined on meethue.com
+
 v1.4.6
 
 Added support for:

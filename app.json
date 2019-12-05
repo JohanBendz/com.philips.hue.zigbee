@@ -40,6 +40,12 @@
         "measure_luminance",
         "measure_battery"
       ],
+      "energy": {
+        "batteries": [
+          "AA",
+          "AA"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
@@ -192,6 +198,32 @@
       ]
     },
     {
+      "id": "LOM002",
+      "name": {
+        "en": "Hue smart plug"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "drivers/LOM002/assets/images/large.png",
+        "small": "drivers/LOM002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LOM002",
+        "deviceId": 266,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": []
+    },
+    {
       "id": "1743630P7",
       "name": {
         "en": "Hue Outdoor Welcome Floodlight"
@@ -201,6 +233,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/1743630P7/assets/images/large.png",
         "small": "drivers/1743630P7/assets/images/small.png"
@@ -245,6 +283,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LTC011/assets/images/large.png",
         "small": "drivers/LTC011/assets/images/small.png"
@@ -289,6 +333,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LTP003/assets/images/large.png",
         "small": "drivers/LTP003/assets/images/small.png"
@@ -333,6 +383,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LTC003/assets/images/large.png",
         "small": "drivers/LTC003/assets/images/small.png"
@@ -377,6 +433,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LTP002/assets/images/large.png",
         "small": "drivers/LTP002/assets/images/small.png"
@@ -421,6 +483,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 13,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/HML004/assets/images/large.png",
         "small": "drivers/HML004/assets/images/small.png"
@@ -465,6 +533,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LTC012/assets/images/large.png",
         "small": "drivers/LTC012/assets/images/small.png"
@@ -512,6 +586,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LCS001/assets/images/large.png",
         "small": "drivers/LCS001/assets/images/small.png"
@@ -559,6 +639,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 37.5,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LST003/assets/images/large.png",
         "small": "drivers/LST003/assets/images/small.png"
@@ -606,6 +692,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.1
+        }
+      },
       "images": {
         "large": "drivers/LTW012/assets/images/large.png",
         "small": "drivers/LTW012/assets/images/small.png"
@@ -650,6 +742,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 5.5,
+          "usageOff": 0.1
+        }
+      },
       "images": {
         "large": "drivers/LTW013/assets/images/large.png",
         "small": "drivers/LTW013/assets/images/small.png"
@@ -697,6 +795,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
       "images": {
         "large": "drivers/LTG002/assets/images/large.png",
         "small": "drivers/LTG002/assets/images/small.png"
@@ -744,6 +848,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 20,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LCW001/assets/images/large.png",
         "small": "drivers/LCW001/assets/images/small.png"
@@ -791,6 +901,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LCT012/assets/images/large.png",
         "small": "drivers/LCT012/assets/images/small.png"
@@ -838,6 +954,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LCG002/assets/images/large.png",
         "small": "drivers/LCG002/assets/images/small.png"
@@ -885,6 +1007,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.6,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LCT024/assets/images/large.png",
         "small": "drivers/LCT024/assets/images/small.png"
@@ -932,6 +1060,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 20.5,
+          "usageOff": 0.1
+        }
+      },
       "images": {
         "large": "drivers/LST002/assets/images/large.png",
         "small": "drivers/LST002/assets/images/small.png"
@@ -979,6 +1113,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LLC020/assets/images/large.png",
         "small": "drivers/LLC020/assets/images/small.png"
@@ -1022,6 +1162,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LWG001/assets/images/large.png",
         "small": "drivers/LWG001/assets/images/small.png"
@@ -1065,6 +1211,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LWG004/assets/images/large.png",
         "small": "drivers/LWG004/assets/images/small.png"
@@ -1108,6 +1260,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LWW002/assets/images/large.png",
         "small": "drivers/LWW002/assets/images/small.png"
@@ -1151,6 +1309,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9.5,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/LWW001/assets/images/large.png",
         "small": "drivers/LWW001/assets/images/small.png"
@@ -1198,6 +1362,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LCT003/assets/images/large.png",
         "small": "drivers/LCT003/assets/images/small.png"
@@ -1245,6 +1415,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.4
+        }
+      },
       "images": {
         "large": "drivers/HBL001/assets/images/large.png",
         "small": "drivers/HBL001/assets/images/small.png"
@@ -1292,6 +1468,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.4
+        }
+      },
       "images": {
         "large": "drivers/HBL002/assets/images/large.png",
         "small": "drivers/HBL002/assets/images/small.png"
@@ -1339,6 +1521,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 18,
+          "usageOff": 0.8
+        }
+      },
       "images": {
         "large": "drivers/HBL003/assets/images/large.png",
         "small": "drivers/HBL003/assets/images/small.png"
@@ -1385,6 +1573,12 @@
         "light_saturation",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 12,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LST001/assets/images/large.png",
         "small": "drivers/LST001/assets/images/small.png"
@@ -1481,6 +1675,12 @@
         "light_saturation",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 10,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LLC010/assets/images/large.png",
         "small": "drivers/LLC010/assets/images/small.png"
@@ -1525,6 +1725,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9.5,
+          "usageOff": 0.1
+        }
+      },
       "images": {
         "large": "drivers/LTW000/assets/images/large.png",
         "small": "drivers/LTW000/assets/images/small.png"
@@ -1573,6 +1779,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LWB000/assets/images/large.png",
         "small": "drivers/LWB000/assets/images/small.png"
@@ -1627,6 +1839,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LCT000/assets/images/large.png",
         "small": "drivers/LCT000/assets/images/small.png"
@@ -1679,6 +1897,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LTC001/assets/images/large.png",
         "small": "drivers/LTC001/assets/images/small.png"
@@ -1726,6 +1950,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/LTC002/assets/images/large.png",
         "small": "drivers/LTC002/assets/images/small.png"
@@ -1817,6 +2047,11 @@
       },
       "class": "sensor",
       "capabilities": [],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
@@ -1852,6 +2087,12 @@
         "measure_luminance",
         "measure_battery"
       ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
@@ -1914,7 +2155,7 @@
           "hint": {
             "en": "Min interval before a report is sent to Homey (s)"
           },
-          "value": 1,
+          "value": 5,
           "attr": {
             "step": 1,
             "min": 1,
@@ -1946,7 +2187,7 @@
           "hint": {
             "en": "Min interval before a report is sent to Homey (s)"
           },
-          "value": 300,
+          "value": 1,
           "attr": {
             "step": 1,
             "min": 1,
@@ -2014,6 +2255,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 18,
+          "usageOff": 1
+        }
+      },
       "images": {
         "large": "drivers/HML003/assets/images/large.png",
         "small": "drivers/HML003/assets/images/small.png"
@@ -2062,6 +2309,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 12,
+          "usageOff": 0.5
+        }
+      },
       "images": {
         "large": "drivers/HML005/assets/images/large.png",
         "small": "drivers/HML005/assets/images/small.png"
@@ -2109,6 +2362,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LWO001/assets/images/large.png",
         "small": "drivers/LWO001/assets/images/small.png"
@@ -2152,6 +2411,12 @@
         "onoff",
         "dim"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LWA004/assets/images/large.png",
         "small": "drivers/LWA004/assets/images/small.png"
@@ -2159,6 +2424,55 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": "LWA004",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LWV001",
+      "name": {
+        "en": "Hue Filament ST64"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWV001/assets/images/large.png",
+        "small": "drivers/LWV001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LWV001",
         "deviceId": 257,
         "profileId": 260,
         "learnmode": {
@@ -2196,6 +2510,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 40,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LTC021/assets/images/large.png",
         "small": "drivers/LTC021/assets/images/small.png"
@@ -2243,6 +2563,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/1743130P7/assets/images/large.png",
         "small": "drivers/1743130P7/assets/images/small.png"
@@ -2290,6 +2616,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 16,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/1743030P7/assets/images/large.png",
         "small": "drivers/1743030P7/assets/images/small.png"
@@ -2337,6 +2669,12 @@
         "dim",
         "light_temperature"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 40,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/LTW017/assets/images/large.png",
         "small": "drivers/LTW017/assets/images/small.png"
@@ -2384,6 +2722,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 0.2
+        }
+      },
       "images": {
         "large": "drivers/1743830P7/assets/images/large.png",
         "small": "drivers/1743830P7/assets/images/small.png"
@@ -2431,6 +2775,12 @@
         "light_temperature",
         "light_mode"
       ],
+      "energy": {
+        "approximation": {
+          "usageOn": 78,
+          "usageOff": 0.4
+        }
+      },
       "images": {
         "large": "drivers/4090331P9/assets/images/large.png",
         "small": "drivers/4090331P9/assets/images/small.png"
@@ -2487,6 +2837,55 @@
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LWA001",
+      "name": {
+        "en": "HUE 9W A60 E27 EUR White"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWA001/assets/images/large.png",
+        "small": "drivers/LWA001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LWA001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
           }
         }
       },
