@@ -1886,6 +1886,113 @@
       ]
     },
     {
+      "id": "LTA001",
+      "name": {
+        "en": "Hue E27 W&C Ambiance BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LCT000/assets/images/large.png",
+        "small": "drivers/LCT000/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [
+          "LTA001"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "id": "LCA001",
+      "name": {
+        "en": "Hue E27 White Ambiance BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LTW000/assets/images/large.png",
+        "small": "drivers/LTW000/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [
+          "LCA001"
+        ],
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LTC001",
       "name": {
         "en": "Hue Being Ceiling Lamp"
