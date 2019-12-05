@@ -1153,6 +1153,59 @@
       ]
     },
     {
+      "id": "LCT026",
+      "name": {
+        "en": "Hue Go Bluetooth"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LCT026/assets/images/large.png",
+        "small": "drivers/LCT026/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCT026",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LWG001",
       "name": {
         "en": "Hue White GU10 PF"
@@ -1906,8 +1959,8 @@
         }
       },
       "images": {
-        "large": "drivers/LCT000/assets/images/large.png",
-        "small": "drivers/LCT000/assets/images/small.png"
+        "large": "drivers/LTA001/assets/images/large.png",
+        "small": "drivers/LTA001/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
@@ -1958,8 +2011,8 @@
         }
       },
       "images": {
-        "large": "drivers/LTW000/assets/images/large.png",
-        "small": "drivers/LTW000/assets/images/small.png"
+        "large": "drivers/LCA001/assets/images/large.png",
+        "small": "drivers/LCA001/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
