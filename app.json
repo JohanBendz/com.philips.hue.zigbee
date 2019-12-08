@@ -1992,7 +1992,7 @@
       ]
     },
     {
-      "id": "LTA001",
+      "id": "LCA001",
       "name": {
         "en": "Hue E27 W&C Ambiance BT"
       },
@@ -2012,13 +2012,13 @@
         }
       },
       "images": {
-        "large": "drivers/LTA001/assets/images/large.png",
-        "small": "drivers/LTA001/assets/images/small.png"
+        "large": "drivers/LCA001/assets/images/large.png",
+        "small": "drivers/LCA001/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "LTA001"
+          "LCA001"
         ],
         "deviceId": 268,
         "profileId": 260,
@@ -2047,7 +2047,7 @@
       ]
     },
     {
-      "id": "LCA001",
+      "id": "LTA001",
       "name": {
         "en": "Hue E27 White Ambiance BT"
       },
@@ -2064,13 +2064,13 @@
         }
       },
       "images": {
-        "large": "drivers/LCA001/assets/images/large.png",
-        "small": "drivers/LCA001/assets/images/small.png"
+        "large": "drivers/LTA001/assets/images/large.png",
+        "small": "drivers/LTA001/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "LCA001"
+          "LTA001"
         ],
         "deviceId": 269,
         "profileId": 260,
