@@ -6,12 +6,13 @@ v1.4.7
 
 Added support for:
 - HUE 9W A60 E27 EUR White (thx Gemini123)
-- Hue White Ambiance GU10 with Bluetooth (thx Schnaaf)
+- Hue White Ambiance GU10 BT (thx Schnaaf)
 - Hue smart plug (thx KrakenTyio)
 - Hue Filament ST64 (thx bramoosterhuis)
-- Hue Go Bluetooth (thx Schnaaf)
+- Hue Go BT (thx Schnaaf)
 - Hue E27 W&C Ambiance BT (thx Schnaaf)
 - Hue E27 White Ambiance BT (thx Schnaaf)
+- Hue E14 White Candle BT
 
 Changes:
 - Added battery types for Energy (thx JohanBendz)
@@ -155,6 +156,14 @@ Untested:
 - Hue Aurelle Square (LTC014)
 - Hue Econic light (1743830P7)
 - Hue Ensis Pendant (4090331P9)
+- HUE 9W A60 E27 EUR White (LWA001)
+- Hue White Ambiance GU10 BT (LTG002)
+- Hue smart plug (LOM002)
+- Hue Filament ST64 (LWV001)
+- Hue Go Bluetooth (LCT026)
+- Hue E27 W&C Ambiance BT (LCA001)
+- Hue E27 White Ambiance BT (LTA001)
+- Hue E14 White Candle BT (LWE002)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
