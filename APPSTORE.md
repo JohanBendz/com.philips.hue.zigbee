@@ -14,6 +14,7 @@ Added support for:
 - Hue E27 White Ambiance BT (thx Schnaaf)
 - Hue E14 White Candle BT
 - Hue Outdoor Fuzo Wall Lantern
+- Hue Fluorish Ceiling Light
 
 Changes:
 - Added battery types for Energy (thx JohanBendz)
@@ -166,6 +167,7 @@ Untested:
 - Hue E27 White Ambiance BT (LTA001)
 - Hue E14 White Candle BT (LWE002)
 - Hue Outdoor Fuzo Wall Lantern (1744430P7)
+- Hue Fluorish Ceiling Light (4090531P9)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
