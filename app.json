@@ -2020,7 +2020,7 @@
         "productId": [
           "LCA001"
         ],
-        "deviceId": 268,
+        "deviceId": 269,
         "profileId": 260,
         "learnmode": {
           "instruction": {
@@ -2072,7 +2072,7 @@
         "productId": [
           "LTA001"
         ],
-        "deviceId": 269,
+        "deviceId": 268,
         "profileId": 260,
         "learnmode": {
           "instruction": {
