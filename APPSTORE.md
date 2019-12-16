@@ -13,6 +13,7 @@ Added support for:
 - Hue E27 W&C Ambiance BT (thx Schnaaf)
 - Hue E27 White Ambiance BT (thx Schnaaf)
 - Hue E14 White Candle BT
+- Hue Outdoor Fuzo Wall Lantern
 
 Changes:
 - Added battery types for Energy (thx JohanBendz)
@@ -164,6 +165,7 @@ Untested:
 - Hue E27 W&C Ambiance BT (LCA001)
 - Hue E27 White Ambiance BT (LTA001)
 - Hue E14 White Candle BT (LWE002)
+- Hue Outdoor Fuzo Wall Lantern (1744430P7)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
