@@ -2,6 +2,25 @@ This app supports setting up your Philips Hue lights to your Homey without havin
 
 Release notes:
 
+v1.4.7
+
+Added support for:
+- HUE 9W A60 E27 EUR White (thx Gemini123)
+- Hue White Ambiance GU10 BT (thx Schnaaf)
+- Hue smart plug (thx KrakenTyio)
+- Hue Filament ST64 (thx bramoosterhuis)
+- Hue Go BT (thx Schnaaf)
+- Hue E27 W&C Ambiance BT (thx Schnaaf)
+- Hue E27 White Ambiance BT (thx Schnaaf)
+- Hue E14 White Candle BT
+- Hue Outdoor Fuzo Wall Lantern
+- Hue Fluorish Ceiling Light
+
+Changes:
+- Added battery types for Energy (thx JohanBendz)
+- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
+- Added energy consumption to the devices that had any data defined on meethue.com
+
 v1.4.6
 
 Added support for:
@@ -139,6 +158,16 @@ Untested:
 - Hue Aurelle Square (LTC014)
 - Hue Econic light (1743830P7)
 - Hue Ensis Pendant (4090331P9)
+- HUE 9W A60 E27 EUR White (LWA001)
+- Hue White Ambiance GU10 BT (LTG002)
+- Hue smart plug (LOM002)
+- Hue Filament ST64 (LWV001)
+- Hue Go Bluetooth (LCT026)
+- Hue E27 W&C Ambiance BT (LCA001)
+- Hue E27 White Ambiance BT (LTA001)
+- Hue E14 White Candle BT (LWE002)
+- Hue Outdoor Fuzo Wall Lantern (1744430P7)
+- Hue Fluorish Ceiling Light (4090531P9)
 
 Please report test-results to huezigbee@hibbisoft.se.
 
