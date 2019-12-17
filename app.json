@@ -8,7 +8,7 @@
     "en": "Philips Hue bulbs support without Bridge."
   },
   "category": "lights",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -18,7 +18,7 @@
     "donate": {
       "paypal": {
         "username": "johanssonsebastian"
-      }
+      } 
     }
   },
   "images": {

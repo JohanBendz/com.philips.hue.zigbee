@@ -1,6 +1,6 @@
 Release notes:
 
-v1.4.8
+v1.4.9
 
 Added support for:
 - HUE 9W A60 E27 EUR White (thx Gemini123)
