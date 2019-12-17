@@ -3,21 +3,6 @@
     "en": ""
   },
     "1.4.9": {
-    "en": "Added support for:
-- HUE 9W A60 E27 EUR White (thx Gemini123)
-- Hue White Ambiance GU10 BT (thx Schnaaf)
-- Hue smart plug (thx KrakenTyio)
-- Hue Filament ST64 (thx bramoosterhuis)
-- Hue Go BT (thx Schnaaf)
-- Hue E27 W&C Ambiance BT (thx Schnaaf)
-- Hue E27 White Ambiance BT (thx Schnaaf)
-- Hue E14 White Candle BT
-- Hue Outdoor Fuzo Wall Lantern
-- Hue Fluorish Ceiling Light
-
-Changes:
-- Added battery types for Energy (thx JohanBendz)
-- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
-- Added energy consumption to the devices that had any data defined on meethue.com"
+    "en": "See changelog on https://github.com/sebbebebbe/com.philips.hue.zigbee"
   }
 }
