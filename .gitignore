@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+#Backup
+*.DS_Store
+
