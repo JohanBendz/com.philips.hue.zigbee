@@ -240,6 +240,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 15,
@@ -289,6 +296,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 15,
@@ -339,6 +353,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 39,
@@ -389,6 +410,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 39,
@@ -439,6 +467,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 32,
@@ -489,6 +524,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 39,
@@ -539,6 +581,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 13,
@@ -589,6 +638,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 32,
@@ -642,6 +698,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 8,
@@ -695,6 +758,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 37.5,
@@ -748,6 +818,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6,
@@ -798,6 +875,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 5.5,
@@ -851,6 +935,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 5,
@@ -904,6 +995,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 20,
@@ -957,6 +1055,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.5,
@@ -1010,6 +1115,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.5,
@@ -1063,6 +1175,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.6,
@@ -1116,6 +1235,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 20.5,
@@ -1169,6 +1295,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6,
@@ -1222,6 +1355,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6,
@@ -1275,6 +1415,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 5.7,
@@ -1324,6 +1471,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.5,
@@ -1373,6 +1527,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.5,
@@ -1422,6 +1583,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -1471,6 +1639,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9.5,
@@ -1524,6 +1699,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6.5,
@@ -1577,6 +1759,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -1630,6 +1819,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -1683,6 +1879,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 18,
@@ -1735,6 +1938,13 @@
         "light_saturation",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 12,
@@ -1787,6 +1997,13 @@
         "light_saturation",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "images": {
         "large": "drivers/LLC011/assets/images/large.png",
         "small": "drivers/LLC011/assets/images/small.png"
@@ -1837,6 +2054,13 @@
         "light_saturation",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 10,
@@ -1887,6 +2111,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9.5,
@@ -1941,6 +2172,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -2001,6 +2239,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -2061,6 +2306,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -2113,6 +2365,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -2166,6 +2425,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 32,
@@ -2219,6 +2485,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 39,
@@ -2271,6 +2544,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "images": {
         "large": "drivers/LTC015/assets/images/large.png",
         "small": "drivers/LTC015/assets/images/small.png"
@@ -2524,6 +2804,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 18,
@@ -2578,6 +2865,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 12,
@@ -2631,6 +2925,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 7,
@@ -2680,6 +2981,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 7,
@@ -2729,6 +3037,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 7,
@@ -2779,6 +3094,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 40,
@@ -2832,6 +3154,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 8,
@@ -2885,6 +3214,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 16,
@@ -2938,6 +3274,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 40,
@@ -2991,6 +3334,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 15,
@@ -3044,6 +3394,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 78,
@@ -3097,6 +3454,13 @@
         "light_temperature",
         "light_mode"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 32,
@@ -3147,6 +3511,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "images": {
         "large": "drivers/LTC014/assets/images/large.png",
         "small": "drivers/LTC014/assets/images/small.png"
@@ -3190,6 +3561,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 9,
@@ -3239,6 +3617,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 6,
@@ -3288,6 +3673,13 @@
         "onoff",
         "dim"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 15,
