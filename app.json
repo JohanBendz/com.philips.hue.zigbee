@@ -3730,6 +3730,13 @@
         "dim",
         "light_temperature"
       ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
       "energy": {
         "approximation": {
           "usageOn": 39,
