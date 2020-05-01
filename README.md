@@ -5,7 +5,6 @@ Philips Hue bulbs support without Bridge for Homey
 ## Release notes:
 
 ### v1.5.0
-
 The Philips Hue Zigbee app and project has been transferred from Sebastian Johansson to Johan Bendz
 
 Added support for:
@@ -16,7 +15,6 @@ New features:
 Changes:
 
 Fixes:
-
 
 ### v1.4.9
 
