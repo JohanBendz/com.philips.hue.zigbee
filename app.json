@@ -215,7 +215,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LOM002",
+        "productId": [
+          "LOM001",
+          "LOM002"
+        ],
         "deviceId": 266,
         "profileId": 260,
         "learnmode": {

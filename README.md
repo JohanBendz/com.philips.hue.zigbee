@@ -9,10 +9,13 @@ The Philips Hue Zigbee app and project has been transferred from Sebastian Johan
 
 Added support for:
 - Hue Outdoor Discover Floodlight
+- Hue Flourish Pendant
 
 New features:
+- Dim duration functionality added to units with Dim capability
 
 Changes:
+- Added Product ID LOM001 to Hue Smart Plug
 
 Fixes:
 
