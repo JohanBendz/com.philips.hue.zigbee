@@ -2,10 +2,10 @@
 
 const Homey = require("homey");
 
-class PhilipsHueApp extends Homey.App {
+class PhilipsHueZigbeeApp extends Homey.App {
   onInit() {
-    this.log("Philips Hue app initiating...");
+    this.log("Philips Hue Zigbee app initiating...");
   }
 }
 
-module.exports = PhilipsHueApp;
+module.exports = PhilipsHueZigbeeApp;

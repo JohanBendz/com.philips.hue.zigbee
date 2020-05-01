@@ -4,10 +4,24 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.0
+
+The Philips Hue Zigbee app and project has been transferred from Sebastian Johansson to Johan Bendz
+
+Added support for:
+- Hue Outdoor Discover Floodlight
+
+New features:
+
+Changes:
+
+Fixes:
+
+
 ### v1.4.9
 
 Added support for:
-- HUE 9W A60 E27 EUR White (thx Gemini123)
+- Hue 9W A60 E27 EUR White (thx Gemini123)
 - Hue White Ambiance GU10 BT (thx Schnaaf)
 - Hue smart plug (thx KrakenTyio)
 - Hue Filament ST64 (thx bramoosterhuis)
@@ -18,10 +32,12 @@ Added support for:
 - Hue Outdoor Fuzo Wall Lantern
 - Hue Fluorish Ceiling Light
 
-Changes:
+New features:
 - Added battery types for Energy (thx JohanBendz)
-- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
 - Added energy consumption to the devices that had any data defined on meethue.com
+
+Changes:
+- Based on findings by mapulu we now run motion detection on SML001 with minimum 5 seconds reports to see if we can mitigate issues with motion sensors stop reporting data
 
 ### v1.4.6
 
@@ -53,7 +69,7 @@ Added support for:
 - Images of LTC001 and LTC002 had been switched.
 - Fixed icons for HML004 and LTC012
 
-New feature:
+New features:
 - Temperature Offset for Motion Sensor and Outdoor Sensor
 
 ### v1.4.4
@@ -65,6 +81,7 @@ Added support for:
 - Hue Struana Ceiling
 - Hue Lily Outdoor Spot
 - Hue Outdoor Lightstrip
+
 Fixes:
 - Changed back all RGB bulbs to use ZigbeeLightDevice since alot of RGB bulbs get a sligthly greenish color when selecting warmest ambiance. Please inform me about RGB bulbs/strips not working so that we can try changing specific bulbs to ZigBeeXYLightDevice
 
@@ -74,16 +91,19 @@ Motion Sensor seems to be fixed in v2.0.5-rc.2.
 
 ### v1.4.3
 
+Changes:
 - Added references to installed packages
 - Force added dependencies to repository
+
+Fixes:
 - Fixed bug regarding LST001, thanks Andreas Pardeike
 
 ### v1.4.0
 
+Changes:
 - Changed color light to use XY ZigBee light device
 
 Added support for:
-
 - Hue Beyond Table
 - Hue Beyond Pendant
 - Hue Beyond Ceiling
@@ -93,8 +113,9 @@ Added support for:
 - Hue Dimmer Switch (RWL020 US version)
 - Hue Aurelle Rectangle Panel Light
 
-### v1.3.0: - Release notes :) - Added support for:
+### v1.3.0: - Release notes :)
 
+Added support for:
 - Hue Dimmer Switch
 - Hue Motion Sensor
 - Hue Phoenix Pendant
@@ -104,7 +125,6 @@ Added support for:
 Currently Supported bulbs/devices:
 
 Tested:
-
 - Hue Ambiance Candle (LTW012)
 - Hue White Bulb (LWB010)
 - Hue A19 Bulb (Color) (LCT001, LCT015)
@@ -119,7 +139,6 @@ Tested:
 - Hue Still Ceiling (LTC003)
 
 Untested:
-
 - Hue White Bulb (LWB014,LWB004,LWB006,LWB007)
 - Hue A19 Bulb (Color) (LCT001,LCT007,LCT010,LCT014,LCT016)
 - Hue A19 White Ambiance (LTW001,LTW004,LTW010,LTW015)
@@ -170,7 +189,3 @@ Untested:
 - Hue E14 White Candle BT (LWE002)
 - Hue Outdoor Fuzo Wall Lantern (1744430P7)
 - Hue Fluorish Ceiling Light (4090531P9)
-
-Please report test-results to huezigbee@hibbisoft.se.
-
-More bulbs will be added and please make requests if yo are missing a lamp.
