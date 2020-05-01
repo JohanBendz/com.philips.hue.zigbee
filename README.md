@@ -4,6 +4,11 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.0
+
+Added support for:
+- HUE Outdoor Discover Floodlight
+
 ### v1.4.9
 
 Added support for:
