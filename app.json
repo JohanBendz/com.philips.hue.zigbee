@@ -248,12 +248,27 @@
           "opts": {
             "duration": true
           }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 15,
-          "usageOff": 1
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "energy": {
+          "approximation": {
+           "usageOn": 15,
+           "usageOff": 1
+          }
         }
       },
       "images": {
@@ -361,6 +376,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -415,6 +435,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -475,6 +500,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -529,6 +559,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -589,6 +624,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -643,6 +683,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -706,6 +751,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -763,6 +823,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -826,6 +901,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -880,6 +960,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -943,6 +1028,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1000,6 +1090,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1063,6 +1168,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1120,6 +1240,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1183,6 +1318,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1240,6 +1390,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1303,6 +1468,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1363,6 +1543,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1420,6 +1615,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1707,6 +1917,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1764,6 +1989,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1827,6 +2067,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -1884,6 +2139,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -1946,6 +2216,16 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2002,6 +2282,16 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
           "opts": {
             "duration": true
           }
@@ -2062,6 +2352,16 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2116,6 +2416,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -2247,6 +2552,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2314,6 +2634,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2370,6 +2705,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -2433,6 +2773,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2493,6 +2838,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2549,6 +2899,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -2812,6 +3167,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -2870,6 +3230,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -3102,6 +3467,11 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -3159,6 +3529,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -3222,6 +3607,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -3279,6 +3679,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -3342,6 +3747,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -3399,6 +3819,21 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -3462,6 +3897,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -3522,6 +3972,21 @@
           "opts": {
             "duration": true
           }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
         }
       },
       "energy": {
@@ -3576,6 +4041,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -3795,6 +4265,11 @@
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
