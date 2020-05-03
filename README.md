@@ -4,6 +4,21 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.1
+
+Added support for:
+- Hue Signe Floor Light - White and Color Ambiance
+
+New features:
+- Duration functionality added to units that support hue, saturation and temperature
+
+Changes:
+- Hue Motion Sensor, fine tuning of reporting will hopefully make the device work better
+- Hue Outdoor Sensor, fine tuning of reporting will hopefully make the device work better
+
+Fixes:
+- N/A
+
 ### v1.5.0
 The Philips Hue Zigbee app and project has been transferred from Sebastian Johansson to Johan Bendz
 
@@ -18,6 +33,7 @@ Changes:
 - Added Product ID LOM001 to Hue Smart Plug
 
 Fixes:
+- N/A
 
 ### v1.4.9
 
