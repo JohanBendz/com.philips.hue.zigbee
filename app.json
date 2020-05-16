@@ -34,7 +34,7 @@
     {
       "id": "1742930P7",
       "name": {
-        "en": "Impress"
+        "en": "Impress Outdoor Wall Light"
       },
       "class": "light",
       "capabilities": [
@@ -109,7 +109,7 @@
     {
       "id": "1744530P7",
       "name": {
-        "en": "Fuzo"
+        "en": "Fuzo Outdoor Wall Light"
       },
       "class": "light",
       "capabilities": [
@@ -184,7 +184,7 @@
     {
       "id": "LCF002",
       "name": {
-        "en": "Calla Outdoor"
+        "en": "Calla Outdoor Path Light"
       },
       "class": "light",
       "capabilities": [
@@ -259,7 +259,7 @@
     {
       "id": "5063230P7",
       "name": {
-        "en": "Fugato"
+        "en": "Fugato Double Spotlight"
       },
       "class": "light",
       "capabilities": [
@@ -409,7 +409,7 @@
     {
       "id": "5045131P7",
       "name": {
-        "en": "Centura GU10 White and Color Ambiance"
+        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
       },
       "class": "light",
       "capabilities": [
@@ -484,7 +484,7 @@
     {
       "id": "4090431P9",
       "name": {
-        "en": "Flourish White and Color"
+        "en": "Flourish Ceiling Light White and Color"
       },
       "class": "light",
       "capabilities": [
@@ -634,7 +634,7 @@
     {
       "id": "LCF003",
       "name": {
-        "en": "Hue Signe Floor Light"
+        "en": "Signe Floor Light"
       },
       "class": "light",
       "capabilities": [
@@ -878,7 +878,7 @@
     {
       "id": "LOM002",
       "name": {
-        "en": "Hue smart plug"
+        "en": "Smart Plug"
       },
       "class": "socket",
       "capabilities": [
@@ -907,7 +907,7 @@
     {
       "id": "1743530P7",
       "name": {
-        "en": "Hue Outdoor Discover Floodlight"
+        "en": "Discover Outdoor Floodlight"
       },
       "class": "light",
       "capabilities": [
@@ -982,7 +982,7 @@
     {
       "id": "1743630P7",
       "name": {
-        "en": "Hue Outdoor Welcome Floodlight"
+        "en": "Welcome Outdoor Floodlight"
       },
       "class": "light",
       "capabilities": [
@@ -1038,7 +1038,7 @@
     {
       "id": "LTC011",
       "name": {
-        "en": "Hue Cher Ceiling"
+        "en": "Cher Ceiling"
       },
       "class": "light",
       "capabilities": [
@@ -1100,7 +1100,7 @@
     {
       "id": "LTP003",
       "name": {
-        "en": "Hue Fair Pendant"
+        "en": "Fair Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -1162,7 +1162,7 @@
     {
       "id": "LTC003",
       "name": {
-        "en": "Hue Still Ceiling"
+        "en": "Still Ceiling"
       },
       "class": "light",
       "capabilities": [
@@ -1224,7 +1224,7 @@
     {
       "id": "LTP002",
       "name": {
-        "en": "Hue Amaze Pendant"
+        "en": "Amaze Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -1286,7 +1286,7 @@
     {
       "id": "HML004",
       "name": {
-        "en": "Hue Phoenix Wall Light"
+        "en": "Phoenix Wall Light"
       },
       "class": "light",
       "capabilities": [
@@ -1348,7 +1348,7 @@
     {
       "id": "LTC012",
       "name": {
-        "en": "Hue Struana Ceiling"
+        "en": "Struana Ceiling"
       },
       "class": "light",
       "capabilities": [
@@ -1410,7 +1410,7 @@
     {
       "id": "LCS001",
       "name": {
-        "en": "Hue Lily Outdoor Spot"
+        "en": "Lily Outdoor Spot"
       },
       "class": "light",
       "capabilities": [
@@ -1485,7 +1485,7 @@
     {
       "id": "LST003",
       "name": {
-        "en": "Hue Outdoor Lightstrip"
+        "en": "Lightstrip Outdoor"
       },
       "class": "light",
       "capabilities": [
@@ -1563,7 +1563,7 @@
     {
       "id": "LTW012",
       "name": {
-        "en": "Hue Ambiance Candle"
+        "en": "Candle Ambiance"
       },
       "class": "light",
       "capabilities": [
@@ -1625,7 +1625,7 @@
     {
       "id": "LTW013",
       "name": {
-        "en": "Hue Ambiance Spot"
+        "en": "Spot Ambiance"
       },
       "class": "light",
       "capabilities": [
@@ -1690,7 +1690,7 @@
     {
       "id": "LTG002",
       "name": {
-        "en": "Hue White Ambiance GU10 BT"
+        "en": "GU10 White Ambiance BT"
       },
       "class": "light",
       "capabilities": [
@@ -1827,7 +1827,7 @@
     {
       "id": "LCT012",
       "name": {
-        "en": "Hue Color Candle"
+        "en": "Candle Color"
       },
       "class": "light",
       "capabilities": [
@@ -1902,7 +1902,7 @@
     {
       "id": "LCG002",
       "name": {
-        "en": "Hue Color Spot GU10"
+        "en": "GU10 Spot Color"
       },
       "class": "light",
       "capabilities": [
@@ -1977,7 +1977,7 @@
     {
       "id": "LCT024",
       "name": {
-        "en": "Hue Play light bar"
+        "en": "Play Lightbar"
       },
       "class": "light",
       "capabilities": [
@@ -2052,7 +2052,7 @@
     {
       "id": "LST002",
       "name": {
-        "en": "Hue LightStrips Plus"
+        "en": "LightStrips Plus"
       },
       "class": "light",
       "capabilities": [
@@ -2127,7 +2127,7 @@
     {
       "id": "LLC020",
       "name": {
-        "en": "Hue Go"
+        "en": "Go"
       },
       "class": "light",
       "capabilities": [
@@ -2202,7 +2202,7 @@
     {
       "id": "LCT026",
       "name": {
-        "en": "Hue Go BT"
+        "en": "Go BT"
       },
       "class": "light",
       "capabilities": [
@@ -2277,7 +2277,7 @@
     {
       "id": "5063230P7",
       "name": {
-        "en": "Hue Go Bluetooth"
+        "en": "Go BT"
       },
       "class": "light",
       "capabilities": [
@@ -2352,7 +2352,7 @@
     {
       "id": "LWG001",
       "name": {
-        "en": "Hue White GU10 PF"
+        "en": "GU10 White PF"
       },
       "class": "light",
       "capabilities": [
@@ -2408,7 +2408,7 @@
     {
       "id": "LWG004",
       "name": {
-        "en": "Hue White GU10 with Bluetooth"
+        "en": "GU10 White BT"
       },
       "class": "light",
       "capabilities": [
@@ -2464,7 +2464,7 @@
     {
       "id": "LWW002",
       "name": {
-        "en": "Hue Lucca Outdoor Post"
+        "en": "Lucca Outdoor Post"
       },
       "class": "light",
       "capabilities": [
@@ -2520,7 +2520,7 @@
     {
       "id": "LWW001",
       "name": {
-        "en": "Hue Lucca Outdoor Garden Light"
+        "en": "Lucca Outdoor Garden Light"
       },
       "class": "light",
       "capabilities": [
@@ -2576,7 +2576,7 @@
     {
       "id": "LCT003",
       "name": {
-        "en": "Hue Connected Lamp GU10"
+        "en": "Connected Lamp GU10"
       },
       "class": "light",
       "capabilities": [
@@ -2651,7 +2651,7 @@
     {
       "id": "HBL001",
       "name": {
-        "en": "Hue Beyond Table"
+        "en": "Beyond Table"
       },
       "class": "light",
       "capabilities": [
@@ -2726,7 +2726,7 @@
     {
       "id": "HBL002",
       "name": {
-        "en": "Hue Beyond Pendant"
+        "en": "Beyond Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -2801,7 +2801,7 @@
     {
       "id": "HBL003",
       "name": {
-        "en": "Hue Beyond Ceiling"
+        "en": "Beyond Ceiling"
       },
       "class": "light",
       "capabilities": [
@@ -2876,7 +2876,7 @@
     {
       "id": "LST001",
       "name": {
-        "en": "Hue LightStrips"
+        "en": "LightStrips"
       },
       "class": "light",
       "capabilities": [
@@ -2945,7 +2945,7 @@
     {
       "id": "LLC011",
       "name": {
-        "en": "Hue Living Colors Bloom/Aura"
+        "en": "Bloom/Aura Living Colors"
       },
       "class": "light",
       "capabilities": [
@@ -3012,7 +3012,7 @@
     {
       "id": "LLC010",
       "name": {
-        "en": "Hue Living Colors Iris"
+        "en": "Iris Living Colors"
       },
       "class": "light",
       "capabilities": [
@@ -3081,7 +3081,7 @@
     {
       "id": "LTW000",
       "name": {
-        "en": "Hue A19 White Ambiance"
+        "en": "Bulb A19 White Ambiance"
       },
       "class": "light",
       "capabilities": [
@@ -3148,7 +3148,7 @@
     {
       "id": "LWB000",
       "name": {
-        "en": "Hue White"
+        "en": "Bulb White"
       },
       "class": "light",
       "capabilities": [
@@ -3211,7 +3211,7 @@
     {
       "id": "LCT000",
       "name": {
-        "en": "Hue bulb A19"
+        "en": "Bulb A19"
       },
       "class": "light",
       "capabilities": [
@@ -3293,7 +3293,7 @@
     {
       "id": "LCA001",
       "name": {
-        "en": "Hue E27 W&C Ambiance BT"
+        "en": "E27 White and Color Ambiance BT"
       },
       "class": "light",
       "capabilities": [
@@ -3370,7 +3370,7 @@
     {
       "id": "LTA001",
       "name": {
-        "en": "Hue E27 White Ambiance BT"
+        "en": "E27 White Ambiance BT"
       },
       "class": "light",
       "capabilities": [
@@ -3434,7 +3434,7 @@
     {
       "id": "LTC001",
       "name": {
-        "en": "Hue Being Ceiling Lamp"
+        "en": "Being Ceiling Lamp"
       },
       "class": "light",
       "capabilities": [
@@ -3499,7 +3499,7 @@
     {
       "id": "LTC002",
       "name": {
-        "en": "Hue Fair Ceiling Lamp"
+        "en": "Fair Ceiling Lamp"
       },
       "class": "light",
       "capabilities": [
@@ -3564,7 +3564,7 @@
     {
       "id": "LTC015",
       "name": {
-        "en": "Hue Aurelle Panel Light"
+        "en": "Aurelle Panel Light"
       },
       "class": "light",
       "capabilities": [
@@ -3625,7 +3625,7 @@
     {
       "id": "RWL000",
       "name": {
-        "en": "Hue dimmer switch"
+        "en": "Dimmer Switch"
       },
       "class": "sensor",
       "capabilities": [],
@@ -3829,7 +3829,7 @@
     {
       "id": "HML003",
       "name": {
-        "en": "Hue Phoenix Pendant"
+        "en": "Phoenix Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -3895,7 +3895,7 @@
     {
       "id": "HML005",
       "name": {
-        "en": "Hue Phoenix Table"
+        "en": "Phoenix Table"
       },
       "class": "light",
       "capabilities": [
@@ -3961,7 +3961,7 @@
     {
       "id": "LWO001",
       "name": {
-        "en": "Hue Filament G93"
+        "en": "Filament G93"
       },
       "class": "light",
       "capabilities": [
@@ -4017,7 +4017,7 @@
     {
       "id": "LWA004",
       "name": {
-        "en": "Hue Filament A60"
+        "en": "Filament A60"
       },
       "class": "light",
       "capabilities": [
@@ -4073,7 +4073,7 @@
     {
       "id": "LWV001",
       "name": {
-        "en": "Hue Filament ST64"
+        "en": "Filament ST64"
       },
       "class": "light",
       "capabilities": [
@@ -4129,7 +4129,7 @@
     {
       "id": "LTC021",
       "name": {
-        "en": "Hue White Ambience Adore Bathroom Ceiling"
+        "en": "Adore Bathroom Ceiling White Ambience"
       },
       "class": "light",
       "capabilities": [
@@ -4406,7 +4406,7 @@
     {
       "id": "1743830P7",
       "name": {
-        "en": "Hue Econic light"
+        "en": "Econic light"
       },
       "class": "light",
       "capabilities": [
@@ -4481,7 +4481,7 @@
     {
       "id": "4090331P9",
       "name": {
-        "en": "Hue Ensis Pendant"
+        "en": "Ensis Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -4556,7 +4556,7 @@
     {
       "id": "4090531P9",
       "name": {
-        "en": "Hue Fluorish Ceiling Light"
+        "en": "Fluorish Ceiling Light"
       },
       "class": "light",
       "capabilities": [
@@ -4631,7 +4631,7 @@
     {
       "id": "4090631P9",
       "name": {
-        "en": "Hue Flourish Pendant Light"
+        "en": "Flourish Pendant Light"
       },
       "class": "light",
       "capabilities": [
@@ -4706,7 +4706,7 @@
     {
       "id": "LTC014",
       "name": {
-        "en": "Hue Aurelle Panel Square"
+        "en": "Aurelle Panel Square"
       },
       "class": "light",
       "capabilities": [
@@ -4762,7 +4762,7 @@
     {
       "id": "LWA001",
       "name": {
-        "en": "HUE 9W A60 E27 EUR White"
+        "en": "9W A60 E27 EUR White"
       },
       "class": "light",
       "capabilities": [
@@ -4818,7 +4818,7 @@
     {
       "id": "LWE002",
       "name": {
-        "en": "Hue E14 White Candle BT"
+        "en": "E14 White Candle BT"
       },
       "class": "light",
       "capabilities": [
@@ -4874,7 +4874,7 @@
     {
       "id": "1744430P7",
       "name": {
-        "en": "Hue Outdoor Fuzo Wall Lantern"
+        "en": "Fuzo Outdoor Wall Lantern"
       },
       "class": "light",
       "capabilities": [
@@ -4930,7 +4930,7 @@
     {
       "id": "LTP001",
       "name": {
-        "en": "Hue Cher Pendant"
+        "en": "Cher Pendant"
       },
       "class": "light",
       "capabilities": [
