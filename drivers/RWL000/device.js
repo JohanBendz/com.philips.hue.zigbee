@@ -7,6 +7,11 @@ class HueDimmerSwitchZigBee extends ZigBeeDevice {
 
   onMeshInit() {
 
+    // Developer tools
+		// this.enableDebug();
+    // this.printNode();
+    
+    // Buttons
     this.registerReportListener('genOnOff', 'on', this.onCommandParser.bind(this));
     this.registerReportListener('genOnOff', 'onWithEffect', this.onCommandParser.bind(this));
     this.registerReportListener('genOnOff', 'off', this.offCommandParser.bind(this));
@@ -20,6 +25,7 @@ class HueDimmerSwitchZigBee extends ZigBeeDevice {
       .registerRunListener((args, state, callback) => {
         return callback(null, args.action === state.action);
       });
+
   }
 
   onCommandParser() {
@@ -48,6 +54,7 @@ class HueDimmerSwitchZigBee extends ZigBeeDevice {
     .then(() => this.log('triggered RWL000_dim, action=release'))
     .catch(err => this.error('Error triggering RWL000_dim', err));
   }
+
 }
 
 module.exports = HueDimmerSwitchZigBee;

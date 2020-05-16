@@ -4,10 +4,25 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.2
+
+Added support for:
+- Hue Daylo Outdoor Wall Light
+- Hue Flourish Ceiling Light
+- Hue Centura GU10 Recessed Spotlight
+- Hue Impress Path Light
+- Hue Fugato Double Spotlight
+- Hue Calla Outdoor Path Light
+- Hue Fuzo Outdoor Wall Light
+- Hue Impress Outdoor Wall Light
+
+Fixes:
+- Added error handling where code was missing it (to be compliant with updated Homey sdk)
+
 ### v1.5.1
 
 Added support for:
-- Hue Signe Floor Light - White and Color Ambiance
+- Hue Signe Floor Light
 
 New features:
 - Duration functionality added to units that support hue, saturation and temperature

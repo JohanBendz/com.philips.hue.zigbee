@@ -6,7 +6,7 @@ const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
 class OutdoorSensor extends ZigBeeDevice {
 	onMeshInit()
 	{
-		this.printNode();
+		// this.printNode();
 		
 				if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', 'msOccupancySensing');
 				if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', 'genPowerCfg');
@@ -21,7 +21,7 @@ class OutdoorSensor extends ZigBeeDevice {
 				this.registerAttrReportListener('msOccupancySensing', 'occupancy', this.minReportMotion, this.maxReportMotion, null, data => {
 					this.log('occupancy', data);
 					this.setCapabilityValue('alarm_motion', data === 1);
-				}, 1);
+				}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
 		
 				// alarm_battery
 				this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
@@ -34,7 +34,7 @@ class OutdoorSensor extends ZigBeeDevice {
 					} else {
 						this.setCapabilityValue('alarm_battery', false);
 					}
-				}, 1);
+				}, 1).catch(err => this.error('Error registering report listener for Battery Voltage: ', err));
 		
 				// measure_temperature
 				this.minReportTemp = this.getSetting('minReportTemp') || 1800;
@@ -45,7 +45,7 @@ class OutdoorSensor extends ZigBeeDevice {
 					this.log('measuredValue temperature', data2, '+ temperature offset', temperatureOffset);
 					const temperature = Math.round((data2 / 100) * 10) / 10;
 					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-				}, 1);
+				}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
 		
 				// measure_luminance
 				this.minReportLux = this.getSetting('minReportLux') || 300;
@@ -55,7 +55,7 @@ class OutdoorSensor extends ZigBeeDevice {
 					this.log('measuredValue luminance', data3);
 					const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
 					this.setCapabilityValue('measure_luminance', luminance);
-				}, 1);
+				}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
 		
 				// measure_battery
 				this.registerAttrReportListener('genPowerCfg', 'batteryPercentageRemaining', 1, 43200, 1, data4 => {
@@ -64,7 +64,7 @@ class OutdoorSensor extends ZigBeeDevice {
 						const percentageRemaining = Math.round(data4 / 2);
 						this.setCapabilityValue('measure_battery', percentageRemaining);
 					}
-				}, 1);
+				}, 1).catch(err => this.error('Error registering report listener for Battery Percentage: ', err));
 	}
 
 	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
@@ -87,7 +87,7 @@ class OutdoorSensor extends ZigBeeDevice {
 								this.registerAttrReportListener('msOccupancySensing', 'occupancy', newSettingsObj.minReportMotion, newSettingsObj.maxReportMotion, null, data => {
 									this.log('occupancy', data);
 									this.setCapabilityValue('alarm_motion', data === 1);
-								}, 1);
+								}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
 							}
 					}
 		
@@ -101,7 +101,7 @@ class OutdoorSensor extends ZigBeeDevice {
 								this.log('measuredValue', data2, '+ temperature offset', temperatureOffset);
 								const temperature = Math.round((data2 / 100) * 10) / 10;
 								this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-							}, 1);
+							}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
 						}
 					}
 		
@@ -114,7 +114,7 @@ class OutdoorSensor extends ZigBeeDevice {
 								this.log('measuredValue', data3);
 								const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
 								this.setCapabilityValue('measure_luminance', luminance);
-							}, 1);
+							}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
 						}
 					}
 				}	else {
