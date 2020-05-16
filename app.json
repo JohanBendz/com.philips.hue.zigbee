@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -69,7 +69,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 8,
           "usageOff": 1
         }
       },
@@ -125,7 +125,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 15,
           "usageOff": 1
         }
       },
@@ -181,7 +181,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 15,
           "usageOff": 1
         }
       },
@@ -256,7 +256,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 8,
           "usageOff": 1
         }
       },
@@ -331,7 +331,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 6,
           "usageOff": 1
         }
       },
@@ -406,7 +406,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 8,
           "usageOff": 1
         }
       },
@@ -481,7 +481,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 6,
           "usageOff": 1
         }
       },
@@ -556,7 +556,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 9.5,
           "usageOff": 1
         }
       },
@@ -631,7 +631,7 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
+          "usageOn": 15,
           "usageOff": 1
         }
       },
@@ -2285,81 +2285,6 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": "LCT026",
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "5063230P7",
-      "name": {
-        "en": "Go BT"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 5.7,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/5063230P7/assets/images/large.png",
-        "small": "drivers/5063230P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "5063230P7",
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
