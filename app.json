@@ -109,7 +109,7 @@
     {
       "id": "1744630P7",
       "name": {
-        "en": "Fuzo Outdoor Wall Light"
+        "en": "Fuzo Outdoor Wall Light - Tall open front"
       },
       "class": "light",
       "capabilities": [
@@ -165,7 +165,7 @@
     {
       "id": "1744530P7",
       "name": {
-        "en": "Fuzo Outdoor Wall Light"
+        "en": "Fuzo Outdoor Wall Light - Open front"
       },
       "class": "light",
       "capabilities": [
@@ -4414,8 +4414,8 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": "1743830P7",
-        "deviceId": 528,
-        "profileId": 49246,
+        "deviceId": 269,
+        "profileId": 260,
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -4836,7 +4836,7 @@
     {
       "id": "1744430P7",
       "name": {
-        "en": "Fuzo Outdoor Wall Lantern"
+        "en": "Fuzo Outdoor Wall Ligth - Closed front"
       },
       "class": "light",
       "capabilities": [
