@@ -4,6 +4,12 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.3
+
+Added support for:
+
+- Hue Fuzo Outdoor Wall Light (one pice version)
+
 ### v1.5.2
 
 Added support for:
