@@ -4,11 +4,17 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.4
+
+Added support for:
+
+- Hue Ensis Pendant, Upper and Lower light version
+
 ### v1.5.3
 
 Added support for:
 
-- Hue Fuzo Outdoor Wall Light (one piece version)
+- Hue Fuzo Outdoor Wall Light (open front version)
 
 ### v1.5.2
 
@@ -19,7 +25,7 @@ Added support for:
 - Hue Impress Path Light
 - Hue Fugato Double Spotlight
 - Hue Calla Outdoor Path Light
-- Hue Fuzo Outdoor Wall Light
+- Hue Fuzo Outdoor Wall Light (splitt front version)
 - Hue Impress Outdoor Wall Light
 
 Fixes:
