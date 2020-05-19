@@ -4558,8 +4558,8 @@
         }
       },
       "images": {
-        "large": "drivers/4090331P9/assets/images/large_lower.png",
-        "small": "drivers/4090331P9/assets/images/small_lower.png"
+        "large": "drivers/4090331P9_01/assets/images/large_lower.png",
+        "small": "drivers/4090331P9_01/assets/images/small_lower.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
@@ -4633,8 +4633,8 @@
         }
       },
       "images": {
-        "large": "drivers/4090331P9/assets/images/large_upper.png",
-        "small": "drivers/4090331P9/assets/images/small_upper.png"
+        "large": "drivers/4090331P9_02/assets/images/large_upper.png",
+        "small": "drivers/4090331P9_02/assets/images/small_upper.png"
       },
       "zigbee": {
         "manufacturerName": "Philips",
