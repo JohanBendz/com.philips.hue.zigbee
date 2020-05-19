@@ -4518,7 +4518,7 @@
     {
       "id": "4090331P9_01",
       "name": {
-        "en": "Ensis Pendant - Lower light"
+        "en": "Ensis Pendant - Upper light"
       },
       "class": "light",
       "capabilities": [
@@ -4593,7 +4593,7 @@
     {
       "id": "4090331P9_02",
       "name": {
-        "en": "Ensis Pendant - Upper light"
+        "en": "Ensis Pendant - Lower light"
       },
       "class": "light",
       "capabilities": [
