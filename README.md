@@ -4,16 +4,30 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.7
+
+Added support for:
+- Australian version of the Hue Smart Plug - LOM005
+- Fix for Fuzo lights, was set as Color by misstake, now White
+
+### v1.5.6
+
+Fixes:
+- Ensis upper and lower was switched
+
+### v1.5.5
+
+Fixes:
+- Corrected the device driver info for Hue Econic
+
 ### v1.5.4
 
 Added support for:
-
 - Hue Ensis Pendant, Upper and Lower light version
 
 ### v1.5.3
 
 Added support for:
-
 - Hue Fuzo Outdoor Wall Light (open front version)
 
 ### v1.5.2

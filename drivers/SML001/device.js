@@ -4,10 +4,11 @@ const Homey = require('homey');
 const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
 
 class MotionSensor extends ZigBeeDevice {
-	onMeshInit()
-	{
-		// this.printNode();
+	onMeshInit() {
+
 		// this.enableDebug();
+		// this.printNode();
+
 		
 		if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', 'msOccupancySensing');
 		if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', 'genPowerCfg');
@@ -38,7 +39,7 @@ class MotionSensor extends ZigBeeDevice {
 		}, 1).catch(err => this.error('Error registering report listener for Battery Voltage: ', err));
 
 		// measure_temperature
-		this.minReportTemp = this.getSetting('minReportTemp') || 1800;
+		this.minReportTemp = this.getSetting('minReportTemp') || 300;
 		this.maxReportTemp= this.getSetting('maxReportTemp') || 3600;
 
 		this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', this.minReportTemp, this.maxReportTemp, null, data2 => {
@@ -71,58 +72,59 @@ class MotionSensor extends ZigBeeDevice {
 
 	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
 		
-				this.log(changedKeysArr);
-				this.log('newSettingsObj', newSettingsObj);
-				this.log('oldSettingsObj', oldSettingsObj);
+		this.log(changedKeysArr);
+		this.log('newSettingsObj', newSettingsObj);
+		this.log('oldSettingsObj', oldSettingsObj);
 		
 		if ((newSettingsObj.minReportMotion < newSettingsObj.maxReportMotion) &&
-				(newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) &&
-				(newSettingsObj.minReportLux < newSettingsObj.maxReportLux)) {
-					this.log('minReport settings smaller then maxReport settings');
-					callback( null, true );
-		
-					// alarm_motion report settings changed
-					if ((changedKeysArr.includes('minReportMotion')) || (changedKeysArr.includes('maxReportMotion'))) {
-							this.log('minReportMotion: ', newSettingsObj.minReportMotion);
-							this.log('maxReportMotion: ', newSettingsObj.maxReportMotion);
-							if (newSettingsObj.minReportMotion < newSettingsObj.maxReportMotion) {
-								this.registerAttrReportListener('msOccupancySensing', 'occupancy', newSettingsObj.minReportMotion, newSettingsObj.maxReportMotion, null, data => {
-									this.log('occupancy', data);
-									this.setCapabilityValue('alarm_motion', data === 1);
-								}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
-							}
+			(newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) &&
+			(newSettingsObj.minReportLux < newSettingsObj.maxReportLux)) {
+				this.log('minReport settings smaller then maxReport settings');
+				callback( null, true );
+
+				// alarm_motion report settings changed
+				if ((changedKeysArr.includes('minReportMotion')) || (changedKeysArr.includes('maxReportMotion'))) {
+					this.log('minReportMotion: ', newSettingsObj.minReportMotion);
+					this.log('maxReportMotion: ', newSettingsObj.maxReportMotion);
+					if (newSettingsObj.minReportMotion < newSettingsObj.maxReportMotion) {
+						this.registerAttrReportListener('msOccupancySensing', 'occupancy', newSettingsObj.minReportMotion, newSettingsObj.maxReportMotion, null, data => {
+							this.log('occupancy', data);
+							this.setCapabilityValue('alarm_motion', data === 1);
+						}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
 					}
-		
-					// measure_temperature report settings changed
-					if ((changedKeysArr.includes('minReportTemp')) || (changedKeysArr.includes('maxReportTemp'))) {
-						this.log('minReportTemp: ', newSettingsObj.minReportTemp);
-						this.log('maxReportTemp: ', newSettingsObj.maxReportTemp);
-						if (newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) {
-							this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', newSettingsObj.minReportTemp, newSettingsObj.maxReportTemp, null, data2 => {
-								const temperatureOffset = this.getSetting('temperature_offset') || 0;
-								this.log('measuredValue', data2, '+ temperature offset', temperatureOffset);
-								const temperature = Math.round((data2 / 100) * 10) / 10;
-								this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-							}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
-						}
-					}
-		
-					// measure_luminance report settings changed
-					if ((changedKeysArr.includes('minReportLux')) || (changedKeysArr.includes('manReportLux'))) {
-						this.log('minReportLux: ', newSettingsObj.minReportLux);
-						this.log('maxReportLux: ', newSettingsObj.maxReportLux);
-						if (newSettingsObj.minReportLux < newSettingsObj.maxReportLux) {
-							this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', newSettingsObj.minReportLux, newSettingsObj.maxReportLux, null, data3 => {
-								this.log('measuredValue', data3);
-								const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
-								this.setCapabilityValue('measure_luminance', luminance);
-							}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
-						}
-					}
-				}	else {
-					callback( Homey.__("report interval settings error"), null );
 				}
-			}
+
+				// measure_temperature report settings changed
+				if ((changedKeysArr.includes('minReportTemp')) || (changedKeysArr.includes('maxReportTemp'))) {
+					this.log('minReportTemp: ', newSettingsObj.minReportTemp);
+					this.log('maxReportTemp: ', newSettingsObj.maxReportTemp);
+					if (newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) {
+						this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', newSettingsObj.minReportTemp, newSettingsObj.maxReportTemp, null, data2 => {
+							const temperatureOffset = this.getSetting('temperature_offset') || 0;
+							this.log('measuredValue', data2, '+ temperature offset', temperatureOffset);
+							const temperature = Math.round((data2 / 100) * 10) / 10;
+							this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
+						}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
+					}
+				}
+
+				// measure_luminance report settings changed
+				if ((changedKeysArr.includes('minReportLux')) || (changedKeysArr.includes('manReportLux'))) {
+					this.log('minReportLux: ', newSettingsObj.minReportLux);
+					this.log('maxReportLux: ', newSettingsObj.maxReportLux);
+					if (newSettingsObj.minReportLux < newSettingsObj.maxReportLux) {
+						this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', newSettingsObj.minReportLux, newSettingsObj.maxReportLux, null, data3 => {
+							this.log('measuredValue', data3);
+							const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
+							this.setCapabilityValue('measure_luminance', luminance);
+						}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
+					}
+				}
+		}	else {
+			callback( Homey.__("report interval settings error"), null );
+		}
+	}
+
 }
 
 module.exports = MotionSensor;

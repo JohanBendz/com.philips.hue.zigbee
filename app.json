@@ -929,7 +929,8 @@
         "manufacturerName": "Philips",
         "productId": [
           "LOM001",
-          "LOM002"
+          "LOM002",
+          "LOM005"
         ],
         "deviceId": 266,
         "profileId": 260,
