@@ -4,11 +4,17 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.8
+Fix:
+- It looks like there is multiple versions of the Fuzo Wall Light, added additional Device ID and Profile ID.
+
 ### v1.5.7
 
 Added support for:
 - Australian version of the Hue Smart Plug - LOM005
-- Fix for Fuzo lights, was set as Color by misstake, now White
+
+Fixes:
+- Fuzo lights was set as Color by misstake, now White
 
 ### v1.5.6
 
