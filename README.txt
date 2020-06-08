@@ -16,7 +16,7 @@ Profile ID: 4926
 
 Make requests by adding it as an issue on GitHub https://github.com/sebbebebbe/com.philips.hue.zigbee/issues.
 
-Sebastian Johansson is the orginal author of this app, in april 2020 the app was transfered to Johan Bendz who is now the developer of the app. 
+Sebastian Johansson is the orginal author of this app, in april 2020 the app was transferred to Johan Bendz who is now the developer of the app. 
 
 Thanks for contributing:
 https://github.com/sebbebebbe

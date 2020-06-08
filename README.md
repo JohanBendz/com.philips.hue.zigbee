@@ -4,6 +4,10 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v1.5.9
+Fix:
+- kill some bugs
+
 ### v1.5.8
 Fix:
 - It looks like there is multiple versions of the Fuzo Wall Light, added additional Device ID and Profile ID.

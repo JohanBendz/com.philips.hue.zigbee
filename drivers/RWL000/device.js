@@ -8,8 +8,8 @@ class HueDimmerSwitchZigBee extends ZigBeeDevice {
   onMeshInit() {
 
     // Developer tools
-		// this.enableDebug();
-    // this.printNode();
+		this.enableDebug();
+    this.printNode();
     
     // Buttons
     this.registerReportListener('genOnOff', 'on', this.onCommandParser.bind(this));
