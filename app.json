@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "1.5.9",
+  "version": "1.5.10",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "HibbiSoft AB",
@@ -641,7 +641,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1746530P7",
+        "productId": [
+          "1746530P7",
+          "1746547P7"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
