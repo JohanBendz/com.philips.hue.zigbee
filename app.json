@@ -2162,6 +2162,81 @@
       ]
     },
     {
+      "id": "LCL001",
+      "name": {
+        "en": "LightStrips Plus V4"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 20.5,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LCL001/assets/images/large.png",
+        "small": "drivers/LCL001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCL001",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
       "id": "LLC020",
       "name": {
         "en": "Go"
