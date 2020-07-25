@@ -1,6 +1,6 @@
 {
   "id": "com.philips.hue.zigbee",
-  "sdk": 2,
+  "sdk": 3,
   "name": {
     "en": "Philips Hue ZigBee"
   },
@@ -9,7 +9,7 @@
   },
   "category": "lights",
   "version": "1.5.10",
-  "compatibility": ">=1.5.0",
+  "compatibility": ">=5.0.0",
   "author": {
     "name": "HibbiSoft AB",
     "email": "sebastian.johansson@hibbisoft.com"
