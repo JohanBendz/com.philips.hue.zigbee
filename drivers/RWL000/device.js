@@ -19,9 +19,9 @@ class HueDimmerSwitchZigBee extends ZigBeeDevice {
     this.registerReportListener('genLevelCtrl', 'step', this.stepCommandParser.bind(this));
     this.registerReportListener('genLevelCtrl', 'stop', this.stopCommandParser.bind(this));
     
-    this.switchOnTriggerDevice = new Homey.FlowCardTriggerDevice('RWL000_on').register();
-    this.switchOffTriggerDevice = new Homey.FlowCardTriggerDevice('RWL000_off').register();
-    this.switchDimTriggerDevice = new Homey.FlowCardTriggerDevice('RWL000_dim').register()
+    this.switchOnTriggerDevice = this.homey.FlowCardTriggerDevice('RWL000_on').register();
+    this.switchOffTriggerDevice = this.homey.FlowCardTriggerDevice('RWL000_off').register();
+    this.switchDimTriggerDevice = this.homey.FlowCardTriggerDevice('RWL000_dim').register()
       .registerRunListener((args, state, callback) => {
         return callback(null, args.action === state.action);
       });
