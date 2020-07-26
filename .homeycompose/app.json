@@ -1,0 +1,33 @@
+{
+  "id": "com.philips.hue.zigbee",
+  "sdk": 3,
+  "name": {
+    "en": "Philips Hue ZigBee"
+  },
+  "description": {
+    "en": "Philips Hue Zigbee devices, without the Bridge."
+  },
+  "category": "lights",
+  "version": "1.5.10",
+  "compatibility": ">=5.0.0",
+  "author": {
+    "name": "HibbiSoft AB",
+    "email": "sebastian.johansson@hibbisoft.com"
+  },
+  "contributing": {
+    "developers": [{
+      "name": "Sebastian Johansson",
+      "email": "sebastian.johansson@hibbisoft.com"
+      },
+      {
+      "name": "Johan Bendz",
+      "email": "johan.bendz@hotmail.com"
+      }]
+  },
+  "images": {
+    "large": "assets/images/large.jpg",
+    "small": "assets/images/small.jpg"
+  },
+  "speech": [],
+  "permissions": []
+}

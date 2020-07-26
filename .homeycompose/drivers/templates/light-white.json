@@ -1,0 +1,15 @@
+{
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_mode"
+  ],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    }
+  }
+}

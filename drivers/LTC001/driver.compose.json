@@ -3,25 +3,7 @@
   "name": {
     "en": "Being Ceiling Lamp"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_temperature",
-    "light_mode"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_temperature": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white-ambiance"],
   "energy": {
     "approximation": {
       "usageOn": 32,

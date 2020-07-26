@@ -3,18 +3,7 @@
   "name": {
     "en": "9W A60 E27 EUR White"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white"],
   "energy": {
     "approximation": {
       "usageOn": 9,

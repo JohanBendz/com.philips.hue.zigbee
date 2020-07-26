@@ -3,18 +3,7 @@
   "name": {
     "en": "Fuzo Outdoor Wall Light - Tall open front"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white"],
   "energy": {
     "approximation": {
       "usageOn": 15,

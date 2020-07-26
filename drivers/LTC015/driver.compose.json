@@ -3,24 +3,7 @@
   "name": {
     "en": "Aurelle Panel Light"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_temperature"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_temperature": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white-ambiance"],
   "images": {
     "large": "drivers/LTC015/assets/images/large.png",
     "small": "drivers/LTC015/assets/images/small.png"

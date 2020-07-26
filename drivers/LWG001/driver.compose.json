@@ -3,18 +3,7 @@
   "name": {
     "en": "GU10 White PF"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white"],
   "energy": {
     "approximation": {
       "usageOn": 6.5,

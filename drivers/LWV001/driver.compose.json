@@ -3,18 +3,7 @@
   "name": {
     "en": "Filament ST64"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white"],
   "energy": {
     "approximation": {
       "usageOn": 7,

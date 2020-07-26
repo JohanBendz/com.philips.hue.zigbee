@@ -3,31 +3,7 @@
   "name": {
     "en": "Bloom/Aura Living Colors"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_hue",
-    "light_saturation",
-    "light_mode"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_hue": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_saturation": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-colour"],
   "images": {
     "large": "drivers/LLC011/assets/images/large.png",
     "small": "drivers/LLC011/assets/images/small.png"

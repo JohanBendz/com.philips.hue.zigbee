@@ -34,10 +34,6 @@
   "permissions": [],
   "drivers": [
     {
-      "id": "1742930P7",
-      "name": {
-        "en": "Impress Outdoor Wall Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -68,6 +64,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1742930P7",
+      "name": {
+        "en": "Impress Outdoor Wall Light"
       },
       "energy": {
         "approximation": {
@@ -109,10 +109,6 @@
       ]
     },
     {
-      "id": "1743030P7",
-      "name": {
-        "en": "Impress Outdoor Wall Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -143,6 +139,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1743030P7",
+      "name": {
+        "en": "Impress Outdoor Wall Light"
       },
       "energy": {
         "approximation": {
@@ -187,10 +187,6 @@
       ]
     },
     {
-      "id": "1743130P7",
-      "name": {
-        "en": "Impress Outdoor Pedestal Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -221,6 +217,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1743130P7",
+      "name": {
+        "en": "Impress Outdoor Pedestal Light"
       },
       "energy": {
         "approximation": {
@@ -262,10 +262,6 @@
       ]
     },
     {
-      "id": "1743230P7",
-      "name": {
-        "en": "Impress Path Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -296,6 +292,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1743230P7",
+      "name": {
+        "en": "Impress Path Light"
       },
       "energy": {
         "approximation": {
@@ -337,10 +337,6 @@
       ]
     },
     {
-      "id": "1743530P7",
-      "name": {
-        "en": "Discover Outdoor Floodlight"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -370,12 +366,16 @@
           "opts": {
             "duration": true
           }
-        },
-        "energy": {
-          "approximation": {
-            "usageOn": 15,
-            "usageOff": 1
-          }
+        }
+      },
+      "id": "1743530P7",
+      "name": {
+        "en": "Discover Outdoor Floodlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
         }
       },
       "images": {
@@ -412,14 +412,11 @@
       ]
     },
     {
-      "id": "1743630P7",
-      "name": {
-        "en": "Welcome Outdoor Floodlight"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -427,6 +424,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1743630P7",
+      "name": {
+        "en": "Welcome Outdoor Floodlight"
       },
       "energy": {
         "approximation": {
@@ -468,10 +469,6 @@
       ]
     },
     {
-      "id": "1743830P7",
-      "name": {
-        "en": "Econic light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -502,6 +499,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1743830P7",
+      "name": {
+        "en": "Econic light"
       },
       "energy": {
         "approximation": {
@@ -543,14 +544,11 @@
       ]
     },
     {
-      "id": "1744430P7",
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Closed front"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -558,6 +556,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1744430P7",
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Closed front"
       },
       "energy": {
         "approximation": {
@@ -605,14 +607,11 @@
       ]
     },
     {
-      "id": "1744530P7",
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Open front"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -620,6 +619,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1744530P7",
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Open front"
       },
       "energy": {
         "approximation": {
@@ -661,14 +664,11 @@
       ]
     },
     {
-      "id": "1744630P7",
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Tall open front"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -676,6 +676,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1744630P7",
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Tall open front"
       },
       "energy": {
         "approximation": {
@@ -717,10 +721,6 @@
       ]
     },
     {
-      "id": "1746530P7",
-      "name": {
-        "en": "Daylo Outdoor Wall Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -751,6 +751,10 @@
             "duration": true
           }
         }
+      },
+      "id": "1746530P7",
+      "name": {
+        "en": "Daylo Outdoor Wall Light"
       },
       "energy": {
         "approximation": {
@@ -795,10 +799,6 @@
       ]
     },
     {
-      "id": "4090331P9",
-      "name": {
-        "en": "Ensis Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -829,6 +829,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090331P9",
+      "name": {
+        "en": "Ensis Pendant"
       },
       "energy": {
         "approximation": {
@@ -870,10 +874,6 @@
       ]
     },
     {
-      "id": "4090331P9_01",
-      "name": {
-        "en": "Ensis Pendant - Upper light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -904,6 +904,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090331P9_01",
+      "name": {
+        "en": "Ensis Pendant - Upper light"
       },
       "energy": {
         "approximation": {
@@ -945,10 +949,6 @@
       ]
     },
     {
-      "id": "4090331P9_02",
-      "name": {
-        "en": "Ensis Pendant - Lower light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -979,6 +979,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090331P9_02",
+      "name": {
+        "en": "Ensis Pendant - Lower light"
       },
       "energy": {
         "approximation": {
@@ -1020,10 +1024,6 @@
       ]
     },
     {
-      "id": "4090431P9",
-      "name": {
-        "en": "Flourish Ceiling Light White and Color"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1054,6 +1054,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090431P9",
+      "name": {
+        "en": "Flourish Ceiling Light White and Color"
       },
       "energy": {
         "approximation": {
@@ -1095,10 +1099,6 @@
       ]
     },
     {
-      "id": "4090531P9",
-      "name": {
-        "en": "Fluorish Ceiling Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1129,6 +1129,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090531P9",
+      "name": {
+        "en": "Fluorish Ceiling Light"
       },
       "energy": {
         "approximation": {
@@ -1170,10 +1174,6 @@
       ]
     },
     {
-      "id": "4090631P9",
-      "name": {
-        "en": "Flourish Pendant Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1204,6 +1204,10 @@
             "duration": true
           }
         }
+      },
+      "id": "4090631P9",
+      "name": {
+        "en": "Flourish Pendant Light"
       },
       "energy": {
         "approximation": {
@@ -1245,10 +1249,6 @@
       ]
     },
     {
-      "id": "5045131P7",
-      "name": {
-        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1279,6 +1279,10 @@
             "duration": true
           }
         }
+      },
+      "id": "5045131P7",
+      "name": {
+        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
       },
       "energy": {
         "approximation": {
@@ -1320,10 +1324,6 @@
       ]
     },
     {
-      "id": "5063230P7",
-      "name": {
-        "en": "Fugato Double Spotlight"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1354,6 +1354,10 @@
             "duration": true
           }
         }
+      },
+      "id": "5063230P7",
+      "name": {
+        "en": "Fugato Double Spotlight"
       },
       "energy": {
         "approximation": {
@@ -1395,10 +1399,6 @@
       ]
     },
     {
-      "id": "HBL001",
-      "name": {
-        "en": "Beyond Table"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1429,6 +1429,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HBL001",
+      "name": {
+        "en": "Beyond Table"
       },
       "energy": {
         "approximation": {
@@ -1470,10 +1474,6 @@
       ]
     },
     {
-      "id": "HBL002",
-      "name": {
-        "en": "Beyond Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1504,6 +1504,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HBL002",
+      "name": {
+        "en": "Beyond Pendant"
       },
       "energy": {
         "approximation": {
@@ -1545,10 +1549,6 @@
       ]
     },
     {
-      "id": "HBL003",
-      "name": {
-        "en": "Beyond Ceiling"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1579,6 +1579,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HBL003",
+      "name": {
+        "en": "Beyond Ceiling"
       },
       "energy": {
         "approximation": {
@@ -1620,15 +1624,12 @@
       ]
     },
     {
-      "id": "HML003",
-      "name": {
-        "en": "Phoenix Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1641,6 +1642,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HML003",
+      "name": {
+        "en": "Phoenix Pendant"
       },
       "energy": {
         "approximation": {
@@ -1686,15 +1691,12 @@
       ]
     },
     {
-      "id": "HML004",
-      "name": {
-        "en": "Phoenix Wall Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1707,6 +1709,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HML004",
+      "name": {
+        "en": "Phoenix Wall Light"
       },
       "energy": {
         "approximation": {
@@ -1748,15 +1754,12 @@
       ]
     },
     {
-      "id": "HML005",
-      "name": {
-        "en": "Phoenix Table"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1769,6 +1772,10 @@
             "duration": true
           }
         }
+      },
+      "id": "HML005",
+      "name": {
+        "en": "Phoenix Table"
       },
       "energy": {
         "approximation": {
@@ -1814,10 +1821,6 @@
       ]
     },
     {
-      "id": "LCA001",
-      "name": {
-        "en": "E27 White and Color Ambiance BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1848,6 +1851,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCA001",
+      "name": {
+        "en": "E27 White and Color Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -1891,10 +1898,6 @@
       ]
     },
     {
-      "id": "LCF002",
-      "name": {
-        "en": "Calla Outdoor Path Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -1925,6 +1928,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCF002",
+      "name": {
+        "en": "Calla Outdoor Path Light"
       },
       "energy": {
         "approximation": {
@@ -1966,10 +1973,6 @@
       ]
     },
     {
-      "id": "LCF003",
-      "name": {
-        "en": "Signe Floor Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2000,6 +2003,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCF003",
+      "name": {
+        "en": "Signe Floor Light"
       },
       "energy": {
         "approximation": {
@@ -2041,10 +2048,6 @@
       ]
     },
     {
-      "id": "LCG002",
-      "name": {
-        "en": "GU10 Spot Color"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2075,6 +2078,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCG002",
+      "name": {
+        "en": "GU10 Spot Color"
       },
       "energy": {
         "approximation": {
@@ -2116,10 +2123,6 @@
       ]
     },
     {
-      "id": "LCS001",
-      "name": {
-        "en": "Lily Outdoor Spot"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2150,6 +2153,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCS001",
+      "name": {
+        "en": "Lily Outdoor Spot"
       },
       "energy": {
         "approximation": {
@@ -2191,10 +2198,6 @@
       ]
     },
     {
-      "id": "LCT000",
-      "name": {
-        "en": "Bulb A19"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2225,6 +2228,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCT000",
+      "name": {
+        "en": "Bulb A19"
       },
       "energy": {
         "approximation": {
@@ -2273,10 +2280,6 @@
       ]
     },
     {
-      "id": "LCT003",
-      "name": {
-        "en": "Connected Lamp GU10"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2307,6 +2310,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCT003",
+      "name": {
+        "en": "Connected Lamp GU10"
       },
       "energy": {
         "approximation": {
@@ -2348,10 +2355,6 @@
       ]
     },
     {
-      "id": "LCT012",
-      "name": {
-        "en": "Candle Color"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2382,6 +2385,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCT012",
+      "name": {
+        "en": "Candle Color"
       },
       "energy": {
         "approximation": {
@@ -2423,10 +2430,6 @@
       ]
     },
     {
-      "id": "LCT024",
-      "name": {
-        "en": "Play Lightbar"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2457,6 +2460,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCT024",
+      "name": {
+        "en": "Play Lightbar"
       },
       "energy": {
         "approximation": {
@@ -2498,10 +2505,6 @@
       ]
     },
     {
-      "id": "LCT026",
-      "name": {
-        "en": "Go BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2532,6 +2535,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCT026",
+      "name": {
+        "en": "Go BT"
       },
       "energy": {
         "approximation": {
@@ -2573,10 +2580,6 @@
       ]
     },
     {
-      "id": "LCW001",
-      "name": {
-        "en": "Sana Wall Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2607,6 +2610,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LCW001",
+      "name": {
+        "en": "Sana Wall Light"
       },
       "energy": {
         "approximation": {
@@ -2648,10 +2655,6 @@
       ]
     },
     {
-      "id": "LLC010",
-      "name": {
-        "en": "Iris Living Colors"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2676,6 +2679,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LLC010",
+      "name": {
+        "en": "Iris Living Colors"
       },
       "energy": {
         "approximation": {
@@ -2717,10 +2724,6 @@
       ]
     },
     {
-      "id": "LLC011",
-      "name": {
-        "en": "Bloom/Aura Living Colors"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2745,6 +2748,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LLC011",
+      "name": {
+        "en": "Bloom/Aura Living Colors"
       },
       "images": {
         "large": "drivers/LLC011/assets/images/large.png",
@@ -2784,10 +2791,6 @@
       ]
     },
     {
-      "id": "LLC020",
-      "name": {
-        "en": "Go"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2818,6 +2821,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LLC020",
+      "name": {
+        "en": "Go"
       },
       "energy": {
         "approximation": {
@@ -2889,10 +2896,6 @@
       "settings": []
     },
     {
-      "id": "LST001",
-      "name": {
-        "en": "LightStrips"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2917,6 +2920,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LST001",
+      "name": {
+        "en": "LightStrips"
       },
       "energy": {
         "approximation": {
@@ -2958,10 +2965,6 @@
       ]
     },
     {
-      "id": "LST002",
-      "name": {
-        "en": "LightStrips Plus"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -2992,6 +2995,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LST002",
+      "name": {
+        "en": "LightStrips Plus"
       },
       "energy": {
         "approximation": {
@@ -3033,10 +3040,6 @@
       ]
     },
     {
-      "id": "LST003",
-      "name": {
-        "en": "Lightstrip Outdoor"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -3067,6 +3070,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LST003",
+      "name": {
+        "en": "Lightstrip Outdoor"
       },
       "energy": {
         "approximation": {
@@ -3111,15 +3118,12 @@
       ]
     },
     {
-      "id": "LTA001",
-      "name": {
-        "en": "E27 White Ambiance BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3132,6 +3136,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTA001",
+      "name": {
+        "en": "E27 White Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -3175,10 +3183,6 @@
       ]
     },
     {
-      "id": "LTC001",
-      "name": {
-        "en": "Being Ceiling Lamp"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -3197,6 +3201,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC001",
+      "name": {
+        "en": "Being Ceiling Lamp"
       },
       "energy": {
         "approximation": {
@@ -3240,10 +3248,6 @@
       ]
     },
     {
-      "id": "LTC002",
-      "name": {
-        "en": "Fair Ceiling Lamp"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
@@ -3262,6 +3266,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC002",
+      "name": {
+        "en": "Fair Ceiling Lamp"
       },
       "energy": {
         "approximation": {
@@ -3305,15 +3313,12 @@
       ]
     },
     {
-      "id": "LTC003",
-      "name": {
-        "en": "Still Ceiling"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3326,6 +3331,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC003",
+      "name": {
+        "en": "Still Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3367,15 +3376,12 @@
       ]
     },
     {
-      "id": "LTC011",
-      "name": {
-        "en": "Cher Ceiling"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3388,6 +3394,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC011",
+      "name": {
+        "en": "Cher Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3429,15 +3439,12 @@
       ]
     },
     {
-      "id": "LTC012",
-      "name": {
-        "en": "Struana Ceiling"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3450,6 +3457,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC012",
+      "name": {
+        "en": "Struana Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3491,15 +3502,12 @@
       ]
     },
     {
-      "id": "LTC014",
-      "name": {
-        "en": "Aurelle Panel Square"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3512,6 +3520,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC014",
+      "name": {
+        "en": "Aurelle Panel Square"
       },
       "images": {
         "large": "drivers/LTC014/assets/images/large.png",
@@ -3547,15 +3559,12 @@
       ]
     },
     {
-      "id": "LTC015",
-      "name": {
-        "en": "Aurelle Panel Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3568,6 +3577,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC015",
+      "name": {
+        "en": "Aurelle Panel Light"
       },
       "images": {
         "large": "drivers/LTC015/assets/images/large.png",
@@ -3608,15 +3621,12 @@
       ]
     },
     {
-      "id": "LTC021",
-      "name": {
-        "en": "Adore Bathroom Ceiling White Ambience"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3629,6 +3639,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTC021",
+      "name": {
+        "en": "Adore Bathroom Ceiling White Ambience"
       },
       "energy": {
         "approximation": {
@@ -3670,15 +3684,12 @@
       ]
     },
     {
-      "id": "LTG002",
-      "name": {
-        "en": "GU10 White Ambiance BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3691,6 +3702,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTG002",
+      "name": {
+        "en": "GU10 White Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -3732,15 +3747,12 @@
       ]
     },
     {
-      "id": "LTP001",
-      "name": {
-        "en": "Cher Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3753,6 +3765,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTP001",
+      "name": {
+        "en": "Cher Pendant"
       },
       "energy": {
         "approximation": {
@@ -3794,15 +3810,12 @@
       ]
     },
     {
-      "id": "LTP002",
-      "name": {
-        "en": "Amaze Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3815,6 +3828,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTP002",
+      "name": {
+        "en": "Amaze Pendant"
       },
       "energy": {
         "approximation": {
@@ -3856,15 +3873,12 @@
       ]
     },
     {
-      "id": "LTP003",
-      "name": {
-        "en": "Fair Pendant"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3877,6 +3891,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTP003",
+      "name": {
+        "en": "Fair Pendant"
       },
       "energy": {
         "approximation": {
@@ -3918,15 +3936,12 @@
       ]
     },
     {
-      "id": "LTW000",
-      "name": {
-        "en": "Bulb A19 White Ambiance"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3939,6 +3954,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTW000",
+      "name": {
+        "en": "Bulb A19 White Ambiance"
       },
       "energy": {
         "approximation": {
@@ -3985,15 +4004,12 @@
       ]
     },
     {
-      "id": "LTW012",
-      "name": {
-        "en": "Candle Ambiance"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4006,6 +4022,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTW012",
+      "name": {
+        "en": "Candle Ambiance"
       },
       "energy": {
         "approximation": {
@@ -4047,15 +4067,12 @@
       ]
     },
     {
-      "id": "LTW013",
-      "name": {
-        "en": "Spot Ambiance"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4068,6 +4085,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTW013",
+      "name": {
+        "en": "Spot Ambiance"
       },
       "energy": {
         "approximation": {
@@ -4112,15 +4133,12 @@
       ]
     },
     {
-      "id": "LTW017",
-      "name": {
-        "en": "Adore Bathroom mirror light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4133,6 +4151,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LTW017",
+      "name": {
+        "en": "Adore Bathroom mirror light"
       },
       "energy": {
         "approximation": {
@@ -4174,14 +4196,11 @@
       ]
     },
     {
-      "id": "LWA001",
-      "name": {
-        "en": "9W A60 E27 EUR White"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4189,6 +4208,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWA001",
+      "name": {
+        "en": "9W A60 E27 EUR White"
       },
       "energy": {
         "approximation": {
@@ -4230,14 +4253,11 @@
       ]
     },
     {
-      "id": "LWA004",
-      "name": {
-        "en": "Filament A60"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4245,6 +4265,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWA004",
+      "name": {
+        "en": "Filament A60"
       },
       "energy": {
         "approximation": {
@@ -4286,14 +4310,11 @@
       ]
     },
     {
-      "id": "LWB000",
-      "name": {
-        "en": "Bulb White"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4301,6 +4322,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWB000",
+      "name": {
+        "en": "Bulb White"
       },
       "energy": {
         "approximation": {
@@ -4349,14 +4374,11 @@
       ]
     },
     {
-      "id": "LWE002",
-      "name": {
-        "en": "E14 White Candle BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4364,6 +4386,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWE002",
+      "name": {
+        "en": "E14 White Candle BT"
       },
       "energy": {
         "approximation": {
@@ -4405,14 +4431,11 @@
       ]
     },
     {
-      "id": "LWG001",
-      "name": {
-        "en": "GU10 White PF"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4420,6 +4443,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWG001",
+      "name": {
+        "en": "GU10 White PF"
       },
       "energy": {
         "approximation": {
@@ -4461,14 +4488,11 @@
       ]
     },
     {
-      "id": "LWG004",
-      "name": {
-        "en": "GU10 White BT"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4476,6 +4500,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWG004",
+      "name": {
+        "en": "GU10 White BT"
       },
       "energy": {
         "approximation": {
@@ -4517,14 +4545,11 @@
       ]
     },
     {
-      "id": "LWO001",
-      "name": {
-        "en": "Filament G93"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4532,6 +4557,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWO001",
+      "name": {
+        "en": "Filament G93"
       },
       "energy": {
         "approximation": {
@@ -4573,14 +4602,11 @@
       ]
     },
     {
-      "id": "LWV001",
-      "name": {
-        "en": "Filament ST64"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4588,6 +4614,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWV001",
+      "name": {
+        "en": "Filament ST64"
       },
       "energy": {
         "approximation": {
@@ -4629,14 +4659,11 @@
       ]
     },
     {
-      "id": "LWW001",
-      "name": {
-        "en": "Lucca Outdoor Garden Light"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4644,6 +4671,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWW001",
+      "name": {
+        "en": "Lucca Outdoor Garden Light"
       },
       "energy": {
         "approximation": {
@@ -4685,14 +4716,11 @@
       ]
     },
     {
-      "id": "LWW002",
-      "name": {
-        "en": "Lucca Outdoor Post"
-      },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4700,6 +4728,10 @@
             "duration": true
           }
         }
+      },
+      "id": "LWW002",
+      "name": {
+        "en": "Lucca Outdoor Post"
       },
       "energy": {
         "approximation": {

@@ -3,24 +3,7 @@
   "name": {
     "en": "Phoenix Wall Light"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_temperature"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_temperature": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white-ambiance"],
   "energy": {
     "approximation": {
       "usageOn": 13,

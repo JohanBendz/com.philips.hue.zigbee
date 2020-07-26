@@ -3,24 +3,7 @@
   "name": {
     "en": "Aurelle Panel Square"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_temperature"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_temperature": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-white-ambiance"],
   "images": {
     "large": "drivers/LTC014/assets/images/large.png",
     "small": "drivers/LTC014/assets/images/small.png"

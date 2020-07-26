@@ -3,31 +3,7 @@
   "name": {
     "en": "LightStrips"
   },
-  "class": "light",
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_hue",
-    "light_saturation",
-    "light_mode"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_hue": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "light_saturation": {
-      "opts": {
-        "duration": true
-      }
-    }
-  },
+  "$extends": ["light-colour"],
   "energy": {
     "approximation": {
       "usageOn": 12,
