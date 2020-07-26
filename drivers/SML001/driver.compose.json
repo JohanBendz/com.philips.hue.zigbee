@@ -1,0 +1,169 @@
+{
+  "id": "SML001",
+  "name": {
+    "en": "Motion Sensor"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_motion",
+    "measure_temperature",
+    "measure_luminance",
+    "measure_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "SML001"
+    ],
+    "deviceId": 2128,
+    "profileId": 49246,
+    "learnmode": {
+      "image": "/drivers/SML001/assets/icon.svg",
+      "instruction": {
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+      }
+    }
+  },
+  "images": {
+    "large": "drivers/SML001/assets/images/large.jpg",
+    "small": "drivers/SML001/assets/images/small.jpg"
+  },
+  "settings": [
+    {
+      "id": "temperature_offset",
+      "type": "number",
+      "label": {
+        "en": "Temperature offset (\u00c2\u00b0C)",
+        "nl": "Temperatuur compensatie (\u00c2\u00b0C)"
+      },
+      "hint": {
+        "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [\u00c2\u00b0C]",
+        "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [\u00c2\u00b0C]"
+      },
+      "value": 0,
+      "attr": {
+        "min": -10,
+        "max": 10,
+        "step": 0.1
+      }
+    },
+    {
+      "id": "batteryThreshold",
+      "type": "number",
+      "label": {
+        "en": "Battery Low Alarm Voltage Threshold (volt)"
+      },
+      "hint": {
+        "en": "This setting determines the threshold before a battery alarm is given."
+      },
+      "value": 2.9,
+      "attr": {
+        "step": 0.1,
+        "min": 0,
+        "max": 6553
+      }
+    },
+    {
+      "id": "minReportMotion",
+      "type": "number",
+      "label": {
+        "en": "Min report interval for motion (s)"
+      },
+      "hint": {
+        "en": "Min interval before a report is sent to Homey (s)"
+      },
+      "value": 5,
+      "attr": {
+        "step": 1,
+        "min": 1,
+        "max": 86400
+      }
+    },
+    {
+      "id": "maxReportMotion",
+      "type": "number",
+      "label": {
+        "en": "Max report interval for motion (s)"
+      },
+      "hint": {
+        "en": "Max interval before a report is sent to Homey (s)"
+      },
+      "value": 300,
+      "attr": {
+        "step": 1,
+        "min": 60,
+        "max": 86400
+      }
+    },
+    {
+      "id": "minReportLux",
+      "type": "number",
+      "label": {
+        "en": "Min report interval for lux (s)"
+      },
+      "hint": {
+        "en": "Min interval before a report is sent to Homey (s)"
+      },
+      "value": 1,
+      "attr": {
+        "step": 1,
+        "min": 1,
+        "max": 86400
+      }
+    },
+    {
+      "id": "maxReportLux",
+      "type": "number",
+      "label": {
+        "en": "Max report interval for lux (s)"
+      },
+      "hint": {
+        "en": "Max interval before a report is sent to Homey (s)"
+      },
+      "value": 900,
+      "attr": {
+        "step": 1,
+        "min": 60,
+        "max": 86400
+      }
+    },
+    {
+      "id": "minReportTemp",
+      "type": "number",
+      "label": {
+        "en": "Min report interval for temperature (s)"
+      },
+      "hint": {
+        "en": "Min interval before a report is sent to Homey (s)"
+      },
+      "value": 1800,
+      "attr": {
+        "step": 1,
+        "min": 1,
+        "max": 86400
+      }
+    },
+    {
+      "id": "maxReportTemp",
+      "type": "number",
+      "label": {
+        "en": "Max report interval for temperature (s)"
+      },
+      "hint": {
+        "en": "Max interval before a report is sent to Homey (s)"
+      },
+      "value": 3600,
+      "attr": {
+        "step": 1,
+        "min": 60,
+        "max": 86400
+      }
+    }
+  ]
+}

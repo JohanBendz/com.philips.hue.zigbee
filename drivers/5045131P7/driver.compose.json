@@ -1,0 +1,75 @@
+{
+  "id": "5045131P7",
+  "name": {
+    "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature",
+    "light_mode"
+  ],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_hue": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_saturation": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_temperature": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
+  "energy": {
+    "approximation": {
+      "usageOn": 6,
+      "usageOff": 1
+    }
+  },
+  "images": {
+    "large": "drivers/5045131P7/assets/images/large.png",
+    "small": "drivers/5045131P7/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": "5045131P7",
+    "deviceId": 269,
+    "profileId": 260,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}

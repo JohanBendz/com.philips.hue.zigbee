@@ -1,0 +1,35 @@
+{
+  "id": "RWL000",
+  "name": {
+    "en": "Dimmer Switch"
+  },
+  "class": "sensor",
+  "capabilities": [],
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "RWL021",
+      "RWL020"
+    ],
+    "deviceId": [
+      2080,
+      2096
+    ],
+    "profileId": 49246,
+    "learnmode": {
+      "image": "/drivers/RWL000/assets/icon.svg",
+      "instruction": {
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+      }
+    }
+  },
+  "images": {
+    "large": "/drivers/RWL000/assets/images/large.jpg",
+    "small": "/drivers/RWL000/assets/images/small.jpg"
+  }
+}

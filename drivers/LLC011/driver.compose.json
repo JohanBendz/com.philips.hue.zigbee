@@ -1,0 +1,67 @@
+{
+  "id": "LLC011",
+  "name": {
+    "en": "Bloom/Aura Living Colors"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_mode"
+  ],
+  "capabilitiesOptions": {
+    "dim": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_hue": {
+      "opts": {
+        "duration": true
+      }
+    },
+    "light_saturation": {
+      "opts": {
+        "duration": true
+      }
+    }
+  },
+  "images": {
+    "large": "drivers/LLC011/assets/images/large.png",
+    "small": "drivers/LLC011/assets/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "LLC011",
+      "LLC012",
+      "LLC014"
+    ],
+    "deviceId": 512,
+    "profileId": 49246,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}
