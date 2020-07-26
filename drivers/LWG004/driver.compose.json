@@ -16,9 +16,19 @@
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": "LWG004",
-    "deviceId": 257,
-    "profileId": 260,
+    "productId": [
+       "LWG004"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8
+        ]
+      }
+    },
     "learnmode": {
       "instruction": {
         "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."

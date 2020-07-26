@@ -1,10 +1,10 @@
 "use strict";
 
-const HueColor = require("../HueColor.js");
+const HueLight = require("../HueLight.js");
 
-class LCT000 extends HueColor {
+class LCT000 extends HueLight {
 
-	async onMeshInit() {
+	async async onNodeInit({ zclNode }) {
         
         // this.printNode();
 

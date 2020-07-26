@@ -81,9 +81,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1744530P7",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "1744530P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -160,8 +171,17 @@
           "1743030P7",
           "1742930P7"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -234,9 +254,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743130P7",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "1743130P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -309,9 +340,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743230P7",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "1743230P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -384,9 +426,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743530P7",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "1743530P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -441,9 +494,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743630P7",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "1743630P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -516,9 +579,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743830P7",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "1743830P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -573,15 +647,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1744430P7",
-        "deviceId": [
-          256,
-          257
+        "productId": [
+          "1744430P7"
         ],
-        "profileId": [
-          260,
-          49246
-        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -636,9 +714,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1744530P7",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "1744530P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -693,9 +781,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1744630P7",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "1744630P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -772,8 +870,17 @@
           "1746530P7",
           "1746547P7"
         ],
-        "deviceId": 269,
-        "profileId": 260,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -846,9 +953,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "4090331P9"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -921,9 +1039,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_01",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "4090331P9_01"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -996,9 +1125,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_02",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "4090331P9_02"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1071,9 +1211,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090431P9",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "4090431P9"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1146,9 +1297,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090531P9",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "4090531P9"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1221,9 +1383,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090631P9",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "4090631P9"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1296,9 +1469,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "5045131P7",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "5045131P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1371,9 +1555,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "5063230P7",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "5063230P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1446,9 +1641,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "HBL001",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "HBL001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -1521,9 +1727,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "HBL002",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "HBL002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -1596,9 +1813,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "HBL003",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "HBL003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -1664,8 +1892,17 @@
           "LLM011",
           "LLM012"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
@@ -1726,9 +1963,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "HML004",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "HML004"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1794,8 +2042,17 @@
           "LLM011",
           "LLM012"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
@@ -1871,8 +2128,17 @@
         "productId": [
           "LCA001"
         ],
-        "deviceId": 269,
-        "profileId": 260,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -1945,9 +2211,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCF002",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCF002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -2020,9 +2297,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCF003",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCF003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -2095,9 +2383,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCG002",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "LCG002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2170,9 +2469,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCS001",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCS001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -2253,8 +2563,17 @@
           "LCT015",
           "LCT016"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2327,9 +2646,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT003",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCT003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2402,9 +2732,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT012",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCT012"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2477,9 +2818,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT024",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCT024"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2552,9 +2904,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT026",
-        "deviceId": 269,
-        "profileId": 260,
+        "productId": [
+          "LCT026"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
@@ -2627,9 +2990,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCW001",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LCW001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2696,9 +3070,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LLC010",
-        "deviceId": 512,
-        "profileId": 49246,
+        "productId": [
+          "LLC010"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2764,8 +3149,17 @@
           "LLC012",
           "LLC014"
         ],
-        "deviceId": 512,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -2838,9 +3232,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LLC020",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LLC020"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
@@ -2885,8 +3290,16 @@
           "LOM002",
           "LOM005"
         ],
-        "deviceId": 266,
-        "profileId": 260,
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              4,
+              5,
+              6
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -2937,9 +3350,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LST001",
-        "deviceId": 512,
-        "profileId": 49246,
+        "productId": [
+          "LST001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -3012,9 +3436,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LST002",
-        "deviceId": 528,
-        "profileId": 49246,
+        "productId": [
+          "LST002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -3091,8 +3526,17 @@
           "LST003",
           "LST004"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3156,8 +3600,17 @@
         "productId": [
           "LTA001"
         ],
-        "deviceId": 268,
-        "profileId": 260,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -3221,8 +3674,17 @@
         "productId": [
           "LTC001"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
@@ -3286,8 +3748,17 @@
         "productId": [
           "LTC002"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
@@ -3348,9 +3819,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC003",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTC003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3411,9 +3893,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC011",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTC011"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3474,9 +3967,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC012",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTC012"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3531,9 +4035,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC014",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTC014"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3594,8 +4109,17 @@
           "LTC013",
           "LTC016"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -3656,9 +4180,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC021",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTC021"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3719,9 +4254,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTG002",
-        "deviceId": 268,
-        "profileId": 260,
+        "productId": [
+          "LTG002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
@@ -3782,9 +4328,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTP001",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTP001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3845,9 +4402,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTP002",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTP002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3908,9 +4476,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTP003",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTP003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -3977,8 +4556,17 @@
           "LTW010",
           "LTW015"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4039,9 +4627,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTW012",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTW012"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4106,8 +4705,17 @@
           "LTW013",
           "LTW014"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4168,9 +4776,20 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTW017",
-        "deviceId": 544,
-        "profileId": 49246,
+        "productId": [
+          "LTW017"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4225,9 +4844,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWA001",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWA001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4282,9 +4911,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWA004",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWA004"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4347,8 +4986,16 @@
           "LWB007",
           "LWF002"
         ],
-        "deviceId": 256,
-        "profileId": 49246,
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4403,9 +5050,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWE002",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWE002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4460,9 +5117,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWG001",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "LWG001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4517,9 +5184,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWG004",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWG004"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4574,9 +5251,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWO001",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWO001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4631,9 +5318,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWV001",
-        "deviceId": 257,
-        "profileId": 260,
+        "productId": [
+          "LWV001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4688,9 +5385,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW001",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "LWW001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4745,9 +5452,19 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW002",
-        "deviceId": 256,
-        "profileId": 49246,
+        "productId": [
+          "LWW002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8
+            ]
+          }
+        },
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4830,8 +5547,18 @@
         "productId": [
           "SML001"
         ],
-        "deviceId": 2128,
-        "profileId": 49246,
+        "endpoints": {
+          "2": {
+            "clusters": [
+              0,
+              1,
+              3,
+              1030,
+              1024,
+              1026
+            ]
+          }
+        },
         "learnmode": {
           "image": "/drivers/SML001/assets/icon.svg",
           "instruction": {
@@ -4999,8 +5726,18 @@
         "productId": [
           "SML002"
         ],
-        "deviceId": 2128,
-        "profileId": 49246,
+        "endpoints": {
+          "2": {
+            "clusters": [
+              0,
+              1,
+              3,
+              1030,
+              1024,
+              1026
+            ]
+          }
+        },
         "learnmode": {
           "image": "/drivers/SML002/assets/icon.svg",
           "instruction": {

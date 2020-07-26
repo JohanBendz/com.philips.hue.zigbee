@@ -20,8 +20,17 @@
       "1743030P7",
       "1742930P7"
     ],
-    "deviceId": 528,
-    "profileId": 49246,
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
     "learnmode": {
       "instruction": {
         "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."

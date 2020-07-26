@@ -1,11 +1,11 @@
 "use strict";
 
-const ZigBeeDevice = require("homey-meshdriver").ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
 
 class HuePlug extends ZigBeeDevice {
-
-    onMeshInit() {
-        if (this.hasCapability('onoff')) this.registerCapability('onoff', 'genOnOff');
+    async onNodeInit({ zclNode }) {
+        if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF);
     }
 }
 

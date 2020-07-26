@@ -21,8 +21,17 @@
       "LLM011",
       "LLM012"
     ],
-    "deviceId": 544,
-    "profileId": 49246,
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
     "learnmode": {
       "instruction": {
         "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."

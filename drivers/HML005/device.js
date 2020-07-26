@@ -1,7 +1,7 @@
 "use strict";
 
-const HueAmbiance = require("../HueAmbiance.js");
+const HueLight = require("../HueLight.js");
 
-class HML005 extends HueAmbiance {}
+class HML005 extends HueLight {}
 
 module.exports = HML005;

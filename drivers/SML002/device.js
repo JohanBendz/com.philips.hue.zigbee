@@ -1,18 +1,19 @@
 'use strict';
 
 const Homey = require('homey');
-const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
 
 class OutdoorSensor extends ZigBeeDevice {
-	onMeshInit()
+	onNodeInit()
 	{
 		// this.printNode();
 		
-				if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', 'msOccupancySensing');
-				if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', 'genPowerCfg');
-				if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', 'msTemperatureMeasurement');
-				if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', 'msIlluminanceMeasurement');
-				if (this.hasCapability('measure_battery')) this.registerCapability('measure_battery', 'genPowerCfg');
+		if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
+		if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION);
+		if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', CLUSTER.TEMPERATURE_MEASUREMENT);
+		if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', CLUSTER.ILLUMINANCE_MEASUREMENT);
+		if (this.hasCapability('measure_battery')) this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION);
 		
 				// alarm_motion
 				this.minReportMotion = this.getSetting('minReportMotion') || 1;

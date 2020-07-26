@@ -1,11 +1,11 @@
 'use strict';
 
 const Homey = require('homey');
-const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
 
 class HueDimmerSwitchZigBee extends ZigBeeDevice {
 
-  onMeshInit() {
+  async onNodeInit({ zclNode }) {
 
     // Developer tools
 		this.enableDebug();

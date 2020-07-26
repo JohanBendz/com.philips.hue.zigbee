@@ -19,8 +19,17 @@
     "productId": [
       "LTC001"
     ],
-    "deviceId": 544,
-    "profileId": 49246,
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
     "learnmode": {
       "instruction": {
         "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."

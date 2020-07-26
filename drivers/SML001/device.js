@@ -1,32 +1,71 @@
 'use strict';
 
 const Homey = require('homey');
-const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
 
 class MotionSensor extends ZigBeeDevice {
-	onMeshInit() {
+	async onNodeInit({ zclNode }) {
 
-		// this.enableDebug();
-		// this.printNode();
+		this.enableDebug();
+		this.printNode();
 
-		
-		if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', 'msOccupancySensing');
-		if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', 'genPowerCfg');
-		if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', 'msTemperatureMeasurement');
-		if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', 'msIlluminanceMeasurement');
-		if (this.hasCapability('measure_battery')) this.registerCapability('measure_battery', 'genPowerCfg');
+		if (this.hasCapability('alarm_battery')) {
+			// alarm_battery
+			this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
+			
+			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
+				getOpts: {
+				  getOnStart: true,
+				},
+				reportOpts: {
+				  configureAttributeReporting: {
+					minInterval: 0, // No minimum reporting interval
+					maxInterval: 60000, // Maximally every ~16 hours
+					minChange: 5, // Report when value changed by 5
+				  },
+				},
+			});
+		}
+
+		if (this.hasCapability('measure_battery')) {
+			this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+			  getOpts: {
+				getOnStart: true,
+			  },
+			  reportOpts: {
+				configureAttributeReporting: {
+				  minInterval: 0, // No minimum reporting interval
+				  maxInterval: 60000, // Maximally every ~16 hours
+				  minChange: 5, // Report when value changed by 5
+				},
+			  },
+			});
+		}
 
 		// alarm_motion
 		this.minReportMotion = this.getSetting('minReportMotion') || 1;
 		this.maxReportMotion = this.getSetting('maxReportMotion') || 300;
 
+		if (this.hasCapability('alarm_motion')) {
+			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
+	    }
+		
+		// measure_temperature
+		this.minReportTemp = this.getSetting('minReportTemp') || 300;
+		this.maxReportTemp= this.getSetting('maxReportTemp') || 3600;		
+		if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', CLUSTER.TEMPERATURE_MEASUREMENT);
+
+		// measure_luminance
+		this.minReportLux = this.getSetting('minReportLux') || 300;
+		this.maxReportLux= this.getSetting('maxReportLux') || 900;
+		if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', CLUSTER.ILLUMINANCE_MEASUREMENT);
+
+/*
 		this.registerAttrReportListener('msOccupancySensing', 'occupancy', this.minReportMotion, this.maxReportMotion, null, data => {
 			this.log('occupancy', data);
 			this.setCapabilityValue('alarm_motion', data === 1);
 		}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
-
-		// alarm_battery
-		this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
 
 		this.registerAttrReportListener('genPowerCfg', 'batteryVoltage', 1, 3600, 1, data1 => {
 			this.log('batteryVoltage', data1);
@@ -38,20 +77,12 @@ class MotionSensor extends ZigBeeDevice {
 			}
 		}, 1).catch(err => this.error('Error registering report listener for Battery Voltage: ', err));
 
-		// measure_temperature
-		this.minReportTemp = this.getSetting('minReportTemp') || 300;
-		this.maxReportTemp= this.getSetting('maxReportTemp') || 3600;
-
 		this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', this.minReportTemp, this.maxReportTemp, null, data2 => {
 			const temperatureOffset = this.getSetting('temperature_offset') || 0;
 			this.log('measuredValue-temperature', data2, '+ temperature offset', temperatureOffset);
 			const temperature = Math.round((data2 / 100) * 10) / 10;
 			this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
 		}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
-
-		// measure_luminance
-		this.minReportLux = this.getSetting('minReportLux') || 300;
-		this.maxReportLux= this.getSetting('maxReportLux') || 900;
 
 		this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', this.minReportLux, this.maxReportLux, null, data3 => {
 			this.log('measuredValue-luminance', data3);
@@ -67,7 +98,7 @@ class MotionSensor extends ZigBeeDevice {
 				this.setCapabilityValue('measure_battery', percentageRemaining);
 			}
 		}, 1).catch(err => this.error('Error registering report listener for Battery Percentage: ', err));
-
+*/
 	}
 
 	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
@@ -124,7 +155,6 @@ class MotionSensor extends ZigBeeDevice {
 			callback( Homey.__("report interval settings error"), null );
 		}
 	}
-
 }
 
 module.exports = MotionSensor;
