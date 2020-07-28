@@ -2,8 +2,7 @@
   "class": "light",
   "capabilities": [
     "onoff",
-    "dim",
-    "light_mode"
+    "dim"
   ],
   "capabilitiesOptions": {
     "dim": {
