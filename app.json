@@ -5895,5 +5895,99 @@
         }
       ]
     }
-  ]
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "RWL000_on",
+        "title": {
+          "en": "On-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RWL000"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=RWL000"
+          }
+        ]
+      },
+      {
+        "id": "RWL000_off",
+        "title": {
+          "en": "Off-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RWL000"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=RWL000"
+          }
+        ]
+      },
+      {
+        "id": "RWL000_dim",
+        "title": {
+          "en": "Dim buttons"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RWL000"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=RWL000"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "up-press",
+                "label": {
+                  "en": "Dim-up pressed"
+                }
+              },
+              {
+                "id": "up-hold",
+                "label": {
+                  "en": "Dim-up hold"
+                }
+              },
+              {
+                "id": "down-press",
+                "label": {
+                  "en": "Dim-down pressed"
+                }
+              },
+              {
+                "id": "down-hold",
+                "label": {
+                  "en": "Dim-down hold"
+                }
+              },
+              {
+                "id": "release",
+                "label": {
+                  "en": "Dim-button released"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
