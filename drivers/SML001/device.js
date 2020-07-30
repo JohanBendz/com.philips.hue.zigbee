@@ -4,6 +4,8 @@ const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 
+const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
+
 class MotionSensor extends ZigBeeDevice {
 	async onNodeInit({ zclNode }) {
 
@@ -61,44 +63,32 @@ class MotionSensor extends ZigBeeDevice {
 		this.maxReportLux= this.getSetting('maxReportLux') || 900;
 		if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', CLUSTER.ILLUMINANCE_MEASUREMENT);
 
-/*
-		this.registerAttrReportListener('msOccupancySensing', 'occupancy', this.minReportMotion, this.maxReportMotion, null, data => {
-			this.log('occupancy', data);
-			this.setCapabilityValue('alarm_motion', data === 1);
-		}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
+		// Bind on/off button commands
+		zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
+			onSetOff: (payload) => {
+				this.log('alarm_motion off!!!!');
+			  },
+			onSetOn:  (payload) => {
+				this.log('alarm_motion on!!!!');
+			  },
+			onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
+		}));
+	}
 
-		this.registerAttrReportListener('genPowerCfg', 'batteryVoltage', 1, 3600, 1, data1 => {
-			this.log('batteryVoltage', data1);
-			this.log(this.batteryThreshold);
-			if (data1 <= this.batteryThreshold * 10) {
-				this.setCapabilityValue('alarm_battery', true);
-			} else {
-				this.setCapabilityValue('alarm_battery', false);
-			}
-		}, 1).catch(err => this.error('Error registering report listener for Battery Voltage: ', err));
-
-		this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', this.minReportTemp, this.maxReportTemp, null, data2 => {
-			const temperatureOffset = this.getSetting('temperature_offset') || 0;
-			this.log('measuredValue-temperature', data2, '+ temperature offset', temperatureOffset);
-			const temperature = Math.round((data2 / 100) * 10) / 10;
-			this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-		}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
-
-		this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', this.minReportLux, this.maxReportLux, null, data3 => {
-			this.log('measuredValue-luminance', data3);
-			const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
-			this.setCapabilityValue('measure_luminance', luminance);
-		}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
-
-		// measure_battery
-		this.registerAttrReportListener('genPowerCfg', 'batteryPercentageRemaining', 1, 43200, 1, data4 => {
-			this.log('measuredValue-battery', data4);
-			if (data4 <= 200 && data4 !== 255) {
-				const percentageRemaining = Math.round(data4 / 2);
-				this.setCapabilityValue('measure_battery', percentageRemaining);
-			}
-		}, 1).catch(err => this.error('Error registering report listener for Battery Percentage: ', err));
-*/
+	/**
+	 * Handles `onWithTimedOff` commands, these indicate motion detected.
+	 * @param {0|1} onOffControl - 1 if set to night mode, 0 if set to day mode
+	 * @param {number} onTime - Time in 1/10th seconds for which the alarm should be active
+	 * @param {number} offWaitTime - Time in 1/10th seconds for which the alarm should be off
+	 */
+	_onWithTimedOffCommandHandler({ onOffControl, onTime, offWaitTime }) {
+		this.setCapabilityValue('alarm_motion', true)
+		.catch(err => this.error('Error: could not set alarm_motion capability value', err));
+		clearTimeout(this._motionAlarmTimeout);
+		this._motionAlarmTimeout = setTimeout(() => {
+		this.setCapabilityValue('alarm_motion', false)
+			.catch(err => this.error('Error: could not set alarm_motion capability value', err));
+		}, onTime );
 	}
 
 	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
