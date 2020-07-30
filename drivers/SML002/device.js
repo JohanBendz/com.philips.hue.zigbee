@@ -65,12 +65,6 @@ class MotionSensor extends ZigBeeDevice {
 
 		// Bind on/off button commands
 		zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
-			onSetOff: (payload) => {
-				this.log('alarm_motion off!!!!');
-			  },
-			onSetOn:  (payload) => {
-				this.log('alarm_motion on!!!!');
-			  },
 			onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
 		}));
 	}
