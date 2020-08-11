@@ -1,7 +1,7 @@
 "use strict";
 
-const HueColor = require("../HueColor.js");
+const Light = require("../Light.js");
 
-class HBL003 extends HueColor {}
+class HBL003 extends Light { }
 
 module.exports = HBL003;

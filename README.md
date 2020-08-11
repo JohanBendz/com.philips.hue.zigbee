@@ -4,11 +4,39 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v2.0.0
+
+Changes:
+- SDK3 rewrite
+- Implemented new Homey Zigbee Driver
+- Implemented the use of Compose
+- Hue Switch Button now show battery information
+- Some changes in settings for MotionSensors
+
+Added support for:
+- Hue Lightstrip Plus V4 (thx zepign)
+- Hue Lightstrip Outdoor 2 meter
+- Hue Lightstrip Outdoor 5 meter
+- Hue Being Pendant
+- Nyro Outdoor Pedestal
+- Nyro Outdoor Wall Light
+- Hue Econic Wall Light
+- Hue Aurelle Rectangular
+
+### v1.6.1
+Fix:
+- LCT000 issue
+- SML001 and SML002 typo in settings update
+
+Prepping for SDK3. Upgrading Test version to Stable version.
+
 ### v1.5.10
+
 Added support for:
 - Silver frame version of Daylo Outdoor Wall Light
 
 ### v1.5.9
+
 Fix:
 - kill some bugs
 

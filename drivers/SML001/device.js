@@ -1,130 +1,215 @@
 'use strict';
 
 const Homey = require('homey');
-const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
+const { ZigBeeDevice } = require('homey-zigbeedriver');
+const { CLUSTER } = require('zigbee-clusters');
+const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 
 class MotionSensor extends ZigBeeDevice {
-	onMeshInit() {
+	
+	async onNodeInit({ zclNode }) {
 
-		// this.enableDebug();
-		// this.printNode();
+		if (this.isFirstInit()){
 
-		
-		if (this.hasCapability('alarm_motion')) this.registerCapability('alarm_motion', 'msOccupancySensing');
-		if (this.hasCapability('alarm_battery')) this.registerCapability('alarm_battery', 'genPowerCfg');
-		if (this.hasCapability('measure_temperature')) this.registerCapability('measure_temperature', 'msTemperatureMeasurement');
-		if (this.hasCapability('measure_luminance')) this.registerCapability('measure_luminance', 'msIlluminanceMeasurement');
-		if (this.hasCapability('measure_battery')) this.registerCapability('measure_battery', 'genPowerCfg');
+			// alarm_motion
+			if (this.hasCapability('alarm_motion')) {
+				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
 
-		// alarm_motion
-		this.minReportMotion = this.getSetting('minReportMotion') || 1;
-		this.maxReportMotion = this.getSetting('maxReportMotion') || 300;
-
-		this.registerAttrReportListener('msOccupancySensing', 'occupancy', this.minReportMotion, this.maxReportMotion, null, data => {
-			this.log('occupancy', data);
-			this.setCapabilityValue('alarm_motion', data === 1);
-		}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
-
-		// alarm_battery
-		this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
-
-		this.registerAttrReportListener('genPowerCfg', 'batteryVoltage', 1, 3600, 1, data1 => {
-			this.log('batteryVoltage', data1);
-			this.log(this.batteryThreshold);
-			if (data1 <= this.batteryThreshold * 10) {
-				this.setCapabilityValue('alarm_battery', true);
-			} else {
-				this.setCapabilityValue('alarm_battery', false);
+				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
+					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
+				}));
 			}
-		}, 1).catch(err => this.error('Error registering report listener for Battery Voltage: ', err));
 
-		// measure_temperature
-		this.minReportTemp = this.getSetting('minReportTemp') || 300;
-		this.maxReportTemp= this.getSetting('maxReportTemp') || 3600;
+			// measure_temperature
+			if (this.hasCapability('measure_temperature')) {
+				const minReportTemp = this.getSetting('minReportTemp') || 60;
+				const maxReportTemp = this.getSetting('maxReportTemp') || 300;
 
-		this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', this.minReportTemp, this.maxReportTemp, null, data2 => {
-			const temperatureOffset = this.getSetting('temperature_offset') || 0;
-			this.log('measuredValue-temperature', data2, '+ temperature offset', temperatureOffset);
-			const temperature = Math.round((data2 / 100) * 10) / 10;
-			this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-		}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
+				await this.configureAttributeReporting([
+					{
+					endpointId: 2,
+					cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+					attributeName: 'measuredValue',
+					minInterval: minReportTemp,
+					maxInterval: maxReportTemp,
+					minChange: 1,
+					}
+				]);
 
-		// measure_luminance
-		this.minReportLux = this.getSetting('minReportLux') || 300;
-		this.maxReportLux= this.getSetting('maxReportLux') || 900;
+				zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+				.on('attr.measuredValue', (currentTempValue) => {
+					const temperatureOffset = this.getSetting('temperature_offset') || 0;
+					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
+					this.log('temp: ', temperature);
+					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
+				});
 
-		this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', this.minReportLux, this.maxReportLux, null, data3 => {
-			this.log('measuredValue-luminance', data3);
-			const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
-			this.setCapabilityValue('measure_luminance', luminance);
-		}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
-
-		// measure_battery
-		this.registerAttrReportListener('genPowerCfg', 'batteryPercentageRemaining', 1, 43200, 1, data4 => {
-			this.log('measuredValue-battery', data4);
-			if (data4 <= 200 && data4 !== 255) {
-				const percentageRemaining = Math.round(data4 / 2);
-				this.setCapabilityValue('measure_battery', percentageRemaining);
 			}
-		}, 1).catch(err => this.error('Error registering report listener for Battery Percentage: ', err));
 
+			// measure_luminance
+			if (this.hasCapability('measure_luminance')) {
+				const minReportLux = this.getSetting('minReportLux') || 60;
+				const maxReportLux = this.getSetting('maxReportLux') || 300;
+
+				await this.configureAttributeReporting([
+					{
+					endpointId: 2,
+					cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
+					attributeName: 'measuredValue',
+					minInterval: minReportLux,
+					maxInterval: maxReportLux,
+					minChange: 1,
+					},
+				]);
+
+				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+				.on('attr.measuredValue', (currentLuxValue) => {
+					this.log('lux: ', currentLuxValue);
+					this.setCapabilityValue('measure_luminance', currentLuxValue);
+				});
+
+			}
+
+			// measure_battery
+			if (this.hasCapability('measure_battery')) {				
+				this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+					getOpts: {
+					getOnStart: true,
+					},
+					reportOpts: {
+						configureAttributeReporting: {
+							minInterval: 300,
+							maxInterval: 60000,
+							minChange: 1,
+						},
+					},
+				});
+
+			}
+
+			// alarm_battery
+			if (this.hasCapability('alarm_battery')) {				
+				this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
+					this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
+						getOpts: {
+						getOnStart: true,
+						},
+						reportOpts: {
+							configureAttributeReporting: {
+								minInterval: 300,
+								maxInterval: 60000,
+								minChange: 1,
+							},
+						},
+				});
+
+			}
+
+		}
+		else {
+			// alarm_motion
+			if (this.hasCapability('alarm_motion')) {
+				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
+
+				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
+					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
+				}));
+			}
+
+			// measure_temperature
+			if (this.hasCapability('measure_temperature')) {
+
+				zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+				.on('attr.measuredValue', (currentTempValue) => {
+					const temperatureOffset = this.getSetting('temperature_offset') || 0;
+					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
+					this.log('temp: ', temperature);
+					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
+				});
+
+			}
+
+			// measure_luminance
+			if (this.hasCapability('measure_luminance')) {
+
+				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+				.on('attr.measuredValue', (currentLuxValue) => {
+					this.log('lux: ', currentLuxValue);
+					this.setCapabilityValue('measure_luminance', currentLuxValue);
+				});
+
+			}
+
+		}
 	}
 
-	onSettings( oldSettingsObj, newSettingsObj, changedKeysArr, callback ) {
-		
-		this.log(changedKeysArr);
-		this.log('newSettingsObj', newSettingsObj);
-		this.log('oldSettingsObj', oldSettingsObj);
-		
-		if ((newSettingsObj.minReportMotion < newSettingsObj.maxReportMotion) &&
-			(newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) &&
-			(newSettingsObj.minReportLux < newSettingsObj.maxReportLux)) {
-				this.log('minReport settings smaller then maxReport settings');
-				callback( null, true );
+	/**
+	 * Handles `onWithTimedOff` commands, these indicate motion detected.
+	 * @param {0|1} onOffControl - 1 if set to night mode, 0 if set to day mode
+	 * @param {number} onTime - Time in 1/10th seconds for which the alarm should be active
+	 * @param {number} offWaitTime - Time in 1/10th seconds for which the alarm should be off
+	 */
+	_onWithTimedOffCommandHandler({ onOffControl, onTime, offWaitTime }) {
+		this.setCapabilityValue('alarm_motion', true)
+		.catch(err => this.error('Error: could not set alarm_motion capability value', err));
+		clearTimeout(this._motionAlarmTimeout);
+		this._motionAlarmTimeout = setTimeout(() => {
+		this.setCapabilityValue('alarm_motion', false)
+			.catch(err => this.error('Error: could not set alarm_motion capability value', err));
+		}, onTime);
+	}
 
-				// alarm_motion report settings changed
-				if ((changedKeysArr.includes('minReportMotion')) || (changedKeysArr.includes('maxReportMotion'))) {
-					this.log('minReportMotion: ', newSettingsObj.minReportMotion);
-					this.log('maxReportMotion: ', newSettingsObj.maxReportMotion);
-					if (newSettingsObj.minReportMotion < newSettingsObj.maxReportMotion) {
-						this.registerAttrReportListener('msOccupancySensing', 'occupancy', newSettingsObj.minReportMotion, newSettingsObj.maxReportMotion, null, data => {
-							this.log('occupancy', data);
-							this.setCapabilityValue('alarm_motion', data === 1);
-						}, 1).catch(err => this.error('Error registering report listener for Occupancy: ', err));
-					}
-				}
+
+	async onSettings({ oldSettings, newSettings, changedKeys }) {
+ 		
+		this.log('changed keys: ', changedKeys);
+		this.log('newSettings: ', newSettings);
+		this.log('oldSettings: ', oldSettings);
+		
+		if ((newSettings.minReportTemp < newSettings.maxReportTemp) &&
+			(newSettings.minReportLux < newSettings.maxReportLux)) {
+				this.log('minReport settings smaller then maxReport settings');
 
 				// measure_temperature report settings changed
-				if ((changedKeysArr.includes('minReportTemp')) || (changedKeysArr.includes('maxReportTemp'))) {
-					this.log('minReportTemp: ', newSettingsObj.minReportTemp);
-					this.log('maxReportTemp: ', newSettingsObj.maxReportTemp);
-					if (newSettingsObj.minReportTemp < newSettingsObj.maxReportTemp) {
-						this.registerAttrReportListener('msTemperatureMeasurement', 'measuredValue', newSettingsObj.minReportTemp, newSettingsObj.maxReportTemp, null, data2 => {
-							const temperatureOffset = this.getSetting('temperature_offset') || 0;
-							this.log('measuredValue', data2, '+ temperature offset', temperatureOffset);
-							const temperature = Math.round((data2 / 100) * 10) / 10;
-							this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-						}, 1).catch(err => this.error('Error registering report listener for Temperature: ', err));
+				if ((changedKeys.includes('minReportTemp')) || (changedKeys.includes('maxReportTemp'))) {
+					if (newSettings.minReportTemp < newSettings.maxReportTemp) {
+
+						await this.configureAttributeReporting([
+							{
+							  endpointId: 2,
+							  cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+							  attributeName: 'measuredValue',
+							  minInterval: newSettings.minReportTemp,
+							  maxInterval: newSettings.maxReportTemp,
+							  minChange: 1,
+							}
+						  ]);
+
 					}
 				}
 
 				// measure_luminance report settings changed
-				if ((changedKeysArr.includes('minReportLux')) || (changedKeysArr.includes('manReportLux'))) {
-					this.log('minReportLux: ', newSettingsObj.minReportLux);
-					this.log('maxReportLux: ', newSettingsObj.maxReportLux);
-					if (newSettingsObj.minReportLux < newSettingsObj.maxReportLux) {
-						this.registerAttrReportListener('msIlluminanceMeasurement', 'measuredValue', newSettingsObj.minReportLux, newSettingsObj.maxReportLux, null, data3 => {
-							this.log('measuredValue', data3);
-							const luminance = Math.round(Math.pow(10, (data3 - 1) / 10000));
-							this.setCapabilityValue('measure_luminance', luminance);
-						}, 1).catch(err => this.error('Error registering report listener for Illuminance: ', err));
+				if ((changedKeys.includes('minReportLux')) || (changedKeys.includes('maxReportLux'))) {
+					if (newSettings.minReportLux < newSettings.maxReportLux) {
+
+						await this.configureAttributeReporting([
+							{
+							  endpointId: 2,
+							  cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
+							  attributeName: 'measuredValue',
+							  minInterval: newSettings.minReportLux,
+							  maxInterval: newSettings.maxReportLux,
+							  minChange: 1,
+							},
+						]);
+
 					}
 				}
-		}	else {
-			callback( Homey.__("report interval settings error"), null );
-		}
-	}
 
+		}
+
+	}
+	
 }
 
 module.exports = MotionSensor;

@@ -1,0 +1,39 @@
+{
+  "name": {
+    "en": "Bulb A19"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 9,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "LCT001",
+      "LCT007",
+      "LCT010",
+      "LCT014",
+      "LCT015",
+      "LCT016"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  }
+}

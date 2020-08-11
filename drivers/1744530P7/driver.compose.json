@@ -1,0 +1,31 @@
+{
+  "name": {
+    "en": "Fuzo Outdoor Wall Light - Open front"
+  },
+  "$extends": ["light_white"],
+  "energy": {
+    "approximation": {
+      "usageOn": 15,
+      "usageOff": 1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": "1744530P7",
+    "endpoints": {
+      "11": {
+      "clusters": [
+          0,
+          4,
+          6,
+          8
+      ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  }
+}

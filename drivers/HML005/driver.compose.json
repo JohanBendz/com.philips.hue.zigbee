@@ -1,0 +1,36 @@
+{
+  "name": {
+    "en": "Phoenix Table"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 12,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "LLM010",
+      "LLM011",
+      "LLM012"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+      }
+    }
+  }
+}

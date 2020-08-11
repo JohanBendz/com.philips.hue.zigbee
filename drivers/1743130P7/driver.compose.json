@@ -1,0 +1,32 @@
+{
+  "name": {
+    "en": "Impress Outdoor Pedestal Light"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 8,
+      "usageOff": 0.2
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": "1743130P7",
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  }
+}

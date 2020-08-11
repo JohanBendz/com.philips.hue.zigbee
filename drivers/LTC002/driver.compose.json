@@ -1,0 +1,34 @@
+{
+  "name": {
+    "en": "Fair Ceiling Lamp"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 39,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "LTC002"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+      }
+    }
+  }
+}

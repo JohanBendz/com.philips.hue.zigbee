@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "Dimmer Switch"
+  },
+  "class": "remote",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.jpg",
+    "small": "{{driverAssetsPath}}/images/small.jpg"
+  },
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "RWL021",
+      "RWL020"
+    ],
+    "endpoints": {
+      "1": {
+        "bindings": [
+          6,
+          8
+        ]
+      },
+      "2": {
+        "clusters": [
+          1,
+          3,
+          15
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+      }
+    }
+  }
+}

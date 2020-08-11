@@ -1,0 +1,100 @@
+[
+  {
+    "id": "temperature_offset",
+    "type": "number",
+    "label": {
+      "en": "Temperature offset (°C)",
+      "nl": "Temperatuur compensatie (°C)"
+    },
+    "hint": {
+      "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+      "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
+    },
+    "value": 0,
+    "attr": {
+      "min": -10,
+      "max": 10,
+      "step": 0.1
+    }
+  },
+  {
+    "id": "batteryThreshold",
+    "type": "number",
+    "label": {
+      "en": "Battery Low Alarm Voltage Threshold (volt)"
+    },
+    "hint": {
+      "en": "This setting determines the threshold before a battery alarm is given."
+    },
+    "value": 2.9,
+    "attr": {
+      "step": 0.1,
+      "min": 0,
+      "max": 6553
+    }
+  },
+  {
+    "id": "minReportLux",
+    "type": "number",
+    "label": {
+      "en": "Min report interval for lux (s)"
+    },
+    "hint": {
+      "en": "Min interval before a report is sent to Homey (s)"
+    },
+    "value": 60,
+    "attr": {
+      "step": 1,
+      "min": 1,
+      "max": 86400
+    }
+  },
+  {
+    "id": "maxReportLux",
+    "type": "number",
+    "label": {
+      "en": "Max report interval for lux (s)"
+    },
+    "hint": {
+      "en": "Max interval before a report is sent to Homey (s)"
+    },
+    "value": 300,
+    "attr": {
+      "step": 1,
+      "min": 60,
+      "max": 86400
+    }
+  },
+  {
+    "id": "minReportTemp",
+    "type": "number",
+    "label": {
+      "en": "Min report interval for temperature (s)"
+    },
+    "hint": {
+      "en": "Min interval before a report is sent to Homey (s)"
+    },
+    "value": 60,
+    "attr": {
+      "step": 1,
+      "min": 1,
+      "max": 86400
+    }
+  },
+  {
+    "id": "maxReportTemp",
+    "type": "number",
+    "label": {
+      "en": "Max report interval for temperature (s)"
+    },
+    "hint": {
+      "en": "Max interval before a report is sent to Homey (s)"
+    },
+    "value": 300,
+    "attr": {
+      "step": 1,
+      "min": 60,
+      "max": 86400
+    }
+  }
+]

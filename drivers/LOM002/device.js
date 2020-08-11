@@ -1,7 +1,7 @@
 "use strict";
 
-const HuePlug = require("../HuePlug.js");
+const Plug = require("../Plug.js");
 
-class LOM002 extends HuePlug { }
+class LOM002 extends Plug { }
 
 module.exports = LOM002;

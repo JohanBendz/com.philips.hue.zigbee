@@ -1,0 +1,32 @@
+{
+  "name": {
+    "en": "Candle Color"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 6.5,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": "LCT012",
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  }
+}

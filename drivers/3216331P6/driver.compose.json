@@ -1,0 +1,32 @@
+{
+  "name": {
+    "en": "Aurelle Panel Rectangular"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 46.5,
+      "usageOff": 1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": "3216331P6",
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  }
+}
