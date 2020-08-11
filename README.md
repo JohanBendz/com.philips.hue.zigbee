@@ -3,6 +3,12 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v1.6.1
+Fix:
+- LCT000 issue
+- SML001 and SML002 typo in settings update
+
+Prepping for SDK3. Upgrading Test version to Stable version.
 
 ### v1.5.10
 Added support for:

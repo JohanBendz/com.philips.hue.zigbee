@@ -109,7 +109,7 @@ class MotionSensor extends ZigBeeDevice {
 				}
 
 				// measure_luminance report settings changed
-				if ((changedKeysArr.includes('minReportLux')) || (changedKeysArr.includes('manReportLux'))) {
+				if ((changedKeysArr.includes('minReportLux')) || (changedKeysArr.includes('maxReportLux'))) {
 					this.log('minReportLux: ', newSettingsObj.minReportLux);
 					this.log('maxReportLux: ', newSettingsObj.maxReportLux);
 					if (newSettingsObj.minReportLux < newSettingsObj.maxReportLux) {
