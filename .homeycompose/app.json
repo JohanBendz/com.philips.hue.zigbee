@@ -14,12 +14,14 @@
     "name": "Johan Bendz",
     "email": "johan.bendz@hotmail.com"
   },
-  "donate": {
-    "paypal": {
-      "username": "JohanBendz"
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "JohanBendz"
+      }
     }
   },
-  "contributing": {
+  "contributors": {
     "developers": [
       {
         "name": "Sebastian Johansson",
@@ -36,5 +38,9 @@
     "small": "assets/images/small.jpg"
   },
   "speech": [],
-  "permissions": []
+  "permissions": [],
+  "bugs": {
+    "url": "https://github.com/sebbebebbe/com.philips.hue.zigbee/issues"
+  },
+  "source": "https://github.com/sebbebebbe/com.philips.hue.zigbee"
 }
