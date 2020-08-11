@@ -8,18 +8,20 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
     "email": "johan.bendz@hotmail.com"
   },
-  "donate": {
-    "paypal": {
-      "username": "JohanBendz"
+  "contributing": {
+    "donate": {
+      "paypal": {
+        "username": "JohanBendz"
+      }
     }
   },
-  "contributing": {
+  "contributors": {
     "developers": [
       {
         "name": "Sebastian Johansson",
@@ -37,6 +39,10 @@
   },
   "speech": [],
   "permissions": [],
+  "bugs": {
+    "url": "https://github.com/sebbebebbe/com.philips.hue.zigbee/issues"
+  },
+  "source": "https://github.com/sebbebebbe/com.philips.hue.zigbee",
   "drivers": [
     {
       "class": "light",

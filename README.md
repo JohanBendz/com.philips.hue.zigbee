@@ -4,7 +4,7 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
-### v2.0.0
+### v2.0.1
 
 Changes:
 - SDK3 rewrite
