@@ -4,6 +4,11 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v2.0.2
+
+Fix:
+- Luminance for Motion and Outdoor Sensors was not correctly calculated
+
 ### v2.0.1
 
 Changes:

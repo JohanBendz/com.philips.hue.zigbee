@@ -64,8 +64,9 @@ class MotionSensor extends ZigBeeDevice {
 
 				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
 				.on('attr.measuredValue', (currentLuxValue) => {
-					this.log('lux: ', currentLuxValue);
-					this.setCapabilityValue('measure_luminance', currentLuxValue);
+					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
+					this.log('lux: ', luminance);
+					this.setCapabilityValue('measure_luminance', luminance);
 				});
 
 			}
@@ -134,8 +135,9 @@ class MotionSensor extends ZigBeeDevice {
 
 				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
 				.on('attr.measuredValue', (currentLuxValue) => {
-					this.log('lux: ', currentLuxValue);
-					this.setCapabilityValue('measure_luminance', currentLuxValue);
+					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
+					this.log('lux: ', luminance);
+					this.setCapabilityValue('measure_luminance', luminance);
 				});
 
 			}

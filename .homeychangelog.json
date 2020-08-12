@@ -1,5 +1,8 @@
 {
   "2.0.1": {
     "en": "SDK3 rewrite. Full changelog on Github"
+  },
+  "2.0.2": {
+    "en": "Luminance fix for Motion and Outdoor Sensors"
   }
 }
