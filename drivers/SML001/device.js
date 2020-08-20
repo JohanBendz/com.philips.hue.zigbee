@@ -40,7 +40,7 @@ class MotionSensor extends ZigBeeDevice {
 				.on('attr.measuredValue', (currentTempValue) => {
 					const temperatureOffset = this.getSetting('temperature_offset') || 0;
 					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
-					this.log('temp: ', temperature);
+					this.log('Temperature: ', temperature, ', Offset: ', temperatureOffset);
 					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
 				});
 
@@ -65,7 +65,7 @@ class MotionSensor extends ZigBeeDevice {
 				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
 				.on('attr.measuredValue', (currentLuxValue) => {
 					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
-					this.log('lux: ', luminance);
+					this.log('Lux: ', luminance);
 					this.setCapabilityValue('measure_luminance', luminance);
 				});
 

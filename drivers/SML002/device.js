@@ -40,7 +40,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				.on('attr.measuredValue', (currentTempValue) => {
 					const temperatureOffset = this.getSetting('temperature_offset') || 0;
 					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
-					this.log('temp: ', temperature);
+					this.log('Temperature: ', temperature, ', Offset: ', temperatureOffset);
 					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
 				});
 

@@ -4,6 +4,14 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v2.0.3
+
+Added support for:
+- Hue Garnea Downlight
+- Bulb 1600 Lumen White
+
+Verbose Zigbee logging enabled for better troubleshooting crash logs. 
+
 ### v2.0.2
 
 Fix:
