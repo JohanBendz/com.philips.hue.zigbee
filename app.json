@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -79,6 +79,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -164,6 +167,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -252,6 +258,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -337,6 +346,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -425,6 +437,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -491,6 +506,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -575,6 +593,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -660,6 +681,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -726,6 +750,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -791,6 +818,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -856,6 +886,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -941,6 +974,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1026,6 +1062,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1058,6 +1097,94 @@
         }
       },
       "id": "1745630P7",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746447P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746447P7/assets/images/large.png",
+        "small": "/drivers/1746447P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Resonate Outdoor Wall Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1746447P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1746447P7",
       "settings": [
         {
           "id": "transition_time",
@@ -1111,6 +1238,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1187,6 +1317,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1272,6 +1405,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1357,6 +1493,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1442,6 +1581,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1527,6 +1669,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1612,6 +1757,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1697,6 +1845,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1782,6 +1933,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1867,6 +2021,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -1952,6 +2109,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2037,6 +2197,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2122,6 +2285,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2195,6 +2361,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2272,6 +2441,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2345,6 +2517,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2434,6 +2609,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2521,6 +2699,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2606,6 +2787,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2691,6 +2875,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2776,6 +2963,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2861,6 +3051,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -2946,6 +3139,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3031,6 +3227,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3116,6 +3315,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3208,6 +3410,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3293,6 +3498,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3378,6 +3586,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3463,6 +3674,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3548,6 +3762,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3627,6 +3844,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3706,6 +3926,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3795,6 +4018,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3911,6 +4137,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -3996,6 +4225,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4081,6 +4313,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4157,6 +4392,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4232,6 +4470,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4246,7 +4487,8 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "LTC001"
+          "LTC001",
+          "3261031P6"
         ],
         "endpoints": {
           "11": {
@@ -4307,6 +4549,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4382,6 +4627,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4455,6 +4703,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4528,6 +4779,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4601,6 +4855,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4674,6 +4931,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4752,6 +5012,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4825,6 +5088,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4900,6 +5166,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -4973,6 +5242,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5046,6 +5318,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5119,6 +5394,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5192,6 +5470,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5265,6 +5546,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5343,6 +5627,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5416,6 +5703,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5492,6 +5782,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5558,6 +5851,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5623,6 +5919,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5688,6 +5987,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5755,6 +6057,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5827,6 +6132,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5892,6 +6200,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -5957,6 +6268,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -6022,6 +6336,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -6087,6 +6404,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -6152,6 +6472,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {
@@ -6217,6 +6540,9 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
       "name": {

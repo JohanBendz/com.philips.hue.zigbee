@@ -3,6 +3,14 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.4
+
+Added support for:
+- New version of Beijing Ceiling Lamp
+- Resonate Outdoor Wall Light
+
+Fix:
+- On/Off was not correcty set on dim to/from 0
 
 ### v2.0.3
 

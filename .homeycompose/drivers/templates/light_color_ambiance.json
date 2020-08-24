@@ -33,6 +33,9 @@
             "opts": {
             "duration": true
             }
-        }
+        },
+        "onoff": {
+            "setOnDim": false
+          }
     }
 }
