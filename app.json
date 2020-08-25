@@ -2076,6 +2076,94 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/5063330P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5063330P7/assets/images/large.png",
+        "small": "/drivers/5063330P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Fugato Triple Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "5063330P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5063330P7",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/HBL001/assets/icon.svg",
       "images": {
         "large": "/drivers/HBL001/assets/images/large.png",
