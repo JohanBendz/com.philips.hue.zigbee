@@ -7,7 +7,7 @@ const Homey = require("homey");
  Util.debugZigbeeClusters(true);
 
 class PhilipsHueZigbeeApp extends Homey.App {
-  onNodeInit() {
+  onInit() {
     this.log("Philips Hue Zigbee app initiating...");
   }
 }
