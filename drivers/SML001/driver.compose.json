@@ -5,8 +5,8 @@
   "class": "sensor",
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
-    "large": "{{driverAssetsPath}}/images/large.jpg",
-    "small": "{{driverAssetsPath}}/images/small.jpg"
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
     "alarm_motion",

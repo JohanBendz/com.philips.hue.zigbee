@@ -10,5 +10,8 @@
   },
   "2.0.4": {
     "en": "Added new version of Being Ceiling Lamp and Resonate Outdoor Wall Light. Fix: On/Off was not correcty set on dim to/from 0"
+  },
+  "2.0.5": {
+    "en": "Added Fugato Triple Spotlight. Thx Caseda!"
   }
 }
