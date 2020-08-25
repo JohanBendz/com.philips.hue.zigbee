@@ -34,8 +34,8 @@
     ]
   },
   "images": {
-    "large": "assets/images/large.jpg",
-    "small": "assets/images/small.jpg"
+    "large": "assets/images/large.png",
+    "small": "assets/images/small.png"
   },
   "speech": [],
   "permissions": [],

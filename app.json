@@ -6687,8 +6687,8 @@
       "class": "remote",
       "icon": "/drivers/RWL000/assets/icon.svg",
       "images": {
-        "large": "/drivers/RWL000/assets/images/large.jpg",
-        "small": "/drivers/RWL000/assets/images/small.jpg"
+        "large": "/drivers/RWL000/assets/images/large.png",
+        "small": "/drivers/RWL000/assets/images/small.png"
       },
       "capabilities": [
         "alarm_battery"
@@ -6735,8 +6735,8 @@
       "class": "sensor",
       "icon": "/drivers/SML001/assets/icon.svg",
       "images": {
-        "large": "/drivers/SML001/assets/images/large.jpg",
-        "small": "/drivers/SML001/assets/images/small.jpg"
+        "large": "/drivers/SML001/assets/images/large.png",
+        "small": "/drivers/SML001/assets/images/small.png"
       },
       "capabilities": [
         "alarm_motion",
@@ -6892,8 +6892,8 @@
       "class": "sensor",
       "icon": "/drivers/SML002/assets/icon.svg",
       "images": {
-        "large": "/drivers/SML002/assets/images/large.jpg",
-        "small": "/drivers/SML002/assets/images/small.jpg"
+        "large": "/drivers/SML002/assets/images/large.png",
+        "small": "/drivers/SML002/assets/images/small.png"
       },
       "capabilities": [
         "alarm_motion",
