@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Bulb White"
+    "en": "Bulb A60 E27 White"
   },
   "$extends": ["light_white"],
   "energy": {

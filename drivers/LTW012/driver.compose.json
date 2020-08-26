@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Candle Ambiance"
+    "en": "Bulb E14 Candle White Ambiance"
   },
   "$extends": ["light_white_ambiance"],
   "energy": {

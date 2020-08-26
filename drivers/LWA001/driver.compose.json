@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "9W A60 E27 EUR White"
+    "en": "Bulb 9W A60 E27 EUR White"
   },
   "$extends": ["light_white"],
   "energy": {

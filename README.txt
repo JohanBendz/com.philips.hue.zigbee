@@ -8,7 +8,7 @@ Here is a short guide when you want to request a new device to be added.
 3. Wait for the interview to finish (might take a while) and post the data (press copy icon) in an issue (see below) 
 4. Link to the device on www.meethue.com
 
-Make requests by adding it as an issue on GitHub https://github.com/sebbebebbe/com.philips.hue.zigbee/issues.
+Make requests by adding it as an issue on GitHub https://github.com/JohanBendz/com.philips.hue.zigbee/issues.
 
 Sebastian Johansson is the orginal author of this app, in april 2020 the app was transferred to Johan Bendz who is now the developer of the app. 
 

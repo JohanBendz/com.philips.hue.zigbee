@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "E27 White Ambiance BT"
+    "en": "Bulb E27 White Ambiance BT"
   },
   "$extends": ["light_white_ambiance"],
   "energy": {

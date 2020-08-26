@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.6
+Added support for:
+- Econic Hanging Wall light (thx Caseda)
+
 ### v2.0.5
 Added support for:
 - Fugato Triple Spotlight. (thx Caseda)
@@ -149,14 +153,14 @@ Fixes:
 ### v1.4.9
 
 Added support for:
-- Hue 9W A60 E27 EUR White (thx Gemini123)
+- Hue Bulb 9W A60 E27 EUR White (thx Gemini123)
 - Hue White Ambiance GU10 BT (thx Schnaaf)
 - Hue smart plug (thx KrakenTyio)
 - Hue Filament ST64 (thx bramoosterhuis)
 - Hue Go BT (thx Schnaaf)
-- Hue E27 W&C Ambiance BT (thx Schnaaf)
-- Hue E27 White Ambiance BT (thx Schnaaf)
-- Hue E14 White Candle BT
+- Hue Bulb E27 W&C Ambiance BT (thx Schnaaf)
+- Hue Bulb E27 White Ambiance BT (thx Schnaaf)
+- Hue Bulb E14 White Candle BT
 - Hue Outdoor Fuzo Wall Lantern
 - Hue Fluorish Ceiling Light
 
