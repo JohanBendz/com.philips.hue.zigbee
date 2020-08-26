@@ -6,8 +6,8 @@
 	.st0{fill:none;stroke:#000000;stroke-width:9;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#000000;stroke-width:7;stroke-miterlimit:10;}
 </style>
-<polygon class="st0" points="621.5,536.5 20.5,425.5 11.5,462.5 621.5,579.5 "/>
-<polygon class="st0" points="1167.5,425.5 621.5,536.5 621.5,579.5 1175.5,467.5 "/>
+<polyline class="st0" points="20.5,425.5 11.5,462.5 621.5,579.5 621.5,536.5 "/>
+<polyline class="st0" points="621.5,536.5 621.5,579.5 1175.5,467.5 1167.5,425.5 "/>
 <polygon class="st0" points="586.5,627.5 114.5,528.5 227.5,967.5 580.5,1082.5 "/>
 <polygon class="st0" points="1073.5,531.5 641.5,625.5 626.5,1082.5 953.5,967.5 "/>
 <polygon class="st0" points="944.5,1003.5 626.5,1115.5 621.5,1317.5 889.5,1207.5 "/>
