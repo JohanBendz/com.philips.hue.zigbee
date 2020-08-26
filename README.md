@@ -3,6 +3,13 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.5
+Added support for:
+- Fugato Triple Spotlight. (thx Caseda)
+
+Fix:
+- Removed jpg/replaced with png
+
 ### v2.0.4
 
 Added support for:
