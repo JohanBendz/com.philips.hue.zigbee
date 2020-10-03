@@ -9,16 +9,16 @@ class OutDoorSensor extends ZigBeeDevice {
 
 	async onNodeInit({ zclNode }) {
 
+		// alarm_motion
+		if (this.hasCapability('alarm_motion')) {
+			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
+
+			zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
+				onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
+			}));
+		}
+
 		if (this.isFirstInit()){
-
-			// alarm_motion
-			if (this.hasCapability('alarm_motion')) {
-				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
-
-				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
-					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
-				}));
-			}
 
 			// measure_temperature
 			if (this.hasCapability('measure_temperature')) {

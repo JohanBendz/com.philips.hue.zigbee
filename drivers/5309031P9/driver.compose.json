@@ -1,20 +1,17 @@
 {
   "name": {
-    "en": "Adore Bathroom mirror light"
+    "en": "Runner Single Spotlight"
   },
   "$extends": ["light_white_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 40,
-      "usageOff": 0.2
+      "usageOn": 5,
+      "usageOff": 0.1
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": [
-      "LTW017",
-      "3417711P6"
-    ],
+    "productId": "5309031P9",
     "endpoints": {
       "11": {
         "clusters": [
@@ -28,7 +25,7 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
       }
     }
   }

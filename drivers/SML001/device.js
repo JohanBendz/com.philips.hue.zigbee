@@ -9,16 +9,15 @@ class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
+		// alarm_motion
+		if (this.hasCapability('alarm_motion')) {
+			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
+			zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
+				onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
+			}));
+		}
+
 		if (this.isFirstInit()){
-
-			// alarm_motion
-			if (this.hasCapability('alarm_motion')) {
-				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
-
-				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
-					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
-				}));
-			}
 
 			// measure_temperature
 			if (this.hasCapability('measure_temperature')) {
@@ -108,14 +107,6 @@ class MotionSensor extends ZigBeeDevice {
 
 		}
 		else {
-			// alarm_motion
-			if (this.hasCapability('alarm_motion')) {
-				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
-
-				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
-					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
-				}));
-			}
 
 			// measure_temperature
 			if (this.hasCapability('measure_temperature')) {
@@ -160,7 +151,6 @@ class MotionSensor extends ZigBeeDevice {
 			.catch(err => this.error('Error: could not set alarm_motion capability value', err));
 		}, onTime);
 	}
-
 
 	async onSettings({ oldSettings, newSettings, changedKeys }) {
  		

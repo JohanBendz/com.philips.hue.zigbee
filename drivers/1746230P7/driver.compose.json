@@ -1,20 +1,17 @@
 {
   "name": {
-    "en": "Ensis Pendant - Lower light"
+    "en": "Lily Outdoor XL Spotlight"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 78,
-      "usageOff": 0.4
+      "usageOn": 15,
+      "usageOff": 1
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": [
-      "4090331P9_02",
-      "LCP002"
-    ],
+    "productId": "1746230P7",
     "endpoints": {
       "11": {
         "clusters": [

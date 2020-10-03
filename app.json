@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.5",
+  "version": "2.0.7",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -40,9 +40,9 @@
   "speech": [],
   "permissions": [],
   "bugs": {
-    "url": "https://github.com/sebbebebbe/com.philips.hue.zigbee/issues"
+    "url": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues"
   },
-  "source": "https://github.com/sebbebebbe/com.philips.hue.zigbee",
+  "source": "https://github.com/JohanBendz/com.philips.hue.zigbee",
   "drivers": [
     {
       "class": "light",
@@ -1205,6 +1205,94 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/1746230P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746230P7/assets/images/large.png",
+        "small": "/drivers/1746230P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lily Outdoor XL Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1746230P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1746230P7",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/1746447P7/assets/icon.svg",
       "images": {
         "large": "/drivers/1746447P7/assets/images/large.png",
@@ -1597,7 +1685,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_01",
+        "productId": [
+          "4090331P9_01",
+          "LCP001"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -1685,7 +1776,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_02",
+        "productId": [
+          "4090331P9_02",
+          "LCP002"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -2252,6 +2346,82 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/5309031P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5309031P9/assets/images/large.png",
+        "small": "/drivers/5309031P9/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Runner Single Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "5309031P9",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "id": "5309031P9",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/HBL001/assets/icon.svg",
       "images": {
         "large": "/drivers/HBL001/assets/images/large.png",
@@ -2791,7 +2961,7 @@
         }
       },
       "name": {
-        "en": "E27 White and Color Ambiance BT"
+        "en": "Bulb E27 White and Color Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -4574,7 +4744,7 @@
         }
       },
       "name": {
-        "en": "E27 White Ambiance BT"
+        "en": "Bulb E27 White Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -5809,7 +5979,7 @@
         }
       },
       "name": {
-        "en": "Candle Ambiance"
+        "en": "Bulb E14 Candle White Ambiance"
       },
       "energy": {
         "approximation": {
@@ -5974,7 +6144,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTW017",
+        "productId": [
+          "LTW017",
+          "3417711P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -6033,7 +6206,7 @@
         }
       },
       "name": {
-        "en": "9W A60 E27 EUR White"
+        "en": "Bulb 9W A60 E27 EUR White"
       },
       "energy": {
         "approximation": {
@@ -6239,7 +6412,7 @@
         }
       },
       "name": {
-        "en": "Bulb White"
+        "en": "Bulb A60 E27 White"
       },
       "energy": {
         "approximation": {
@@ -6314,7 +6487,7 @@
         }
       },
       "name": {
-        "en": "E14 White Candle BT"
+        "en": "Bulb E14 White Candle BT"
       },
       "energy": {
         "approximation": {

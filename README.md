@@ -3,6 +3,13 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.7
+Added support for:
+- Lily Outdoor XL Spotlight
+- Additional Product ID's for Ensis Pendant (upper and lower light)
+- Runner Single Spotlight
+- Additional Product ID for Adore Bathroom Mirror
+
 ### v2.0.6
 Added support for:
 - Econic Hanging Wall light (thx Caseda)
