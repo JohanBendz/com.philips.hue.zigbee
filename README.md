@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.8
+Fix:
+- Zigbee driver and cluster update forced
+
 ### v2.0.7
 Added support for:
 - Lily Outdoor XL Spotlight
