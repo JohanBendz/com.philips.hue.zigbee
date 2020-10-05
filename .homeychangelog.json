@@ -22,5 +22,8 @@
   },
   "2.0.8": {
     "en": "Zigbee Driver and Cluster update forced"
+  },
+  "2.0.9": {
+    "en": "Added product ID's for some already added device in other colors"
   }
 }

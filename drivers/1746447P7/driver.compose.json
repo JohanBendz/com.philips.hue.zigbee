@@ -11,7 +11,10 @@
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": "1746447P7",
+    "productId": [
+      "1746447P7",
+      "1746430P7"
+    ],
     "endpoints": {
       "11": {
         "clusters": [

@@ -11,7 +11,10 @@
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": "LWW002",
+    "productId": [
+      "LWW002",
+      "1740393P0"
+    ],
     "endpoints": {
       "11": {
         "clusters": [
