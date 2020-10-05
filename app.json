@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -1342,7 +1342,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1746447P7",
+        "productId": [
+          "1746447P7",
+          "1746430P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -6837,7 +6840,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW001",
+        "productId": [
+          "LWW001",
+          "1740293P0"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -6905,7 +6911,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW002",
+        "productId": [
+          "LWW002",
+          "1740393P0"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
