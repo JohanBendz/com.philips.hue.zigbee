@@ -11,7 +11,10 @@
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": "LCT024",
+    "productId": [
+      "LCT024",
+      "440400982841"
+    ],
     "endpoints": {
       "11": {
         "clusters": [

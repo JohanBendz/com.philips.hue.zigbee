@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.10
+Added support for:
+- Additional product ID for the Play Lightbar
+
 ### v2.0.9
 Added support for:
 - Added product ID's to some already added devices but in different colors

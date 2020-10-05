@@ -25,5 +25,8 @@
   },
   "2.0.9": {
     "en": "Added product ID's for some already added device in other colors"
+  },
+  "2.0.10": {
+    "en": "Added additional product ID for Play Lightbar"
   }
 }
