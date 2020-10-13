@@ -12,7 +12,6 @@ class OutDoorSensor extends ZigBeeDevice {
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
 			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
-
 			zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
 				onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
 			}));
@@ -65,7 +64,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
 				.on('attr.measuredValue', (currentLuxValue) => {
 					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
-					this.log('lux: ', luminance);
+					this.log('Lux: ', luminance);
 					this.setCapabilityValue('measure_luminance', luminance);
 				});
 
@@ -108,14 +107,6 @@ class OutDoorSensor extends ZigBeeDevice {
 
 		}
 		else {
-			// alarm_motion
-			if (this.hasCapability('alarm_motion')) {
-				this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
-
-				zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
-					onWithTimedOff: this._onWithTimedOffCommandHandler.bind(this),
-				}));
-			}
 
 			// measure_temperature
 			if (this.hasCapability('measure_temperature')) {
@@ -160,7 +151,6 @@ class OutDoorSensor extends ZigBeeDevice {
 			.catch(err => this.error('Error: could not set alarm_motion capability value', err));
 		}, onTime);
 	}
-
 
 	async onSettings({ oldSettings, newSettings, changedKeys }) {
  		
@@ -211,7 +201,7 @@ class OutDoorSensor extends ZigBeeDevice {
 		}
 
 	}
-
+	
 }
 
 module.exports = OutDoorSensor;

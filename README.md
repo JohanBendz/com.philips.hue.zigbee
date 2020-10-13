@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.11
+Added support for:
+- Smart Button
+
 ### v2.0.10
 Added support for:
 - Additional product ID for the Play Lightbar

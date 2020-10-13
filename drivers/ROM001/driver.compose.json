@@ -1,0 +1,42 @@
+{
+  "name": {
+    "en": "Smart Button"
+  },
+  "class": "remote",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": "Philips",
+    "productId": [
+      "ROM001"
+    ],
+    "endpoints": {
+      "1": {
+        "bindings": [
+          6,
+          8
+        ],
+        "clusters": [
+          1
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Hold the button for at least 3 seconds until the LED blinks red.\n\rIf this does not work, reset the button and try again."
+      }
+    }
+  }
+}

@@ -28,5 +28,8 @@
   },
   "2.0.10": {
     "en": "Added additional product ID for Play Lightbar"
+  },
+  "2.0.11": {
+    "en": "Added support for Smart Button"
   }
 }

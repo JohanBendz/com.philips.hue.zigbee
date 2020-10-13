@@ -1,4 +1,5 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.philips.hue.zigbee",
   "sdk": 3,
   "name": {
@@ -8,11 +9,11 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
-    "email": "johan.bendz@hotmail.com"
+    "email": "johan_bendz@hotmail.com"
   },
   "contributing": {
     "donate": {
@@ -29,7 +30,7 @@
       },
       {
         "name": "Johan Bendz",
-        "email": "johan.bendz@hotmail.com"
+        "email": "johan_bendz@hotmail.com"
       }
     ]
   },
@@ -3951,7 +3952,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT024",
+        "productId": [
+          "LCT024",
+          "440400982841"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -6952,6 +6956,49 @@
     },
     {
       "name": {
+        "en": "Smart Button"
+      },
+      "class": "remote",
+      "icon": "/drivers/ROM001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ROM001/assets/images/large.png",
+        "small": "/drivers/ROM001/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": [
+          "ROM001"
+        ],
+        "endpoints": {
+          "1": {
+            "bindings": [
+              6,
+              8
+            ],
+            "clusters": [
+              1
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ROM001/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the button for at least 3 seconds until the LED blinks red.\n\rIf this does not work, reset the button and try again."
+          }
+        }
+      },
+      "id": "ROM001"
+    },
+    {
+      "name": {
         "en": "Dimmer Switch"
       },
       "class": "remote",
@@ -7315,6 +7362,81 @@
   ],
   "flow": {
     "triggers": [
+      {
+        "id": "ROM001_on",
+        "title": {
+          "en": "On-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          }
+        ]
+      },
+      {
+        "id": "ROM001_off",
+        "title": {
+          "en": "Off-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          }
+        ]
+      },
+      {
+        "id": "ROM001_dim",
+        "title": {
+          "en": "Dim buttons"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "up-press",
+                "label": {
+                  "en": "Dim-up pressed"
+                }
+              },
+              {
+                "id": "up-hold",
+                "label": {
+                  "en": "Dim-up hold"
+                }
+              },
+              {
+                "id": "down-press",
+                "label": {
+                  "en": "Dim-down pressed"
+                }
+              },
+              {
+                "id": "down-hold",
+                "label": {
+                  "en": "Dim-down hold"
+                }
+              },
+              {
+                "id": "release",
+                "label": {
+                  "en": "Dim-button released"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "RWL000_on",
         "title": {
