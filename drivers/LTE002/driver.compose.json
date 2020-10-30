@@ -1,20 +1,18 @@
 {
   "name": {
-    "en": "Lucca Outdoor Post"
+    "en": "Bulb E14 Candle White Ambiance (BT)"
   },
-  "$extends": ["light_white"],
+  "$extends": ["light_white_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 9,
-      "usageOff": 1
+      "usageOn": 5.2,
+      "usageOff": 0.5
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
     "productId": [
-      "LWW002",
-      "1740393P0",
-      "LWF002"
+      "LTE002"
     ],
     "endpoints": {
       "11": {
@@ -22,7 +20,8 @@
           0,
           4,
           6,
-          8
+          8,
+          768
         ]
       }
     },

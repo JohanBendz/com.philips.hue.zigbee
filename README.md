@@ -3,6 +3,12 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.12
+Added support for:
+- E14 Candle White Ambience (BT)
+- Filament G125
+- Additional product ID's for Lucca Pedestal and Lucca Post
+
 ### v2.0.11
 Added support for:
 - Smart Button
@@ -32,7 +38,7 @@ Added support for:
 
 ### v2.0.5
 Added support for:
-- Fugato Triple Spotlight. (thx Caseda)
+- Fugato Triple Spotlight (thx Caseda)
 
 Fix:
 - Removed jpg/replaced with png
@@ -205,7 +211,7 @@ Added support for:
 - Hue Filament A60 (thanks for contributing Gemeni123)
 - Hue Living Colors Aura
 - Hue Lucca Outdoor Post
-- Hue Lucca Outdoor Garden Light
+- Hue Lucca Outdoor Pedestal
 - Hue White Ambience Adore Bathroom Ceiling (thanks for contributing Gemeni123)
 - Hue Spot GU10 with Bluetooth 
 - Hue Impress Outdoor Pedestal Light
@@ -277,14 +283,19 @@ Added support for:
 - Hue Phoenix Table
 - Hue Go
 
-Currently Supported bulbs/devices:
 
-Tested:
-- Hue Ambiance Candle (LTW012)
-- Hue White Bulb (LWB010)
-- Hue A19 Bulb (Color) (LCT001, LCT015)
+# Currently Supported bulbs/devices:
+
+- Hue Bulb Candle Ambiance (LTW012)
+- Hue Bulb White (LWB010)
+- HUE Bulb 9W A60 E27 EUR White (LWA001)
+- Hue Bulb A19 White (LWB014,LWB004,LWB006,LWB007)
+- Hue Bulb A19 White Ambiance (LTW001,LTW004,LTW010,LTW015)
+- Hue Bulb A19 Color (LCT001,LCT007,LCT010,LCT014,LCT015,LCT016)
+- Hue Bulb E12 Candle Color (LCT012)
+- Hue Bulb E14 Candle White BT (LWE002)
 - Hue Dimmer Switch (RWL021)
-- Hue Motion Sensor
+- Hue Motion Sensor (SML001)
 - Hue Living Colors Iris (LLC010)
 - Hue Go (LLC020)
 - Hue Runner (x3 Hue Spot GU10)
@@ -292,12 +303,6 @@ Tested:
 - Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Fair Ceiling Lamp (LTC002)
 - Hue Still Ceiling (LTC003)
-
-Untested:
-- Hue White Bulb (LWB014,LWB004,LWB006,LWB007)
-- Hue A19 Bulb (Color) (LCT001,LCT007,LCT010,LCT014,LCT016)
-- Hue A19 White Ambiance (LTW001,LTW004,LTW010,LTW015)
-- Hue color candle (LCT012)
 - Hue LightStrips Plus (LST002)
 - Hue LightStrips (LST001)
 - Hue Ambiance Spot (LTW013,LTW014)
@@ -321,11 +326,11 @@ Untested:
 - Hue Outdoor Welcome Floodlight (1743630P7)
 - Hue Cher Ceiling (LTC011)
 - Hue Color Spot GU10 (LCG002)
+- Hue Filament A60 (LWA004)
 - Hue Filament G93 (LWO001)
 - Hue Living Colors Aura (LLC014)
-- Hue Lucca Outdoor Post (LWW002)
-- Hue Lucca Outdoor Garden Light (LWW001)
-- Hue Filament A60 (LWA004)
+- Hue Lucca Outdoor Post (LWW002, LWF002)
+- Hue Lucca Outdoor Pedestal (LWW001, LWF001)
 - Hue White Ambience Adore Bathroom Ceiling (LTC021)
 - Hue Spot GU10 with Bluetooth (LWG004)
 - Hue Impress Outdoor Pedestal Light (1743130P7)
@@ -334,13 +339,11 @@ Untested:
 - Hue Aurelle Square (LTC014)
 - Hue Econic light (1743830P7)
 - Hue Ensis Pendant (4090331P9)
-- HUE 9W A60 E27 EUR White (LWA001)
 - Hue White Ambiance GU10 BT (LTG002)
 - Hue smart plug (LOM002)
 - Hue Filament ST64 (LWV001)
 - Hue Go Bluetooth (LCT026)
 - Hue E27 W&C Ambiance BT (LCA001)
 - Hue E27 White Ambiance BT (LTA001)
-- Hue E14 White Candle BT (LWE002)
 - Hue Outdoor Fuzo Wall Lantern (1744430P7)
 - Hue Fluorish Ceiling Light (4090531P9)

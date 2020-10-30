@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Bulb E14 White Candle BT"
+    "en": "Bulb E14 Candle White (BT)"
   },
   "$extends": ["light_white"],
   "energy": {

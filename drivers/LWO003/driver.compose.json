@@ -1,21 +1,17 @@
 {
   "name": {
-    "en": "Lucca Outdoor Post"
+    "en": "Filament G125 E27"
   },
   "$extends": ["light_white"],
   "energy": {
     "approximation": {
-      "usageOn": 9,
-      "usageOff": 1
+      "usageOn": 7,
+      "usageOff": 0.2
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": [
-      "LWW002",
-      "1740393P0",
-      "LWF002"
-    ],
+    "productId": "LWO003",
     "endpoints": {
       "11": {
         "clusters": [

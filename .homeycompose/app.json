@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.11",
+  "version": "2.0.12",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -24,12 +24,12 @@
   "contributors": {
     "developers": [
       {
-        "name": "Sebastian Johansson",
-        "email": "sebastian.johansson@hibbisoft.com"
-      },
-      {
         "name": "Johan Bendz",
         "email": "johan_bendz@hotmail.com"
+      },
+      {
+        "name": "Sebastian Johansson",
+        "email": "sebastian.johansson@hibbisoft.com"
       }
     ]
   },

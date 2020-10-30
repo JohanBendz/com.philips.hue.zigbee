@@ -18,7 +18,7 @@
     "en": "Added Econic Hanging Wall light. Thx Caseda!"
   },
   "2.0.7": {
-    "en": "Added support for: Lily Outdoor XL Spotlight and Runner Single Spotlight"
+    "en": "Added Lily Outdoor XL Spotlight and Runner Single Spotlight"
   },
   "2.0.8": {
     "en": "Zigbee Driver and Cluster update forced"
@@ -30,6 +30,9 @@
     "en": "Added additional product ID for Play Lightbar"
   },
   "2.0.11": {
-    "en": "Added support for Smart Button"
+    "en": "Added Smart Button"
+  },
+  "2.0.12": {
+    "en": "Added E14 Candle White Ambience BT and Filament G125"
   }
 }

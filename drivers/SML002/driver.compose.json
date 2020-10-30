@@ -24,7 +24,8 @@
   "zigbee": {
     "manufacturerName": "Philips",
     "productId": [
-      "SML002"
+      "SML002",
+      "9290019758"
     ],
     "endpoints": {
       "1": {

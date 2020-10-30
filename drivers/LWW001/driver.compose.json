@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Lucca Outdoor Garden Light"
+    "en": "Lucca Outdoor Pedestal"
   },
   "$extends": ["light_white"],
   "energy": {
@@ -13,7 +13,8 @@
     "manufacturerName": "Philips",
     "productId": [
       "LWW001",
-      "1740293P0"
+      "1740293P0",
+      "LWF001"
     ],
     "endpoints": {
       "11": {
