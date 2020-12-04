@@ -3,6 +3,11 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.13
+Added support for:
+- Calla Outdoor Tall Path Light
+- Appear Outdoor Wall Light (Upper and Lower)
+
 ### v2.0.12
 Added support for:
 - E14 Candle White Ambience (BT)

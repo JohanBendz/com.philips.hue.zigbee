@@ -1,20 +1,17 @@
 {
   "name": {
-    "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
+    "en": "Appear Outdoor Wall - Upper Light"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 6,
+      "usageOn": 8,
       "usageOff": 1
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": [
-      "5045131P7",
-      "5045148P7"
-    ],
+    "productId": "1746330P7_01",
     "endpoints": {
       "11": {
         "clusters": [

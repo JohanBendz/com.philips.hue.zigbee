@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Calla Outdoor Path Light"
+    "en": "Calla Outdoor Short Path Light"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {

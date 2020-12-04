@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -4302,7 +4302,8 @@
         "productId": [
           "LLC011",
           "LLC012",
-          "LLC014"
+          "LLC014",
+          "929002375901"
         ],
         "endpoints": {
           "11": {

@@ -1,20 +1,17 @@
 {
   "name": {
-    "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
+    "en": "Calla Outdoor Tall Path Light"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 6,
+      "usageOn": 8,
       "usageOff": 1
     }
   },
   "zigbee": {
     "manufacturerName": "Philips",
-    "productId": [
-      "5045131P7",
-      "5045148P7"
-    ],
+    "productId": "LCF005",
     "endpoints": {
       "11": {
         "clusters": [

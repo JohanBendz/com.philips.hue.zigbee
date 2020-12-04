@@ -9,7 +9,8 @@ class Plug extends ZigBeeDevice {
     async onNodeInit() {
         if (this.hasCapability('onoff')) this.registerCapability('onoff', CLUSTER.ON_OFF, {
 			getOpts: {
-				pollInterval: 3600,
+				pollInterval: 15000,
+				getOnOnline: true,
 			},
 		});
     }
