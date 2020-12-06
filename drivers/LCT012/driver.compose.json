@@ -10,7 +10,10 @@
     }
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": "LCT012",
     "endpoints": {
       "11": {

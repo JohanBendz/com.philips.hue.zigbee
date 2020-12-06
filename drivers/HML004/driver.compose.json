@@ -10,7 +10,10 @@
     }
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": "HML004",
     "endpoints": {
       "11": {

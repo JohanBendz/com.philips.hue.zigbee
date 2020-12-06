@@ -11,7 +11,10 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": [
       "LOM001",
       "LOM002",

@@ -10,7 +10,10 @@
     }
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": "3216331P6",
     "endpoints": {
       "11": {

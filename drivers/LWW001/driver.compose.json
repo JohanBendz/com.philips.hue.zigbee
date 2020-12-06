@@ -10,7 +10,10 @@
     }
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": [
       "LWW001",
       "1740293P0",

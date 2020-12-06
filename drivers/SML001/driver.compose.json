@@ -22,7 +22,10 @@
     ]
   },
   "zigbee": {
-    "manufacturerName": "Philips",
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
     "productId": [
       "SML001"
     ],

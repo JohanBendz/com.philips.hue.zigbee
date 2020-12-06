@@ -37,5 +37,8 @@
   },
   "2.0.13": {
     "en": "Added Calla Outdoor Tall Path Light and Appear Outdoor Wall Light (Upper and Lower)"
+  },
+  "2.0.14": {
+    "en": "Added a few product ID's to already supported devices and added manufacturerName Signify Netherlands B.V. to all drivers"
   }
 }

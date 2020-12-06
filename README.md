@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v2.0.14
+Added a few product ID's to already supported devices
+Added manufacturerName Signify Netherlands B.V. to all drivers
+
 ### v2.0.13
 Added support for:
 - Calla Outdoor Tall Path Light

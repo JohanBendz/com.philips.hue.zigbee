@@ -1294,6 +1294,182 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/1746330P7_01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746330P7_01/assets/images/large.png",
+        "small": "/drivers/1746330P7_01/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Appear Outdoor Wall - Upper Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1746330P7_01",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1746330P7_01",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746330P7_02/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746330P7_02/assets/images/large.png",
+        "small": "/drivers/1746330P7_02/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Appear Outdoor Wall - Lower Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "1746330P7_02",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1746330P7_02",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/1746447P7/assets/icon.svg",
       "images": {
         "large": "/drivers/1746447P7/assets/images/large.png",
@@ -2135,7 +2311,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "5045131P7",
+        "productId": [
+          "5045131P7",
+          "5045148P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -3055,7 +3234,7 @@
         }
       },
       "name": {
-        "en": "Calla Outdoor Path Light"
+        "en": "Calla Outdoor Short Path Light"
       },
       "energy": {
         "approximation": {
@@ -3172,6 +3351,94 @@
         }
       },
       "id": "LCF003",
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCF005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCF005/assets/images/large.png",
+        "small": "/drivers/LCF005/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Calla Outdoor Tall Path Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": "Philips",
+        "productId": "LCF005",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LCF005",
       "settings": [
         {
           "id": "transition_time",
@@ -4217,7 +4484,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LLC010",
+        "productId": [
+          "LLC010",
+          "929002376201"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
