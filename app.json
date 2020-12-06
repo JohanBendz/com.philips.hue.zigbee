@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -95,7 +95,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1742930P7",
         "endpoints": {
           "11": {
@@ -183,7 +186,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1743030P7",
           "1742930P7"
@@ -274,8 +280,14 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1743130P7",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "1743130P7",
+          "1745430P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -362,7 +374,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743230P7",
         "endpoints": {
           "11": {
@@ -453,7 +468,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743530P7",
         "endpoints": {
           "11": {
@@ -522,7 +540,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743630P7",
         "endpoints": {
           "11": {
@@ -609,7 +630,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743830P7",
         "endpoints": {
           "11": {
@@ -697,7 +721,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743930P7",
         "endpoints": {
           "11": {
@@ -785,7 +812,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744030P7",
         "endpoints": {
           "11": {
@@ -854,7 +884,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744430P7",
         "endpoints": {
           "11": {
@@ -922,7 +955,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744530P7",
         "endpoints": {
           "11": {
@@ -990,7 +1026,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744630P7",
         "endpoints": {
           "11": {
@@ -1078,7 +1117,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1745530P7",
         "endpoints": {
           "11": {
@@ -1166,7 +1208,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1745630P7",
         "endpoints": {
           "11": {
@@ -1254,7 +1299,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1746230P7",
         "endpoints": {
           "11": {
@@ -1342,7 +1390,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1746330P7_01",
         "endpoints": {
           "11": {
@@ -1430,7 +1481,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1746330P7_02",
         "endpoints": {
           "11": {
@@ -1518,7 +1572,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1746447P7",
           "1746430P7"
@@ -1609,7 +1666,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1746530P7",
           "1746547P7"
@@ -1688,7 +1748,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "3216331P6",
         "endpoints": {
           "11": {
@@ -1776,7 +1839,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090331P9",
         "endpoints": {
           "11": {
@@ -1864,7 +1930,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "4090331P9_01",
           "LCP001"
@@ -1955,7 +2024,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "4090331P9_02",
           "LCP002"
@@ -2046,7 +2118,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090431P9",
         "endpoints": {
           "11": {
@@ -2134,7 +2209,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090531P9",
         "endpoints": {
           "11": {
@@ -2222,7 +2300,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090631P9",
         "endpoints": {
           "11": {
@@ -2310,7 +2391,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "5045131P7",
           "5045148P7"
@@ -2401,7 +2485,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "5063230P7",
         "endpoints": {
           "11": {
@@ -2489,7 +2576,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "5063330P7",
         "endpoints": {
           "11": {
@@ -2565,7 +2655,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "5309031P9",
         "endpoints": {
           "11": {
@@ -2653,7 +2746,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL001",
         "endpoints": {
           "11": {
@@ -2741,7 +2837,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL002",
         "endpoints": {
           "11": {
@@ -2829,7 +2928,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL003",
         "endpoints": {
           "11": {
@@ -2905,7 +3007,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLM010",
           "LLM011",
@@ -2985,7 +3090,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HML004",
         "endpoints": {
           "11": {
@@ -3061,7 +3169,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLM010",
           "LLM011",
@@ -3153,7 +3264,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCA001"
         ],
@@ -3243,7 +3357,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCF002",
         "endpoints": {
           "11": {
@@ -3331,7 +3448,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCF003",
         "endpoints": {
           "11": {
@@ -3419,7 +3539,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCF005",
         "endpoints": {
           "11": {
@@ -3507,7 +3630,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCG002",
         "endpoints": {
           "11": {
@@ -3595,7 +3721,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCL001",
         "endpoints": {
           "11": {
@@ -3683,7 +3812,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCL002",
         "endpoints": {
           "11": {
@@ -3771,7 +3903,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCL003",
         "endpoints": {
           "11": {
@@ -3859,7 +3994,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCS001",
         "endpoints": {
           "11": {
@@ -3947,7 +4085,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCT001",
           "LCT007",
@@ -4042,7 +4183,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT003",
         "endpoints": {
           "11": {
@@ -4130,7 +4274,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT012",
         "endpoints": {
           "11": {
@@ -4218,7 +4365,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCT024",
           "440400982841"
@@ -4309,7 +4459,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT026",
         "endpoints": {
           "11": {
@@ -4397,7 +4550,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCW001",
           "4090130P9",
@@ -4483,7 +4639,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLC010",
           "929002376201"
@@ -4568,7 +4727,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLC011",
           "LLC012",
@@ -4661,7 +4823,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LLC020",
         "endpoints": {
           "11": {
@@ -4712,7 +4877,10 @@
         "small": "/drivers/LOM002/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LOM001",
           "LOM002",
@@ -4780,7 +4948,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LST001",
         "endpoints": {
           "11": {
@@ -4868,7 +5039,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LST002",
         "endpoints": {
           "11": {
@@ -4956,7 +5130,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LST003",
           "LST004"
@@ -5035,7 +5212,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTA001"
         ],
@@ -5113,7 +5293,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC001",
           "3261031P6"
@@ -5192,7 +5375,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC002"
         ],
@@ -5270,7 +5456,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC003",
           "3261330P6"
@@ -5349,7 +5538,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC011",
         "endpoints": {
           "11": {
@@ -5425,7 +5617,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC012",
         "endpoints": {
           "11": {
@@ -5501,7 +5696,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC014",
         "endpoints": {
           "11": {
@@ -5577,7 +5775,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC012",
           "LTC015",
@@ -5658,7 +5859,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC021",
         "endpoints": {
           "11": {
@@ -5734,7 +5938,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTD011"
         ],
@@ -5812,7 +6019,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTE002"
         ],
@@ -5890,7 +6100,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTG002",
         "endpoints": {
           "11": {
@@ -5966,7 +6179,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTP001",
           "4076130P6"
@@ -6045,7 +6261,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTP002",
         "endpoints": {
           "11": {
@@ -6121,7 +6340,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTP003",
         "endpoints": {
           "11": {
@@ -6197,7 +6419,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTP008",
         "endpoints": {
           "11": {
@@ -6273,7 +6498,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW001",
           "LTW004",
@@ -6354,7 +6582,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW012"
         ],
@@ -6432,7 +6663,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW013",
           "LTW014"
@@ -6511,7 +6745,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW017",
           "3417711P6"
@@ -6583,7 +6820,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWA001",
         "endpoints": {
           "11": {
@@ -6651,7 +6891,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWA004",
         "endpoints": {
           "11": {
@@ -6719,7 +6962,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWA009"
         ],
@@ -6789,7 +7035,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWB010",
           "LWB014",
@@ -6864,7 +7113,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWE002",
         "endpoints": {
           "11": {
@@ -6932,7 +7184,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWG001",
         "endpoints": {
           "11": {
@@ -7000,7 +7255,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWG004",
         "endpoints": {
           "11": {
@@ -7068,7 +7326,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWO001",
         "endpoints": {
           "11": {
@@ -7136,7 +7397,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWO003",
         "endpoints": {
           "11": {
@@ -7204,7 +7468,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWV001",
         "endpoints": {
           "11": {
@@ -7272,7 +7539,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWW001",
           "1740293P0",
@@ -7344,7 +7614,10 @@
         }
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWW002",
           "1740393P0",
@@ -7404,7 +7677,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "ROM001"
         ],
@@ -7447,7 +7723,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "RWL021",
           "RWL020"
@@ -7500,7 +7779,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "SML001"
         ],
@@ -7657,7 +7939,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "SML002",
           "9290019758"
