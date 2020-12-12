@@ -52,7 +52,7 @@ module.exports = {
 				let currentLightTemperature = this.getCapabilityValue('light_temperature');
 				if (typeof currentLightTemperature !== 'number') {
 					try {
-						currentLightTemperature = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('colorTemperature')
+						currentLightTemperature = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('colorTemperature');
 					} catch (err) {
 						this.error('failed to get light temperature', err);
 						currentLightTemperature = null;
@@ -66,7 +66,7 @@ module.exports = {
 				let currentHue = this.getCapabilityValue('light_hue');
 				if (typeof currentHue !== 'number') {
 					try {
-						currentHue = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('currentHue')
+						currentHue = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('currentHue');
 					} catch (err) {
 						this.error('failed to get light hue', err);
 						currentHue = null;
@@ -80,7 +80,7 @@ module.exports = {
 				let currentSaturation = this.getCapabilityValue('light_saturation');
 				if (typeof currentSaturation !== 'number') {
 					try {
-						currentSaturation = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('currentSaturation')
+						currentSaturation = await this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl.read('currentSaturation');
 					} catch (err) {
 						this.error('failed to get light saturation', err);
 						currentSaturation = null;

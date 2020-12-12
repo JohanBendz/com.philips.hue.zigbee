@@ -4,16 +4,16 @@ const Homey = require('homey');
 
 const i18n = {
 	error: {
-		'unknown': {
+		unknown: {
 			en: 'Unknown error',
-			nl: 'Onbekend probleem'
+			nl: 'Onbekend probleem',
 		},
-		'invalid_ieeeaddr': {
+		invalid_ieeeaddr: {
 			en: 'Device not found in network',
-			nl: 'Apparaat niet gevonden in netwerk'
-		}
-	}
-}
+			nl: 'Apparaat niet gevonden in netwerk',
+		},
+	},
+};
 
 /**
  */
@@ -22,46 +22,44 @@ class MeshDevice extends Homey.Device {
 	/**
 	 * @private
 	 */
-	onInit( protocolId ) {
+	onInit(protocolId) {
 		super.onInit();
-		
+
 		this._protocolId = protocolId;
 		this._debugEnabled = false;
 		this._pollIntervals = {};
 
-		if( this._protocolId === 'zwave' )
-			this._manager = Homey.ManagerZwave;
+		if (this._protocolId === 'zwave') { this._manager = Homey.ManagerZwave; }
 
-		if( this._protocolId === 'zigbee' )
-			this._manager = Homey.ManagerZigBee;
+		if (this._protocolId === 'zigbee') { this._manager = Homey.ManagerZigBee; }
 
-		this._manager.getNode( this )
-			.then( node => {
+		this._manager.getNode(this)
+			.then(node => {
 				this.node = node;
 
 				process.nextTick(() => {
 					this.emit('__meshInit');
 				});
 			})
-			.catch( err => {
-				this.error( err );
-				
+			.catch(err => {
+				this.error(err);
+
 				if (err && err.message) {
-					this.setUnavailable( this.__( i18n.error[err.message] || i18n.error.unknown ) );
+					this.setUnavailable(this.__(i18n.error[err.message] || i18n.error.unknown));
 				} else {
-					this.setUnavailable( err || this.__( i18n.error.unknown ) );
+					this.setUnavailable(err || this.__(i18n.error.unknown));
 				}
 			});
 	}
-	
-	__( obj ) {	
-		let language = Homey.ManagerI18n.getLanguage();
-		return obj[ language ] || obj['en' ] || obj.toString();
+
+	__(obj) {
+		const language = Homey.ManagerI18n.getLanguage();
+		return obj[language] || obj.en || obj.toString();
 	}
 
 	_debug() {
-		if( this._debugEnabled ) {
-			this.log.bind( this, '[dbg]' ).apply( this, arguments );
+		if (this._debugEnabled) {
+			this.log.bind(this, '[dbg]').apply(this, arguments);
 		}
 	}
 

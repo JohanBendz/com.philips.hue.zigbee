@@ -1,5 +1,8 @@
 [
   {
     "id": "zigbee"
+  },
+  {
+    "id": "compose"
   }
 ]

@@ -129,7 +129,7 @@ class ZigBeeXYLightDevice extends ZigBeeDevice {
 					value: this.getCapabilityValue('dim'),
 				});
 
-				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters['lightingColorCtrl']
+				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl
 					.do('moveToColor', {
 						colorx: x * CIEMultiplier,
 						colory: y * CIEMultiplier,
@@ -138,14 +138,13 @@ class ZigBeeXYLightDevice extends ZigBeeDevice {
 					.catch(() => {
 						throw new Error('failed_to_do_move_to_hue_and_saturation');
 					});
-			}
-			else if (valueObj.hasOwnProperty('light_mode') && valueObj.hasOwnProperty('light_temperature')) {
+			} else if (valueObj.hasOwnProperty('light_mode') && valueObj.hasOwnProperty('light_temperature')) {
 
 				const lightTemperature = valueObj.light_temperature;
 
 				this.log('registerMultipleCapabilityListener() -> set mode and temperature');
 
-				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters['lightingColorCtrl']
+				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl
 					.do('moveToColor', {
 						colorx: lightTemperature * CIEMultiplier,
 						colory: lightTemperature * CIEMultiplier,
@@ -163,7 +162,7 @@ class ZigBeeXYLightDevice extends ZigBeeDevice {
 					value: this.getCapabilityValue('dim'),
 				});
 
-				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters['lightingColorCtrl']
+				return this.node.endpoints[this.getClusterEndpoint('lightingColorCtrl')].clusters.lightingColorCtrl
 					.do('moveToColor', {
 						colorx: x * CIEMultiplier,
 						colory: y * CIEMultiplier,

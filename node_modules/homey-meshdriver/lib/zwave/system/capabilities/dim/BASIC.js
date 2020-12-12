@@ -17,5 +17,5 @@ module.exports = {
 			return report.Value / 99;
 		}
 		return null;
-	}
+	},
 };

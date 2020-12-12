@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "GU10 White BT"
+  },
+  "$extends": ["light_white"],
+  "energy": {
+    "approximation": {
+      "usageOn": 6.5,
+      "usageOff": 0.2
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": "LWG004",
+    "deviceId": 257,
+    "profileId": 260,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}

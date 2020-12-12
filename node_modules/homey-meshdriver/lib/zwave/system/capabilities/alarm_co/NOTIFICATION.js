@@ -13,8 +13,7 @@ module.exports = {
 
 			if (report['Event (Parsed)'] === 'Carbon monoxide detected' ||
 				report['Event (Parsed)'] === 'Carbon monoxide detected, Unknown Location' ||
-				(report['Event (Parsed)'] === 'Carbon monoxide Test' &&
-					report['Event Parameter'][0] === 1)) {
+				report['Event (Parsed)'] === 'Carbon monoxide Test') {
 				return true;
 			}
 

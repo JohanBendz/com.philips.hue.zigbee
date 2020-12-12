@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "Cher Ceiling"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 39,
+      "usageOff": 1
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": "LTC011",
+    "deviceId": 544,
+    "profileId": 49246,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}

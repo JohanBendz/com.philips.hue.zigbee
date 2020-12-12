@@ -17,7 +17,7 @@ module.exports = {
 		const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : FACTORY_DEFAULT_DIMMING_DURATION);
 		return {
 			'Target Value': (value) ? 'on/enable' : 'off/disable',
-			'Duration': duration,
+			Duration: duration,
 		};
 	},
 	report: 'SWITCH_BINARY_REPORT',

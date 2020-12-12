@@ -1,0 +1,33 @@
+{
+  "name": {
+    "en": "Smart Plug"
+  },
+  "class": "socket",
+  "capabilities": [
+    "onoff"
+  ],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LOM001",
+      "LOM002",
+      "LOM005"
+    ],
+    "deviceId": 266,
+    "profileId": 260,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  },
+  "settings": []
+}

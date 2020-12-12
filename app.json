@@ -1,4 +1,5 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.philips.hue.zigbee",
   "sdk": 2,
   "name": {
@@ -15,14 +16,16 @@
     "email": "johan.bendz@hotmail.com"
   },
   "contributing": {
-    "developers": [{
-      "name": "Sebastian Johansson",
-      "email": "sebastian.johansson@hibbisoft.com"
+    "developers": [
+      {
+        "name": "Sebastian Johansson",
+        "email": "sebastian.johansson@hibbisoft.com"
       },
       {
-      "name": "Johan Bendz",
-      "email": "johan.bendz@hotmail.com"
-      }]
+        "name": "Johan Bendz",
+        "email": "johan.bendz@hotmail.com"
+      }
+    ]
   },
   "donate": {
     "paypal": {
@@ -37,7 +40,6 @@
   "permissions": [],
   "drivers": [
     {
-      "id": "1742930P7",
       "name": {
         "en": "Impress Outdoor Wall Light"
       },
@@ -83,7 +85,10 @@
         "small": "drivers/1742930P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": "1744530P7",
         "deviceId": 269,
         "profileId": 260,
@@ -109,20 +114,39 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "1742930P7"
     },
     {
-      "id": "1744630P7",
       "name": {
-        "en": "Fuzo Outdoor Wall Light - Tall open front"
+        "en": "Impress Outdoor Wall Light"
       },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -130,22 +154,28 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 15,
-          "usageOff": 1
+          "usageOn": 16,
+          "usageOff": 0.2
         }
       },
       "images": {
-        "large": "drivers/1744630P7/assets/images/large.png",
-        "small": "drivers/1744630P7/assets/images/small.png"
+        "large": "drivers/1743030P7/assets/images/large.png",
+        "small": "drivers/1743030P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1744630P7",
-        "deviceId": 256,
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "1743030P7",
+          "1742930P7"
+        ],
+        "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
           }
         }
       },
@@ -165,68 +195,12 @@
             "max": 6553
           }
         }
-      ]
-    },
-    {
-      "id": "1744530P7",
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Open front"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
       ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 15,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/1744530P7/assets/images/large.png",
-        "small": "drivers/1744530P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1744530P7",
-        "deviceId": 256,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "id": "1743030P7"
     },
     {
-      "id": "LCF002",
       "name": {
-        "en": "Calla Outdoor Path Light"
+        "en": "Impress Outdoor Pedestal Light"
       },
       "class": "light",
       "capabilities": [
@@ -262,21 +236,27 @@
       "energy": {
         "approximation": {
           "usageOn": 8,
-          "usageOff": 1
+          "usageOff": 0.2
         }
       },
       "images": {
-        "large": "drivers/LCF002/assets/images/large.png",
-        "small": "drivers/LCF002/assets/images/small.png"
+        "large": "drivers/1743130P7/assets/images/large.png",
+        "small": "drivers/1743130P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCF002",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "1743130P7",
+          "1745430P7"
+        ],
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
           }
         }
       },
@@ -296,85 +276,10 @@
             "max": 6553
           }
         }
-      ]
-    },
-    {
-      "id": "5063230P7",
-      "name": {
-        "en": "Fugato Double Spotlight"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
       ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/5063230P7/assets/images/large.png",
-        "small": "drivers/5063230P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "5063230P7",
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "id": "1743130P7"
     },
     {
-      "id": "1743230P7",
       "name": {
         "en": "Impress Path Light"
       },
@@ -420,7 +325,10 @@
         "small": "drivers/1743230P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": "1743230P7",
         "deviceId": 269,
         "profileId": 260,
@@ -446,12 +354,149 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "1743230P7"
     },
     {
-      "id": "5045131P7",
       "name": {
-        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
+        "en": "Discover Outdoor Floodlight"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "energy": {
+          "approximation": {
+            "usageOn": 15,
+            "usageOff": 1
+          }
+        }
+      },
+      "images": {
+        "large": "drivers/1743530P7/assets/images/large.png",
+        "small": "drivers/1743530P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1743530P7",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1743530P7"
+    },
+    {
+      "name": {
+        "en": "Welcome Outdoor Floodlight"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/1743630P7/assets/images/large.png",
+        "small": "drivers/1743630P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1743630P7",
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1743630P7"
+    },
+    {
+      "name": {
+        "en": "Econic light"
       },
       "class": "light",
       "capabilities": [
@@ -486,25 +531,90 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 6,
-          "usageOff": 1
+          "usageOn": 15,
+          "usageOff": 0.2
         }
       },
       "images": {
-        "large": "drivers/5045131P7/assets/images/large.png",
-        "small": "drivers/5045131P7/assets/images/small.png"
+        "large": "drivers/1743830P7/assets/images/large.png",
+        "small": "drivers/1743830P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "5045131P7",
-          "5045148P7"
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1743830P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1743830P7"
+    },
+    {
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Closed front"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/1744430P7/assets/images/large.png",
+        "small": "drivers/1744430P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1744430P7",
+        "deviceId": [
+          256,
+          257
         ],
-        "deviceId": 269,
-        "profileId": 260,
+        "profileId": [
+          260,
+          49246
+        ],
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
           }
         }
       },
@@ -524,39 +634,20 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "1744430P7"
     },
     {
-      "id": "4090431P9",
       "name": {
-        "en": "Flourish Ceiling Light White and Color"
+        "en": "Fuzo Outdoor Wall Light - Open front"
       },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
+        "dim"
       ],
       "capabilitiesOptions": {
         "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -564,19 +655,22 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 9.5,
+          "usageOn": 15,
           "usageOff": 1
         }
       },
       "images": {
-        "large": "drivers/4090431P9/assets/images/large.png",
-        "small": "drivers/4090431P9/assets/images/small.png"
+        "large": "drivers/1744530P7/assets/images/large.png",
+        "small": "drivers/1744530P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "4090431P9",
-        "deviceId": 269,
-        "profileId": 260,
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1744530P7",
+        "deviceId": 256,
+        "profileId": 49246,
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -599,10 +693,69 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "1744530P7"
     },
     {
-      "id": "1746530P7",
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Tall open front"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/1744630P7/assets/images/large.png",
+        "small": "drivers/1744630P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "1744630P7",
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1744630P7"
+    },
+    {
       "name": {
         "en": "Daylo Outdoor Wall Light"
       },
@@ -648,7 +801,10 @@
         "small": "drivers/1746530P7/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "1746530P7",
           "1746547P7"
@@ -677,12 +833,12 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "1746530P7"
     },
     {
-      "id": "LCF003",
       "name": {
-        "en": "Signe Floor Light"
+        "en": "Ensis Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -717,17 +873,20 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 32,
-          "usageOff": 1
+          "usageOn": 78,
+          "usageOff": 0.4
         }
       },
       "images": {
-        "large": "drivers/LCF003/assets/images/large.png",
-        "small": "drivers/LCF003/assets/images/small.png"
+        "large": "drivers/4090331P9/assets/images/large.png",
+        "small": "drivers/4090331P9/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCF003",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "4090331P9",
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
@@ -752,717 +911,12 @@
             "max": 6553
           }
         }
-      ]
-    },
-    {
-      "id": "SML002",
-      "name": {
-        "en": "Outdoor Sensor"
-      },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_motion",
-        "measure_temperature",
-        "measure_luminance",
-        "measure_battery"
       ],
-      "energy": {
-        "batteries": [
-          "AA",
-          "AA"
-        ]
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "SML002"
-        ],
-        "deviceId": 2128,
-        "profileId": 49246,
-        "learnmode": {
-          "image": "/drivers/SML002/assets/icon.svg",
-          "instruction": {
-            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
-          }
-        }
-      },
-      "images": {
-        "large": "drivers/SML002/assets/images/large.jpg",
-        "small": "drivers/SML002/assets/images/small.jpg"
-      },
-      "settings": [
-        {
-          "id": "temperature_offset",
-          "type": "number",
-          "label": {
-            "en": "Temperature offset (°C)",
-            "nl": "Temperatuur compensatie (°C)"
-          },
-          "hint": {
-            "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
-            "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
-          },
-          "value": 0,
-          "attr": {
-            "min": -10,
-            "max": 10,
-            "step": 0.1
-          }
-        },
-        {
-          "id": "batteryThreshold",
-          "type": "number",
-          "label": {
-            "en": "Battery Low Alarm Voltage Threshold (volt)"
-          },
-          "hint": {
-            "en": "This setting determines the threshold before a battery alarm is given."
-          },
-          "value": 2.9,
-          "attr": {
-            "step": 0.1,
-            "min": 0,
-            "max": 6553
-          }
-        },
-        {
-          "id": "minReportMotion",
-          "type": "number",
-          "label": {
-            "en": "Min report interval for motion (s)"
-          },
-          "hint": {
-            "en": "Min interval before a report is sent to Homey (s)"
-          },
-          "value": 1,
-          "attr": {
-            "step": 1,
-            "min": 1,
-            "max": 86400
-          }
-        },
-        {
-          "id": "maxReportMotion",
-          "type": "number",
-          "label": {
-            "en": "Max report interval for motion (s)"
-          },
-          "hint": {
-            "en": "Max interval before a report is sent to Homey (s)"
-          },
-          "value": 300,
-          "attr": {
-            "step": 1,
-            "min": 60,
-            "max": 86400
-          }
-        },
-        {
-          "id": "minReportLux",
-          "type": "number",
-          "label": {
-            "en": "Min report interval for lux (s)"
-          },
-          "hint": {
-            "en": "Min interval before a report is sent to Homey (s)"
-          },
-          "value": 300,
-          "attr": {
-            "step": 1,
-            "min": 1,
-            "max": 86400
-          }
-        },
-        {
-          "id": "maxReportLux",
-          "type": "number",
-          "label": {
-            "en": "Max report interval for lux (s)"
-          },
-          "hint": {
-            "en": "Max interval before a report is sent to Homey (s)"
-          },
-          "value": 900,
-          "attr": {
-            "step": 1,
-            "min": 60,
-            "max": 86400
-          }
-        },
-        {
-          "id": "minReportTemp",
-          "type": "number",
-          "label": {
-            "en": "Min report interval for temperature (s)"
-          },
-          "hint": {
-            "en": "Min interval before a report is sent to Homey (s)"
-          },
-          "value": 1800,
-          "attr": {
-            "step": 1,
-            "min": 1,
-            "max": 86400
-          }
-        },
-        {
-          "id": "maxReportTemp",
-          "type": "number",
-          "label": {
-            "en": "Max report interval for temperature (s)"
-          },
-          "hint": {
-            "en": "Max interval before a report is sent to Homey (s)"
-          },
-          "value": 3600,
-          "attr": {
-            "step": 1,
-            "min": 60,
-            "max": 86400
-          }
-        }
-      ]
+      "id": "4090331P9"
     },
     {
-      "id": "LOM002",
       "name": {
-        "en": "Smart Plug"
-      },
-      "class": "socket",
-      "capabilities": [
-        "onoff"
-      ],
-      "images": {
-        "large": "drivers/LOM002/assets/images/large.png",
-        "small": "drivers/LOM002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LOM001",
-          "LOM002",
-          "LOM005"
-        ],
-        "deviceId": 266,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": []
-    },
-    {
-      "id": "1743530P7",
-      "name": {
-        "en": "Discover Outdoor Floodlight"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "energy": {
-          "approximation": {
-           "usageOn": 15,
-           "usageOff": 1
-          }
-        }
-      },
-      "images": {
-        "large": "drivers/1743530P7/assets/images/large.png",
-        "small": "drivers/1743530P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1743530P7",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "1743630P7",
-      "name": {
-        "en": "Welcome Outdoor Floodlight"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 15,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/1743630P7/assets/images/large.png",
-        "small": "drivers/1743630P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1743630P7",
-        "deviceId": 256,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTC011",
-      "name": {
-        "en": "Cher Ceiling"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 39,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTC011/assets/images/large.png",
-        "small": "drivers/LTC011/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTC011",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTP003",
-      "name": {
-        "en": "Fair Pendant"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 39,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTP003/assets/images/large.png",
-        "small": "drivers/LTP003/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTP003",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTC003",
-      "name": {
-        "en": "Still Ceiling"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 32,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTC003/assets/images/large.png",
-        "small": "drivers/LTC003/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LTC003",
-          "3261330P6"
-        ],
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTP002",
-      "name": {
-        "en": "Amaze Pendant"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 39,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTP002/assets/images/large.png",
-        "small": "drivers/LTP002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTP002",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "HML004",
-      "name": {
-        "en": "Phoenix Wall Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 13,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/HML004/assets/images/large.png",
-        "small": "drivers/HML004/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "HML004",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTC012",
-      "name": {
-        "en": "Struana Ceiling"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 32,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTC012/assets/images/large.png",
-        "small": "drivers/LTC012/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTC012",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LCS001",
-      "name": {
-        "en": "Lily Outdoor Spot"
+        "en": "Ensis Pendant - Upper light"
       },
       "class": "light",
       "capabilities": [
@@ -1497,518 +951,28 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 8,
-          "usageOff": 1
+          "usageOn": 78,
+          "usageOff": 0.4
         }
       },
       "images": {
-        "large": "drivers/LCS001/assets/images/large.png",
-        "small": "drivers/LCS001/assets/images/small.png"
+        "large": "drivers/4090331P9_01/assets/images/large.png",
+        "small": "drivers/4090331P9_01/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCS001",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LST003",
-      "name": {
-        "en": "Lightstrip Outdoor"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 37.5,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/LST003/assets/images/large.png",
-        "small": "drivers/LST003/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
-          "LST003",
-          "LST004"
+          "4090331P9_01",
+          "LCP001"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTW012",
-      "name": {
-        "en": "Candle Ambiance"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/LTW012/assets/images/large.png",
-        "small": "drivers/LTW012/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTW012",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTW013",
-      "name": {
-        "en": "Spot Ambiance"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 5.5,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/LTW013/assets/images/large.png",
-        "small": "drivers/LTW013/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LTW013",
-          "LTW014"
-        ],
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTG002",
-      "name": {
-        "en": "GU10 White Ambiance BT"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 5,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/LTG002/assets/images/large.png",
-        "small": "drivers/LTG002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTG002",
-        "deviceId": 268,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LCW001",
-      "name": {
-        "en": "Sana Wall Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 20,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LCW001/assets/images/large.png",
-        "small": "drivers/LCW001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LCW001",
-          "4090130P9",
-          "4090131P9"
-        ],
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LCT012",
-      "name": {
-        "en": "Candle Color"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6.5,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/LCT012/assets/images/large.png",
-        "small": "drivers/LCT012/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCT012",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LCG002",
-      "name": {
-        "en": "GU10 Spot Color"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6.5,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LCG002/assets/images/large.png",
-        "small": "drivers/LCG002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCG002",
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
           }
         }
       },
@@ -2028,12 +992,12 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "4090331P9_01"
     },
     {
-      "id": "LCT024",
       "name": {
-        "en": "Play Lightbar"
+        "en": "Ensis Pendant - Lower light"
       },
       "class": "light",
       "capabilities": [
@@ -2068,250 +1032,28 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 6.6,
-          "usageOff": 1
+          "usageOn": 78,
+          "usageOff": 0.4
         }
       },
       "images": {
-        "large": "drivers/LCT024/assets/images/large.png",
-        "small": "drivers/LCT024/assets/images/small.png"
+        "large": "drivers/4090331P9_02/assets/images/large.png",
+        "small": "drivers/4090331P9_02/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
-          "LCT024",
-          "440400982841"
+          "4090331P9_02",
+          "LCP002"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LST002",
-      "name": {
-        "en": "LightStrips Plus"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 20.5,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/LST002/assets/images/large.png",
-        "small": "drivers/LST002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LST002",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LLC020",
-      "name": {
-        "en": "Go"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/LLC020/assets/images/large.png",
-        "small": "drivers/LLC020/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LLC020",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LCT026",
-      "name": {
-        "en": "Go BT"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/LCT026/assets/images/large.png",
-        "small": "drivers/LCT026/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCT026",
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
           }
         }
       },
@@ -2331,192 +1073,39 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "4090331P9_02"
     },
     {
-      "id": "LWG001",
       "name": {
-        "en": "GU10 White PF"
+        "en": "Flourish Ceiling Light White and Color"
       },
       "class": "light",
       "capabilities": [
         "onoff",
-        "dim"
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
           "opts": {
             "duration": true
           }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6.5,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWG001/assets/images/large.png",
-        "small": "drivers/LWG001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWG001",
-        "deviceId": 256,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWG004",
-      "name": {
-        "en": "GU10 White BT"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
+        },
+        "light_hue": {
           "opts": {
             "duration": true
           }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6.5,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWG004/assets/images/large.png",
-        "small": "drivers/LWG004/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWG004",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWW002",
-      "name": {
-        "en": "Lucca Outdoor Post"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
+        },
+        "light_saturation": {
           "opts": {
             "duration": true
           }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 9,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LWW002/assets/images/large.png",
-        "small": "drivers/LWW002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LWW002",
-          "1740393P0",
-          "LWF002"
-        ],
-        "deviceId": 256,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWW001",
-      "name": {
-        "en": "Lucca Outdoor Garden Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
+        },
+        "light_temperature": {
           "opts": {
             "duration": true
           }
@@ -2529,21 +1118,20 @@
         }
       },
       "images": {
-        "large": "drivers/LWW001/assets/images/large.png",
-        "small": "drivers/LWW001/assets/images/small.png"
+        "large": "drivers/4090431P9/assets/images/large.png",
+        "small": "drivers/4090431P9/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LWW001",
-          "1740293P0",
-          "LWF001"
-        ],
-        "deviceId": 256,
-        "profileId": 49246,
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "4090431P9",
+        "deviceId": 269,
+        "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
           }
         }
       },
@@ -2563,12 +1151,12 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "4090431P9"
     },
     {
-      "id": "LCT003",
       "name": {
-        "en": "Connected Lamp GU10"
+        "en": "Fluorish Ceiling Light"
       },
       "class": "light",
       "capabilities": [
@@ -2603,22 +1191,25 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 6.5,
-          "usageOff": 0.2
+          "usageOn": 32,
+          "usageOff": 0.4
         }
       },
       "images": {
-        "large": "drivers/LCT003/assets/images/large.png",
-        "small": "drivers/LCT003/assets/images/small.png"
+        "large": "drivers/4090531P9/assets/images/large.png",
+        "small": "drivers/4090531P9/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LCT003",
-        "deviceId": 528,
-        "profileId": 49246,
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "4090531P9",
+        "deviceId": 269,
+        "profileId": 260,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
           }
         }
       },
@@ -2638,10 +1229,247 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "4090531P9"
     },
     {
-      "id": "HBL001",
+      "name": {
+        "en": "Flourish Pendant Light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 31,
+          "usageOff": 0.4
+        }
+      },
+      "images": {
+        "large": "drivers/4090631P9/assets/images/large.png",
+        "small": "drivers/4090631P9/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "4090631P9",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "4090631P9"
+    },
+    {
+      "name": {
+        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/5045131P7/assets/images/large.png",
+        "small": "drivers/5045131P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "5045131P7",
+          "5045148P7"
+        ],
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5045131P7"
+    },
+    {
+      "name": {
+        "en": "Fugato Double Spotlight"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/5063230P7/assets/images/large.png",
+        "small": "drivers/5063230P7/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "5063230P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5063230P7"
+    },
+    {
       "name": {
         "en": "Beyond Table"
       },
@@ -2687,7 +1515,10 @@
         "small": "drivers/HBL001/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": "HBL001",
         "deviceId": 528,
         "profileId": 49246,
@@ -2713,10 +1544,10 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "HBL001"
     },
     {
-      "id": "HBL002",
       "name": {
         "en": "Beyond Pendant"
       },
@@ -2762,7 +1593,10 @@
         "small": "drivers/HBL002/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": "HBL002",
         "deviceId": 528,
         "profileId": 49246,
@@ -2788,10 +1622,10 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "HBL002"
     },
     {
-      "id": "HBL003",
       "name": {
         "en": "Beyond Ceiling"
       },
@@ -2837,7 +1671,10 @@
         "small": "drivers/HBL003/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": "HBL003",
         "deviceId": 528,
         "profileId": 49246,
@@ -2863,221 +1700,12 @@
             "max": 6553
           }
         }
-      ]
-    },
-    {
-      "id": "LST001",
-      "name": {
-        "en": "LightStrips"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_mode"
       ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 12,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LST001/assets/images/large.png",
-        "small": "drivers/LST001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LST001",
-        "deviceId": 512,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "id": "HBL003"
     },
     {
-      "id": "LLC011",
       "name": {
-        "en": "Bloom/Aura Living Colors"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "images": {
-        "large": "drivers/LLC011/assets/images/large.png",
-        "small": "drivers/LLC011/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LLC011",
-          "LLC012",
-          "LLC014",
-          "929002375901"
-        ],
-        "deviceId": 512,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LLC010",
-      "name": {
-        "en": "Iris Living Colors"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 10,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LLC010/assets/images/large.png",
-        "small": "drivers/LLC010/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LLC010",
-          "929002376201"
-        ],
-        "deviceId": 512,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTW000",
-      "name": {
-        "en": "Bulb A19 White Ambiance"
+        "en": "Phoenix Pendant"
       },
       "class": "light",
       "capabilities": [
@@ -3099,27 +1727,29 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 9.5,
-          "usageOff": 0.1
+          "usageOn": 18,
+          "usageOff": 1
         }
       },
       "images": {
-        "large": "drivers/LTW000/assets/images/large.png",
-        "small": "drivers/LTW000/assets/images/small.png"
+        "large": "drivers/HML003/assets/images/large.png",
+        "small": "drivers/HML003/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
-          "LTW001",
-          "LTW004",
-          "LTW010",
-          "LTW015"
+          "LLM010",
+          "LLM011",
+          "LLM012"
         ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
           }
         }
       },
@@ -3139,97 +1769,21 @@
             "max": 6553
           }
         }
-      ]
-    },
-    {
-      "id": "LWB000",
-      "name": {
-        "en": "Bulb White"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
       ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 9,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/LWB000/assets/images/large.png",
-        "small": "drivers/LWB000/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LWB010",
-          "LWB014",
-          "LWB004",
-          "LWB006",
-          "LWB007",
-          "LWF002"
-        ],
-        "deviceId": 256,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
+      "id": "HML003"
     },
     {
-      "id": "LCT000",
       "name": {
-        "en": "Bulb A19"
+        "en": "Phoenix Wall Light"
       },
       "class": "light",
       "capabilities": [
         "onoff",
         "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
+        "light_temperature"
       ],
       "capabilitiesOptions": {
         "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
           "opts": {
             "duration": true
           }
@@ -3242,29 +1796,25 @@
       },
       "energy": {
         "approximation": {
-          "usageOn": 9,
-          "usageOff": 0.5
+          "usageOn": 13,
+          "usageOff": 1
         }
       },
       "images": {
-        "large": "drivers/LCT000/assets/images/large.png",
-        "small": "drivers/LCT000/assets/images/small.png"
+        "large": "drivers/HML004/assets/images/large.png",
+        "small": "drivers/HML004/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LCT001",
-          "LCT007",
-          "LCT010",
-          "LCT014",
-          "LCT015",
-          "LCT016"
-        ],
-        "deviceId": 528,
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "HML004",
+        "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
           }
         }
       },
@@ -3284,10 +1834,79 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "HML004"
     },
     {
-      "id": "LCA001",
+      "name": {
+        "en": "Phoenix Table"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 12,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/HML005/assets/images/large.png",
+        "small": "drivers/HML005/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LLM010",
+          "LLM011",
+          "LLM012"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "HML005"
+    },
+    {
       "name": {
         "en": "E27 White and Color Ambiance BT"
       },
@@ -3333,7 +1952,10 @@
         "small": "drivers/LCA001/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "LCA001"
         ],
@@ -3361,10 +1983,1292 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "LCA001"
     },
     {
-      "id": "LTA001",
+      "name": {
+        "en": "Calla Outdoor Path Light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LCF002/assets/images/large.png",
+        "small": "drivers/LCF002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCF002",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCF002"
+    },
+    {
+      "name": {
+        "en": "Signe Floor Light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LCF003/assets/images/large.png",
+        "small": "drivers/LCF003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCF003",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCF003"
+    },
+    {
+      "name": {
+        "en": "GU10 Spot Color"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LCG002/assets/images/large.png",
+        "small": "drivers/LCG002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCG002",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCG002"
+    },
+    {
+      "name": {
+        "en": "Lily Outdoor Spot"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LCS001/assets/images/large.png",
+        "small": "drivers/LCS001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCS001",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCS001"
+    },
+    {
+      "name": {
+        "en": "Bulb A19"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LCT000/assets/images/large.png",
+        "small": "drivers/LCT000/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LCT001",
+          "LCT007",
+          "LCT010",
+          "LCT014",
+          "LCT015",
+          "LCT016"
+        ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCT000"
+    },
+    {
+      "name": {
+        "en": "Connected Lamp GU10"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LCT003/assets/images/large.png",
+        "small": "drivers/LCT003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCT003",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCT003"
+    },
+    {
+      "name": {
+        "en": "Candle Color"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LCT012/assets/images/large.png",
+        "small": "drivers/LCT012/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCT012",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCT012"
+    },
+    {
+      "name": {
+        "en": "Play Lightbar"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.6,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LCT024/assets/images/large.png",
+        "small": "drivers/LCT024/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LCT024",
+          "440400982841"
+        ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCT024"
+    },
+    {
+      "name": {
+        "en": "Go BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LCT026/assets/images/large.png",
+        "small": "drivers/LCT026/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LCT026",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCT026"
+    },
+    {
+      "name": {
+        "en": "Sana Wall Light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 20,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LCW001/assets/images/large.png",
+        "small": "drivers/LCW001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LCW001",
+          "4090130P9",
+          "4090131P9"
+        ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCW001"
+    },
+    {
+      "name": {
+        "en": "Iris Living Colors"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 10,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LLC010/assets/images/large.png",
+        "small": "drivers/LLC010/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LLC010",
+          "929002376201"
+        ],
+        "deviceId": 512,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LLC010"
+    },
+    {
+      "name": {
+        "en": "Bloom/Aura Living Colors"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "drivers/LLC011/assets/images/large.png",
+        "small": "drivers/LLC011/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LLC011",
+          "LLC012",
+          "LLC014",
+          "929002375901"
+        ],
+        "deviceId": 512,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LLC011"
+    },
+    {
+      "name": {
+        "en": "Go"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LLC020/assets/images/large.png",
+        "small": "drivers/LLC020/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LLC020",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LLC020"
+    },
+    {
+      "name": {
+        "en": "Smart Plug"
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "drivers/LOM002/assets/images/large.png",
+        "small": "drivers/LOM002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LOM001",
+          "LOM002",
+          "LOM005"
+        ],
+        "deviceId": 266,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [],
+      "id": "LOM002"
+    },
+    {
+      "name": {
+        "en": "LightStrips"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 12,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LST001/assets/images/large.png",
+        "small": "drivers/LST001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LST001",
+        "deviceId": 512,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LST001"
+    },
+    {
+      "name": {
+        "en": "LightStrips Plus"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 20.5,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LST002/assets/images/large.png",
+        "small": "drivers/LST002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LST002",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LST002"
+    },
+    {
+      "name": {
+        "en": "Lightstrip Outdoor"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 37.5,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LST003/assets/images/large.png",
+        "small": "drivers/LST003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LST003",
+          "LST004"
+        ],
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LST003"
+    },
+    {
       "name": {
         "en": "E27 White Ambiance BT"
       },
@@ -3397,7 +3301,10 @@
         "small": "drivers/LTA001/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "LTA001"
         ],
@@ -3425,10 +3332,10 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "LTA001"
     },
     {
-      "id": "LTC001",
       "name": {
         "en": "Being Ceiling Lamp"
       },
@@ -3462,7 +3369,10 @@
         "small": "drivers/LTC001/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "LTC001",
           "3261031P6"
@@ -3491,10 +3401,10 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "LTC001"
     },
     {
-      "id": "LTC002",
       "name": {
         "en": "Fair Ceiling Lamp"
       },
@@ -3528,7 +3438,10 @@
         "small": "drivers/LTC002/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "LTC002"
         ],
@@ -3556,10 +3469,267 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "LTC002"
     },
     {
-      "id": "LTC015",
+      "name": {
+        "en": "Still Ceiling"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTC003/assets/images/large.png",
+        "small": "drivers/LTC003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LTC003",
+          "3261330P6"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTC003"
+    },
+    {
+      "name": {
+        "en": "Cher Ceiling"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTC011/assets/images/large.png",
+        "small": "drivers/LTC011/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTC011",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTC011"
+    },
+    {
+      "name": {
+        "en": "Struana Ceiling"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 32,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTC012/assets/images/large.png",
+        "small": "drivers/LTC012/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTC012",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTC012"
+    },
+    {
+      "name": {
+        "en": "Aurelle Panel Square"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "drivers/LTC014/assets/images/large.png",
+        "small": "drivers/LTC014/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTC014",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTC014"
+    },
+    {
       "name": {
         "en": "Aurelle Panel Light"
       },
@@ -3586,7 +3756,10 @@
         "small": "drivers/LTC015/assets/images/small.png"
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "LTC012",
           "LTC015",
@@ -3617,10 +3790,1214 @@
             "max": 6553
           }
         }
-      ]
+      ],
+      "id": "LTC015"
     },
     {
-      "id": "RWL000",
+      "name": {
+        "en": "Adore Bathroom Ceiling White Ambience"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 40,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LTC021/assets/images/large.png",
+        "small": "drivers/LTC021/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTC021",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTC021"
+    },
+    {
+      "name": {
+        "en": "GU10 White Ambiance BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LTG002/assets/images/large.png",
+        "small": "drivers/LTG002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTG002",
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTG002"
+    },
+    {
+      "name": {
+        "en": "Cher Pendant"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTP001/assets/images/large.png",
+        "small": "drivers/LTP001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LTP001",
+          "4076130P6"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTP001"
+    },
+    {
+      "name": {
+        "en": "Amaze Pendant"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTP002/assets/images/large.png",
+        "small": "drivers/LTP002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTP002",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTP002"
+    },
+    {
+      "name": {
+        "en": "Fair Pendant"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LTP003/assets/images/large.png",
+        "small": "drivers/LTP003/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTP003",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTP003"
+    },
+    {
+      "name": {
+        "en": "Bulb A19 White Ambiance"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9.5,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LTW000/assets/images/large.png",
+        "small": "drivers/LTW000/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LTW001",
+          "LTW004",
+          "LTW010",
+          "LTW015"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTW000"
+    },
+    {
+      "name": {
+        "en": "Candle Ambiance"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LTW012/assets/images/large.png",
+        "small": "drivers/LTW012/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LTW012",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTW012"
+    },
+    {
+      "name": {
+        "en": "Spot Ambiance"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5.5,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LTW013/assets/images/large.png",
+        "small": "drivers/LTW013/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LTW013",
+          "LTW014"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTW013"
+    },
+    {
+      "name": {
+        "en": "Adore Bathroom mirror light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 40,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LTW017/assets/images/large.png",
+        "small": "drivers/LTW017/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LTW017",
+          "3417711P6"
+        ],
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTW017"
+    },
+    {
+      "name": {
+        "en": "9W A60 E27 EUR White"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWA001/assets/images/large.png",
+        "small": "drivers/LWA001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWA001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWA001"
+    },
+    {
+      "name": {
+        "en": "Filament A60"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWA004/assets/images/large.png",
+        "small": "drivers/LWA004/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWA004",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWA004"
+    },
+    {
+      "name": {
+        "en": "Bulb White"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 0.5
+        }
+      },
+      "images": {
+        "large": "drivers/LWB000/assets/images/large.png",
+        "small": "drivers/LWB000/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LWB010",
+          "LWB014",
+          "LWB004",
+          "LWB006",
+          "LWB007",
+          "LWF002"
+        ],
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWB000"
+    },
+    {
+      "name": {
+        "en": "E14 White Candle BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 0.1
+        }
+      },
+      "images": {
+        "large": "drivers/LWE002/assets/images/large.png",
+        "small": "drivers/LWE002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWE002",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWE002"
+    },
+    {
+      "name": {
+        "en": "GU10 White PF"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWG001/assets/images/large.png",
+        "small": "drivers/LWG001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWG001",
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWG001"
+    },
+    {
+      "name": {
+        "en": "GU10 White BT"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWG004/assets/images/large.png",
+        "small": "drivers/LWG004/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWG004",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWG004"
+    },
+    {
+      "name": {
+        "en": "Filament G93"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWO001/assets/images/large.png",
+        "small": "drivers/LWO001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWO001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWO001"
+    },
+    {
+      "name": {
+        "en": "Filament ST64"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "images": {
+        "large": "drivers/LWV001/assets/images/large.png",
+        "small": "drivers/LWV001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": "LWV001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWV001"
+    },
+    {
+      "name": {
+        "en": "Lucca Outdoor Garden Light"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9.5,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LWW001/assets/images/large.png",
+        "small": "drivers/LWW001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LWW001",
+          "1740293P0",
+          "LWF001"
+        ],
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWW001"
+    },
+    {
+      "name": {
+        "en": "Lucca Outdoor Post"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 1
+        }
+      },
+      "images": {
+        "large": "drivers/LWW002/assets/images/large.png",
+        "small": "drivers/LWW002/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+        "productId": [
+          "LWW002",
+          "1740393P0",
+          "LWF002"
+        ],
+        "deviceId": 256,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWW002"
+    },
+    {
       "name": {
         "en": "Dimmer Switch"
       },
@@ -3632,7 +5009,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "RWL021",
           "RWL020"
@@ -3652,10 +5032,10 @@
       "images": {
         "large": "/drivers/RWL000/assets/images/large.jpg",
         "small": "/drivers/RWL000/assets/images/small.jpg"
-      }
+      },
+      "id": "RWL000"
     },
     {
-      "id": "SML001",
       "name": {
         "en": "Motion Sensor"
       },
@@ -3673,7 +5053,10 @@
         ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
           "SML002",
           "9290019758"
@@ -3822,1335 +5205,180 @@
             "max": 86400
           }
         }
-      ]
+      ],
+      "id": "SML001"
     },
     {
-      "id": "HML003",
       "name": {
-        "en": "Phoenix Pendant"
+        "en": "Outdoor Sensor"
       },
-      "class": "light",
+      "class": "sensor",
       "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery"
       ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
       "energy": {
-        "approximation": {
-          "usageOn": 18,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/HML003/assets/images/large.png",
-        "small": "drivers/HML003/assets/images/small.png"
+        "batteries": [
+          "AA",
+          "AA"
+        ]
       },
       "zigbee": {
-        "manufacturerName": "Philips",
+        "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
         "productId": [
-          "LLM010",
-          "LLM011",
-          "LLM012"
+          "SML002"
         ],
-        "deviceId": 544,
+        "deviceId": 2128,
         "profileId": 49246,
         "learnmode": {
+          "image": "/drivers/SML002/assets/icon.svg",
           "instruction": {
-            "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "HML005",
-      "name": {
-        "en": "Phoenix Table"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 12,
-          "usageOff": 0.5
-        }
-      },
-      "images": {
-        "large": "drivers/HML005/assets/images/large.png",
-        "small": "drivers/HML005/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LLM010",
-          "LLM011",
-          "LLM012"
-        ],
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWO001",
-      "name": {
-        "en": "Filament G93"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 7,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWO001/assets/images/large.png",
-        "small": "drivers/LWO001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWO001",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWA004",
-      "name": {
-        "en": "Filament A60"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 7,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWA004/assets/images/large.png",
-        "small": "drivers/LWA004/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWA004",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWV001",
-      "name": {
-        "en": "Filament ST64"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 7,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWV001/assets/images/large.png",
-        "small": "drivers/LWV001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWV001",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTC021",
-      "name": {
-        "en": "Adore Bathroom Ceiling White Ambience"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 40,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LTC021/assets/images/large.png",
-        "small": "drivers/LTC021/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTC021",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "1743130P7",
-      "name": {
-        "en": "Impress Outdoor Pedestal Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 8,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/1743130P7/assets/images/large.png",
-        "small": "drivers/1743130P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "1743130P7",
-          "1745430P7"
-        ],
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "1743030P7",
-      "name": {
-        "en": "Impress Outdoor Wall Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 16,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/1743030P7/assets/images/large.png",
-        "small": "drivers/1743030P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "1743030P7",
-          "1742930P7"
-        ],
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTW017",
-      "name": {
-        "en": "Adore Bathroom mirror light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 40,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LTW017/assets/images/large.png",
-        "small": "drivers/LTW017/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LTW017",
-          "3417711P6"
-        ],
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "1743830P7",
-      "name": {
-        "en": "Econic light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 15,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/1743830P7/assets/images/large.png",
-        "small": "drivers/1743830P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1743830P7",
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "4090331P9",
-      "name": {
-        "en": "Ensis Pendant"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 78,
-          "usageOff": 0.4
-        }
-      },
-      "images": {
-        "large": "drivers/4090331P9/assets/images/large.png",
-        "small": "drivers/4090331P9/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "4090331P9",
-        "deviceId": 528,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "4090331P9_01",
-      "name": {
-        "en": "Ensis Pendant - Upper light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 78,
-          "usageOff": 0.4
-        }
-      },
-      "images": {
-        "large": "drivers/4090331P9_01/assets/images/large.png",
-        "small": "drivers/4090331P9_01/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "4090331P9_01",
-          "LCP001"
-        ],
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "4090331P9_02",
-      "name": {
-        "en": "Ensis Pendant - Lower light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 78,
-          "usageOff": 0.4
-        }
-      },
-      "images": {
-        "large": "drivers/4090331P9_02/assets/images/large.png",
-        "small": "drivers/4090331P9_02/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "4090331P9_02",
-          "LCP002"
-        ],
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "4090531P9",
-      "name": {
-        "en": "Fluorish Ceiling Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 32,
-          "usageOff": 0.4
-        }
-      },
-      "images": {
-        "large": "drivers/4090531P9/assets/images/large.png",
-        "small": "drivers/4090531P9/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "4090531P9",
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "4090631P9",
-      "name": {
-        "en": "Flourish Pendant Light"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_hue",
-        "light_saturation",
-        "light_temperature",
-        "light_mode"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_hue": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_saturation": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 31,
-          "usageOff": 0.4
-        }
-      },
-      "images": {
-        "large": "drivers/4090631P9/assets/images/large.png",
-        "small": "drivers/4090631P9/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "4090631P9",
-        "deviceId": 269,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTC014",
-      "name": {
-        "en": "Aurelle Panel Square"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        },
-        "light_temperature": {
-          "opts": {
-            "duration": true
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
           }
         }
       },
       "images": {
-        "large": "drivers/LTC014/assets/images/large.png",
-        "small": "drivers/LTC014/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LTC014",
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
+        "large": "drivers/SML002/assets/images/large.jpg",
+        "small": "drivers/SML002/assets/images/small.jpg"
       },
       "settings": [
         {
-          "id": "transition_time",
+          "id": "temperature_offset",
           "type": "number",
           "label": {
-            "en": "Transition Time"
+            "en": "Temperature offset (°C)",
+            "nl": "Temperatuur compensatie (°C)"
           },
           "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+            "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
           },
-          "value": 1,
+          "value": 0,
           "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWA001",
-      "name": {
-        "en": "9W A60 E27 EUR White"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 9,
-          "usageOff": 0.2
-        }
-      },
-      "images": {
-        "large": "drivers/LWA001/assets/images/large.png",
-        "small": "drivers/LWA001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWA001",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LWE002",
-      "name": {
-        "en": "E14 White Candle BT"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 6,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/LWE002/assets/images/large.png",
-        "small": "drivers/LWE002/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "LWE002",
-        "deviceId": 257,
-        "profileId": 260,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "1744430P7",
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Closed front"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 15,
-          "usageOff": 0.1
-        }
-      },
-      "images": {
-        "large": "drivers/1744430P7/assets/images/large.png",
-        "small": "drivers/1744430P7/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": "1744430P7",
-        "deviceId": [256, 257],
-        "profileId": [260, 49246],
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
-        {
-          "id": "transition_time",
-          "type": "number",
-          "label": {
-            "en": "Transition Time"
-          },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
-        }
-      ]
-    },
-    {
-      "id": "LTP001",
-      "name": {
-        "en": "Cher Pendant"
-      },
-      "class": "light",
-      "capabilities": [
-        "onoff",
-        "dim",
-        "light_temperature"
-      ],
-      "capabilitiesOptions": {
-        "dim": {
-          "opts": {
-            "duration": true
+            "min": -10,
+            "max": 10,
+            "step": 0.1
           }
         },
-        "light_temperature": {
-          "opts": {
-            "duration": true
-          }
-        }
-      },
-      "energy": {
-        "approximation": {
-          "usageOn": 39,
-          "usageOff": 1
-        }
-      },
-      "images": {
-        "large": "drivers/LTP001/assets/images/large.png",
-        "small": "drivers/LTP001/assets/images/small.png"
-      },
-      "zigbee": {
-        "manufacturerName": "Philips",
-        "productId": [
-          "LTP001",
-          "4076130P6"
-        ],
-        "deviceId": 544,
-        "profileId": 49246,
-        "learnmode": {
-          "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
-          }
-        }
-      },
-      "settings": [
         {
-          "id": "transition_time",
+          "id": "batteryThreshold",
           "type": "number",
           "label": {
-            "en": "Transition Time"
+            "en": "Battery Low Alarm Voltage Threshold (volt)"
           },
           "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+            "en": "This setting determines the threshold before a battery alarm is given."
           },
-          "value": 1,
+          "value": 2.9,
           "attr": {
+            "step": 0.1,
             "min": 0,
             "max": 6553
           }
+        },
+        {
+          "id": "minReportMotion",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for motion (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 1,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportMotion",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for motion (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportLux",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportLux",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 900,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 1800,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 3600,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
         }
-      ]
+      ],
+      "id": "SML002"
     }
   ],
   "flow": {
@@ -5162,8 +5390,8 @@
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=RWL000"
           }
         ]
@@ -5175,8 +5403,8 @@
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=RWL000"
           }
         ]
@@ -5188,8 +5416,8 @@
         },
         "args": [
           {
-            "name": "device",
             "type": "device",
+            "name": "device",
             "filter": "driver_id=RWL000"
           },
           {

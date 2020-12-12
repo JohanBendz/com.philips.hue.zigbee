@@ -4,7 +4,7 @@ module.exports = {
 	get: 'BASIC_GET',
 	set: 'BASIC_SET',
 	setParser: value => ({
-		'Value': (value) ? 255 : 0,
+		Value: (value) ? 255 : 0,
 	}),
 	report: 'BASIC_REPORT',
 	reportParser(report) {

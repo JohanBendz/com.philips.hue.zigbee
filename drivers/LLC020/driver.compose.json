@@ -1,0 +1,43 @@
+{
+  "name": {
+    "en": "Go"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 6,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": "LLC020",
+    "deviceId": 528,
+    "profileId": 49246,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the light, or toggle the light to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}

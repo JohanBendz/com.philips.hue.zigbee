@@ -186,6 +186,7 @@ class ZwaveLightDevice extends ZwaveDevice {
 						});
 					}
 				}, 50);
+				return null;
 			},
 		});
 

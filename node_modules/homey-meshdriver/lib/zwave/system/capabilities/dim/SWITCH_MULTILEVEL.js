@@ -26,8 +26,9 @@ module.exports = {
 		};
 	},
 	setParserV4(value, options) {
-		const duration = (options.hasOwnProperty('duration') ? util.calculateZwaveDimDuration(options.duration) : FACTORY_DEFAULT_DIMMING_DURATION_V4);
-		if (this.hasCapability('onoff')) this.setCapabilityValue('onoff', value > 0);
+    // Buffer.from() is a fix for difference between V3/V4 dimming duration XML specification
+    const duration = (options.hasOwnProperty('duration') ? Buffer.from([util.calculateZwaveDimDuration(options.duration)]) : FACTORY_DEFAULT_DIMMING_DURATION_V4);
+    if (this.hasCapability('onoff')) this.setCapabilityValue('onoff', value > 0);
 		return {
 			Value: Math.round(value * 99),
 			'Dimming Duration': duration,

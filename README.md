@@ -3,6 +3,26 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v1.6.3
+Change:
+Implemented Composer
+
+Added support for:
+- Econic Wall light
+- Nyro Outdoor Pedestal
+- Nyro Outdoor Wall Light
+- Lily Outdoor XL Spotlight
+- Resonate Outdoor Wall Light
+- Aurelle Panel Rectangular
+- Fugato Triple Spotlight
+- Lightstrip Plus V4
+- Lightstrip Outdoor 2 meter
+- Lightstrip Outdoor 5 meter
+- Garnea Downlight
+- Being Pendant
+- Bulb 1600 Lumen White
+- Filament G125 E27
+
 ### v1.6.2
 Added:
 - New product ID's for a number of devices that was already supported by the app

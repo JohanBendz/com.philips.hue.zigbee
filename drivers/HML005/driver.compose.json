@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "Phoenix Table"
+  },
+  "$extends": ["light_white_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 12,
+      "usageOff": 0.5
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LLM010",
+      "LLM011",
+      "LLM012"
+    ],
+    "deviceId": 544,
+    "profileId": 49246,
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+      }
+    }
+  },
+  "settings": [
+    {
+      "id": "transition_time",
+      "type": "number",
+      "label": {
+        "en": "Transition Time"
+      },
+      "hint": {
+        "en": "This setting determines the time in seconds it takes to dim from one level to another."
+      },
+      "value": 1,
+      "attr": {
+        "min": 0,
+        "max": 6553
+      }
+    }
+  ]
+}
