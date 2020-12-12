@@ -5,15 +5,38 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   version="1.2"
-   id="Layer_1"
-   x="0px"
-   y="0px"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="icon.svg"
+   xml:space="preserve"
    viewBox="0 0 50.5 50.5"
-   xml:space="preserve"><metadata
+   y="0px"
+   x="0px"
+   id="Layer_1"
+   version="1.2"><sodipodi:namedview
+   inkscape:current-layer="Layer_1"
+   inkscape:window-maximized="1"
+   inkscape:window-y="-8"
+   inkscape:window-x="-8"
+   inkscape:cy="25.25"
+   inkscape:cx="25.25"
+   inkscape:zoom="16.237624"
+   showgrid="false"
+   id="namedview9"
+   inkscape:window-height="987"
+   inkscape:window-width="1680"
+   inkscape:pageshadow="2"
+   inkscape:pageopacity="0"
+   guidetolerance="10"
+   gridtolerance="10"
+   objecttolerance="10"
+   borderopacity="1"
+   bordercolor="#666666"
+   pagecolor="#ffffff" /><metadata
    id="metadata15"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
    id="defs13" />
 
 
@@ -21,9 +44,9 @@
 
 <g
    id="layer3" /><g
-   style="stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
-   id="layer2"><path
-     id="path825"
-     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99065396"
-     d="m 47.978801,26.898715 a 8.3099574,9.8594309 0 0 0 -6.024054,-8.60252 M 2.6636552,26.856801 A 8.7612895,10.007456 0 0 1 9.01489,18.125129 m -0.018031,0.0051 a 24.226275,9.9853523 0 0 1 32.982753,0.170769 m 5.824898,7.742653 A 22.507983,6.918638 0 0 1 36.877877,32.409807 22.507983,6.918638 0 0 1 13.46247,32.346519 22.507983,6.918638 0 0 1 2.9017293,25.922267 M 25.312204,29.41795 a 12.153502,3.4381838 0 0 1 -11.998909,-3.478674 12.153502,3.4381838 0 0 1 12.287109,-3.397208 12.153502,3.4381838 0 0 1 12.0184,3.473284 12.153502,3.4381838 0 0 1 -12.26804,3.402718 m -0.04854,0.58279 A 12.941431,3.8784105 0 0 1 12.525411,26.076775 12.941431,3.8784105 0 0 1 25.60911,22.244587 12.941431,3.8784105 0 0 1 38.406681,26.162592 12.941431,3.8784105 0 0 1 25.343286,30.000995 m -0.304653,3.662607 A 22.655147,6.7895081 0 0 1 2.6716726,26.794135 22.655147,6.7895081 0 0 1 25.575871,20.085542 22.655147,6.7895081 0 0 1 47.979179,26.944365 22.655147,6.7895081 0 0 1 25.110523,33.66384" /></g><g
+   id="layer2"
+   style="stroke-width:0.3;stroke-miterlimit:4;stroke-dasharray:none"><path
+     d="m 47.978801,26.898715 a 8.3099574,9.8594309 0 0 0 -6.024054,-8.60252 M 2.6636552,26.856801 A 8.7612895,10.007456 0 0 1 9.01489,18.125129 m -0.018031,0.0051 a 24.226275,9.9853523 0 0 1 32.982753,0.170769 m 5.824898,7.742653 A 22.507983,6.918638 0 0 1 36.877877,32.409807 22.507983,6.918638 0 0 1 13.46247,32.346519 22.507983,6.918638 0 0 1 2.9017293,25.922267 M 25.312204,29.41795 a 12.153502,3.4381838 0 0 1 -11.998909,-3.478674 12.153502,3.4381838 0 0 1 12.287109,-3.397208 12.153502,3.4381838 0 0 1 12.0184,3.473284 12.153502,3.4381838 0 0 1 -12.26804,3.402718 m -0.04854,0.58279 A 12.941431,3.8784105 0 0 1 12.525411,26.076775 12.941431,3.8784105 0 0 1 25.60911,22.244587 12.941431,3.8784105 0 0 1 38.406681,26.162592 12.941431,3.8784105 0 0 1 25.343286,30.000995 m -0.304653,3.662607 A 22.655147,6.7895081 0 0 1 2.6716726,26.794135 22.655147,6.7895081 0 0 1 25.575871,20.085542 22.655147,6.7895081 0 0 1 47.979179,26.944365 22.655147,6.7895081 0 0 1 25.110523,33.66384"
+     style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.99065396"
+     id="path825" /></g><g
    id="layer1" /></svg>
