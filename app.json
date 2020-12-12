@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Johan Bendz",
@@ -40,10 +40,12 @@
   "permissions": [],
   "drivers": [
     {
-      "name": {
-        "en": "Impress Outdoor Wall Light"
-      },
       "class": "light",
+      "icon": "/drivers/1742930P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1742930P7/assets/images/large.png",
+        "small": "/drivers/1742930P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -72,7 +74,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Impress Outdoor Wall Light"
       },
       "energy": {
         "approximation": {
@@ -80,15 +88,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/1742930P7/assets/images/large.png",
-        "small": "drivers/1742930P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744530P7",
         "deviceId": 269,
         "profileId": 260,
@@ -118,10 +122,12 @@
       "id": "1742930P7"
     },
     {
-      "name": {
-        "en": "Impress Outdoor Wall Light"
-      },
       "class": "light",
+      "icon": "/drivers/1743030P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743030P7/assets/images/large.png",
+        "small": "/drivers/1743030P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -150,7 +156,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Impress Outdoor Wall Light"
       },
       "energy": {
         "approximation": {
@@ -158,15 +170,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/1743030P7/assets/images/large.png",
-        "small": "drivers/1743030P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1743030P7",
           "1742930P7"
@@ -199,10 +207,12 @@
       "id": "1743030P7"
     },
     {
-      "name": {
-        "en": "Impress Outdoor Pedestal Light"
-      },
       "class": "light",
+      "icon": "/drivers/1743130P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743130P7/assets/images/large.png",
+        "small": "/drivers/1743130P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -231,7 +241,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Impress Outdoor Pedestal Light"
       },
       "energy": {
         "approximation": {
@@ -239,18 +255,15 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/1743130P7/assets/images/large.png",
-        "small": "drivers/1743130P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1743130P7",
-          "1745430P7"
+          "1745430P7",
+          "1743430P7"
         ],
         "deviceId": 528,
         "profileId": 49246,
@@ -280,10 +293,12 @@
       "id": "1743130P7"
     },
     {
-      "name": {
-        "en": "Impress Path Light"
-      },
       "class": "light",
+      "icon": "/drivers/1743230P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743230P7/assets/images/large.png",
+        "small": "/drivers/1743230P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -312,7 +327,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Impress Path Light"
       },
       "energy": {
         "approximation": {
@@ -320,15 +341,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/1743230P7/assets/images/large.png",
-        "small": "drivers/1743230P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743230P7",
         "deviceId": 269,
         "profileId": 260,
@@ -358,10 +375,12 @@
       "id": "1743230P7"
     },
     {
-      "name": {
-        "en": "Discover Outdoor Floodlight"
-      },
       "class": "light",
+      "icon": "/drivers/1743530P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743530P7/assets/images/large.png",
+        "small": "/drivers/1743530P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -391,22 +410,24 @@
             "duration": true
           }
         },
-        "energy": {
-          "approximation": {
-            "usageOn": 15,
-            "usageOff": 1
-          }
+        "onoff": {
+          "setOnDim": false
         }
       },
-      "images": {
-        "large": "drivers/1743530P7/assets/images/large.png",
-        "small": "drivers/1743530P7/assets/images/small.png"
+      "name": {
+        "en": "Discover Outdoor Floodlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743530P7",
         "deviceId": 528,
         "profileId": 49246,
@@ -436,10 +457,12 @@
       "id": "1743530P7"
     },
     {
-      "name": {
-        "en": "Welcome Outdoor Floodlight"
-      },
       "class": "light",
+      "icon": "/drivers/1743630P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743630P7/assets/images/large.png",
+        "small": "/drivers/1743630P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -449,7 +472,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Welcome Outdoor Floodlight"
       },
       "energy": {
         "approximation": {
@@ -457,15 +486,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/1743630P7/assets/images/large.png",
-        "small": "drivers/1743630P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743630P7",
         "deviceId": 256,
         "profileId": 49246,
@@ -495,10 +520,12 @@
       "id": "1743630P7"
     },
     {
-      "name": {
-        "en": "Econic light"
-      },
       "class": "light",
+      "icon": "/drivers/1743830P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743830P7/assets/images/large.png",
+        "small": "/drivers/1743830P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -527,7 +554,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Econic light"
       },
       "energy": {
         "approximation": {
@@ -535,15 +568,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/1743830P7/assets/images/large.png",
-        "small": "drivers/1743830P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1743830P7",
         "deviceId": 269,
         "profileId": 260,
@@ -573,10 +602,94 @@
       "id": "1743830P7"
     },
     {
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Closed front"
-      },
       "class": "light",
+      "icon": "/drivers/1743930P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1743930P7/assets/images/large.png",
+        "small": "/drivers/1743930P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Econic Wall light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1743930P7",
+        "deviceId": 528,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1743930P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1744430P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1744430P7/assets/images/large.png",
+        "small": "/drivers/1744430P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -586,7 +699,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Closed front"
       },
       "energy": {
         "approximation": {
@@ -594,15 +713,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/1744430P7/assets/images/large.png",
-        "small": "drivers/1744430P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744430P7",
         "deviceId": [
           256,
@@ -638,10 +753,12 @@
       "id": "1744430P7"
     },
     {
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Open front"
-      },
       "class": "light",
+      "icon": "/drivers/1744530P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1744530P7/assets/images/large.png",
+        "small": "/drivers/1744530P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -651,7 +768,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Open front"
       },
       "energy": {
         "approximation": {
@@ -659,15 +782,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/1744530P7/assets/images/large.png",
-        "small": "drivers/1744530P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744530P7",
         "deviceId": 256,
         "profileId": 49246,
@@ -697,10 +816,12 @@
       "id": "1744530P7"
     },
     {
-      "name": {
-        "en": "Fuzo Outdoor Wall Light - Tall open front"
-      },
       "class": "light",
+      "icon": "/drivers/1744630P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1744630P7/assets/images/large.png",
+        "small": "/drivers/1744630P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -710,7 +831,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fuzo Outdoor Wall Light - Tall open front"
       },
       "energy": {
         "approximation": {
@@ -718,15 +845,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/1744630P7/assets/images/large.png",
-        "small": "drivers/1744630P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "1744630P7",
         "deviceId": 256,
         "profileId": 49246,
@@ -756,10 +879,12 @@
       "id": "1744630P7"
     },
     {
-      "name": {
-        "en": "Daylo Outdoor Wall Light"
-      },
       "class": "light",
+      "icon": "/drivers/1745530P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1745530P7/assets/images/large.png",
+        "small": "/drivers/1745530P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -788,7 +913,177 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Nyro Outdoor Pedestal"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 13.5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1745530P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1745530P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1745630P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1745630P7/assets/images/large.png",
+        "small": "/drivers/1745630P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Nyro Outdoor Wall Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 13.5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1745630P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1745630P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746230P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746230P7/assets/images/large.png",
+        "small": "/drivers/1746230P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lily Outdoor XL Spotlight"
       },
       "energy": {
         "approximation": {
@@ -796,15 +1091,178 @@
           "usageOff": 1
         }
       },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1746230P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1746230P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746447P7/assets/icon.svg",
       "images": {
-        "large": "drivers/1746530P7/assets/images/large.png",
-        "small": "drivers/1746530P7/assets/images/small.png"
+        "large": "/drivers/1746447P7/assets/images/large.png",
+        "small": "/drivers/1746447P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Resonate Outdoor Wall Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "1746447P7",
+          "1746430P7"
+        ],
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1746447P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746530P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746530P7/assets/images/large.png",
+        "small": "/drivers/1746530P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Daylo Outdoor Wall Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "1746530P7",
           "1746547P7"
@@ -837,10 +1295,84 @@
       "id": "1746530P7"
     },
     {
-      "name": {
-        "en": "Ensis Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/3216331P6/assets/icon.svg",
+      "images": {
+        "large": "/drivers/3216331P6/assets/images/large.png",
+        "small": "/drivers/3216331P6/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Aurelle Panel Rectangular"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 46.5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "3216331P6"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "3216331P6"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/4090331P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090331P9/assets/images/large.png",
+        "small": "/drivers/4090331P9/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -869,7 +1401,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Ensis Pendant"
       },
       "energy": {
         "approximation": {
@@ -877,15 +1415,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/4090331P9/assets/images/large.png",
-        "small": "drivers/4090331P9/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090331P9",
         "deviceId": 528,
         "profileId": 49246,
@@ -915,10 +1449,12 @@
       "id": "4090331P9"
     },
     {
-      "name": {
-        "en": "Ensis Pendant - Upper light"
-      },
       "class": "light",
+      "icon": "/drivers/4090331P9_01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090331P9_01/assets/images/large.png",
+        "small": "/drivers/4090331P9_01/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -947,7 +1483,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Ensis Pendant - Upper light"
       },
       "energy": {
         "approximation": {
@@ -955,15 +1497,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/4090331P9_01/assets/images/large.png",
-        "small": "drivers/4090331P9_01/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "4090331P9_01",
           "LCP001"
@@ -996,10 +1534,12 @@
       "id": "4090331P9_01"
     },
     {
-      "name": {
-        "en": "Ensis Pendant - Lower light"
-      },
       "class": "light",
+      "icon": "/drivers/4090331P9_02/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090331P9_02/assets/images/large.png",
+        "small": "/drivers/4090331P9_02/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1028,7 +1568,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Ensis Pendant - Lower light"
       },
       "energy": {
         "approximation": {
@@ -1036,15 +1582,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/4090331P9_02/assets/images/large.png",
-        "small": "drivers/4090331P9_02/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "4090331P9_02",
           "LCP002"
@@ -1077,10 +1619,12 @@
       "id": "4090331P9_02"
     },
     {
-      "name": {
-        "en": "Flourish Ceiling Light White and Color"
-      },
       "class": "light",
+      "icon": "/drivers/4090431P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090431P9/assets/images/large.png",
+        "small": "/drivers/4090431P9/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1109,7 +1653,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Flourish Ceiling Light White and Color"
       },
       "energy": {
         "approximation": {
@@ -1117,15 +1667,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/4090431P9/assets/images/large.png",
-        "small": "drivers/4090431P9/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090431P9",
         "deviceId": 269,
         "profileId": 260,
@@ -1155,10 +1701,12 @@
       "id": "4090431P9"
     },
     {
-      "name": {
-        "en": "Fluorish Ceiling Light"
-      },
       "class": "light",
+      "icon": "/drivers/4090531P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090531P9/assets/images/large.png",
+        "small": "/drivers/4090531P9/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1187,7 +1735,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fluorish Ceiling Light"
       },
       "energy": {
         "approximation": {
@@ -1195,15 +1749,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/4090531P9/assets/images/large.png",
-        "small": "drivers/4090531P9/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090531P9",
         "deviceId": 269,
         "profileId": 260,
@@ -1233,10 +1783,12 @@
       "id": "4090531P9"
     },
     {
-      "name": {
-        "en": "Flourish Pendant Light"
-      },
       "class": "light",
+      "icon": "/drivers/4090631P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/4090631P9/assets/images/large.png",
+        "small": "/drivers/4090631P9/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1265,7 +1817,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Flourish Pendant Light"
       },
       "energy": {
         "approximation": {
@@ -1273,15 +1831,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/4090631P9/assets/images/large.png",
-        "small": "drivers/4090631P9/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "4090631P9",
         "deviceId": 269,
         "profileId": 260,
@@ -1311,10 +1865,12 @@
       "id": "4090631P9"
     },
     {
-      "name": {
-        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
-      },
       "class": "light",
+      "icon": "/drivers/5045131P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5045131P7/assets/images/large.png",
+        "small": "/drivers/5045131P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1343,7 +1899,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Centura GU10 Recessed Spotlight White and Color Ambiance"
       },
       "energy": {
         "approximation": {
@@ -1351,15 +1913,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/5045131P7/assets/images/large.png",
-        "small": "drivers/5045131P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "5045131P7",
           "5045148P7"
@@ -1392,10 +1950,12 @@
       "id": "5045131P7"
     },
     {
-      "name": {
-        "en": "Fugato Double Spotlight"
-      },
       "class": "light",
+      "icon": "/drivers/5063230P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5063230P7/assets/images/large.png",
+        "small": "/drivers/5063230P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1424,7 +1984,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fugato Double Spotlight"
       },
       "energy": {
         "approximation": {
@@ -1432,15 +1998,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/5063230P7/assets/images/large.png",
-        "small": "drivers/5063230P7/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "5063230P7",
         "deviceId": 269,
         "profileId": 260,
@@ -1470,10 +2032,12 @@
       "id": "5063230P7"
     },
     {
-      "name": {
-        "en": "Beyond Table"
-      },
       "class": "light",
+      "icon": "/drivers/5063330P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5063330P7/assets/images/large.png",
+        "small": "/drivers/5063330P7/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1502,7 +2066,95 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fugato Triple Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "5063330P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5063330P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/HBL001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HBL001/assets/images/large.png",
+        "small": "/drivers/HBL001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Beyond Table"
       },
       "energy": {
         "approximation": {
@@ -1510,15 +2162,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/HBL001/assets/images/large.png",
-        "small": "drivers/HBL001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL001",
         "deviceId": 528,
         "profileId": 49246,
@@ -1548,10 +2196,12 @@
       "id": "HBL001"
     },
     {
-      "name": {
-        "en": "Beyond Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/HBL002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HBL002/assets/images/large.png",
+        "small": "/drivers/HBL002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1580,7 +2230,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Beyond Pendant"
       },
       "energy": {
         "approximation": {
@@ -1588,15 +2244,11 @@
           "usageOff": 0.4
         }
       },
-      "images": {
-        "large": "drivers/HBL002/assets/images/large.png",
-        "small": "drivers/HBL002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL002",
         "deviceId": 528,
         "profileId": 49246,
@@ -1626,10 +2278,12 @@
       "id": "HBL002"
     },
     {
-      "name": {
-        "en": "Beyond Ceiling"
-      },
       "class": "light",
+      "icon": "/drivers/HBL003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HBL003/assets/images/large.png",
+        "small": "/drivers/HBL003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1658,7 +2312,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Beyond Ceiling"
       },
       "energy": {
         "approximation": {
@@ -1666,15 +2326,11 @@
           "usageOff": 0.8
         }
       },
-      "images": {
-        "large": "drivers/HBL003/assets/images/large.png",
-        "small": "drivers/HBL003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HBL003",
         "deviceId": 528,
         "profileId": 49246,
@@ -1704,14 +2360,17 @@
       "id": "HBL003"
     },
     {
-      "name": {
-        "en": "Phoenix Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/HML003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HML003/assets/images/large.png",
+        "small": "/drivers/HML003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1723,7 +2382,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Phoenix Pendant"
       },
       "energy": {
         "approximation": {
@@ -1731,15 +2396,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/HML003/assets/images/large.png",
-        "small": "drivers/HML003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLM010",
           "LLM011",
@@ -1773,14 +2434,17 @@
       "id": "HML003"
     },
     {
-      "name": {
-        "en": "Phoenix Wall Light"
-      },
       "class": "light",
+      "icon": "/drivers/HML004/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HML004/assets/images/large.png",
+        "small": "/drivers/HML004/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1792,7 +2456,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Phoenix Wall Light"
       },
       "energy": {
         "approximation": {
@@ -1800,15 +2470,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/HML004/assets/images/large.png",
-        "small": "drivers/HML004/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "HML004",
         "deviceId": 544,
         "profileId": 49246,
@@ -1838,14 +2504,17 @@
       "id": "HML004"
     },
     {
-      "name": {
-        "en": "Phoenix Table"
-      },
       "class": "light",
+      "icon": "/drivers/HML005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HML005/assets/images/large.png",
+        "small": "/drivers/HML005/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -1857,7 +2526,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Phoenix Table"
       },
       "energy": {
         "approximation": {
@@ -1865,15 +2540,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/HML005/assets/images/large.png",
-        "small": "drivers/HML005/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLM010",
           "LLM011",
@@ -1907,10 +2578,12 @@
       "id": "HML005"
     },
     {
-      "name": {
-        "en": "E27 White and Color Ambiance BT"
-      },
       "class": "light",
+      "icon": "/drivers/LCA001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCA001/assets/images/large.png",
+        "small": "/drivers/LCA001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -1939,7 +2612,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "E27 White and Color Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -1947,15 +2626,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LCA001/assets/images/large.png",
-        "small": "drivers/LCA001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCA001"
         ],
@@ -1987,10 +2662,12 @@
       "id": "LCA001"
     },
     {
-      "name": {
-        "en": "Calla Outdoor Path Light"
-      },
       "class": "light",
+      "icon": "/drivers/LCF002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCF002/assets/images/large.png",
+        "small": "/drivers/LCF002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2019,7 +2696,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Calla Outdoor Path Light"
       },
       "energy": {
         "approximation": {
@@ -2027,15 +2710,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LCF002/assets/images/large.png",
-        "small": "drivers/LCF002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCF002",
         "deviceId": 528,
         "profileId": 49246,
@@ -2065,10 +2744,12 @@
       "id": "LCF002"
     },
     {
-      "name": {
-        "en": "Signe Floor Light"
-      },
       "class": "light",
+      "icon": "/drivers/LCF003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCF003/assets/images/large.png",
+        "small": "/drivers/LCF003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2097,7 +2778,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Signe Floor Light"
       },
       "energy": {
         "approximation": {
@@ -2105,15 +2792,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LCF003/assets/images/large.png",
-        "small": "drivers/LCF003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCF003",
         "deviceId": 528,
         "profileId": 49246,
@@ -2143,10 +2826,12 @@
       "id": "LCF003"
     },
     {
-      "name": {
-        "en": "GU10 Spot Color"
-      },
       "class": "light",
+      "icon": "/drivers/LCG002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCG002/assets/images/large.png",
+        "small": "/drivers/LCG002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2175,7 +2860,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "GU10 Spot Color"
       },
       "energy": {
         "approximation": {
@@ -2183,15 +2874,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LCG002/assets/images/large.png",
-        "small": "drivers/LCG002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCG002",
         "deviceId": 269,
         "profileId": 260,
@@ -2221,10 +2908,12 @@
       "id": "LCG002"
     },
     {
-      "name": {
-        "en": "Lily Outdoor Spot"
-      },
       "class": "light",
+      "icon": "/drivers/LCL001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCL001/assets/images/large.png",
+        "small": "/drivers/LCL001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2253,7 +2942,259 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Lightstrip Plus V4"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 20.5,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCL001",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCL001"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCL002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCL002/assets/images/large.png",
+        "small": "/drivers/LCL002/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightstrip Outdoor 2 meter"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 19,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCL002",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCL002"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCL003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCL003/assets/images/large.png",
+        "small": "/drivers/LCL003/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightstrip Outdoor 5 meter"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 37.5,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCL003",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCL003"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCS001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCS001/assets/images/large.png",
+        "small": "/drivers/LCS001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lily Outdoor Spot"
       },
       "energy": {
         "approximation": {
@@ -2261,15 +3202,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LCS001/assets/images/large.png",
-        "small": "drivers/LCS001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCS001",
         "deviceId": 528,
         "profileId": 49246,
@@ -2299,10 +3236,12 @@
       "id": "LCS001"
     },
     {
-      "name": {
-        "en": "Bulb A19"
-      },
       "class": "light",
+      "icon": "/drivers/LCT000/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCT000/assets/images/large.png",
+        "small": "/drivers/LCT000/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2331,7 +3270,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Bulb A19"
       },
       "energy": {
         "approximation": {
@@ -2339,15 +3284,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LCT000/assets/images/large.png",
-        "small": "drivers/LCT000/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCT001",
           "LCT007",
@@ -2384,10 +3325,12 @@
       "id": "LCT000"
     },
     {
-      "name": {
-        "en": "Connected Lamp GU10"
-      },
       "class": "light",
+      "icon": "/drivers/LCT003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCT003/assets/images/large.png",
+        "small": "/drivers/LCT003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2416,7 +3359,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Connected Lamp GU10"
       },
       "energy": {
         "approximation": {
@@ -2424,15 +3373,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LCT003/assets/images/large.png",
-        "small": "drivers/LCT003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT003",
         "deviceId": 528,
         "profileId": 49246,
@@ -2462,10 +3407,12 @@
       "id": "LCT003"
     },
     {
-      "name": {
-        "en": "Candle Color"
-      },
       "class": "light",
+      "icon": "/drivers/LCT012/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCT012/assets/images/large.png",
+        "small": "/drivers/LCT012/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2494,7 +3441,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Candle Color"
       },
       "energy": {
         "approximation": {
@@ -2502,15 +3455,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LCT012/assets/images/large.png",
-        "small": "drivers/LCT012/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT012",
         "deviceId": 528,
         "profileId": 49246,
@@ -2540,10 +3489,12 @@
       "id": "LCT012"
     },
     {
-      "name": {
-        "en": "Play Lightbar"
-      },
       "class": "light",
+      "icon": "/drivers/LCT024/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCT024/assets/images/large.png",
+        "small": "/drivers/LCT024/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2572,7 +3523,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Play Lightbar"
       },
       "energy": {
         "approximation": {
@@ -2580,15 +3537,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LCT024/assets/images/large.png",
-        "small": "drivers/LCT024/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCT024",
           "440400982841"
@@ -2621,10 +3574,12 @@
       "id": "LCT024"
     },
     {
-      "name": {
-        "en": "Go BT"
-      },
       "class": "light",
+      "icon": "/drivers/LCT026/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCT026/assets/images/large.png",
+        "small": "/drivers/LCT026/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2653,7 +3608,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Go BT"
       },
       "energy": {
         "approximation": {
@@ -2661,15 +3622,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LCT026/assets/images/large.png",
-        "small": "drivers/LCT026/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LCT026",
         "deviceId": 269,
         "profileId": 260,
@@ -2699,10 +3656,12 @@
       "id": "LCT026"
     },
     {
-      "name": {
-        "en": "Sana Wall Light"
-      },
       "class": "light",
+      "icon": "/drivers/LCW001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCW001/assets/images/large.png",
+        "small": "/drivers/LCW001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2731,7 +3690,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Sana Wall Light"
       },
       "energy": {
         "approximation": {
@@ -2739,15 +3704,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LCW001/assets/images/large.png",
-        "small": "drivers/LCW001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LCW001",
           "4090130P9",
@@ -2781,10 +3742,12 @@
       "id": "LCW001"
     },
     {
-      "name": {
-        "en": "Iris Living Colors"
-      },
       "class": "light",
+      "icon": "/drivers/LLC010/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LLC010/assets/images/large.png",
+        "small": "/drivers/LLC010/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2807,7 +3770,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Iris Living Colors"
       },
       "energy": {
         "approximation": {
@@ -2815,15 +3784,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LLC010/assets/images/large.png",
-        "small": "drivers/LLC010/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLC010",
           "929002376201"
@@ -2856,10 +3821,12 @@
       "id": "LLC010"
     },
     {
-      "name": {
-        "en": "Bloom/Aura Living Colors"
-      },
       "class": "light",
+      "icon": "/drivers/LLC011/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LLC011/assets/images/large.png",
+        "small": "/drivers/LLC011/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2882,17 +3849,19 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
-      "images": {
-        "large": "drivers/LLC011/assets/images/large.png",
-        "small": "drivers/LLC011/assets/images/small.png"
+      "name": {
+        "en": "Bloom/Aura Living Colors"
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LLC011",
           "LLC012",
@@ -2927,10 +3896,12 @@
       "id": "LLC011"
     },
     {
-      "name": {
-        "en": "Go"
-      },
       "class": "light",
+      "icon": "/drivers/LLC020/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LLC020/assets/images/large.png",
+        "small": "/drivers/LLC020/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -2959,7 +3930,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Go"
       },
       "energy": {
         "approximation": {
@@ -2967,15 +3944,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LLC020/assets/images/large.png",
-        "small": "drivers/LLC020/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LLC020",
         "deviceId": 528,
         "profileId": 49246,
@@ -3012,15 +3985,16 @@
       "capabilities": [
         "onoff"
       ],
+      "icon": "/drivers/LOM002/assets/icon.svg",
       "images": {
-        "large": "drivers/LOM002/assets/images/large.png",
-        "small": "drivers/LOM002/assets/images/small.png"
+        "large": "/drivers/LOM002/assets/images/large.png",
+        "small": "/drivers/LOM002/assets/images/small.png"
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LOM001",
           "LOM002",
@@ -3038,10 +4012,12 @@
       "id": "LOM002"
     },
     {
-      "name": {
-        "en": "LightStrips"
-      },
       "class": "light",
+      "icon": "/drivers/LST001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LST001/assets/images/large.png",
+        "small": "/drivers/LST001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -3064,7 +4040,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "LightStrips"
       },
       "energy": {
         "approximation": {
@@ -3072,15 +4054,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LST001/assets/images/large.png",
-        "small": "drivers/LST001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LST001",
         "deviceId": 512,
         "profileId": 49246,
@@ -3110,10 +4088,12 @@
       "id": "LST001"
     },
     {
-      "name": {
-        "en": "LightStrips Plus"
-      },
       "class": "light",
+      "icon": "/drivers/LST002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LST002/assets/images/large.png",
+        "small": "/drivers/LST002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -3142,7 +4122,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "LightStrips Plus"
       },
       "energy": {
         "approximation": {
@@ -3150,15 +4136,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LST002/assets/images/large.png",
-        "small": "drivers/LST002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LST002",
         "deviceId": 528,
         "profileId": 49246,
@@ -3188,10 +4170,12 @@
       "id": "LST002"
     },
     {
-      "name": {
-        "en": "Lightstrip Outdoor"
-      },
       "class": "light",
+      "icon": "/drivers/LST003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LST003/assets/images/large.png",
+        "small": "/drivers/LST003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -3220,7 +4204,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Lightstrip Outdoor"
       },
       "energy": {
         "approximation": {
@@ -3228,15 +4218,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LST003/assets/images/large.png",
-        "small": "drivers/LST003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LST003",
           "LST004"
@@ -3269,14 +4255,17 @@
       "id": "LST003"
     },
     {
-      "name": {
-        "en": "E27 White Ambiance BT"
-      },
       "class": "light",
+      "icon": "/drivers/LTA001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTA001/assets/images/large.png",
+        "small": "/drivers/LTA001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3288,7 +4277,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "E27 White Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -3296,15 +4291,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LTA001/assets/images/large.png",
-        "small": "drivers/LTA001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTA001"
         ],
@@ -3336,10 +4327,12 @@
       "id": "LTA001"
     },
     {
-      "name": {
-        "en": "Being Ceiling Lamp"
-      },
       "class": "light",
+      "icon": "/drivers/LTC001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC001/assets/images/large.png",
+        "small": "/drivers/LTC001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -3356,7 +4349,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Being Ceiling Lamp"
       },
       "energy": {
         "approximation": {
@@ -3364,15 +4363,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LTC001/assets/images/large.png",
-        "small": "drivers/LTC001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC001",
           "3261031P6"
@@ -3405,10 +4400,12 @@
       "id": "LTC001"
     },
     {
-      "name": {
-        "en": "Fair Ceiling Lamp"
-      },
       "class": "light",
+      "icon": "/drivers/LTC002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC002/assets/images/large.png",
+        "small": "/drivers/LTC002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
@@ -3425,7 +4422,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fair Ceiling Lamp"
       },
       "energy": {
         "approximation": {
@@ -3433,15 +4436,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LTC002/assets/images/large.png",
-        "small": "drivers/LTC002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC002"
         ],
@@ -3473,14 +4472,17 @@
       "id": "LTC002"
     },
     {
-      "name": {
-        "en": "Still Ceiling"
-      },
       "class": "light",
+      "icon": "/drivers/LTC003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC003/assets/images/large.png",
+        "small": "/drivers/LTC003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3492,7 +4494,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Still Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3500,15 +4508,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTC003/assets/images/large.png",
-        "small": "drivers/LTC003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC003",
           "3261330P6"
@@ -3541,14 +4545,17 @@
       "id": "LTC003"
     },
     {
-      "name": {
-        "en": "Cher Ceiling"
-      },
       "class": "light",
+      "icon": "/drivers/LTC011/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC011/assets/images/large.png",
+        "small": "/drivers/LTC011/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3560,7 +4567,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Cher Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3568,15 +4581,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTC011/assets/images/large.png",
-        "small": "drivers/LTC011/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC011",
         "deviceId": 544,
         "profileId": 49246,
@@ -3606,14 +4615,17 @@
       "id": "LTC011"
     },
     {
-      "name": {
-        "en": "Struana Ceiling"
-      },
       "class": "light",
+      "icon": "/drivers/LTC012/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC012/assets/images/large.png",
+        "small": "/drivers/LTC012/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3625,7 +4637,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Struana Ceiling"
       },
       "energy": {
         "approximation": {
@@ -3633,15 +4651,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTC012/assets/images/large.png",
-        "small": "drivers/LTC012/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC012",
         "deviceId": 544,
         "profileId": 49246,
@@ -3671,14 +4685,17 @@
       "id": "LTC012"
     },
     {
-      "name": {
-        "en": "Aurelle Panel Square"
-      },
       "class": "light",
+      "icon": "/drivers/LTC014/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC014/assets/images/large.png",
+        "small": "/drivers/LTC014/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3690,17 +4707,19 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
-      "images": {
-        "large": "drivers/LTC014/assets/images/large.png",
-        "small": "drivers/LTC014/assets/images/small.png"
+      "name": {
+        "en": "Aurelle Panel Square"
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC014",
         "deviceId": 544,
         "profileId": 49246,
@@ -3730,14 +4749,17 @@
       "id": "LTC014"
     },
     {
-      "name": {
-        "en": "Aurelle Panel Light"
-      },
       "class": "light",
+      "icon": "/drivers/LTC015/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC015/assets/images/large.png",
+        "small": "/drivers/LTC015/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3749,17 +4771,19 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
       },
-      "images": {
-        "large": "drivers/LTC015/assets/images/large.png",
-        "small": "drivers/LTC015/assets/images/small.png"
+      "name": {
+        "en": "Aurelle Panel Light"
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTC012",
           "LTC015",
@@ -3794,14 +4818,17 @@
       "id": "LTC015"
     },
     {
-      "name": {
-        "en": "Adore Bathroom Ceiling White Ambience"
-      },
       "class": "light",
+      "icon": "/drivers/LTC021/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTC021/assets/images/large.png",
+        "small": "/drivers/LTC021/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3813,7 +4840,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Adore Bathroom Ceiling White Ambience"
       },
       "energy": {
         "approximation": {
@@ -3821,15 +4854,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LTC021/assets/images/large.png",
-        "small": "drivers/LTC021/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTC021",
         "deviceId": 544,
         "profileId": 49246,
@@ -3859,14 +4888,17 @@
       "id": "LTC021"
     },
     {
-      "name": {
-        "en": "GU10 White Ambiance BT"
-      },
       "class": "light",
+      "icon": "/drivers/LTD011/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTD011/assets/images/large.png",
+        "small": "/drivers/LTD011/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3878,7 +4910,83 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Garnea Downlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTD011",
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTD011"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LTG002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTG002/assets/images/large.png",
+        "small": "/drivers/LTG002/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "GU10 White Ambiance BT"
       },
       "energy": {
         "approximation": {
@@ -3886,15 +4994,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LTG002/assets/images/large.png",
-        "small": "drivers/LTG002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTG002",
         "deviceId": 268,
         "profileId": 260,
@@ -3924,14 +5028,17 @@
       "id": "LTG002"
     },
     {
-      "name": {
-        "en": "Cher Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/LTP001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTP001/assets/images/large.png",
+        "small": "/drivers/LTP001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -3943,7 +5050,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Cher Pendant"
       },
       "energy": {
         "approximation": {
@@ -3951,15 +5064,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTP001/assets/images/large.png",
-        "small": "drivers/LTP001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTP001",
           "4076130P6"
@@ -3992,14 +5101,17 @@
       "id": "LTP001"
     },
     {
-      "name": {
-        "en": "Amaze Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/LTP002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTP002/assets/images/large.png",
+        "small": "/drivers/LTP002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4011,7 +5123,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Amaze Pendant"
       },
       "energy": {
         "approximation": {
@@ -4019,15 +5137,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTP002/assets/images/large.png",
-        "small": "drivers/LTP002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTP002",
         "deviceId": 544,
         "profileId": 49246,
@@ -4057,17 +5171,32 @@
       "id": "LTP002"
     },
     {
-      "name": {
-        "en": "Fair Pendant"
-      },
       "class": "light",
+      "icon": "/drivers/LTP003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTP003/assets/images/large.png",
+        "small": "/drivers/LTP003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
           "opts": {
             "duration": true
           }
@@ -4076,7 +5205,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Fair Pendant"
       },
       "energy": {
         "approximation": {
@@ -4084,15 +5219,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LTP003/assets/images/large.png",
-        "small": "drivers/LTP003/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTP003",
         "deviceId": 544,
         "profileId": 49246,
@@ -4122,14 +5253,17 @@
       "id": "LTP003"
     },
     {
-      "name": {
-        "en": "Bulb A19 White Ambiance"
-      },
       "class": "light",
+      "icon": "/drivers/LTP008/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTP008/assets/images/large.png",
+        "small": "/drivers/LTP008/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4141,7 +5275,95 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Being Pendant"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 39,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTP008",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTP008"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LTW000/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTW000/assets/images/large.png",
+        "small": "/drivers/LTW000/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb A19 White Ambiance"
       },
       "energy": {
         "approximation": {
@@ -4149,15 +5371,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LTW000/assets/images/large.png",
-        "small": "drivers/LTW000/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW001",
           "LTW004",
@@ -4192,14 +5410,17 @@
       "id": "LTW000"
     },
     {
-      "name": {
-        "en": "Candle Ambiance"
-      },
       "class": "light",
+      "icon": "/drivers/LTW012/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTW012/assets/images/large.png",
+        "small": "/drivers/LTW012/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4211,7 +5432,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Candle Ambiance"
       },
       "energy": {
         "approximation": {
@@ -4219,15 +5446,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LTW012/assets/images/large.png",
-        "small": "drivers/LTW012/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LTW012",
         "deviceId": 544,
         "profileId": 49246,
@@ -4257,14 +5480,17 @@
       "id": "LTW012"
     },
     {
-      "name": {
-        "en": "Spot Ambiance"
-      },
       "class": "light",
+      "icon": "/drivers/LTW013/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTW013/assets/images/large.png",
+        "small": "/drivers/LTW013/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4276,7 +5502,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Spot Ambiance"
       },
       "energy": {
         "approximation": {
@@ -4284,15 +5516,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LTW013/assets/images/large.png",
-        "small": "drivers/LTW013/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW013",
           "LTW014"
@@ -4325,14 +5553,17 @@
       "id": "LTW013"
     },
     {
-      "name": {
-        "en": "Adore Bathroom mirror light"
-      },
       "class": "light",
+      "icon": "/drivers/LTW017/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTW017/assets/images/large.png",
+        "small": "/drivers/LTW017/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim",
-        "light_temperature"
+        "light_temperature",
+        "light_mode"
       ],
       "capabilitiesOptions": {
         "dim": {
@@ -4344,7 +5575,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Adore Bathroom mirror light"
       },
       "energy": {
         "approximation": {
@@ -4352,15 +5589,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LTW017/assets/images/large.png",
-        "small": "drivers/LTW017/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LTW017",
           "3417711P6"
@@ -4393,10 +5626,12 @@
       "id": "LTW017"
     },
     {
-      "name": {
-        "en": "9W A60 E27 EUR White"
-      },
       "class": "light",
+      "icon": "/drivers/LWA001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWA001/assets/images/large.png",
+        "small": "/drivers/LWA001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4406,7 +5641,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "9W A60 E27 EUR White"
       },
       "energy": {
         "approximation": {
@@ -4414,15 +5655,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LWA001/assets/images/large.png",
-        "small": "drivers/LWA001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWA001",
         "deviceId": 257,
         "profileId": 260,
@@ -4452,10 +5689,12 @@
       "id": "LWA001"
     },
     {
-      "name": {
-        "en": "Filament A60"
-      },
       "class": "light",
+      "icon": "/drivers/LWA004/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWA004/assets/images/large.png",
+        "small": "/drivers/LWA004/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4465,7 +5704,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Filament A60"
       },
       "energy": {
         "approximation": {
@@ -4473,15 +5718,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LWA004/assets/images/large.png",
-        "small": "drivers/LWA004/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWA004",
         "deviceId": 257,
         "profileId": 260,
@@ -4511,10 +5752,12 @@
       "id": "LWA004"
     },
     {
-      "name": {
-        "en": "Bulb White"
-      },
       "class": "light",
+      "icon": "/drivers/LWA009/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWA009/assets/images/large.png",
+        "small": "/drivers/LWA009/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4524,7 +5767,76 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Bulb 1600 Lumen White"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15.5,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWA009",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWA009"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LWB000/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWB000/assets/images/large.png",
+        "small": "/drivers/LWB000/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb White"
       },
       "energy": {
         "approximation": {
@@ -4532,15 +5844,11 @@
           "usageOff": 0.5
         }
       },
-      "images": {
-        "large": "drivers/LWB000/assets/images/large.png",
-        "small": "drivers/LWB000/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWB010",
           "LWB014",
@@ -4577,10 +5885,12 @@
       "id": "LWB000"
     },
     {
-      "name": {
-        "en": "E14 White Candle BT"
-      },
       "class": "light",
+      "icon": "/drivers/LWE002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWE002/assets/images/large.png",
+        "small": "/drivers/LWE002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4590,7 +5900,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "E14 White Candle BT"
       },
       "energy": {
         "approximation": {
@@ -4598,15 +5914,11 @@
           "usageOff": 0.1
         }
       },
-      "images": {
-        "large": "drivers/LWE002/assets/images/large.png",
-        "small": "drivers/LWE002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWE002",
         "deviceId": 257,
         "profileId": 260,
@@ -4636,10 +5948,12 @@
       "id": "LWE002"
     },
     {
-      "name": {
-        "en": "GU10 White PF"
-      },
       "class": "light",
+      "icon": "/drivers/LWG001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWG001/assets/images/large.png",
+        "small": "/drivers/LWG001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4649,7 +5963,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "GU10 White PF"
       },
       "energy": {
         "approximation": {
@@ -4657,15 +5977,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LWG001/assets/images/large.png",
-        "small": "drivers/LWG001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWG001",
         "deviceId": 256,
         "profileId": 49246,
@@ -4695,10 +6011,12 @@
       "id": "LWG001"
     },
     {
-      "name": {
-        "en": "GU10 White BT"
-      },
       "class": "light",
+      "icon": "/drivers/LWG004/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWG004/assets/images/large.png",
+        "small": "/drivers/LWG004/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4708,7 +6026,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "GU10 White BT"
       },
       "energy": {
         "approximation": {
@@ -4716,15 +6040,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LWG004/assets/images/large.png",
-        "small": "drivers/LWG004/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWG004",
         "deviceId": 257,
         "profileId": 260,
@@ -4754,10 +6074,12 @@
       "id": "LWG004"
     },
     {
-      "name": {
-        "en": "Filament G93"
-      },
       "class": "light",
+      "icon": "/drivers/LWO001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWO001/assets/images/large.png",
+        "small": "/drivers/LWO001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4767,7 +6089,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Filament G93"
       },
       "energy": {
         "approximation": {
@@ -4775,15 +6103,11 @@
           "usageOff": 0.2
         }
       },
-      "images": {
-        "large": "drivers/LWO001/assets/images/large.png",
-        "small": "drivers/LWO001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWO001",
         "deviceId": 257,
         "profileId": 260,
@@ -4813,10 +6137,12 @@
       "id": "LWO001"
     },
     {
-      "name": {
-        "en": "Filament ST64"
-      },
       "class": "light",
+      "icon": "/drivers/LWO003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWO003/assets/images/large.png",
+        "small": "/drivers/LWO003/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4826,7 +6152,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Filament G125 E27"
       },
       "energy": {
         "approximation": {
@@ -4834,15 +6166,74 @@
           "usageOff": 0.2
         }
       },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWO003",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWO003"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LWV001/assets/icon.svg",
       "images": {
-        "large": "drivers/LWV001/assets/images/large.png",
-        "small": "drivers/LWV001/assets/images/small.png"
+        "large": "/drivers/LWV001/assets/images/large.png",
+        "small": "/drivers/LWV001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament ST64"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": "LWV001",
         "deviceId": 257,
         "profileId": 260,
@@ -4872,10 +6263,12 @@
       "id": "LWV001"
     },
     {
-      "name": {
-        "en": "Lucca Outdoor Garden Light"
-      },
       "class": "light",
+      "icon": "/drivers/LWW001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWW001/assets/images/large.png",
+        "small": "/drivers/LWW001/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4885,7 +6278,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Lucca Outdoor Garden Light"
       },
       "energy": {
         "approximation": {
@@ -4893,15 +6292,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LWW001/assets/images/large.png",
-        "small": "drivers/LWW001/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWW001",
           "1740293P0",
@@ -4935,10 +6330,12 @@
       "id": "LWW001"
     },
     {
-      "name": {
-        "en": "Lucca Outdoor Post"
-      },
       "class": "light",
+      "icon": "/drivers/LWW002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWW002/assets/images/large.png",
+        "small": "/drivers/LWW002/assets/images/small.png"
+      },
       "capabilities": [
         "onoff",
         "dim"
@@ -4948,7 +6345,13 @@
           "opts": {
             "duration": true
           }
+        },
+        "onoff": {
+          "setOnDim": false
         }
+      },
+      "name": {
+        "en": "Lucca Outdoor Post"
       },
       "energy": {
         "approximation": {
@@ -4956,15 +6359,11 @@
           "usageOff": 1
         }
       },
-      "images": {
-        "large": "drivers/LWW002/assets/images/large.png",
-        "small": "drivers/LWW002/assets/images/small.png"
-      },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "LWW002",
           "1740393P0",
@@ -5010,9 +6409,9 @@
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "RWL021",
           "RWL020"
@@ -5029,9 +6428,10 @@
           }
         }
       },
+      "icon": "/drivers/RWL000/assets/icon.svg",
       "images": {
-        "large": "/drivers/RWL000/assets/images/large.jpg",
-        "small": "/drivers/RWL000/assets/images/small.jpg"
+        "large": "/drivers/RWL000/assets/images/large.png",
+        "small": "/drivers/RWL000/assets/images/small.png"
       },
       "id": "RWL000"
     },
@@ -5054,9 +6454,9 @@
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "SML002",
           "9290019758"
@@ -5070,9 +6470,10 @@
           }
         }
       },
+      "icon": "/drivers/SML001/assets/icon.svg",
       "images": {
-        "large": "drivers/SML001/assets/images/large.jpg",
-        "small": "drivers/SML001/assets/images/small.jpg"
+        "large": "/drivers/SML001/assets/images/large.png",
+        "small": "/drivers/SML001/assets/images/small.png"
       },
       "settings": [
         {
@@ -5227,9 +6628,9 @@
       },
       "zigbee": {
         "manufacturerName": [
-      "Philips",
-      "Signify Netherlands B.V."
-    ],
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
         "productId": [
           "SML002"
         ],
@@ -5242,9 +6643,10 @@
           }
         }
       },
+      "icon": "/drivers/SML002/assets/icon.svg",
       "images": {
-        "large": "drivers/SML002/assets/images/large.jpg",
-        "small": "drivers/SML002/assets/images/small.jpg"
+        "large": "/drivers/SML002/assets/images/large.png",
+        "small": "/drivers/SML002/assets/images/small.png"
       },
       "settings": [
         {
