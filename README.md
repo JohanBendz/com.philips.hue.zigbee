@@ -3,6 +3,11 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+### v1.6.2
+Added:
+- New product ID's for a number of devices that was already supported by the app
+- New manufacturerName, Signify Netherlands B.V.
+
 ### v1.6.1
 Fix:
 - LCT000 issue

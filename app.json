@@ -8,7 +8,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "compatibility": ">=1.5.0",
   "author": {
     "name": "Johan Bendz",
@@ -496,7 +496,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "5045131P7",
+        "productId": [
+          "5045131P7",
+          "5045148P7"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -1240,7 +1243,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTC003",
+        "productId": [
+          "LTC003",
+          "3261330P6"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -1843,7 +1849,11 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCW001",
+        "productId": [
+          "LCW001",
+          "4090130P9",
+          "4090131P9"
+        ],
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
@@ -2068,7 +2078,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LCT024",
+        "productId": [
+          "LCT024",
+          "440400982841"
+        ],
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
@@ -2461,7 +2474,11 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW002",
+        "productId": [
+          "LWW002",
+          "1740393P0",
+          "LWF002"
+        ],
         "deviceId": 256,
         "profileId": 49246,
         "learnmode": {
@@ -2517,7 +2534,11 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LWW001",
+        "productId": [
+          "LWW001",
+          "1740293P0",
+          "LWF001"
+        ],
         "deviceId": 256,
         "profileId": 49246,
         "learnmode": {
@@ -2952,7 +2973,8 @@
         "productId": [
           "LLC011",
           "LLC012",
-          "LLC014"
+          "LLC014",
+          "929002375901"
         ],
         "deviceId": 512,
         "profileId": 49246,
@@ -3022,7 +3044,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LLC010",
+        "productId": [
+          "LLC010",
+          "929002376201"
+        ],
         "deviceId": 512,
         "profileId": 49246,
         "learnmode": {
@@ -3439,7 +3464,8 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "LTC001"
+          "LTC001",
+          "3261031P6"
         ],
         "deviceId": 544,
         "profileId": 49246,
@@ -3649,7 +3675,8 @@
       "zigbee": {
         "manufacturerName": "Philips",
         "productId": [
-          "SML001"
+          "SML002",
+          "9290019758"
         ],
         "deviceId": 2128,
         "profileId": 49246,
@@ -4207,7 +4234,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "1743130P7",
+        "productId": [
+          "1743130P7",
+          "1745430P7"
+        ],
         "deviceId": 528,
         "profileId": 49246,
         "learnmode": {
@@ -4347,7 +4377,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTW017",
+        "productId": [
+          "LTW017",
+          "3417711P6"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
@@ -4572,7 +4605,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_01",
+        "productId": [
+          "4090331P9_01",
+          "LCP001"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -4647,7 +4683,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "4090331P9_02",
+        "productId": [
+          "4090331P9_02",
+          "LCP002"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -5083,7 +5122,10 @@
       },
       "zigbee": {
         "manufacturerName": "Philips",
-        "productId": "LTP001",
+        "productId": [
+          "LTP001",
+          "4076130P6"
+        ],
         "deviceId": 544,
         "profileId": 49246,
         "learnmode": {
