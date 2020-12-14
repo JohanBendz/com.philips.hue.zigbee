@@ -1,4 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="13.778in" height="7.9167in" version="1.1" viewBox="0 0 992 570" xmlns="http://www.w3.org/2000/svg">
- <path id="Unnamed" d="m81 154.25 79.75 321.25h680l79.25-320.75-839-0.5zm-41.33-39.92-0.34 27.67 96.67 350h727l94-351.33-1-27-916.33 0.66zm-0.34 28.34 918-2" fill="none" stroke="#000"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="icon.svg"
+   id="svg3"
+   viewBox="0 0 992 570"
+   version="1.1"
+   height="7.9167in"
+   width="13.778in">
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     inkscape:current-layer="svg3"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="789.64007"
+     inkscape:cx="837.48669"
+     inkscape:zoom="0.28039682"
+     showgrid="false"
+     id="namedview5"
+     inkscape:window-height="987"
+     inkscape:window-width="1680"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <path
+     style="stroke-width:4.49998121;stroke-miterlimit:4;stroke-dasharray:none"
+     stroke="#000"
+     fill="none"
+     d="m81 154.25 79.75 321.25h680l79.25-320.75-839-0.5zm-41.33-39.92-0.34 27.67 96.67 350h727l94-351.33-1-27-916.33 0.66zm-0.34 28.34 918-2"
+     id="Unnamed" />
 </svg>

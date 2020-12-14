@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.14",
+  "version": "2.0.16",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -286,7 +286,8 @@
         ],
         "productId": [
           "1743130P7",
-          "1745430P7"
+          "1745430P7",
+          "1743430P7"
         ],
         "endpoints": {
           "11": {
@@ -4117,19 +4118,54 @@
       "id": "LCT000",
       "settings": [
         {
-          "id": "transition_time",
-          "type": "number",
+          "id": "light_powerOnCtrl",
+          "type": "group",
           "label": {
-            "en": "Transition Time"
+            "en": "Behavior after power loss"
           },
-          "hint": {
-            "en": "This setting determines the time in seconds it takes to dim from one level to another."
-          },
-          "value": 1,
-          "attr": {
-            "min": 0,
-            "max": 6553
-          }
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -5700,7 +5736,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTC014",
+        "productId": [
+          "LTC014",
+          "3216231P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
