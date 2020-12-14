@@ -8,8 +8,8 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.15",
-  "compatibility": ">=1.5.0",
+  "version": "2.0.17",
+  "compatibility": "<5.0.0",
   "author": {
     "name": "Johan Bendz",
     "email": "johan.bendz@hotmail.com"
