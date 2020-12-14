@@ -40,5 +40,11 @@
   },
   "2.0.14": {
     "en": "Added a few product ID's to already supported devices and added manufacturerName Signify Netherlands B.V. to all drivers"
+  },
+  "2.0.15": {
+    "en": "SDK2 version"
+  },
+  "2.0.16": {
+    "en": "SDK3 version"
   }
 }
