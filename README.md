@@ -3,6 +3,10 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+
+### v2.0.18
+Release to app store for SDK2
+
 ### v1.6.3
 Change:
 Implemented Composer
