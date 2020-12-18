@@ -37,6 +37,9 @@
             "en": "Behavior when power is restored"
         },
         "value": "on",
+        "hint": {
+            "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+        },
         "values": [
             {
             "id": "on",
