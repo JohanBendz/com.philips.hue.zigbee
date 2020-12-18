@@ -1,5 +1,5 @@
 [
   {
-    "$extends": ["light_powerOnCtrl"]
+    "$extends": ["light_temp_powerOnCtrl"]
   }
 ]

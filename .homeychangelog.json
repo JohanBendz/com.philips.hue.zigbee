@@ -46,5 +46,14 @@
   },
   "2.0.16": {
     "en": "SDK3 version"
+  },
+  "2.0.17": {
+    "en": "SDK2 version, app store update"
+  },
+  "2.0.18": {
+    "en": "Fix for typo in SML001"
+  },
+  "2.0.19": {
+    "en": "SDK3 version, app store update"
   }
 }

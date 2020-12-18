@@ -3,6 +3,13 @@
 Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
+
+### v2.0.19
+Added Power On/Off/Recover behaviour after power loss to lights
+
+### v2.0.15-18
+Updating the firmware 4.2 version of the app (app store management)
+
 ### v2.0.14
 Added a few product ID's to already supported devices
 Added manufacturerName Signify Netherlands B.V. to all drivers
