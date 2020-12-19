@@ -120,70 +120,7 @@
       "id": "1742930P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -265,70 +202,7 @@
       "id": "1743030P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -411,70 +285,7 @@
       "id": "1743130P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -556,70 +367,7 @@
       "id": "1743230P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -698,70 +446,7 @@
       "id": "1743530P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -820,57 +505,7 @@
       "id": "1743630P7",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -949,70 +584,7 @@
       "id": "1743830P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -1091,70 +663,7 @@
       "id": "1743930P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -1233,70 +742,7 @@
       "id": "1744030P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -1355,57 +801,7 @@
       "id": "1744430P7",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -1464,57 +860,7 @@
       "id": "1744530P7",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -1574,57 +920,7 @@
       "id": "1744630P7",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -1703,70 +999,7 @@
       "id": "1745530P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -1845,70 +1078,7 @@
       "id": "1745630P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -1987,70 +1157,7 @@
       "id": "1746230P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2129,70 +1236,7 @@
       "id": "1746330P7_01",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2271,70 +1315,7 @@
       "id": "1746330P7_02",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2416,70 +1397,7 @@
       "id": "1746447P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2561,70 +1479,7 @@
       "id": "1746530P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2691,57 +1546,7 @@
       "id": "3216331P6",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -2820,70 +1625,7 @@
       "id": "4090331P9",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -2965,70 +1707,7 @@
       "id": "4090331P9_01",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3110,70 +1789,7 @@
       "id": "4090331P9_02",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3252,70 +1868,7 @@
       "id": "4090431P9",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3394,70 +1947,7 @@
       "id": "4090531P9",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3536,70 +2026,7 @@
       "id": "4090631P9",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3681,57 +2108,7 @@
       "id": "5045131P7",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -3810,70 +2187,7 @@
       "id": "5063230P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -3952,70 +2266,7 @@
       "id": "5063330P7",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4082,70 +2333,7 @@
       "id": "5309031P9",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4224,70 +2412,7 @@
       "id": "HBL001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4366,57 +2491,7 @@
       "id": "HBL002",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -4495,70 +2570,7 @@
       "id": "HBL003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4629,70 +2641,7 @@
       "id": "HML003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4759,70 +2708,7 @@
       "id": "HML004",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -4893,70 +2779,7 @@
       "id": "HML005",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5037,70 +2860,7 @@
       "id": "LCA001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5179,70 +2939,7 @@
       "id": "LCF002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5321,70 +3018,7 @@
       "id": "LCF003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5463,70 +3097,7 @@
       "id": "LCF005",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5605,70 +3176,7 @@
       "id": "LCG002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5747,70 +3255,7 @@
       "id": "LCL001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -5889,70 +3334,7 @@
       "id": "LCL002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6031,70 +3413,7 @@
       "id": "LCL003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6173,70 +3492,7 @@
       "id": "LCS001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6322,70 +3578,7 @@
       "id": "LCT000",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6464,70 +3657,7 @@
       "id": "LCT003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6606,70 +3736,7 @@
       "id": "LCT012",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6751,70 +3818,7 @@
       "id": "LCT024",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -6893,70 +3897,7 @@
       "id": "LCT026",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -7039,70 +3980,7 @@
       "id": "LCW001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -7178,57 +4056,7 @@
       "id": "LLC010",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -7306,57 +4134,7 @@
       "id": "LLC011",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -7435,70 +4213,7 @@
       "id": "LLC020",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -7611,57 +4326,7 @@
       "id": "LST001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -7740,70 +4405,7 @@
       "id": "LST002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -7885,70 +4487,7 @@
       "id": "LST003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8017,70 +4556,7 @@
       "id": "LTA001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8150,70 +4626,7 @@
       "id": "LTC001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8282,70 +4695,7 @@
       "id": "LTC002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8415,70 +4765,7 @@
       "id": "LTC003",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8545,70 +4832,7 @@
       "id": "LTC011",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8675,70 +4899,7 @@
       "id": "LTC012",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8808,70 +4969,7 @@
       "id": "LTC014",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -8943,70 +5041,7 @@
       "id": "LTC015",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9073,70 +5108,7 @@
       "id": "LTC021",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9205,70 +5177,7 @@
       "id": "LTD011",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9337,70 +5246,7 @@
       "id": "LTE002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9467,70 +5313,7 @@
       "id": "LTG002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9600,70 +5383,7 @@
       "id": "LTP001",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9730,70 +5450,7 @@
       "id": "LTP002",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -9860,57 +5517,7 @@
       "id": "LTP003",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -9977,70 +5584,7 @@
       "id": "LTP008",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -10112,70 +5656,7 @@
       "id": "LTW000",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -10244,70 +5725,7 @@
       "id": "LTW012",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -10377,70 +5795,7 @@
       "id": "LTW013",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -10510,70 +5865,7 @@
       "id": "LTW017",
       "settings": [
         {
-          "id": "light_temp_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_colorvalue",
-              "type": "number",
-              "label": {
-                "en": "Default Color Temperature"
-              },
-              "value": 366,
-              "min": 153,
-              "max": 500,
-              "units": {
-                "en": "Mireds"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_temp_powerOnCtrl"
         }
       ]
     },
@@ -10632,57 +5924,7 @@
       "id": "LWA001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -10741,57 +5983,7 @@
       "id": "LWA004",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -10852,57 +6044,7 @@
       "id": "LWA009",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -10968,57 +6110,7 @@
       "id": "LWB000",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11077,57 +6169,7 @@
       "id": "LWE002",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11186,57 +6228,7 @@
       "id": "LWG001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11295,57 +6287,7 @@
       "id": "LWG004",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11404,57 +6346,7 @@
       "id": "LWO001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11513,57 +6405,7 @@
       "id": "LWO003",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11622,57 +6464,7 @@
       "id": "LWV001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11735,57 +6527,7 @@
       "id": "LWW001",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
@@ -11848,57 +6590,7 @@
       "id": "LWW002",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
-          "type": "group",
-          "label": {
-            "en": "Behavior after power loss"
-          },
-          "children": [
-            {
-              "id": "powerOnCtrl_dimvalue",
-              "type": "number",
-              "label": {
-                "en": "Default brightness on Power On"
-              },
-              "value": 255,
-              "min": 0,
-              "max": 255,
-              "units": {
-                "en": "steps"
-              }
-            },
-            {
-              "id": "powerOnCtrl_state",
-              "type": "radio",
-              "label": {
-                "en": "Behavior when power is restored"
-              },
-              "value": "on",
-              "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-              },
-              "values": [
-                {
-                  "id": "on",
-                  "label": {
-                    "en": "On with default brightness"
-                  }
-                },
-                {
-                  "id": "off",
-                  "label": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "recover",
-                  "label": {
-                    "en": "Restore last state and brightness"
-                  }
-                }
-              ]
-            }
-          ]
+          "id": "light_powerOnCtrl"
         }
       ]
     },
