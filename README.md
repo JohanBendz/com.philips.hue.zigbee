@@ -4,6 +4,9 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v2.0.20
+Reverted last update, issues with some bulbs needs to be fixed.
+
 ### v2.0.19
 Added Power On/Off/Recover behaviour after power loss to lights
 

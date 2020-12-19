@@ -55,5 +55,8 @@
   },
   "2.0.19": {
     "en": "SDK3 version, app store update"
+  },
+  "2.0.20": {
+    "en": "Reverted Power On Behavior update, some bulbs does not initiate"
   }
 }

@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.19",
+  "version": "2.0.20",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -159,6 +159,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -301,6 +304,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -444,6 +450,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -586,6 +595,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -725,6 +737,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -815,7 +830,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -831,6 +846,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -970,6 +988,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1109,6 +1130,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1248,6 +1272,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1338,7 +1365,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -1354,6 +1381,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1444,7 +1474,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -1460,6 +1490,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1551,7 +1584,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -1567,6 +1600,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1706,6 +1742,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1845,6 +1884,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -1984,6 +2026,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2123,6 +2168,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2262,6 +2310,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2404,6 +2455,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2546,6 +2600,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2644,7 +2701,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -2660,6 +2717,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2799,6 +2859,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -2941,6 +3004,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3083,6 +3149,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3222,6 +3291,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3361,6 +3433,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3500,6 +3575,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3613,7 +3691,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -3629,6 +3707,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3768,6 +3849,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -3907,6 +3991,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4034,6 +4121,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4173,6 +4263,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4283,7 +4376,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -4299,6 +4392,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4438,6 +4534,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4569,6 +4668,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4696,6 +4798,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4827,6 +4932,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -4968,6 +5076,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5107,6 +5218,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5246,6 +5360,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5385,6 +5502,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5524,6 +5644,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5663,6 +5786,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5802,6 +5928,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -5941,6 +6070,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6080,6 +6212,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6226,6 +6361,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6365,6 +6503,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6504,6 +6645,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6646,6 +6790,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6785,6 +6932,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -6928,6 +7078,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7035,7 +7188,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -7051,6 +7204,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7160,7 +7316,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -7176,6 +7332,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7315,6 +7474,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7459,7 +7621,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -7475,6 +7637,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7614,6 +7779,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7756,6 +7924,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -7885,6 +8056,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8015,6 +8189,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8144,6 +8321,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8274,6 +8454,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8401,6 +8584,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8528,6 +8714,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8658,6 +8847,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8790,6 +8982,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -8917,6 +9112,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9046,6 +9244,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9175,6 +9376,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9302,6 +9506,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9432,6 +9639,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9559,6 +9769,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9657,7 +9870,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -9673,6 +9886,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9800,6 +10016,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -9932,6 +10151,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10061,6 +10283,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10191,6 +10416,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10321,6 +10549,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10411,7 +10642,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10427,6 +10658,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10517,7 +10751,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10533,6 +10767,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10625,7 +10862,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10641,6 +10878,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10738,7 +10978,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10754,6 +10994,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10844,7 +11087,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10860,6 +11103,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -10950,7 +11196,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -10966,6 +11212,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11056,7 +11305,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11072,6 +11321,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11162,7 +11414,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11178,6 +11430,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11268,7 +11523,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11284,6 +11539,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11374,7 +11632,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11390,6 +11648,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11484,7 +11745,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11500,6 +11761,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
@@ -11594,7 +11858,7 @@
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness"
+                "en": "Default brightness on Power On"
               },
               "value": 255,
               "min": 0,
@@ -11610,6 +11874,9 @@
                 "en": "Behavior when power is restored"
               },
               "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
               "values": [
                 {
                   "id": "on",
