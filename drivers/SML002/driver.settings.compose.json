@@ -6,9 +6,9 @@
       "en": "Time until motion alarm is reset (s)"
     },
     "hint": {
-      "en": "Time from motion alarm triggers until it resets.\nRange: 1 - 3600, step size 1, \ndefault: 5 [s], \n(Only works for sensors using OnOff as trigger)"
+      "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
     },
-    "value": 5,
+    "value": 3,
     "attr": {
       "min": 1,
       "max": 86400,
@@ -32,28 +32,6 @@
       "max": 10,
       "step": 0.1
     }
-  },
-  {
-    "id": "temperature_decimals",
-    "type": "radio",
-    "label": {
-      "en": "Temperature reporting decimals"
-    },
-    "value": "1",
-    "values": [
-      {
-        "id": "1",
-        "label": {
-          "en": "Report temperature value with 1 decimal (21.4 °C)"
-        }
-      },
-      {
-        "id": "2",
-        "label": {
-          "en": "Report temperature value with 2 decimals (21.37 °C)"
-        }
-      }
-    ]
   },
   {
     "id": "batteryThreshold",

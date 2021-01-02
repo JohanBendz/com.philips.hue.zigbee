@@ -4,6 +4,19 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.22
+Added support for:
+- Bulb E14 Candle White and Color BT
+- Bulb E14 P45 White
+- Phoenix Downlight
+
+Added functionality:
+- Motion Sensor now has a setting for time between triggered and reset alarm
+
+### v.2.0.21
+Only in Test version on Github, new feature:
+- Hue Motion Sensors with an up to date firmware is added as an Occupancy Sensor instead of an Motion Sensor 
+
 ### v2.0.20
 Reverted last update, issues with some bulbs needs to be fixed.
 
@@ -313,6 +326,7 @@ Added support for:
 - Hue Bulb A19 Color (LCT001,LCT007,LCT010,LCT014,LCT015,LCT016)
 - Hue Bulb E12 Candle Color (LCT012)
 - Hue Bulb E14 Candle White BT (LWE002)
+- Hue Bulb E14 Candle White and Color BT (LCE002)
 - Hue Dimmer Switch (RWL021)
 - Hue Motion Sensor (SML001)
 - Hue Living Colors Iris (LLC010)

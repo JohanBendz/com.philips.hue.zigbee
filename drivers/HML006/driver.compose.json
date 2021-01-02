@@ -1,12 +1,12 @@
 {
   "name": {
-    "en": "Ensis Pendant - Lower light"
+    "en": "Phoenix Downlight"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": ["light_white_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 78,
-      "usageOff": 0.4
+      "usageOn": 5,
+      "usageOff": 0.5
     }
   },
   "zigbee": {
@@ -14,11 +14,7 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "4090330P9_02",
-      "4090331P9_02",
-      "LCP002"
-    ],
+    "productId": "HML006",
     "endpoints": {
       "11": {
         "clusters": [

@@ -1,12 +1,12 @@
 {
   "name": {
-    "en": "GU10 Spot Color"
+    "en": "Bulb E14 P45 White"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": ["light_white"],
   "energy": {
     "approximation": {
-      "usageOn": 6.5,
-      "usageOff": 0.2
+      "usageOn": 5.7,
+      "usageOff": 0.5
     }
   },
   "zigbee": {
@@ -14,19 +14,14 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "LCG002",
-      "5055131P7",
-      "5055148P7"
-    ],
+    "productId": "LWU001",
     "endpoints": {
       "11": {
         "clusters": [
           0,
           4,
           6,
-          8,
-          768
+          8
         ]
       }
     },

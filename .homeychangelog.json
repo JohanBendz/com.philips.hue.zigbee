@@ -60,6 +60,9 @@
     "en": "Reverted Power On Behavior update, some bulbs does not initiate"
   },
   "2.0.21": {
-    "en": "Added support for two modes, Motion detect and Occupancy. The devices firmware version specify what is used). When using Occupancy the device will continue to show motion alarm until no motion is detected. When using OnOff the device will show alarm according to defined alarm time in settings."
+    "en": "Test version, only on github. Added support for two modes, Motion detect and Occupancy. The devices firmware version specify what is used). When using Occupancy the device will continue to show motion alarm until no motion is detected. When using OnOff the device will show alarm according to defined alarm time in settings."
+  },
+  "2.0.22": {
+    "en": "Added support for Bulb E14 P45 White, Bulb E14 Candle White and Color Ambiance (BT) and Phoenix Downlight."
   }
 }
