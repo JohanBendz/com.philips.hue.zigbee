@@ -2,12 +2,17 @@
 
 const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { CLUSTER } = require('zigbee-clusters');
+const { CLUSTER, Cluster } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
+/* const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+Cluster.addCluster(HueSpecificOccupancySensingCluster); */
 
 class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
+
+        //this.enableDebug();
+        this.printNode();
 
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
@@ -158,51 +163,77 @@ class MotionSensor extends ZigBeeDevice {
 		this.log('changed keys: ', changedKeys);
 		this.log('newSettings: ', newSettings);
 		this.log('oldSettings: ', oldSettings);
-		
-		if ((newSettings.minReportTemp < newSettings.maxReportTemp) &&
-			(newSettings.minReportLux < newSettings.maxReportLux)) {
-				this.log('minReport settings smaller then maxReport settings');
 
-				// measure_temperature report settings changed
-				if ((changedKeys.includes('minReportTemp')) || (changedKeys.includes('maxReportTemp'))) {
-					if (newSettings.minReportTemp < newSettings.maxReportTemp) {
-
-						await this.configureAttributeReporting([
-							{
-							  endpointId: 2,
-							  cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
-							  attributeName: 'measuredValue',
-							  minInterval: newSettings.minReportTemp,
-							  maxInterval: newSettings.maxReportTemp,
-							  minChange: 1,
-							}
-						  ]);
-
+		// measure_temperature report settings changed
+		if ((changedKeys.includes('minReportTemp')) || (changedKeys.includes('maxReportTemp'))) {
+			if (newSettings.minReportTemp < newSettings.maxReportTemp) {
+				await this.configureAttributeReporting([
+					{
+						endpointId: 2,
+						cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+						attributeName: 'measuredValue',
+						minInterval: newSettings.minReportTemp,
+						maxInterval: newSettings.maxReportTemp,
+						minChange: 1,
 					}
-				}
-
-				// measure_luminance report settings changed
-				if ((changedKeys.includes('minReportLux')) || (changedKeys.includes('maxReportLux'))) {
-					if (newSettings.minReportLux < newSettings.maxReportLux) {
-
-						await this.configureAttributeReporting([
-							{
-							  endpointId: 2,
-							  cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
-							  attributeName: 'measuredValue',
-							  minInterval: newSettings.minReportLux,
-							  maxInterval: newSettings.maxReportLux,
-							  minChange: 1,
-							},
-						]);
-
-					}
-				}
-
+					]);
+			}
 		}
+
+		// measure_luminance report settings changed
+		if ((changedKeys.includes('minReportLux')) || (changedKeys.includes('maxReportLux'))) {
+			if (newSettings.minReportLux < newSettings.maxReportLux) {
+				await this.configureAttributeReporting([
+					{
+						endpointId: 2,
+						cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
+						attributeName: 'measuredValue',
+						minInterval: newSettings.minReportLux,
+						maxInterval: newSettings.maxReportLux,
+						minChange: 1,
+					},
+				]);
+			}
+		}
+		
+/* 		// motion sensitivity setting changed
+		if (changedKeys.includes('motion_sensitivity')) {
+			this.log("motion sensitivity changed to: ", newSettings.motion_sensitivity);
+			await this.zclNode.endpoints[2].clusters.occupancySensing.writeAttributes({sensitivity: newSettings.motion_sensitivity},{waitForResponse: false});
+		} */
 
 	}
 	
 }
 
 module.exports = MotionSensor;
+
+/* Settings for motion_sensitivity:
+{
+    "id": "motion_sensitivity",
+    "type": "dropdown",
+    "label": {
+      "en": "Motion Sensor Sensitivity"
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Low"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Medium"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "High"
+        }
+      }
+    ]
+  }, */

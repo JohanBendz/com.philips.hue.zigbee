@@ -9,6 +9,9 @@ class OutDoorSensor extends ZigBeeDevice {
 
 	async onNodeInit({ zclNode }) {
 
+        //this.enableDebug();
+		this.printNode();
+		
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
 			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
@@ -158,47 +161,37 @@ class OutDoorSensor extends ZigBeeDevice {
 		this.log('changed keys: ', changedKeys);
 		this.log('newSettings: ', newSettings);
 		this.log('oldSettings: ', oldSettings);
-		
-		if ((newSettings.minReportTemp < newSettings.maxReportTemp) &&
-			(newSettings.minReportLux < newSettings.maxReportLux)) {
-				this.log('minReport settings smaller then maxReport settings');
 
-				// measure_temperature report settings changed
-				if ((changedKeys.includes('minReportTemp')) || (changedKeys.includes('maxReportTemp'))) {
-					if (newSettings.minReportTemp < newSettings.maxReportTemp) {
-
-						await this.configureAttributeReporting([
-							{
-							  endpointId: 2,
-							  cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
-							  attributeName: 'measuredValue',
-							  minInterval: newSettings.minReportTemp,
-							  maxInterval: newSettings.maxReportTemp,
-							  minChange: 1,
-							}
-						  ]);
-
+		// measure_temperature report settings changed
+		if ((changedKeys.includes('minReportTemp')) || (changedKeys.includes('maxReportTemp'))) {
+			if (newSettings.minReportTemp < newSettings.maxReportTemp) {
+				await this.configureAttributeReporting([
+					{
+						endpointId: 2,
+						cluster: CLUSTER.TEMPERATURE_MEASUREMENT,
+						attributeName: 'measuredValue',
+						minInterval: newSettings.minReportTemp,
+						maxInterval: newSettings.maxReportTemp,
+						minChange: 1,
 					}
-				}
+					]);
+			}
+		}
 
-				// measure_luminance report settings changed
-				if ((changedKeys.includes('minReportLux')) || (changedKeys.includes('maxReportLux'))) {
-					if (newSettings.minReportLux < newSettings.maxReportLux) {
-
-						await this.configureAttributeReporting([
-							{
-							  endpointId: 2,
-							  cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
-							  attributeName: 'measuredValue',
-							  minInterval: newSettings.minReportLux,
-							  maxInterval: newSettings.maxReportLux,
-							  minChange: 1,
-							},
-						]);
-
-					}
-				}
-
+		// measure_luminance report settings changed
+		if ((changedKeys.includes('minReportLux')) || (changedKeys.includes('maxReportLux'))) {
+			if (newSettings.minReportLux < newSettings.maxReportLux) {
+				await this.configureAttributeReporting([
+					{
+						endpointId: 2,
+						cluster: CLUSTER.ILLUMINANCE_MEASUREMENT,
+						attributeName: 'measuredValue',
+						minInterval: newSettings.minReportLux,
+						maxInterval: newSettings.maxReportLux,
+						minChange: 1,
+					},
+				]);
+			}
 		}
 
 	}
