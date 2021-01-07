@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.22",
+  "version": "2.0.23",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -3739,6 +3739,141 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/5047131P6/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5047131P6/assets/images/large.png",
+        "small": "/drivers/5047131P6/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Buckram Spotlights"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5047131P6",
+          "5047231P6",
+          "5047331P6",
+          "5047431P6"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "id": "5047131P6",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default Color Temperature"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/5063230P7/assets/icon.svg",
       "images": {
         "large": "/drivers/5063230P7/assets/images/large.png",
@@ -4050,7 +4185,7 @@
         }
       },
       "name": {
-        "en": "Runner Single Spotlight"
+        "en": "Runner Spotlights"
       },
       "energy": {
         "approximation": {
@@ -4063,7 +4198,16 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "5309031P9",
+        "productId": [
+          "5309030P9",
+          "5309031P9",
+          "5309030P6",
+          "5309031P6",
+          "5309230P6",
+          "5309231P6",
+          "5309330P6",
+          "5309331P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [

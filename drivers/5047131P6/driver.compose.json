@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Runner Spotlights"
+    "en": "Buckram Spotlights"
   },
   "$extends": ["light_white_ambiance"],
   "energy": {
@@ -15,14 +15,10 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "5309030P9",
-      "5309031P9",
-      "5309030P6",
-      "5309031P6",
-      "5309230P6",
-      "5309231P6",
-      "5309330P6",
-      "5309331P6"
+      "5047131P6",
+      "5047231P6",
+      "5047331P6",
+      "5047431P6"
     ],
     "endpoints": {
       "11": {

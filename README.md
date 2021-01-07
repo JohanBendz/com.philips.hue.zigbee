@@ -4,6 +4,12 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.23
+Added support for:
+- Buckram Spotlights
+
+Added some device Id's to already supported devices
+
 ### v.2.0.22
 Added support for:
 - Bulb E14 Candle White and Color BT

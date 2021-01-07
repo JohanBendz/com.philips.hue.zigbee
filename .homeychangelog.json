@@ -64,5 +64,8 @@
   },
   "2.0.22": {
     "en": "Added support for Bulb E14 P45 White, Bulb E14 Candle White and Color Ambiance (BT) and Phoenix Downlight."
+  },
+  "2.0.23": {
+    "en": "Added support for Buckram Spotlights and added more device Id's to some already added devices."
   }
 }
