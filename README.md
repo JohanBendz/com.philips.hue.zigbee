@@ -4,6 +4,9 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.24
+Added flow card for Blink
+
 ### v.2.0.23
 Added support for:
 - Buckram Spotlights

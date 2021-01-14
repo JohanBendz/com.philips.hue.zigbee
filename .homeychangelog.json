@@ -67,5 +67,8 @@
   },
   "2.0.23": {
     "en": "Added support for Buckram Spotlights and added more device Id's to some already added devices."
+  },
+  "2.0.24": {
+    "en": "Added flow card Blink."
   }
 }
