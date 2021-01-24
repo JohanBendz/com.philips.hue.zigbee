@@ -70,5 +70,8 @@
   },
   "2.0.24": {
     "en": "Added flow card Blink."
+  },
+  "2.0.25": {
+    "en": "Added support for Milliskin GU10 Recessed Spotlight and Filament ST72 E27."
   }
 }
