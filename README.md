@@ -4,16 +4,23 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
-### v.2.0.24
+### v.2.0.26 (SDK3)
+Added support for:
+- Milliskin GU10 Recessed Spotlight White Ambiance
+- Filament ST72 E27
+
+Added some device Id's to already supported devices
+
+### v.2.0.24 (SDK3)
 Added flow card for Blink
 
-### v.2.0.23
+### v.2.0.23 (SDK3)
 Added support for:
 - Buckram Spotlights
 
 Added some device Id's to already supported devices
 
-### v.2.0.22
+### v.2.0.22 (SDK3)
 Added support for:
 - Bulb E14 Candle White and Color BT
 - Bulb E14 P45 White
@@ -22,70 +29,66 @@ Added support for:
 Added functionality:
 - Motion Sensor now has a setting for time between triggered and reset alarm
 
-### v.2.0.21
+### v.2.0.21 (SDK3)
 Only in Test version on Github, new feature:
 - Hue Motion Sensors with an up to date firmware is added as an Occupancy Sensor instead of an Motion Sensor 
 
-### v2.0.20
+### v2.0.20 (SDK3)
 Reverted last update, issues with some bulbs needs to be fixed.
 
-### v2.0.19
+### v2.0.19 (SDK3)
 Added Power On/Off/Recover behaviour after power loss to lights
 
-### v2.0.15-18
-Updating the firmware 4.2 version of the app (app store management)
-
-### v2.0.14
+### v2.0.14 (SDK3)
 Added a few product ID's to already supported devices
 Added manufacturerName Signify Netherlands B.V. to all drivers
 
-### v2.0.13
+### v2.0.13 (SDK3)
 Added support for:
 - Calla Outdoor Tall Path Light
 - Appear Outdoor Wall Light (Upper and Lower)
 
-### v2.0.12
+### v2.0.12 (SDK3)
 Added support for:
 - E14 Candle White Ambience (BT)
 - Filament G125
 - Additional product ID's for Lucca Pedestal and Lucca Post
 
-### v2.0.11
+### v2.0.11 (SDK3)
 Added support for:
 - Smart Button
 
-### v2.0.10
+### v2.0.10 (SDK3)
 Added support for:
 - Additional product ID for the Play Lightbar
 
-### v2.0.9
+### v2.0.9 (SDK3)
 Added support for:
 - Added product ID's to some already added devices but in different colors
 
-### v2.0.8
+### v2.0.8 (SDK3)
 Fix:
 - Zigbee driver and cluster update forced
 
-### v2.0.7
+### v2.0.7 (SDK3)
 Added support for:
 - Lily Outdoor XL Spotlight
 - Additional Product ID's for Ensis Pendant (upper and lower light)
 - Runner Single Spotlight
 - Additional Product ID for Adore Bathroom Mirror
 
-### v2.0.6
+### v2.0.6 (SDK3)
 Added support for:
 - Econic Hanging Wall light (thx Caseda)
 
-### v2.0.5
+### v2.0.5 (SDK3)
 Added support for:
 - Fugato Triple Spotlight (thx Caseda)
 
 Fix:
 - Removed jpg/replaced with png
 
-### v2.0.4
-
+### v2.0.4 (SDK3)
 Added support for:
 - New version of Being Ceiling Lamp
 - Resonate Outdoor Wall Light
@@ -93,21 +96,18 @@ Added support for:
 Fix:
 - On/Off was not correcty set on dim to/from 0
 
-### v2.0.3
-
+### v2.0.3 (SDK3)
 Added support for:
 - Hue Garnea Downlight
 - Bulb 1600 Lumen White
 
 Verbose Zigbee logging enabled for better troubleshooting crash logs. 
 
-### v2.0.2
-
+### v2.0.2 (SDK3)
 Fix:
 - Luminance for Motion and Outdoor Sensors was not correctly calculated
 
-### v2.0.1
-
+### v2.0.1 (SDK3)
 Changes:
 - SDK3 rewrite
 - Implemented new Homey Zigbee Driver
@@ -125,28 +125,53 @@ Added support for:
 - Hue Econic Wall Light
 - Hue Aurelle Rectangular
 
-### v1.6.1
+### v1.6.3 (SDK2)
+Change:
+Implemented Composer
+
+Added support for:
+- Econic Wall light
+- Nyro Outdoor Pedestal
+- Nyro Outdoor Wall Light
+- Lily Outdoor XL Spotlight
+- Resonate Outdoor Wall Light
+- Aurelle Panel Rectangular
+- Fugato Triple Spotlight
+- Lightstrip Plus V4
+- Lightstrip Outdoor 2 meter
+- Lightstrip Outdoor 5 meter
+- Garnea Downlight
+- Being Pendant
+- Bulb 1600 Lumen White
+- Filament G125 E27
+
+### v1.6.2 (SDK2)
+Added:
+- New product ID's for a number of devices that was already supported by the app
+- New manufacturerName, Signify Netherlands B.V.
+
+### v1.6.1 (SDK2)
 Fix:
 - LCT000 issue
 - SML001 and SML002 typo in settings update
 
 Prepping for SDK3. Upgrading Test version to Stable version.
 
-### v1.5.10
+### v1.5.10 (SDK2)
 
 Added support for:
 - Silver frame version of Daylo Outdoor Wall Light
 
-### v1.5.9
+### v1.5.9 (SDK2)
 
 Fix:
 - kill some bugs
 
-### v1.5.8
+### v1.5.8 (SDK2)
 Fix:
 - It looks like there is multiple versions of the Fuzo Wall Light, added additional Device ID and Profile ID
 
-### v1.5.7
+### v1.5.7 (SDK2)
 
 Added support for:
 - Australian version of the Hue Smart Plug - LOM005
@@ -154,27 +179,27 @@ Added support for:
 Fixes:
 - Fuzo lights was set as Color by misstake, now White
 
-### v1.5.6
+### v1.5.6 (SDK2)
 
 Fixes:
 - Ensis upper and lower was switched
 
-### v1.5.5
+### v1.5.5 (SDK2)
 
 Fixes:
 - Corrected the device driver info for Hue Econic
 
-### v1.5.4
+### v1.5.4 (SDK2)
 
 Added support for:
 - Hue Ensis Pendant, Upper and Lower light version
 
-### v1.5.3
+### v1.5.3 (SDK2)
 
 Added support for:
 - Hue Fuzo Outdoor Wall Light (open front version)
 
-### v1.5.2
+### v1.5.2 (SDK2)
 
 Added support for:
 - Hue Daylo Outdoor Wall Light
@@ -189,7 +214,7 @@ Added support for:
 Fixes:
 - Added error handling where code was missing it (to be compliant with updated Homey sdk)
 
-### v1.5.1
+### v1.5.1 (SDK2)
 
 Added support for:
 - Hue Signe Floor Light
@@ -204,7 +229,7 @@ Changes:
 Fixes:
 - N/A
 
-### v1.5.0
+### v1.5.0 (SDK2)
 The Philips Hue Zigbee app and project has been transferred from Sebastian Johansson to Johan Bendz
 
 Added support for:
@@ -389,3 +414,5 @@ Added support for:
 - Hue E27 White Ambiance BT (LTA001)
 - Hue Outdoor Fuzo Wall Lantern (1744430P7)
 - Hue Fluorish Ceiling Light (4090531P9)
+- Milliskin GU10 Recessed Spotlight White Ambiance
+- Filament ST72 E27

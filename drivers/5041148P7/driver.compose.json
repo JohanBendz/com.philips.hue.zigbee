@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "Fugato Triple Spotlight"
+    "en": "Milliskin GU10 Recessed Spotlight White Ambiance"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": ["light_white_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 6,
+      "usageOn": 5,
       "usageOff": 1
     }
   },
@@ -15,8 +15,7 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "5063330P7",
-      "5063331P7"
+      "5041148P7"
     ],
     "endpoints": {
       "11": {

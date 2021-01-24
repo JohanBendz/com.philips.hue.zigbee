@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "Fugato Triple Spotlight"
+    "en": "Appear Outdoor Wall"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 6,
+      "usageOn": 8,
       "usageOff": 1
     }
   },
@@ -14,10 +14,7 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "5063330P7",
-      "5063331P7"
-    ],
+    "productId": "1746330P7",
     "endpoints": {
       "11": {
         "clusters": [
