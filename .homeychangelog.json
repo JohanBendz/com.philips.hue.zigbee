@@ -1,5 +1,8 @@
 {
   "2.0.18": {
     "en": "Added support for Econic Wall light, Nyro Outdoor Pedestal, Nyro Outdoor Wall Light, Lily Outdoor XL Spotlight, Resonate Outdoor Wall Light, Aurelle Panel Rectangular, Fugato Triple Spotlight, Lightstrip Plus V4, Lightstrip Outdoor 2 meter, Lightstrip Outdoor 5 meter, Garnea Downlight, Being Pendant. Bulb 1600 Lumen White, Filament G125 E27"
+  },
+  "2.0.25": {
+    "en": "Added support for Smart Button, Buckram Spotlights, Runner Spotlights, Phoenix Downlight, Bulb E14 Candle White and Color Ambiance (BT), Bulb E14 P45 White, Bulb E14 Candle White Ambiance (BT), Appear Outdoor Wall, Bulb E27 Filament ST72, Milliskin GU10 Recessed Spotlight White Ambiance"
   }
 }
