@@ -14,7 +14,11 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LCG002",
+    "productId": [
+      "LCG002",
+      "5055131P7",
+      "5055148P7"
+    ],
     "deviceId": 269,
     "profileId": 260,
     "learnmode": {

@@ -15,8 +15,14 @@
       "Signify Netherlands B.V."
     ],
     "productId": "1743630P7",
-    "deviceId": 256,
-    "profileId": 49246,
+    "deviceId": [
+      256,
+      257
+    ],
+    "profileId": [
+      49246,
+      260
+    ],
     "learnmode": {
       "instruction": {
         "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."

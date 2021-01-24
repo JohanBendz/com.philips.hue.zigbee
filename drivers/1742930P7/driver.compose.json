@@ -14,7 +14,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "1744530P7",
+    "productId": [
+      "1744530P7",
+      "1742930P7"
+    ],
     "deviceId": 269,
     "profileId": 260,
     "learnmode": {

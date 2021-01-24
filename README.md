@@ -4,10 +4,25 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
-### v2.0.18
+### v2.0.25 (SDK2)
+Added support for:
+- Smart Button
+- Buckram Spotlights
+- Runner Spotlights
+- Phoenix Downlight
+- Bulb E14 Candle White and Color Ambiance (BT)
+- Bulb E14 P45 White
+- Bulb E14 Candle White Ambiance (BT)
+- Appear Outdoor Wall
+- Bulb E27 Filament ST72
+- Milliskin GU10 Recessed Spotlight White Ambiance
+
+Added additional product ID's for a number of already supported devices
+
+### v2.0.15-18 (SDK2)
 Release to app store for SDK2
 
-### v1.6.3
+### v1.6.3 (SDK2)
 Change:
 Implemented Composer
 
@@ -27,12 +42,12 @@ Added support for:
 - Bulb 1600 Lumen White
 - Filament G125 E27
 
-### v1.6.2
+### v1.6.2 (SDK2)
 Added:
 - New product ID's for a number of devices that was already supported by the app
 - New manufacturerName, Signify Netherlands B.V.
 
-### v1.6.1
+### v1.6.1 (SDK2)
 Fix:
 - LCT000 issue
 - SML001 and SML002 typo in settings update
@@ -244,8 +259,6 @@ Tested:
 - Hue Living Colors Bloom (LLC011,LLC012)
 - Hue Fair Ceiling Lamp (LTC002)
 - Hue Still Ceiling (LTC003)
-
-Untested:
 - Hue White Bulb (LWB014,LWB004,LWB006,LWB007)
 - Hue A19 Bulb (Color) (LCT001,LCT007,LCT010,LCT014,LCT016)
 - Hue A19 White Ambiance (LTW001,LTW004,LTW010,LTW015)
@@ -296,3 +309,5 @@ Untested:
 - Hue E14 White Candle BT (LWE002)
 - Hue Outdoor Fuzo Wall Lantern (1744430P7)
 - Hue Fluorish Ceiling Light (4090531P9)
+- Milliskin GU10 Recessed Spotlight White Ambiance
+- Filament ST72 E27

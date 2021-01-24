@@ -16,10 +16,18 @@
     ],
     "productId": [
       "LTC001",
-      "3261031P6"
+      "3261030P6",
+      "3261031P6",
+      "3261048P6"
     ],
-    "deviceId": 544,
-    "profileId": 49246,
+    "deviceId": [
+      544,
+      268
+    ],
+    "profileId": [
+      49246,
+      260
+    ],
     "learnmode": {
       "instruction": {
         "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."

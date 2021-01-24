@@ -16,10 +16,18 @@
     ],
     "productId": [
       "LLC010",
-      "929002376201"
+      "929002376201",
+      "929002376101",
+      "929002376401"
     ],
-    "deviceId": 512,
-    "profileId": 49246,
+    "deviceId": [
+      512,
+      269
+    ],
+    "profileId": [
+      49246,
+      260
+    ],
     "learnmode": {
       "instruction": {
         "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."

@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.18",
+  "version": "2.0.25",
   "compatibility": ">=1.5.0 <5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -93,7 +93,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "1744530P7",
+        "productId": [
+          "1744530P7",
+          "1742930P7"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -429,8 +432,14 @@
           "Signify Netherlands B.V."
         ],
         "productId": "1743530P7",
-        "deviceId": 528,
-        "profileId": 49246,
+        "deviceId": [
+          528,
+          269
+        ],
+        "profileId": [
+          49246,
+          260
+        ],
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -492,8 +501,14 @@
           "Signify Netherlands B.V."
         ],
         "productId": "1743630P7",
-        "deviceId": 256,
-        "profileId": 49246,
+        "deviceId": [
+          256,
+          257
+        ],
+        "profileId": [
+          49246,
+          260
+        ],
         "learnmode": {
           "instruction": {
             "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
@@ -1126,6 +1141,88 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/1746330P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746330P7/assets/images/large.png",
+        "small": "/drivers/1746330P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Appear Outdoor Wall"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 8,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1746330P7",
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "1746330P7"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/1746447P7/assets/icon.svg",
       "images": {
         "large": "/drivers/1746447P7/assets/images/large.png",
@@ -1503,6 +1600,7 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
+          "4090330P9_01",
           "4090331P9_01",
           "LCP001"
         ],
@@ -1588,6 +1686,7 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
+          "4090330P9_02",
           "4090331P9_02",
           "LCP002"
         ],
@@ -1866,6 +1965,78 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/5041148P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5041148P7/assets/images/large.png",
+        "small": "/drivers/5041148P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Milliskin GU10 Recessed Spotlight White Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5041148P7"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5041148P7"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/5045131P7/assets/icon.svg",
       "images": {
         "large": "/drivers/5045131P7/assets/images/large.png",
@@ -1948,6 +2119,81 @@
         }
       ],
       "id": "5045131P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5047131P6/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5047131P6/assets/images/large.png",
+        "small": "/drivers/5047131P6/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Buckram Spotlights"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5047131P6",
+          "5047231P6",
+          "5047331P6",
+          "5047431P6"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5047131P6"
     },
     {
       "class": "light",
@@ -2085,7 +2331,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "5063330P7",
+        "productId": [
+          "5063330P7",
+          "5063331P7"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -2112,6 +2361,85 @@
         }
       ],
       "id": "5063330P7"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5309031P9/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5309031P9/assets/images/large.png",
+        "small": "/drivers/5309031P9/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Runner Spotlights"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5309030P9",
+          "5309031P9",
+          "5309030P6",
+          "5309031P6",
+          "5309230P6",
+          "5309231P6",
+          "5309330P6",
+          "5309331P6"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "5309031P9"
     },
     {
       "class": "light",
@@ -2579,6 +2907,76 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/HML006/assets/icon.svg",
+      "images": {
+        "large": "/drivers/HML006/assets/images/large.png",
+        "small": "/drivers/HML006/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Phoenix Downlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "HML006",
+        "deviceId": 544,
+        "profileId": 49246,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "HML006"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LCA001/assets/icon.svg",
       "images": {
         "large": "/drivers/LCA001/assets/images/large.png",
@@ -2660,6 +3058,90 @@
         }
       ],
       "id": "LCA001"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCE002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCE002/assets/images/large.png",
+        "small": "/drivers/LCE002/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb E14 Candle White and Color Ambiance (BT)"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCE002"
+        ],
+        "deviceId": 269,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LCE002"
     },
     {
       "class": "light",
@@ -2879,7 +3361,11 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LCG002",
+        "productId": [
+          "LCG002",
+          "5055131P7",
+          "5055148P7"
+        ],
         "deviceId": 269,
         "profileId": 260,
         "learnmode": {
@@ -3546,8 +4032,14 @@
           "LCT024",
           "440400982841"
         ],
-        "deviceId": 528,
-        "profileId": 49246,
+        "deviceId": [
+          528,
+          269
+        ],
+        "profileId": [
+          49246,
+          260
+        ],
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -3791,10 +4283,18 @@
         ],
         "productId": [
           "LLC010",
-          "929002376201"
+          "929002376201",
+          "929002376101",
+          "929002376401"
         ],
-        "deviceId": 512,
-        "profileId": 49246,
+        "deviceId": [
+          512,
+          269
+        ],
+        "profileId": [
+          49246,
+          260
+        ],
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
@@ -4370,10 +4870,18 @@
         ],
         "productId": [
           "LTC001",
-          "3261031P6"
+          "3261030P6",
+          "3261031P6",
+          "3261048P6"
         ],
-        "deviceId": 544,
-        "profileId": 49246,
+        "deviceId": [
+          544,
+          268
+        ],
+        "profileId": [
+          49246,
+          260
+        ],
         "learnmode": {
           "instruction": {
             "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
@@ -4722,7 +5230,8 @@
         ],
         "productId": [
           "LTC014",
-          "3216231P6"
+          "3216231P6",
+          "3216131P6"
         ],
         "deviceId": 544,
         "profileId": 49246,
@@ -4959,6 +5468,78 @@
         }
       ],
       "id": "LTD011"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LTE002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTE002/assets/images/large.png",
+        "small": "/drivers/LTE002/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb E14 Candle White Ambiance (BT)"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5.2,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LTE002"
+        ],
+        "deviceId": 268,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LTE002"
     },
     {
       "class": "light",
@@ -6204,6 +6785,69 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LWU001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWU001/assets/images/large.png",
+        "small": "/drivers/LWU001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb E14 P45 White"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5.7,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWU001",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWU001"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LWV001/assets/icon.svg",
       "images": {
         "large": "/drivers/LWV001/assets/images/large.png",
@@ -6264,6 +6908,69 @@
         }
       ],
       "id": "LWV001"
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LWV003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWV003/assets/images/large.png",
+        "small": "/drivers/LWV003/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament ST72 E27"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWV003",
+        "deviceId": 257,
+        "profileId": 260,
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "transition_time",
+          "type": "number",
+          "label": {
+            "en": "Transition Time"
+          },
+          "hint": {
+            "en": "This setting determines the time in seconds it takes to dim from one level to another."
+          },
+          "value": 1,
+          "attr": {
+            "min": 0,
+            "max": 6553
+          }
+        }
+      ],
+      "id": "LWV003"
     },
     {
       "class": "light",
@@ -6401,6 +7108,45 @@
     },
     {
       "name": {
+        "en": "Smart Button"
+      },
+      "class": "remote",
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "ROM001"
+        ],
+        "deviceId": [
+          2096
+        ],
+        "profileId": 260,
+        "learnmode": {
+          "image": "/drivers/ROM001/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+          }
+        }
+      },
+      "icon": "/drivers/ROM001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ROM001/assets/images/large.png",
+        "small": "/drivers/ROM001/assets/images/small.png"
+      },
+      "id": "ROM001"
+    },
+    {
+      "name": {
         "en": "Dimmer Switch"
       },
       "class": "sensor",
@@ -6461,8 +7207,7 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML002",
-          "9290019758"
+          "SML001"
         ],
         "deviceId": 2128,
         "profileId": 49246,
@@ -6635,7 +7380,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML002"
+          "SML002",
+          "9290019758"
         ],
         "deviceId": 2128,
         "profileId": 49246,
@@ -6788,6 +7534,81 @@
   ],
   "flow": {
     "triggers": [
+      {
+        "id": "ROM001_on",
+        "title": {
+          "en": "On-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          }
+        ]
+      },
+      {
+        "id": "ROM001_off",
+        "title": {
+          "en": "Off-button pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          }
+        ]
+      },
+      {
+        "id": "ROM001_dim",
+        "title": {
+          "en": "Dim buttons"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM001"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "up-press",
+                "label": {
+                  "en": "Dim-up pressed"
+                }
+              },
+              {
+                "id": "up-hold",
+                "label": {
+                  "en": "Dim-up hold"
+                }
+              },
+              {
+                "id": "down-press",
+                "label": {
+                  "en": "Dim-down pressed"
+                }
+              },
+              {
+                "id": "down-hold",
+                "label": {
+                  "en": "Dim-down hold"
+                }
+              },
+              {
+                "id": "release",
+                "label": {
+                  "en": "Dim-button released"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "RWL000_on",
         "title": {
