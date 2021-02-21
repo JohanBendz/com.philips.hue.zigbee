@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.26",
+  "version": "2.0.28",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -114,35 +114,9 @@
     ],
     "triggers": [
       {
-        "id": "ROM001_on",
+        "id": "ROM001_button",
         "title": {
-          "en": "On-button pressed"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ROM001"
-          }
-        ]
-      },
-      {
-        "id": "ROM001_off",
-        "title": {
-          "en": "Off-button pressed"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ROM001"
-          }
-        ]
-      },
-      {
-        "id": "ROM001_dim",
-        "title": {
-          "en": "Dim buttons"
+          "en": "Button pressed"
         },
         "args": [
           {
@@ -155,33 +129,57 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "up-press",
+                "id": "pressed",
                 "label": {
-                  "en": "Dim-up pressed"
+                  "en": "Button pressed"
                 }
               },
               {
-                "id": "up-hold",
+                "id": "pressed-odd",
                 "label": {
-                  "en": "Dim-up hold"
+                  "en": "Button pressed on (odd times)"
                 }
               },
               {
-                "id": "down-press",
+                "id": "pressed-even",
                 "label": {
-                  "en": "Dim-down pressed"
+                  "en": "Button pressed off (even times)"
                 }
               },
               {
-                "id": "down-hold",
+                "id": "hold",
                 "label": {
-                  "en": "Dim-down hold"
+                  "en": "Button held (any time)"
                 }
               },
               {
-                "id": "release",
+                "id": "short-hold",
                 "label": {
-                  "en": "Dim-button released"
+                  "en": "Button held (<1 sec)"
+                }
+              },
+              {
+                "id": "long-hold",
+                "label": {
+                  "en": "Button held (>1 sec)"
+                }
+              },
+              {
+                "id": "up",
+                "label": {
+                  "en": "Button held - up"
+                }
+              },
+              {
+                "id": "down",
+                "label": {
+                  "en": "Button held - down"
+                }
+              },
+              {
+                "id": "released",
+                "label": {
+                  "en": "Button released (if status=on and held)"
                 }
               }
             ]
@@ -4011,7 +4009,12 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "5041148P7"
+          "5041131P7",
+          "5041148P7",
+          "5042131P7",
+          "5041131P9",
+          "5041148P9",
+          "5042148P9"
         ],
         "endpoints": {
           "11": {
@@ -8195,7 +8198,8 @@
           "LLC011",
           "LLC012",
           "LLC014",
-          "929002375901"
+          "929002375901",
+          "929002376001"
         ],
         "endpoints": {
           "11": {
@@ -10623,7 +10627,11 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTP002",
+        "productId": [
+          "LTP002",
+          "4023330P6",
+          "4023331P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -13178,7 +13186,8 @@
             ],
             "bindings": [
               1024,
-              1026
+              1026,
+              1030
             ]
           }
         },
@@ -13355,7 +13364,8 @@
             ],
             "bindings": [
               1024,
-              1026
+              1026,
+              1030
             ]
           }
         },

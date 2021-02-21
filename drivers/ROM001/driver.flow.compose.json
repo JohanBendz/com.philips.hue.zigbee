@@ -1,21 +1,9 @@
 {
   "triggers": [
     {
-      "id": "ROM001_on",
+      "id": "ROM001_button",
       "title": {
-        "en": "On-button pressed"
-      }
-    },
-    {
-      "id": "ROM001_off",
-      "title": {
-        "en": "Off-button pressed"
-      }
-    },
-    {
-      "id": "ROM001_dim",
-      "title": {
-        "en": "Dim buttons"
+        "en": "Button pressed"
       },
       "args": [
         {
@@ -23,33 +11,57 @@
           "type": "dropdown",
           "values": [
             {
-              "id": "up-press",
+              "id": "pressed",
               "label": {
-                "en": "Dim-up pressed"
+                "en": "Button pressed"
               }
             },
             {
-              "id": "up-hold",
+              "id": "pressed-odd",
               "label": {
-                "en": "Dim-up hold"
+                "en": "Button pressed on (odd times)"
               }
             },
             {
-              "id": "down-press",
+              "id": "pressed-even",
               "label": {
-                "en": "Dim-down pressed"
+                "en": "Button pressed off (even times)"
               }
             },
             {
-              "id": "down-hold",
+              "id": "hold",
               "label": {
-                "en": "Dim-down hold"
+                "en": "Button held (any time)"
               }
             },
             {
-              "id": "release",
+              "id": "short-hold",
               "label": {
-                "en": "Dim-button released"
+                "en": "Button held (<1 sec)"
+              }
+            },
+            {
+              "id": "long-hold",
+              "label": {
+                "en": "Button held (>1 sec)"
+              }
+            },
+            {
+              "id": "up",
+              "label": {
+                "en": "Button held - up"
+              }
+            },
+            {
+              "id": "down",
+              "label": {
+                "en": "Button held - down"
+              }
+            },
+            {
+              "id": "released",
+              "label": {
+                "en": "Button released (if status=on and held)"
               }
             }
           ]

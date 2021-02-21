@@ -9,7 +9,6 @@ class OutDoorSensor extends ZigBeeDevice {
 
 	async onNodeInit({ zclNode }) {
 
-        //this.enableDebug();
 		this.printNode();
 		
 		// alarm_motion

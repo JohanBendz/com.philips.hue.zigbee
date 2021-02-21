@@ -73,5 +73,11 @@
   },
   "2.0.26": {
     "en": "Added support for Milliskin GU10 Recessed Spotlight and Filament ST72 E27."
+  },
+  "2.0.27": {
+    "en": "Replaced faulty Smart Button flowcards with correct ones."
+  },
+  "2.0.28": {
+    "en": "Fix for non reporting Motion/Outdoor Sensors."
   }
 }

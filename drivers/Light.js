@@ -17,8 +17,6 @@ class Light extends ZigBeeLightDevice {
 
         await super.onNodeInit({zclNode});
 
-        this.enableDebug();
-//		debug(true);
         this.printNode();
 
 

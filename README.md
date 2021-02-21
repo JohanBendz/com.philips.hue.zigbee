@@ -4,6 +4,14 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.28 (SDK3)
+Fix:
+- Motion/Outdoor sensors not reporting motion for some users (old Hue firmware issue?)
+
+### v.2.0.27 (SDK3)
+Fix:
+- Smart Button, replaced faulty flow cards with correct (and more) cards.
+
 ### v.2.0.26 (SDK3)
 Added support for:
 - Milliskin GU10 Recessed Spotlight White Ambiance

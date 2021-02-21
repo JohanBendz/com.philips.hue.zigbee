@@ -11,8 +11,10 @@ class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
-        //this.enableDebug();
-        this.printNode();
+		this.printNode();
+		
+		const swBuild = await zclNode.endpoints[2].clusters.basic.readAttributes('swBuildId');
+		this.log('swBuild:', swBuild);
 
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
@@ -237,3 +239,361 @@ module.exports = MotionSensor;
       }
     ]
   }, */
+
+  
+/*   "ids": {
+    "modelId": "SML001",
+    "manufacturerName": "Philips"
+  },
+  "endpoints": {
+    "endpointDescriptors": [
+      {
+        "endpointId": 2,
+        "applicationProfileId": 260,
+        "applicationDeviceId": 263,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 0,
+        "inputClusters": [
+          0,
+          1,
+          3,
+          1030,
+          1024,
+          1026
+        ],
+        "outputClusters": [
+          25
+        ]
+      },
+      {
+        "endpointId": 1,
+        "applicationProfileId": 49246,
+        "applicationDeviceId": 2128,
+        "applicationDeviceVersion": 0,
+        "_reserved1": 2,
+        "inputClusters": [
+          0
+        ],
+        "outputClusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768,
+          5
+        ]
+      }
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": {
+          "basic": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "zclVersion",
+                "value": 1
+              },
+              {
+                "id": 1,
+                "name": "appVersion",
+                "value": 2
+              },
+              {
+                "id": 2,
+                "name": "stackVersion",
+                "value": 1
+              },
+              {
+                "id": 3,
+                "name": "hwVersion",
+                "value": 1
+              },
+              {
+                "id": 4,
+                "name": "manufacturerName",
+                "value": "Philips"
+              },
+              {
+                "id": 5,
+                "name": "modelId",
+                "value": "SML001"
+              },
+              {
+                "id": 6,
+                "name": "dateCode",
+                "value": "20190219"
+              },
+              {
+                "id": 7,
+                "name": "powerSource",
+                "value": "battery"
+              },
+              {
+                "id": 16384,
+                "name": "swBuildId",
+                "value": "6.1.1.27575"
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        },
+        "bindings": {
+          "basic": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "zclVersion",
+                "value": 1
+              },
+              {
+                "id": 1,
+                "name": "appVersion",
+                "value": 2
+              },
+              {
+                "id": 2,
+                "name": "stackVersion",
+                "value": 1
+              },
+              {
+                "id": 3,
+                "name": "hwVersion",
+                "value": 1
+              },
+              {
+                "id": 4,
+                "name": "manufacturerName",
+                "value": "Philips"
+              },
+              {
+                "id": 5,
+                "name": "modelId",
+                "value": "SML001"
+              },
+              {
+                "id": 6,
+                "name": "dateCode",
+                "value": "20190219"
+              },
+              {
+                "id": 7,
+                "name": "powerSource",
+                "value": "battery"
+              },
+              {
+                "id": 16384,
+                "name": "swBuildId",
+                "value": "6.1.1.27575"
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "identify": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "groups": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "onOff": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "levelControl": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "colorControl": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "scenes": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      },
+      "2": {
+        "clusters": {
+          "basic": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "zclVersion",
+                "value": 1
+              },
+              {
+                "id": 1,
+                "name": "appVersion",
+                "value": 2
+              },
+              {
+                "id": 2,
+                "name": "stackVersion",
+                "value": 1
+              },
+              {
+                "id": 3,
+                "name": "hwVersion",
+                "value": 1
+              },
+              {
+                "id": 4,
+                "name": "manufacturerName",
+                "value": "Philips"
+              },
+              {
+                "id": 5,
+                "name": "modelId",
+                "value": "SML001"
+              },
+              {
+                "id": 6,
+                "name": "dateCode",
+                "value": "20190219"
+              },
+              {
+                "id": 7,
+                "name": "powerSource",
+                "value": "battery"
+              },
+              {
+                "id": 16384,
+                "name": "swBuildId",
+                "value": "6.1.1.27575"
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "powerConfiguration": {
+            "attributes": [
+              {
+                "id": 32,
+                "name": "batteryVoltage",
+                "value": 24,
+                "reportingConfiguration": {
+                  "status": "UNREPORTABLE_ATTRIBUTE",
+                  "direction": "reported"
+                }
+              },
+              {
+                "id": 33,
+                "name": "batteryPercentageRemaining",
+                "value": 41,
+                "reportingConfiguration": {
+                  "direction": "reported",
+                  "attributeDataType": 32,
+                  "minInterval": 300,
+                  "maxInterval": 60000,
+                  "minChange": 1,
+                  "status": "SUCCESS"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "identify": {
+            "attributes": [
+              {
+                "id": 0,
+                "reportingConfiguration": {
+                  "status": "UNREPORTABLE_ATTRIBUTE",
+                  "direction": "reported"
+                }
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "occupancySensing": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "occupancy",
+                "value": {
+                  "type": "Buffer",
+                  "data": [
+                    0
+                  ]
+                }
+              },
+              {
+                "id": 1,
+                "name": "occupancySensorType",
+                "value": "pir"
+              },
+              {
+                "id": 16,
+                "name": "pirOccupiedToUnoccupiedDelay",
+                "value": 0
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "illuminanceMeasurement": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "measuredValue",
+                "value": 10246
+              },
+              {
+                "id": 1,
+                "name": "minMeasuredValue",
+                "value": 1
+              },
+              {
+                "id": 2,
+                "name": "maxMeasuredValue",
+                "value": 65534
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          },
+          "temperatureMeasurement": {
+            "attributes": [
+              {
+                "id": 0,
+                "name": "measuredValue",
+                "value": 2238
+              },
+              {
+                "id": 1,
+                "name": "minMeasuredValue",
+                "value": -27315
+              },
+              {
+                "id": 2,
+                "name": "maxMeasuredValue",
+                "value": 32767
+              }
+            ],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        },
+        "bindings": {
+          "ota": {
+            "attributes": [],
+            "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+            "commandsReceived": "UNSUP_GENERAL_COMMAND"
+          }
+        }
+      }
+    }
+  } */
