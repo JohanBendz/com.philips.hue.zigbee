@@ -2,7 +2,7 @@
   "name": {
     "en": "GU10 White Ambiance BT"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": ["light_white_temperature"],
   "energy": {
     "approximation": {
       "usageOn": 5,
