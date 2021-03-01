@@ -4,13 +4,16 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.30 (SDK3)
+Added a secondary version of Outdoor Sensor - Outdoor Occupancy Sensor, for test/evaluation
+
 ### v.2.0.29 (SDK3)
 Added support for:
 - Aurelle Panel Round
 - Centris Panel
 - Centris Spot
 
-Added a secondary version of Motion Sensor - Occupancy, for test/evaluation
+Added a secondary version of Motion Sensor - Occupancy Sensor, for test/evaluation
 
 Added some device Id's to already supported devices
 Optimized images to shrink the size of the app.

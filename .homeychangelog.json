@@ -79,5 +79,8 @@
   },
   "2.0.29": {
     "en": "Added support for Aurelle Panel Round, Centris Panel, Centris Spot and added some device Id's to already supported devices. Optimized images to shrink the size of the app."
+  },
+  "2.0.30": {
+    "en": "Added alternative drivers for motion/outdoor sensors. Outdoor Occupancy Sensor / Occupancy Sensor"
   }
 }
