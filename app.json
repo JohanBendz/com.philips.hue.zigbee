@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.28",
+  "version": "2.0.29",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -3108,6 +3108,123 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/3216431P6/assets/icon.svg",
+      "images": {
+        "large": "/drivers/3216431P6/assets/images/large.png",
+        "small": "/drivers/3216431P6/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Aurelle Panel Round"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 24.5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "3216431P6",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "3216431P6",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/4090331P9/assets/icon.svg",
       "images": {
         "large": "/drivers/4090331P9/assets/images/large.png",
@@ -4288,6 +4405,297 @@
         }
       },
       "id": "5047131P6",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default Color Temperature"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5060731P7_01/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5060731P7_01/assets/images/large.png",
+        "small": "/drivers/5060731P7_01/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Centris Panel"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 40,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5060731P7_01"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5060731P7_01",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default Color Temperature"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5060731P7_02/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5060731P7_02/assets/images/large.png",
+        "small": "/drivers/5060731P7_02/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Centris Spot"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5.7,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5060731P7_02",
+          "5060731P7_03",
+          "5060731P7_04",
+          "5060731P7_05"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5060731P7_02",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -9571,7 +9979,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTC012",
+        "productId": [
+          "LTC012",
+          "3418931P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -13089,7 +13500,7 @@
     },
     {
       "name": {
-        "en": "Dimmer Switch"
+        "en": "Dimmer Switch (Gen 1 & 2)"
       },
       "class": "remote",
       "icon": "/drivers/RWL000/assets/icon.svg",
@@ -13111,8 +13522,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "RWL021",
-          "RWL020"
+          "RWL020",
+          "RWL021"
         ],
         "endpoints": {
           "1": {
@@ -13185,8 +13596,7 @@
             ],
             "bindings": [
               1024,
-              1026,
-              1030
+              1026
             ]
           }
         },
@@ -13232,6 +13642,189 @@
             "max": 10,
             "step": 0.1
           }
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Low Battery Alarm Threshold (%)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 20,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 99
+          }
+        },
+        {
+          "id": "minReportLux",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 60,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportLux",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 60,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Occupancy Sensor"
+      },
+      "class": "sensor",
+      "icon": "/drivers/SML001-occupancy/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SML001-occupancy/assets/images/large.png",
+        "small": "/drivers/SML001-occupancy/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "SML001"
+        ],
+        "endpoints": {
+          "1": {
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              1,
+              1030,
+              1024,
+              1026
+            ],
+            "bindings": [
+              1024,
+              1026,
+              1030
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SML001-occupancy/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+          }
+        }
+      },
+      "id": "SML001-occupancy",
+      "settings": [
+        {
+          "id": "temperature_offset",
+          "type": "number",
+          "label": {
+            "en": "Temperature offset (°C)",
+            "nl": "Temperatuur compensatie (°C)"
+          },
+          "hint": {
+            "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 0.1
+          }
+        },
+        {
+          "id": "temperature_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Temperature reporting decimals"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report temperature value with 1 decimal (21.4 °C)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report temperature value with 2 decimals (21.37 °C)"
+              }
+            }
+          ]
         },
         {
           "id": "batteryThreshold",

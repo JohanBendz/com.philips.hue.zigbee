@@ -1,0 +1,7 @@
+"use strict";
+
+const Light = require("../Light.js");
+
+class Hue5060731P7_01 extends Light { }
+
+module.exports = Hue5060731P7_01;

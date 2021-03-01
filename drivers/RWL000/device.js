@@ -36,7 +36,6 @@ async onNodeInit({ zclNode }) {
       this.batteryThreshold = 20;
 			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
 				getOpts: {
-				getOnStart: true,
 				},
 				reportOpts: {
 					configureAttributeReporting: {

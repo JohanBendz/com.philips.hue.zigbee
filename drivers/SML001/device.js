@@ -11,10 +11,7 @@ class MotionSensor extends ZigBeeDevice {
 	
 	async onNodeInit({ zclNode }) {
 
-		this.printNode();
-		
-		const swBuild = await zclNode.endpoints[2].clusters.basic.readAttributes('swBuildId');
-		this.log('swBuild:', swBuild);
+    this.printNode();
 
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {

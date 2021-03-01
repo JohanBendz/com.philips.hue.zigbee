@@ -77,7 +77,7 @@
   "2.0.27": {
     "en": "Replaced faulty Smart Button flowcards with correct ones."
   },
-  "2.0.28": {
-    "en": "Fix for non reporting Motion/Outdoor Sensors."
+  "2.0.29": {
+    "en": "Added support for Aurelle Panel Round, Centris Panel, Centris Spot and added some device Id's to already supported devices. Optimized images to shrink the size of the app."
   }
 }

@@ -1,0 +1,60 @@
+{
+  "name": {
+    "en": "Occupancy Sensor"
+  },
+  "class": "sensor",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "alarm_motion",
+    "measure_temperature",
+    "measure_luminance",
+    "measure_battery",
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "AAA",
+      "AAA"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "SML001"
+    ],
+    "endpoints": {
+      "1": {
+        "bindings": [
+          6
+        ]
+      },
+      "2": {
+        "clusters": [
+          0,
+          1,
+          1030,
+          1024,
+          1026
+        ],
+        "bindings": [
+          1024,
+          1026,
+          1030
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+      }
+    }
+  }
+}

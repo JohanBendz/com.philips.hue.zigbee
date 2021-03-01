@@ -14,7 +14,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LTC012",
+    "productId": [
+      "LTC012",
+      "3418931P6"
+    ],
     "endpoints": {
       "11": {
         "clusters": [

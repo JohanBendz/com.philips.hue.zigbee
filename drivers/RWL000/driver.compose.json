@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Dimmer Switch"
+    "en": "Dimmer Switch (Gen 1 & 2)"
   },
   "class": "remote",
   "icon": "{{driverAssetsPath}}/icon.svg",
@@ -22,8 +22,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "RWL021",
-      "RWL020"
+      "RWL020",
+      "RWL021"
     ],
     "endpoints": {
       "1": {

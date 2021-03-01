@@ -4,9 +4,16 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
-### v.2.0.28 (SDK3)
-Fix:
-- Motion/Outdoor sensors not reporting motion for some users (old Hue firmware issue?)
+### v.2.0.29 (SDK3)
+Added support for:
+- Aurelle Panel Round
+- Centris Panel
+- Centris Spot
+
+Added a secondary version of Motion Sensor - Occupancy, for test/evaluation
+
+Added some device Id's to already supported devices
+Optimized images to shrink the size of the app.
 
 ### v.2.0.27 (SDK3)
 Fix:
@@ -424,3 +431,5 @@ Added support for:
 - Hue Fluorish Ceiling Light (4090531P9)
 - Milliskin GU10 Recessed Spotlight White Ambiance
 - Filament ST72 E27
+
+(List may not be complete, more than 100 devices already supported and counting..)
