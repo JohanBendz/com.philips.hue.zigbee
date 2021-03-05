@@ -2,14 +2,20 @@
 
 const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
-/* const { ZCLNode, Cluster, debug, CLUSTER } = require('zigbee-clusters');
-const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
+const { ZCLNode, Cluster, debug, CLUSTER } = require('zigbee-clusters');
+/* const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
 const HueSpecificLevelControlCluster = require('../lib/HueSpecificLevelControlCluster');
 const HueSpecificColorControlCluster = require('../lib/HueSpecificColorControlCluster');
 
 Cluster.addCluster(HueSpecificOnOffCluster);
 Cluster.addCluster(HueSpecificLevelControlCluster);
 Cluster.addCluster(HueSpecificColorControlCluster); */
+
+const HueSpecificIdentifyCluster = require('../lib/HueSpecificIdentifyCluster');
+Cluster.addCluster(HueSpecificIdentifyCluster);
+const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
+Cluster.addCluster(HueSpecificIdentifyBoundCluster);
+
 
 class Light extends ZigBeeLightDevice {
 
@@ -18,7 +24,6 @@ class Light extends ZigBeeLightDevice {
         await super.onNodeInit({zclNode});
 
         this.printNode();
-
 
         // Flow action - Blink
         this.startBlinkAction = this.homey.flow.getActionCard('Blink');
@@ -33,6 +38,16 @@ class Light extends ZigBeeLightDevice {
             }
         });
 
+        // Flow action - Alert
+        this.startAlertAction = this.homey.flow.getActionCard('Alert');
+        this.startAlertAction.registerRunListener(async( args, state) => {
+            var blinktype = args.alert_mode === 'blink' ? 0 : args.alert_mode === 'breath' ? 1 : args.alert_mode === 'okay' ? 2 : args.alert_mode === 'channel_change' ? 11 : args.alert_mode === 'finish_effect' ? 254 : 255;
+            await args.device.zclNode.endpoints[11].clusters.identify.triggerEffectId({
+                effectId: blinktype,
+                effectVariant: 0
+            });
+        });
+
 /*         let settings = await this.getSettings();
 
         await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: settings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
@@ -44,6 +59,7 @@ class Light extends ZigBeeLightDevice {
 
     }
 
+    // Sleep for blink 
     sleep(milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {

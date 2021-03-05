@@ -1,0 +1,115 @@
+{
+  "triggers": [
+    {
+      "id": "RWL022_buttons",
+      "title": {
+        "en": "Button Action"
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "OnOff-ShortPress",
+              "label": {
+                "en": "On/Off, short press"
+              }
+            },
+            {
+              "id": "OnOff-ShortRelease",
+              "label": {
+                "en": "On/Off, short release"
+              }
+            },
+            {
+              "id": "OnOff-LongPress",
+              "label": {
+                "en": "On/Off, long press"
+              }
+            },
+            {
+              "id": "OnOff-LongRelease",
+              "label": {
+                "en": "On/Off, long release"
+              }
+            },
+            {
+              "id": "DimUp-ShortPress",
+              "label": {
+                "en": "Dim up, short press"
+              }
+            },
+            {
+              "id": "DimUp-ShortRelease",
+              "label": {
+                "en": "Dim up, short release"
+              }
+            },
+            {
+              "id": "DimUp-LongPress",
+              "label": {
+                "en": "Dim up, long press"
+              }
+            },
+            {
+              "id": "DimUp-LongRelease",
+              "label": {
+                "en": "Dim up, long release"
+              }
+            },
+
+            {
+              "id": "DimDown-ShortPress",
+              "label": {
+                "en": "Dim down, short press"
+              }
+            },
+            {
+              "id": "DimDown-ShortRelease",
+              "label": {
+                "en": "Dim down, short release"
+              }
+            },
+            {
+              "id": "DimDown-LongPress",
+              "label": {
+                "en": "Dim down, long press"
+              }
+            },
+            {
+              "id": "DimDown-LongRelease",
+              "label": {
+                "en": "Dim down, long release"
+              }
+            },
+            {
+              "id": "Hue-ShortPress",
+              "label": {
+                "en": "Hue, short press"
+              }
+            },
+            {
+              "id": "Hue-ShortRelease",
+              "label": {
+                "en": "Hue, short release"
+              }
+            },
+            {
+              "id": "Hue-LongPress",
+              "label": {
+                "en": "Hue, long press"
+              }
+            },
+            {
+              "id": "Hue-LongRelease",
+              "label": {
+                "en": "Hue, long release"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

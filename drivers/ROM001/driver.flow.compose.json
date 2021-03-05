@@ -47,18 +47,6 @@
               }
             },
             {
-              "id": "up",
-              "label": {
-                "en": "Button held - up"
-              }
-            },
-            {
-              "id": "down",
-              "label": {
-                "en": "Button held - down"
-              }
-            },
-            {
               "id": "released",
               "label": {
                 "en": "Button released (if status=on and held)"

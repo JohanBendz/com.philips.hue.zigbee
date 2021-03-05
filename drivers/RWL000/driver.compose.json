@@ -28,6 +28,7 @@
     "endpoints": {
       "1": {
         "bindings": [
+          3,
           6,
           8
         ]

@@ -69,7 +69,7 @@
     "en": "Added support for Buckram Spotlights and added more device Id's to some already added devices."
   },
   "2.0.24": {
-    "en": "Added flow card Blink."
+    "en": "Added flowcard Blink (lights)."
   },
   "2.0.26": {
     "en": "Added support for Milliskin GU10 Recessed Spotlight and Filament ST72 E27."
@@ -81,6 +81,9 @@
     "en": "Added support for Aurelle Panel Round, Centris Panel, Centris Spot and added some device Id's to already supported devices. Optimized images to shrink the size of the app."
   },
   "2.0.30": {
-    "en": "Added alternative drivers for motion/outdoor sensors. Outdoor Occupancy Sensor / Occupancy Sensor"
+    "en": "Added alternative drivers for motion/outdoor sensors. Outdoor Occupancy Sensor / Occupancy Sensor."
+  },
+  "2.0.31": {
+    "en": "Added support for Dimmer Switch (Gen 3) and Adore Bathroom Recessed Downlights. Added flowcard for alerts (lights)."
   }
 }

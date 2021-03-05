@@ -9,7 +9,7 @@
     "en": "Philips Hue Zigbee devices, without the Bridge."
   },
   "category": "lights",
-  "version": "2.0.29",
+  "version": "2.0.31",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -46,6 +46,64 @@
   "source": "https://github.com/JohanBendz/com.philips.hue.zigbee",
   "flow": {
     "actions": [
+      {
+        "id": "Alert",
+        "title": {
+          "en": "Alert mode"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "class=light"
+          },
+          {
+            "type": "dropdown",
+            "name": "alert_mode",
+            "title": {
+              "en": "Set an alert mode"
+            },
+            "values": [
+              {
+                "id": "blink",
+                "label": {
+                  "en": "Blink (1 time)"
+                }
+              },
+              {
+                "id": "breath",
+                "label": {
+                  "en": "Breath (15 times)"
+                }
+              },
+              {
+                "id": "okay",
+                "label": {
+                  "en": "Indicate OK"
+                }
+              },
+              {
+                "id": "channel_change",
+                "label": {
+                  "en": "Indicate problem"
+                }
+              },
+              {
+                "id": "finish_effect",
+                "label": {
+                  "en": "Soft Stop"
+                }
+              },
+              {
+                "id": "stop_effect",
+                "label": {
+                  "en": "Hard Stop"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "Blink",
         "title": {
@@ -165,18 +223,6 @@
                 }
               },
               {
-                "id": "up",
-                "label": {
-                  "en": "Button held - up"
-                }
-              },
-              {
-                "id": "down",
-                "label": {
-                  "en": "Button held - down"
-                }
-              },
-              {
                 "id": "released",
                 "label": {
                   "en": "Button released (if status=on and held)"
@@ -260,6 +306,121 @@
             ]
           }
         ]
+      },
+      {
+        "id": "RWL022_buttons",
+        "title": {
+          "en": "Button Action"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RWL022"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "OnOff-ShortPress",
+                "label": {
+                  "en": "On/Off, short press"
+                }
+              },
+              {
+                "id": "OnOff-ShortRelease",
+                "label": {
+                  "en": "On/Off, short release"
+                }
+              },
+              {
+                "id": "OnOff-LongPress",
+                "label": {
+                  "en": "On/Off, long press"
+                }
+              },
+              {
+                "id": "OnOff-LongRelease",
+                "label": {
+                  "en": "On/Off, long release"
+                }
+              },
+              {
+                "id": "DimUp-ShortPress",
+                "label": {
+                  "en": "Dim up, short press"
+                }
+              },
+              {
+                "id": "DimUp-ShortRelease",
+                "label": {
+                  "en": "Dim up, short release"
+                }
+              },
+              {
+                "id": "DimUp-LongPress",
+                "label": {
+                  "en": "Dim up, long press"
+                }
+              },
+              {
+                "id": "DimUp-LongRelease",
+                "label": {
+                  "en": "Dim up, long release"
+                }
+              },
+              {
+                "id": "DimDown-ShortPress",
+                "label": {
+                  "en": "Dim down, short press"
+                }
+              },
+              {
+                "id": "DimDown-ShortRelease",
+                "label": {
+                  "en": "Dim down, short release"
+                }
+              },
+              {
+                "id": "DimDown-LongPress",
+                "label": {
+                  "en": "Dim down, long press"
+                }
+              },
+              {
+                "id": "DimDown-LongRelease",
+                "label": {
+                  "en": "Dim down, long release"
+                }
+              },
+              {
+                "id": "Hue-ShortPress",
+                "label": {
+                  "en": "Hue, short press"
+                }
+              },
+              {
+                "id": "Hue-ShortRelease",
+                "label": {
+                  "en": "Hue, short release"
+                }
+              },
+              {
+                "id": "Hue-LongPress",
+                "label": {
+                  "en": "Hue, long press"
+                }
+              },
+              {
+                "id": "Hue-LongRelease",
+                "label": {
+                  "en": "Hue, long release"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -323,6 +484,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -468,6 +630,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -614,6 +777,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -901,6 +1065,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -1024,6 +1189,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -1152,6 +1318,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -1294,6 +1461,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -1436,6 +1604,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -1559,6 +1728,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -1668,6 +1838,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -1777,6 +1948,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -1906,6 +2078,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2048,6 +2221,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2190,6 +2364,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2332,6 +2507,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2474,6 +2650,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2616,6 +2793,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2761,6 +2939,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -2906,6 +3085,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3036,6 +3216,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3153,6 +3334,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3167,6 +3349,126 @@
         }
       },
       "id": "3216431P6",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/3417611P6/assets/icon.svg",
+      "images": {
+        "large": "/drivers/3417611P6/assets/images/large.png",
+        "small": "/drivers/3417611P6/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Adore Bathroom Recessed Downlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "3417611P6"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "3417611P6",
       "settings": [
         {
           "id": "light_powerOnCtrl",
@@ -3282,6 +3584,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3428,6 +3731,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3574,6 +3878,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3716,6 +4021,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -3858,6 +4164,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4000,6 +4307,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4137,6 +4445,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4269,6 +4578,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4391,6 +4701,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4535,6 +4846,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4682,6 +4994,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4824,6 +5137,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -4969,6 +5283,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5108,6 +5423,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5250,6 +5566,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5392,6 +5709,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5521,6 +5839,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5655,6 +5974,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5785,6 +6105,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -5919,6 +6240,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6049,6 +6371,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6193,6 +6516,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6337,6 +6661,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6479,6 +6804,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6621,6 +6947,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6763,6 +7090,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -6909,6 +7237,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7051,6 +7380,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7193,6 +7523,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7335,6 +7666,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7477,6 +7809,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7626,6 +7959,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7768,6 +8102,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -7910,6 +8245,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8055,6 +8391,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8197,6 +8534,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8343,6 +8681,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8484,6 +8823,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8613,6 +8953,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8742,6 +9083,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -8851,6 +9193,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               5,
               6
@@ -8918,6 +9261,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9047,6 +9391,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9192,6 +9537,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9324,6 +9670,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9459,6 +9806,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9591,6 +9939,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9724,6 +10073,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9854,6 +10204,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -9987,6 +10338,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10121,6 +10473,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10256,6 +10609,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10386,6 +10740,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10518,6 +10873,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10650,6 +11006,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10779,6 +11136,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -10912,6 +11270,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11046,6 +11405,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11176,6 +11536,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11293,6 +11654,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11428,6 +11790,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11560,6 +11923,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11693,6 +12057,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11826,6 +12191,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8,
@@ -11949,6 +12315,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12058,6 +12425,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12169,6 +12537,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12285,6 +12654,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12394,6 +12764,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12503,6 +12874,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12612,6 +12984,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12721,6 +13094,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12830,6 +13204,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -12939,6 +13314,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -13048,6 +13424,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -13157,6 +13534,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -13270,6 +13648,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -13383,6 +13762,7 @@
           "11": {
             "clusters": [
               0,
+              3,
               4,
               6,
               8
@@ -13481,6 +13861,7 @@
         "endpoints": {
           "1": {
             "bindings": [
+              3,
               6,
               8
             ],
@@ -13528,6 +13909,7 @@
         "endpoints": {
           "1": {
             "bindings": [
+              3,
               6,
               8
             ]
@@ -13548,6 +13930,56 @@
         }
       },
       "id": "RWL000"
+    },
+    {
+      "name": {
+        "en": "Dimmer Switch (Gen 3)"
+      },
+      "class": "remote",
+      "icon": "/drivers/RWL022/assets/icon.svg",
+      "images": {
+        "large": "/drivers/RWL022/assets/images/large.png",
+        "small": "/drivers/RWL022/assets/images/small.png"
+      },
+      "capabilities": [],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "RWL022"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              8,
+              64512
+            ],
+            "bindings": [
+              64512
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/RWL022/assets/icon.svg",
+          "instruction": {
+            "en": "Push a pin down the small hole under the battery lid for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+          }
+        }
+      },
+      "id": "RWL022"
     },
     {
       "name": {
@@ -13727,7 +14159,7 @@
     },
     {
       "name": {
-        "en": "Occupancy Sensor"
+        "en": "Outdoor Occupancy Sensor"
       },
       "class": "sensor",
       "icon": "/drivers/SML001-occupancy/assets/icon.svg",
@@ -13744,8 +14176,8 @@
       ],
       "energy": {
         "batteries": [
-          "AAA",
-          "AAA"
+          "AA",
+          "AA"
         ]
       },
       "zigbee": {
@@ -13754,7 +14186,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML001"
+          "SML002",
+          "9290019758"
         ],
         "endpoints": {
           "1": {
@@ -13956,8 +14389,7 @@
             ],
             "bindings": [
               1024,
-              1026,
-              1030
+              1026
             ]
           }
         },
@@ -14018,6 +14450,189 @@
             "step": 0.1,
             "min": 0,
             "max": 6553
+          }
+        },
+        {
+          "id": "minReportLux",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 60,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportLux",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for lux (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        },
+        {
+          "id": "minReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Min report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Min interval before a report is sent to Homey (s)"
+          },
+          "value": 60,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 86400
+          }
+        },
+        {
+          "id": "maxReportTemp",
+          "type": "number",
+          "label": {
+            "en": "Max report interval for temperature (s)"
+          },
+          "hint": {
+            "en": "Max interval before a report is sent to Homey (s)"
+          },
+          "value": 300,
+          "attr": {
+            "step": 1,
+            "min": 60,
+            "max": 86400
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Occupancy Sensor"
+      },
+      "class": "sensor",
+      "icon": "/drivers/SML002-occupancy/assets/icon.svg",
+      "images": {
+        "large": "/drivers/SML002-occupancy/assets/images/large.png",
+        "small": "/drivers/SML002-occupancy/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_motion",
+        "measure_temperature",
+        "measure_luminance",
+        "measure_battery",
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "AAA",
+          "AAA"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "SML001"
+        ],
+        "endpoints": {
+          "1": {
+            "bindings": [
+              6
+            ]
+          },
+          "2": {
+            "clusters": [
+              0,
+              1,
+              1030,
+              1024,
+              1026
+            ],
+            "bindings": [
+              1024,
+              1026,
+              1030
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/SML002-occupancy/assets/icon.svg",
+          "instruction": {
+            "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+          }
+        }
+      },
+      "id": "SML002-occupancy",
+      "settings": [
+        {
+          "id": "temperature_offset",
+          "type": "number",
+          "label": {
+            "en": "Temperature offset (°C)",
+            "nl": "Temperatuur compensatie (°C)"
+          },
+          "hint": {
+            "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
+            "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
+          },
+          "value": 0,
+          "attr": {
+            "min": -10,
+            "max": 10,
+            "step": 0.1
+          }
+        },
+        {
+          "id": "temperature_decimals",
+          "type": "radio",
+          "label": {
+            "en": "Temperature reporting decimals"
+          },
+          "value": "1",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Report temperature value with 1 decimal (21.4 °C)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Report temperature value with 2 decimals (21.37 °C)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "batteryThreshold",
+          "type": "number",
+          "label": {
+            "en": "Low Battery Alarm Threshold (%)"
+          },
+          "hint": {
+            "en": "This setting determines the threshold before a battery alarm is given."
+          },
+          "value": 20,
+          "attr": {
+            "step": 1,
+            "min": 1,
+            "max": 99
           }
         },
         {

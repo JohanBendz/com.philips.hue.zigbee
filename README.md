@@ -4,6 +4,13 @@ Philips Hue bulbs support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.31 (SDK3)
+Added support for:
+- Dimmer Switch (Gen 3)
+- Adore Bathroom Recessed Downlights
+
+Added flowcard for alerts (lights)
+
 ### v.2.0.30 (SDK3)
 Added a secondary version of Outdoor Sensor - Outdoor Occupancy Sensor, for test/evaluation
 
@@ -30,7 +37,7 @@ Added support for:
 Added some device Id's to already supported devices
 
 ### v.2.0.24 (SDK3)
-Added flow card for Blink
+Added flowcard for Blink (lights)
 
 ### v.2.0.23 (SDK3)
 Added support for:

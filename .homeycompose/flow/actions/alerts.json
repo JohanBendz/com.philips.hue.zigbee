@@ -1,0 +1,58 @@
+{
+    "id": "Alert",
+    "title": {
+    "en": "Alert mode"
+    },
+    "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light" 
+        },
+        {
+          "type": "dropdown",
+          "name": "alert_mode",
+          "title": {
+            "en": "Set an alert mode"
+          },
+          "values": [
+            {
+              "id": "blink",
+              "label": {
+                "en": "Blink (1 time)"
+              }
+            },
+            {
+              "id": "breath",
+              "label": {
+                "en": "Breath (15 times)"
+              }
+            },
+            {
+              "id": "okay",
+              "label": {
+                "en": "Indicate OK"
+              }
+            },
+            {
+              "id": "channel_change",
+              "label": {
+                "en": "Indicate problem"
+              }
+            },
+            {
+              "id": "finish_effect",
+              "label": {
+                "en": "Soft Stop"
+              }
+            },
+            {
+              "id": "stop_effect",
+              "label": {
+                "en": "Hard Stop"
+              }
+            }
+          ]
+        }
+      ]
+}
