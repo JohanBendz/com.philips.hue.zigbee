@@ -2,13 +2,13 @@
   "id": "com.philips.hue.zigbee",
   "sdk": 3,
   "name": {
-    "en": "Philips Hue ZigBee"
+    "en": "Philips Hue, without the bridge"
   },
   "description": {
-    "en": "Philips Hue Zigbee devices, without the Bridge."
+    "en": "Smart light — your way."
   },
   "category": "lights",
-  "version": "2.0.31",
+  "version": "2.0.32",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",

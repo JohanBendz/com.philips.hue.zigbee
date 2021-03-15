@@ -85,5 +85,8 @@
   },
   "2.0.31": {
     "en": "Added support for Dimmer Switch (Gen 3) and Adore Bathroom Recessed Downlights. Added flowcard for alerts (lights)."
+  },
+  "2.0.32": {
+    "en": "Minor improvements and added some additional device ID's"
   }
 }

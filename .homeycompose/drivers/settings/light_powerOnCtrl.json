@@ -1,52 +1,55 @@
 {
     "type": "group",
     "label": {
-        "en": "Behavior after power loss"
+        "en": "Behavior after power loss - not yet implemented"
     },
     "children": [
         {
-        "id": "powerOnCtrl_dimvalue",
-        "type": "number",
-        "label": {
-            "en": "Default brightness on Power On"
-        },
-        "value": 255,
-        "min": 0,
-        "max": 255,
-        "units": {
-            "en": "steps"
-        }
+            "id": "powerOnCtrl_dimvalue",
+            "type": "number",
+            "label": {
+                "en": "Default brightness on Power On"
+            },
+            "value": 255,
+            "min": 0,
+            "max": 255,
+            "units": {
+                "en": "steps"
+            },
+            "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+            }
         },
         {
-        "id": "powerOnCtrl_state",
-        "type": "radio",
-        "label": {
-            "en": "Behavior when power is restored"
-        },
-        "value": "on",
-        "hint": {
-            "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-        },
-        "values": [
-            {
-            "id": "on",
+            "id": "powerOnCtrl_state",
+            "type": "radio",
             "label": {
-                "en": "On with default brightness"
-            }
+                "en": "Behavior when power is restored"
             },
-            {
-            "id": "off",
-            "label": {
-                "en": "Off"
-            }
+            "value": "on",
+            "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
             },
-            {
-            "id": "recover",
-            "label": {
-                "en": "Restore last state and brightness"
-            }
-            }
-        ]
+            "values": [
+                {
+                "id": "on",
+                "label": {
+                    "en": "On with default brightness"
+                }
+                },
+                {
+                "id": "off",
+                "label": {
+                    "en": "Off"
+                }
+                },
+                {
+                "id": "recover",
+                "label": {
+                    "en": "Restore last state and brightness"
+                }
+                }
+            ]
         }
     ]
 }

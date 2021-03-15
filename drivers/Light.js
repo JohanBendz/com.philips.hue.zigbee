@@ -3,14 +3,16 @@
 const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
 const { ZCLNode, Cluster, debug, CLUSTER } = require('zigbee-clusters');
+
+// Power On Behaviour need these
 /* const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
 const HueSpecificLevelControlCluster = require('../lib/HueSpecificLevelControlCluster');
 const HueSpecificColorControlCluster = require('../lib/HueSpecificColorControlCluster');
-
 Cluster.addCluster(HueSpecificOnOffCluster);
 Cluster.addCluster(HueSpecificLevelControlCluster);
 Cluster.addCluster(HueSpecificColorControlCluster); */
 
+// Alert mode need these
 const HueSpecificIdentifyCluster = require('../lib/HueSpecificIdentifyCluster');
 Cluster.addCluster(HueSpecificIdentifyCluster);
 const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
@@ -48,15 +50,6 @@ class Light extends ZigBeeLightDevice {
             });
         });
 
-/*         let settings = await this.getSettings();
-
-        await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: settings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
-        await this.zclNode.endpoints[11].clusters.levelControl.writeAttributes({powerOnCtrl: settings.powerOnCtrl_dimvalue}); // default: 255 (0-255)
-        
-        if (this.hasCapability('light_temperature')){
-            await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: settings.powerOnCtrl_colorvalue}); // default: 366 (153-500)
-        } */
-
     }
 
     // Sleep for blink 
@@ -70,12 +63,37 @@ class Light extends ZigBeeLightDevice {
     }
 
 /*     async onSettings({ oldSettings, newSettings, changedKeys }) {
+       
+        if (changedKeys.includes('powerOnCtrl_state') || changedKeys.includes('powerOnCtrl_dimvalue') || changedKeys.includes('powerOnCtrl_colorvalue')) {
 
-        await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
-        await this.zclNode.endpoints[11].clusters.levelControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_dimvalue}); // default: 255 (0-255)
-        
-        if (this.hasCapability('light_temperature')){
-        await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_colorvalue}); // default: 366 (153-500)
+            try {
+                const powerOnCtrlstate = await this.zclNode.endpoints[11].clusters.onOff.readAttributes('powerOnCtrl');
+                this.log("Power On Control supported by device");
+                await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
+                await this.zclNode.endpoints[11].clusters.levelControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_dimvalue}); // default: 255 (0-255)
+            } catch (error) {
+                this.log("This device does not support Power On Control");
+                throw new Error('Device does not support this feature');
+            }
+
+            try {
+                const {minMireds, maxMireds} = await this.zclNode.endpoints[11].clusters.colorControl.readAttributes('colorTempPhysicalMinMireds', 'colorTempPhysicalMaxMireds');
+                this.log("Color Temperature supported by device. Min Mireds: ", minMireds.colorTempPhysicalMinMireds,". Max Mireds: ", maxMireds.colorTempPhysicalMaxMireds);
+
+                if (newSettings.powerOnCtrl_colorvalue <= (maxMireds) || newSettings.powerOnCtrl_colorvalue >= (minMireds)) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_colorvalue}); // default: 366    
+                }
+                if (newSettings.powerOnCtrl_colorvalue > (maxMireds)) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: maxMireds});    
+                }
+                if (newSettings.powerOnCtrl_colorvalue < (minMireds)) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: minMireds});
+                }
+            } catch (error) {
+                this.log("This device does not support Color Temperature");
+                throw new Error('Device does not support this feature');
+            }
+
         }
     
     } */
@@ -83,3 +101,4 @@ class Light extends ZigBeeLightDevice {
 }
 
 module.exports = Light;
+

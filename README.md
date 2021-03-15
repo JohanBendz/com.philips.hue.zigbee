@@ -1,8 +1,11 @@
 # Philips Hue ZigBee on Homey
 
-Philips Hue bulbs support without Bridge for Homey
+Philips Hue support without Bridge for Homey
 
 ## Release notes:
+
+### v.2.0.32 (SDK3)
+Minor improvements and added some additional device ID's
 
 ### v.2.0.31 (SDK3)
 Added support for:
@@ -443,3 +446,9 @@ Added support for:
 - Filament ST72 E27
 
 (List may not be complete, more than 100 devices already supported and counting..)
+
+---
+
+Sebastian Johansson is the orginal author of this app, in april 2020 the app was transferred to Johan Bendz who is now the developer of the app. 
+
+Credit to Richard Slater for his icons that where used when creating this app (https://thenounproject.com/richard.slater)

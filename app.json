@@ -3,13 +3,13 @@
   "id": "com.philips.hue.zigbee",
   "sdk": 3,
   "name": {
-    "en": "Philips Hue ZigBee"
+    "en": "Philips Hue, without the bridge"
   },
   "description": {
-    "en": "Philips Hue Zigbee devices, without the Bridge."
+    "en": "Smart light — your way."
   },
   "category": "lights",
-  "version": "2.0.31",
+  "version": "2.0.32",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -504,7 +504,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -518,19 +518,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -650,7 +656,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -664,19 +670,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -797,7 +809,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -811,19 +823,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -942,7 +960,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -956,19 +974,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1085,7 +1109,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1099,19 +1123,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1208,7 +1238,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1222,6 +1252,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1338,7 +1371,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1352,19 +1385,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1481,7 +1520,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1495,19 +1534,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1624,7 +1669,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1638,19 +1683,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1747,7 +1798,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1761,6 +1812,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1857,7 +1911,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1871,6 +1925,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -1968,7 +2025,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -1982,6 +2039,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2098,7 +2158,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2112,19 +2172,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2241,7 +2307,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2255,19 +2321,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2384,7 +2456,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2398,19 +2470,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2527,7 +2605,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2541,19 +2619,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2670,7 +2754,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2684,19 +2768,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2813,7 +2903,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2827,19 +2917,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -2959,7 +3055,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -2973,19 +3069,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3105,7 +3207,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3119,19 +3221,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3236,7 +3344,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3250,6 +3358,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3354,7 +3465,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3368,6 +3479,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3474,7 +3588,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3488,6 +3602,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3604,7 +3721,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3618,19 +3735,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3751,7 +3874,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3765,19 +3888,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -3898,7 +4027,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -3912,19 +4041,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4041,7 +4176,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4055,19 +4190,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4184,7 +4325,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4198,19 +4339,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4327,7 +4474,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4341,19 +4488,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4465,7 +4618,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4479,6 +4632,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4598,7 +4754,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4612,6 +4768,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4721,7 +4880,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4735,19 +4894,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4840,7 +5005,9 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "5060731P7_01"
+          "5060730P7_01",
+          "5060731P7_01",
+          "5061031P7_01"
         ],
         "endpoints": {
           "11": {
@@ -4866,7 +5033,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -4880,19 +5047,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -4985,9 +5158,15 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
+          "5060730P7_02",
           "5060731P7_02",
+          "5061031P7_02",
+          "5060730P7_03",
           "5060731P7_03",
+          "5061031P7_03",
+          "5060730P7_04",
           "5060731P7_04",
+          "5060730P7_05",
           "5060731P7_05"
         ],
         "endpoints": {
@@ -5014,7 +5193,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5028,19 +5207,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5157,7 +5342,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5171,19 +5356,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5303,7 +5494,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5317,19 +5508,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5443,7 +5640,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5457,19 +5654,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5586,7 +5789,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5600,19 +5803,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5726,23 +5935,42 @@
       "id": "HBL002",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
+          "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness on Power On"
+                "en": "Default brightness"
               },
               "value": 255,
               "min": 0,
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5859,7 +6087,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -5873,19 +6101,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -5994,7 +6228,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6008,19 +6242,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6125,7 +6365,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6139,19 +6379,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6260,7 +6506,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6274,19 +6520,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6391,7 +6643,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6405,19 +6657,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6536,7 +6794,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6550,19 +6808,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6681,7 +6945,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6695,19 +6959,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6824,7 +7094,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6838,19 +7108,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -6967,7 +7243,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -6981,19 +7257,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7110,7 +7392,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7124,19 +7406,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7257,7 +7545,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7271,19 +7559,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7400,7 +7694,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7414,19 +7708,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7543,7 +7843,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7557,19 +7857,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7686,7 +7992,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7700,19 +8006,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7829,7 +8141,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7843,19 +8155,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -7979,7 +8297,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -7993,19 +8311,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8122,7 +8446,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8136,19 +8460,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8265,7 +8595,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8279,19 +8609,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8411,7 +8747,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8425,19 +8761,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8554,7 +8896,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8568,19 +8910,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8701,7 +9049,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8715,19 +9063,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8843,7 +9197,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8857,6 +9211,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -8973,7 +9330,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -8987,6 +9344,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9103,7 +9463,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9117,19 +9477,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9281,7 +9647,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9295,6 +9661,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9411,7 +9780,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9425,19 +9794,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9557,7 +9932,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9571,19 +9946,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9690,7 +10071,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9704,19 +10085,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9826,7 +10213,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9840,19 +10227,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -9933,7 +10326,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "LTC002"
+          "LTC002",
+          "4100148U7"
         ],
         "endpoints": {
           "11": {
@@ -9959,7 +10353,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -9973,19 +10367,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10093,7 +10493,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10107,19 +10507,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10224,7 +10630,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10238,19 +10644,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10358,7 +10770,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10372,19 +10784,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10493,7 +10911,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10507,19 +10925,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10629,7 +11053,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10643,19 +11067,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10760,7 +11190,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10774,19 +11204,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -10893,7 +11329,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -10907,19 +11343,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11026,7 +11468,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11040,19 +11482,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11156,7 +11604,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11170,19 +11618,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11290,7 +11744,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11304,19 +11758,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11399,7 +11859,9 @@
         "productId": [
           "LTP002",
           "4023330P6",
-          "4023331P6"
+          "4023331P6",
+          "4023330P7",
+          "4023331P7"
         ],
         "endpoints": {
           "11": {
@@ -11425,7 +11887,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11439,19 +11901,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11531,7 +11999,13 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTP003",
+        "productId": [
+          "LTP003",
+          "4033930P6",
+          "4033930P7",
+          "4033931P6",
+          "4033931P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -11553,23 +12027,42 @@
       "id": "LTP003",
       "settings": [
         {
-          "id": "light_powerOnCtrl",
+          "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
               "id": "powerOnCtrl_dimvalue",
               "type": "number",
               "label": {
-                "en": "Default brightness on Power On"
+                "en": "Default brightness"
               },
               "value": 255,
               "min": 0,
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11674,7 +12167,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11688,19 +12181,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11810,7 +12309,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11824,19 +12323,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -11943,7 +12448,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -11957,19 +12462,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12077,7 +12588,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12091,19 +12602,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12211,7 +12728,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12225,19 +12742,25 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
               "id": "powerOnCtrl_colorvalue",
               "type": "number",
               "label": {
-                "en": "Default Color Temperature"
+                "en": "Default light temperature on Power On"
               },
               "value": 366,
               "min": 153,
               "max": 500,
               "units": {
                 "en": "Mireds"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12334,7 +12857,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12348,6 +12871,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12444,7 +12970,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12458,6 +12984,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12556,7 +13085,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12570,6 +13099,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12673,7 +13205,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12687,6 +13219,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12783,7 +13318,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12797,6 +13332,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -12893,7 +13431,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -12907,6 +13445,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13003,7 +13544,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13017,6 +13558,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13113,7 +13657,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13127,6 +13671,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13223,7 +13770,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13237,6 +13784,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13333,7 +13883,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13347,6 +13897,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13443,7 +13996,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13457,6 +14010,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13553,7 +14109,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13567,6 +14123,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13667,7 +14226,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13681,6 +14240,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
@@ -13781,7 +14343,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss"
+            "en": "Behavior after power loss - not yet implemented"
           },
           "children": [
             {
@@ -13795,6 +14357,9 @@
               "max": 255,
               "units": {
                 "en": "steps"
+              },
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {
