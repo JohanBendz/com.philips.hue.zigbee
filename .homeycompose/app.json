@@ -8,6 +8,24 @@
     "en": "Smart light — your way."
   },
   "category": "lights",
+  "tags": {
+    "en": [
+      "Philips",
+      "Hue",
+      "Signify",
+      "Zigbee",
+      "Sensor",
+      "Temperature",
+      "Humidity",
+      "motion",
+      "PIR",
+      "Plug",
+      "LED",
+      "Light",
+      "RGB"
+    ]
+  },
+  "brandColor": "#035ED8",
   "version": "2.0.32",
   "compatibility": ">=5.0.0",
   "author": {
