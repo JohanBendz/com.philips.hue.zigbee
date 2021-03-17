@@ -17,7 +17,7 @@
                 "en": "steps"
             },
             "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
             }
         },
         {
@@ -33,7 +33,7 @@
                 "en": "Mireds"
             },
             "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
             }
         },
         {

@@ -5,12 +5,12 @@ const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 const { ZCLNode, Cluster, debug, CLUSTER } = require('zigbee-clusters');
 
 // Power On Behaviour need these
-/* const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
+const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
 const HueSpecificLevelControlCluster = require('../lib/HueSpecificLevelControlCluster');
 const HueSpecificColorControlCluster = require('../lib/HueSpecificColorControlCluster');
 Cluster.addCluster(HueSpecificOnOffCluster);
 Cluster.addCluster(HueSpecificLevelControlCluster);
-Cluster.addCluster(HueSpecificColorControlCluster); */
+Cluster.addCluster(HueSpecificColorControlCluster);
 
 // Alert mode need these
 const HueSpecificIdentifyCluster = require('../lib/HueSpecificIdentifyCluster');
@@ -62,41 +62,40 @@ class Light extends ZigBeeLightDevice {
         }
     }
 
-/*     async onSettings({ oldSettings, newSettings, changedKeys }) {
+    async onSettings({ oldSettings, newSettings, changedKeys }) {
        
         if (changedKeys.includes('powerOnCtrl_state') || changedKeys.includes('powerOnCtrl_dimvalue') || changedKeys.includes('powerOnCtrl_colorvalue')) {
 
             try {
                 const powerOnCtrlstate = await this.zclNode.endpoints[11].clusters.onOff.readAttributes('powerOnCtrl');
-                this.log("Power On Control supported by device");
                 await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
                 await this.zclNode.endpoints[11].clusters.levelControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_dimvalue}); // default: 255 (0-255)
+                this.log("Power On Control supported by device");
             } catch (error) {
                 this.log("This device does not support Power On Control");
-                throw new Error('Device does not support this feature');
             }
 
-            try {
-                const {minMireds, maxMireds} = await this.zclNode.endpoints[11].clusters.colorControl.readAttributes('colorTempPhysicalMinMireds', 'colorTempPhysicalMaxMireds');
-                this.log("Color Temperature supported by device. Min Mireds: ", minMireds.colorTempPhysicalMinMireds,". Max Mireds: ", maxMireds.colorTempPhysicalMaxMireds);
-
-                if (newSettings.powerOnCtrl_colorvalue <= (maxMireds) || newSettings.powerOnCtrl_colorvalue >= (minMireds)) {
-                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_colorvalue}); // default: 366    
+            if (this.getStoreValue('colorTempMin') && this.getStoreValue('colorTempMax')) {
+                if (newSettings.powerOnCtrl_colorvalue <= (this.getStoreValue('colorTempMax')) || newSettings.powerOnCtrl_colorvalue >= (this.getStoreValue('colorTempMin'))) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_colorvalue}); // default: 366
+                    this.log("Setting Power On Control, value within limits")
                 }
-                if (newSettings.powerOnCtrl_colorvalue > (maxMireds)) {
-                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: maxMireds});    
+                if (newSettings.powerOnCtrl_colorvalue > this.getStoreValue('colorTempMax')) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: this.getStoreValue('colorTempMax')});
+                    this.log("Setting Power On Control, value above limits")
                 }
-                if (newSettings.powerOnCtrl_colorvalue < (minMireds)) {
-                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: minMireds});
+                if (newSettings.powerOnCtrl_colorvalue < this.getStoreValue('colorTempMin')) {
+                    await this.zclNode.endpoints[11].clusters.colorControl.writeAttributes({powerOnCtrl: this.getStoreValue('colorTempMin')});
+                    this.log("Setting Power On Control, value below limits")
                 }
-            } catch (error) {
+                this.log("Color Temperature supported by device. Min Mireds: ", this.getStoreValue('colorTempMin'),". Max Mireds: ", this.getStoreValue('colorTempMax'));
+            } else {
                 this.log("This device does not support Color Temperature");
-                throw new Error('Device does not support this feature');
             }
 
         }
     
-    } */
+    }
 
 }
 

@@ -88,5 +88,8 @@
   },
   "2.0.32": {
     "en": "Minor improvements and added some additional device ID's"
+  },
+  "2.0.33": {
+    "en": "Power On Control Behaviour Test."
   }
 }
