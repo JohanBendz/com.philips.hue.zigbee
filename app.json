@@ -27,7 +27,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.34",
+  "version": "2.0.35",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -14742,7 +14742,7 @@
     },
     {
       "name": {
-        "en": "Outdoor Occupancy Sensor"
+        "en": "Occupancy Sensor"
       },
       "class": "sensor",
       "icon": "/drivers/SML001-occupancy/assets/icon.svg",
@@ -14759,8 +14759,8 @@
       ],
       "energy": {
         "batteries": [
-          "AA",
-          "AA"
+          "AAA",
+          "AAA"
         ]
       },
       "zigbee": {
@@ -14769,8 +14769,7 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML002",
-          "9290019758"
+          "SML001"
         ],
         "endpoints": {
           "1": {
@@ -15103,7 +15102,7 @@
     },
     {
       "name": {
-        "en": "Occupancy Sensor"
+        "en": "Outdoor Occupancy Sensor"
       },
       "class": "sensor",
       "icon": "/drivers/SML002-occupancy/assets/icon.svg",
@@ -15120,8 +15119,8 @@
       ],
       "energy": {
         "batteries": [
-          "AAA",
-          "AAA"
+          "AA",
+          "AA"
         ]
       },
       "zigbee": {
@@ -15130,7 +15129,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML001"
+          "SML002",
+          "9290019758"
         ],
         "endpoints": {
           "1": {

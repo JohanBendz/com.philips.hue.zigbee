@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Occupancy Sensor"
+    "en": "Outdoor Occupancy Sensor"
   },
   "class": "sensor",
   "icon": "{{driverAssetsPath}}/icon.svg",
@@ -17,8 +17,8 @@
   ],
   "energy": {
     "batteries": [
-      "AAA",
-      "AAA"
+      "AA",
+      "AA"
     ]
   },
   "zigbee": {
@@ -27,7 +27,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "SML001"
+      "SML002",
+      "9290019758"
     ],
     "endpoints": {
       "1": {
