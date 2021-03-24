@@ -1,7 +1,7 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
+const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);

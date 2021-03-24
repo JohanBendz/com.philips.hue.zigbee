@@ -4,6 +4,9 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.34
+Power On Control Behaviour for lights now working. Some devices will need a firmware update to support this feature.
+
 ### v.2.0.32 (SDK3)
 Minor improvements and added some additional device ID's
 

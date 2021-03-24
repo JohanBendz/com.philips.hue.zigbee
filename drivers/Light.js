@@ -2,7 +2,7 @@
 
 const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
-const { ZCLNode, Cluster, debug, CLUSTER } = require('zigbee-clusters');
+const { ZCLNode, Cluster, CLUSTER } = require('zigbee-clusters');
 
 // Power On Behaviour need these
 const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
