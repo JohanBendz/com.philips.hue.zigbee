@@ -4,7 +4,12 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
-### v.2.0.34
+### v.2.0.36
+Added support for:
+- Turaco Outdoor Wall Light
+- Argenta Spotlights
+
+### v.2.0.35
 Power On Control Behaviour for lights now working. Some devices will need a firmware update to support this feature.
 
 ### v.2.0.32 (SDK3)

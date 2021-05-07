@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "Still Ceiling"
+    "en": "Argenta 4-light Spotlight"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 32,
+      "usageOn": 6,
       "usageOff": 1
     }
   },
@@ -14,11 +14,7 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "LTC003",
-      "3261330P6",
-      "3261331P6"
-    ],
+    "productId": "5062448P7",
     "endpoints": {
       "11": {
         "clusters": [

@@ -1,7 +1,7 @@
 {
     "type": "group",
     "label": {
-        "en": "Behavior after power loss - not yet implemented"
+        "en": "Behavior after power loss"
     },
     "children": [
         {

@@ -2,9 +2,11 @@
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
-const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+/* const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
+Cluster.addCluster(HueSpecificBasicCluster); */
 
 class OccupancySensor extends ZigBeeDevice {
 	
@@ -49,7 +51,7 @@ class OccupancySensor extends ZigBeeDevice {
         cluster: CLUSTER.POWER_CONFIGURATION,
         attributeName: 'batteryPercentageRemaining',
         minInterval: 300,
-        maxInterval: 60000,
+        maxInterval: 10800,
         minChange: 1,
         }
       ]);
@@ -73,6 +75,12 @@ class OccupancySensor extends ZigBeeDevice {
 		// measure_battery // alarm_battery
 		zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
     .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
+
+    const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes('batteryPercentageRemaining');
+    const batteryThreshold = this.getSetting('batteryThreshold') || 20;
+    this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
+    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
+    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
     
   }
   
@@ -97,7 +105,7 @@ class OccupancySensor extends ZigBeeDevice {
 
 	onLuminanceMeasuredAttributeReport(measuredLuxValue) {
 		const parsedLumValue = Math.round(Math.pow(10, (measuredLuxValue - 1) / 10000));
-		this.log('measure_luminance | relativeHumidity - measuredLuxValue (humidity):', parsedLumValue);
+		this.log('measure_luminance:', parsedLumValue);
 		this.setCapabilityValue('measure_luminance', parsedLumValue);
   }
 
@@ -151,6 +159,13 @@ class OccupancySensor extends ZigBeeDevice {
         throw new Error('maxReportLux smaller than minReportLux');
       }
     }
+
+/*     if (changedKeys.includes('ledIndicator')) {
+      const ledindication = newSettings.ledIndicator === true ? 1 : 0;
+      await this.zclNode.endpoints[2].clusters.occupancySensing.writeAttributes({ledIndication: ledindication});
+      await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledindication});
+      this.log("Setting LED indicator status to: ", ledindication)
+    } */
 
 	}
 	
@@ -516,3 +531,15 @@ module.exports = OccupancySensor;
       }
     }
   } */
+
+/*   {
+    "id": "ledIndicator",
+    "type": "checkbox",
+    "label": {
+      "en": "LED indicator on movement"
+    },
+    "hint": {
+      "en": "This setting determines if the LED indicates movement."
+    },
+    "value": false
+  }, */

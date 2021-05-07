@@ -27,7 +27,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.35",
+  "version": "2.0.36",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -522,7 +522,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -674,7 +674,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -827,7 +827,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -978,7 +978,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1127,7 +1127,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1256,7 +1256,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1389,7 +1389,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1538,7 +1538,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1687,7 +1687,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1816,7 +1816,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -1929,7 +1929,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2043,7 +2043,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2176,7 +2176,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2325,7 +2325,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2474,7 +2474,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2623,7 +2623,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2772,7 +2772,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -2921,7 +2921,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3073,7 +3073,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3225,7 +3225,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3362,7 +3362,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3483,7 +3483,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3606,7 +3606,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3739,7 +3739,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -3892,7 +3892,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4045,7 +4045,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4194,7 +4194,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4343,7 +4343,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4492,7 +4492,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4636,7 +4636,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4772,7 +4772,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -4898,7 +4898,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5051,7 +5051,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5211,7 +5211,460 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5062131P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5062131P7/assets/images/large.png",
+        "small": "/drivers/5062131P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Argenta Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5062148P7",
+          "5062131P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5062131P7",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5062248P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5062248P7/assets/images/large.png",
+        "small": "/drivers/5062248P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Argenta 2-light Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "5062248P7",
+          "5062231P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5062248P7",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5062448P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5062448P7/assets/images/large.png",
+        "small": "/drivers/5062448P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Argenta 4-light Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "5062448P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5062448P7",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5360,7 +5813,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5512,7 +5965,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5658,7 +6111,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5807,7 +6260,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -5956,7 +6409,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6105,7 +6558,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6246,7 +6699,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6383,7 +6836,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6524,7 +6977,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6661,7 +7114,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6812,7 +7265,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -6963,7 +7416,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7112,7 +7565,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7236,7 +7689,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LCF003",
+        "productId": [
+          "LCF003",
+          "4080248P9"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -7261,7 +7717,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7410,7 +7866,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7563,7 +8019,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7712,7 +8168,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -7861,7 +8317,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8010,7 +8466,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8134,7 +8590,11 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LCS001",
+        "productId": [
+          "LCS001",
+          "1741430P7",
+          "1741530P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -8159,7 +8619,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8297,6 +8757,7 @@
               0,
               3,
               4,
+              5,
               6,
               8,
               768
@@ -8315,7 +8776,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8464,7 +8925,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8613,7 +9074,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8765,7 +9226,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -8914,7 +9375,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9067,7 +9528,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9215,7 +9676,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9348,7 +9809,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9481,7 +9942,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9665,7 +10126,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9798,7 +10259,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -9950,7 +10411,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10089,7 +10550,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10231,7 +10692,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10371,7 +10832,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10485,7 +10946,8 @@
         ],
         "productId": [
           "LTC003",
-          "3261330P6"
+          "3261330P6",
+          "3261331P6"
         ],
         "endpoints": {
           "11": {
@@ -10511,7 +10973,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10648,7 +11110,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10788,7 +11250,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -10929,7 +11391,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11071,7 +11533,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11208,7 +11670,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11347,7 +11809,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11486,7 +11948,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11622,7 +12084,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11762,7 +12224,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -11905,7 +12367,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12048,7 +12510,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12185,7 +12647,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12327,7 +12789,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12466,7 +12928,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12606,7 +13068,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12746,7 +13208,7 @@
           "id": "light_temp_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12875,7 +13337,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -12988,7 +13450,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13103,7 +13565,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13223,7 +13685,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13336,7 +13798,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13449,7 +13911,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13562,7 +14024,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13675,7 +14137,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13788,7 +14250,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -13901,7 +14363,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -14014,7 +14476,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -14127,7 +14589,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -14244,7 +14706,7 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
           },
           "children": [
             {
@@ -14361,7 +14823,123 @@
           "id": "light_powerOnCtrl",
           "type": "group",
           "label": {
-            "en": "Behavior after power loss - not yet implemented"
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LWW003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWW003/assets/images/large.png",
+        "small": "/drivers/LWW003/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Turaco Outdoor Wall light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 9,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LWW003",
+          "1647293P0"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LWW003",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
           },
           "children": [
             {

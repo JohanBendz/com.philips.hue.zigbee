@@ -18,7 +18,6 @@ Cluster.addCluster(HueSpecificIdentifyCluster);
 const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
 Cluster.addCluster(HueSpecificIdentifyBoundCluster);
 
-
 class Light extends ZigBeeLightDevice {
 
  	async onNodeInit({zclNode}) {
@@ -100,4 +99,5 @@ class Light extends ZigBeeLightDevice {
 }
 
 module.exports = Light;
+
 

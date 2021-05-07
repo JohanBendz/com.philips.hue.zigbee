@@ -91,5 +91,8 @@
   },
   "2.0.35": {
     "en": "Power On Control Behaviour for lights reactivated."
+  },
+  "2.0.36": {
+    "en": "Added support for Turaco Outdoor Wall Light and Argenta Spotlights. Added more device ID's to already supported devices"
   }
 }
