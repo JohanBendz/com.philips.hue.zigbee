@@ -1,0 +1,36 @@
+{
+  "name": {
+    "en": "Philips Hue White Bulb A60 E27 with Bluetooth"
+  },
+  "$extends": ["light_white"],
+  "energy": {
+    "approximation": {
+      "usageOn": 9,
+      "usageOff": 0.4
+    }
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips"
+    ],
+    "productId": [
+      "LWA011"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+      }
+    }
+  }
+}
