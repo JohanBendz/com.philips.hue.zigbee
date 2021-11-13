@@ -2,6 +2,6 @@
 
 const Light = require("../Light.js");
 
-class LWA009 extends Light { }
+class LWA011 extends Light { }
 
-module.exports = LWA009;
+module.exports = LWA011;
