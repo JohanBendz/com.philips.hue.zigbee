@@ -1,0 +1,5 @@
+[
+    {
+      "$extends": ["plug_powerOnCtrl"]
+    }
+]

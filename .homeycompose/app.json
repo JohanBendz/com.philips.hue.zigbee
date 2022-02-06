@@ -18,6 +18,7 @@
       "Temperature",
       "Humidity",
       "motion",
+      "occupancy",
       "PIR",
       "Plug",
       "LED",
@@ -26,7 +27,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.36",
+  "version": "2.0.39",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",

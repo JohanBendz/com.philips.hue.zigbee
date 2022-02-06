@@ -15,7 +15,9 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LCA001"
+      "LCA001",
+      "LCA004",
+      "LCA006"
     ],
     "endpoints": {
       "11": {

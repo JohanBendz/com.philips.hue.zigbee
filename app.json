@@ -19,6 +19,7 @@
       "Temperature",
       "Humidity",
       "motion",
+      "occupancy",
       "PIR",
       "Plug",
       "LED",
@@ -27,7 +28,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.36",
+  "version": "2.0.39",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -2099,6 +2100,120 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/1744830P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1744830P7/assets/images/large.png",
+        "small": "/drivers/1744830P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Fuzo Outdoor Pedestal Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 15,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1744830P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ],
+            "bindings": []
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1744830P7",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/1745530P7/assets/icon.svg",
       "images": {
         "large": "/drivers/1745530P7/assets/images/large.png",
@@ -2598,7 +2713,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "1746330P7",
+        "productId": [
+          "1746330P7",
+          "1746347P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -3220,6 +3338,157 @@
         }
       },
       "id": "1746530P7",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/1746630P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/1746630P7/assets/images/large.png",
+        "small": "/drivers/1746630P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Amarant Linear Outdoor Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 20,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "1746630P7"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "1746630P7",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -5025,7 +5294,8 @@
         "productId": [
           "5060730P7_01",
           "5060731P7_01",
-          "5061031P7_01"
+          "5061031P7_01",
+          "5060930P7_01"
         ],
         "endpoints": {
           "11": {
@@ -5179,13 +5449,21 @@
           "5060730P7_02",
           "5060731P7_02",
           "5061031P7_02",
+          "5060930P7_02",
+          "5060931P7_02",
           "5060730P7_03",
           "5060731P7_03",
           "5061031P7_03",
+          "5060930P7_03",
+          "5060931P7_03",
           "5060730P7_04",
           "5060731P7_04",
+          "5060930P7_04",
+          "5060931P7_04",
           "5060730P7_05",
-          "5060731P7_05"
+          "5060731P7_05",
+          "5060930P7_05",
+          "5060931P7_05"
         ],
         "endpoints": {
           "11": {
@@ -5510,6 +5788,155 @@
         }
       },
       "id": "5062248P7",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/5062348P7/assets/icon.svg",
+      "images": {
+        "large": "/drivers/5062348P7/assets/images/large.png",
+        "small": "/drivers/5062348P7/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Argenta 3-light Spotlight"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "5062348P7",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "5062348P7",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -6533,7 +6960,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "HBL003",
+        "productId": [
+          "HBL003",
+          "LLM001"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -6548,7 +6978,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+            "en": "Plug in the bulb, or toggle the bulb to start pairing. Upper and Lower light needs to be paired separately.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
           }
         }
       },
@@ -7239,7 +7669,9 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "LCA001"
+          "LCA001",
+          "LCA004",
+          "LCA006"
         ],
         "endpoints": {
           "11": {
@@ -7540,7 +7972,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LCF002",
+        "productId": [
+          "LCF002",
+          "1742030P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -9200,7 +9635,8 @@
         ],
         "productId": [
           "LCT024",
-          "440400982841"
+          "440400982841",
+          "440400982842"
         ],
         "endpoints": {
           "11": {
@@ -9648,8 +10084,9 @@
         ],
         "productId": [
           "LLC010",
-          "929002376201",
           "929002376101",
+          "929002376201",
+          "929002376301",
           "929002376401"
         ],
         "endpoints": {
@@ -10032,7 +10469,8 @@
         "productId": [
           "LOM001",
           "LOM002",
-          "LOM005"
+          "LOM005",
+          "LOM007"
         ],
         "endpoints": {
           "11": {
@@ -10051,7 +10489,49 @@
           }
         }
       },
-      "id": "LOM002"
+      "id": "LOM002",
+      "settings": [
+        {
+          "id": "plug_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "class": "light",
@@ -10524,7 +11004,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "LTA001"
+          "LTA001",
+          "LTA004"
         ],
         "endpoints": {
           "11": {
@@ -11085,7 +11566,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTC011",
+        "productId": [
+          "LTC011",
+          "4096730P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -11645,7 +12129,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LTC021",
+        "productId": [
+          "LTC021",
+          "3418411P6"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -13313,7 +13800,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LWA001",
+        "productId": [
+          "LWA001",
+          "LWA011"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -15347,7 +15837,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "SML001"
+          "SML001",
+          "SML003"
         ],
         "endpoints": {
           "1": {
@@ -15708,7 +16199,8 @@
         ],
         "productId": [
           "SML002",
-          "9290019758"
+          "9290019758",
+          "SML004"
         ],
         "endpoints": {
           "1": {

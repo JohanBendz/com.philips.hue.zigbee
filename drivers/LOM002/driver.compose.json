@@ -18,7 +18,8 @@
     "productId": [
       "LOM001",
       "LOM002",
-      "LOM005"
+      "LOM005",
+      "LOM007"
     ],
     "endpoints": {
       "11": {

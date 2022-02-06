@@ -14,7 +14,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "1746330P7",
+    "productId": [
+      "1746330P7",
+      "1746347P7"
+    ],
     "endpoints": {
       "11": {
         "clusters": [

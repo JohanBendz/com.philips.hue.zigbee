@@ -94,5 +94,14 @@
   },
   "2.0.36": {
     "en": "Added support for Turaco Outdoor Wall Light and Argenta Spotlights. Added more device ID's to already supported devices"
+  },
+  "2.0.37": {
+    "en": "Added Power On Control Behaviour to the plug"
+  },
+  "2.0.38": {
+    "en": "Fix for Power On Control Behaviour for the plug."
+  },
+  "2.0.39": {
+    "en": "Added support for: Argenta 3-light Spotlight, Amarant Linear Outdoor Light, Fuzo Outddor Pedestal Light. Also added support for new versions of several already supported devices, including the new indoor and outdoor motion/occupancy sensors."
   }
 }

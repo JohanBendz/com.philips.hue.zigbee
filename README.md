@@ -4,6 +4,34 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.39
+Added support for:
+- Argenta 3-light Spotlight
+- Amarant Linear Outdoor Light
+- Fuzo Outdoor Pedestal Light
+
+- New version of Beyond Ceiling Light
+- New versions of White and Color Ambiance Bulbs
+- New version of Calla Outdoor Short Path Light
+- New version of Appear Outdoor Wall Light
+- New version of Centris Panel Light
+- New version of Play Lightbar
+- New version of Centris Spotlight
+- New versions of Iris Living Colors Light
+- New versions of the Smart Plug
+- New versions of Cher Ceiling Light
+- New version of Adore Bathroom Ceiling White Ambience Light
+- New version of the Outdoor Motion/Occupancy Sensor
+- New version of the Indoor Motion/Occupancy Sensor
+
+### v.2.0.38
+Fix:
+- Power On Control for the Plug
+
+### v.2.0.37
+Added support for:
+- Power On Behaviour for the Plug
+
 ### v.2.0.36
 Added support for:
 - Turaco Outdoor Wall Light
