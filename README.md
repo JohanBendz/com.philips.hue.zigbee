@@ -4,6 +4,9 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.42
+Updated Homey NPM modules homey-zigbeedriver and zigbee-clusters.
+
 ### v.2.0.41
 Added support for:
 

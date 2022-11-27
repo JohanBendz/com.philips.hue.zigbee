@@ -109,5 +109,8 @@
   },
   "2.0.41": {
     "en": "Added support for: Filament Bulb White Ambient A60 E27, Bulb White Ambient E27, Filament Bulb White Ambient G23 E27, Filament Bulb White Ambient G125 E27, Bulb White 1100 Lumen, Filament Bulb Candle E14 and Mickey Mouse Bloom/Aura Living Colors. Also added support for new versions of: Smart Plug, Buckram Spotlights and Indoor Occupancy Sensor."
+  },
+  "2.0.42": {
+    "en": "Updated Homey Zigbee modules."
   }
 }
