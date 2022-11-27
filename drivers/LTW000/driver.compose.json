@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Bulb A19 White Ambiance"
+    "en": "Bulb White Ambient A19"
   },
   "$extends": ["light_white_ambiance"],
   "energy": {
@@ -18,7 +18,8 @@
       "LTW001",
       "LTW004",
       "LTW010",
-      "LTW015"
+      "LTW015",
+      "LTA009"
     ],
     "endpoints": {
       "11": {

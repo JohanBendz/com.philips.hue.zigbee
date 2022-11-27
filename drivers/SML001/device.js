@@ -195,11 +195,16 @@ class MotionSensor extends ZigBeeDevice {
 			}
 		}
 		
-/* 		// motion sensitivity setting changed
+		// motion sensitivity setting changed
 		if (changedKeys.includes('motion_sensitivity')) {
-			this.log("motion sensitivity changed to: ", newSettings.motion_sensitivity);
-			await this.zclNode.endpoints[2].clusters.occupancySensing.writeAttributes({sensitivity: newSettings.motion_sensitivity},{waitForResponse: false});
-		} */
+      try {
+        const motionsensitivity = await this.zclNode.endpoints[2].clusters.occupancySensing.readAttributes('sensitivity');
+        await this.zclNode.endpoints[2].clusters.occupancySensing.writeAttributes({sensitivity: newSettings.motion_sensitivity});
+        this.log("Motion Sensitivity changed to: ", newSettings.motion_sensitivity);
+      } catch (error) {
+        this.log("This device does not support Motion Sensitivity Setting");
+      }
+		}
 
 	}
 	

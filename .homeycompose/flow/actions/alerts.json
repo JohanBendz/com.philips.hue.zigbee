@@ -15,6 +15,9 @@
           "title": {
             "en": "Set an alert mode"
           },
+          "titleFormatted": {
+            "en": "Set alert mode to [[alert_mode]]"
+          },
           "values": [
             {
               "id": "blink",

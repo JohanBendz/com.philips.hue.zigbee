@@ -7,7 +7,9 @@
   "description": {
     "en": "Smart light — your way."
   },
-  "category": "lights",
+  "category": [
+    "lights"
+  ],
   "tags": {
     "en": [
       "Philips",
@@ -27,7 +29,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.39",
+  "version": "2.0.41",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -61,5 +63,10 @@
   "bugs": {
     "url": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues"
   },
-  "source": "https://github.com/JohanBendz/com.philips.hue.zigbee"
+  "source": "https://github.com/JohanBendz/com.philips.hue.zigbee",
+  "platforms": [
+    "local"
+  ],
+  "homeyCommunityTopicId": 29734,
+  "support": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues"
 }

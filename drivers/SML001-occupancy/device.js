@@ -2,11 +2,11 @@
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
-/* const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
-Cluster.addCluster(HueSpecificBasicCluster); */
+Cluster.addCluster(HueSpecificBasicCluster);
 
 class OccupancySensor extends ZigBeeDevice {
 	
@@ -160,12 +160,29 @@ class OccupancySensor extends ZigBeeDevice {
       }
     }
 
-/*     if (changedKeys.includes('ledIndicator')) {
-      const ledindication = newSettings.ledIndicator === true ? 1 : 0;
-      await this.zclNode.endpoints[2].clusters.occupancySensing.writeAttributes({ledIndication: ledindication});
-      await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledindication});
-      this.log("Setting LED indicator status to: ", ledindication)
-    } */
+    // motion sensitivity setting changed
+		if (changedKeys.includes('motion_sensitivity')) {
+      try {
+        const motionsensitivity = await this.zclNode.endpoints[2].clusters.occupancySensingCluster.readAttributes('sensitivity');
+        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({sensitivity: newSettings.motion_sensitivity});
+        this.log("Motion Sensitivity changed to: ", newSettings.motion_sensitivity);
+      } catch (error) {
+        this.log("This device does not support Motion Sensitivity Setting");
+      }
+		}
+
+    if (changedKeys.includes('ledIndicator')) {
+      try {
+        const ledindication = newSettings.ledIndicator === true ? 1 : 0;
+        const ledoccupancystatus =  await this.zclNode.endpoints[2].clusters.occupancySensingCluster.readAttributes('ledIndication');
+        const ledbasicstatus = await this.zclNode.endpoints[2].clusters.basic.readAttributes('ledIndication');
+        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({ledIndication: ledindication});
+        await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledindication});
+        this.log("Setting LED indicator status to: ", ledindication)
+      } catch (error) {
+        this.log("This device does not support LED indicator setting");
+      }
+    }
 
 	}
 	

@@ -4,6 +4,30 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.41
+Added support for:
+
+- New version of Buckram Spotlights
+- Mickey Mouse Bloom/Aura Living Colors
+- New version of Smart Plug
+- Filament Bulb White Ambient A60 E27
+- Bulb White Ambient E27
+- Filament Bulb White Ambient G23 E27
+- Filament Bulb White Ambient G125 E27
+- Bulb White 1100 Lumen
+- Filament Bulb Candle E14
+- New version of Indoor Occupancy Sensor
+
+And updated a number of icons.
+
+### v.2.0.40
+Added support for:
+
+- New version of Calla Outdoor Short Path Light
+- New version of Bulb White Ambiance A19 E27 
+- New version of Ensis pendant
+- New version of Go
+
 ### v.2.0.39
 Added support for:
 - Argenta 3-light Spotlight
