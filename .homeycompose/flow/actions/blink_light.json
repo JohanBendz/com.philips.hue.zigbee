@@ -1,16 +1,20 @@
 {
     "id": "Blink",
     "title": {
-    "en": "Blink the light",
-    "sv": "Blinka ljuset",
-    "nl": "Knipper de lamp",
-    "de": "Blink das Licht"
+      "en": "Blink the light",
+      "sv": "Blinka ljuset",
+      "nl": "Knipper de lamp",
+      "de": "Blink das Licht"
+    },
+    "titleFormatted": {
+      "en": "Do [[blinks]] times [[blink_type]] [[device]]",
+      "nl": "Doe [[blinks]] keer [[blink_type]] [[device]]"
     },
     "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "class=light" 
+          "filter": "class=light"
         },
         {
           "type": "dropdown",

@@ -5,6 +5,10 @@
       "title": {
         "en": "Button Action"
       },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
+      },
       "args": [
         {
           "name": "action",
@@ -13,98 +17,114 @@
             {
               "id": "OnOff-ShortPress",
               "label": {
-                "en": "On/Off, short press"
+                "en": "On/Off (short press)",
+                "nl": "Aan/Uit (kort gedrukt)"
               }
             },
             {
               "id": "OnOff-ShortRelease",
               "label": {
-                "en": "On/Off, short release"
+                "en": "On/Off (short release)",
+                "nl": "Aan/Uit (kort losgelaten)"
               }
             },
             {
               "id": "OnOff-LongPress",
               "label": {
-                "en": "On/Off, long press"
+                "en": "On/Off (long press)",
+                "nl": "Aan/Uit (lang gedrukt)"
               }
             },
             {
               "id": "OnOff-LongRelease",
               "label": {
-                "en": "On/Off, long release"
+                "en": "On/Off (long release)",
+                "nl": "Aan/Uit (lang losgelaten)"
               }
             },
             {
               "id": "DimUp-ShortPress",
               "label": {
-                "en": "Dim up, short press"
+                "en": "Dim up (short press)",
+                "nl": "Dim op (kort gedrukt)"
               }
             },
             {
               "id": "DimUp-ShortRelease",
               "label": {
-                "en": "Dim up, short release"
+                "en": "Dim up (short release)",
+                "nl": "Dim op (kort losgelaten)"
               }
             },
             {
               "id": "DimUp-LongPress",
               "label": {
-                "en": "Dim up, long press"
+                "en": "Dim up (long press)",
+                "nl": "Dim op (lang gedrukt)"
               }
             },
             {
               "id": "DimUp-LongRelease",
               "label": {
-                "en": "Dim up, long release"
+                "en": "Dim up (long release)",
+                "nl": "Dim op (lang losgelaten)"
               }
             },
 
             {
               "id": "DimDown-ShortPress",
               "label": {
-                "en": "Dim down, short press"
+                "en": "Dim down (short press)",
+                "nl": "Dim neer (kort gedrukt)"
               }
             },
             {
               "id": "DimDown-ShortRelease",
               "label": {
-                "en": "Dim down, short release"
+                "en": "Dim down (short release)",
+                "nl": "Dim neer (kort losgelaten)"
               }
             },
             {
               "id": "DimDown-LongPress",
               "label": {
-                "en": "Dim down, long press"
+                "en": "Dim down (long press)",
+                "nl": "Dim neer (lang gedrukt)"
               }
             },
             {
               "id": "DimDown-LongRelease",
               "label": {
-                "en": "Dim down, long release"
+                "en": "Dim down (long release)",
+                "nl": "Dim neer (lang losgelaten)"
               }
             },
             {
               "id": "Hue-ShortPress",
               "label": {
-                "en": "Hue, short press"
+                "en": "Hue (short press)",
+                "nl": "Hue (kort gedrukt)"
               }
             },
             {
               "id": "Hue-ShortRelease",
               "label": {
-                "en": "Hue, short release"
+                "en": "Hue (short release)",
+                "nl": "Hue (kort losgelaten)"
               }
             },
             {
               "id": "Hue-LongPress",
               "label": {
-                "en": "Hue, long press"
+                "en": "Hue (long press)",
+                "nl": "Hue (lang gedrukt)"
               }
             },
             {
               "id": "Hue-LongRelease",
               "label": {
-                "en": "Hue, long release"
+                "en": "Hue (long release)",
+                "nl": "Hue (lang losgelaten)"
               }
             }
           ]

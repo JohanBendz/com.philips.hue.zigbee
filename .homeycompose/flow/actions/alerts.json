@@ -1,22 +1,23 @@
 {
     "id": "Alert",
     "title": {
-    "en": "Alert mode"
+      "en": "Alert mode"
+    },
+    "titleFormatted": {
+      "en": "Activate alert mode: [[alert_mode]] [[device]]",
+      "nl": "Activeer alert modus: [[alert_mode]] [[device]]"
     },
     "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "class=light" 
+          "filter": "class=light"
         },
         {
           "type": "dropdown",
           "name": "alert_mode",
           "title": {
             "en": "Set an alert mode"
-          },
-          "titleFormatted": {
-            "en": "Set alert mode to [[alert_mode]]"
           },
           "values": [
             {
