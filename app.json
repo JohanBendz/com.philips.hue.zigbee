@@ -30,7 +30,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.42",
+  "version": "2.0.43",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -11559,7 +11559,8 @@
           "LTC001",
           "3261030P6",
           "3261031P6",
-          "3261048P6"
+          "3261048P6",
+          "929003055201"
         ],
         "endpoints": {
           "11": {
@@ -14562,7 +14563,7 @@
         }
       },
       "name": {
-        "en": "Filament A60"
+        "en": "Filament Bulb A60"
       },
       "energy": {
         "approximation": {
@@ -14790,7 +14791,7 @@
         }
       },
       "name": {
-        "en": "Bulb White 1100 Lumen"
+        "en": "Bulb 1100 Lumen White "
       },
       "energy": {
         "approximation": {
@@ -15478,7 +15479,7 @@
         }
       },
       "name": {
-        "en": "Filament G93"
+        "en": "Filament Bulb G93"
       },
       "energy": {
         "approximation": {
@@ -15591,7 +15592,7 @@
         }
       },
       "name": {
-        "en": "Filament White G125 E27"
+        "en": "Filament Bulb White G125 E27"
       },
       "energy": {
         "approximation": {
@@ -15819,7 +15820,7 @@
         }
       },
       "name": {
-        "en": "Filament ST64"
+        "en": "Filament Bulb ST64"
       },
       "energy": {
         "approximation": {
@@ -15932,7 +15933,7 @@
         }
       },
       "name": {
-        "en": "Filament ST72 E27"
+        "en": "Filament Bulb ST72 E27"
       },
       "energy": {
         "approximation": {

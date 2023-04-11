@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Filament G93"
+    "en": "Filament Bulb G93"
   },
   "$extends": ["light_white"],
   "energy": {

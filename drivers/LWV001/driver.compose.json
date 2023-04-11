@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Filament ST64"
+    "en": "Filament Bulb ST64"
   },
   "$extends": ["light_white"],
   "energy": {

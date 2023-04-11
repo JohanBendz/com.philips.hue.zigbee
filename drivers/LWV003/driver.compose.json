@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Filament ST72 E27"
+    "en": "Filament Bulb ST72 E27"
   },
   "$extends": ["light_white"],
   "energy": {

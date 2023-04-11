@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Bulb White 1100 Lumen"
+    "en": "Bulb 1100 Lumen White "
   },
   "$extends": ["light_white"],
   "energy": {

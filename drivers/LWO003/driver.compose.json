@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Filament White G125 E27"
+    "en": "Filament Bulb White G125 E27"
   },
   "$extends": ["light_white"],
   "energy": {

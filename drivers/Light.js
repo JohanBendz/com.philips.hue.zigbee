@@ -33,9 +33,9 @@ class Light extends ZigBeeLightDevice {
             var i;
             for (i = 0; i < args.blinks; i++) {
                 await args.device.zclNode.endpoints[11].clusters.onOff.toggle();
-                this.sleep(blinktype);
+                await this.sleep(blinktype);
                 await args.device.zclNode.endpoints[11].clusters.onOff.toggle();
-                this.sleep(blinktype);
+                await this.sleep(blinktype);
             }
         });
 
@@ -51,15 +51,18 @@ class Light extends ZigBeeLightDevice {
 
     }
 
-    // Sleep for blink 
+    // Sleep for blink
     sleep(milliseconds) {
+        return new Promise(resolve => setTimeout(resolve, milliseconds));
+    };
+/*     sleep(milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {
           if ((new Date().getTime() - start) > milliseconds){
             break;
           }
         }
-    }
+    } */
 
     async onSettings({ oldSettings, newSettings, changedKeys }) {
        

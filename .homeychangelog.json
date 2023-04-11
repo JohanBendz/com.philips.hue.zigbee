@@ -112,5 +112,8 @@
   },
   "2.0.42": {
     "en": "Updated Homey Zigbee modules."
+  },
+  "2.0.43": {
+    "en": "Added new model of Being Ceiling."
   }
 }
