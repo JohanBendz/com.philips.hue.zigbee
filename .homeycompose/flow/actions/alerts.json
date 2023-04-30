@@ -1,58 +1,97 @@
 {
     "id": "Alert",
     "title": {
-    "en": "Alert mode"
+    "en": "Alert mode",
+    "sv": "Larm-läge",
+    "nl": "Waarschuwingsmodus",
+    "de": "Alarmmodus"
+    },
+    "titleFormatted": {
+      "en": "Set alert mode for [[device]] to [[alert_mode]]",
+      "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+      "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+      "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
     },
     "args": [
         {
           "type": "device",
           "name": "device",
-          "filter": "class=light" 
+          "filter": "class=light",
+          "title": {
+            "en": "Select Light Device",
+            "sv": "Välj ljusenhet",
+            "nl": "Selecteer lichtapparaat",
+            "de": "Lichtgerät auswählen"
+            }
         },
         {
           "type": "dropdown",
           "name": "alert_mode",
           "title": {
-            "en": "Set an alert mode"
+            "en": "Set an alert mode",
+            "sv": "Välj ett larm-läge",
+            "nl": "Stel een waarschuwingsmodus in",
+            "de": "Alarmmodus auswählen"
           },
           "titleFormatted": {
-            "en": "Set alert mode to [[alert_mode]]"
+            "en": "Set alert mode for [[device]] to [[alert_mode]]",
+            "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+            "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+            "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
           },
           "values": [
             {
               "id": "blink",
               "label": {
-                "en": "Blink (1 time)"
+                "en": "Blink (1 time)",
+                "sv": "Blinka (1 gång)",
+                "nl": "Knipperen (1 keer)",
+                "de": "Blinken (1 mal)"
               }
             },
             {
               "id": "breath",
               "label": {
-                "en": "Breath (15 times)"
+                "en": "Breath (15 times)",
+                "sv": "Andas (15 gånger)",
+                "nl": "Ademen (15 keer)",
+                "de": "Atmen (15 mal)"
               }
             },
             {
               "id": "okay",
               "label": {
-                "en": "Indicate OK"
+                "en": "Indicate OK",
+                "sv": "Indikera OK",
+                "nl": "Geef aan OK",
+                "de": "OK anzeigen"
               }
             },
             {
               "id": "channel_change",
               "label": {
-                "en": "Indicate problem"
+                "en": "Indicate problem",
+                "sv": "Indikera problem",
+                "nl": "Geef een probleem aan",
+                "de": "Problem anzeigen"
               }
             },
             {
               "id": "finish_effect",
               "label": {
-                "en": "Soft Stop"
+                "en": "Soft Stop",
+                "sv": "Mjuk stopp",
+                "nl": "Zachte stop",
+                "de": "Sanfter Stopp"
               }
             },
             {
               "id": "stop_effect",
               "label": {
-                "en": "Hard Stop"
+                "en": "Hard Stop",
+                "sv": "Hård stopp",
+                "nl": "Harde stop",
+                "de": "Harter Stopp"
               }
             }
           ]

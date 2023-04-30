@@ -1,65 +1,71 @@
 {
-    "id": "Blink",
-    "title": {
+  "id": "Blink",
+  "title": {
     "en": "Blink the light",
     "sv": "Blinka ljuset",
     "nl": "Knipper de lamp",
     "de": "Blink das Licht"
+  },
+  "titleFormatted": {
+    "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
+    "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
+    "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
+    "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light"
     },
-    "args": [
+    {
+      "type": "dropdown",
+      "name": "blink_type",
+      "title": {
+        "en": "Long or short blink",
+        "sv": "Lång eller kort blinkning",
+        "nl": "Lang of kort knipperen",
+        "de": "Langes oder kurzes blinken"
+      },
+      "values": [
         {
-          "type": "device",
-          "name": "device",
-          "filter": "class=light" 
+          "id": "long",
+          "label": {
+            "en": "long blink",
+            "sv": "lång blinkning",
+            "nl": "lang knipperen",
+            "de": "langes blinken"
+          }
         },
         {
-          "type": "dropdown",
-          "name": "blink_type",
-          "title": {
-            "en": "Long or short blink",
-            "sv": "Lång eller kort blinkning",
-            "nl": "Lang of kort knipperen",
-            "de": "Langes oder kurzes Blinken"
-          },
-          "values": [
-            {
-              "id": "long",
-              "label": {
-                "en": "Long blink",
-                "sv": "Lång blinkning",
-                "nl": "Lang knipperen",
-                "de": "Langes Blinken"
-              }
-            },
-            {
-              "id": "short",
-              "label": {
-                "en": "Short blink",
-                "sv": "Kort blinkning",
-                "nl": "Kort knipperen",
-                "de": "Kurzes Blinken"
-              }
-            }
-          ]
-        },
-        {
-          "type": "number",
-          "name": "blinks",
-          "title": {
-            "en": "Blinks",
-            "sv": "Blinkningar",
-            "nl": "Knippert",
-            "de": "Blinkt"
-          },
-          "min": 1,
-          "max": 25,
-          "step": 1,
-          "placeholder": {
-            "en": "Number of blinks",
-            "sv": "Antal blinkningar",
-            "nl": "Aantal keer knipperen",
-            "de": "Anzahl der Blinkzeichen"
+          "id": "short",
+          "label": {
+            "en": "short blink",
+            "sv": "kort blinkning",
+            "nl": "kort knipperen",
+            "de": "kurzes Blinken"
           }
         }
       ]
+    },
+    {
+      "type": "number",
+      "name": "blinks",
+      "title": {
+        "en": "Blinks",
+        "sv": "Blinkningar",
+        "nl": "Knippert",
+        "de": "Blinkt"
+      },
+      "min": 1,
+      "max": 25,
+      "step": 1,
+      "placeholder": {
+        "en": "Number of blinks",
+        "sv": "Antal blinkningar",
+        "nl": "Aantal keer knipperen",
+        "de": "Anzahl der Blinkzeichen"
+      }
+    }
+  ]
 }
