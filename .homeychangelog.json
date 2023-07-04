@@ -115,5 +115,8 @@
   },
   "2.0.43": {
     "en": "Added new model of Being Ceiling."
+  },
+  "2.0.44": {
+    "en": "Added Led indicator and sensitivity settings to Occupancy Sensors. Added support for Sumiri Panel and Infuse Medium Ceiling Light"
   }
 }

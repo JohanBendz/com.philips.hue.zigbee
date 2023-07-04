@@ -30,7 +30,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.43",
+  "version": "2.0.44",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -75,58 +75,97 @@
       {
         "id": "Alert",
         "title": {
-          "en": "Alert mode"
+          "en": "Alert mode",
+          "sv": "Larm-läge",
+          "nl": "Waarschuwingsmodus",
+          "de": "Alarmmodus"
+        },
+        "titleFormatted": {
+          "en": "Set alert mode for [[device]] to [[alert_mode]]",
+          "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+          "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+          "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light"
+            "filter": "class=light",
+            "title": {
+              "en": "Select Light Device",
+              "sv": "Välj ljusenhet",
+              "nl": "Selecteer lichtapparaat",
+              "de": "Lichtgerät auswählen"
+            }
           },
           {
             "type": "dropdown",
             "name": "alert_mode",
             "title": {
-              "en": "Set an alert mode"
+              "en": "Set an alert mode",
+              "sv": "Välj ett larm-läge",
+              "nl": "Stel een waarschuwingsmodus in",
+              "de": "Alarmmodus auswählen"
             },
             "titleFormatted": {
-              "en": "Set alert mode to [[alert_mode]]"
+              "en": "Set alert mode for [[device]] to [[alert_mode]]",
+              "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+              "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+              "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
             },
             "values": [
               {
                 "id": "blink",
                 "label": {
-                  "en": "Blink (1 time)"
+                  "en": "Blink (1 time)",
+                  "sv": "Blinka (1 gång)",
+                  "nl": "Knipperen (1 keer)",
+                  "de": "Blinken (1 mal)"
                 }
               },
               {
                 "id": "breath",
                 "label": {
-                  "en": "Breath (15 times)"
+                  "en": "Breath (15 times)",
+                  "sv": "Andas (15 gånger)",
+                  "nl": "Ademen (15 keer)",
+                  "de": "Atmen (15 mal)"
                 }
               },
               {
                 "id": "okay",
                 "label": {
-                  "en": "Indicate OK"
+                  "en": "Indicate OK",
+                  "sv": "Indikera OK",
+                  "nl": "Geef aan OK",
+                  "de": "OK anzeigen"
                 }
               },
               {
                 "id": "channel_change",
                 "label": {
-                  "en": "Indicate problem"
+                  "en": "Indicate problem",
+                  "sv": "Indikera problem",
+                  "nl": "Geef een probleem aan",
+                  "de": "Problem anzeigen"
                 }
               },
               {
                 "id": "finish_effect",
                 "label": {
-                  "en": "Soft Stop"
+                  "en": "Soft Stop",
+                  "sv": "Mjuk stopp",
+                  "nl": "Zachte stop",
+                  "de": "Sanfter Stopp"
                 }
               },
               {
                 "id": "stop_effect",
                 "label": {
-                  "en": "Hard Stop"
+                  "en": "Hard Stop",
+                  "sv": "Hård stopp",
+                  "nl": "Harde stop",
+                  "de": "Harter Stopp"
                 }
               }
             ]
@@ -141,6 +180,12 @@
           "nl": "Knipper de lamp",
           "de": "Blink das Licht"
         },
+        "titleFormatted": {
+          "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
+          "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
+          "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
+          "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+        },
         "args": [
           {
             "type": "device",
@@ -154,25 +199,25 @@
               "en": "Long or short blink",
               "sv": "Lång eller kort blinkning",
               "nl": "Lang of kort knipperen",
-              "de": "Langes oder kurzes Blinken"
+              "de": "Langes oder kurzes blinken"
             },
             "values": [
               {
                 "id": "long",
                 "label": {
-                  "en": "Long blink",
-                  "sv": "Lång blinkning",
-                  "nl": "Lang knipperen",
-                  "de": "Langes Blinken"
+                  "en": "long blink",
+                  "sv": "lång blinkning",
+                  "nl": "lang knipperen",
+                  "de": "langes blinken"
                 }
               },
               {
                 "id": "short",
                 "label": {
-                  "en": "Short blink",
-                  "sv": "Kort blinkning",
-                  "nl": "Kort knipperen",
-                  "de": "Kurzes Blinken"
+                  "en": "short blink",
+                  "sv": "kort blinkning",
+                  "nl": "kort knipperen",
+                  "de": "kurzes Blinken"
                 }
               }
             ]
@@ -16763,6 +16808,63 @@
       "id": "SML001-occupancy",
       "settings": [
         {
+          "id": "motion_sensitivity",
+          "type": "radio",
+          "label": {
+            "en": "Motion Sensitivity",
+            "sv": "Rörelsekänslighet"
+          },
+          "hint": {
+            "en": "Choose the motion sensitivity level. Changes will take effect when the device comes online.",
+            "sv": "Välj nivån på rörelsekänsligheten. Ändringar träder i kraft när enheten är online."
+          },
+          "value": "2",
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Low (1)",
+                "sv": "Låg (1)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "High (2)",
+                "sv": "Hög (2)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ledIndicator",
+          "type": "radio",
+          "label": {
+            "en": "LED Indicator on movement",
+            "sv": "LED-indikator vid rörelse"
+          },
+          "hint": {
+            "en": "Enable or disable the LED indicator when motion is detected. Changes will take effect when the device comes online.",
+            "sv": "Aktivera eller inaktivera LED-indikatorn när rörelse upptäcks. Ändringar träder i kraft när enheten är online."
+          },
+          "values": [
+            {
+              "id": "true",
+              "label": {
+                "en": "Enabled",
+                "sv": "Aktiverad"
+              }
+            },
+            {
+              "id": "false",
+              "label": {
+                "en": "Disabled",
+                "sv": "Inaktiverad"
+              }
+            }
+          ]
+        },
+        {
           "id": "temperature_offset",
           "type": "number",
           "label": {
@@ -16881,39 +16983,6 @@
             "min": 60,
             "max": 86400
           }
-        },
-        {
-          "id": "ledIndicator",
-          "type": "checkbox",
-          "label": {
-            "en": "LED indicator on movement"
-          },
-          "hint": {
-            "en": "This setting determines if the LED indicates movement."
-          },
-          "value": false
-        },
-        {
-          "id": "motion_sensitivity",
-          "type": "dropdown",
-          "label": {
-            "en": "Sensor Sensitivity"
-          },
-          "value": "2",
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Low"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "High"
-              }
-            }
-          ]
         }
       ]
     },
@@ -17157,6 +17226,70 @@
       },
       "id": "SML002-occupancy",
       "settings": [
+        {
+          "id": "motion_sensitivity",
+          "type": "radio",
+          "label": {
+            "en": "Motion Sensitivity",
+            "sv": "Rörelsekänslighet"
+          },
+          "hint": {
+            "en": "Choose the motion sensitivity level. Changes will take effect when the device comes online.",
+            "sv": "Välj nivån på rörelsekänsligheten. Ändringar träder i kraft när enheten är online."
+          },
+          "value": "2",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Low (0)",
+                "sv": "Låg (0)"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Normal (1)",
+                "sv": "Normal (1)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "High (2)",
+                "sv": "Hög (2)"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ledIndicator",
+          "type": "radio",
+          "label": {
+            "en": "LED Indicator on movement",
+            "sv": "LED-indikator vid rörelse"
+          },
+          "hint": {
+            "en": "Enable or disable the LED indicator when motion is detected. Changes will take effect when the device comes online.",
+            "sv": "Aktivera eller inaktivera LED-indikatorn när rörelse upptäcks. Ändringar träder i kraft när enheten är online."
+          },
+          "values": [
+            {
+              "id": "true",
+              "label": {
+                "en": "Enabled",
+                "sv": "Aktiverad"
+              }
+            },
+            {
+              "id": "false",
+              "label": {
+                "en": "Disabled",
+                "sv": "Inaktiverad"
+              }
+            }
+          ]
+        },
         {
           "id": "temperature_offset",
           "type": "number",

@@ -4,8 +4,19 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.44
+Added Led Indicator and Sensitivity settings to Occupancy Sensors.
+
+Added support for:
+- Sumiri Panel
+- Infuse Medium Ceiling Light
+
+### v.2.0.43
+Added support for:
+  - new model of Being Ceiling
+
 ### v.2.0.42
-Updated Homey NPM modules homey-zigbeedriver and zigbee-clusters.
+Updated Homey NPM modules homey-zigbeedriver and zigbee-clusters
 
 ### v.2.0.41
 Added support for:
@@ -21,7 +32,7 @@ Added support for:
 - Filament Bulb Candle E14
 - New version of Indoor Occupancy Sensor
 
-And updated a number of icons.
+And updated a number of icons
 
 ### v.2.0.40
 Added support for:

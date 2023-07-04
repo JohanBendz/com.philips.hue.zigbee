@@ -1,4 +1,68 @@
 [
+    {
+    "id": "motion_sensitivity",
+    "type": "radio",
+    "label": {
+      "en": "Motion Sensitivity",
+      "sv": "Rörelsekänslighet"
+    },
+    "hint": {
+      "en": "Choose the motion sensitivity level. Changes will take effect when the device comes online.",
+      "sv": "Välj nivån på rörelsekänsligheten. Ändringar träder i kraft när enheten är online."
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Low (0)",
+          "sv": "Låg (0)"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Normal (1)",
+          "sv": "Normal (1)"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "High (2)",
+          "sv": "Hög (2)"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ledIndicator",
+    "type": "radio",
+    "label": {
+      "en": "LED Indicator on movement",
+      "sv": "LED-indikator vid rörelse"
+    },
+    "hint": {
+      "en": "Enable or disable the LED indicator when motion is detected. Changes will take effect when the device comes online.",
+      "sv": "Aktivera eller inaktivera LED-indikatorn när rörelse upptäcks. Ändringar träder i kraft när enheten är online."
+    },
+    "values": [
+      {
+        "id": "true",
+        "label": {
+          "en": "Enabled",
+          "sv": "Aktiverad"
+        }
+      },
+      {
+        "id": "false",
+        "label": {
+          "en": "Disabled",
+          "sv": "Inaktiverad"
+        }
+      }
+    ]
+  },
   {
     "id": "temperature_offset",
     "type": "number",

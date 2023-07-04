@@ -163,28 +163,50 @@ class OccupancySensor extends ZigBeeDevice {
     // motion sensitivity setting changed
 		if (changedKeys.includes('motion_sensitivity')) {
       try {
-        const motionsensitivity = await this.zclNode.endpoints[2].clusters.occupancySensingCluster.readAttributes('sensitivity');
-        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({sensitivity: newSettings.motion_sensitivity});
-        this.log("Motion Sensitivity changed to: ", newSettings.motion_sensitivity);
+        const sensitivity = parseInt(newSettings.motion_sensitivity);
+        this.setStoreValue('sensitivity', sensitivity);
       } catch (error) {
-        this.log("This device does not support Motion Sensitivity Setting");
+        this.log("Error setting sensitivity");
       }
 		}
 
     if (changedKeys.includes('ledIndicator')) {
       try {
         const ledindication = newSettings.ledIndicator === true ? 1 : 0;
+        this.setStoreValue('ledIndicator', ledindication);
+      } catch (error) {
+        this.log("Error setting LED indicator status");
+      }
+    }
+
+	}
+
+  async onEndDeviceAnnounce() {
+    
+    const ledIndicator = this.getStoreValue('ledIndicator');
+    if (ledIndicator !== null) {
+      try {
         const ledoccupancystatus =  await this.zclNode.endpoints[2].clusters.occupancySensingCluster.readAttributes('ledIndication');
         const ledbasicstatus = await this.zclNode.endpoints[2].clusters.basic.readAttributes('ledIndication');
-        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({ledIndication: ledindication});
-        await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledindication});
-        this.log("Setting LED indicator status to: ", ledindication)
+        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({ledIndication: ledIndicator});
+        await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledIndicator});
+        this.log("Setting LED indicator status to: ", ledIndicator);
       } catch (error) {
         this.log("This device does not support LED indicator setting");
       }
     }
 
-	}
+    const sensitivity = this.getStoreValue('motion_sensitivity');
+    if (sensitivity !== null) {
+      try {
+        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({sensitivity: sensitivity});
+        this.log("Setting sensitivity to: ", sensitivity);
+      } catch (error) {
+        this.log("This device does not support sensitivity setting");
+      }
+    }
+
+  }
 	
 }
 
