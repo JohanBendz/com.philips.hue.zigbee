@@ -3,19 +3,25 @@
     {
       "id": "RWL000_on",
       "title": {
-        "en": "On-button pressed"
+        "en": "On-button pressed",
+        "nl": "Aan knop gedrukt"
       }
     },
     {
       "id": "RWL000_off",
       "title": {
-        "en": "Off-button pressed"
+        "en": "Off-button pressed",
+        "nl": "Uit knop gedrukt"
       }
     },
     {
       "id": "RWL000_dim",
       "title": {
         "en": "Dim buttons"
+      },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
       },
       "args": [
         {
@@ -25,31 +31,36 @@
             {
               "id": "up-press",
               "label": {
-                "en": "Dim-up pressed"
+                "en": "Dim-up (pressed)",
+                "nl": "Dim-op (gedrukt)"
               }
             },
             {
               "id": "up-hold",
               "label": {
-                "en": "Dim-up hold"
+                "en": "Dim-up (hold)",
+                "nl": "Dim-op (lang gedrukt)"
               }
             },
             {
               "id": "down-press",
               "label": {
-                "en": "Dim-down pressed"
+                "en": "Dim-down (pressed)",
+                "nl": "Dim-neer (gedrukt)"
               }
             },
             {
               "id": "down-hold",
               "label": {
-                "en": "Dim-down hold"
+                "en": "Dim-down (hold)",
+                "nl": "Dim-neer (lang gedrukt)"
               }
             },
             {
               "id": "release",
               "label": {
-                "en": "Dim-button released"
+                "en": "Dim-button (released)",
+                "nl": "Dim (losgelaten)"
               }
             }
           ]

@@ -77,6 +77,10 @@
         "title": {
           "en": "Alert mode"
         },
+        "titleFormatted": {
+          "en": "Activate alert mode: [[alert_mode]] [[device]]",
+          "nl": "Activeer alert modus: [[alert_mode]] [[device]]"
+        },
         "args": [
           {
             "type": "device",
@@ -88,9 +92,6 @@
             "name": "alert_mode",
             "title": {
               "en": "Set an alert mode"
-            },
-            "titleFormatted": {
-              "en": "Set alert mode to [[alert_mode]]"
             },
             "values": [
               {
@@ -140,6 +141,10 @@
           "sv": "Blinka ljuset",
           "nl": "Knipper de lamp",
           "de": "Blink das Licht"
+        },
+        "titleFormatted": {
+          "en": "Do [[blinks]] times [[blink_type]] [[device]]",
+          "nl": "Doe [[blinks]] keer [[blink_type]] [[device]]"
         },
         "args": [
           {
@@ -205,6 +210,10 @@
         "title": {
           "en": "Button pressed"
         },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
+        },
         "args": [
           {
             "type": "device",
@@ -218,43 +227,50 @@
               {
                 "id": "pressed",
                 "label": {
-                  "en": "Button pressed"
+                  "en": "Pressed",
+                  "nl": "Gedrukt"
                 }
               },
               {
                 "id": "pressed-odd",
                 "label": {
-                  "en": "Button pressed on (odd times)"
+                  "en": "Pressed on (odd times)",
+                  "nl": "Aan gedrukt (oneven)"
                 }
               },
               {
                 "id": "pressed-even",
                 "label": {
-                  "en": "Button pressed off (even times)"
+                  "en": "Pressed off (even times)",
+                  "nl": "Uit gedrukt (even)"
                 }
               },
               {
                 "id": "hold",
                 "label": {
-                  "en": "Button held (any time)"
+                  "en": "Held (any time)",
+                  "nl": "Vast gehouden (alle)"
                 }
               },
               {
                 "id": "short-hold",
                 "label": {
-                  "en": "Button held (<1 sec)"
+                  "en": "Held (<1 sec)",
+                  "nl": "Vast gehouden (<1 sec)"
                 }
               },
               {
                 "id": "long-hold",
                 "label": {
-                  "en": "Button held (>1 sec)"
+                  "en": "Held (>1 sec)",
+                  "nl": "Vast gehouden (>1 sec)"
                 }
               },
               {
                 "id": "released",
                 "label": {
-                  "en": "Button released (if status=on and held)"
+                  "en": "Released (if status=on and held)",
+                  "nl": "Losgelaten (als status=aan en lang gedrukt)"
                 }
               }
             ]
@@ -264,7 +280,8 @@
       {
         "id": "RWL000_on",
         "title": {
-          "en": "On-button pressed"
+          "en": "On-button pressed",
+          "nl": "Aan knop gedrukt"
         },
         "args": [
           {
@@ -277,7 +294,8 @@
       {
         "id": "RWL000_off",
         "title": {
-          "en": "Off-button pressed"
+          "en": "Off-button pressed",
+          "nl": "Uit knop gedrukt"
         },
         "args": [
           {
@@ -292,6 +310,10 @@
         "title": {
           "en": "Dim buttons"
         },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
+        },
         "args": [
           {
             "type": "device",
@@ -305,31 +327,36 @@
               {
                 "id": "up-press",
                 "label": {
-                  "en": "Dim-up pressed"
+                  "en": "Dim-up (pressed)",
+                  "nl": "Dim-op (gedrukt)"
                 }
               },
               {
                 "id": "up-hold",
                 "label": {
-                  "en": "Dim-up hold"
+                  "en": "Dim-up (hold)",
+                  "nl": "Dim-op (lang gedrukt)"
                 }
               },
               {
                 "id": "down-press",
                 "label": {
-                  "en": "Dim-down pressed"
+                  "en": "Dim-down (pressed)",
+                  "nl": "Dim-neer (gedrukt)"
                 }
               },
               {
                 "id": "down-hold",
                 "label": {
-                  "en": "Dim-down hold"
+                  "en": "Dim-down (hold)",
+                  "nl": "Dim-neer (lang gedrukt)"
                 }
               },
               {
                 "id": "release",
                 "label": {
-                  "en": "Dim-button released"
+                  "en": "Dim-button (released)",
+                  "nl": "Dim (losgelaten)"
                 }
               }
             ]
@@ -340,6 +367,10 @@
         "id": "RWL022_buttons",
         "title": {
           "en": "Button Action"
+        },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
         },
         "args": [
           {
@@ -354,97 +385,113 @@
               {
                 "id": "OnOff-ShortPress",
                 "label": {
-                  "en": "On/Off, short press"
+                  "en": "On/Off (short press)",
+                  "nl": "Aan/Uit (kort gedrukt)"
                 }
               },
               {
                 "id": "OnOff-ShortRelease",
                 "label": {
-                  "en": "On/Off, short release"
+                  "en": "On/Off (short release)",
+                  "nl": "Aan/Uit (kort losgelaten)"
                 }
               },
               {
                 "id": "OnOff-LongPress",
                 "label": {
-                  "en": "On/Off, long press"
+                  "en": "On/Off (long press)",
+                  "nl": "Aan/Uit (lang gedrukt)"
                 }
               },
               {
                 "id": "OnOff-LongRelease",
                 "label": {
-                  "en": "On/Off, long release"
+                  "en": "On/Off (long release)",
+                  "nl": "Aan/Uit (lang losgelaten)"
                 }
               },
               {
                 "id": "DimUp-ShortPress",
                 "label": {
-                  "en": "Dim up, short press"
+                  "en": "Dim up (short press)",
+                  "nl": "Dim op (kort gedrukt)"
                 }
               },
               {
                 "id": "DimUp-ShortRelease",
                 "label": {
-                  "en": "Dim up, short release"
+                  "en": "Dim up (short release)",
+                  "nl": "Dim op (kort losgelaten)"
                 }
               },
               {
                 "id": "DimUp-LongPress",
                 "label": {
-                  "en": "Dim up, long press"
+                  "en": "Dim up (long press)",
+                  "nl": "Dim op (lang gedrukt)"
                 }
               },
               {
                 "id": "DimUp-LongRelease",
                 "label": {
-                  "en": "Dim up, long release"
+                  "en": "Dim up (long release)",
+                  "nl": "Dim op (lang losgelaten)"
                 }
               },
               {
                 "id": "DimDown-ShortPress",
                 "label": {
-                  "en": "Dim down, short press"
+                  "en": "Dim down (short press)",
+                  "nl": "Dim neer (kort gedrukt)"
                 }
               },
               {
                 "id": "DimDown-ShortRelease",
                 "label": {
-                  "en": "Dim down, short release"
+                  "en": "Dim down (short release)",
+                  "nl": "Dim neer (kort losgelaten)"
                 }
               },
               {
                 "id": "DimDown-LongPress",
                 "label": {
-                  "en": "Dim down, long press"
+                  "en": "Dim down (long press)",
+                  "nl": "Dim neer (lang gedrukt)"
                 }
               },
               {
                 "id": "DimDown-LongRelease",
                 "label": {
-                  "en": "Dim down, long release"
+                  "en": "Dim down (long release)",
+                  "nl": "Dim neer (lang losgelaten)"
                 }
               },
               {
                 "id": "Hue-ShortPress",
                 "label": {
-                  "en": "Hue, short press"
+                  "en": "Hue (short press)",
+                  "nl": "Hue (kort gedrukt)"
                 }
               },
               {
                 "id": "Hue-ShortRelease",
                 "label": {
-                  "en": "Hue, short release"
+                  "en": "Hue (short release)",
+                  "nl": "Hue (kort losgelaten)"
                 }
               },
               {
                 "id": "Hue-LongPress",
                 "label": {
-                  "en": "Hue, long press"
+                  "en": "Hue (long press)",
+                  "nl": "Hue (lang gedrukt)"
                 }
               },
               {
                 "id": "Hue-LongRelease",
                 "label": {
-                  "en": "Hue, long release"
+                  "en": "Hue (long release)",
+                  "nl": "Hue (lang losgelaten)"
                 }
               }
             ]
@@ -6587,6 +6634,272 @@
               },
               "hint": {
                 "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/915005997201/assets/icon.svg",
+      "images": {
+        "large": "/drivers/915005997201/assets/images/large.png",
+        "small": "/drivers/915005997201/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Infuse Medium Ceiling Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 33.5,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "915005997201",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "915005997201",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929002966401/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929002966401/assets/images/large.png",
+        "small": "/drivers/929002966401/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Surimu Square Panel"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 60,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "929002966401",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929002966401",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
               }
             },
             {

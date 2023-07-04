@@ -5,6 +5,10 @@
       "title": {
         "en": "Button pressed"
       },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
+      },
       "args": [
         {
           "name": "action",
@@ -13,43 +17,50 @@
             {
               "id": "pressed",
               "label": {
-                "en": "Button pressed"
+                "en": "Pressed",
+                "nl": "Gedrukt"
               }
             },
             {
               "id": "pressed-odd",
               "label": {
-                "en": "Button pressed on (odd times)"
+                "en": "Pressed on (odd times)",
+                "nl": "Aan gedrukt (oneven)"
               }
             },
             {
               "id": "pressed-even",
               "label": {
-                "en": "Button pressed off (even times)"
+                "en": "Pressed off (even times)",
+                "nl": "Uit gedrukt (even)"
               }
             },
             {
               "id": "hold",
               "label": {
-                "en": "Button held (any time)"
+                "en": "Held (any time)",
+                "nl": "Vast gehouden (alle)"
               }
             },
             {
               "id": "short-hold",
               "label": {
-                "en": "Button held (<1 sec)"
+                "en": "Held (<1 sec)",
+                "nl": "Vast gehouden (<1 sec)"
               }
             },
             {
               "id": "long-hold",
               "label": {
-                "en": "Button held (>1 sec)"
+                "en": "Held (>1 sec)",
+                "nl": "Vast gehouden (>1 sec)"
               }
             },
             {
               "id": "released",
               "label": {
-                "en": "Button released (if status=on and held)"
+                "en": "Released (if status=on and held)",
+                "nl": "Losgelaten (als status=aan en lang gedrukt)"
               }
             }
           ]
