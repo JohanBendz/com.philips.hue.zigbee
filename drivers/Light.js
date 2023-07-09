@@ -26,7 +26,7 @@ class Light extends ZigBeeLightDevice {
 
         this.printNode();
 
-        // Flow action - Blink
+/*         // Flow action - Blink
         this.startBlinkAction = this.homey.flow.getActionCard('Blink');
         this.startBlinkAction.registerRunListener(async( args, state) => {
             var blinktype = args.blink_type === 'long' ? 2000 : 1000;
@@ -47,7 +47,7 @@ class Light extends ZigBeeLightDevice {
                 effectId: blinktype,
                 effectVariant: 0
             });
-        });
+        }); */
 
     }
 
@@ -63,6 +63,25 @@ class Light extends ZigBeeLightDevice {
           }
         }
     } */
+
+    async blink(args) {
+        var blinktype = args.blink_type === 'long' ? 2000 : 1000;
+        var i;
+        for (i = 0; i < args.blinks; i++) {
+            await this.zclNode.endpoints[11].clusters.onOff.toggle();
+            await this.sleep(blinktype);
+            await this.zclNode.endpoints[11].clusters.onOff.toggle();
+            await this.sleep(blinktype);
+        }
+    }
+
+    async alert(args) {
+        var blinktype = args.alert_mode === 'blink' ? 0 : args.alert_mode === 'breath' ? 1 : args.alert_mode === 'okay' ? 2 : args.alert_mode === 'channel_change' ? 11 : args.alert_mode === 'finish_effect' ? 254 : 255;
+        await this.zclNode.endpoints[11].clusters.identify.triggerEffectId({
+            effectId: blinktype,
+            effectVariant: 0
+        });
+    }
 
     async onSettings({ oldSettings, newSettings, changedKeys }) {
        

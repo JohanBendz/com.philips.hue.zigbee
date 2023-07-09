@@ -4,6 +4,9 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.46
+Fix for potential memory leak - run listeners started multiple times
+
 ### v.2.0.45
 Added support for Tap Dial Switch
 
