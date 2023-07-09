@@ -4,8 +4,11 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.45
+Added support for Tap Dial Switch
+
 ### v.2.0.44
-Added Led Indicator and Sensitivity settings to Occupancy Sensors.
+Added Led Indicator and Sensitivity settings to Occupancy Sensors
 
 Added support for:
 - Sumiri Panel

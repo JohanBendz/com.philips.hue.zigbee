@@ -30,7 +30,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.44",
+  "version": "2.0.45",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -245,6 +245,157 @@
       }
     ],
     "triggers": [
+      {
+        "id": "RDM002_buttons",
+        "title": {
+          "en": "Button Action"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RDM002"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Button1-Press",
+                "label": {
+                  "en": "Button 1, press"
+                }
+              },
+              {
+                "id": "Button1-Release",
+                "label": {
+                  "en": "Button 1, release"
+                }
+              },
+              {
+                "id": "Button1-Hold",
+                "label": {
+                  "en": "Button 1, hold"
+                }
+              },
+              {
+                "id": "Button1-LongRelease",
+                "label": {
+                  "en": "Button 1, long release"
+                }
+              },
+              {
+                "id": "Button2-Press",
+                "label": {
+                  "en": "Button 2, press"
+                }
+              },
+              {
+                "id": "Button2-Release",
+                "label": {
+                  "en": "Button 2, release"
+                }
+              },
+              {
+                "id": "Button2-Hold",
+                "label": {
+                  "en": "Button 2, hold"
+                }
+              },
+              {
+                "id": "Button2-LongRelease",
+                "label": {
+                  "en": "Button 2, long release"
+                }
+              },
+              {
+                "id": "Button3-Press",
+                "label": {
+                  "en": "Button 3, press"
+                }
+              },
+              {
+                "id": "Button3-Release",
+                "label": {
+                  "en": "Button 3, release"
+                }
+              },
+              {
+                "id": "Button3-Hold",
+                "label": {
+                  "en": "Button 3, hold"
+                }
+              },
+              {
+                "id": "Button3-LongRelease",
+                "label": {
+                  "en": "Button 3, long release"
+                }
+              },
+              {
+                "id": "Button4-Press",
+                "label": {
+                  "en": "Button 4, press"
+                }
+              },
+              {
+                "id": "Button4-Release",
+                "label": {
+                  "en": "Button 4, release"
+                }
+              },
+              {
+                "id": "Button4-Hold",
+                "label": {
+                  "en": "Button 4, hold"
+                }
+              },
+              {
+                "id": "Button4-LongRelease",
+                "label": {
+                  "en": "Button 4, long release"
+                }
+              },
+              {
+                "id": "Ring-RotateLeftStep",
+                "label": {
+                  "en": "Ring, rotate left step"
+                }
+              },
+              {
+                "id": "Ring-RotateLeftSlow",
+                "label": {
+                  "en": "Ring, rotate left slow"
+                }
+              },
+              {
+                "id": "Ring-RotateLeftFast",
+                "label": {
+                  "en": "Ring, rotate left fast"
+                }
+              },
+              {
+                "id": "Ring-RotateRightStep",
+                "label": {
+                  "en": "Ring, rotate right step"
+                }
+              },
+              {
+                "id": "Ring-RotateRightSlow",
+                "label": {
+                  "en": "Ring, rotate right slow"
+                }
+              },
+              {
+                "id": "Ring-RotateRightFast",
+                "label": {
+                  "en": "Ring, rotate right fast"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "ROM001_button",
         "title": {
@@ -2977,7 +3128,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -3126,7 +3277,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -4249,7 +4400,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -4403,7 +4554,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -5734,7 +5885,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -5886,7 +6037,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -6035,7 +6186,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -6184,7 +6335,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -6333,7 +6484,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -6485,7 +6636,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -6631,7 +6782,7 @@
         },
         "learnmode": {
           "instruction": {
-            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app. Note: each light source/bulb will have to be added/paired individually."
           }
         }
       },
@@ -16726,6 +16877,59 @@
           ]
         }
       ]
+    },
+    {
+      "name": {
+        "en": "Tap Dial Switch"
+      },
+      "class": "other",
+      "icon": "/drivers/RDM002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/RDM002/assets/images/large.png",
+        "small": "/drivers/RDM002/assets/images/small.png"
+      },
+      "capabilities": [
+        "alarm_battery"
+      ],
+      "energy": {
+        "batteries": [
+          "CR2032"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "RDM002"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              4,
+              6,
+              8,
+              64512
+            ],
+            "bindings": [
+              0,
+              1,
+              64512
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/RDM002/assets/icon.svg",
+          "instruction": {
+            "en": "Push button 1 for three to five seconds."
+          }
+        }
+      },
+      "id": "RDM002"
     },
     {
       "name": {

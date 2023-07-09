@@ -1,0 +1,150 @@
+{
+  "triggers": [
+    {
+      "id": "RDM002_buttons",
+      "title": {
+        "en": "Button Action"
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Button1-Press",
+              "label": {
+                "en": "Button 1, press"
+              }
+            },
+            {
+              "id": "Button1-Release",
+              "label": {
+                "en": "Button 1, release"
+              }
+            },
+            {
+              "id": "Button1-Hold",
+              "label": {
+                "en": "Button 1, hold"
+              }
+            },
+            {
+              "id": "Button1-LongRelease",
+              "label": {
+                "en": "Button 1, long release"
+              }
+            },
+            {
+              "id": "Button2-Press",
+              "label": {
+                "en": "Button 2, press"
+              }
+            },
+            {
+              "id": "Button2-Release",
+              "label": {
+                "en": "Button 2, release"
+              }
+            },
+            {
+              "id": "Button2-Hold",
+              "label": {
+                "en": "Button 2, hold"
+              }
+            },
+            {
+              "id": "Button2-LongRelease",
+              "label": {
+                "en": "Button 2, long release"
+              }
+            },
+            {
+              "id": "Button3-Press",
+              "label": {
+                "en": "Button 3, press"
+              }
+            },
+            {
+              "id": "Button3-Release",
+              "label": {
+                "en": "Button 3, release"
+              }
+            },
+            {
+              "id": "Button3-Hold",
+              "label": {
+                "en": "Button 3, hold"
+              }
+            },
+            {
+              "id": "Button3-LongRelease",
+              "label": {
+                "en": "Button 3, long release"
+              }
+            },
+            {
+              "id": "Button4-Press",
+              "label": {
+                "en": "Button 4, press"
+              }
+            },
+            {
+              "id": "Button4-Release",
+              "label": {
+                "en": "Button 4, release"
+              }
+            },
+            {
+              "id": "Button4-Hold",
+              "label": {
+                "en": "Button 4, hold"
+              }
+            },
+            {
+              "id": "Button4-LongRelease",
+              "label": {
+                "en": "Button 4, long release"
+              }
+            },
+            {
+              "id": "Ring-RotateLeftStep",
+              "label": {
+                "en": "Ring, rotate left step"
+              }
+            },
+            {
+              "id": "Ring-RotateLeftSlow",
+              "label": {
+                "en": "Ring, rotate left slow"
+              }
+            },
+            {
+              "id": "Ring-RotateLeftFast",
+              "label": {
+                "en": "Ring, rotate left fast"
+              }
+            },
+            {
+              "id": "Ring-RotateRightStep",
+              "label": {
+                "en": "Ring, rotate right step"
+              }
+            },
+            {
+              "id": "Ring-RotateRightSlow",
+              "label": {
+                "en": "Ring, rotate right slow"
+              }
+            },
+            {
+              "id": "Ring-RotateRightFast",
+              "label": {
+                "en": "Ring, rotate right fast"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

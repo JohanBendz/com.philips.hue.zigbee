@@ -118,5 +118,8 @@
   },
   "2.0.44": {
     "en": "Added Led indicator and sensitivity settings to Occupancy Sensors. Added support for Sumiri Panel and Infuse Medium Ceiling Light"
+  },
+  "2.0.45": {
+    "en": "Added support for Tap Dial Switch"
   }
 }

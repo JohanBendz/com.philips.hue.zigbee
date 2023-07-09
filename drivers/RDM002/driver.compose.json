@@ -1,0 +1,52 @@
+{
+  "name": {
+    "en": "Tap Dial Switch"
+  },
+  "class": "other",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2032"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "RDM002"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          1,
+          3,
+          4,
+          6,
+          8,
+          64512
+        ],
+        "bindings": [
+          0,
+          1,
+          64512
+        ]
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Push button 1 for three to five seconds."
+      }
+    }
+  }
+}
