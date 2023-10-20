@@ -1,0 +1,42 @@
+{
+  "name": {
+    "en": "Hue Wall Rocker Switch Module"
+  },
+  "class": "button",
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [
+    "alarm_battery"
+  ],
+  "energy": {
+    "batteries": [
+      "CR2450"
+    ]
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "RDM001"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [ 0, 1, 3, 4, 6, 8, 25, 64512 ],
+        "bindings": [ 0, 1, 64512 ]
+      }
+    },
+    "devices": {
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": " resetting the device (press the reset Button for 10 Seconds) and shorting the two pins afterwards"
+      }
+    }
+  }
+}

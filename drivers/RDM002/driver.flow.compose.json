@@ -5,6 +5,10 @@
       "title": {
         "en": "Button Action"
       },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
+      },
       "args": [
         {
           "name": "action",

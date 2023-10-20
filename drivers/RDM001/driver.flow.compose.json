@@ -1,0 +1,10 @@
+{
+  "triggers": [
+    {
+      "id": "RDM001_rockerswitch",
+      "title": {
+        "en": "Button Action"
+      }
+    }
+  ]
+}
