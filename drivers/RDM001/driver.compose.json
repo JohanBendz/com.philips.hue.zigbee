@@ -9,7 +9,7 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
-    "alarm_battery"
+    "measure_battery"
   ],
   "energy": {
     "batteries": [
@@ -31,6 +31,12 @@
       }
     },
     "devices": {
+      "secondInput": {
+        "class": "button",
+        "capabilities": [],
+        "name": { "en": "Second Input" },
+        "settings": []
+      }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",

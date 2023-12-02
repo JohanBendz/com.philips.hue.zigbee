@@ -3,8 +3,56 @@
     {
       "id": "RDM001_rockerswitch",
       "title": {
-        "en": "Button Action"
+        "en": "rockerswitch Action",
+        "nl": "Tuimel "
       }
+    },
+    {
+      "id": "RDM001_pushbuttons",
+      "title": {
+        "en": "Button Action"
+      },
+      "titleFormatted": {
+        "en": "Pushbutton [[action]]",
+        "nl": "Drukknop [[action]]"
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Press",
+              "label": {
+                "en": "press",
+                "nl": "druk"
+              }
+            },
+            {
+              "id": "Release",
+              "label": {
+                "en": "release",
+                "nl": "los"
+              }
+            },
+            {
+              "id": "Hold",
+              "label": {
+                "en": "hold",
+                "nl": "vasthouden"
+              }
+            },
+            {
+              "id": "LongRelease",
+              "label": {
+                "en": "long release",
+                "nl": "lang los"
+              }
+            }
+          ]
+        }
+      ]
     }
+
   ]
 }

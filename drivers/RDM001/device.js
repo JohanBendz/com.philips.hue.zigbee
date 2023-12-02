@@ -1,44 +1,116 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { ZCLNode, Cluster, CLUSTER } = require('zigbee-clusters');
+const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+
+//debug(true);
 Cluster.addCluster(HueSpecificBasicCluster);
 
 class DualWallSwitch extends ZigBeeDevice {
-
+  
   async onNodeInit({ zclNode }) {
-    
+    this._deviceMode = -1;
+    this._wakeupaction = false;
+   
+    if ( this.getData().subDeviceId === "secondInput" )  {
+      this.driver.subdevice = this;
+    } else { 
+      this.driver.deviceMode = this.getSettings()['mode'];
+      this._setNewConfig(this.driver.deviceMode);
+
       // alarm_battery
-    if (this.hasCapability('alarm_battery')) {				
-      this.batteryThreshold = this.getSetting('batteryThreshold') || 20;
-        this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
-          getOpts: {
-          getOnStart: true,
-          },
-          reportOpts: {
-            configureAttributeReporting: {
-              minInterval: 300,
-              maxInterval: 60000,
-              minChange: 1,
+      if (this.hasCapability('measure_battery')) {				
+        this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+            getOpts: {
+            getOnStart: false,
+            getOnOnline: false,
             },
-          },
-      });
-    }
+            reportOpts: {
+              configureAttributeReporting: {
+                minInterval: 90000,
+                maxInterval: 0,
+                minChange: 1,
+              },
+            },
+        });
+      }
 
-    this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
-    .registerRunListener(async (args, state) => {
-          return (null, args.action === state.action);
-    });
+      //this.printNode();
 
-    this.printNode();
-    const node = await this.homey.zigbee.getNode(this);
-
-    node.handleFrame = (endpointId, clusterId, frame, meta) => {
-        this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
-        this._buttonCommandParser(frame);
+      const node = await this.homey.zigbee.getNode(this);
+      
+      node.handleFrame = (endpointId, clusterId, frame, meta) => {
+          this._setmode();
+          //this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ",\n meta: ", meta);
+          if  ( clusterId === 64512 ) {
+            this._buttonCommandParser(frame);
+          } 
+          if ( clusterId === 1 ) {
+            this._powerParser(frame);
+          }
         };
+    } 
+  }
+
+  async _setmode() {
+    if (this._wakeupaction){
+      this._wakeupaction =  false;
+      try {
+        await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({ deviceMode: this._deviceMode });
+      } catch (err) {
+        //ignore timeout error
+      }
+    }
+    return;
+  }
+
+  async onSettings({ oldSettings, newSettings, changedKeys }) {
+    if (changedKeys.includes('mode')) {
+      this._setNewConfig(newSettings['mode']);
+      this.driver.deviceMode = newSettings['mode'];
+    }
+    return super.onSettings({oldSettings, newSettings, changedKeys});
+  }
+
+  _setNewConfig(deviceMode) {
+    if (this._deviceMode != deviceMode) 
+    {
+        this._deviceMode = deviceMode
+        this._wakeupaction = true
+        //this.log("New setting in queue "+ deviceMode)
+        this._setTrigger(deviceMode);
+    }
+    return;
+  }
+
+  _setTrigger(deviceMode) {
+    switch (deviceMode) {
+        case 'singlerocker':
+        case 'dualrocker':
+            this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
+            .registerRunListener(async (args, state) => {
+                  return (null, args.action === state.action);
+            });
+            break;
+        case 'singlepushbutton':
+        case 'dualpushbutton':
+            this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_pushbuttons')
+            .registerRunListener(async (args, state) => {
+                    return (null, args.action === state.action);
+            });
+            break;
+          }
+  }
+  _powerParser(frame){
+    if ( ( frame.readUInt8(2) == 0x0a ) &&
+         ( frame.readUInt8(3) == 0x21 ) &&
+         ( frame.readUInt8(4) == 0x00 )) {
+      const percentage = frame.readUInt8(5);
+      this.setCapabilityValue('measure_battery', percentage);
+    }
+    
   }
 
   _buttonCommandParser(frame) {
@@ -49,17 +121,22 @@ class DualWallSwitch extends ZigBeeDevice {
     }
     const buttonValue = frame.readUInt8(5);
     const actionValue = frame.readUInt8(9);
+    const targetdevice = [this,this.driver.subdevice][buttonValue-1];
+    //this.log(`triggered ${buttonValue} with ${actionValue}`)
+    const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
 
-    this.log(`triggered ${buttonValue} with ${actionValue}`)
-    // single/dual rocker mode first 0x00 + 0x02 for switch
-    // only single rocker mode (default mode)
-    if ( (buttonValue == 1) && ( actionValue == 0x02 ) ) {
-      return this._switchTriggerDevice.trigger(this, {}, {})
-          .then(() => this.log(`triggered switch`))
-          .catch(err => this.error('Error triggering RDM001_buttons', err));
+    if ( ( this.driver.deviceMode === "singlerocker" ) ||  ( this.driver.deviceMode === "dualrocker" ) ) {
+      if ( actionValue == 0x02 ) {
+          return this.TriggerDevice.trigger(targetdevice, {}, {})
+              .then(() => this.log(`triggered RDM001_rockerswitch`))
+              .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
+      } 
     } else {
-      return null
+      return this.TriggerDevice.trigger(targetdevice, {}, {action: `${action}`})
+            .then(() => this.log(`triggered RDM001_pushbuttons, action=${action}`))
+            .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
     }
+
   }
 
 }

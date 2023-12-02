@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mode",
+    "type": "dropdown",
+    "value": "singlerocker",
+    "label": { "en": "Default mode" },
+    "values": [
+      {
+        "id": "singlerocker",
+        "label": { "en": "Single Rocker" }
+      },
+      {
+        "id": "singlepushbutton",
+        "label": { "en": "Single pushbutton" }
+      },
+      {
+        "id": "dualrocker",
+        "label": { "en": "Dual Rocker" }
+      },
+      {
+        "id": "dualpushbutton",
+        "label": { "en": "Dual pushbutton" }
+      }
+    ]
+  }
+]
