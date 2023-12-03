@@ -6,7 +6,8 @@
         "en": "Button Action"
       },
       "titleFormatted": {
-        "en": "Button Action: [[action]]"
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
       },
       "args": [
         {
