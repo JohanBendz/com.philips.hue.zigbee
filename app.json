@@ -30,7 +30,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.46",
+  "version": "2.0.47",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -246,9 +246,103 @@
     ],
     "triggers": [
       {
+        "id": "RDM001_buttons",
+        "title": {
+          "en": "Button was pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RDM001"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1000-ShortPress",
+                "label": {
+                  "en": "Single Rocker - Short Press"
+                }
+              },
+              {
+                "id": "1002-ShortRelease",
+                "label": {
+                  "en": "Single Rocker - Short Release"
+                }
+              },
+              {
+                "id": "1001-LongPress",
+                "label": {
+                  "en": "Single Push Button - Long Press"
+                }
+              },
+              {
+                "id": "1003-LongRelease",
+                "label": {
+                  "en": "Single Push Button - Long Release"
+                }
+              },
+              {
+                "id": "2000-ShortPress",
+                "label": {
+                  "en": "Dual Rocker (First Button) - Short Press"
+                }
+              },
+              {
+                "id": "2002-ShortRelease",
+                "label": {
+                  "en": "Dual Rocker (First Button) - Short Release"
+                }
+              },
+              {
+                "id": "2001-LongPress",
+                "label": {
+                  "en": "Dual Push Button (First Button) - Long Press"
+                }
+              },
+              {
+                "id": "2003-LongRelease",
+                "label": {
+                  "en": "Dual Push Button (First Button) - Long Release"
+                }
+              },
+              {
+                "id": "3000-ShortPress",
+                "label": {
+                  "en": "Dual Rocker (Second Button) - Short Press"
+                }
+              },
+              {
+                "id": "3002-ShortRelease",
+                "label": {
+                  "en": "Dual Rocker (Second Button) - Short Release"
+                }
+              },
+              {
+                "id": "3001-LongPress",
+                "label": {
+                  "en": "Dual Push Button (Second Button) - Long Press"
+                }
+              },
+              {
+                "id": "3003-LongRelease",
+                "label": {
+                  "en": "Dual Push Button (Second Button) - Long Release"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "RDM002_buttons",
         "title": {
           "en": "Button Action"
+        },
+        "titleFormatted": {
+          "en": "Button Action: [[action]]"
         },
         "args": [
           {
@@ -9549,7 +9643,8 @@
         "productId": [
           "LCS001",
           "1741430P7",
-          "1741530P7"
+          "1741530P7",
+          "1742830P7"
         ],
         "endpoints": {
           "11": {
@@ -15080,7 +15175,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LWA004",
+        "productId": [
+          "LWA004",
+          "LWA021"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -16880,6 +16978,104 @@
     },
     {
       "name": {
+        "en": "Wall Switch Module"
+      },
+      "class": "other",
+      "icon": "/drivers/RDM001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/RDM001/assets/images/large.png",
+        "small": "/drivers/RDM001/assets/images/small.png"
+      },
+      "capabilities": [],
+      "energy": {
+        "batteries": [
+          "CR2450"
+        ]
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "RDM001"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              1,
+              3,
+              4,
+              6,
+              8,
+              64512
+            ],
+            "bindings": [
+              0,
+              1,
+              64512
+            ]
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/RDM001/assets/icon.svg",
+          "instruction": {
+            "en": "Push the reset button until the LED blinks."
+          }
+        }
+      },
+      "id": "RDM001",
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Button configuration"
+          },
+          "children": [
+            {
+              "id": "deviceMode",
+              "type": "radio",
+              "label": {
+                "en": "Setting"
+              },
+              "value": "singlerocker",
+              "hint": {
+                "en": "Configure the device to use one or two buttons. Define if the buttons are pushbuttons or rockers."
+              },
+              "values": [
+                {
+                  "id": "singlerocker",
+                  "label": {
+                    "en": "The device has one rocker"
+                  }
+                },
+                {
+                  "id": "singlepushbutton",
+                  "label": {
+                    "en": "The device has one pushbutton"
+                  }
+                },
+                {
+                  "id": "dualrocker",
+                  "label": {
+                    "en": "The device has two rockers"
+                  }
+                },
+                {
+                  "id": "dualpushbutton",
+                  "label": {
+                    "en": "The device has two pushbuttons"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
         "en": "Tap Dial Switch"
       },
       "class": "other",
@@ -16888,9 +17084,7 @@
         "large": "/drivers/RDM002/assets/images/large.png",
         "small": "/drivers/RDM002/assets/images/small.png"
       },
-      "capabilities": [
-        "alarm_battery"
-      ],
+      "capabilities": [],
       "energy": {
         "batteries": [
           "CR2032"
@@ -16929,7 +17123,8 @@
           }
         }
       },
-      "id": "RDM002"
+      "id": "RDM002",
+      "settings": []
     },
     {
       "name": {

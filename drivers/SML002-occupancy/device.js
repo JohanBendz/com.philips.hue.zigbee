@@ -73,12 +73,6 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 		// measure_battery // alarm_battery
 		zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
     .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
-
-    const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes('batteryPercentageRemaining');
-    const batteryThreshold = this.getSetting('batteryThreshold') || 20;
-    this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
-    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
-    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
     
   }
   
@@ -180,6 +174,16 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 	}
 
     async onEndDeviceAnnounce() {
+
+    try {
+      const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes('batteryPercentageRemaining');
+      const batteryThreshold = this.getSetting('batteryThreshold') || 20;
+      this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
+      this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
+      this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
+    } catch (error) {
+      this.log("Error initializing PowerConfigurationCluster: ", error);
+    }
     
     const ledIndicator = this.getStoreValue('ledIndicator');
     if (ledIndicator !== null) {
@@ -193,7 +197,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
         this.log("This device does not support LED indicator setting");
       }
     }
-
+    
     const sensitivity = this.getStoreValue('sensitivity');
     if (sensitivity !== null) {
       try {

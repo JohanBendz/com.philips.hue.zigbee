@@ -4,6 +4,12 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.47
+Added suport for:
+
+- New version of Lily Outdoor Spot
+- New version of Filament Bulb A60
+
 ### v.2.0.46
 Fix for potential memory leak - run listeners started multiple times
 

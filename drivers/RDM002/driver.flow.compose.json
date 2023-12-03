@@ -5,6 +5,9 @@
       "title": {
         "en": "Button Action"
       },
+      "titleFormatted": {
+        "en": "Button Action: [[action]]"
+      },
       "args": [
         {
           "name": "action",

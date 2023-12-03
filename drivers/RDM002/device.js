@@ -14,7 +14,7 @@ class TapDialSwitch extends ZigBeeDevice {
   async onNodeInit({ zclNode }) {
   
     this.printNode();
-  
+
     const node = await this.homey.zigbee.getNode(this);
     node.handleFrame = (endpointId, clusterId, frame, meta) => {
       this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
@@ -22,51 +22,21 @@ class TapDialSwitch extends ZigBeeDevice {
     };
       
     this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM002_buttons')
-      .registerRunListener(async (args, state) => {
-        return (null, args.action === state.action);
-      });
+    .registerRunListener(async (args, state) => {
+      return (null, args.action === state.action);
+    });
   
-    // alarm_battery
-    if (this.hasCapability('alarm_battery')) {				
-      this.batteryThreshold = this.getSetting('batteryThreshold') || 20;
-        this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
-          getOpts: {
-          getOnStart: true,
-          },
-          reportOpts: {
-            configureAttributeReporting: {
-              minInterval: 300,
-              maxInterval: 60000,
-              minChange: 1,
-            },
-          },
-      });
-    }
-
-  }  
+  }
 
   _buttonCommandParser(frame) {
-    const frameLength = frame.length;
-    if (frameLength < 9) {
-        this.log(`Received frame with length ${frameLength}, expected at least 9.`);
+    if (frame.length < 7) {
+        this.log(`Received frame with length ${frame.length}, expected at least 7.`);
         return;
     }
-  
+
     const buttonValue = frame.readUInt8(5);
-    const counterValue = frame.readUInt8(3).toString(16);  // Read counter as hex
-    const actionValue = frame.readUInt8(9);
-    let directionValue;
-    let timeValue;
-  
-    // Check if buffer is long enough for direction and rotation data
-    if(frame.length >= 17) {
-        directionValue = frame.readUInt8(12).toString(16);  // Read direction value as hex, from the 13th byte
-        timeValue = frame.readUInt8(17);  // Read time value as decimal, from the 18th byte
-    }
-  
-    const adjustedTime = directionValue === '0' ? timeValue : 256 - timeValue;
-    const speed = adjustedTime <= 25 ? 'Step' : adjustedTime <= 75 ? 'Slow' : 'Fast';
-  
+    const actionValue = (frame.length >= 9) ? frame.readUInt8(9) : null;
+
     let button = '';
     let action = '';
     switch (buttonValue) {
@@ -75,32 +45,332 @@ class TapDialSwitch extends ZigBeeDevice {
         case 3:
         case 4:
             button = `Button${buttonValue}`;
-            action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
+            if (actionValue !== null) {
+                action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
+            }
             break;
         case 20:
             button = 'Ring';
-            switch (directionValue) {
-                case 'ff':
-                    action = `RotateLeft${speed}`;
-                    break;
-                case '0':
-                    action = `RotateRight${speed}`;
-                    break;
-                default:
-                    this.log(`Unknown directionValue: ${directionValue}`);
-                    return;
+            if (frame.length >= 17) {
+                const directionValue = frame.readUInt8(12).toString(16);
+                switch (directionValue) {
+                    case 'ff':
+                        action = `RotateLeft`;
+                        break;
+                    case '0':
+                        action = `RotateRight`;
+                        break;
+                    default:
+                        this.log(`Unknown directionValue: ${directionValue}`);
+                        return;
+                }
+                const timeValue = frame.readUInt8(17);
+                const adjustedTime = directionValue === '0' ? timeValue : 256 - timeValue;
+                const speed = adjustedTime <= 25 ? 'Step' : adjustedTime <= 75 ? 'Slow' : 'Fast';
+                action += speed;
             }
             break;
         default:
             this.log(`Unknown buttonValue: ${buttonValue}`);
             return;
     }
-  
-    return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
-        .then(() => this.log(`triggered RDM002_buttons, action=${button}-${action}`))
-        .catch(err => this.error('Error triggering RDM002_buttons', err));
+
+    if (action) {
+        return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
+            .then(() => this.log(`triggered RDM002_buttons, action=${button}-${action}`))
+            .catch(err => this.error('Error triggering RDM002_buttons', err));
+    }
+
   }
   
 }
 
 module.exports = TapDialSwitch;
+
+
+
+/* "ids": {
+  "modelId": "RDM002",
+  "manufacturerName": "Signify Netherlands B.V."
+},
+"endpoints": {
+  "ieeeAddress": "00:17:88:01:0d:35:99:9a",
+  "networkAddress": 60979,
+  "modelId": "RDM002",
+  "manufacturerName": "Signify Netherlands B.V.",
+  "swBuildId": "2.59.19",
+  "capabilities": {
+    "type": "Buffer",
+    "data": [
+      128
+    ]
+  },
+  "endpointDescriptors": [
+    {
+      "status": "SUCCESS",
+      "nwkAddrOfInterest": 60979,
+      "_reserved": 34,
+      "endpointId": 1,
+      "applicationProfileId": 260,
+      "applicationDeviceId": 2096,
+      "applicationDeviceVersion": 0,
+      "_reserved1": 1,
+      "inputClusters": [
+        0,
+        1,
+        3,
+        64512,
+        4096
+      ],
+      "outputClusters": [
+        25,
+        0,
+        3,
+        4,
+        6,
+        8,
+        5,
+        4096
+      ]
+    }
+  ],
+  "touchlinkGroupIds": [
+    2899
+  ],
+  "extendedEndpointDescriptors": {
+    "1": {
+      "clusters": {
+        "basic": {
+          "attributes": [
+            {
+              "id": 0,
+              "name": "zclVersion",
+              "value": 8
+            },
+            {
+              "id": 1,
+              "name": "appVersion",
+              "value": 2
+            },
+            {
+              "id": 2,
+              "name": "stackVersion",
+              "value": 1
+            },
+            {
+              "id": 3,
+              "name": "hwVersion",
+              "value": 1
+            },
+            {
+              "id": 4,
+              "name": "manufacturerName",
+              "value": "Signify Netherlands B.V."
+            },
+            {
+              "id": 5,
+              "name": "modelId",
+              "value": "RDM002"
+            },
+            {
+              "id": 6,
+              "name": "dateCode",
+              "value": "20220316"
+            },
+            {
+              "id": 7,
+              "name": "powerSource",
+              "value": "battery"
+            },
+            {
+              "id": 8,
+              "name": "appProfileVersion",
+              "value": 0
+            },
+            {
+              "id": 9
+            },
+            {
+              "id": 10
+            },
+            {
+              "id": 11
+            },
+            {
+              "id": 16384,
+              "name": "swBuildId",
+              "value": "2.59.19"
+            },
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 3
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "powerConfiguration": {
+          "attributes": [
+            {
+              "id": 32,
+              "name": "batteryVoltage",
+              "value": 28
+            },
+            {
+              "id": 33,
+              "name": "batteryPercentageRemaining",
+              "value": 193
+            },
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 2
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "identify": {
+          "attributes": [
+            {
+              "id": 0,
+              "name": "identifyTime",
+              "value": 0
+            },
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 2
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "touchlink": {
+          "attributes": [
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 3,
+              "reportingConfiguration": {
+                "status": "UNREPORTABLE_ATTRIBUTE",
+                "direction": "reported"
+              }
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        }
+      },
+      "bindings": {
+        "basic": {
+          "attributes": [
+            {
+              "id": 0,
+              "name": "zclVersion",
+              "value": 8
+            },
+            {
+              "id": 1,
+              "name": "appVersion",
+              "value": 2
+            },
+            {
+              "id": 2,
+              "name": "stackVersion",
+              "value": 1
+            },
+            {
+              "id": 3,
+              "name": "hwVersion",
+              "value": 1
+            },
+            {
+              "id": 4,
+              "name": "manufacturerName",
+              "value": "Signify Netherlands B.V."
+            },
+            {
+              "id": 5,
+              "name": "modelId",
+              "value": "RDM002"
+            },
+            {
+              "id": 6,
+              "name": "dateCode",
+              "value": "20220316"
+            },
+            {
+              "id": 7,
+              "name": "powerSource",
+              "value": "battery"
+            },
+            {
+              "id": 8,
+              "name": "appProfileVersion",
+              "value": 0
+            },
+            {
+              "id": 9
+            },
+            {
+              "id": 10
+            },
+            {
+              "id": 11
+            },
+            {
+              "id": 16384,
+              "name": "swBuildId",
+              "value": "2.59.19"
+            },
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 3
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "identify": {
+          "attributes": [
+            {
+              "id": 0,
+              "name": "identifyTime",
+              "value": 0
+            },
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 2
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "touchlink": {
+          "attributes": [
+            {
+              "id": 65533,
+              "name": "clusterRevision",
+              "value": 3,
+              "reportingConfiguration": {
+                "status": "UNREPORTABLE_ATTRIBUTE",
+                "direction": "reported"
+              }
+            }
+          ],
+          "commandsGenerated": "UNSUP_GENERAL_COMMAND",
+          "commandsReceived": "UNSUP_GENERAL_COMMAND"
+        },
+        "ota": {},
+        "groups": {},
+        "onOff": {},
+        "levelControl": {},
+        "scenes": {}
+      }
+    }
+  }
+} */

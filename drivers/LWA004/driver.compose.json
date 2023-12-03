@@ -14,7 +14,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LWA004",
+    "productId": [
+      "LWA004",
+      "LWA021"
+    ],
     "endpoints": {
       "11": {
         "clusters": [
