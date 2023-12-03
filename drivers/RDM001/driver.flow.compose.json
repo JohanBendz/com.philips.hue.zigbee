@@ -3,20 +3,59 @@
     {
       "id": "RDM001_rockerswitch",
       "title": {
-        "en": "rockerswitch Action",
-        "nl": "Tuimel "
-      }
+        "en": "Rocker Switch Action"
+      },
+      "titleFormatted": {
+        "en": "Rocker Switch [[button]]"
+      },
+      "args": [
+        {
+          "name": "button",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "first_input",
+              "label": {
+                "en": "First Input"
+              }
+            },
+            {
+              "id": "second_input",
+              "label": {
+                "en": "Second Input"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "RDM001_pushbuttons",
       "title": {
-        "en": "Button Action"
+        "en": "PushButton Action"
       },
       "titleFormatted": {
-        "en": "Pushbutton [[action]]",
-        "nl": "Drukknop [[action]]"
+        "en": "PushButton [[button]] - [[action]]"
       },
       "args": [
+        {
+          "name": "button",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "first_input",
+              "label": {
+                "en": "First Input"
+              }
+            },
+            {
+              "id": "second_input",
+              "label": {
+                "en": "Second Input"
+              }
+            }
+          ]
+        },
         {
           "name": "action",
           "type": "dropdown",
@@ -24,35 +63,30 @@
             {
               "id": "Press",
               "label": {
-                "en": "press",
-                "nl": "druk"
+                "en": "press"
               }
             },
             {
               "id": "Release",
               "label": {
-                "en": "release",
-                "nl": "los"
+                "en": "release"
               }
             },
             {
               "id": "Hold",
               "label": {
-                "en": "hold",
-                "nl": "vasthouden"
+                "en": "hold"
               }
             },
             {
               "id": "LongRelease",
               "label": {
-                "en": "long release",
-                "nl": "lang los"
+                "en": "long release"
               }
             }
           ]
         }
       ]
     }
-
   ]
 }

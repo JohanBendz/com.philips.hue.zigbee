@@ -30,14 +30,6 @@
         "bindings": [ 0, 1, 64512 ]
       }
     },
-    "devices": {
-      "secondInput": {
-        "class": "button",
-        "capabilities": [],
-        "name": { "en": "Second Input" },
-        "settings": []
-      }
-    },
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {

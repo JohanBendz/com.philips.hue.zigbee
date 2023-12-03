@@ -127,5 +127,8 @@
   },
   "2.0.47": {
     "en": "Added support for: Lily Outdoor Spot, Filament Bulb A60 and Wall Switch Module"
+  },
+  "2.0.48": {
+    "en": "Prepping for New Live version with a number of devices added, see Github for full changelog"
   }
 }

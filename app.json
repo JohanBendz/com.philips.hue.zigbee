@@ -30,7 +30,7 @@
     ]
   },
   "brandColor": "#035ED8",
-  "version": "2.0.47",
+  "version": "2.0.48",
   "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
@@ -246,9 +246,12 @@
     ],
     "triggers": [
       {
-        "id": "RDM001_buttons",
+        "id": "RDM001_rockerswitch",
         "title": {
-          "en": "Button was pressed"
+          "en": "Rocker Switch Action"
+        },
+        "titleFormatted": {
+          "en": "Rocker Switch [[button]]"
         },
         "args": [
           {
@@ -257,79 +260,83 @@
             "filter": "driver_id=RDM001"
           },
           {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "first_input",
+                "label": {
+                  "en": "First Input"
+                }
+              },
+              {
+                "id": "second_input",
+                "label": {
+                  "en": "Second Input"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "RDM001_pushbuttons",
+        "title": {
+          "en": "PushButton Action"
+        },
+        "titleFormatted": {
+          "en": "PushButton [[button]] - [[action]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=RDM001"
+          },
+          {
+            "name": "button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "first_input",
+                "label": {
+                  "en": "First Input"
+                }
+              },
+              {
+                "id": "second_input",
+                "label": {
+                  "en": "Second Input"
+                }
+              }
+            ]
+          },
+          {
             "name": "action",
             "type": "dropdown",
             "values": [
               {
-                "id": "1000-ShortPress",
+                "id": "Press",
                 "label": {
-                  "en": "Single Rocker - Short Press"
+                  "en": "press"
                 }
               },
               {
-                "id": "1002-ShortRelease",
+                "id": "Release",
                 "label": {
-                  "en": "Single Rocker - Short Release"
+                  "en": "release"
                 }
               },
               {
-                "id": "1001-LongPress",
+                "id": "Hold",
                 "label": {
-                  "en": "Single Push Button - Long Press"
+                  "en": "hold"
                 }
               },
               {
-                "id": "1003-LongRelease",
+                "id": "LongRelease",
                 "label": {
-                  "en": "Single Push Button - Long Release"
-                }
-              },
-              {
-                "id": "2000-ShortPress",
-                "label": {
-                  "en": "Dual Rocker (First Button) - Short Press"
-                }
-              },
-              {
-                "id": "2002-ShortRelease",
-                "label": {
-                  "en": "Dual Rocker (First Button) - Short Release"
-                }
-              },
-              {
-                "id": "2001-LongPress",
-                "label": {
-                  "en": "Dual Push Button (First Button) - Long Press"
-                }
-              },
-              {
-                "id": "2003-LongRelease",
-                "label": {
-                  "en": "Dual Push Button (First Button) - Long Release"
-                }
-              },
-              {
-                "id": "3000-ShortPress",
-                "label": {
-                  "en": "Dual Rocker (Second Button) - Short Press"
-                }
-              },
-              {
-                "id": "3002-ShortRelease",
-                "label": {
-                  "en": "Dual Rocker (Second Button) - Short Release"
-                }
-              },
-              {
-                "id": "3001-LongPress",
-                "label": {
-                  "en": "Dual Push Button (Second Button) - Long Press"
-                }
-              },
-              {
-                "id": "3003-LongRelease",
-                "label": {
-                  "en": "Dual Push Button (Second Button) - Long Release"
+                  "en": "long release"
                 }
               }
             ]
@@ -342,7 +349,8 @@
           "en": "Button Action"
         },
         "titleFormatted": {
-          "en": "Button Action: [[action]]"
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
         },
         "args": [
           {
@@ -16978,15 +16986,17 @@
     },
     {
       "name": {
-        "en": "Wall Switch Module"
+        "en": "Hue Wall Rocker Switch Module"
       },
-      "class": "other",
+      "class": "button",
       "icon": "/drivers/RDM001/assets/icon.svg",
       "images": {
         "large": "/drivers/RDM001/assets/images/large.png",
         "small": "/drivers/RDM001/assets/images/small.png"
       },
-      "capabilities": [],
+      "capabilities": [
+        "measure_battery"
+      ],
       "energy": {
         "batteries": [
           "CR2450"
@@ -17009,6 +17019,7 @@
               4,
               6,
               8,
+              25,
               64512
             ],
             "bindings": [
@@ -17021,54 +17032,43 @@
         "learnmode": {
           "image": "/drivers/RDM001/assets/icon.svg",
           "instruction": {
-            "en": "Push the reset button until the LED blinks."
+            "en": " resetting the device (press the reset Button for 10 Seconds) and shorting the two pins afterwards"
           }
         }
       },
       "id": "RDM001",
       "settings": [
         {
-          "type": "group",
+          "id": "mode",
+          "type": "dropdown",
+          "value": "singlerocker",
           "label": {
-            "en": "Button configuration"
+            "en": "Default mode"
           },
-          "children": [
+          "values": [
             {
-              "id": "deviceMode",
-              "type": "radio",
+              "id": "singlerocker",
               "label": {
-                "en": "Setting"
-              },
-              "value": "singlerocker",
-              "hint": {
-                "en": "Configure the device to use one or two buttons. Define if the buttons are pushbuttons or rockers."
-              },
-              "values": [
-                {
-                  "id": "singlerocker",
-                  "label": {
-                    "en": "The device has one rocker"
-                  }
-                },
-                {
-                  "id": "singlepushbutton",
-                  "label": {
-                    "en": "The device has one pushbutton"
-                  }
-                },
-                {
-                  "id": "dualrocker",
-                  "label": {
-                    "en": "The device has two rockers"
-                  }
-                },
-                {
-                  "id": "dualpushbutton",
-                  "label": {
-                    "en": "The device has two pushbuttons"
-                  }
-                }
-              ]
+                "en": "Single Rocker"
+              }
+            },
+            {
+              "id": "singlepushbutton",
+              "label": {
+                "en": "Single pushbutton"
+              }
+            },
+            {
+              "id": "dualrocker",
+              "label": {
+                "en": "Dual Rocker"
+              }
+            },
+            {
+              "id": "dualpushbutton",
+              "label": {
+                "en": "Dual pushbutton"
+              }
             }
           ]
         }
