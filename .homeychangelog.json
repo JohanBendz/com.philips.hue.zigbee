@@ -124,5 +124,9 @@
   },
   "2.0.46": {
     "en": "Fix for potential memory leak"
+  },
+  "2.0.47": {
+    "en": "add RDM001 only single rocket",
+    "nl": "uitbreiding met RDM alleen enkel tuimel mogelijk"
   }
 }
