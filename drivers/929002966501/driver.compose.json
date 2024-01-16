@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "Infuse Medium Ceiling Light"
+    "en": "Surimu Rectangle Panel"
   },
   "$extends": ["light_color_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 33.5,
+      "usageOn": 67,
       "usageOff": 1
     }
   },
@@ -14,10 +14,7 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "915005997201",
-      "915005997301"
-    ],
+    "productId": "929002966501",
     "endpoints": {
       "11": {
         "clusters": [
