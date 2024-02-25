@@ -175,6 +175,10 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 
     async onEndDeviceAnnounce() {
 
+    await this.setAvailable() // Mark the device as available upon re-announcement
+    .then(() => this.log('Device is now available'))
+    .catch(err => this.error('Error setting device available', err));
+
     try {
       const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes('batteryPercentageRemaining');
       const batteryThreshold = this.getSetting('batteryThreshold') || 20;

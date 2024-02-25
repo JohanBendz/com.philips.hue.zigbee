@@ -1,36 +1,29 @@
 {
   "name": {
-    "en": "Smart Plug"
+    "en": "Devere Medium Ceiling Light"
   },
-  "class": "socket",
-  "capabilities": [
-    "onoff"
-  ],
-  "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 19.2,
+      "usageOff": 1
+    }
   },
   "zigbee": {
     "manufacturerName": [
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": [
-      "LOM001",
-      "LOM002",
-      "LOM005",
-      "LOM006",
-      "LOM007",
-      "LOM008"
-    ],
+    "productId": "915005997601",
     "endpoints": {
       "11": {
         "clusters": [
           0,
           3,
           4,
-          5,
-          6
+          6,
+          8,
+          768
         ]
       }
     },

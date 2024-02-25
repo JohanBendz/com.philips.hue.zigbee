@@ -242,6 +242,61 @@
             }
           }
         ]
+      },
+      {
+        "id": "DynamicScenes",
+        "title": {
+          "en": "Dynamic Scene"
+        },
+        "titleFormatted": {
+          "en": "Set the dynamic scene [[dynamicScene_mode]] on [[device]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "class=light",
+            "title": {
+              "en": "Select Light Device"
+            }
+          },
+          {
+            "type": "dropdown",
+            "name": "dynamicScene_mode",
+            "title": {
+              "en": "Set a Dynamic Scene"
+            },
+            "titleFormatted": {
+              "en": "Set the dynamic scene [[dynamicScene_mode]] on [[device]]"
+            },
+            "values": [
+              {
+                "id": "candle",
+                "label": {
+                  "en": "Candle effect"
+                }
+              },
+              {
+                "id": "fireplace",
+                "label": {
+                  "en": "Fireplace effect"
+                }
+              },
+              {
+                "id": "colorloop",
+                "label": {
+                  "en": "Loop between colors"
+                }
+              },
+              {
+                "id": "stop",
+                "label": {
+                  "en": "stop"
+                }
+              }
+            ]
+          }
+        ]
       }
     ],
     "triggers": [
@@ -4486,7 +4541,8 @@
           "4090330P9_01",
           "4090331P9_01",
           "LCP001",
-          "929003053301_01"
+          "929003053301_01",
+          "929003052501_01"
         ],
         "endpoints": {
           "11": {
@@ -4640,7 +4696,8 @@
           "4090330P9_02",
           "4090331P9_02",
           "LCP002",
-          "929003053301_02"
+          "929003053301_02",
+          "929003052501_02"
         ],
         "endpoints": {
           "11": {
@@ -6273,7 +6330,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "5062348P7",
+        "productId": [
+          "5062348P7",
+          "5062331P7"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -7038,6 +7098,139 @@
         }
       },
       "id": "915005997201",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/915005997601/assets/icon.svg",
+      "images": {
+        "large": "/drivers/915005997601/assets/images/large.png",
+        "small": "/drivers/915005997601/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Devere Medium Ceiling Light"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 19.2,
+          "usageOff": 1
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "915005997601",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "915005997601",
       "settings": [
         {
           "id": "light_powerOnCtrl",
@@ -11226,6 +11419,7 @@
           "LOM001",
           "LOM002",
           "LOM005",
+          "LOM006",
           "LOM007",
           "LOM008"
         ],
@@ -15401,7 +15595,7 @@
         }
       },
       "name": {
-        "en": "Bulb 1100 Lumen White "
+        "en": "Bulb 1100 Lumen White"
       },
       "energy": {
         "approximation": {
@@ -15415,8 +15609,10 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
+          "LWA011",
           "LWA017",
-          "LWA011"
+          "LWA019",
+          "LWA029"
         ],
         "endpoints": {
           "11": {
@@ -16330,7 +16526,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LWU001",
+        "productId": [
+          "LWU001",
+          "LWU002"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -16986,7 +17185,7 @@
     },
     {
       "name": {
-        "en": "Hue Wall Rocker Switch Module"
+        "en": "Hue Wall Switch Module"
       },
       "class": "button",
       "icon": "/drivers/RDM001/assets/icon.svg",

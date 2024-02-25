@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Hue Wall Rocker Switch Module"
+    "en": "Hue Wall Switch Module"
   },
   "class": "button",
   "icon": "{{driverAssetsPath}}/icon.svg",

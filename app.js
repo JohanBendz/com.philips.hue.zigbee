@@ -29,6 +29,17 @@ class PhilipsHueZigbeeApp extends Homey.App {
             throw new Error('Device does not support alerts');
         }
     });
+
+    // Register listeners for Dynamic Scenes
+/*     this.startDynamicScenesAction = this.homey.flow.getActionCard('DynamicScenes');
+    this.startDynamicScenesAction.registerRunListener(async (args, state) => {
+        if (typeof args.device.setDynamicScenes === 'function') {
+            return args.device.setDynamicScenes(args.dynamicScene_mode);
+        } else {
+            throw new Error('This device does not support Dynamic Scenes');
+        }
+    }); */
+
   }
 }
 

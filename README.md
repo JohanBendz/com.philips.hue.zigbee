@@ -4,6 +4,16 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.49
+Added support for:
+
+- New version of Bulb E14 P45 White
+- Devere Medium Ceiling Light
+- New version of Argenta 3-light Spotlight
+- New versions of Bulb 1100 Lumen White
+- New versions of Ensis Pendant
+- New version of the Smart Plug
+
 ### v.2.0.48
 Change:
 

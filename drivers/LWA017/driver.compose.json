@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Bulb 1100 Lumen White "
+    "en": "Bulb 1100 Lumen White"
   },
   "$extends": ["light_white"],
   "energy": {
@@ -15,8 +15,10 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
+      "LWA011",
       "LWA017",
-      "LWA011"
+      "LWA019",
+      "LWA029"
     ],
     "endpoints": {
       "11": {

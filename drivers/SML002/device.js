@@ -194,6 +194,12 @@ class OutDoorSensor extends ZigBeeDevice {
 		}
 
 	}
+
+	async onEndDeviceAnnounce() {
+		await this.setAvailable() // Mark the device as available upon re-announcement
+		  .then(() => this.log('Device is now available'))
+		  .catch(err => this.error('Error setting device available', err));
+	}
 	
 }
 

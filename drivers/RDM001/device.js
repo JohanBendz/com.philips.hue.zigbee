@@ -3,11 +3,13 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const HueSpecificCluster = require('../../lib/HueSpecificCluster');
 
 //debug(true);
 Cluster.addCluster(HueSpecificBasicCluster);
+Cluster.addCluster(HueSpecificCluster);
 
-class DualWallSwitch extends ZigBeeDevice {
+class WallSwitchModule extends ZigBeeDevice {
 
   async onNodeInit({ zclNode }) {
     this._deviceMode = -1;
@@ -77,21 +79,41 @@ class DualWallSwitch extends ZigBeeDevice {
   }
 
   _setTrigger(deviceMode) {
-    switch (deviceMode) {
-      case 'singlerocker':
-      case 'dualrocker':
-        this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
-          .registerRunListener(async (args, state) => {
-            return (null, args.action === state.action);
-          });
-        break;
-      case 'singlepushbutton':
-      case 'dualpushbutton':
-        this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_pushbuttons')
-          .registerRunListener(async (args, state) => {
-            return (null, args.action === state.action);
-          });
-        break;
+    try {
+      switch (deviceMode) {
+        case 'singlerocker':
+        case 'dualrocker':
+          this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
+            .registerRunListener(async (args, state) => {
+              return args.action === state.action;
+            });
+          break;
+        case 'singlepushbutton':
+        case 'dualpushbutton':
+          this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_pushbuttons')
+            .registerRunListener(async (args, state) => {
+              return args.button === state.button && args.action === state.action;
+            });
+          break;
+      }
+    } catch (error) {
+      this.error('Error setting up triggers:', error.message);
+    }
+  }
+  
+  _triggerRockerSwitch(button) {
+    if (this.TriggerDevice) {
+      this.TriggerDevice.trigger(this, { button }, {})
+        .then(() => this.log(`Triggered RDM001_rockerswitch, button=${button}`))
+        .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
+    }
+  }
+  
+  _triggerPushButton(button, action) {
+    if (this.TriggerDevice) {
+      this.TriggerDevice.trigger(this, { button }, { action: `${action}` })
+        .then(() => this.log(`Triggered RDM001_pushbuttons, button=${button}, action=${action}`))
+        .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
     }
   }
 
@@ -114,30 +136,21 @@ class DualWallSwitch extends ZigBeeDevice {
     const buttonValue = frame.readUInt8(5);
     const actionValue = frame.readUInt8(9);
     const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
-  
-    // Determine which button was used (first or second)
     const button = buttonValue === 1 ? 'first_input' : 'second_input';
   
-    // Handle different actions based on the device mode
+    // Trigger appropriate method based on the device mode
     if (this.driver.deviceMode.includes('rocker')) {
       // For Rocker Switch Mode
-      if (actionValue == 0x02) {
-        // Assuming actionValue 0x02 is specific to Rocker Switch Mode
-        return this.TriggerDevice.trigger(this, { button }, {})
-          .then(() => this.log(`Triggered RDM001_rockerswitch, button=${button}`))
-          .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
-      }
+      this._triggerRockerSwitch(button);
     } else if (this.driver.deviceMode.includes('pushbutton')) {
       // For PushButton Mode
-      return this.TriggerDevice.trigger(this, { button }, { action: `${action}` })
-        .then(() => this.log(`Triggered RDM001_pushbuttons, button=${button}, action=${action}`))
-        .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
+      this._triggerPushButton(button, action);
     }
   }
 
 }
 
-module.exports = DualWallSwitch;
+module.exports = WallSwitchModule;
 
 
 /* "ids": {
