@@ -1,12 +1,17 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-/* const { Cluster, CLUSTER } = require('zigbee-clusters');
-const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
-const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster'); */
+const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
+
+const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+
+// debug(true);
+Cluster.addCluster(HueSpecificBasicCluster);
+
 /* const HueSpecificCluster = require('../../lib/HueSpecificCluster');
 const HueSpecificBoundCluster = require('../../lib/HueSpecificBoundCluster');
-
+const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
+const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
 Cluster.addCluster(HueSpecificCluster);
 Cluster.addCluster(HueSpecificBoundCluster); */
 
@@ -16,17 +21,32 @@ async onNodeInit({ zclNode }) {
   
   this.printNode();
 
+    if (!this.hasCapability('measure_battery')) {
+      await this.addCapability('measure_battery');
+    }
+    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+      getOpts: {
+        getOnStart: false,
+        getOnOnline: false,
+      },
+      reportOpts: {
+        configureAttributeReporting: {
+          minInterval: 0,
+          maxInterval: 21600,
+          minChange: 1,
+        }
+      }
+    });
+
   	const node = await this.homey.zigbee.getNode(this);
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
-/*         this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
-        this.log("Button: ", payload[5]);
-        var buttonType = payload[6] === 0 ? 'Push' : 'Rotary';
-        this.log("Type: ", buttonType);
-        var buttonAction = payload[9] === 0 ? 'Push' : payload[9] === 1 ? 'Hold' : payload[9] === 2 ? 'Release' : 'Long Release';
-        this.log("Action: ", buttonAction); */
-
+    this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
+      if  ( clusterId === 64512 ) {
         this._buttonCommandParser(frame);
-
+      } 
+      if ( clusterId === 1 ) {
+        this._powerParser(frame);
+      }
     };
     
 /*     zclNode.endpoints[1].bind(HueSpecificCluster.NAME, new HueSpecificBoundCluster({
@@ -42,22 +62,6 @@ async onNodeInit({ zclNode }) {
       return (null, args.action === state.action);
     });
 
-		// alarm_battery
-/* 		if (this.hasCapability('alarm_battery')) {				
-      this.batteryThreshold = 20;
-			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
-				getOpts: {
-				},
-				reportOpts: {
-					configureAttributeReporting: {
-						minInterval: 0, // No minimum reporting interval
-						maxInterval: 60000, // Maximally every ~16 hours
-						minChange: 10, // Report when value changed by 10
-					},
-				},
-      });
-		} */
-
   }
 
 /*   _buttonCommandParser(payload) {
@@ -67,6 +71,16 @@ async onNodeInit({ zclNode }) {
       .then(() => this.log(`triggered RWL022_buttons, action=${payload.mode}-${action}`))
       .catch(err => this.error('Error triggering RWL022_buttons', err));
   } */
+
+  _powerParser(frame){
+    if ( ( frame.readUInt8(2) == 0x01 ) &&
+         ( frame.readUInt8(3) == 0x21 ) &&
+         ( frame.readUInt8(4) == 0x00 ) &&
+         ( frame.readUInt8(5) == 0x20 )) {
+      const percentage = frame.readUInt8(7) / 2;
+      this.setCapabilityValue('measure_battery', percentage);
+    }
+  }
 
   _buttonCommandParser(payload) {
     var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';

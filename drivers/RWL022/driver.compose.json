@@ -9,7 +9,7 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
-    
+    "measure_battery"
   ],
   "energy": {
     "batteries": [
@@ -37,6 +37,7 @@
           64512
         ],
         "bindings": [
+          1,
           64512
         ]
       }

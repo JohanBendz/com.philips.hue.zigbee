@@ -1,12 +1,12 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { ZCLNode, Cluster, CLUSTER } = require('zigbee-clusters');
-
-// Extension of Basic cluster needs this
+const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-Cluster.addCluster(HueSpecificBasicCluster);
 const HueSpecificBasicBoundCluster = require('../../lib/HueSpecificBasicBoundCluster');
+
+// debug(true);
+Cluster.addCluster(HueSpecificBasicCluster);
 Cluster.addCluster(HueSpecificBasicBoundCluster);
 
 class TapDialSwitch extends ZigBeeDevice {
@@ -15,10 +15,31 @@ class TapDialSwitch extends ZigBeeDevice {
   
     this.printNode();
 
+    if (this.hasCapability('measure_battery')) {				
+      this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+          getOpts: {
+          getOnStart: false,
+          getOnOnline: false,
+          },
+/*           reportOpts: {
+            configureAttributeReporting: {
+              minInterval: 0,
+              maxInterval: 21600,
+              minChange: 1,
+            }
+          } */
+      });
+    }
+
     const node = await this.homey.zigbee.getNode(this);
     node.handleFrame = (endpointId, clusterId, frame, meta) => {
       this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
-      this._buttonCommandParser(frame);
+      if  ( clusterId === 64512 ) {
+        this._buttonCommandParser(frame);
+      } 
+      if ( clusterId === 1 ) {
+        this._powerParser(frame);
+      }
     };
       
     this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM002_buttons')
@@ -28,6 +49,15 @@ class TapDialSwitch extends ZigBeeDevice {
   
   }
 
+  _powerParser(frame){
+    if ( ( frame.readUInt8(2) == 0x0a ) &&
+         ( frame.readUInt8(3) == 0x21 ) &&
+         ( frame.readUInt8(4) == 0x00 )) {
+      const percentage = frame.readUInt8(5);
+      this.setCapabilityValue('measure_battery', percentage);
+    }
+  }
+  
   _buttonCommandParser(frame) {
     if (frame.length < 7) {
         this.log(`Received frame with length ${frame.length}, expected at least 7.`);

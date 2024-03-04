@@ -2,7 +2,7 @@
   "name": {
     "en": "Hue Wall Switch Module"
   },
-  "class": "button",
+  "class": "remote",
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -22,7 +22,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "RDM001"
+      "RDM001",
+      "RDM004"
     ],
     "endpoints": {
       "1": {
@@ -30,10 +31,18 @@
         "bindings": [ 0, 1, 64512 ]
       }
     },
+    "devices": {
+      "secondInput": {
+        "class": "button",
+        "capabilities": [],
+        "name": { "en": "Hue Wall Switch Module, Second Input" },
+        "settings": []
+      }
+    },
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": " resetting the device (press the reset Button for 10 Seconds) and shorting the two pins afterwards"
+        "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
       }
     }
   }

@@ -2,9 +2,11 @@
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
-// const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
+const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
 
-// Cluster.addCluster(HueSpecificOccupancySensingCluster);
+Cluster.addCluster(HueSpecificOccupancySensingCluster);
+Cluster.addCluster(HueSpecificBasicCluster);
 
 class OutDoorOccupancySensor extends ZigBeeDevice {
 	
@@ -74,6 +76,12 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 		zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
     .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
     
+    const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes('batteryPercentageRemaining');
+    const batteryThreshold = this.getSetting('batteryThreshold') || 20;
+    this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
+    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
+    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
+
   }
   
   onOccupancyAttributeReport(occupancyStatus) {

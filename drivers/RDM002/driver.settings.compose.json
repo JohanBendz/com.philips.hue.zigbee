@@ -1,1 +1,9 @@
-[]
+[
+    {
+        "id": "info",
+        "type": "label",
+        "label": { "en": "Is the battery level not reported?" },
+        "value": "Use maintenance option *try to repair*",
+        "hint": { "en": "This is found under device settings." }
+    }
+]

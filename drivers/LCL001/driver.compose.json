@@ -14,7 +14,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LCL001",
+    "productId": [
+      "LCL001",
+      "LCL006"
+    ],
     "endpoints": {
       "11": {
         "clusters": [

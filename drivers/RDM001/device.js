@@ -3,59 +3,67 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-const HueSpecificCluster = require('../../lib/HueSpecificCluster');
 
 //debug(true);
 Cluster.addCluster(HueSpecificBasicCluster);
-Cluster.addCluster(HueSpecificCluster);
 
-class WallSwitchModule extends ZigBeeDevice {
+class DualWallSwitch extends ZigBeeDevice {
 
   async onNodeInit({ zclNode }) {
+
+    this.printNode();
     this._deviceMode = -1;
     this._wakeupaction = false;
 
-    // Set device mode based on settings
-    this.driver.deviceMode = this.getSettings()['mode'];
-    this._setNewConfig(this.driver.deviceMode);
+    if ( this.getData().subDeviceId === "secondInput" )  {
+      this.driver.subdevice = this;
+    } else {
+      this.driver.deviceMode = this.getSettings()['mode'];
+      this._setNewConfig(this.driver.deviceMode);
 
-    // Handle battery measurement if capability is available
-    if (this.hasCapability('measure_battery')) {
-      this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-        getOpts: {
-          getOnStart: false,
-          getOnOnline: false,
-        },
-        reportOpts: {
-          configureAttributeReporting: {
-            minInterval: 90000,
-            maxInterval: 0,
-            minChange: 1,
-          },
-        },
-      });
+      if (this.hasCapability('measure_battery')) {				
+        this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+            getOpts: {
+            getOnStart: false,
+            getOnOnline: false,
+            },
+            reportOpts: {
+              configureAttributeReporting: {
+                minInterval: 0,
+                maxInterval: 21600,
+                minChange: 1,
+              }
+            }
+        });
+      }
+
+      const node = await this.homey.zigbee.getNode(this);
+      node.handleFrame = (endpointId, clusterId, frame, meta) => {
+        this._setmode();
+        // this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ",\n meta: ", meta);
+        if  ( clusterId === 64512 ) {
+          this._buttonCommandParser(frame);
+        } 
+        if ( clusterId === 1 ) {
+          this._powerParser(frame);
+        }
+      };
+
     }
 
-    const node = await this.homey.zigbee.getNode(this);
-
-    node.handleFrame = (endpointId, clusterId, frame, meta) => {
-      this._setmode();
-      if (clusterId === 64512) {
-        this._buttonCommandParser(frame);
-      }
-      if (clusterId === 1) {
-        this._powerParser(frame);
-      }
-    };
   }
 
   async _setmode() {
-    if (this._wakeupaction) {
-      this._wakeupaction = false;
+    if (this._wakeupaction){
+      this._wakeupaction =  false;
       try {
-        await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({ deviceMode: this._deviceMode });
+        await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({
+          deviceMode: this._deviceMode
+        });
       } catch (err) {
-        // Ignore timeout error
+        if (err.message !== 'TimeoutError') {
+          this.error('Failed to update device mode:', err.message);
+        }
       }
     }
     return;
@@ -66,11 +74,12 @@ class WallSwitchModule extends ZigBeeDevice {
       this._setNewConfig(newSettings['mode']);
       this.driver.deviceMode = newSettings['mode'];
     }
-    return super.onSettings({ oldSettings, newSettings, changedKeys });
+    return super.onSettings({oldSettings, newSettings, changedKeys});
   }
 
   _setNewConfig(deviceMode) {
-    if (this._deviceMode != deviceMode) {
+    if (this._deviceMode != deviceMode)
+    {
       this._deviceMode = deviceMode;
       this._wakeupaction = true;
       this._setTrigger(deviceMode);
@@ -79,48 +88,28 @@ class WallSwitchModule extends ZigBeeDevice {
   }
 
   _setTrigger(deviceMode) {
-    try {
-      switch (deviceMode) {
-        case 'singlerocker':
-        case 'dualrocker':
-          this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
-            .registerRunListener(async (args, state) => {
-              return args.action === state.action;
-            });
-          break;
-        case 'singlepushbutton':
-        case 'dualpushbutton':
-          this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_pushbuttons')
-            .registerRunListener(async (args, state) => {
-              return args.button === state.button && args.action === state.action;
-            });
-          break;
-      }
-    } catch (error) {
-      this.error('Error setting up triggers:', error.message);
+    switch (deviceMode) {
+      case 'singlerocker':
+      case 'dualrocker':
+        this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_rockerswitch')
+        .registerRunListener(async (args, state) => {
+          return (null, args.action === state.action);
+        });
+        break;
+      case 'singlepushbutton':
+      case 'dualpushbutton':
+        this.TriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM001_pushbuttons')
+        .registerRunListener(async (args, state) => {
+          return (null, args.action === state.action);
+        });
+        break;
     }
   }
   
-  _triggerRockerSwitch(button) {
-    if (this.TriggerDevice) {
-      this.TriggerDevice.trigger(this, { button }, {})
-        .then(() => this.log(`Triggered RDM001_rockerswitch, button=${button}`))
-        .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
-    }
-  }
-  
-  _triggerPushButton(button, action) {
-    if (this.TriggerDevice) {
-      this.TriggerDevice.trigger(this, { button }, { action: `${action}` })
-        .then(() => this.log(`Triggered RDM001_pushbuttons, button=${button}, action=${action}`))
-        .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
-    }
-  }
-
-  _powerParser(frame) {
-    if ((frame.readUInt8(2) == 0x0a) &&
-      (frame.readUInt8(3) == 0x21) &&
-      (frame.readUInt8(4) == 0x00)) {
+  _powerParser(frame){
+    if ( ( frame.readUInt8(2) == 0x0a ) &&
+         ( frame.readUInt8(3) == 0x21 ) &&
+         ( frame.readUInt8(4) == 0x00 )) {
       const percentage = frame.readUInt8(5);
       this.setCapabilityValue('measure_battery', percentage);
     }
@@ -129,29 +118,31 @@ class WallSwitchModule extends ZigBeeDevice {
   _buttonCommandParser(frame) {
     const frameLength = frame.length;
     if (frameLength < 9) {
-      this.log(`Received frame with length ${frameLength}, expected at least 9.`);
-      return;
+        this.log(`Received frame with length ${frameLength}, expected at least 9.`);
+        return;
     }
-  
     const buttonValue = frame.readUInt8(5);
     const actionValue = frame.readUInt8(9);
+    const targetdevice = [this,this.driver.subdevice][buttonValue-1];
     const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
-    const button = buttonValue === 1 ? 'first_input' : 'second_input';
-  
-    // Trigger appropriate method based on the device mode
-    if (this.driver.deviceMode.includes('rocker')) {
-      // For Rocker Switch Mode
-      this._triggerRockerSwitch(button);
-    } else if (this.driver.deviceMode.includes('pushbutton')) {
-      // For PushButton Mode
-      this._triggerPushButton(button, action);
+
+    if ( ( this.driver.deviceMode === "singlerocker" ) ||  ( this.driver.deviceMode === "dualrocker" ) ) {
+      if ( actionValue == 0x02 ) {
+        return this.TriggerDevice.trigger(targetdevice, {}, {})
+        .then(() => this.log(`triggered RDM001_rockerswitch`))
+        .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
+      } 
+    } else {
+      return this.TriggerDevice.trigger(targetdevice, {}, {action: `${action}`})
+      .then(() => this.log(`triggered RDM001_pushbuttons, action=${action}`))
+      .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
     }
+    
   }
 
 }
 
-module.exports = WallSwitchModule;
-
+module.exports = DualWallSwitch;
 
 /* "ids": {
   "modelId": "RDM001",

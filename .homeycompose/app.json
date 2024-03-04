@@ -7,6 +7,9 @@
   "description": {
     "en": "Smart light — your way."
   },
+  "brandColor": "#035ED8",
+  "version": "2.0.50",
+  "compatibility": ">=5.0.0",
   "category": [
     "lights"
   ],
@@ -28,12 +31,9 @@
       "RGB"
     ]
   },
-  "brandColor": "#035ED8",
-  "version": "2.0.49",
-  "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
-    "email": "johan_bendz@hotmail.com"
+    "email": "homey@bortbytt.se"
   },
   "contributing": {
     "donate": {

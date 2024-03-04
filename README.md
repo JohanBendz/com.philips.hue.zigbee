@@ -4,15 +4,35 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.50
+Fix:
+
+- Wall Switch Module now works
+- Motion sensors now have "keep alive code", hopefully resolving problems with units dropping/not reporting after a while
+- Some devices that did not report battery now does 
+
+Change:
+
+Wall Switch Module (RDM001) driver back to two tiles, one for each input/button. (For now this is the only way to have the unit not fire both triggers on a single button change.)
+
+Added support for:
+
+- New version of the Wall Switch Module (RDM004)
+- New version of the Smart Button (RDM003)
+- New version of Lightstrip (LCL006)
+
 ### v.2.0.49
 Added support for:
 
-- New version of Bulb E14 P45 White
 - Devere Medium Ceiling Light
+- Surimu Rectangle Ceiling Panel
+- New version of Bulb E14 P45 White
 - New version of Argenta 3-light Spotlight
 - New versions of Bulb 1100 Lumen White
 - New versions of Ensis Pendant
 - New version of the Smart Plug
+- New version of Infuse Medium Ceiling Light
+- New version of Being Ceiling Lamp
 
 ### v.2.0.48
 Change:

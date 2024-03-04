@@ -29,21 +29,32 @@ async onNodeInit({ zclNode }) {
       return (null, args.action === state.action);
     });
 
-		// alarm_battery
-		if (this.hasCapability('alarm_battery')) {				
-      this.batteryThreshold = 20;
-			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
-				getOpts: {
-				},
-				reportOpts: {
-					configureAttributeReporting: {
-						minInterval: 0, // No minimum reporting interval
-						maxInterval: 60000, // Maximally every ~16 hours
-						minChange: 10, // Report when value changed by 10
-					},
-				},
-      });
-		}
+    if (!this.hasCapability('measure_battery')) {
+      await this.addCapability('measure_battery');
+    }		
+    this.batteryThreshold = 20;
+    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+      getOpts: {
+      },
+      reportOpts: {
+        configureAttributeReporting: {
+          minInterval: 0,
+          maxInterval: 21600,
+          minChange: 1,
+        },
+      },
+    });
+    this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
+      getOpts: {
+      },
+      reportOpts: {
+        configureAttributeReporting: {
+          minInterval: 0, // No minimum reporting interval
+          maxInterval: 60000, // Maximally every ~16 hours
+          minChange: 10, // Report when value changed by 10
+        },
+      },
+    });
 
   }
 

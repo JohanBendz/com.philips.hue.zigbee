@@ -9,7 +9,8 @@
     "small": "{{driverAssetsPath}}/images/small.png"
   },
   "capabilities": [
-    "alarm_battery"
+    "alarm_battery",
+    "measure_battery"
   ],
   "energy": {
     "batteries": [
@@ -22,7 +23,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "ROM001"
+      "ROM001",
+      "RDM003"
     ],
     "endpoints": {
       "1": {

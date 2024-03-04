@@ -2,13 +2,15 @@
   "name": {
     "en": "Tap Dial Switch"
   },
-  "class": "other",
+  "class": "remote",
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
-  "capabilities": [],
+  "capabilities": [
+    "measure_battery"
+  ],
   "energy": {
     "batteries": [
       "CR2032"
@@ -43,7 +45,7 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Push button 1 for three to five seconds."
+        "en": "Push the setup button inside the device for aprox 12 seconds until the LED on the front turns green."
       }
     }
   }

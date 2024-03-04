@@ -8,6 +8,9 @@
   "description": {
     "en": "Smart light — your way."
   },
+  "brandColor": "#035ED8",
+  "version": "2.0.50",
+  "compatibility": ">=5.0.0",
   "category": [
     "lights"
   ],
@@ -29,12 +32,9 @@
       "RGB"
     ]
   },
-  "brandColor": "#035ED8",
-  "version": "2.0.49",
-  "compatibility": ">=5.0.0",
   "author": {
     "name": "Johan Bendz",
-    "email": "johan_bendz@hotmail.com"
+    "email": "homey@bortbytt.se"
   },
   "contributing": {
     "donate": {
@@ -303,68 +303,35 @@
       {
         "id": "RDM001_rockerswitch",
         "title": {
-          "en": "Rocker Switch Action"
+          "en": "Rockerswitch toggled",
+          "nl": "Tuimelschakelaar omgezet"
         },
         "titleFormatted": {
-          "en": "Rocker Switch [[button]]"
+          "en": "Rockerswitch toggled",
+          "nl": "Tuimelschakelaar omgezet"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=RDM001"
-          },
-          {
-            "name": "button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "first_input",
-                "label": {
-                  "en": "First Input"
-                }
-              },
-              {
-                "id": "second_input",
-                "label": {
-                  "en": "Second Input"
-                }
-              }
-            ]
           }
         ]
       },
       {
         "id": "RDM001_pushbuttons",
         "title": {
-          "en": "PushButton Action"
+          "en": "Button Action"
         },
         "titleFormatted": {
-          "en": "PushButton [[button]] - [[action]]"
+          "en": "Pushbutton [[action]]",
+          "nl": "Drukknop [[action]]"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
             "filter": "driver_id=RDM001"
-          },
-          {
-            "name": "button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "first_input",
-                "label": {
-                  "en": "First Input"
-                }
-              },
-              {
-                "id": "second_input",
-                "label": {
-                  "en": "Second Input"
-                }
-              }
-            ]
           },
           {
             "name": "action",
@@ -373,25 +340,29 @@
               {
                 "id": "Press",
                 "label": {
-                  "en": "press"
+                  "en": "pressed",
+                  "nl": "drukken"
                 }
               },
               {
                 "id": "Release",
                 "label": {
-                  "en": "release"
+                  "en": "released",
+                  "nl": "loslaten"
                 }
               },
               {
                 "id": "Hold",
                 "label": {
-                  "en": "hold"
+                  "en": "hold",
+                  "nl": "vasthouden"
                 }
               },
               {
                 "id": "LongRelease",
                 "label": {
-                  "en": "long release"
+                  "en": "released after hold",
+                  "nl": "loslaten na vasthouden"
                 }
               }
             ]
@@ -9530,7 +9501,10 @@
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LCL001",
+        "productId": [
+          "LCL001",
+          "LCL006"
+        ],
         "endpoints": {
           "11": {
             "clusters": [
@@ -17324,7 +17298,7 @@
       "name": {
         "en": "Hue Wall Switch Module"
       },
-      "class": "button",
+      "class": "remote",
       "icon": "/drivers/RDM001/assets/icon.svg",
       "images": {
         "large": "/drivers/RDM001/assets/images/large.png",
@@ -17344,7 +17318,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "RDM001"
+          "RDM001",
+          "RDM004"
         ],
         "endpoints": {
           "1": {
@@ -17365,10 +17340,20 @@
             ]
           }
         },
+        "devices": {
+          "secondInput": {
+            "class": "button",
+            "capabilities": [],
+            "name": {
+              "en": "Hue Wall Switch Module, Second Input"
+            },
+            "settings": []
+          }
+        },
         "learnmode": {
           "image": "/drivers/RDM001/assets/icon.svg",
           "instruction": {
-            "en": " resetting the device (press the reset Button for 10 Seconds) and shorting the two pins afterwards"
+            "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
           }
         }
       },
@@ -17414,13 +17399,15 @@
       "name": {
         "en": "Tap Dial Switch"
       },
-      "class": "other",
+      "class": "remote",
       "icon": "/drivers/RDM002/assets/icon.svg",
       "images": {
         "large": "/drivers/RDM002/assets/images/large.png",
         "small": "/drivers/RDM002/assets/images/small.png"
       },
-      "capabilities": [],
+      "capabilities": [
+        "measure_battery"
+      ],
       "energy": {
         "batteries": [
           "CR2032"
@@ -17455,12 +17442,24 @@
         "learnmode": {
           "image": "/drivers/RDM002/assets/icon.svg",
           "instruction": {
-            "en": "Push button 1 for three to five seconds."
+            "en": "Push the setup button inside the device for aprox 12 seconds until the LED on the front turns green."
           }
         }
       },
       "id": "RDM002",
-      "settings": []
+      "settings": [
+        {
+          "id": "info",
+          "type": "label",
+          "label": {
+            "en": "Is the battery level not reported?"
+          },
+          "value": "Use maintenance option *try to repair*",
+          "hint": {
+            "en": "This is found under device settings."
+          }
+        }
+      ]
     },
     {
       "name": {
@@ -17473,7 +17472,8 @@
         "small": "/drivers/ROM001/assets/images/small.png"
       },
       "capabilities": [
-        "alarm_battery"
+        "alarm_battery",
+        "measure_battery"
       ],
       "energy": {
         "batteries": [
@@ -17486,7 +17486,8 @@
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "ROM001"
+          "ROM001",
+          "RDM003"
         ],
         "endpoints": {
           "1": {
@@ -17571,7 +17572,9 @@
         "large": "/drivers/RWL022/assets/images/large.png",
         "small": "/drivers/RWL022/assets/images/small.png"
       },
-      "capabilities": [],
+      "capabilities": [
+        "measure_battery"
+      ],
       "energy": {
         "batteries": [
           "CR2032"
@@ -17598,6 +17601,7 @@
               64512
             ],
             "bindings": [
+              1,
               64512
             ]
           }
