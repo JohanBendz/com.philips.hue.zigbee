@@ -4,6 +4,11 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.0.51
+Fix:
+
+- Adds measure_battery capability if missing / RDM001 & RDM002
+
 ### v.2.0.50
 Fix:
 
@@ -13,13 +18,14 @@ Fix:
 
 Change:
 
-Wall Switch Module (RDM001) driver back to two tiles, one for each input/button. (For now this is the only way to have the unit not fire both triggers on a single button change.)
+Wall Switch Module (RDM001 & RDM004) driver back to two tiles, one for each input/button. (For now this is the only way to have the unit not fire both triggers on a single button change.)
 
 Added support for:
 
 - New version of the Wall Switch Module (RDM004)
 - New version of the Smart Button (RDM003)
 - New version of Lightstrip (LCL006)
+- New version of the Outdoor Occupancy Sensor (SML004)
 
 ### v.2.0.49
 Added support for:

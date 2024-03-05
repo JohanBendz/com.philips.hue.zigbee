@@ -9,7 +9,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"
@@ -23,13 +23,18 @@
       "Sensor",
       "Temperature",
       "Humidity",
-      "motion",
-      "occupancy",
+      "Motion",
+      "Occupancy",
       "PIR",
       "Plug",
       "LED",
       "Light",
-      "RGB"
+      "Bulb",
+      "RGB",
+      "Button",
+      "Remote",
+      "Switch",
+      "Dimmer"
     ]
   },
   "author": {
@@ -240,61 +245,6 @@
               "nl": "Aantal keer knipperen",
               "de": "Anzahl der Blinkzeichen"
             }
-          }
-        ]
-      },
-      {
-        "id": "DynamicScenes",
-        "title": {
-          "en": "Dynamic Scene"
-        },
-        "titleFormatted": {
-          "en": "Set the dynamic scene [[dynamicScene_mode]] on [[device]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "class=light",
-            "title": {
-              "en": "Select Light Device"
-            }
-          },
-          {
-            "type": "dropdown",
-            "name": "dynamicScene_mode",
-            "title": {
-              "en": "Set a Dynamic Scene"
-            },
-            "titleFormatted": {
-              "en": "Set the dynamic scene [[dynamicScene_mode]] on [[device]]"
-            },
-            "values": [
-              {
-                "id": "candle",
-                "label": {
-                  "en": "Candle effect"
-                }
-              },
-              {
-                "id": "fireplace",
-                "label": {
-                  "en": "Fireplace effect"
-                }
-              },
-              {
-                "id": "colorloop",
-                "label": {
-                  "en": "Loop between colors"
-                }
-              },
-              {
-                "id": "stop",
-                "label": {
-                  "en": "stop"
-                }
-              }
-            ]
           }
         ]
       }

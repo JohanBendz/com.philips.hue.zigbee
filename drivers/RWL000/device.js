@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
@@ -9,6 +8,8 @@ const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
 class DimmerSwitch extends ZigBeeDevice {
 
 async onNodeInit({ zclNode }) {
+
+  this.printNode();
     
     // Buttons
     zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({

@@ -1,6 +1,6 @@
 {
   "name": "com.philips.hue.zigbee",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "description": "Get control of your Philips Hue RGBW and Tunable White bulbs with Homey! No need for the Philips Hue Bridge.",
   "main": "app.js",
   "dependencies": {
@@ -25,7 +25,7 @@
     "url": "git+https://github.com/JohanBendz/com.philips.hue.zigbee"
   },
   "author": "Johan Bendz",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues"
   },

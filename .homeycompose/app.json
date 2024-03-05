@@ -8,7 +8,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.0.50",
+  "version": "2.0.51",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"
@@ -22,13 +22,18 @@
       "Sensor",
       "Temperature",
       "Humidity",
-      "motion",
-      "occupancy",
+      "Motion",
+      "Occupancy",
       "PIR",
       "Plug",
       "LED",
       "Light",
-      "RGB"
+      "Bulb",
+      "RGB",
+      "Button",
+      "Remote",
+      "Switch",
+      "Dimmer"
     ]
   },
   "author": {

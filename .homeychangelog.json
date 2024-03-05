@@ -136,5 +136,8 @@
   },
   "2.0.50": {
     "en": "Battery reporting fixes, new devices and features added, see Github for full changelog"
+  },
+  "2.0.51": {
+    "en": "Minor fixes, see Github for full changelog"
   }
 }

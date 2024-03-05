@@ -4,16 +4,8 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-
 // debug(true);
 Cluster.addCluster(HueSpecificBasicCluster);
-
-/* const HueSpecificCluster = require('../../lib/HueSpecificCluster');
-const HueSpecificBoundCluster = require('../../lib/HueSpecificBoundCluster');
-const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
-const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
-Cluster.addCluster(HueSpecificCluster);
-Cluster.addCluster(HueSpecificBoundCluster); */
 
 class DimmerSwitchGen3 extends ZigBeeDevice {
 
@@ -28,14 +20,14 @@ async onNodeInit({ zclNode }) {
       getOpts: {
         getOnStart: false,
         getOnOnline: false,
-      },
+      }/* ,
       reportOpts: {
         configureAttributeReporting: {
           minInterval: 0,
           maxInterval: 21600,
           minChange: 1,
         }
-      }
+      } */
     });
 
   	const node = await this.homey.zigbee.getNode(this);
@@ -48,14 +40,6 @@ async onNodeInit({ zclNode }) {
         this._powerParser(frame);
       }
     };
-    
-/*     zclNode.endpoints[1].bind(HueSpecificCluster.NAME, new HueSpecificBoundCluster({
-      // onButton: this._buttonCommandParser.bind(this),
-      onButton: (payload) => {
-        console.log("Payload: ", payload);
-        console.log("Payload JSON: ", payload.JSON());
-      }
-    })); */
 
     this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RWL022_buttons')
     .registerRunListener(async (args, state) => {
@@ -63,14 +47,6 @@ async onNodeInit({ zclNode }) {
     });
 
   }
-
-/*   _buttonCommandParser(payload) {
-    var button = payload.activeButton === 1 ? 'OnOff' : payload.activeButton === 2 ? 'DimUp' : payload.activeButton === 3 ? 'DimDown' : 'Hue';
-    var action = payload.activeAction === 0 ? 'ShortPress' : payload.activeAction === 1 ? 'LongPress' : payload.activeAction === 2 ? 'ShortRelease' : 'LongRelease';
-    return this._switchHueTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
-      .then(() => this.log(`triggered RWL022_buttons, action=${payload.mode}-${action}`))
-      .catch(err => this.error('Error triggering RWL022_buttons', err));
-  } */
 
   _powerParser(frame){
     if ( ( frame.readUInt8(2) == 0x01 ) &&

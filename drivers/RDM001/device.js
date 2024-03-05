@@ -21,21 +21,22 @@ class DualWallSwitch extends ZigBeeDevice {
       this.driver.deviceMode = this.getSettings()['mode'];
       this._setNewConfig(this.driver.deviceMode);
 
-      if (this.hasCapability('measure_battery')) {				
-        this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-            getOpts: {
-            getOnStart: false,
-            getOnOnline: false,
-            },
-            reportOpts: {
-              configureAttributeReporting: {
-                minInterval: 0,
-                maxInterval: 21600,
-                minChange: 1,
-              }
+      if (!this.hasCapability('measure_battery')) {
+        await this.addCapability('measure_battery');
+      }					
+      this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+          getOpts: {
+          getOnStart: false,
+          getOnOnline: false,
+          },
+          reportOpts: {
+            configureAttributeReporting: {
+              minInterval: 0,
+              maxInterval: 21600,
+              minChange: 1,
             }
-        });
-      }
+          }
+      });
 
       const node = await this.homey.zigbee.getNode(this);
       node.handleFrame = (endpointId, clusterId, frame, meta) => {

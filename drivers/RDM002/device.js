@@ -15,21 +15,22 @@ class TapDialSwitch extends ZigBeeDevice {
   
     this.printNode();
 
-    if (this.hasCapability('measure_battery')) {				
-      this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-          getOpts: {
-          getOnStart: false,
-          getOnOnline: false,
-          },
+    if (!this.hasCapability('measure_battery')) {
+      await this.addCapability('measure_battery');
+    }						
+    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+        getOpts: {
+        getOnStart: false,
+        getOnOnline: false,
+        },
 /*           reportOpts: {
-            configureAttributeReporting: {
-              minInterval: 0,
-              maxInterval: 21600,
-              minChange: 1,
-            }
-          } */
-      });
-    }
+          configureAttributeReporting: {
+            minInterval: 0,
+            maxInterval: 21600,
+            minChange: 1,
+          }
+        } */
+    });
 
     const node = await this.homey.zigbee.getNode(this);
     node.handleFrame = (endpointId, clusterId, frame, meta) => {
