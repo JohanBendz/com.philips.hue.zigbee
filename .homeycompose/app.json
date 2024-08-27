@@ -2,10 +2,12 @@
   "id": "com.philips.hue.zigbee",
   "sdk": 3,
   "name": {
-    "en": "Philips Hue, without the bridge"
+    "en": "Philips Hue, without the bridge",
+    "pl": "Philips Hue, bez mostka"
   },
   "description": {
-    "en": "Smart light — your way."
+    "en": "Smart light — your way.",
+    "pl": "Inteligentne oświetlenie - po twojemu"
   },
   "brandColor": "#035ED8",
   "version": "2.0.53",
@@ -34,6 +36,26 @@
       "Remote",
       "Switch",
       "Dimmer"
+    ],
+    "pl": [
+      "Philips",
+      "Hue",
+      "Signify",
+      "Zigbee",
+      "Czujnik",
+      "Temperatura",
+      "Wilgotność",
+      "Ruch",
+      "PIR",
+      "Gniazdko",
+      "LED",
+      "Światło",
+      "Żarówka",
+      "RGB",
+      "Przycisk",
+      "Pilot",
+      "Przełącznik",
+      "Ściemniacz"
     ]
   },
   "author": {
