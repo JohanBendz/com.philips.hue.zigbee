@@ -73,5 +73,90 @@
     "local"
   ],
   "homeyCommunityTopicId": 29734,
-  "support": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues"
+  "support": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues",
+  "drivers": [
+    {
+      "id": "LWV005",
+      "name": {
+        "en": "Filament Bulb ST64 White"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWV005",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      }
+    },
+    {
+      "id": "LTV001",
+      "name": {
+        "en": "Filament Bulb ST64 White Ambiance"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTV001",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      }
+    }
+  ]
 }

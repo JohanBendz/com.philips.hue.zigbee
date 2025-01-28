@@ -117,8 +117,16 @@ class Light extends ZigBeeLightDevice {
     
     }
 
+    async handleLWV005(args, state) {
+        // Add specific functionalities or configurations for LWV005 model here
+        this.log("Handling LWV005 model");
+    }
+
+    async handleLTV001(args, state) {
+        // Add specific functionalities or configurations for LTV001 model here
+        this.log("Handling LTV001 model");
+    }
+
 }
 
 module.exports = Light;
-
-

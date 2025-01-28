@@ -56,6 +56,17 @@ class PhilipsHueZigbeeApp extends Homey.App {
         }
     }); */
 
+    // Add support for the new models LWV005 and LTV001
+    this.homey.flow.getActionCard('LWV005')
+    .registerRunListener((args, state) => {
+        return args.device.handleLWV005(args, state);
+    });
+
+    this.homey.flow.getActionCard('LTV001')
+    .registerRunListener((args, state) => {
+        return args.device.handleLTV001(args, state);
+    });
+
   }
 }
 

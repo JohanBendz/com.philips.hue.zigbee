@@ -151,5 +151,8 @@
   },
   "2.1.0": {
     "en": "Updated Homey Zigbee modules and added Contact Sensor."
+  },
+  "2.1.1": {
+    "en": "Added support for ST64 Hue white filament Edison (LWV005) and ST64 Hue white Ambiance filament Edison (LTV001) bulbs."
   }
 }
