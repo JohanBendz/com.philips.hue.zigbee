@@ -609,6 +609,12 @@ Added support for:
 - Hue Fluorish Ceiling Light (4090531P9)
 - Milliskin GU10 Recessed Spotlight White Ambiance
 - Filament ST72 E27
+- Hue Lightguide Ellipse
+- Hue Lightguide Globe Small G30
+- Hue Lightguide Globe Large G40
+- Hue Lightguide Triangle
+- Hue Lightguide Edison ST23
+- Hue Lightguide Edison ST72
 
 (List may not be complete, more than 100 devices already supported and counting..)
 
