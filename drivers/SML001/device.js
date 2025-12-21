@@ -8,7 +8,15 @@ const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 Cluster.addCluster(HueSpecificOccupancySensingCluster); */
 
 class MotionSensor extends ZigBeeDevice {
-	
+
+	constructor(...args) {
+		super(...args);
+		// Store bound listener references for cleanup
+		this._boundTemperatureListener = null;
+		this._boundLuminanceListener = null;
+		this._listenersRegistered = false;
+	}
+
 	async onNodeInit({ zclNode }) {
 
     this.printNode();
@@ -39,14 +47,17 @@ class MotionSensor extends ZigBeeDevice {
 					}
 				]);
 
-				zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
-				.on('attr.measuredValue', (currentTempValue) => {
-					const temperatureOffset = this.getSetting('temperature_offset') || 0;
-					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
-					this.log('Temperature: ', temperature, ', Offset: ', temperatureOffset);
-					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-				});
-
+				// Only register listeners if not already registered
+				if (!this._listenersRegistered) {
+					this._boundTemperatureListener = (currentTempValue) => {
+						const temperatureOffset = this.getSetting('temperature_offset') || 0;
+						const temperature = Math.round((currentTempValue / 100) * 10) / 10;
+						this.log('Temperature: ', temperature, ', Offset: ', temperatureOffset);
+						this.setCapabilityValue('measure_temperature', temperature + temperatureOffset).catch(this.error);
+					};
+					zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+					.on('attr.measuredValue', this._boundTemperatureListener);
+				}
 			}
 
 			// measure_luminance
@@ -65,17 +76,20 @@ class MotionSensor extends ZigBeeDevice {
 					},
 				]);
 
-				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
-				.on('attr.measuredValue', (currentLuxValue) => {
-					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
-					this.log('Lux: ', luminance);
-					this.setCapabilityValue('measure_luminance', luminance);
-				});
-
+				// Only register listeners if not already registered
+				if (!this._listenersRegistered) {
+					this._boundLuminanceListener = (currentLuxValue) => {
+						const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
+						this.log('Lux: ', luminance);
+						this.setCapabilityValue('measure_luminance', luminance).catch(this.error);
+					};
+					zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+					.on('attr.measuredValue', this._boundLuminanceListener);
+				}
 			}
 
 			// measure_battery
-			if (this.hasCapability('measure_battery')) {				
+			if (this.hasCapability('measure_battery')) {
 				this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
 					getOpts: {
 					getOnStart: true,
@@ -92,7 +106,7 @@ class MotionSensor extends ZigBeeDevice {
 			}
 
 			// alarm_battery
-			if (this.hasCapability('alarm_battery')) {				
+			if (this.hasCapability('alarm_battery')) {
 				this.batteryThreshold = this.getSetting('batteryThreshold') || 20;
 					this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
 						getOpts: {
@@ -109,35 +123,69 @@ class MotionSensor extends ZigBeeDevice {
 
 			}
 
+			this._listenersRegistered = true;
+			this.log("Event listeners registered (first init)");
+
 		}
 		else {
+			// Reconnect path - only register if not already registered
+			if (!this._listenersRegistered) {
+				// measure_temperature
+				if (this.hasCapability('measure_temperature')) {
+					this._boundTemperatureListener = (currentTempValue) => {
+						const temperatureOffset = this.getSetting('temperature_offset') || 0;
+						const temperature = Math.round((currentTempValue / 100) * 10) / 10;
+						this.log('temp: ', temperature);
+						this.setCapabilityValue('measure_temperature', temperature + temperatureOffset).catch(this.error);
+					};
+					zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+					.on('attr.measuredValue', this._boundTemperatureListener);
+				}
 
-			// measure_temperature
-			if (this.hasCapability('measure_temperature')) {
+				// measure_luminance
+				if (this.hasCapability('measure_luminance')) {
+					this._boundLuminanceListener = (currentLuxValue) => {
+						const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
+						this.log('lux: ', luminance);
+						this.setCapabilityValue('measure_luminance', luminance).catch(this.error);
+					};
+					zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+					.on('attr.measuredValue', this._boundLuminanceListener);
+				}
 
-				zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
-				.on('attr.measuredValue', (currentTempValue) => {
-					const temperatureOffset = this.getSetting('temperature_offset') || 0;
-					const temperature = Math.round((currentTempValue / 100) * 10) / 10;
-					this.log('temp: ', temperature);
-					this.setCapabilityValue('measure_temperature', temperature + temperatureOffset);
-				});
-
+				this._listenersRegistered = true;
+				this.log("Event listeners registered (reconnect)");
 			}
-
-			// measure_luminance
-			if (this.hasCapability('measure_luminance')) {
-
-				zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
-				.on('attr.measuredValue', (currentLuxValue) => {
-					const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
-					this.log('lux: ', luminance);
-					this.setCapabilityValue('measure_luminance', luminance);
-				});
-
-			}
-
 		}
+	}
+
+	async onUninit() {
+		this.log("Cleaning up MotionSensor resources...");
+
+		// Clear motion alarm timeout
+		if (this._motionAlarmTimeout) {
+			clearTimeout(this._motionAlarmTimeout);
+			this._motionAlarmTimeout = null;
+		}
+
+		// Remove event listeners to prevent memory leaks
+		if (this._listenersRegistered && this.zclNode && this.zclNode.endpoints[2]) {
+			try {
+				if (this._boundTemperatureListener && this.hasCapability('measure_temperature')) {
+					this.zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+						.removeListener('attr.measuredValue', this._boundTemperatureListener);
+				}
+				if (this._boundLuminanceListener && this.hasCapability('measure_luminance')) {
+					this.zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+						.removeListener('attr.measuredValue', this._boundLuminanceListener);
+				}
+				this.log("Event listeners removed");
+			} catch (error) {
+				this.error("Error removing event listeners:", error);
+			}
+		}
+
+		this._listenersRegistered = false;
 	}
 
 	/**
@@ -151,7 +199,7 @@ class MotionSensor extends ZigBeeDevice {
 		this.setCapabilityValue('alarm_motion', true)
 		.catch(err => this.error('Error: could not set alarm_motion capability value', err));
 		clearTimeout(this._motionAlarmTimeout);
-		this._motionAlarmTimeout = setTimeout(() => {
+		this._motionAlarmTimeout = this.homey.setTimeout(() => {
 		this.setCapabilityValue('alarm_motion', false)
 			.catch(err => this.error('Error: could not set alarm_motion capability value', err));
 		}, (onTime/3)*alarmResetTime);

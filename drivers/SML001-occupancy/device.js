@@ -13,8 +13,14 @@ class OccupancySensor extends ZigBeeDevice {
   constructor(...args) {
 		super(...args);
 		this.isSuppressed = false;
+		// Store bound listener references for cleanup
+		this._boundOccupancyListener = null;
+		this._boundTemperatureListener = null;
+		this._boundLuminanceListener = null;
+		this._boundBatteryListener = null;
+		this._listenersRegistered = false;
 	}
-	
+
 	async onNodeInit({ zclNode }) {
 
   this.printNode();
@@ -64,32 +70,85 @@ class OccupancySensor extends ZigBeeDevice {
       this.log("Config updated");
 
     }
-    
-    // alarm_motion
-    zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
-    .on('attr.occupancy', this.onOccupancyAttributeReport.bind(this));
 
- 		// measure_temperature
-		zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
-    .on('attr.measuredValue', this.onTemperatureMeasuredAttributeReport.bind(this));
-  
-		// measure_humidity
-		zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
-    .on('attr.measuredValue', this.onLuminanceMeasuredAttributeReport.bind(this));
+    // Only register listeners if not already registered (prevents accumulation on reconnect)
+    if (!this._listenersRegistered) {
+      // Create bound listeners once and store references
+      this._boundOccupancyListener = this.onOccupancyAttributeReport.bind(this);
+      this._boundTemperatureListener = this.onTemperatureMeasuredAttributeReport.bind(this);
+      this._boundLuminanceListener = this.onLuminanceMeasuredAttributeReport.bind(this);
+      this._boundBatteryListener = this.onBatteryPercentageRemainingAttributeReport.bind(this);
 
-		// measure_battery // alarm_battery
-		zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
-    .on('attr.batteryPercentageRemaining', this.onBatteryPercentageRemainingAttributeReport.bind(this));
+      // alarm_motion
+      zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
+      .on('attr.occupancy', this._boundOccupancyListener);
+
+      // measure_temperature
+      zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+      .on('attr.measuredValue', this._boundTemperatureListener);
+
+      // measure_luminance
+      zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+      .on('attr.measuredValue', this._boundLuminanceListener);
+
+      // measure_battery // alarm_battery
+      zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
+      .on('attr.batteryPercentageRemaining', this._boundBatteryListener);
+
+      this._listenersRegistered = true;
+      this.log("Event listeners registered");
+    }
 
     const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes(['batteryPercentageRemaining']);
     const batteryThreshold = this.getSetting('batteryThreshold') || 20;
     this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
-    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
-    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
-    
+    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2).catch(this.error);
+    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error);
+
   }
-  
+
+  async onUninit() {
+    this.log("Cleaning up OccupancySensor resources...");
+
+    // Clear suppress timeout
+    if (this.suppressTimeout) {
+      this.homey.clearTimeout(this.suppressTimeout);
+      this.suppressTimeout = null;
+    }
+
+    // Remove event listeners to prevent memory leaks
+    if (this._listenersRegistered && this.zclNode && this.zclNode.endpoints[2]) {
+      try {
+        if (this._boundOccupancyListener) {
+          this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
+            .removeListener('attr.occupancy', this._boundOccupancyListener);
+        }
+        if (this._boundTemperatureListener) {
+          this.zclNode.endpoints[2].clusters[CLUSTER.TEMPERATURE_MEASUREMENT.NAME]
+            .removeListener('attr.measuredValue', this._boundTemperatureListener);
+        }
+        if (this._boundLuminanceListener) {
+          this.zclNode.endpoints[2].clusters[CLUSTER.ILLUMINANCE_MEASUREMENT.NAME]
+            .removeListener('attr.measuredValue', this._boundLuminanceListener);
+        }
+        if (this._boundBatteryListener) {
+          this.zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME]
+            .removeListener('attr.batteryPercentageRemaining', this._boundBatteryListener);
+        }
+        this.log("Event listeners removed");
+      } catch (error) {
+        this.error("Error removing event listeners:", error);
+      }
+    }
+
+    this._listenersRegistered = false;
+  }
+
   suppressSensor(args, state) {
+    // Clear existing timeout before setting a new one
+    if (this.suppressTimeout) {
+      this.homey.clearTimeout(this.suppressTimeout);
+    }
     this.isSuppressed = true;
     this.suppressTimeout = this.homey.setTimeout(() => {
       this.isSuppressed = false;
