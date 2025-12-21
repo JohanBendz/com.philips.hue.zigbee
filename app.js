@@ -56,6 +56,13 @@ class PhilipsHueZigbeeApp extends Homey.App {
         }
     }); */
 
+    this.log("Philips Hue Zigbee app initialized successfully");
+  }
+
+  async onUninit() {
+    this.log("Philips Hue Zigbee app shutting down...");
+    // Flow action cards are automatically cleaned up by the Homey SDK
+    // This method ensures proper lifecycle management
   }
 }
 
