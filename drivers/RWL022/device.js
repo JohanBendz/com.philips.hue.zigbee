@@ -1,7 +1,7 @@
 'use strict';
 
-const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
+const {ZigBeeDevice} = require('homey-zigbeedriver');
+const {debug, Cluster, CLUSTER} = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
 // debug(true);
@@ -9,62 +9,61 @@ Cluster.addCluster(HueSpecificBasicCluster);
 
 class DimmerSwitchGen3 extends ZigBeeDevice {
 
-async onNodeInit({ zclNode }) {
-  
-  this.printNode();
-
-    if (!this.hasCapability('measure_battery')) {
-      await this.addCapability('measure_battery');
-    }
-    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-      getOpts: {
-        getOnStart: false,
-        getOnOnline: false,
-      }/* ,
-      reportOpts: {
-        configureAttributeReporting: {
-          minInterval: 0,
-          maxInterval: 21600,
-          minChange: 1,
+    async onNodeInit({zclNode}) {
+        this.printNode();
+        if (!this.hasCapability('measure_battery')) {
+            await this.addCapability('measure_battery');
         }
-      } */
-    });
+        this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+            getOpts: {
+                getOnStart: false,
+                getOnOnline: false,
+            }
+            /*
+            reportOpts: {
+                configureAttributeReporting: {
+                    minInterval: 0,
+                    maxInterval: 21600,
+                    minChange: 1,
+                }
+            }
+            */
+        });
 
-  	const node = await this.homey.zigbee.getNode(this);
-		node.handleFrame = (endpointId, clusterId, frame, meta) => {
-    this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
-      if  ( clusterId === 64512 ) {
-        this._buttonCommandParser(frame);
-      } 
-      if ( clusterId === 1 ) {
-        this._powerParser(frame);
-      }
-    };
+        const node = await this.homey.zigbee.getNode(this);
+        node.handleFrame = (endpointId, clusterId, frame, meta) => {
+            this.log("endpointId: ", endpointId, ", clusterId: ", clusterId, ", frame: ", frame, ", meta: ", meta);
+            if (clusterId === 64512) {
+                this._buttonCommandParser(frame);
+            }
+            if (clusterId === 1) {
+                this._powerParser(frame);
+            }
+        };
 
-    this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RWL022_buttons')
-    .registerRunListener(async (args, state) => {
-      return (null, args.action === state.action);
-    });
-
-  }
-
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x01 ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 ) &&
-         ( frame.readUInt8(5) == 0x20 )) {
-      const percentage = frame.readUInt8(7) / 2;
-      this.setCapabilityValue('measure_battery', percentage);
+        this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RWL022_buttons')
+            .registerRunListener(async (args, state) => {
+                return (null, args.action === state.action);
+            });
     }
-  }
 
-  _buttonCommandParser(payload) {
-    var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';
-    var action = payload[9] === 0 ? 'ShortPress' : payload[9] === 1 ? 'LongPress' : payload[9] === 2 ? 'ShortRelease' : 'LongRelease';
-    return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
-      .then(() => this.log(`triggered RWL022_buttons, action=${button}-${action}`))
-      .catch(err => this.error('Error triggering RWL022_buttons', err));
-  }
+    _powerParser(frame) {
+        if ((frame.readUInt8(2) == 0x01) &&
+            (frame.readUInt8(3) == 0x21) &&
+            (frame.readUInt8(4) == 0x00) &&
+            (frame.readUInt8(5) == 0x20)) {
+            const percentage = frame.readUInt8(7) / 2;
+            this.setCapabilityValue('measure_battery', percentage);
+        }
+    }
+
+    _buttonCommandParser(payload) {
+        var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';
+        var action = payload[9] === 0 ? 'ShortPress' : payload[9] === 1 ? 'LongPress' : payload[9] === 2 ? 'ShortRelease' : 'LongRelease';
+        return this._switchTriggerDevice.trigger(this, {}, {action: `${button}-${action}`})
+            .then(() => this.log(`triggered RWL022_buttons, action=${button}-${action}`))
+            .catch(err => this.error('Error triggering RWL022_buttons', err));
+    }
 
 }
 
@@ -380,22 +379,22 @@ module.exports = DimmerSwitchGen3;
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 f4 00 02 00 00 30 00 21 00 00>
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 f6 00 02 00 00 30 02 21 01 00>
 // Second push = same
-// Hold = 
-// - 
-// Release = 
+// Hold =
+// -
+// Release =
 // Multiple push not supported
 //
 // Dim down button
-// Push = 
-// Hold = 
-// Release = 
+// Push =
+// Hold =
+// Release =
 // Multiple push not supported
 //
 // hue button
-// Push = 
+// Push =
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 64 00 04 00 00 30 00 21 00 00>
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 65 00 04 00 00 30 02 21 01 00>
-// Hold = 
+// Hold =
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 9e 00 04 00 00 30 00 21 00 00>
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 9f 00 04 00 00 30 01 21 08 00>
 // - clusterId: 64512 , frame: <Buffer 1d 0b 10 a0 00 04 00 00 30 01 21 10 00>
