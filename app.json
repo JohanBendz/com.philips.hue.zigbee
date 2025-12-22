@@ -20059,11 +20059,6 @@
         ],
         "productId": "SOC001",
         "endpoints": {
-          "1": {
-            "bindings": [
-              6
-            ]
-          },
           "2": {
             "clusters": [
               0,
@@ -20073,7 +20068,10 @@
               25,
               6
             ],
-            "bindings": []
+            "bindings": [
+              1,
+              6
+            ]
           }
         },
         "learnmode": {
