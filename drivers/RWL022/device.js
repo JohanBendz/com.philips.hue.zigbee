@@ -11,24 +11,6 @@ class DimmerSwitchGen3 extends ZigBeeDevice {
 
     async onNodeInit({zclNode}) {
         this.printNode();
-        if (!this.hasCapability('measure_battery')) {
-            await this.addCapability('measure_battery');
-        }
-        this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-            getOpts: {
-                getOnStart: false,
-                getOnOnline: false,
-            }
-            /*
-            reportOpts: {
-                configureAttributeReporting: {
-                    minInterval: 0,
-                    maxInterval: 21600,
-                    minChange: 1,
-                }
-            }
-            */
-        });
 
         const node = await this.homey.zigbee.getNode(this);
         node.handleFrame = (endpointId, clusterId, frame, meta) => {
@@ -48,11 +30,12 @@ class DimmerSwitchGen3 extends ZigBeeDevice {
     }
 
     _powerParser(frame) {
-        if ((frame.readUInt8(2) == 0x01) &&
-            (frame.readUInt8(3) == 0x21) &&
-            (frame.readUInt8(4) == 0x00) &&
-            (frame.readUInt8(5) == 0x20)) {
-            const percentage = frame.readUInt8(7) / 2;
+        if ((frame.readUInt8(2) == 0x0a)
+            && (frame.readUInt8(3) == 0x21) // 33 - "batteryPercentageRemaining"
+            && (frame.readUInt8(4) == 0x00)
+        ) {
+            const percentage = frame.readUInt8(6) / 2;
+            this.log("battery percentage remaining: ", percentage);
             this.setCapabilityValue('measure_battery', percentage);
         }
     }
