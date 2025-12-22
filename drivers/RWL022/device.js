@@ -48,13 +48,14 @@ async onNodeInit({ zclNode }) {
 
   }
 
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x01 ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 ) &&
-         ( frame.readUInt8(5) == 0x20 )) {
-      const percentage = frame.readUInt8(7) / 2;
-      this.setCapabilityValue('measure_battery', percentage);
+  _powerParser(frame) {
+    if (( frame.readUInt8(2) == 0x0a ) &&
+        ( frame.readUInt8(3) == 0x21 ) && // 33 - "batteryPercentageRemaining"
+        ( frame.readUInt8(4) == 0x00 )
+    ) {
+        const percentage = frame.readUInt8(6) / 2;
+        this.log("battery percentage: ", percentage);
+        this.setCapabilityValue('measure_battery', percentage);
     }
   }
 
