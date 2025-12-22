@@ -12,53 +12,31 @@ Cluster.addCluster(HueSpecificBasicBoundCluster);
 class TapDialSwitch extends ZigBeeDevice {
 
   async onNodeInit({ zclNode }) {
-  
     this.printNode();
-
-    if (!this.hasCapability('measure_battery')) {
-      await this.addCapability('measure_battery');
-    }						
-    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-        getOpts: {
-        getOnStart: false,
-        getOnOnline: false,
-        },
-/*           reportOpts: {
-          configureAttributeReporting: {
-            minInterval: 0,
-            maxInterval: 21600,
-            minChange: 1,
-          }
-        } */
-    });
 
     const node = await this.homey.zigbee.getNode(this);
     node.handleFrame = (endpointId, clusterId, frame, meta) => {
       this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
       if  ( clusterId === 64512 ) {
         this._buttonCommandParser(frame);
-      } 
-      if ( clusterId === 1 ) {
-        this._powerParser(frame);
+      }
+      if ((endpointId === 1)
+          && (clusterId === 1) // cluster 1 - powerConfiguration
+          && (frame.readUInt8(3) === 0x21) // attribute 33 - batteryPercentageRemaining
+      ) {
+          // Example frame: Buffer 18 01 01 21 00 00 20 c8
+          const percentage = frame.readUInt8(6) / 2; // translate incoming values 0..200 to 0..100 percent
+          this.log("battery percentage remaining: ", percentage);
+          this.setCapabilityValue('measure_battery', percentage);
       }
     };
-      
+
     this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RDM002_buttons')
     .registerRunListener(async (args, state) => {
       return (null, args.action === state.action);
     });
-  
   }
 
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x0a ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 )) {
-      const percentage = frame.readUInt8(5);
-      this.setCapabilityValue('measure_battery', percentage);
-    }
-  }
-  
   _buttonCommandParser(frame) {
     if (frame.length < 7) {
         this.log(`Received frame with length ${frame.length}, expected at least 7.`);
@@ -113,7 +91,7 @@ class TapDialSwitch extends ZigBeeDevice {
     }
 
   }
-  
+
 }
 
 module.exports = TapDialSwitch;
