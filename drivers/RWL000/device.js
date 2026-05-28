@@ -10,7 +10,7 @@ class DimmerSwitch extends ZigBeeDevice {
 async onNodeInit({ zclNode }) {
 
   this.printNode();
-    
+
     // Buttons
     zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
       onSetOn: this._onCommandParser.bind(this),
@@ -32,19 +32,38 @@ async onNodeInit({ zclNode }) {
         return (null, args.action === state.action);
       });
 
+    if (!this.hasCapability('measure_battery')) {
+      await this.addCapability('measure_battery');
+    }
+    this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+      getOpts: {
+        getOnStart: true,
+        getOnOnline: true,
+      },
+      reportOpts: {
+        configureAttributeReporting: {
+          minInterval: 0,
+          maxInterval: 60000,
+          minChange: 1,
+        },
+      },
+      endpoint: 2,
+    });
+
 		// alarm_battery
-		if (this.hasCapability('alarm_battery')) {				
+		if (this.hasCapability('alarm_battery')) {
       this.batteryThreshold = 20;
 			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
 				getOpts: {
 				},
 				reportOpts: {
 					configureAttributeReporting: {
-						minInterval: 0, // No minimum reporting interval
-						maxInterval: 60000, // Maximally every ~16 hours
-						minChange: 10, // Report when value changed by 10
+						minInterval: 0,
+						maxInterval: 60000,
+						minChange: 10,
 					},
 				},
+        endpoint: 2,
       });
 		}
 
