@@ -1,11 +1,11 @@
 {
   "name": {
-    "en": "Filament Bulb Candle E14"
+    "en": "Filament Bulb Candle E14 White Ambiance"
   },
-  "$extends": ["light_white"],
+  "$extends": ["light_white_ambiance"],
   "energy": {
     "approximation": {
-      "usageOn": 4.5,
+      "usageOn": 4.6,
       "usageOff": 0.5
     }
   },
@@ -15,7 +15,7 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LWE004"
+      "LTE005"
     ],
     "endpoints": {
       "11": {
@@ -24,7 +24,8 @@
           3,
           4,
           6,
-          8
+          8,
+          768
         ]
       }
     },
