@@ -1,0 +1,44 @@
+{
+  "id": "ROM002",
+  "name": {
+    "en": "Hue Wall Switch Module - Wired"
+  },
+  "class": "remote",
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "capabilities": [],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "ROM002"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [ 0, 3, 64512, 4096, 64516 ],
+        "bindings": [ 0, 1, 64512 ]
+      }
+    },
+    "devices": {
+      "secondInput": {
+        "class": "remote",
+        "capabilities": [],
+        "name": { "en": "Hue Wall Switch Module - Wired, Second Input" },
+        "settings": []
+      }
+    },
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/icon.svg",
+      "instruction": {
+        "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
+      }
+    }
+  }
+}

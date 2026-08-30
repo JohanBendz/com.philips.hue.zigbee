@@ -1,0 +1,41 @@
+[
+  {
+    "id": "mode",
+    "type": "dropdown",
+    "value": "dualpushbutton",
+    "label": {
+      "en": "Default mode",
+      "nl": "Standaardmodus"
+    },
+    "values": [
+      {
+        "id": "singlerocker",
+        "label": {
+          "en": "Single Rocker",
+          "nl": "Enkele wip"
+        }
+      },
+      {
+        "id": "singlepushbutton",
+        "label": {
+          "en": "Single pushbutton",
+          "nl": "Enkele drukknop"
+        }
+      },
+      {
+        "id": "dualrocker",
+        "label": {
+          "en": "Dual Rocker",
+          "nl": "Dubbele wip"
+        }
+      },
+      {
+        "id": "dualpushbutton",
+        "label": {
+          "en": "Dual pushbutton",
+          "nl": "Dubbele drukknop"
+        }
+      }
+    ]
+  }
+]
