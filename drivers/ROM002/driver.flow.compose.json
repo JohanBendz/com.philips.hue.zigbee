@@ -1,0 +1,51 @@
+{
+  "triggers": [
+    {
+      "id": "ROM002_button",
+      "title": {
+        "en": "Button Action",
+        "nl": "Knopactie"
+      },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "nl": "Knop [[action]]"
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            {
+              "id": "Press",
+              "label": {
+                "en": "pressed",
+                "nl": "drukken"
+              }
+            },
+            {
+              "id": "Release",
+              "label": {
+                "en": "released",
+                "nl": "loslaten"
+              }
+            },
+            {
+              "id": "Hold",
+              "label": {
+                "en": "hold",
+                "nl": "vasthouden"
+              }
+            },
+            {
+              "id": "LongPress",
+              "label": {
+                "en": "long press",
+                "nl": "lang indrukken"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
