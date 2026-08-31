@@ -18,6 +18,16 @@ Cluster.addCluster(HueSpecificIdentifyCluster);
 const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
 Cluster.addCluster(HueSpecificIdentifyBoundCluster);
 
+// Level control move: rate is in brightness steps per second, on the 1-254 Zigbee scale
+const DEFAULT_DIM_RATE = 50;
+const MAX_DIM_RATE = 254;
+// Zigbee brightness scale, mapped onto Homey's 0-1 dim capability
+const MAX_LEVEL = 254;
+// Longest a move can realistically run (254 steps at rate 1) before we forget about it
+const DIM_MOVE_MAX_DURATION = 255000;
+// Give the light a moment to settle before reading back the level it stopped at
+const LEVEL_READBACK_DELAY = 500;
+
 /* // Dynamic Scenes need these
 const HueSpecificCluster = require('../lib/HueSpecificCluster');
 Cluster.addCluster(HueSpecificCluster); */
@@ -54,6 +64,59 @@ class Light extends ZigBeeLightDevice {
             effectId: blinktype,
             effectVariant: 0
         });
+    }
+
+    // Start a continuous dim with the LevelControl move command. The light keeps moving
+    // on its own until it is stopped or reaches its end stop, so a hold-and-release only
+    // costs two Zigbee commands instead of a stream of dim steps.
+    async startDim(args) {
+        const moveMode = args.direction === 'down' ? 'down' : 'up';
+        const rate = Math.min(MAX_DIM_RATE, Math.max(1, Math.round(Number(args.rate) || DEFAULT_DIM_RATE)));
+
+        // Hue switches repeat their hold event several times per second. Re-sending the
+        // same move would only restart it, so ignore it while this move is still running.
+        if (this._dimMoveMode === moveMode) return;
+
+        this._clearDimMove();
+        this._dimMoveMode = moveMode;
+        // A release can get lost; do not let that block the next move forever.
+        this._dimMoveTimeout = this.homey.setTimeout(() => this._clearDimMove(), DIM_MOVE_MAX_DURATION);
+
+        this.log(`startDim, moveMode=${moveMode} rate=${rate}`);
+        await this.levelControlCluster.moveWithOnOff({ moveMode, rate });
+    }
+
+    async stopDim() {
+        this._clearDimMove();
+        this.log('stopDim');
+        await this.levelControlCluster.stopWithOnOff();
+        await this._syncLevel();
+    }
+
+    _clearDimMove() {
+        if (this._dimMoveTimeout) {
+            this.homey.clearTimeout(this._dimMoveTimeout);
+            this._dimMoveTimeout = null;
+        }
+        this._dimMoveMode = null;
+    }
+
+    // The light picked its own brightness during the move, so read back where it ended up.
+    async _syncLevel() {
+        try {
+            await this.sleep(LEVEL_READBACK_DELAY);
+            const { currentLevel } = await this.levelControlCluster.readAttributes(['currentLevel']);
+            if (typeof currentLevel !== 'number') return;
+
+            await this.setCapabilityValue('dim', Math.min(1, Math.max(0, currentLevel / MAX_LEVEL)));
+
+            if (this.hasCapability('onoff')) {
+                const { onOff } = await this.onOffCluster.readAttributes(['onOff']).catch(() => ({}));
+                await this.setCapabilityValue('onoff', typeof onOff === 'boolean' ? onOff : currentLevel > 0);
+            }
+        } catch (error) {
+            this.error('Error reading back level after dim move', error);
+        }
     }
 
 /*     async setDynamicScenes(sceneValue) {

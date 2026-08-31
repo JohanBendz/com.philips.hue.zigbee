@@ -1,0 +1,28 @@
+{
+  "id": "stop_dim",
+  "title": {
+    "en": "Stop dimming",
+    "sv": "Stoppa dimning",
+    "nl": "Stop dimmen",
+    "de": "Dimmen stoppen"
+  },
+  "titleFormatted": {
+    "en": "Stop dimming [[device]]",
+    "sv": "Stoppa dimning av [[device]]",
+    "nl": "Stop dimmen van [[device]]",
+    "de": "Dimmen von [[device]] stoppen"
+  },
+  "hint": {
+    "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
+    "sv": "Skickar Zigbee-kommandot 'stop' för att avsluta en dimning som startats med 'Starta dimning', och läser tillbaka ljusstyrkan som lampan hamnade på.",
+    "nl": "Stuurt het Zigbee 'stop'-commando om een dimbeweging van 'Start dimmen' te beëindigen, en leest terug op welke helderheid de lamp is uitgekomen.",
+    "de": "Sendet den Zigbee-Befehl 'stop', um ein mit 'Dimmen starten' begonnenes Dimmen zu beenden, und liest die erreichte Helligkeit zurück."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=dim"
+    }
+  ]
+}
