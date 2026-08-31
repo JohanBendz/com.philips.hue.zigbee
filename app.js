@@ -31,6 +31,25 @@ class PhilipsHueZigbeeApp extends Homey.App {
         }
     });
 
+    // Register listeners for the continuous dim actions. These map onto the Zigbee
+    // LevelControl move/stop commands, so a switch only has to fire twice per hold
+    // instead of repeating a dim step for as long as the button is held.
+    this.homey.flow.getActionCard('start_dim')
+    .registerRunListener(async (args, state) => {
+        if (typeof args.device.startDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.startDim(args);
+    });
+
+    this.homey.flow.getActionCard('stop_dim')
+    .registerRunListener(async (args, state) => {
+        if (typeof args.device.stopDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.stopDim();
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
