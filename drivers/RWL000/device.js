@@ -48,6 +48,22 @@ async onNodeInit({ zclNode }) {
       });
 		}
 
+    if (this.hasCapability('measure_battery')) {
+      this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+        getOpts: {
+          getOnStart: false,
+          getOnOnline: false,
+        },
+        reportOpts: {
+          configureAttributeReporting: {
+            minInterval: 0,
+            maxInterval: 21600,
+            minChange: 1,
+          }
+        }
+      });
+    }
+
   }
 
   _onCommandParser() {

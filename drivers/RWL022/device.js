@@ -31,7 +31,12 @@ async onNodeInit({ zclNode }) {
     });
 
   	const node = await this.homey.zigbee.getNode(this);
+    	this._previousHandleFrame = node.handleFrame;
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
+      // Preserve and call previous handler to avoid suppressing other frame processing
+      if (typeof this._previousHandleFrame === 'function') {
+        this._previousHandleFrame(endpointId, clusterId, frame, meta);
+      }
     this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
       if  ( clusterId === 64512 ) {
         this._buttonCommandParser(frame);
@@ -48,17 +53,26 @@ async onNodeInit({ zclNode }) {
 
   }
 
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x01 ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 ) &&
-         ( frame.readUInt8(5) == 0x20 )) {
-      const percentage = frame.readUInt8(7) / 2;
-      this.setCapabilityValue('measure_battery', percentage);
+  _powerParser(frame) {
+    // Guard against buffer overruns before reading frame bytes
+    if (!Buffer.isBuffer(frame) || frame.length < 7) {
+      return;
+    }
+    if (( frame.readUInt8(2) == 0x0a ) &&
+        ( frame.readUInt8(3) == 0x21 ) && // 33 - "batteryPercentageRemaining"
+        ( frame.readUInt8(4) == 0x00 )
+    ) {
+        const percentage = frame.readUInt8(6) / 2;
+        this.log("battery percentage: ", percentage);
+        this.setCapabilityValue('measure_battery', percentage);
     }
   }
 
   _buttonCommandParser(payload) {
+    // Guard against buffer overruns before reading frame bytes
+    if (!Buffer.isBuffer(payload) || payload.length < 10) {
+      return;
+    }
     var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';
     var action = payload[9] === 0 ? 'ShortPress' : payload[9] === 1 ? 'LongPress' : payload[9] === 2 ? 'ShortRelease' : 'LongRelease';
     return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })

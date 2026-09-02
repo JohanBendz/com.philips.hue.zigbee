@@ -1,0 +1,47 @@
+{
+  "name": {
+    "en": "Hue Dymera",
+    "de": "Hue Dymera"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature"
+  ],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zigbee": {
+    "manufacturerName": "Signify Netherlands B.V.",
+    "modelId": "929003665001",
+    "productId": "929003665001",
+    "endpoints": {
+      "11": {
+        "clusters": [0, 3, 4, 5, 6, 8, 768, 4096]
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "instructions",
+      "navigation": {},
+      "template": "instructions",
+      "options": {
+        "title": {
+          "en": "How to pair your Hue Dymera",
+          "de": "Hue Dymera verbinden"
+        },
+        "body": {
+          "en": "1. Make sure the lamp is powered on.\n2. Put the lamp into pairing mode (usually by resetting it via a Hue dimmer switch or turning power off/on 5 times).\n3. Homey will automatically discover the device.",
+          "de": "1. Stelle sicher, dass die Lampe mit Strom versorgt wird.\n2. Versetze die Lampe in den Kopplungsmodus (z. B. durch einen Reset per Hue Dimmschalter oder 5-maliges Ein- und Ausschalten des Stroms).\n3. Homey erkennt das Gerät automatisch."
+        }
+      }
+    }
+  ]
+}
+

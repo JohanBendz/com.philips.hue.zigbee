@@ -10,11 +10,23 @@
     "args": [
       {
         "name": "device",
+        "title": {  
+          "en": "Device",
+          "sv": "Enhet",
+          "nl": "Apparaat",
+          "de": "Gerät"
+        },
         "type": "device",
         "filter": "class=sensor"
       },
       {
         "name": "luminance",
+        "title": {
+          "en": "Luminance",
+          "sv": "Ljusstyrka",
+          "nl": "Lichtsterkte",
+          "de": "Helligkeit"
+        },
         "type": "number"
       }
     ]

@@ -2,13 +2,21 @@
   "name": {
     "en": "GU10 White BT"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 6.5,
       "usageOff": 0.2
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

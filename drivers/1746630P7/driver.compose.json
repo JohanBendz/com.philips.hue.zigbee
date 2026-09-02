@@ -2,13 +2,21 @@
   "name": {
     "en": "Amarant Linear Outdoor Light"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 20,
       "usageOff": 1
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

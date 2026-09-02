@@ -2,13 +2,21 @@
   "name": {
     "en": "Lucca Outdoor Pedestal"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9.5,
       "usageOff": 1
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

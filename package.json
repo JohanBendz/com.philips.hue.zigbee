@@ -1,24 +1,19 @@
 {
   "name": "com.philips.hue.zigbee",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Get control of your Philips Hue RGBW and Tunable White bulbs with Homey! No need for the Philips Hue Bridge.",
   "main": "app.js",
   "dependencies": {
-    "color-space": "^1.16.0",
-    "cookie": "^0.3.1",
-    "homey-log": "git+https://github.com/athombv/node-homey-log.git",
-    "homey-zigbeedriver": "^2.1.4",
-    "hsluv": "0.0.3",
-    "json-stringify-safe": "^5.0.1",
-    "lsmod": "^1.0.0",
-    "stack-trace": "0.0.10",
-    "uuid": "^3.3.2",
-    "zigbee-clusters": "^2.4.1"
+    "homey-zigbeedriver": "^2.2.17",
+    "zigbee-clusters": "^3.6.0"
   },
   "devDependencies": {},
   "scripts": {
-    "run": "homeyConfig compose && athom project --run",
+    "run": "homey app run",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "repository": {
     "type": "git",

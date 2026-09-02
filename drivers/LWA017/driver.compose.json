@@ -2,13 +2,21 @@
   "name": {
     "en": "Bulb 1100 Lumen White"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9.5,
       "usageOff": 0.43
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

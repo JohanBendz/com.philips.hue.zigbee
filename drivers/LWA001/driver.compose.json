@@ -2,13 +2,21 @@
   "name": {
     "en": "Bulb 9W A60 E27 EUR White"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9,
       "usageOff": 0.2
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

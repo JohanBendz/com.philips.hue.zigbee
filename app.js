@@ -5,7 +5,7 @@ const Homey = require("homey");
 // Enable zigbee-cluster logging
 const { debug } = require('zigbee-clusters');
 
-// debug(true);
+debug(true);
 
 class PhilipsHueZigbeeApp extends Homey.App {
   onInit() {
@@ -29,6 +29,22 @@ class PhilipsHueZigbeeApp extends Homey.App {
         } else {
             throw new Error('Device does not support alerts');
         }
+    });
+
+    this.homey.flow.getActionCard('start_dim')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.startDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.startDim(args);
+    });
+
+    this.homey.flow.getActionCard('stop_dim')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.stopDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.stopDim();
     });
 
     this.homey.flow.getActionCard('suppress_sensor')

@@ -15,6 +15,12 @@
   "args": [
     {
       "type": "device",
+      "title": {
+        "en": "Device",
+        "sv": "Enhet",
+        "nl": "Apparaat",
+        "de": "Gerät"
+      },
       "name": "device",
       "filter": "class=light"
     },

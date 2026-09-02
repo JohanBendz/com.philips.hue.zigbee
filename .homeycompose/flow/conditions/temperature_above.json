@@ -10,11 +10,23 @@
     "args": [
       {
         "name": "device",
+        "title": {
+          "en": "Device",
+          "sv": "Enhet",
+          "nl": "Apparaat",
+          "de": "Gerät"
+        },
         "type": "device",
         "filter": "class=sensor"
       },
       {
         "name": "temperature",
+        "title": {
+          "en": "Temperature",
+          "sv": "Temperatur",
+          "nl": "Temperatuur",
+          "de": "Temperatur"
+        },
         "type": "number"
       }
     ]

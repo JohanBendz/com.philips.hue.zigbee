@@ -37,7 +37,12 @@ class DualWallSwitch extends ZigBeeDevice {
       });
 
       const node = await this.homey.zigbee.getNode(this);
+      this._previousHandleFrame = node.handleFrame;
       node.handleFrame = (endpointId, clusterId, frame, meta) => {
+        // Preserve and call previous handler to avoid suppressing other frame processing
+        if (typeof this._previousHandleFrame === 'function') {
+          this._previousHandleFrame(endpointId, clusterId, frame, meta);
+        }
         this._setmode();
         // this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ",\n meta: ", meta);
         if  ( clusterId === 64512 ) {
@@ -106,6 +111,10 @@ class DualWallSwitch extends ZigBeeDevice {
   }
   
   _powerParser(frame){
+    // Guard against buffer overruns before reading frame bytes
+    if (!Buffer.isBuffer(frame) || frame.length < 6) {
+      return;
+    }
     if ( ( frame.readUInt8(2) == 0x0a ) &&
          ( frame.readUInt8(3) == 0x21 ) &&
          ( frame.readUInt8(4) == 0x00 )) {

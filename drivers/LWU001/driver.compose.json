@@ -2,13 +2,21 @@
   "name": {
     "en": "Bulb E14 P45 White"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 5.7,
       "usageOff": 0.5
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

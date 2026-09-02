@@ -2,13 +2,21 @@
   "name": {
     "en": "Wellner"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
-      "usageOn": 6.0,
+      "usageOn": 6,
       "usageOff": 0.2
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

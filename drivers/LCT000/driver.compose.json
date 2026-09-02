@@ -2,13 +2,21 @@
   "name": {
     "en": "Bulb A19"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9,
       "usageOff": 0.5
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

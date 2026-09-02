@@ -12,7 +12,12 @@
       "args": [
         {
           "name": "action",
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          },
           "type": "dropdown",
+          
           "values": [
             {
               "id": "pressed",

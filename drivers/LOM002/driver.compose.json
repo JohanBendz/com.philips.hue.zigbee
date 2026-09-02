@@ -10,6 +10,12 @@
     "large": "{{driverAssetsPath}}/images/large.png",
     "small": "{{driverAssetsPath}}/images/small.png"
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

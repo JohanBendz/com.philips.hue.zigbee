@@ -2,13 +2,21 @@
   "name": {
     "en": "Garnea Downlight"
   },
-  "$extends": ["light_white_temperature"],
+  "$extends": [
+    "light_white_temperature"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 7,
       "usageOff": 1
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

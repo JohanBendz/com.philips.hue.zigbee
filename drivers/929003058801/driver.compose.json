@@ -1,0 +1,45 @@
+{
+  "name": {
+    "en": "Lightguide Ellipse"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": {
+      "usageOn": 6.5,
+      "usageOff": 0.2
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "929003058801",
+      "LCZ001"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+      }
+    }
+  }
+}

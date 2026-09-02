@@ -28,6 +28,12 @@
     "name": "duration",
     "type": "number",
     "placeholder": "30",
+    "title": {
+        "en": "Duration",
+        "sv": "Varaktighet",
+        "nl": "Duur",
+        "de": "Dauer"
+    },
     "label": {
         "en": "time in seconds",
         "sv": "tid i sekunder",

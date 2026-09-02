@@ -2,13 +2,21 @@
   "name": {
     "en": "Phoenix Table"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 12,
       "usageOff": 0.5
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",

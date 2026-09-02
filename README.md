@@ -6,24 +6,19 @@ Philips Hue support without Bridge for Homey
 
 ### v.2.1.0
 Updated NPM Modules Homey-Zigbeedriver and Zigbee-Clusters
-
 Added support for:
-
 - Contact Sensor
 
 ### v.2.0.54
 Added support for:
-
 - Akari Downlight
 
 ### v.2.0.53
 Added support for:
-
 - Fugato 4-Spotlight
 
 ### v.2.0.52
 Added support for:
-
 - Tuar Outdoor Wall Light
 - Econic Outdoor Pedestal Light
 - Adore Bathroom mirror
@@ -36,14 +31,12 @@ Added support for:
 - New version of Filament Bulb Candle E14
 
 Added features:
-
 - Suppression functionality to Occupancy Sensors
 - Added Condition flowcard: Luminance is above / below
 - Added Condition flowcard: Temperature is above / below
 
 ### v.2.0.51
 Fix:
-
 - Adds measure_battery capability if missing / RDM001 & RDM002
 
 ### v.2.0.50
@@ -609,6 +602,12 @@ Added support for:
 - Hue Fluorish Ceiling Light (4090531P9)
 - Milliskin GU10 Recessed Spotlight White Ambiance
 - Filament ST72 E27
+- Hue Lightguide Ellipse
+- Hue Lightguide Globe Small G30
+- Hue Lightguide Globe Large G40
+- Hue Lightguide Triangle
+- Hue Lightguide Edison ST23
+- Hue Lightguide Edison ST72
 
 (List may not be complete, more than 100 devices already supported and counting..)
 

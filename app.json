@@ -9,7 +9,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"
@@ -57,6 +57,10 @@
       {
         "name": "Sebastian Johansson",
         "email": "sebastian.johansson@hibbisoft.com"
+      },
+      {
+        "name": "Robert Raaijmakers",
+        "email": "dutchfighter@live.nl"
       }
     ]
   },
@@ -89,11 +93,23 @@
         "args": [
           {
             "name": "device",
+            "title": {
+              "en": "Device",
+              "sv": "Enhet",
+              "nl": "Apparaat",
+              "de": "Gerät"
+            },
             "type": "device",
             "filter": "class=sensor"
           },
           {
             "name": "luminance",
+            "title": {
+              "en": "Luminance",
+              "sv": "Ljusstyrka",
+              "nl": "Lichtsterkte",
+              "de": "Helligkeit"
+            },
             "type": "number"
           }
         ]
@@ -110,11 +126,23 @@
         "args": [
           {
             "name": "device",
+            "title": {
+              "en": "Device",
+              "sv": "Enhet",
+              "nl": "Apparaat",
+              "de": "Gerät"
+            },
             "type": "device",
             "filter": "class=sensor"
           },
           {
             "name": "temperature",
+            "title": {
+              "en": "Temperature",
+              "sv": "Temperatur",
+              "nl": "Temperatuur",
+              "de": "Temperatur"
+            },
             "type": "number"
           }
         ]
@@ -238,6 +266,12 @@
         "args": [
           {
             "type": "device",
+            "title": {
+              "en": "Device",
+              "sv": "Enhet",
+              "nl": "Apparaat",
+              "de": "Gerät"
+            },
             "name": "device",
             "filter": "class=light"
           },
@@ -293,6 +327,111 @@
         ]
       },
       {
+        "id": "start_dim",
+        "title": {
+          "en": "Start dimming",
+          "sv": "Starta dimning",
+          "nl": "Start dimmen",
+          "de": "Dimmen starten"
+        },
+        "titleFormatted": {
+          "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
+          "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
+          "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
+          "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+        },
+        "hint": {
+          "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
+          "sv": "Skickar Zigbee-kommandot 'move', så att ljuset dimmas kontinuerligt tills det stoppas med 'Stoppa dimning' eller når sitt ändläge. Använd detta med en strömbrytares håll-händelse och kombinera med 'Stoppa dimning' vid släpp.",
+          "nl": "Stuurt het Zigbee 'move'-commando, waardoor de lamp vloeiend blijft dimmen totdat je 'Stop dimmen' stuurt of het eindpunt bereikt is. Gebruik dit bij de hold-actie van een schakelaar, samen met 'Stop dimmen' bij het loslaten.",
+          "de": "Sendet den Zigbee-Befehl 'move', sodass die Lampe kontinuierlich dimmt, bis sie mit 'Dimmen stoppen' angehalten wird oder den Endanschlag erreicht. Nutze dies bei der Halten-Aktion eines Schalters, zusammen mit 'Dimmen stoppen' beim Loslassen."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "class=light&capabilities=dim"
+          },
+          {
+            "type": "dropdown",
+            "name": "direction",
+            "title": {
+              "en": "Direction",
+              "sv": "Riktning",
+              "nl": "Richting",
+              "de": "Richtung"
+            },
+            "values": [
+              {
+                "id": "up",
+                "label": {
+                  "en": "brighter",
+                  "sv": "ljusare",
+                  "nl": "feller",
+                  "de": "heller"
+                }
+              },
+              {
+                "id": "down",
+                "label": {
+                  "en": "dimmer",
+                  "sv": "mörkare",
+                  "nl": "zachter",
+                  "de": "dunkler"
+                }
+              }
+            ]
+          },
+          {
+            "type": "number",
+            "name": "rate",
+            "title": {
+              "en": "Speed",
+              "sv": "Hastighet",
+              "nl": "Snelheid",
+              "de": "Geschwindigkeit"
+            },
+            "min": 1,
+            "max": 254,
+            "step": 1,
+            "placeholder": {
+              "en": "Brightness steps per second (1-254, try 50)",
+              "sv": "Ljusstyrkesteg per sekund (1-254, prova 50)",
+              "nl": "Helderheidsstappen per seconde (1-254, probeer 50)",
+              "de": "Helligkeitsschritte pro Sekunde (1-254, versuche 50)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "stop_dim",
+        "title": {
+          "en": "Stop dimming",
+          "sv": "Stoppa dimning",
+          "nl": "Stop dimmen",
+          "de": "Dimmen stoppen"
+        },
+        "titleFormatted": {
+          "en": "Stop dimming [[device]]",
+          "sv": "Stoppa dimning av [[device]]",
+          "nl": "Stop dimmen van [[device]]",
+          "de": "Dimmen von [[device]] stoppen"
+        },
+        "hint": {
+          "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
+          "sv": "Skickar Zigbee-kommandot 'stop' för att avsluta en dimning som startats med 'Starta dimning', och läser tillbaka ljusstyrkan som lampan hamnade på.",
+          "nl": "Stuurt het Zigbee 'stop'-commando om een dimbeweging van 'Start dimmen' te beëindigen, en leest terug op welke helderheid de lamp is uitgekomen.",
+          "de": "Sendet den Zigbee-Befehl 'stop', um ein mit 'Dimmen starten' begonnenes Dimmen zu beenden, und liest die erreichte Helligkeit zurück."
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "class=light&capabilities=dim"
+          }
+        ]
+      },
+      {
         "id": "suppress_sensor",
         "title": {
           "en": "Suppress sensor",
@@ -322,6 +461,12 @@
             "name": "duration",
             "type": "number",
             "placeholder": "30",
+            "title": {
+              "en": "Duration",
+              "sv": "Varaktighet",
+              "nl": "Duur",
+              "de": "Dauer"
+            },
             "label": {
               "en": "time in seconds",
               "sv": "tid i sekunder",
@@ -368,6 +513,10 @@
           },
           {
             "name": "action",
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -419,6 +568,10 @@
           },
           {
             "name": "action",
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -574,6 +727,10 @@
           },
           {
             "name": "action",
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -630,6 +787,58 @@
         ]
       },
       {
+        "id": "ROM002_button",
+        "title": {
+          "en": "Button Action",
+          "nl": "Knopactie"
+        },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM002"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Press",
+                "label": {
+                  "en": "pressed",
+                  "nl": "drukken"
+                }
+              },
+              {
+                "id": "Release",
+                "label": {
+                  "en": "released",
+                  "nl": "loslaten"
+                }
+              },
+              {
+                "id": "Hold",
+                "label": {
+                  "en": "hold",
+                  "nl": "vasthouden"
+                }
+              },
+              {
+                "id": "LongPress",
+                "label": {
+                  "en": "long press",
+                  "nl": "lang indrukken"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "RWL000_on",
         "title": {
           "en": "On-button pressed",
@@ -674,6 +883,10 @@
           },
           {
             "name": "action",
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -732,6 +945,10 @@
           },
           {
             "name": "action",
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            },
             "type": "dropdown",
             "values": [
               {
@@ -855,6 +1072,164 @@
   "drivers": [
     {
       "class": "light",
+      "icon": "/drivers/046677577520/assets/icon.svg",
+      "images": {
+        "large": "/drivers/046677577520/assets/images/large.png",
+        "small": "/drivers/046677577520/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Edison ST23"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "046677577520",
+          "LCV002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "046677577520",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/1740447P0/assets/icon.svg",
       "images": {
         "large": "/drivers/1740447P0/assets/images/large.png",
@@ -890,6 +1265,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1041,6 +1422,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1190,6 +1577,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1342,6 +1735,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1495,6 +1894,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1646,6 +2051,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1776,6 +2187,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -1908,6 +2325,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2057,6 +2480,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2206,6 +2635,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2355,6 +2790,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2485,6 +2926,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2598,6 +3045,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2711,6 +3164,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2825,6 +3284,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -2958,6 +3423,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3107,6 +3578,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3256,6 +3733,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3405,6 +3888,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3557,6 +4046,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3706,6 +4201,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -3855,6 +4356,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4007,6 +4514,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4159,6 +4672,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4298,6 +4817,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4419,6 +4944,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4540,6 +5071,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4663,6 +5200,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4814,6 +5357,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -4963,6 +5512,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5118,6 +5673,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5273,6 +5834,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5422,6 +5989,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5571,6 +6144,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5708,6 +6287,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5847,6 +6432,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -5987,6 +6578,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6111,6 +6708,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6269,6 +6872,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6423,6 +7032,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6591,6 +7206,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6743,6 +7364,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -6895,6 +7522,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7047,6 +7680,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7196,6 +7835,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7345,6 +7990,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7497,6 +8148,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7636,6 +8293,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7782,6 +8445,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -7933,6 +8602,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8069,6 +8744,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8202,6 +8883,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8335,6 +9022,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8456,6 +9149,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8483,6 +9182,638 @@
         }
       },
       "id": "929003054001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929003058801/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003058801/assets/images/large.png",
+        "small": "/drivers/929003058801/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Ellipse"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929003058801",
+          "LCZ001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929003058801",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929003058901/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003058901/assets/images/large.png",
+        "small": "/drivers/929003058901/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Globe Small G30"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929003058901",
+          "LCO003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929003058901",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929003059001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003059001/assets/images/large.png",
+        "small": "/drivers/929003059001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Globe Large G40"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929003059001",
+          "LCO006"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929003059001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929003059101/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003059101/assets/images/large.png",
+        "small": "/drivers/929003059101/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Triangle"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929003059101",
+          "LCY001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929003059101",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -8607,6 +9938,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8711,6 +10048,220 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/929003151501/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003151501/assets/images/large.png",
+        "small": "/drivers/929003151501/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Edison ST72"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929003151501",
+          "LCV001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "929003151501",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "Hue Dymera",
+        "de": "Hue Dymera"
+      },
+      "class": "light",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature"
+      ],
+      "icon": "/drivers/929003665001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003665001/assets/images/large.png",
+        "small": "/drivers/929003665001/assets/images/small.png"
+      },
+      "zigbee": {
+        "manufacturerName": "Signify Netherlands B.V.",
+        "modelId": "929003665001",
+        "productId": "929003665001",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              768,
+              4096
+            ]
+          }
+        }
+      },
+      "pair": [
+        {
+          "id": "instructions",
+          "navigation": {},
+          "template": "instructions",
+          "options": {
+            "title": {
+              "en": "How to pair your Hue Dymera",
+              "de": "Hue Dymera verbinden"
+            },
+            "body": {
+              "en": "1. Make sure the lamp is powered on.\n2. Put the lamp into pairing mode (usually by resetting it via a Hue dimmer switch or turning power off/on 5 times).\n3. Homey will automatically discover the device.",
+              "de": "1. Stelle sicher, dass die Lampe mit Strom versorgt wird.\n2. Versetze die Lampe in den Kopplungsmodus (z. B. durch einen Reset per Hue Dimmschalter oder 5-maliges Ein- und Ausschalten des Stroms).\n3. Homey erkennt das Gerät automatisch."
+            }
+          }
+        }
+      ],
+      "id": "929003665001"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/HBL001/assets/icon.svg",
       "images": {
         "large": "/drivers/HBL001/assets/images/large.png",
@@ -8758,6 +10309,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -8907,6 +10464,12 @@
           "usageOff": 0.4
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9056,6 +10619,12 @@
           "usageOff": 0.8
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9196,6 +10765,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9337,6 +10912,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9474,6 +11055,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9615,6 +11202,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9764,6 +11357,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -9772,6 +11371,7 @@
         "productId": [
           "LCA001",
           "LCA004",
+          "LCA005",
           "LCA006",
           "LCA008"
         ],
@@ -9918,6 +11518,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10069,6 +11675,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10220,6 +11832,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10373,6 +11991,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10525,6 +12149,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10674,6 +12304,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10827,6 +12463,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -10979,6 +12621,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11128,6 +12776,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11277,6 +12931,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11431,6 +13091,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11588,6 +13254,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11737,6 +13409,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -11886,6 +13564,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12039,6 +13723,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12191,6 +13881,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12338,6 +14034,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12471,6 +14173,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12604,6 +14312,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12739,6 +14453,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12851,6 +14571,12 @@
         "large": "/drivers/LOM002/assets/images/large.png",
         "small": "/drivers/LOM002/assets/images/small.png"
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -12968,6 +14694,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13101,6 +14833,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13250,6 +14988,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13390,6 +15134,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13530,6 +15280,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13653,6 +15409,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13792,6 +15554,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -13802,6 +15570,7 @@
           "3261030P6",
           "3261031P6",
           "3261048P6",
+          "929003055001",
           "929003055101",
           "929003055201"
         ],
@@ -13936,6 +15705,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14077,6 +15852,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14218,6 +15999,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14358,6 +16145,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14498,6 +16291,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14639,6 +16438,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14781,6 +16586,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -14920,6 +16731,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15059,6 +16876,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15086,6 +16909,145 @@
         }
       },
       "id": "LTE002",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LTE005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTE005/assets/images/large.png",
+        "small": "/drivers/LTE005/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament Bulb Candle E14 White Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 4.6,
+          "usageOff": 0.5
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LTE005"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LTE005",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -15197,6 +17159,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15222,6 +17190,142 @@
         }
       },
       "id": "LTG002",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LTG005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTG005/assets/images/large.png",
+        "small": "/drivers/LTG005/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "GU10 White Ambiance BT"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 5,
+          "usageOff": 0.25
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTG005",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote, a philips hue bridge or the Philips HUE BT app."
+          }
+        }
+      },
+      "id": "LTG005",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -15334,6 +17438,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15457,6 +17567,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15580,6 +17696,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15720,6 +17842,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -15863,6 +17991,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16006,6 +18140,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16108,6 +18248,69 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LTV001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTV001/assets/images/large.png",
+        "small": "/drivers/LTV001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament Bulb ST64 White Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTV001",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LTV001"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LTV002/assets/icon.svg",
       "images": {
         "large": "/drivers/LTV002/assets/images/large.png",
@@ -16143,6 +18346,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16264,6 +18473,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16407,6 +18622,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16546,6 +18767,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16686,6 +18913,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16819,6 +19052,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -16935,6 +19174,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17051,6 +19296,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17166,6 +19417,12 @@
           "usageOff": 0.43
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17284,6 +19541,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17404,6 +19667,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17517,14 +19786,19 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
           "Signify Netherlands B.V."
         ],
         "productId": [
-          "LWE004",
-          "LTE005"
+          "LWE004"
         ],
         "endpoints": {
           "11": {
@@ -17633,6 +19907,12 @@
           "usageOff": 0.1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17746,6 +20026,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17859,6 +20145,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -17972,6 +20264,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18085,6 +20383,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18200,6 +20504,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18316,6 +20626,12 @@
           "usageOff": 0.2
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18429,6 +20745,12 @@
           "usageOff": 0.5
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18514,6 +20836,61 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LWV005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWV005/assets/images/large.png",
+        "small": "/drivers/LWV005/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament Bulb ST64 White"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWV005",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LWV005"
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LWW001/assets/icon.svg",
       "images": {
         "large": "/drivers/LWW001/assets/images/large.png",
@@ -18542,6 +20919,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18659,6 +21042,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18776,6 +21165,12 @@
           "usageOff": 1
         }
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18868,12 +21263,6 @@
         "en": "Hue Wall Switch Module"
       },
       "class": "remote",
-      "platforms": [
-        "local"
-      ],
-      "connectivity": [
-        "zigbee"
-      ],
       "icon": "/drivers/RDM001/assets/icon.svg",
       "images": {
         "large": "/drivers/RDM001/assets/images/large.png",
@@ -18887,6 +21276,12 @@
           "CR2450"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -18987,6 +21382,12 @@
           "CR2032"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19054,6 +21455,12 @@
           "CR2032"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19085,6 +21492,107 @@
       "id": "ROM001"
     },
     {
+      "id": "ROM002",
+      "name": {
+        "en": "Hue Wall Switch Module - Wired"
+      },
+      "class": "remote",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/ROM002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ROM002/assets/images/large.png",
+        "small": "/drivers/ROM002/assets/images/small.png"
+      },
+      "capabilities": [],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "ROM002"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              64512,
+              4096,
+              64516
+            ],
+            "bindings": [
+              0,
+              1,
+              64512
+            ]
+          }
+        },
+        "devices": {
+          "secondInput": {
+            "class": "remote",
+            "capabilities": [],
+            "name": {
+              "en": "Hue Wall Switch Module - Wired, Second Input"
+            },
+            "settings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ROM002/assets/icon.svg",
+          "instruction": {
+            "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "mode",
+          "type": "dropdown",
+          "value": "dualpushbutton",
+          "label": {
+            "en": "Default mode",
+            "nl": "Standaardmodus"
+          },
+          "values": [
+            {
+              "id": "singlerocker",
+              "label": {
+                "en": "Single Rocker",
+                "nl": "Enkele wip"
+              }
+            },
+            {
+              "id": "singlepushbutton",
+              "label": {
+                "en": "Single pushbutton",
+                "nl": "Enkele drukknop"
+              }
+            },
+            {
+              "id": "dualrocker",
+              "label": {
+                "en": "Dual Rocker",
+                "nl": "Dubbele wip"
+              }
+            },
+            {
+              "id": "dualpushbutton",
+              "label": {
+                "en": "Dual pushbutton",
+                "nl": "Dubbele drukknop"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": {
         "en": "Dimmer Switch (Gen 1 & 2)"
       },
@@ -19095,13 +21603,20 @@
         "small": "/drivers/RWL000/assets/images/small.png"
       },
       "capabilities": [
-        "alarm_battery"
+        "alarm_battery",
+        "measure_battery"
       ],
       "energy": {
         "batteries": [
           "CR2450"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19154,6 +21669,12 @@
           "CR2032"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19212,6 +21733,12 @@
           "AAA"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19388,6 +21915,12 @@
           "AAA"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19630,6 +22163,12 @@
           "AA"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -19807,6 +22346,12 @@
           "AA"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Philips",
@@ -20053,6 +22598,12 @@
           "AA"
         ]
       },
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
       "zigbee": {
         "manufacturerName": [
           "Signify Netherlands B.V."
@@ -20073,7 +22624,10 @@
               25,
               6
             ],
-            "bindings": []
+            "bindings": [
+              1,
+              6
+            ]
           }
         },
         "learnmode": {

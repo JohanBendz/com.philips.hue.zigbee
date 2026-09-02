@@ -2,21 +2,28 @@
   "name": {
     "en": "Filament Bulb Candle E14"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 4.5,
       "usageOff": 0.5
     }
   },
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "zigbee": {
     "manufacturerName": [
       "Philips",
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LWE004",
-      "LTE005"
+      "LWE004"
     ],
     "endpoints": {
       "11": {

@@ -1,0 +1,67 @@
+{
+  "id": "start_dim",
+  "title": {
+    "en": "Start dimming",
+    "sv": "Starta dimning",
+    "nl": "Start dimmen",
+    "de": "Dimmen starten"
+  },
+  "titleFormatted": {
+    "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
+    "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
+    "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
+    "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+  },
+  "hint": {
+    "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
+    "sv": "Skickar Zigbee-kommandot 'move', så att ljuset dimmas kontinuerligt tills det stoppas med 'Stoppa dimning' eller når sitt ändläge. Använd detta med en strömbrytares håll-händelse och kombinera med 'Stoppa dimning' vid släpp.",
+    "nl": "Stuurt het Zigbee 'move'-commando, waardoor de lamp vloeiend blijft dimmen totdat je 'Stop dimmen' stuurt of het eindpunt bereikt is. Gebruik dit bij de hold-actie van een schakelaar, samen met 'Stop dimmen' bij het loslaten.",
+    "de": "Sendet den Zigbee-Befehl 'move', sodass die Lampe kontinuierlich dimmt, bis sie mit 'Dimmen stoppen' angehalten wird oder den Endanschlag erreicht. Nutze dies bei der Halten-Aktion eines Schalters, zusammen mit 'Dimmen stoppen' beim Loslassen."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=dim"
+    },
+    {
+      "type": "dropdown",
+      "name": "direction",
+      "title": {
+        "en": "Direction",
+        "sv": "Riktning",
+        "nl": "Richting",
+        "de": "Richtung"
+      },
+      "values": [
+        {
+          "id": "up",
+          "label": { "en": "brighter", "sv": "ljusare", "nl": "feller", "de": "heller" }
+        },
+        {
+          "id": "down",
+          "label": { "en": "dimmer", "sv": "mörkare", "nl": "zachter", "de": "dunkler" }
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "name": "rate",
+      "title": {
+        "en": "Speed",
+        "sv": "Hastighet",
+        "nl": "Snelheid",
+        "de": "Geschwindigkeit"
+      },
+      "min": 1,
+      "max": 254,
+      "step": 1,
+      "placeholder": {
+        "en": "Brightness steps per second (1-254, try 50)",
+        "sv": "Ljusstyrkesteg per sekund (1-254, prova 50)",
+        "nl": "Helderheidsstappen per seconde (1-254, probeer 50)",
+        "de": "Helligkeitsschritte pro Sekunde (1-254, versuche 50)"
+      }
+    }
+  ]
+}
