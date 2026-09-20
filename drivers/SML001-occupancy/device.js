@@ -235,7 +235,7 @@ class OccupancySensor extends ZigBeeDevice {
 		if (changedKeys.includes('motion_sensitivity')) {
       try {
         const sensitivity = parseInt(newSettings.motion_sensitivity);
-        this.setStoreValue('sensitivity', sensitivity);
+        await this.setStoreValue('sensitivity', sensitivity);
       } catch (error) {
         this.log("Error setting sensitivity");
       }
@@ -244,7 +244,7 @@ class OccupancySensor extends ZigBeeDevice {
     if (changedKeys.includes('ledIndicator')) {
       try {
         const ledindication = newSettings.ledIndicator === true ? 1 : 0;
-        this.setStoreValue('ledIndicator', ledindication);
+        await this.setStoreValue('ledIndicator', ledindication);
       } catch (error) {
         this.log("Error setting LED indicator status");
       }

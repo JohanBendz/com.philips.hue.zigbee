@@ -21,13 +21,15 @@ class ContactSensor extends ZigBeeDevice {
 
   onContactAlarmAttributeReport(value) {
     this.log('Contact alarm attribute report received:', value);
-    this.setCapabilityValue('alarm_contact', value === 1);
+    this.setCapabilityValue('alarm_contact', value === 1)
+      .catch(err => this.error('Failed to update contact alarm:', err));
   }
 
   onBatteryPercentageAttributeReport(value) {
     const batteryPercentage = value / 2; // Convert from half percent to percent
     this.log('Battery percentage attribute report received:', batteryPercentage);
-    this.setCapabilityValue('measure_battery', batteryPercentage);
+    this.setCapabilityValue('measure_battery', batteryPercentage)
+      .catch(err => this.error('Failed to update battery level:', err));
   }
 
 }
