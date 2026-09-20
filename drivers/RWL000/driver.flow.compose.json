@@ -63,7 +63,11 @@
                 "nl": "Dim (losgelaten)"
               }
             }
-          ]
+          ],
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          }
         }
       ]
     }

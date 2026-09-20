@@ -15,11 +15,39 @@
           "name": "action",
           "type": "dropdown",
           "values": [
-            { "id": "Press", "label": { "en": "pressed", "nl": "drukken" } },
-            { "id": "Release", "label": { "en": "released", "nl": "loslaten" } },
-            { "id": "Hold", "label": { "en": "hold", "nl": "vasthouden" } },
-            { "id": "LongPress", "label": { "en": "long press", "nl": "lang indrukken" } }
-          ]
+            {
+              "id": "Press",
+              "label": {
+                "en": "pressed",
+                "nl": "drukken"
+              }
+            },
+            {
+              "id": "Release",
+              "label": {
+                "en": "released",
+                "nl": "loslaten"
+              }
+            },
+            {
+              "id": "Hold",
+              "label": {
+                "en": "hold",
+                "nl": "vasthouden"
+              }
+            },
+            {
+              "id": "LongPress",
+              "label": {
+                "en": "long press",
+                "nl": "lang indrukken"
+              }
+            }
+          ],
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          }
         }
       ]
     }

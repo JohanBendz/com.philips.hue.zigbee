@@ -53,10 +53,13 @@
                 "nl": "loslaten na vasthouden"
               }
             }
-          ]
+          ],
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          }
         }
       ]
     }
-
   ]
 }

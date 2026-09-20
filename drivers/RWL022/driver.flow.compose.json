@@ -70,7 +70,6 @@
                 "nl": "Dim op (lang losgelaten)"
               }
             },
-
             {
               "id": "DimDown-ShortPress",
               "label": {
@@ -127,7 +126,11 @@
                 "nl": "Hue (lang losgelaten)"
               }
             }
-          ]
+          ],
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          }
         }
       ]
     }

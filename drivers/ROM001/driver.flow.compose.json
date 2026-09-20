@@ -63,7 +63,11 @@
                 "nl": "Losgelaten (als status=aan en lang gedrukt)"
               }
             }
-          ]
+          ],
+          "title": {
+            "en": "Action",
+            "nl": "Actie"
+          }
         }
       ]
     }
