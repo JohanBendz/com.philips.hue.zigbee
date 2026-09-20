@@ -1,10 +1,9 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { debug, Cluster, CLUSTER } = require('zigbee-clusters');
+const { Cluster, CLUSTER } = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-// debug(true);
 Cluster.addCluster(HueSpecificBasicCluster);
 
 class DimmerSwitchGen3 extends ZigBeeDevice {
@@ -29,7 +28,6 @@ async onNodeInit({ zclNode }) {
 
   	const node = await this.homey.zigbee.getNode(this);
 		node.handleFrame = (endpointId, clusterId, frame, meta) => {
-    this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ", meta: ", meta);
       if  ( clusterId === 64512 ) {
         this._buttonCommandParser(frame);
       } 
@@ -51,7 +49,8 @@ async onNodeInit({ zclNode }) {
          ( frame.readUInt8(4) == 0x00 ) &&
          ( frame.readUInt8(5) == 0x20 )) {
       const percentage = frame.readUInt8(7) / 2;
-      this.setCapabilityValue('measure_battery', percentage);
+      this.setCapabilityValue('measure_battery', percentage)
+        .catch(err => this.error('Failed to update battery level:', err));
     }
   }
 
