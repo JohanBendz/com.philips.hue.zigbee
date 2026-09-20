@@ -8736,13 +8736,11 @@
         "manufacturerName": "Signify Netherlands B.V.",
         "modelId": [
           "LCW004",
-          "LCW005",
-          "929003665001"
+          "LCW005"
         ],
         "productId": [
           "LCW004",
-          "LCW005",
-          "929003665001"
+          "LCW005"
         ],
         "endpoints": {
           "11": {
