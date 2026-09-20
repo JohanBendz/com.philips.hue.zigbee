@@ -33,17 +33,25 @@ class DualWallSwitch extends ZigBeeDevice {
           }
       });
 
-      const node = await this.homey.zigbee.getNode(this);
-      node.handleFrame = (endpointId, clusterId, frame, meta) => {
+      this._node = await this.homey.zigbee.getNode(this);
+      this._previousHandleFrame = this._node.handleFrame;
+      this._rawHandleFrame = async (endpointId, clusterId, frame, meta) => {
+        try {
+          await this._previousHandleFrame(endpointId, clusterId, frame, meta);
+        } catch (err) {
+          this.error('ZCL frame handling failed:', err);
+        }
+
         this._setmode().catch(err => this.error('Failed to apply device mode:', err));
-        // this.log("endpointId: ", endpointId,", clusterId: ", clusterId,", frame: ", frame, ",\n meta: ", meta);
-        if  ( clusterId === 64512 ) {
-          this._buttonCommandParser(frame);
-        } 
-        if ( clusterId === 1 ) {
+
+        if (clusterId === 64512) {
+          return this._buttonCommandParser(frame);
+        }
+        if (clusterId === 1) {
           this._powerParser(frame);
         }
       };
+      this._node.handleFrame = this._rawHandleFrame;
 
     }
 
@@ -102,23 +110,37 @@ class DualWallSwitch extends ZigBeeDevice {
     }
   }
   
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x0a ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 )) {
-      const percentage = frame.readUInt8(5);
+  _powerParser(frame) {
+    if (!Buffer.isBuffer(frame) || frame.length < 7) {
+      return;
+    }
+
+    const commandId = frame.readUInt8(2);
+    const attributeId = frame.readUInt16LE(3);
+
+    if (attributeId !== 0x0021) {
+      return;
+    }
+
+    let rawPercentage;
+    if (commandId === 0x01 && frame.length >= 8 && frame.readUInt8(5) === 0x00 && frame.readUInt8(6) === 0x20) {
+      rawPercentage = frame.readUInt8(7);
+    } else if (commandId === 0x0a && frame.readUInt8(5) === 0x20) {
+      rawPercentage = frame.readUInt8(6);
+    }
+
+    if (rawPercentage !== undefined) {
+      const percentage = rawPercentage / 2;
       this.setCapabilityValue('measure_battery', percentage)
         .catch(err => this.error('Failed to update battery level:', err));
     }
   }
 
   _buttonCommandParser(frame) {
-    const frameLength = frame.length;
-    if (frameLength < 9) {
-        this.log(`Received frame with length ${frameLength}, expected at least 9.`);
-        return;
+    if (!Buffer.isBuffer(frame) || frame.length < 10) {
+      return;
     }
-    const buttonValue = frame.readUInt8(5);
+
     const actionValue = frame.readUInt8(9);
     const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
 
@@ -134,6 +156,12 @@ class DualWallSwitch extends ZigBeeDevice {
       .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
     }
     
+  }
+
+  async onUninit() {
+    if (this._node && this._rawHandleFrame && this._node.handleFrame === this._rawHandleFrame) {
+      this._node.handleFrame = this._previousHandleFrame;
+    }
   }
 
 }
