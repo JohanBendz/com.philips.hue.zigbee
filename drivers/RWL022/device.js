@@ -26,15 +26,23 @@ async onNodeInit({ zclNode }) {
       } */
     });
 
-  	const node = await this.homey.zigbee.getNode(this);
-		node.handleFrame = (endpointId, clusterId, frame, meta) => {
-      if  ( clusterId === 64512 ) {
-        this._buttonCommandParser(frame);
-      } 
-      if ( clusterId === 1 ) {
+    this._node = await this.homey.zigbee.getNode(this);
+    this._previousHandleFrame = this._node.handleFrame;
+    this._rawHandleFrame = async (endpointId, clusterId, frame, meta) => {
+      try {
+        await this._previousHandleFrame(endpointId, clusterId, frame, meta);
+      } catch (err) {
+        this.error('ZCL frame handling failed:', err);
+      }
+
+      if (clusterId === 64512) {
+        return this._buttonCommandParser(frame);
+      }
+      if (clusterId === 1) {
         this._powerParser(frame);
       }
     };
+    this._node.handleFrame = this._rawHandleFrame;
 
     this._switchTriggerDevice = this.homey.flow.getDeviceTriggerCard('RWL022_buttons')
     .registerRunListener(async (args, state) => {
@@ -43,23 +51,48 @@ async onNodeInit({ zclNode }) {
 
   }
 
-  _powerParser(frame){
-    if ( ( frame.readUInt8(2) == 0x01 ) &&
-         ( frame.readUInt8(3) == 0x21 ) &&
-         ( frame.readUInt8(4) == 0x00 ) &&
-         ( frame.readUInt8(5) == 0x20 )) {
-      const percentage = frame.readUInt8(7) / 2;
+  _powerParser(frame) {
+    if (!Buffer.isBuffer(frame) || frame.length < 7) {
+      return;
+    }
+
+    const commandId = frame.readUInt8(2);
+    const attributeId = frame.readUInt16LE(3);
+
+    if (attributeId !== 0x0021) {
+      return;
+    }
+
+    let rawPercentage;
+    if (commandId === 0x01 && frame.length >= 8 && frame.readUInt8(5) === 0x00 && frame.readUInt8(6) === 0x20) {
+      rawPercentage = frame.readUInt8(7);
+    } else if (commandId === 0x0a && frame.readUInt8(5) === 0x20) {
+      rawPercentage = frame.readUInt8(6);
+    }
+
+    if (rawPercentage !== undefined) {
+      const percentage = rawPercentage / 2;
       this.setCapabilityValue('measure_battery', percentage)
         .catch(err => this.error('Failed to update battery level:', err));
     }
   }
 
   _buttonCommandParser(payload) {
+    if (!Buffer.isBuffer(payload) || payload.length < 10) {
+      return;
+    }
+
     var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';
     var action = payload[9] === 0 ? 'ShortPress' : payload[9] === 1 ? 'LongPress' : payload[9] === 2 ? 'ShortRelease' : 'LongRelease';
     return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
       .then(() => this.log(`triggered RWL022_buttons, action=${button}-${action}`))
       .catch(err => this.error('Error triggering RWL022_buttons', err));
+  }
+
+  async onUninit() {
+    if (this._node && this._rawHandleFrame && this._node.handleFrame === this._rawHandleFrame) {
+      this._node.handleFrame = this._previousHandleFrame;
+    }
   }
 
 }
