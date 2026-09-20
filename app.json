@@ -19233,6 +19233,7 @@
         "small": "/drivers/RWL000/assets/images/small.png"
       },
       "capabilities": [
+        "measure_battery",
         "alarm_battery"
       ],
       "energy": {
