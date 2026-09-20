@@ -23,8 +23,14 @@ class Plug extends ZigBeeDevice {
         if (changedKeys.includes('powerOnCtrl_state')) {
 
             try {
-                const powerOnCtrlstate = await this.zclNode.endpoints[11].clusters.onOff.readAttributes(['powerOnCtrl']);
-                await this.zclNode.endpoints[11].clusters.onOff.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
+                const onOffEndpoint = this.getClusterEndpoint(CLUSTER.ON_OFF);
+                if (onOffEndpoint === null) {
+                    throw new Error('missing_on_off_cluster');
+                }
+
+                const onOffCluster = this.zclNode.endpoints[onOffEndpoint].clusters[CLUSTER.ON_OFF.NAME];
+                await onOffCluster.readAttributes(['powerOnCtrl']);
+                await onOffCluster.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
                 this.log("Power On Control supported by device");
             } catch (error) {
                 this.log("This device does not support Power On Control");
