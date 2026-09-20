@@ -15,9 +15,6 @@ class OutDoorSensor extends ZigBeeDevice {
 	}
 
 	async onNodeInit({ zclNode }) {
-
-		this.printNode();
-
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
 			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);

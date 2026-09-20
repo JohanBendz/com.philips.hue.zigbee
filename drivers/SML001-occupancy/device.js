@@ -22,9 +22,6 @@ class OccupancySensor extends ZigBeeDevice {
 	}
 
 	async onNodeInit({ zclNode }) {
-
-  this.printNode();
-
   const minReportTemp = this.getSetting('minReportTemp') || 60;
   const maxReportTemp = this.getSetting('maxReportTemp') || 300;
   const minReportLux = this.getSetting('minReportLux') || 60;
