@@ -4,6 +4,17 @@ Philips Hue support without Bridge for Homey
 
 ## Release notes:
 
+### v.2.1.1 (Test)
+
+2026 modernization test release.
+
+- Updated Homey Zigbee stack and Node.js runtime compatibility.
+- Added automated regression tests and CI validation.
+- Improved lifecycle, battery, remote and Wall Switch handling.
+- Corrected Hue contact-sensor protocol handling and occupancy-sensor settings.
+- Added additional Hue device support, including Dymera and Slim Recessed Spot.
+- This release is intentionally published to the Homey Test channel before promotion to Live. Please report regressions and device-specific issues on GitHub.
+
 ### v.2.1.0
 Updated NPM Modules Homey-Zigbeedriver and Zigbee-Clusters
 

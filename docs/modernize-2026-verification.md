@@ -1,7 +1,11 @@
 # Modernization verification
 
-The last user-confirmed hardware checkpoint before this stabilization pass is
-`747ce0d` (LCT000, SML002 and both inputs of one RDM001). `sdk3` remains unchanged.
+The current user-confirmed hardware checkpoint is `00c17c5` (2026-09-20).
+LCT000, SML002, RWL022 and both inputs of one RDM001 were exercised on a real
+Homey Pro from a clean `modernize-2026` checkout. `sdk3` remains unchanged.
+
+The subsequent 2.1.1 release-preparation commit changes only version/release
+metadata and this documentation; runtime code is unchanged from that checkpoint.
 
 ## Reproducible local checks
 
@@ -21,6 +25,34 @@ Tests exercise real app classes and the pinned `homey-zigbeedriver`, with a mock
 Homey SDK boundary and synthetic Zigbee frames. They do not prove radio delivery,
 pairing, physical event semantics, or actual battery reporting.
 
+## Hardware checkpoint — 2026-09-20
+
+The user ran `homey app run` against a real Homey Pro from a clean
+`modernize-2026` checkout at `00c17c5`. Startup completed without driver
+exceptions. The same checkout passed Homey publish validation, and generated
+`app.json` matched the committed manifest.
+
+Observed on physical hardware:
+
+- **LCT000** — initialized with Hue/Saturation and Color Temperature support;
+  on/off, dimming, color/temperature modes and continuous dimming worked.
+- **RDM001** — root and subdevice initialized; first and second inputs triggered
+  the expected input-specific Flow events.
+- **RWL022** — button events for On/Off, Hue, Dim Up and Dim Down were received.
+- **SML002 occupancy** — battery, temperature and occupancy reports were received;
+  the user confirmed the tested sensor functions worked.
+
+This confirms that the 2.2.18 Zigbee-driver update did not introduce a regression
+in those tested paths. It does **not** physically verify SOC001, ROM002,
+SML001 settings, Dymera, Slim or every supported Hue device.
+
+## Test release candidate
+
+The public Homey App Store version is already 2.1.0, so the first modernization
+Test-channel build is prepared as **2.1.1**. Promotion to Live remains separate;
+the Test channel is used to broaden hardware coverage before merging the branch
+back to `sdk3`.
+
 ## ROM002 compatibility
 
 The branch previously used both `LongRelease` and `LongPress` for action `0x03`.
@@ -38,16 +70,19 @@ checked on 2026-09-20:
 Cluster 6 is an output cluster used for binding; it must not be added to the
 manifest's input cluster list merely to make the two lists match.
 
-## Hardware regression checklist (not yet verified for these changes)
+## Hardware regression checklist
 
-- [ ] LCT000: on/off, dim with duration, color, temperature, power-on settings,
-      blink/alert and smooth-dim Flows.
-- [ ] SML002: motion, lux, temperature and battery, including after app restart.
+- [x] LCT000: core on/off, dim, color/temperature and smooth-dim paths verified
+      on physical hardware at `00c17c5`.
+- [x] SML002: motion/occupancy, temperature and battery reporting verified in the
+      current run; broader restart/settings coverage remains useful.
 - [ ] SML001 occupancy: change sensitivity, then wake/re-announce the sensor.
-- [ ] RDM001: both inputs; then two physical modules simultaneously, without
-      cross-device Flow triggering.
+- [x] RDM001: both inputs of one physical module verified.
+- [ ] RDM001: two physical modules simultaneously, without cross-device Flow
+      triggering.
 - [ ] ROM002: re-pair/bind, both inputs, mode changes, Press/Hold/Release and
       release after hold; saved Flows using either historical action ID.
+- [x] RWL022: physical button events verified.
 - [ ] RWL000/RWL022/RDM002: battery updates and button/dial Flows after restart.
 - [ ] SOC001: open/close and battery reports, restart and re-announce.
 - [ ] Issue #699: simultaneous on/off and duration-based dimming; 2.2.18's

@@ -151,5 +151,8 @@
   },
   "2.1.0": {
     "en": "Updated Homey Zigbee modules and added Contact Sensor."
+  },
+  "2.1.1": {
+    "en": "Test release: 2026 modernization with an updated Zigbee stack, stability and lifecycle fixes, improved sensor and remote handling, and additional Hue device support including Dymera and Slim Recessed Spot. Please report regressions on GitHub."
   }
 }
