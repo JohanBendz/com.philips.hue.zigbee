@@ -16,15 +16,9 @@ async onNodeInit({ zclNode }) {
       getOpts: {
         getOnStart: false,
         getOnOnline: false,
-      }/* ,
-      reportOpts: {
-        configureAttributeReporting: {
-          minInterval: 0,
-          maxInterval: 21600,
-          minChange: 1,
-        }
-      } */
+      },
     });
+    this._batteryReportingConfigured = false;
 
     this._node = await this.homey.zigbee.getNode(this);
     this._previousHandleFrame = this._node.handleFrame;
@@ -49,6 +43,37 @@ async onNodeInit({ zclNode }) {
       return (null, args.action === state.action);
     });
 
+    if (this.isFirstInit()) {
+      await this._setupBatteryReporting()
+        .catch(err => this.error('Initial battery reporting setup failed:', err));
+    }
+  }
+
+  async _setupBatteryReporting() {
+    await this.configureAttributeReporting([{
+      endpointId: 1,
+      cluster: CLUSTER.POWER_CONFIGURATION,
+      attributeName: 'batteryPercentageRemaining',
+      minInterval: 0,
+      maxInterval: 21600,
+      minChange: 1,
+    }]);
+
+    const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
+      .readAttributes(['batteryPercentageRemaining']);
+
+    if (typeof result.batteryPercentageRemaining === 'number') {
+      await this.setCapabilityValue('measure_battery', result.batteryPercentageRemaining / 2);
+    }
+
+    this._batteryReportingConfigured = true;
+  }
+
+  async onEndDeviceAnnounce() {
+    if (!this._batteryReportingConfigured) {
+      await this._setupBatteryReporting()
+        .catch(err => this.error('Battery reporting setup on announce failed:', err));
+    }
   }
 
   _powerParser(frame) {
