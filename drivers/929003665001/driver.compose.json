@@ -1,0 +1,39 @@
+{
+  "name": {
+    "en": "Hue Dymera",
+    "de": "Hue Dymera"
+  },
+  "$extends": ["light_color_ambiance"],
+  "icon": "{{driverAssetsPath}}/icon.svg",
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/icon.png"
+  },
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": "929003665001",
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768,
+          4096
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Make sure the lamp is powered on and in pairing mode. If pairing does not start automatically, reset it with a Hue dimmer switch or Hue Bridge and try again.",
+        "de": "Stelle sicher, dass die Lampe eingeschaltet und im Kopplungsmodus ist. Falls die Kopplung nicht automatisch startet, setze sie mit einem Hue Dimmschalter oder einer Hue Bridge zurück und versuche es erneut."
+      }
+    }
+  }
+}
