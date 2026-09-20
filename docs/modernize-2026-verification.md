@@ -81,3 +81,26 @@ Additional hardware checks:
 - [ ] Dymera: power-on settings, blink/alert and start/stop dim affect only the
       chosen zone, including after restart.
 - [ ] Slim: pairing/model match, initialization, all standard controls and Flows.
+
+## Follow-up from issue triage
+
+The first mock-only sensor tests did not expose a missing cluster: they supplied
+the same incorrect cluster name as the driver. They have been replaced by tests
+using real ZCLNode/Endpoint/Cluster instances from zigbee-clusters 3.8.0.
+
+- SOC001 now receives manufacturer-cluster contact reports (0xfc06 / 0x0100),
+  with a bound On/Off **command** compatibility path for older installations.
+  The issue #642 descriptor has no On/Off input cluster. Contact and battery
+  reporting setup are isolated and failed configuration is retried on announce.
+- SML occupancy sensitivity/LED settings now use actual cluster names and
+  manufacturer-specific attributes. Radio strings are converted correctly;
+  zero sensitivity and disabled LED are preserved.
+- The four initial protocol regression cases failed before these corrections.
+  The full suite now contains 36 tests, including reporting-store and
+  repeated-init cleanup checks.
+- Re-save sensitivity/LED settings, then wake the sensor. Existing SOC001
+  installations need a wake/re-announce or repair test; new pairing must also be
+  tested to verify the updated binding list on hardware.
+
+See [issue-triage-2026.md](issue-triage-2026.md) for all 120 open issues and the
+distinction between concrete code fixes, hardware test candidates and new work.

@@ -243,7 +243,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 
     if (changedKeys.includes('ledIndicator')) {
       try {
-        const ledindication = newSettings.ledIndicator === true ? 1 : 0;
+        const ledindication = newSettings.ledIndicator === true || newSettings.ledIndicator === 'true';
         await this.setStoreValue('ledIndicator', ledindication);
       } catch (error) {
         this.log("Error setting LED indicator status");
@@ -271,10 +271,8 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
     const ledIndicator = this.getStoreValue('ledIndicator');
     if (ledIndicator !== null) {
       try {
-        const ledoccupancystatus = await this.zclNode.endpoints[2].clusters.occupancySensingCluster.readAttributes(['ledIndication']);
-        const ledbasicstatus = await this.zclNode.endpoints[2].clusters.basic.readAttributes(['ledIndication']);
-        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({ledIndication: ledIndicator});
-        await this.zclNode.endpoints[2].clusters.basic.writeAttributes({ledIndication: ledIndicator});
+        await this.zclNode.endpoints[2].clusters[HueSpecificBasicCluster.NAME]
+          .writeAttributes({ ledIndication: ledIndicator === true || ledIndicator === 1 });
         this.log("Setting LED indicator status to: ", ledIndicator);
       } catch (error) {
         this.log("This device does not support LED indicator setting");
@@ -284,7 +282,8 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
     const sensitivity = this.getStoreValue('sensitivity');
     if (sensitivity !== null) {
       try {
-        await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({sensitivity: sensitivity});
+        await this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
+          .writeAttributes({ sensitivity });
         this.log("Setting sensitivity to: ", sensitivity);
       } catch (error) {
         this.log("This device does not support sensitivity setting");
@@ -296,4 +295,3 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 }
 
 module.exports = OutDoorOccupancySensor;
-

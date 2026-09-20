@@ -79,4 +79,13 @@ function buttonFrame(input, action) {
   return frame;
 }
 
-module.exports = { loadDriver, remote, buttonFrame };
+function zclFixture(endpointId, inputClusters, outputClusters = []) {
+  const { ZCLNode } = require('zigbee-clusters');
+  const node = {
+    endpointDescriptors: [{ endpointId, inputClusters, outputClusters }],
+    sendFrame: async () => {},
+  };
+  return { node, zclNode: new ZCLNode(node) };
+}
+
+module.exports = { loadDriver, remote, buttonFrame, zclFixture };

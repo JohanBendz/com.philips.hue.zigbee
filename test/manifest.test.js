@@ -48,3 +48,9 @@ test('Dymera keeps model matching and subdevice capabilities/settings consistent
   assert.equal(driver.zigbee.devices.top.settings, undefined);
   assert.ok(driver.settings.some(setting => setting.children?.some(child => child.id === 'powerOnCtrl_state')));
 });
+
+test('SOC001 manifest follows interviewed input clusters and manufacturer-report binding', () => {
+  const driver = manifest.drivers.find(driver => driver.id === 'SOC001');
+  assert.deepEqual(driver.zigbee.endpoints['2'].clusters, [0, 1, 3, 64518]);
+  assert.deepEqual(driver.zigbee.endpoints['2'].bindings, [1, 64518]);
+});
