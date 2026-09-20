@@ -37,10 +37,17 @@
               }
             },
             {
+              "id": "LongRelease",
+              "label": {
+                "en": "released after hold",
+                "nl": "loslaten na vasthouden"
+              }
+            },
+            {
               "id": "LongPress",
               "label": {
-                "en": "long press",
-                "nl": "lang indrukken"
+                "en": "long press (legacy alias for release after hold)",
+                "nl": "lang indrukken (oude naam voor loslaten na vasthouden)"
               }
             }
           ],

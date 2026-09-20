@@ -293,45 +293,6 @@
         ]
       },
       {
-        "id": "suppress_sensor",
-        "title": {
-          "en": "Suppress sensor",
-          "sv": "Tysta sensorn",
-          "nl": "Onderdruk sensor",
-          "de": "Sensor unterdrücken"
-        },
-        "titleFormatted": {
-          "en": "Suppress the sensor [[device]] for [[duration]] seconds",
-          "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
-          "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-          "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "class=sensor",
-            "title": {
-              "en": "Sensor",
-              "sv": "Sensor",
-              "nl": "Sensor",
-              "de": "Sensor"
-            }
-          },
-          {
-            "name": "duration",
-            "type": "number",
-            "placeholder": "30",
-            "label": {
-              "en": "time in seconds",
-              "sv": "tid i sekunder",
-              "nl": "tijd in seconden",
-              "de": "Zeit in Sekunden"
-            }
-          }
-        ]
-      },
-      {
         "id": "start_dim",
         "title": {
           "en": "Start dimming",
@@ -435,6 +396,45 @@
             "filter": "class=light&capabilities=dim"
           }
         ]
+      },
+      {
+        "id": "suppress_sensor",
+        "title": {
+          "en": "Suppress sensor",
+          "sv": "Tysta sensorn",
+          "nl": "Onderdruk sensor",
+          "de": "Sensor unterdrücken"
+        },
+        "titleFormatted": {
+          "en": "Suppress the sensor [[device]] for [[duration]] seconds",
+          "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
+          "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
+          "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "class=sensor",
+            "title": {
+              "en": "Sensor",
+              "sv": "Sensor",
+              "nl": "Sensor",
+              "de": "Sensor"
+            }
+          },
+          {
+            "name": "duration",
+            "type": "number",
+            "placeholder": "30",
+            "label": {
+              "en": "time in seconds",
+              "sv": "tid i sekunder",
+              "nl": "tijd in seconden",
+              "de": "Zeit in Sekunden"
+            }
+          }
+        ]
       }
     ],
     "triggers": [
@@ -503,7 +503,11 @@
                   "nl": "loslaten na vasthouden"
                 }
               }
-            ]
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
           }
         ]
       },
@@ -658,7 +662,11 @@
                   "en": "Ring, rotate right fast"
                 }
               }
-            ]
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
           }
         ]
       },
@@ -730,7 +738,74 @@
                   "nl": "Losgelaten (als status=aan en lang gedrukt)"
                 }
               }
-            ]
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
+          }
+        ]
+      },
+      {
+        "id": "ROM002_button",
+        "title": {
+          "en": "Button Action",
+          "nl": "Knopactie"
+        },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM002"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Press",
+                "label": {
+                  "en": "pressed",
+                  "nl": "drukken"
+                }
+              },
+              {
+                "id": "Release",
+                "label": {
+                  "en": "released",
+                  "nl": "loslaten"
+                }
+              },
+              {
+                "id": "Hold",
+                "label": {
+                  "en": "hold",
+                  "nl": "vasthouden"
+                }
+              },
+              {
+                "id": "LongRelease",
+                "label": {
+                  "en": "released after hold",
+                  "nl": "loslaten na vasthouden"
+                }
+              },
+              {
+                "id": "LongPress",
+                "label": {
+                  "en": "long press (legacy alias for release after hold)",
+                  "nl": "lang indrukken (oude naam voor loslaten na vasthouden)"
+                }
+              }
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
           }
         ]
       },
@@ -816,7 +891,11 @@
                   "nl": "Dim (losgelaten)"
                 }
               }
-            ]
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
           }
         ]
       },
@@ -951,59 +1030,11 @@
                   "nl": "Hue (lang losgelaten)"
                 }
               }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "ROM002_button",
-        "title": {
-          "en": "Button Action",
-          "nl": "Knopactie"
-        },
-        "titleFormatted": {
-          "en": "Button [[action]]",
-          "nl": "Knop [[action]]"
-        },
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=ROM002"
-          },
-          {
-            "name": "action",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "Press",
-                "label": {
-                  "en": "pressed",
-                  "nl": "drukken"
-                }
-              },
-              {
-                "id": "Release",
-                "label": {
-                  "en": "released",
-                  "nl": "loslaten"
-                }
-              },
-              {
-                "id": "Hold",
-                "label": {
-                  "en": "hold",
-                  "nl": "vasthouden"
-                }
-              },
-              {
-                "id": "LongRelease",
-                "label": {
-                  "en": "released after hold",
-                  "nl": "loslaten na vasthouden"
-                }
-              }
-            ]
+            ],
+            "title": {
+              "en": "Action",
+              "nl": "Actie"
+            }
           }
         ]
       }
@@ -11388,6 +11419,308 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LCO003/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCO003/assets/images/large.png",
+        "small": "/drivers/LCO003/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Globe Small G30"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCO003"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCO003",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCO006/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCO006/assets/images/large.png",
+        "small": "/drivers/LCO006/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Globe Large G40"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCO006"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCO006",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LCS001/assets/icon.svg",
       "images": {
         "large": "/drivers/LCS001/assets/images/large.png",
@@ -12302,6 +12635,308 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LCV001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCV001/assets/images/large.png",
+        "small": "/drivers/LCV001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Edison ST72"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCV001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCV001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCV002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCV002/assets/images/large.png",
+        "small": "/drivers/LCV002/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Edison ST23"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCV002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCV002",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LCW001/assets/icon.svg",
       "images": {
         "large": "/drivers/LCW001/assets/images/large.png",
@@ -12378,6 +13013,311 @@
         }
       },
       "id": "LCW001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCY001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCY001/assets/images/large.png",
+        "small": "/drivers/LCY001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Triangle"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.8,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCY001",
+          "LCY002",
+          "046677577490"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCY001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LCZ001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LCZ001/assets/images/large.png",
+        "small": "/drivers/LCZ001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Lightguide Ellipse"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 6.5,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCZ001",
+          "LCZ002"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the unit, or toggle the power on the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LCZ001",
       "settings": [
         {
           "id": "light_temp_powerOnCtrl",
@@ -16542,6 +17482,143 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LTV001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTV001/assets/images/large.png",
+        "small": "/drivers/LTV001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament Bulb ST64 White Ambiance"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTV001",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LTV001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LTV002/assets/icon.svg",
       "images": {
         "large": "/drivers/LTV002/assets/images/large.png",
@@ -18947,6 +20024,119 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LWV005/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWV005/assets/images/large.png",
+        "small": "/drivers/LWV005/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Filament Bulb ST64 White"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 7,
+          "usageOff": 0.2
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWV005",
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+          }
+        }
+      },
+      "id": "LWV005",
+      "settings": [
+        {
+          "id": "light_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness on Power On"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LWW001/assets/icon.svg",
       "images": {
         "large": "/drivers/LWW001/assets/images/large.png",
@@ -19571,7 +20761,7 @@
         "learnmode": {
           "image": "/drivers/ROM002/assets/icon.svg",
           "instruction": {
-            "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
+            "en": "Press the reset button for approximately 12 seconds until the LED is bright red, then trigger a button twice."
           }
         }
       },

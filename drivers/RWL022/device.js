@@ -24,7 +24,7 @@ async onNodeInit({ zclNode }) {
     this._previousHandleFrame = this._node.handleFrame;
     this._rawHandleFrame = async (endpointId, clusterId, frame, meta) => {
       try {
-        await this._previousHandleFrame(endpointId, clusterId, frame, meta);
+        await this._previousHandleFrame.call(this._node, endpointId, clusterId, frame, meta);
       } catch (err) {
         this.error('ZCL frame handling failed:', err);
       }

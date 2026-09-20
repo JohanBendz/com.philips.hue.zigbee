@@ -19,7 +19,12 @@ class HueWallSwitchModule extends ZigBeeDevice {
     this._deviceMode = this.getSetting('mode');
     this._triggerDevice = this.homey.flow
       .getDeviceTriggerCard('ROM002_button')
-      .registerRunListener(async (args, state) => args.action === state.action);
+      .registerRunListener(async (args, state) => {
+        // Both IDs have shipped on modernize-2026. Keep saved Flows compatible
+        // without emitting the same physical event twice.
+        const normalize = action => action === 'LongPress' ? 'LongRelease' : action;
+        return normalize(args.action) === normalize(state.action);
+      });
 
     await this._writeDeviceMode(this._deviceMode);
 
@@ -27,7 +32,7 @@ class HueWallSwitchModule extends ZigBeeDevice {
     this._previousHandleFrame = this._node.handleFrame;
     this._rawHandleFrame = async (endpointId, clusterId, frame, meta) => {
       try {
-        await this._previousHandleFrame(endpointId, clusterId, frame, meta);
+        await this._previousHandleFrame.call(this._node, endpointId, clusterId, frame, meta);
       } catch (err) {
         this.error('ROM002 ZCL frame handling failed:', err);
       }
@@ -87,7 +92,7 @@ class HueWallSwitchModule extends ZigBeeDevice {
     }
 
     const actionValue = frame.readUInt8(9);
-    const actions = ['Press', 'Hold', 'Release', 'LongPress'];
+    const actions = ['Press', 'Hold', 'Release', 'LongRelease'];
     const action = actions[actionValue];
     if (!action) {
       return;
@@ -98,7 +103,7 @@ class HueWallSwitchModule extends ZigBeeDevice {
         return;
       }
       this._heldInputs.add(inputNumber);
-    } else if (action === 'Release' || action === 'LongPress') {
+    } else if (action === 'Release' || action === 'LongRelease') {
       this._heldInputs.delete(inputNumber);
     }
 

@@ -271,7 +271,7 @@ class OccupancySensor extends ZigBeeDevice {
       }
     }
 
-    const sensitivity = this.getStoreValue('motion_sensitivity');
+    const sensitivity = this.getStoreValue('sensitivity');
     if (sensitivity !== null) {
       try {
         await this.zclNode.endpoints[2].clusters.occupancySensingCluster.writeAttributes({sensitivity: sensitivity});

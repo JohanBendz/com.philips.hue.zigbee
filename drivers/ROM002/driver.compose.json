@@ -23,7 +23,7 @@
     "endpoints": {
       "1": {
         "clusters": [0, 3, 64512, 4096, 64516],
-        "bindings": [0, 1, 64512]
+        "bindings": [6, 64512]
       }
     },
     "devices": {

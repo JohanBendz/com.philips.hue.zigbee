@@ -4,12 +4,13 @@
   "description": "Get control of your Philips Hue RGBW and Tunable White bulbs with Homey! No need for the Philips Hue Bridge.",
   "main": "app.js",
   "dependencies": {
-    "homey-zigbeedriver": "^2.2.17",
-    "zigbee-clusters": "^3.8.0"
+    "homey-zigbeedriver": "2.2.18",
+    "zigbee-clusters": "3.8.0"
   },
   "scripts": {
     "run": "homey app run",
-    "validate": "homey app validate --level publish"
+    "validate": "homey app validate --level publish",
+    "test": "node --test test/*.test.js"
   },
   "engines": {
     "node": ">=22"
