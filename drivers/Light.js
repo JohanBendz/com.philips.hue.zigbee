@@ -18,6 +18,12 @@ Cluster.addCluster(HueSpecificIdentifyCluster);
 const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
 Cluster.addCluster(HueSpecificIdentifyBoundCluster);
 
+const DEFAULT_DIM_RATE = 50;
+const MAX_DIM_RATE = 254;
+const MAX_LEVEL = 254;
+const DIM_MOVE_MAX_DURATION = 255000;
+const LEVEL_READBACK_DELAY = 500;
+
 class Light extends ZigBeeLightDevice {
 
  	async onNodeInit({zclNode}) {
@@ -54,6 +60,65 @@ class Light extends ZigBeeLightDevice {
     }
 
 
+
+    async startDim(args) {
+        const moveMode = args.direction === 'down' ? 'down' : 'up';
+        const rate = Math.min(MAX_DIM_RATE, Math.max(1, Math.round(Number(args.rate) || DEFAULT_DIM_RATE)));
+
+        if (this._dimMoveMode === moveMode) {
+            return;
+        }
+
+        this._clearDimMove();
+        this._dimMoveMode = moveMode;
+        this._dimMoveTimeout = this.homey.setTimeout(() => this._clearDimMove(), DIM_MOVE_MAX_DURATION);
+
+        this.log(`startDim, moveMode=${moveMode} rate=${rate}`);
+        try {
+            await this.levelControlCluster.moveWithOnOff({ moveMode, rate });
+        } catch (err) {
+            this._clearDimMove();
+            throw err;
+        }
+    }
+
+    async stopDim() {
+        this._clearDimMove();
+        this.log('stopDim');
+        await this.levelControlCluster.stopWithOnOff();
+        await this._syncLevel();
+    }
+
+    _clearDimMove() {
+        if (this._dimMoveTimeout) {
+            this.homey.clearTimeout(this._dimMoveTimeout);
+            this._dimMoveTimeout = null;
+        }
+        this._dimMoveMode = null;
+    }
+
+    async _syncLevel() {
+        try {
+            await this.sleep(LEVEL_READBACK_DELAY);
+            const { currentLevel } = await this.levelControlCluster.readAttributes(['currentLevel']);
+            if (typeof currentLevel !== 'number') {
+                return;
+            }
+
+            await this.setCapabilityValue('dim', Math.min(1, Math.max(0, currentLevel / MAX_LEVEL)));
+
+            if (this.hasCapability('onoff')) {
+                const { onOff } = await this.onOffCluster.readAttributes(['onOff']).catch(() => ({}));
+                await this.setCapabilityValue(
+                    'onoff',
+                    typeof onOff === 'boolean' ? onOff : currentLevel > 0
+                );
+            }
+        } catch (error) {
+            this.error('Error reading back level after dim move', error);
+        }
+    }
+
     async onSettings({ oldSettings, newSettings, changedKeys }) {
        
         if (changedKeys.includes('powerOnCtrl_state') || changedKeys.includes('powerOnCtrl_dimvalue') || changedKeys.includes('powerOnCtrl_colorvalue')) {
@@ -89,6 +154,13 @@ class Light extends ZigBeeLightDevice {
 
         }
     
+    }
+
+    async onUninit() {
+        this._clearDimMove();
+        if (typeof super.onUninit === 'function') {
+            return super.onUninit();
+        }
     }
 
 }

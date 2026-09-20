@@ -27,6 +27,24 @@ class PhilipsHueZigbeeApp extends Homey.App {
         }
     });
 
+
+    // Continuous dimming via Zigbee LevelControl move/stop commands.
+    this.homey.flow.getActionCard('start_dim')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.startDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.startDim(args);
+    });
+
+    this.homey.flow.getActionCard('stop_dim')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.stopDim !== 'function') {
+            throw new Error('This device does not support dimming');
+        }
+        return args.device.stopDim();
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
