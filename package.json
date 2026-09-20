@@ -5,7 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "homey-zigbeedriver": "^2.2.17",
-    "zigbee-clusters": "^3.6.0"
+    "zigbee-clusters": "^3.8.0"
   },
   "scripts": {
     "run": "homey app run",
