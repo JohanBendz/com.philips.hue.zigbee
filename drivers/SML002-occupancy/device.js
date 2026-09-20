@@ -103,7 +103,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
     const batteryThreshold = this.getSetting('batteryThreshold') || 20;
     this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
     this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2).catch(this.error);
-    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error);
+    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error).catch(this.error);
 
   }
 
@@ -265,7 +265,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
       const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes(['batteryPercentageRemaining']);
       const batteryThreshold = this.getSetting('batteryThreshold') || 20;
       this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
-      this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2);
+      this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2).catch(this.error);
       this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false)
     } catch (error) {
       this.log("Error initializing PowerConfigurationCluster: ", error);
