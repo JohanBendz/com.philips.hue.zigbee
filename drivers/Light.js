@@ -2,7 +2,7 @@
 
 const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
-const { ZCLNode, Cluster, CLUSTER } = require('zigbee-clusters');
+const { Cluster } = require('zigbee-clusters');
 
 // Power On Behaviour need these
 const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
@@ -27,14 +27,11 @@ class Light extends ZigBeeLightDevice {
  	async onNodeInit({zclNode}) {
 
         await super.onNodeInit({zclNode});
-
-        this.printNode();
-
     }
 
     // Sleep for blink
     sleep(milliseconds) {
-        return new Promise(resolve => setTimeout(resolve, milliseconds));
+        return new Promise(resolve => this.homey.setTimeout(resolve, milliseconds));
     };
 
     async blink(args) {

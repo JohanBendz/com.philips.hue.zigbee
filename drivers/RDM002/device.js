@@ -12,9 +12,6 @@ Cluster.addCluster(HueSpecificBasicBoundCluster);
 class TapDialSwitch extends ZigBeeDevice {
 
   async onNodeInit({ zclNode }) {
-  
-    this.printNode();
-
     if (!this.hasCapability('measure_battery')) {
       await this.addCapability('measure_battery');
     }						

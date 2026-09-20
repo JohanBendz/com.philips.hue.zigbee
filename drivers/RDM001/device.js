@@ -10,8 +10,6 @@ Cluster.addCluster(HueSpecificBasicCluster);
 class DualWallSwitch extends ZigBeeDevice {
 
   async onNodeInit({ zclNode }) {
-
-    this.printNode();
     this._deviceMode = -1;
     this._wakeupaction = false;
 
