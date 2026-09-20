@@ -849,6 +849,58 @@
             ]
           }
         ]
+      },
+      {
+        "id": "ROM002_button",
+        "title": {
+          "en": "Button Action",
+          "nl": "Knopactie"
+        },
+        "titleFormatted": {
+          "en": "Button [[action]]",
+          "nl": "Knop [[action]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ROM002"
+          },
+          {
+            "name": "action",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "Press",
+                "label": {
+                  "en": "pressed",
+                  "nl": "drukken"
+                }
+              },
+              {
+                "id": "Release",
+                "label": {
+                  "en": "released",
+                  "nl": "loslaten"
+                }
+              },
+              {
+                "id": "Hold",
+                "label": {
+                  "en": "hold",
+                  "nl": "vasthouden"
+                }
+              },
+              {
+                "id": "LongRelease",
+                "label": {
+                  "en": "released after hold",
+                  "nl": "loslaten na vasthouden"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -19222,6 +19274,106 @@
         }
       },
       "id": "ROM001"
+    },
+    {
+      "id": "ROM002",
+      "name": {
+        "en": "Hue Wall Switch Module - Wired"
+      },
+      "class": "remote",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "zigbee"
+      ],
+      "icon": "/drivers/ROM002/assets/icon.svg",
+      "images": {
+        "large": "/drivers/ROM002/assets/images/large.png",
+        "small": "/drivers/ROM002/assets/images/small.png"
+      },
+      "capabilities": [],
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "ROM002"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              64512,
+              4096,
+              64516
+            ],
+            "bindings": [
+              6,
+              64512
+            ]
+          }
+        },
+        "devices": {
+          "secondInput": {
+            "class": "remote",
+            "capabilities": [],
+            "name": {
+              "en": "Hue Wall Switch Module - Wired, Second Input"
+            },
+            "settings": []
+          }
+        },
+        "learnmode": {
+          "image": "/drivers/ROM002/assets/icon.svg",
+          "instruction": {
+            "en": "Press the reset button for aprox. 12 seconds, until the LED is bright red, then trigger a button twice"
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "mode",
+          "type": "dropdown",
+          "value": "dualpushbutton",
+          "label": {
+            "en": "Default mode",
+            "nl": "Standaardmodus"
+          },
+          "values": [
+            {
+              "id": "singlerocker",
+              "label": {
+                "en": "Single Rocker",
+                "nl": "Enkele wip"
+              }
+            },
+            {
+              "id": "singlepushbutton",
+              "label": {
+                "en": "Single pushbutton",
+                "nl": "Enkele drukknop"
+              }
+            },
+            {
+              "id": "dualrocker",
+              "label": {
+                "en": "Dual Rocker",
+                "nl": "Dubbele wip"
+              }
+            },
+            {
+              "id": "dualpushbutton",
+              "label": {
+                "en": "Dual pushbutton",
+                "nl": "Dubbele drukknop"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "name": {
