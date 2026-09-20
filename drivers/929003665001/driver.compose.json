@@ -7,7 +7,7 @@
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/icon.png"
+    "small": "{{driverAssetsPath}}/images/small.png"
   },
   "zigbee": {
     "manufacturerName": [
