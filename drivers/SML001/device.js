@@ -1,10 +1,8 @@
 'use strict';
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { CLUSTER, Cluster } = require('zigbee-clusters');
+const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
-/* const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
-Cluster.addCluster(HueSpecificOccupancySensingCluster); */
 
 class MotionSensor extends ZigBeeDevice {
 
