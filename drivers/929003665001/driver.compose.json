@@ -1,0 +1,77 @@
+{
+  "name": {
+    "en": "Hue Dymera - bottom",
+    "de": "Hue Dymera - unten"
+  },
+  "class": "light",
+  "images": {
+    "small": "/drivers/929003665001/assets/images/small.png",
+    "large": "/drivers/929003665001/assets/images/large.png"
+  },
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature"
+  ],
+  "energy": {
+    "approximation": {
+      "usageOn": 10.2,
+      "usageOff": 0.05
+    }
+  },
+  "zigbee": {
+    "manufacturerName": "Signify Netherlands B.V.",
+    "modelId": ["LCW004", "LCW005", "929003665001"],
+    "productId": ["LCW004", "LCW005", "929003665001"],
+    "endpoints": {
+      "11": {
+        "clusters": [0, 3, 4, 5, 6, 8, 768]
+      },
+      "12": {
+        "clusters": [0, 3, 4, 5, 6, 8, 768]
+      }
+    },
+    "devices": {
+      "top": {
+        "class": "light",
+        "name": {
+          "en": "Hue Dymera - Top",
+          "de": "Hue Dymera - Oben"
+        },
+        "capabilities": [
+          "onoff",
+          "dim",
+          "light_hue",
+          "light_saturation",
+          "light_temperature"
+        ],
+        "energy": {
+          "approximation": {
+            "usageOn": 10.2,
+            "usageOff": 0.05
+          }
+        },
+        "settings": []
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "instructions",
+      "navigation": {},
+      "template": "instructions",
+      "options": {
+        "title": {
+          "en": "How to pair your Hue Dymera",
+          "de": "Hue Dymera verbinden"
+        },
+        "body": {
+          "en": "1. Make sure the light is powered on.\n2. Reset the light if necessary.\n3. Homey will automatically discover the device. Two devices will be created: Top and Bottom.",
+          "de": "1. Stelle sicher, dass die Leuchte eingeschaltet ist.\n2. Setze die Leuchte bei Bedarf zurück.\n3. Homey erkennt das Gerät automatisch. Es werden zwei Geräte erstellt: Oben und Unten."
+        }
+      }
+    }
+  ]
+}
