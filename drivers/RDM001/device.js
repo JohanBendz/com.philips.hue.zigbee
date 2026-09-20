@@ -1,5 +1,6 @@
 'use strict';
 
+const { isDeepStrictEqual } = require('node:util');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
@@ -136,26 +137,57 @@ class DualWallSwitch extends ZigBeeDevice {
     }
   }
 
+  _getInputDevice(inputNumber) {
+    if (inputNumber === 1) {
+      return this;
+    }
+
+    if (inputNumber !== 2) {
+      return null;
+    }
+
+    const rootData = this.getData();
+    const devices = Object.values(this.driver.getDevices());
+
+    return devices.find(device => {
+      const data = device.getData();
+      if (data.subDeviceId !== 'secondInput') {
+        return false;
+      }
+
+      return Object.entries(rootData)
+        .every(([key, value]) => isDeepStrictEqual(data[key], value));
+    }) || null;
+  }
+
   _buttonCommandParser(frame) {
     if (!Buffer.isBuffer(frame) || frame.length < 10) {
       return;
     }
 
+    const inputNumber = frame.readUInt8(5);
     const actionValue = frame.readUInt8(9);
-    const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
+    const targetDevice = this._getInputDevice(inputNumber);
 
-    if ( ( this.deviceMode === "singlerocker" ) ||  ( this.deviceMode === "dualrocker" ) ) {
-      if ( actionValue == 0x02 ) {
-        return this.TriggerDevice.trigger(this, {}, {})
-        .then(() => this.log(`triggered RDM001_rockerswitch`))
-        .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
-      } 
-    } else {
-      return this.TriggerDevice.trigger(this, {}, {action: `${action}`})
-      .then(() => this.log(`triggered RDM001_pushbuttons, action=${action}`))
-      .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
+    if (!targetDevice) {
+      this.error(`Could not resolve RDM001 input ${inputNumber} to a Homey device`);
+      return;
     }
-    
+
+    const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
+    const targetName = inputNumber === 1 ? 'firstInput' : 'secondInput';
+
+    if (this.deviceMode === 'singlerocker' || this.deviceMode === 'dualrocker') {
+      if (actionValue === 0x02) {
+        return this.TriggerDevice.trigger(targetDevice, {}, {})
+          .then(() => this.log(`triggered RDM001_rockerswitch, input=${targetName}`))
+          .catch(err => this.error('Error triggering RDM001_rockerswitch', err));
+      }
+    } else {
+      return this.TriggerDevice.trigger(targetDevice, {}, { action })
+        .then(() => this.log(`triggered RDM001_pushbuttons, input=${targetName}, action=${action}`))
+        .catch(err => this.error('Error triggering RDM001_pushbuttons', err));
+    }
   }
 
   async onUninit() {
