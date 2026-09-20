@@ -8,9 +8,6 @@ const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
 class DimmerSwitch extends ZigBeeDevice {
 
 async onNodeInit({ zclNode }) {
-
-  this.printNode();
-    
     // Buttons
     zclNode.endpoints[1].bind(CLUSTER.ON_OFF.NAME, new OnOffBoundCluster({
       onSetOn: this._onCommandParser.bind(this),

@@ -10,9 +10,6 @@ Cluster.addCluster(HueSpecificBasicCluster);
 class DimmerSwitchGen3 extends ZigBeeDevice {
 
 async onNodeInit({ zclNode }) {
-  
-  this.printNode();
-
     if (!this.hasCapability('measure_battery')) {
       await this.addCapability('measure_battery');
     }
