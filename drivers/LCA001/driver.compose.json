@@ -2,7 +2,9 @@
   "name": {
     "en": "Bulb E27 White and Color Ambiance BT"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9,
@@ -17,6 +19,7 @@
     "productId": [
       "LCA001",
       "LCA004",
+      "LCA005",
       "LCA006",
       "LCA008"
     ],
