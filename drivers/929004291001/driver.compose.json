@@ -1,0 +1,41 @@
+{
+  "name": {
+    "en": "Hue Slim Recessed Light 90mm",
+    "de": "Hue Slim Einbauleuchte 90mm"
+  },
+  "class": "light",
+  "capabilities": [
+    "onoff",
+    "dim",
+    "light_hue",
+    "light_saturation",
+    "light_temperature"
+  ],
+  "zigbee": {
+    "manufacturerName": "Signify Netherlands B.V.",
+    "modelId": "929004291001",
+    "productId": "929004291001",
+    "endpoints": {
+      "11": {
+        "clusters": [0, 3, 4, 5, 6, 8, 768, 4096]
+      }
+    }
+  },
+  "pair": [
+    {
+      "id": "instructions",
+      "navigation": {},
+      "template": "instructions",
+      "options": {
+        "title": {
+          "en": "How to pair your Hue Slim Light",
+          "de": "Hue Slim Einbauleuchte verbinden"
+        },
+        "body": {
+          "en": "1. Make sure the light is powered on.\n2. Reset the light if necessary.\n3. Homey will automatically discover the device.",
+          "de": "1. Stelle sicher, dass die Leuchte mit Strom versorgt wird.\n2. Setze die Leuchte bei Bedarf zurück.\n3. Homey erkennt das Gerät automatisch."
+        }
+      }
+    }
+  ]
+}
