@@ -24,3 +24,27 @@ test('ROM002 bindings and both historical Flow action IDs stay in sync', () => {
   assert.ok(actions.includes('LongPress'));
   assert.ok(actions.includes('LongRelease'));
 });
+
+test('PR #709 drivers have complete correctly sized PNG assets', () => {
+  for (const id of ['929003665001', '929004291001']) {
+    const driver = manifest.drivers.find(driver => driver.id === id);
+    assert.ok(driver);
+    for (const [name, size] of [['small', 75], ['large', 500]]) {
+      const bytes = fs.readFileSync(path.join(root, driver.images[name]));
+      assert.equal(bytes.subarray(1, 4).toString(), 'PNG');
+      assert.equal(bytes.readUInt32BE(16), size);
+      assert.equal(bytes.readUInt32BE(20), size);
+    }
+    assert.ok(fs.existsSync(path.join(root, driver.icon)));
+  }
+});
+
+test('Dymera keeps model matching and subdevice capabilities/settings consistent', () => {
+  const driver = manifest.drivers.find(driver => driver.id === '929003665001');
+  assert.deepEqual(driver.zigbee.productId, ['LCW004', 'LCW005']);
+  assert.deepEqual(driver.zigbee.devices.top.capabilities, driver.capabilities);
+  assert.deepEqual(driver.zigbee.devices.top.capabilitiesOptions, driver.capabilitiesOptions);
+  // Homey copies omitted subdevice properties from the root, including settings.
+  assert.equal(driver.zigbee.devices.top.settings, undefined);
+  assert.ok(driver.settings.some(setting => setting.children?.some(child => child.id === 'powerOnCtrl_state')));
+});

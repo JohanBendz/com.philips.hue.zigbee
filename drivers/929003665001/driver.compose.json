@@ -1,0 +1,44 @@
+{
+  "name": {
+    "en": "Hue Dymera - Bottom",
+    "de": "Hue Dymera - Unten"
+  },
+  "$extends": ["light_color_ambiance"],
+  "energy": {
+    "approximation": { "usageOn": 10.2, "usageOff": 0.05 }
+  },
+  "zigbee": {
+    "manufacturerName": ["Signify Netherlands B.V."],
+    "productId": ["LCW004", "LCW005"],
+    "endpoints": {
+      "11": { "clusters": [0, 3, 4, 5, 6, 8, 768] },
+      "12": { "clusters": [0, 3, 4, 5, 6, 8, 768] }
+    },
+    "devices": {
+      "top": {
+        "class": "light",
+        "name": {
+          "en": "Hue Dymera - Top",
+          "de": "Hue Dymera - Oben"
+        },
+        "capabilities": ["onoff", "dim", "light_hue", "light_saturation", "light_temperature", "light_mode"],
+        "capabilitiesOptions": {
+          "onoff": { "setOnDim": false },
+          "dim": { "opts": { "duration": true } },
+          "light_hue": { "opts": { "duration": true } },
+          "light_saturation": { "opts": { "duration": true } },
+          "light_temperature": { "opts": { "duration": true } }
+        },
+        "energy": {
+          "approximation": { "usageOn": 10.2, "usageOff": 0.05 }
+        }
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge. Two devices will be added: Bottom and Top.",
+        "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück. Zwei Geräte werden hinzugefügt: Unten und Oben."
+      }
+    }
+  }
+}

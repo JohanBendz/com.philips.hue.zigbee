@@ -8899,6 +8899,367 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/929003665001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929003665001/assets/images/large.png",
+        "small": "/drivers/929003665001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Hue Dymera - Bottom",
+        "de": "Hue Dymera - Unten"
+      },
+      "energy": {
+        "approximation": {
+          "usageOn": 10.2,
+          "usageOff": 0.05
+        }
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCW004",
+          "LCW005"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              768
+            ]
+          },
+          "12": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "devices": {
+          "top": {
+            "class": "light",
+            "name": {
+              "en": "Hue Dymera - Top",
+              "de": "Hue Dymera - Oben"
+            },
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_hue",
+              "light_saturation",
+              "light_temperature",
+              "light_mode"
+            ],
+            "capabilitiesOptions": {
+              "onoff": {
+                "setOnDim": false
+              },
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "light_hue": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "light_saturation": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "light_temperature": {
+                "opts": {
+                  "duration": true
+                }
+              }
+            },
+            "energy": {
+              "approximation": {
+                "usageOn": 10.2,
+                "usageOff": 0.05
+              }
+            }
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge. Two devices will be added: Bottom and Top.",
+            "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück. Zwei Geräte werden hinzugefügt: Unten und Oben."
+          }
+        }
+      },
+      "id": "929003665001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929004291001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929004291001/assets/images/large.png",
+        "small": "/drivers/929004291001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Hue Slim Recessed Light 90mm",
+        "de": "Hue Slim Einbauleuchte 90mm"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929004291001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              5,
+              6,
+              8,
+              768,
+              4096
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge.",
+            "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück."
+          }
+        }
+      },
+      "id": "929004291001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/HBL001/assets/icon.svg",
       "images": {
         "large": "/drivers/HBL001/assets/images/large.png",
