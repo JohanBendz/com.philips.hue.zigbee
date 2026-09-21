@@ -2,7 +2,9 @@
   "name": {
     "en": "Buckram Spotlights"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 5,
@@ -22,7 +24,8 @@
       "929003048301_01",
       "929003048301_02",
       "929003048301_03",
-      "929003048301_04"
+      "929003048301_04",
+      "5047131P9"
     ],
     "endpoints": {
       "11": {
