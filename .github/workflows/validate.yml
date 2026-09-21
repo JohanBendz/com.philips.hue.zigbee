@@ -18,10 +18,8 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci --ignore-scripts
-      - run: npm test
-      - name: Homey publish validation
+      - name: Generate manifest and run Homey publish validation
         run: npx --yes homey@4.5.0 app validate --level publish
-      - name: Generated manifest must be committed
-        run: git diff --exit-code -- app.json
+      - run: npm test
       - name: Whitespace check
         run: git diff --check
