@@ -1,0 +1,34 @@
+{
+  "name": {
+    "en": "Solo Lightstrip"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LCL008"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the lightstrip to start pairing.\n\nIf pairing does not automatically start you probably need to reset it with a remote or a Philips Hue bridge."
+      }
+    }
+  }
+}
