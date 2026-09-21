@@ -13,13 +13,14 @@ Use Node.js 22 or newer:
 
 ```sh
 npm ci --ignore-scripts
-npm test
 npx --yes homey@4.5.0 app validate --level publish
-git diff --exit-code -- app.json
+npm test
 ```
 
-Compose is the source of truth. Regenerate and commit `app.json` after changing
-drivers or Flow cards. The workflow checks for stale generated output.
+Compose is the source of truth. Issue PRs should change Compose, not the generated
+`app.json`. Homey CLI regenerates `app.json` during verification before the test
+suite runs, so tests exercise the generated manifest without creating noisy
+manifest diffs in each PR.
 
 Tests exercise real app classes and the pinned `homey-zigbeedriver`, with a mocked
 Homey SDK boundary and synthetic Zigbee frames. They do not prove radio delivery,
