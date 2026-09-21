@@ -2,7 +2,7 @@
 
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
-const { remote, buttonFrame } = require('./helpers');
+const { loadDriver, remote, buttonFrame } = require('./helpers');
 
 for (const id of ['RDM001', 'RDM002', 'RWL022', 'ROM002']) {
   test(`${id}: ZCL pass-through preserves receiver, arguments and cleanup`, async () => {
@@ -91,3 +91,47 @@ for (const id of ['RDM001', 'RDM002', 'RWL022']) {
     assert.equal(device.values.measure_battery, 50);
   });
 }
+
+
+test('RWL000: legacy devices migrate measure_battery and refresh on wake', async () => {
+  const Driver = loadDriver('RWL000');
+  const device = new Driver();
+  device.capabilities = new Set(['alarm_battery']);
+  device.isFirstInit = () => false;
+
+  const registered = [];
+  device.registerCapability = id => registered.push(id);
+  const card = {
+    registerRunListener() { return this; },
+    async trigger() {},
+  };
+  device.homey = {
+    flow: { getDeviceTriggerCard: () => card },
+  };
+  device.zclNode = {
+    endpoints: {
+      1: { bind() {} },
+      2: {
+        clusters: {
+          powerConfiguration: {
+            readAttributes: async () => ({ batteryPercentageRemaining: 150 }),
+          },
+        },
+      },
+    },
+  };
+
+  await device.onNodeInit({ zclNode: device.zclNode });
+  assert.equal(device.hasCapability('measure_battery'), true);
+  assert.deepEqual(registered, ['measure_battery', 'alarm_battery']);
+
+  await device.onEndDeviceAnnounce();
+  assert.equal(device.values.measure_battery, 75);
+  assert.equal(device.values.alarm_battery, false);
+
+  device.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes =
+    async () => ({ batteryPercentageRemaining: 255 });
+  await device.onEndDeviceAnnounce();
+  assert.equal(device.values.measure_battery, 75);
+  assert.equal(device.values.alarm_battery, false);
+});

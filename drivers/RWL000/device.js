@@ -65,6 +65,35 @@ async onNodeInit({ zclNode }) {
 
   }
 
+  async _refreshBattery() {
+    try {
+      const result = await this.zclNode.endpoints[2].clusters.powerConfiguration
+        .readAttributes(['batteryPercentageRemaining']);
+      const raw = result.batteryPercentageRemaining;
+      if (typeof raw !== 'number' || raw < 0 || raw > 200 || raw === 255) {
+        return null;
+      }
+
+      const percentage = Math.round(raw / 2);
+      if (this.hasCapability('measure_battery')) {
+        await this.setCapabilityValue('measure_battery', percentage);
+      }
+      if (this.hasCapability('alarm_battery')) {
+        await this.setCapabilityValue('alarm_battery', percentage <= 20);
+      }
+      return percentage;
+    } catch (error) {
+      this.log('Could not refresh dimmer-switch battery state:', error);
+      return null;
+    }
+  }
+
+  async onEndDeviceAnnounce() {
+    await this._refreshBattery();
+    await this.setAvailable()
+      .catch(err => this.error('Error setting dimmer switch available', err));
+  }
+
   _onCommandParser() {
     return this._switchOnTriggerDevice.trigger(this, {}, {})
       .then(() => this.log('triggered RWL000_on'))
