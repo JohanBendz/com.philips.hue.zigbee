@@ -2,7 +2,9 @@
   "name": {
     "en": "Runner Spotlights"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 5,
@@ -22,7 +24,9 @@
       "5309230P6",
       "5309231P6",
       "5309330P6",
-      "5309331P6"
+      "5309331P6",
+      "929003045601_01",
+      "929003045601_02"
     ],
     "endpoints": {
       "11": {
