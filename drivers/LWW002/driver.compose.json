@@ -2,7 +2,9 @@
   "name": {
     "en": "Lucca Outdoor Post"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9,
@@ -16,8 +18,7 @@
     ],
     "productId": [
       "LWW002",
-      "1740393P0",
-      "LWF002"
+      "1740393P0"
     ],
     "endpoints": {
       "11": {

@@ -2,7 +2,9 @@
   "name": {
     "en": "Aurelle Panel Light"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 55,
@@ -15,7 +17,6 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LTC012",
       "LTC015",
       "LTC013",
       "LTC016"
