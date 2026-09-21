@@ -70,3 +70,12 @@ test('LWG005 is matched by the existing LWG004 white GU10 driver', () => {
   assert.deepEqual(generated.zigbee.productId, ['LWG004', 'LWG005']);
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8]);
 });
+
+
+test('LCL007 is matched by the existing LCL001 Lightstrip Plus V4 driver', () => {
+  const compose = require('../drivers/LCL001/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LCL001');
+  assert.ok(compose.zigbee.productId.includes('LCL007'));
+  assert.ok(generated.zigbee.productId.includes('LCL007'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});

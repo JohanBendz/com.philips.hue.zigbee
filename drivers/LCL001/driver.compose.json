@@ -2,7 +2,9 @@
   "name": {
     "en": "Lightstrip Plus V4"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 20.5,
@@ -16,7 +18,8 @@
     ],
     "productId": [
       "LCL001",
-      "LCL006"
+      "LCL006",
+      "LCL007"
     ],
     "endpoints": {
       "11": {
