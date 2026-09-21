@@ -135,3 +135,26 @@ test('RWL000: legacy devices migrate measure_battery and refresh on wake', async
   assert.equal(device.values.measure_battery, 75);
   assert.equal(device.values.alarm_battery, false);
 });
+
+
+test('RWL022: announce refreshes battery after reporting is configured', async () => {
+  const { device } = remote('RWL022');
+  await device.onNodeInit({ zclNode: device.zclNode });
+
+  device.configureAttributeReporting = async () => {};
+  device.zclNode.endpoints[1].clusters.powerConfiguration = {
+    readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
+  };
+
+  await device.onEndDeviceAnnounce();
+  assert.equal(device.values.measure_battery, 80);
+  assert.equal(device._batteryReportingConfigured, true);
+
+  device.zclNode.endpoints[1].clusters.powerConfiguration.readAttributes =
+    async () => ({ batteryPercentageRemaining: 120 });
+  await device.onEndDeviceAnnounce();
+  assert.equal(device.values.measure_battery, 60);
+
+  device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
+  assert.equal(device.values.measure_battery, 60);
+});

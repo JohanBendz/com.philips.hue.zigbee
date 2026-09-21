@@ -49,6 +49,28 @@ async onNodeInit({ zclNode }) {
     }
   }
 
+  _applyBatteryPercentage(rawPercentage) {
+    if (typeof rawPercentage !== 'number' || rawPercentage < 0 || rawPercentage > 200 || rawPercentage === 255) {
+      return null;
+    }
+
+    const percentage = Math.round(rawPercentage / 2);
+    this.setCapabilityValue('measure_battery', percentage)
+      .catch(err => this.error('Failed to update battery level:', err));
+    return percentage;
+  }
+
+  async _refreshBattery() {
+    try {
+      const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
+        .readAttributes(['batteryPercentageRemaining']);
+      return this._applyBatteryPercentage(result.batteryPercentageRemaining);
+    } catch (error) {
+      this.log('Could not refresh Gen 3 dimmer battery state:', error);
+      return null;
+    }
+  }
+
   async _setupBatteryReporting() {
     await this.configureAttributeReporting([{
       endpointId: 1,
@@ -59,13 +81,7 @@ async onNodeInit({ zclNode }) {
       minChange: 1,
     }]);
 
-    const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
-      .readAttributes(['batteryPercentageRemaining']);
-
-    if (typeof result.batteryPercentageRemaining === 'number') {
-      await this.setCapabilityValue('measure_battery', result.batteryPercentageRemaining / 2);
-    }
-
+    await this._refreshBattery();
     this._batteryReportingConfigured = true;
   }
 
@@ -73,7 +89,10 @@ async onNodeInit({ zclNode }) {
     if (!this._batteryReportingConfigured) {
       await this._setupBatteryReporting()
         .catch(err => this.error('Battery reporting setup on announce failed:', err));
+      return;
     }
+
+    await this._refreshBattery();
   }
 
   _powerParser(frame) {
@@ -96,9 +115,7 @@ async onNodeInit({ zclNode }) {
     }
 
     if (rawPercentage !== undefined) {
-      const percentage = rawPercentage / 2;
-      this.setCapabilityValue('measure_battery', percentage)
-        .catch(err => this.error('Failed to update battery level:', err));
+      this._applyBatteryPercentage(rawPercentage);
     }
   }
 
