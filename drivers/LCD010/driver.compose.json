@@ -1,18 +1,18 @@
 {
   "name": {
-    "en": "Hue Slim Recessed Light 90mm",
-    "de": "Hue Slim Einbauleuchte 90mm"
+    "en": "Hue Slim Recessed Light 170mm"
   },
   "$extends": [
     "light_color_ambiance"
   ],
   "zigbee": {
     "manufacturerName": [
+      "Philips",
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "929004291001",
-      "LCD009"
+      "LCD010",
+      "LCD011"
     ],
     "endpoints": {
       "11": {
@@ -30,8 +30,7 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge.",
-        "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück."
+        "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge."
       }
     }
   }
