@@ -2,7 +2,9 @@
   "name": {
     "en": "Iris Living Colors"
   },
-  "$extends": ["light_color"],
+  "$extends": [
+    "light_color"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 10,
@@ -19,7 +21,8 @@
       "929002376101",
       "929002376201",
       "929002376301",
-      "929002376401"
+      "929002376401",
+      "929002376402"
     ],
     "endpoints": {
       "11": {
