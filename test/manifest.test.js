@@ -158,3 +158,14 @@ test('known product IDs are owned by their specific active driver', () => {
     assert.equal(wrongIds.includes(productId), false, `${productId} still claimed by ${wrongDriver}`);
   }
 });
+
+
+test('LCL008 Solo Lightstrip uses a dedicated color-ambiance driver', () => {
+  const compose = require('../drivers/LCL008/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LCL008');
+  assert.deepEqual(compose.zigbee.productId, ['LCL008']);
+  assert.ok(generated.capabilities.includes('light_hue'));
+  assert.ok(generated.capabilities.includes('light_saturation'));
+  assert.ok(generated.capabilities.includes('light_temperature'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
