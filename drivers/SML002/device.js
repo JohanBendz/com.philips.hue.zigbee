@@ -15,6 +15,8 @@ class OutDoorSensor extends ZigBeeDevice {
 	}
 
 	async onNodeInit({ zclNode }) {
+		await this._migrateLegacyBatteryThreshold();
+		this._registerBatteryCapabilities();
 		// alarm_motion
 		if (this.hasCapability('alarm_motion')) {
 			this.registerCapability('alarm_motion', CLUSTER.OCCUPANCY_SENSING);
@@ -82,41 +84,6 @@ class OutDoorSensor extends ZigBeeDevice {
 				}
 			}
 
-			// measure_battery
-			if (this.hasCapability('measure_battery')) {
-				this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
-					getOpts: {
-					getOnStart: true,
-					},
-					reportOpts: {
-						configureAttributeReporting: {
-							minInterval: 300,
-							maxInterval: 60000,
-							minChange: 1,
-						},
-					},
-				});
-
-			}
-
-			// alarm_battery
-			if (this.hasCapability('alarm_battery')) {
-				this.batteryThreshold = this.getSetting('batteryThreshold') * 10;
-					this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
-						getOpts: {
-						getOnStart: true,
-						},
-						reportOpts: {
-							configureAttributeReporting: {
-								minInterval: 300,
-								maxInterval: 60000,
-								minChange: 1,
-							},
-						},
-				});
-
-			}
-
 			this._listenersRegistered = true;
 			this.log("Event listeners registered (first init)");
 
@@ -149,6 +116,68 @@ class OutDoorSensor extends ZigBeeDevice {
 
 				this._listenersRegistered = true;
 				this.log("Event listeners registered (reconnect)");
+			}
+		}
+	}
+
+	_registerBatteryCapabilities() {
+		if (this.hasCapability('measure_battery')) {
+			this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+				getOpts: { getOnStart: true },
+				reportOpts: {
+					configureAttributeReporting: {
+						minInterval: 300,
+						maxInterval: 60000,
+						minChange: 1,
+					},
+				},
+			});
+		}
+
+		if (this.hasCapability('alarm_battery')) {
+			this.registerCapability('alarm_battery', CLUSTER.POWER_CONFIGURATION, {
+				getOpts: { getOnStart: true },
+				reportOpts: {
+					configureAttributeReporting: {
+						minInterval: 300,
+						maxInterval: 60000,
+						minChange: 1,
+					},
+				},
+			});
+		}
+	}
+
+	async _refreshBattery() {
+		try {
+			const result = await this.zclNode.endpoints[2].clusters.powerConfiguration
+				.readAttributes(['batteryPercentageRemaining']);
+			const raw = result.batteryPercentageRemaining;
+			if (typeof raw !== 'number' || raw < 0 || raw > 200 || raw === 255) {
+				return;
+			}
+
+			const percentage = Math.round(raw / 2);
+			if (this.hasCapability('measure_battery')) {
+				await this.setCapabilityValue('measure_battery', percentage);
+			}
+			if (this.hasCapability('alarm_battery')) {
+				const threshold = Number(this.getSetting('batteryThreshold')) || 20;
+				await this.setCapabilityValue('alarm_battery', percentage <= threshold);
+			}
+		} catch (error) {
+			this.log('Could not refresh legacy motion sensor battery state:', error);
+		}
+	}
+
+	async _migrateLegacyBatteryThreshold() {
+		const current = Number(this.getSetting('batteryThreshold'));
+		if (Number.isFinite(current) && current > 0 && current <= 5) {
+			try {
+				await this.setSettings({ batteryThreshold: 20 });
+				this.log(`Migrated legacy battery threshold from ${current} V to 20%`);
+			} catch (error) {
+				this.error('Could not migrate legacy battery threshold to percentage', error);
 			}
 		}
 	}
@@ -240,6 +269,7 @@ class OutDoorSensor extends ZigBeeDevice {
 	}
 
 	async onEndDeviceAnnounce() {
+		await this._refreshBattery();
 		await this.setAvailable() // Mark the device as available upon re-announcement
 		  .then(() => this.log('Device is now available'))
 		  .catch(err => this.error('Error setting device available', err));

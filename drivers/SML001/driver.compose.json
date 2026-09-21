@@ -55,5 +55,6 @@
         "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
       }
     }
-  }
+  },
+  "deprecated": true
 }
