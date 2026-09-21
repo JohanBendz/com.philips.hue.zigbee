@@ -24,6 +24,48 @@ as 2.1.0 is insufficient to identify a tested build: use its commit SHA.
 5. **Broader network reports**: collect comparable fresh logs before deciding
    whether a report is an app lifecycle failure, configuration error or radio loss.
 
+## Progress after the first Test release
+
+The inventory below is a snapshot from 2026-09-20. Issue work after the 2.1.1
+Test release is tracked here without rewriting the original queue counts.
+
+Evidence-backed device mappings merged to `modernize-2026` after 2.1.1:
+
+- #697 — LCA011 -> existing LCA001 White and Color Ambiance driver.
+- #647 — LWG005 -> existing LWG004 Hue White GU10 Bluetooth driver.
+- #653 — LCL007 -> existing LCL001 Lightstrip Plus V4 driver.
+- #666 — 5047131P9 -> existing 5047131P6 Buckram Spotlights driver.
+- #516 — LWO005 -> existing LWO001 G93 white filament driver; #650 is duplicate.
+- #628 — 929003597801 -> existing LTC014 Aurelle Panel Square driver.
+- #625 — 929003045601_01 / _02 -> existing 5309031P9 Runner Spotlights driver.
+
+Each change was isolated in its own issue branch/PR, passed Homey publish
+validation and regression tests, and was merged without committing generated
+`app.json`. The corresponding issues remain open until the mapping is exercised
+on physical hardware through a subsequent Test build.
+
+Issue cleanup:
+
+- #629 was closed as a duplicate of #684; #684 contains the LCO005 interview.
+- #586 and #624 were updated to request Test-channel hardware confirmation for
+  already-implemented LWE007, LWV005 and LTV001.
+- #631 was updated with the existing LTE005 mapping correction and re-pair
+  requirement.
+- #634 was invited to submit the contributor's hardware-tested Xamento work
+  against `modernize-2026`.
+
+The easy alias batch is now largely exhausted. Remaining device requests should
+not be treated as blind aliases where the product name, capabilities or quirks
+differ. In particular:
+
+- #648 exposes a broader Iris modelling problem: newer Iris models support color
+  temperature while legacy LLC010 is color-only.
+- #456 similarly indicates Bloom LLC011/LLC012/LLC013 need a capability review.
+- #626 LCL008, #636 LCD010, #578 LCU001 and #684 LCO005 are distinct products
+  that are better candidates for dedicated drivers than misleading aliases.
+- #439 Xamento spotlight has an upstream low-brightness quirk and should be
+  handled deliberately.
+
 ## Newly reproduced protocol defects
 
 ### SOC001 (#642, #655, #660, #698)
