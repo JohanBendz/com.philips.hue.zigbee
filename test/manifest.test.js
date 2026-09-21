@@ -79,3 +79,12 @@ test('LCL007 is matched by the existing LCL001 Lightstrip Plus V4 driver', () =>
   assert.ok(generated.zigbee.productId.includes('LCL007'));
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('5047131P9 is matched by the existing Buckram spotlight driver', () => {
+  const compose = require('../drivers/5047131P6/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === '5047131P6');
+  assert.ok(compose.zigbee.productId.includes('5047131P9'));
+  assert.ok(generated.zigbee.productId.includes('5047131P9'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
