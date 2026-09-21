@@ -4,8 +4,11 @@ The current user-confirmed hardware checkpoint is `00c17c5` (2026-09-20).
 LCT000, SML002, RWL022 and both inputs of one RDM001 were exercised on a real
 Homey Pro from a clean `modernize-2026` checkout. `sdk3` remains unchanged.
 
-The subsequent 2.1.1 release-preparation commit changes only version/release
-metadata and this documentation; runtime code is unchanged from that checkpoint.
+The current runtime head after the deeper capability/migration audit is
+`4179b4e` (2026-09-21). Runtime code has changed since the physical checkpoint:
+the changes below are covered by automated tests and Homey publish validation,
+but must not be described as hardware-verified until they have been exercised on
+the corresponding physical devices.
 
 ## Reproducible local checks
 
@@ -44,8 +47,10 @@ Observed on physical hardware:
   the user confirmed the tested sensor functions worked.
 
 This confirms that the 2.2.18 Zigbee-driver update did not introduce a regression
-in those tested paths. It does **not** physically verify SOC001, ROM002,
-SML001 settings, Dymera, Slim or every supported Hue device.
+in those tested paths at `00c17c5`. It does **not** physically verify the runtime
+changes merged after that checkpoint, including capability migrations, battery
+wake-up refreshes, SOC001, ROM002, SML settings, Dymera, Slim or every supported
+Hue device.
 
 ## Test release candidate
 
@@ -84,7 +89,22 @@ manifest's input cluster list merely to make the two lists match.
 - [ ] ROM002: re-pair/bind, both inputs, mode changes, Press/Hold/Release and
       release after hold; saved Flows using either historical action ID.
 - [x] RWL022: physical button events verified.
-- [ ] RWL000/RWL022/RDM002: battery updates and button/dial Flows after restart.
+- [ ] RWL000: existing Gen 1/2 device gains/keeps `measure_battery`; replace the
+      battery, wake the remote and verify percentage + low-battery state refresh.
+- [ ] RWL022: replace the Gen 3 battery, wake the remote and verify the value is
+      refreshed even after reporting was already configured.
+- [ ] RDM002: battery updates and button/dial Flows after restart.
+- [ ] Modern Iris (`929002376101/201/301/401/402`): existing paired device gains
+      `light_temperature` and controls it correctly; legacy `LLC010` remains
+      color-only.
+- [ ] Bloom: existing LLC011/LLC012/929002375901/929002376001 and LLC013 devices
+      gain working `light_temperature`; LLC014 Aura remains color-only.
+- [ ] LTE005: an already-paired device historically attached to LWE004 gains
+      `light_temperature` + `light_mode` without re-pairing.
+- [ ] Legacy SML001/SML002: existing paired devices remain functional after their
+      pairing drivers are deprecated; battery refresh works after app restart/wake.
+- [ ] SML001/SML003/SML002/SML004 occupancy drivers: battery replacement/wake,
+      invalid-value handling, saved settings and generation-specific sensitivity.
 - [ ] SOC001: open/close and battery reports, restart and re-announce.
 - [ ] Issue #699: simultaneous on/off and duration-based dimming; 2.2.18's
       explicit-dim/readback fix is a candidate, not a confirmed hardware fix.
@@ -132,11 +152,56 @@ using real ZCLNode/Endpoint/Cluster instances from zigbee-clusters 3.8.0.
   manufacturer-specific attributes. Radio strings are converted correctly;
   zero sensitivity and disabled LED are preserved.
 - The four initial protocol regression cases failed before these corrections.
-  The full suite now contains 36 tests, including reporting-store and
-  repeated-init cleanup checks.
+  The suite has since been expanded with capability migration, settings migration,
+  product-ID ownership and battery lifecycle regression tests.
 - Re-save sensitivity/LED settings, then wake the sensor. Existing SOC001
   installations need a wake/re-announce or repair test; new pairing must also be
   tested to verify the updated binding list on hardware.
 
-See [issue-triage-2026.md](issue-triage-2026.md) for all 120 open issues and the
-distinction between concrete code fixes, hardware test candidates and new work.
+See [issue-triage-2026.md](issue-triage-2026.md) for the first-pass issue inventory
+and the distinction between concrete code fixes, hardware test candidates and new
+work. The inventory is a dated snapshot; GitHub is the source of truth for the
+current open-issue count.
+
+
+## Capability and migration audit — 2026-09-21
+
+A second pass reviewed not just whether a model is supported, but whether existing
+paired devices survive capability, driver and settings changes.
+
+Merged after the `00c17c5` hardware checkpoint:
+
+- **#720 / Iris** — modern Iris product IDs migrate in place to
+  `light_temperature`; legacy LLC010 remains color-only. Added
+  `929002376402`.
+- **#721 / Bloom** — Bloom variants gain `light_temperature` in place while
+  LLC014 LivingColors Aura remains color-only; LLC013 Compose was corrected.
+- **#722 / LTE005** — devices historically paired under the wrong LWE004 driver
+  gain `light_temperature` and `light_mode` without re-pairing.
+- **#723 / occupancy settings** — repaired missing initial setting values and
+  atomically initializes missing settings on already-paired occupancy sensors.
+- **#724 / sensitivity** — old SML001/SML002 generations are limited to 0–2;
+  newer SML003/SML004 accept 0–4. The shared settings UI exposes the union and
+  runtime validates by actual Zigbee product ID.
+- **#725 / legacy SML migration** — legacy SML001/SML002 pairing drivers are
+  deprecated for new pairing but retained for installed devices. Their battery
+  capability registration now survives app restarts, and old SML002 voltage-style
+  battery thresholds migrate to percentage semantics.
+- **#726 / occupancy battery** — current occupancy drivers reject invalid Zigbee
+  battery value 255, tolerate sleeping-device read failures and refresh battery
+  state on announce/wake.
+- **#727 / product-ID ownership** — removed four accidental active-driver
+  collisions: 1742930P7, LTC012, LWA011 and LWF002. Existing paired devices are
+  not moved; only future matching is made unambiguous. Phoenix LLM010/011/012
+  remains an explicit unresolved overlap pending stronger hardware-backed mapping.
+- **#728 / RWL000** — the existing `measure_battery` capability migration now
+  also refreshes Gen 1/2 dimmer battery state on announce/wake.
+- **#729 / RWL022** — Gen 3 dimmer battery is refreshed on every announce and
+  invalid value 255 is ignored.
+
+Every PR above passed the Node.js test suite and Homey CLI publish validation
+before merge. These are migration/protocol checks, not substitutes for the
+hardware checklist above.
+
+The physical checkpoint therefore remains `00c17c5`; the tested runtime head for
+automated checks is `4179b4e`.
