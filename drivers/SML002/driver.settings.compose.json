@@ -37,16 +37,16 @@
     "id": "batteryThreshold",
     "type": "number",
     "label": {
-      "en": "Battery Low Alarm Voltage Threshold (volt)"
+      "en": "Low Battery Alarm Threshold (%)"
     },
     "hint": {
-      "en": "This setting determines the threshold before a battery alarm is given."
+      "en": "This setting determines the battery percentage threshold before a battery alarm is given."
     },
-    "value": 2.9,
+    "value": 20,
     "attr": {
-      "step": 0.1,
-      "min": 0,
-      "max": 6553
+      "step": 1,
+      "min": 1,
+      "max": 99
     }
   },
   {

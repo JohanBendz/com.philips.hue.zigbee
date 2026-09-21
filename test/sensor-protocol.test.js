@@ -197,3 +197,70 @@ test('occupancy drivers expose the full sensitivity union but enforce generation
     }
   }
 });
+
+
+test('legacy motion sensor drivers stay available for existing devices but are hidden from pairing', () => {
+  for (const id of ['SML001', 'SML002']) {
+    const compose = require(`../drivers/${id}/driver.compose.json`);
+    assert.equal(compose.deprecated, true, id);
+  }
+});
+
+for (const [id, threshold] of [['SML001', 20], ['SML002', 20]]) {
+  test(`${id}: battery capabilities are registered after app restart and refreshed on announce`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.capabilities = new Set(['measure_battery', 'alarm_battery']);
+    device.settings.batteryThreshold = threshold;
+    device.isFirstInit = () => false;
+    device.registerCapability = (...args) => {
+      device.registeredCapabilities = device.registeredCapabilities || [];
+      device.registeredCapabilities.push(args[0]);
+    };
+    const listeners = { on() {}, removeListener() {} };
+    device.zclNode = {
+      endpoints: {
+        1: { bind() {}, clusters: {} },
+        2: {
+          clusters: {
+            temperatureMeasurement: listeners,
+            illuminanceMeasurement: listeners,
+            powerConfiguration: {
+              readAttributes: async () => ({ batteryPercentageRemaining: 84 }),
+            },
+          },
+        },
+      },
+    };
+
+    await device.onNodeInit({ zclNode: device.zclNode });
+    assert.deepEqual(device.registeredCapabilities, ['measure_battery', 'alarm_battery']);
+
+    await device.onEndDeviceAnnounce();
+    assert.equal(device.values.measure_battery, 42);
+    assert.equal(device.values.alarm_battery, false);
+  });
+}
+
+test('legacy SML002 voltage threshold is migrated to percentage semantics', async () => {
+  const Driver = loadDriver('SML002');
+  const device = new Driver();
+  device.settings.batteryThreshold = 2.9;
+  const calls = [];
+  device.setSettings = async values => {
+    calls.push(values);
+    Object.assign(device.settings, values);
+  };
+
+  await device._migrateLegacyBatteryThreshold();
+  assert.deepEqual(calls, [{ batteryThreshold: 20 }]);
+  assert.equal(device.getSetting('batteryThreshold'), 20);
+
+  await device._migrateLegacyBatteryThreshold();
+  assert.equal(calls.length, 1);
+
+  const setting = require('../drivers/SML002/driver.settings.compose.json')
+    .find(item => item.id === 'batteryThreshold');
+  assert.equal(setting.value, 20);
+  assert.equal(setting.label.en, 'Low Battery Alarm Threshold (%)');
+});
