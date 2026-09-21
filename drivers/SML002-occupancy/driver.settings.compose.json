@@ -1,5 +1,5 @@
 [
-    {
+  {
     "id": "motion_sensitivity",
     "type": "radio",
     "label": {
@@ -61,7 +61,8 @@
           "sv": "Inaktiverad"
         }
       }
-    ]
+    ],
+    "value": "false"
   },
   {
     "id": "temperature_offset",

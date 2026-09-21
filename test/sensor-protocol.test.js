@@ -114,3 +114,48 @@ test('SOC001: repeated initialization does not accumulate listeners or lose an e
   assert.equal(endpoint.bindings.onOff, previousBinding);
   assert.equal(endpoint.clusters.hueContact.listenerCount('attr.contact'), 0);
 });
+
+
+for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+  test(`${id}: missing device settings are initialized atomically`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.settings = { minReportLux: 120 };
+    const calls = [];
+    device.setSettings = async values => {
+      calls.push(values);
+      Object.assign(device.settings, values);
+    };
+
+    const migrated = await device._migrateMissingSettings();
+    assert.equal(calls.length, 1);
+    assert.deepEqual(calls[0], migrated);
+    assert.equal(migrated.ledIndicator, 'false');
+    assert.equal(migrated.motion_sensitivity, '2');
+    assert.equal(migrated.minReportLux, undefined);
+    assert.equal(migrated.maxReportLux, 300);
+
+    await device._migrateMissingSettings();
+    assert.equal(calls.length, 1);
+  });
+
+  test(`${id}: migration preserves an older stored LED preference`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.settings = {};
+    device.store.ledIndicator = true;
+    device.setSettings = async values => Object.assign(device.settings, values);
+
+    const migrated = await device._migrateMissingSettings();
+    assert.equal(migrated.ledIndicator, 'true');
+  });
+}
+
+test('occupancy sensor settings declare initial values for every editable setting', () => {
+  for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+    const settings = require(`../drivers/${id}/driver.settings.compose.json`);
+    for (const setting of settings) {
+      assert.ok(Object.prototype.hasOwnProperty.call(setting, 'value'), `${id}:${setting.id}`);
+    }
+  }
+});
