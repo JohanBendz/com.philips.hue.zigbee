@@ -2,7 +2,9 @@
   "name": {
     "en": "Aurelle Panel Square"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 55,
@@ -17,7 +19,8 @@
     "productId": [
       "LTC014",
       "3216231P6",
-      "3216131P6"
+      "3216131P6",
+      "929003597801"
     ],
     "endpoints": {
       "11": {
