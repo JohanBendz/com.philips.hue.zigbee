@@ -88,3 +88,12 @@ test('5047131P9 is matched by the existing Buckram spotlight driver', () => {
   assert.ok(generated.zigbee.productId.includes('5047131P9'));
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('LWO005 is matched by the existing LWO001 G93 filament driver', () => {
+  const compose = require('../drivers/LWO001/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LWO001');
+  assert.deepEqual(compose.zigbee.productId, ['LWO001', 'LWO005']);
+  assert.deepEqual(generated.zigbee.productId, ['LWO001', 'LWO005']);
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8]);
+});

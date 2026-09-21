@@ -2,7 +2,9 @@
   "name": {
     "en": "Filament Bulb G93"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 7,
@@ -14,7 +16,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LWO001",
+    "productId": [
+      "LWO001",
+      "LWO005"
+    ],
     "endpoints": {
       "11": {
         "clusters": [
