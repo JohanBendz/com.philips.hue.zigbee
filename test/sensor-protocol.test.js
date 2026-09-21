@@ -264,3 +264,63 @@ test('legacy SML002 voltage threshold is migrated to percentage semantics', asyn
   assert.equal(setting.value, 20);
   assert.equal(setting.label.en, 'Low Battery Alarm Threshold (%)');
 });
+
+
+test('occupancy battery parser rejects invalid Zigbee values', async () => {
+  const { parseBatteryPercentage } = require('../lib/HueSensorBattery');
+  assert.equal(parseBatteryPercentage(200), 100);
+  assert.equal(parseBatteryPercentage(160), 80);
+  assert.equal(parseBatteryPercentage(1), 1);
+  assert.equal(parseBatteryPercentage(255), null);
+  assert.equal(parseBatteryPercentage(201), null);
+  assert.equal(parseBatteryPercentage(undefined), null);
+});
+
+for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+  test(`${id}: battery is refreshed whenever the sleepy sensor announces`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.capabilities = new Set(['measure_battery', 'alarm_battery']);
+    device.settings.batteryThreshold = 20;
+    device.zclNode = {
+      endpoints: {
+        2: {
+          clusters: {
+            powerConfiguration: {
+              readAttributes: async () => ({ batteryPercentageRemaining: 74 }),
+            },
+          },
+        },
+      },
+    };
+
+    await device.onEndDeviceAnnounce();
+    assert.equal(device.values.measure_battery, 37);
+    assert.equal(device.values.alarm_battery, false);
+
+    device.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes =
+      async () => ({ batteryPercentageRemaining: 255 });
+    await device.onEndDeviceAnnounce();
+    assert.equal(device.values.measure_battery, 37);
+    assert.equal(device.values.alarm_battery, false);
+  });
+}
+
+test('occupancy battery refresh failure does not make device initialization fail', async () => {
+  const { refreshHueSensorBattery } = require('../lib/HueSensorBattery');
+  const device = {
+    zclNode: {
+      endpoints: {
+        2: {
+          clusters: {
+            powerConfiguration: {
+              readAttributes: async () => { throw new Error('sleeping'); },
+            },
+          },
+        },
+      },
+    },
+    log() {},
+  };
+  assert.equal(await refreshHueSensorBattery(device), null);
+});

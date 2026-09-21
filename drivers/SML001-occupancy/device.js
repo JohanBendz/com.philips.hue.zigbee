@@ -8,6 +8,10 @@ const {
   getMotionSensitivityMax,
   migrateMissingOccupancySettings,
 } = require('../../lib/HueOccupancySettings');
+const {
+  applyHueSensorBattery,
+  refreshHueSensorBattery,
+} = require('../../lib/HueSensorBattery');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -101,11 +105,7 @@ class OccupancySensor extends ZigBeeDevice {
       this.log("Event listeners registered");
     }
 
-    const batteryStatus = await this.zclNode.endpoints[2].clusters.powerConfiguration.readAttributes(['batteryPercentageRemaining']);
-    const batteryThreshold = this.getSetting('batteryThreshold') || 20;
-    this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryStatus.batteryPercentageRemaining/2);
-    this.setCapabilityValue('measure_battery', batteryStatus.batteryPercentageRemaining/2).catch(this.error);
-    this.setCapabilityValue('alarm_battery', (batteryStatus.batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error);
+    await refreshHueSensorBattery(this);
 
   }
 
@@ -186,10 +186,8 @@ class OccupancySensor extends ZigBeeDevice {
   }
 
 	onBatteryPercentageRemainingAttributeReport(batteryPercentageRemaining) {
-		const batteryThreshold = this.getSetting('batteryThreshold') || 20;
-		this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryPercentageRemaining/2);
-		this.setCapabilityValue('measure_battery', batteryPercentageRemaining/2).catch(this.error);
-		this.setCapabilityValue('alarm_battery', (batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error)
+    applyHueSensorBattery(this, batteryPercentageRemaining)
+      .catch(error => this.error('Could not apply Hue motion sensor battery report', error));
   }
 
   async _migrateMissingSettings() {
@@ -272,6 +270,8 @@ class OccupancySensor extends ZigBeeDevice {
     await this.setAvailable() // Mark the device as available upon re-announcement
     .then(() => this.log('Device is now available'))
     .catch(err => this.error('Error setting device available', err));
+
+    await refreshHueSensorBattery(this);
     
     const ledIndicator = this.getStoreValue('ledIndicator');
     if (ledIndicator !== null) {
