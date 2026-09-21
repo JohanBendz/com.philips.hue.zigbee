@@ -2,7 +2,9 @@
   "name": {
     "en": "Mickey Mouse Bloom/Aura Living Colors"
   },
-  "$extends": ["light_color"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 8,
