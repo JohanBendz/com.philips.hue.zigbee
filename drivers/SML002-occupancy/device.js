@@ -4,6 +4,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const { migrateMissingOccupancySettings } = require('../../lib/HueOccupancySettings');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -22,6 +23,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 	}
 
 	async onNodeInit({ zclNode }) {
+    await this._migrateMissingSettings();
   const minReportTemp = this.getSetting('minReportTemp') || 60;
   const maxReportTemp = this.getSetting('maxReportTemp') || 300;
   const minReportLux = this.getSetting('minReportLux') || 60;
@@ -185,6 +187,15 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 		this.log("measure_battery | powerConfiguration - batteryPercentageRemaining (%): ", batteryPercentageRemaining/2);
 		this.setCapabilityValue('measure_battery', batteryPercentageRemaining/2).catch(this.error);
 		this.setCapabilityValue('alarm_battery', (batteryPercentageRemaining/2 < batteryThreshold) ? true : false).catch(this.error)
+  }
+
+  async _migrateMissingSettings() {
+    try {
+      return await migrateMissingOccupancySettings(this);
+    } catch (error) {
+      this.error('Could not initialize missing occupancy sensor settings', error);
+      return {};
+    }
   }
 
 	async onSettings({ oldSettings, newSettings, changedKeys }) {

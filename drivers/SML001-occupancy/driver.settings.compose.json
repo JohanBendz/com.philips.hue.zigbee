@@ -54,7 +54,8 @@
           "sv": "Inaktiverad"
         }
       }
-    ]
+    ],
+    "value": "false"
   },
   {
     "id": "temperature_offset",
