@@ -201,3 +201,25 @@ test('915005821901 Hue Go V2 is matched by the Go BT driver', () => {
   assert.ok(generated.capabilities.includes('light_temperature'));
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('new Milliskin model IDs stay in the existing White Ambiance driver', () => {
+  const compose = require('../drivers/5041148P7/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === '5041148P7');
+  const models = [
+    '929003047101',
+    '929003045101_03',
+    '929003045101_01',
+    '929003045101_02',
+    '929003811101_01',
+    '929003811101_02',
+    '929003811101_03',
+    '929003811001',
+  ];
+  for (const model of models) {
+    assert.ok(compose.zigbee.productId.includes(model), model);
+    assert.ok(generated.zigbee.productId.includes(model), model);
+  }
+  assert.ok(generated.capabilities.includes('light_temperature'));
+  assert.equal(generated.capabilities.includes('light_hue'), false);
+});

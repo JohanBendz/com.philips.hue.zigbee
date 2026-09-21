@@ -2,7 +2,9 @@
   "name": {
     "en": "Milliskin GU10 Recessed Spotlight White Ambiance"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 5,
@@ -20,7 +22,15 @@
       "5042131P7",
       "5041131P9",
       "5041148P9",
-      "5042148P9"
+      "5042148P9",
+      "929003047101",
+      "929003045101_03",
+      "929003045101_01",
+      "929003045101_02",
+      "929003811101_01",
+      "929003811101_02",
+      "929003811101_03",
+      "929003811001"
     ],
     "endpoints": {
       "11": {
