@@ -61,3 +61,12 @@ test('LCA011 is matched by the existing LCA001 color-ambiance driver', () => {
   assert.ok(compose.zigbee.productId.includes('LCA011'));
   assert.deepEqual(compose.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('LWG005 is matched by the existing LWG004 white GU10 driver', () => {
+  const compose = require('../drivers/LWG004/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LWG004');
+  assert.deepEqual(compose.zigbee.productId, ['LWG004', 'LWG005']);
+  assert.deepEqual(generated.zigbee.productId, ['LWG004', 'LWG005']);
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8]);
+});
