@@ -2,7 +2,9 @@
   "name": {
     "en": "GU10 White BT"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 6.5,
@@ -14,7 +16,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "LWG004",
+    "productId": [
+      "LWG004",
+      "LWG005"
+    ],
     "endpoints": {
       "11": {
         "clusters": [
