@@ -190,3 +190,14 @@ test('LCL008 Solo Lightstrip uses a dedicated color-ambiance driver', () => {
   assert.ok(generated.capabilities.includes('light_temperature'));
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('915005821901 Hue Go V2 is matched by the Go BT driver', () => {
+  const compose = require('../drivers/LCT026/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LCT026');
+  assert.ok(compose.zigbee.productId.includes('915005821901'));
+  assert.ok(generated.zigbee.productId.includes('915005821901'));
+  assert.ok(generated.capabilities.includes('light_hue'));
+  assert.ok(generated.capabilities.includes('light_temperature'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
