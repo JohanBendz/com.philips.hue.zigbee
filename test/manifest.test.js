@@ -97,3 +97,12 @@ test('LWO005 is matched by the existing LWO001 G93 filament driver', () => {
   assert.deepEqual(generated.zigbee.productId, ['LWO001', 'LWO005']);
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8]);
 });
+
+
+test('929003597801 is matched by the existing Aurelle square panel driver', () => {
+  const compose = require('../drivers/LTC014/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LTC014');
+  assert.ok(compose.zigbee.productId.includes('929003597801'));
+  assert.ok(generated.zigbee.productId.includes('929003597801'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
