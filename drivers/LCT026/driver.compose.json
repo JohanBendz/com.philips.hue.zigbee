@@ -2,7 +2,9 @@
   "name": {
     "en": "Go BT"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 6,
@@ -16,7 +18,8 @@
     ],
     "productId": [
       "LCT026",
-      "7602031P7"
+      "7602031P7",
+      "915005821901"
     ],
     "endpoints": {
       "11": {
