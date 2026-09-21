@@ -1,0 +1,36 @@
+{
+  "name": {
+    "en": "G125 E27 White and Color Ambiance"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LCO005"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768,
+          4096
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a Philips Hue bridge."
+      }
+    }
+  }
+}
