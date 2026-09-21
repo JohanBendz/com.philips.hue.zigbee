@@ -2,7 +2,9 @@
   "name": {
     "en": "Bulb White Ambient E27"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 13,
@@ -15,7 +17,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LTA011"
+      "LTA011",
+      "LTA015"
     ],
     "endpoints": {
       "11": {

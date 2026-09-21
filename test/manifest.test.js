@@ -160,6 +160,16 @@ test('known product IDs are owned by their specific active driver', () => {
 });
 
 
+test('LTA015 is matched by the existing White Ambiance E27 driver', () => {
+  const compose = require('../drivers/LTA011/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === 'LTA011');
+  assert.ok(compose.zigbee.productId.includes('LTA015'));
+  assert.ok(generated.zigbee.productId.includes('LTA015'));
+  assert.ok(generated.capabilities.includes('light_temperature'));
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
+
+
 test('LCU001 P45 color bulb uses a dedicated color-ambiance driver', () => {
   const compose = require('../drivers/LCU001/driver.compose.json');
   const generated = manifest.drivers.find(driver => driver.id === 'LCU001');
