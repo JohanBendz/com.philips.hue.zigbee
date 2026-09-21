@@ -54,3 +54,10 @@ test('SOC001 manifest follows interviewed input clusters and manufacturer-report
   assert.deepEqual(driver.zigbee.endpoints['2'].clusters, [0, 1, 3, 64518]);
   assert.deepEqual(driver.zigbee.endpoints['2'].bindings, [1, 64518]);
 });
+
+
+test('LCA011 is matched by the existing LCA001 color-ambiance driver', () => {
+  const compose = require('../drivers/LCA001/driver.compose.json');
+  assert.ok(compose.zigbee.productId.includes('LCA011'));
+  assert.deepEqual(compose.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});
