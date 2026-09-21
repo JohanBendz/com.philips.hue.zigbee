@@ -4,7 +4,10 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificOccupancySensingCluster = require('../../lib/HueSpecificOccupancySensingCluster');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-const { migrateMissingOccupancySettings } = require('../../lib/HueOccupancySettings');
+const {
+  getMotionSensitivityMax,
+  migrateMissingOccupancySettings,
+} = require('../../lib/HueOccupancySettings');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -243,14 +246,15 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
     }
 
         // motion sensitivity setting changed
-		if (changedKeys.includes('motion_sensitivity')) {
-      try {
-        const sensitivity = parseInt(newSettings.motion_sensitivity);
-        await this.setStoreValue('sensitivity', sensitivity);
-      } catch (error) {
-        this.log("Error setting sensitivity");
+    if (changedKeys.includes('motion_sensitivity')) {
+      const sensitivity = Number.parseInt(newSettings.motion_sensitivity, 10);
+      const productId = this.getSetting('zb_product_id');
+      const maxSensitivity = getMotionSensitivityMax(productId);
+      if (!Number.isInteger(sensitivity) || sensitivity < 0 || sensitivity > maxSensitivity) {
+        throw new Error(`Motion sensitivity ${newSettings.motion_sensitivity} is not supported by ${productId || 'this sensor'}; supported range is 0-${maxSensitivity}.`);
       }
-		}
+      await this.setStoreValue('sensitivity', sensitivity);
+    }
 
     if (changedKeys.includes('ledIndicator')) {
       try {

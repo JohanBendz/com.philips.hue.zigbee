@@ -159,3 +159,41 @@ test('occupancy sensor settings declare initial values for every editable settin
     }
   }
 });
+
+
+test('occupancy drivers expose the full sensitivity union but enforce generation-aware ranges', async () => {
+  for (const [id, productId, acceptedMax] of [
+    ['SML001-occupancy', 'SML001', 2],
+    ['SML001-occupancy', 'SML003', 4],
+    ['SML001-occupancy', '9290030657', 4],
+    ['SML002-occupancy', 'SML002', 2],
+    ['SML002-occupancy', '9290019758', 2],
+    ['SML002-occupancy', 'SML004', 4],
+  ]) {
+    const settings = require(`../drivers/${id}/driver.settings.compose.json`);
+    const sensitivitySetting = settings.find(setting => setting.id === 'motion_sensitivity');
+    assert.deepEqual(sensitivitySetting.values.map(value => value.id), ['0', '1', '2', '3', '4']);
+
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.settings.zb_product_id = productId;
+
+    await device.onSettings({
+      oldSettings: {},
+      newSettings: { motion_sensitivity: String(acceptedMax) },
+      changedKeys: ['motion_sensitivity'],
+    });
+    assert.equal(device.getStoreValue('sensitivity'), acceptedMax);
+
+    if (acceptedMax === 2) {
+      await assert.rejects(
+        device.onSettings({
+          oldSettings: {},
+          newSettings: { motion_sensitivity: '3' },
+          changedKeys: ['motion_sensitivity'],
+        }),
+        /supported range is 0-2/,
+      );
+    }
+  }
+});

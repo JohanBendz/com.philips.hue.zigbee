@@ -7,16 +7,23 @@
       "sv": "Rörelsekänslighet"
     },
     "hint": {
-      "en": "Choose the motion sensitivity level. Changes will take effect when the device comes online.",
-      "sv": "Välj nivån på rörelsekänsligheten. Ändringar träder i kraft när enheten är online."
+      "en": "Choose the motion sensitivity level. Newer Hue motion sensors support levels 0–4; older generations support 0–2. Changes take effect when the device comes online.",
+      "sv": "Välj nivån på rörelsekänsligheten. Nyare Hue-rörelsesensorer stöder nivå 0–4; äldre generationer stöder 0–2. Ändringar träder i kraft när enheten är online."
     },
     "value": "2",
     "values": [
       {
+        "id": "0",
+        "label": {
+          "en": "Low (0)",
+          "sv": "Låg (0)"
+        }
+      },
+      {
         "id": "1",
         "label": {
-          "en": "Low (1)",
-          "sv": "Låg (1)"
+          "en": "Medium (1)",
+          "sv": "Medium (1)"
         }
       },
       {
@@ -24,6 +31,20 @@
         "label": {
           "en": "High (2)",
           "sv": "Hög (2)"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Very high (3)",
+          "sv": "Mycket hög (3)"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Maximum (4)",
+          "sv": "Maximal (4)"
         }
       }
     ]
