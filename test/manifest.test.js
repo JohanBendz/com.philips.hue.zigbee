@@ -106,3 +106,55 @@ test('929003597801 is matched by the existing Aurelle square panel driver', () =
   assert.ok(generated.zigbee.productId.includes('929003597801'));
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('active driver product IDs do not collide unexpectedly', () => {
+  const fs = require('node:fs');
+  const path = require('node:path');
+  const driversDir = path.resolve(__dirname, '../drivers');
+  const owners = new Map();
+
+  for (const id of fs.readdirSync(driversDir)) {
+    const composePath = path.join(driversDir, id, 'driver.compose.json');
+    if (!fs.existsSync(composePath)) continue;
+    const compose = JSON.parse(fs.readFileSync(composePath, 'utf8'));
+    if (compose.deprecated === true) continue;
+    const productIds = Array.isArray(compose.zigbee?.productId)
+      ? compose.zigbee.productId
+      : compose.zigbee?.productId ? [compose.zigbee.productId] : [];
+    for (const productId of productIds) {
+      if (!owners.has(productId)) owners.set(productId, []);
+      owners.get(productId).push(id);
+    }
+  }
+
+  // Philips reused these Phoenix identifiers across historical fixture variants
+  // in this app. Keep the ambiguity explicit until that family is split with
+  // hardware-backed evidence.
+  const allowed = new Set(['LLM010', 'LLM011', 'LLM012']);
+  const collisions = [...owners.entries()]
+    .filter(([productId, ids]) => ids.length > 1 && !allowed.has(productId))
+    .map(([productId, ids]) => ({ productId, ids }));
+
+  assert.deepEqual(collisions, []);
+});
+
+test('known product IDs are owned by their specific active driver', () => {
+  const cases = [
+    ['1742930P7', '1742930P7', '1743030P7'],
+    ['LTC012', 'LTC012', 'LTC015'],
+    ['LWA011', 'LWA001', 'LWA017'],
+    ['LWF002', 'LWB000', 'LWW002'],
+  ];
+
+  for (const [productId, expectedDriver, wrongDriver] of cases) {
+    const expected = require(`../drivers/${expectedDriver}/driver.compose.json`);
+    const wrong = require(`../drivers/${wrongDriver}/driver.compose.json`);
+    const expectedIds = Array.isArray(expected.zigbee.productId)
+      ? expected.zigbee.productId : [expected.zigbee.productId];
+    const wrongIds = Array.isArray(wrong.zigbee.productId)
+      ? wrong.zigbee.productId : [wrong.zigbee.productId];
+    assert.ok(expectedIds.includes(productId), `${productId} missing from ${expectedDriver}`);
+    assert.equal(wrongIds.includes(productId), false, `${productId} still claimed by ${wrongDriver}`);
+  }
+});
