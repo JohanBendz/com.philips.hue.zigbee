@@ -1,0 +1,36 @@
+{
+  "name": {
+    "en": "Festavia String Lights"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LCX024",
+      "LCX025",
+      "LCX028"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the Festavia string lights to start pairing. If pairing does not automatically start, reset them using a Hue remote or Philips Hue bridge."
+      }
+    }
+  }
+}
