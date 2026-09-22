@@ -1,0 +1,34 @@
+{
+  "name": {
+    "en": "Xamento Recessed Spotlight White and Color Ambiance"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "929003074701"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the spotlight to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+      }
+    }
+  }
+}
