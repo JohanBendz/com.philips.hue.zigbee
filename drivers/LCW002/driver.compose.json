@@ -1,0 +1,38 @@
+{
+  "name": {
+    "en": "Liane Wall Light White and Color Ambiance"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LCW002",
+      "4090230P9",
+      "4090231P9",
+      "929003053101",
+      "929003053201"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the wall light to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+      }
+    }
+  }
+}
