@@ -2,7 +2,9 @@
   "name": {
     "en": "Welcome Outdoor Floodlight"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 15,
@@ -14,7 +16,10 @@
       "Philips",
       "Signify Netherlands B.V."
     ],
-    "productId": "1743630P7",
+    "productId": [
+      "1743630P7",
+      "1743630V7"
+    ],
     "endpoints": {
       "11": {
         "clusters": [
