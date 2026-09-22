@@ -223,3 +223,23 @@ test('new Milliskin model IDs stay in the existing White Ambiance driver', () =>
   assert.ok(generated.capabilities.includes('light_temperature'));
   assert.equal(generated.capabilities.includes('light_hue'), false);
 });
+
+
+test('Adore 3x GU10 family uses the White Ambiance driver', () => {
+  const compose = require('../drivers/3418131P6/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === '3418131P6');
+  const models = [
+    '3418131P6',
+    '929003056401',
+    '929003056401_01',
+    '929003056401_02',
+    '929003056401_03',
+  ];
+  for (const model of models) {
+    assert.ok(compose.zigbee.productId.includes(model), model);
+    assert.ok(generated.zigbee.productId.includes(model), model);
+  }
+  assert.ok(generated.capabilities.includes('light_temperature'));
+  assert.equal(generated.capabilities.includes('light_hue'), false);
+  assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
+});

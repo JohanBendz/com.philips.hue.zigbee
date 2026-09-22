@@ -1,0 +1,38 @@
+{
+  "name": {
+    "en": "Adore Bathroom Ceiling Spot 3x GU10"
+  },
+  "$extends": [
+    "light_white_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "3418131P6",
+      "929003056401",
+      "929003056401_01",
+      "929003056401_02",
+      "929003056401_03"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the light to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+      }
+    }
+  }
+}
