@@ -1,0 +1,35 @@
+{
+  "name": {
+    "en": "Pillar Single Spotlight White Ambiance"
+  },
+  "$extends": [
+    "light_white_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "5633030P9",
+      "5633031P9"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the spotlight to start pairing. If pairing does not automatically start, reset it using a Hue remote, Hue bridge or Philips Hue Bluetooth app."
+      }
+    }
+  }
+}
