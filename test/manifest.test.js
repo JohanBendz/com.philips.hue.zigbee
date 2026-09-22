@@ -243,3 +243,15 @@ test('Adore 3x GU10 family uses the White Ambiance driver', () => {
   assert.equal(generated.capabilities.includes('light_hue'), false);
   assert.deepEqual(generated.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
 });
+
+
+test('Hue Go portable table lamp family uses the same color-ambiance driver', () => {
+  const compose = require('../drivers/929003128501/driver.compose.json');
+  const generated = manifest.drivers.find(driver => driver.id === '929003128501');
+  const models = ['929003128401', '929003128501', '929003128601', '929003128701', '929003128801'];
+  assert.deepEqual(compose.zigbee.productId, models);
+  assert.deepEqual(generated.zigbee.productId, models);
+  for (const capability of ['onoff', 'dim', 'light_hue', 'light_saturation', 'light_temperature']) {
+    assert.ok(generated.capabilities.includes(capability), capability);
+  }
+});

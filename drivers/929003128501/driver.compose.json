@@ -2,7 +2,9 @@
   "name": {
     "en": "Go portable table lamp"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 6,
@@ -15,7 +17,11 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "929003128501"
+      "929003128401",
+      "929003128501",
+      "929003128601",
+      "929003128701",
+      "929003128801"
     ],
     "endpoints": {
       "11": {
