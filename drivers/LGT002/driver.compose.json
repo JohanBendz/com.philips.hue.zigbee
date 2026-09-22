@@ -1,0 +1,89 @@
+{
+  "name": {
+    "en": "Hue Twilight - Front"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Signify Netherlands B.V.",
+      "Philips"
+    ],
+    "productId": [
+      "LGT001",
+      "LGT002",
+      "LGT003"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768
+        ]
+      },
+      "12": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "devices": {
+      "back": {
+        "class": "light",
+        "name": {
+          "en": "Hue Twilight - Back"
+        },
+        "capabilities": [
+          "onoff",
+          "dim",
+          "light_hue",
+          "light_saturation",
+          "light_temperature",
+          "light_mode"
+        ],
+        "capabilitiesOptions": {
+          "onoff": {
+            "setOnDim": false
+          },
+          "dim": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_hue": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_saturation": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_temperature": {
+            "opts": {
+              "duration": true
+            }
+          }
+        }
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power on the Twilight and start pairing. Two light devices will be added: Front and Back. If pairing does not start, reset the lamp using the Philips Hue app or bridge."
+      }
+    }
+  }
+}
