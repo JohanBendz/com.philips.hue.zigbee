@@ -34,8 +34,9 @@ async onNodeInit({ zclNode }) {
     }
     this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
       getOpts: {
-        getOnStart: true,
-        getOnOnline: true,
+        // Sleepy remote: only refresh while it is awake (onEndDeviceAnnounce).
+        getOnStart: false,
+        getOnOnline: false,
       },
       reportOpts: {
         configureAttributeReporting: {
