@@ -74,3 +74,27 @@ test('explicit transition duration always wins, including instant 0 ms', async (
   assert.equal(commands.color[0].transitionTime, 0);
   assert.equal(commands.temperature[0].transitionTime, 12);
 });
+
+test('combined light state sets brightness and color with one Hue-like transition', async () => {
+  const { device, commands } = lightFixture();
+
+  await device.setLightState({ brightness: 0.5, color: '#FF0000' });
+
+  assert.equal(commands.level.length, 1);
+  assert.equal(commands.level[0].level, 127);
+  assert.equal(commands.level[0].transitionTime, 4);
+  assert.equal(commands.color.length, 1);
+  assert.equal(commands.color[0].hue, 0);
+  assert.equal(commands.color[0].saturation, 254);
+  assert.equal(commands.color[0].transitionTime, 4);
+});
+
+test('combined light state brightness zero turns off without sending color', async () => {
+  const { device, commands } = lightFixture();
+
+  await device.setLightState({ brightness: 0, color: '#00FF00' });
+
+  assert.equal(commands.level.length, 1);
+  assert.equal(commands.level[0].level, 0);
+  assert.equal(commands.color.length, 0);
+});
