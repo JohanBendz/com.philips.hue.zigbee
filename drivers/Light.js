@@ -201,9 +201,9 @@ class Light extends ZigBeeLightDevice {
             throw new Error('Unsupported Hue effect');
         }
 
-        const endpoint = Object.values(this.zclNode?.endpoints || {})
-            .find(item => item.clusters?.[HueSpecificPhilips2Cluster.NAME]);
-        if (!endpoint) {
+        const endpointId = this.getClusterEndpoint(HueSpecificPhilips2Cluster);
+        const endpoint = endpointId === null ? null : this.zclNode.endpoints[endpointId];
+        if (!endpoint?.clusters?.[HueSpecificPhilips2Cluster.NAME]) {
             throw new Error('This Hue light does not support native Candle/Fireplace effects');
         }
 
@@ -265,9 +265,9 @@ class Light extends ZigBeeLightDevice {
     }
 
     async setHueGradient(args) {
-        const endpoint = Object.values(this.zclNode?.endpoints || {})
-            .find(item => item.clusters?.[HueSpecificPhilips2Cluster.NAME]);
-        if (!endpoint) {
+        const endpointId = this.getClusterEndpoint(HueSpecificPhilips2Cluster);
+        const endpoint = endpointId === null ? null : this.zclNode.endpoints[endpointId];
+        if (!endpoint?.clusters?.[HueSpecificPhilips2Cluster.NAME]) {
             throw new Error('This Hue light does not support native gradient control');
         }
 
