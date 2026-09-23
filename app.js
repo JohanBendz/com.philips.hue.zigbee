@@ -53,6 +53,14 @@ class PhilipsHueZigbeeApp extends Homey.App {
         return args.device.setLightState(args);
     });
 
+    this.homey.flow.getActionCard('adjust_light_temperature')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.adjustLightTemperature !== 'function') {
+            throw new Error('This device does not support color temperature');
+        }
+        return args.device.adjustLightTemperature(args);
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
