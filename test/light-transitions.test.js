@@ -98,3 +98,30 @@ test('combined light state brightness zero turns off without sending color', asy
   assert.equal(commands.level[0].level, 0);
   assert.equal(commands.color.length, 0);
 });
+
+test('combined light state synchronizes Homey capability values', async () => {
+  const { device } = lightFixture();
+
+  await device.setLightState({ brightness: 0.42, color: '#00FF00' });
+
+  assert.equal(device.values.dim, 0.42);
+  assert.equal(device.values.onoff, true);
+  assert.equal(device.values.light_hue, 1 / 3);
+  assert.equal(device.values.light_saturation, 1);
+  assert.equal(device.values.light_mode, 'color');
+});
+
+test('relative light temperature clamps and uses Hue-like transition fallback', async () => {
+  const { device, commands } = lightFixture();
+  device.values.light_temperature = 0.8;
+
+  const warmer = await device.adjustLightTemperature({ delta: 0.3 });
+  assert.equal(warmer, 1);
+  assert.equal(device.values.light_temperature, 1);
+  assert.equal(device.values.light_mode, 'temperature');
+  assert.equal(commands.temperature[0].transitionTime, 4);
+
+  const cooler = await device.adjustLightTemperature({ delta: -0.25, duration: 1000 });
+  assert.equal(cooler, 0.75);
+  assert.equal(commands.temperature[1].transitionTime, 10);
+});
