@@ -239,6 +239,8 @@ test('RWL000: real bound button commands restore availability', async () => {
   let availableCalls = 0;
   device.setAvailable = async () => { availableCalls += 1; };
 
+  device.registerCapability = () => {};
+
   const card = {
     registerRunListener() { return this; },
     async trigger() {},
