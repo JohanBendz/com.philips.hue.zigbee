@@ -52,6 +52,49 @@ class Light extends ZigBeeLightDevice {
         return super.changeColor(color, this._withDefaultTransition(opts));
     }
 
+    _hexToHsv(hex) {
+        if (typeof hex !== 'string' || !/^#[0-9a-f]{6}$/i.test(hex)) {
+            throw new Error('Invalid color value');
+        }
+
+        const r = parseInt(hex.slice(1, 3), 16) / 255;
+        const g = parseInt(hex.slice(3, 5), 16) / 255;
+        const b = parseInt(hex.slice(5, 7), 16) / 255;
+        const max = Math.max(r, g, b);
+        const min = Math.min(r, g, b);
+        const delta = max - min;
+
+        let hue = 0;
+        if (delta !== 0) {
+            if (max === r) hue = ((g - b) / delta) % 6;
+            else if (max === g) hue = ((b - r) / delta) + 2;
+            else hue = ((r - g) / delta) + 4;
+            hue /= 6;
+            if (hue < 0) hue += 1;
+        }
+
+        return {
+            hue,
+            saturation: max === 0 ? 0 : delta / max,
+        };
+    }
+
+    async setLightState(args) {
+        const brightness = Math.min(1, Math.max(0, Number(args.brightness)));
+        if (!Number.isFinite(brightness)) {
+            throw new Error('Invalid brightness value');
+        }
+
+        const opts = Number.isFinite(args.duration) ? { duration: args.duration } : {};
+        if (brightness === 0) {
+            return this.changeDimLevel(0, opts);
+        }
+
+        const { hue, saturation } = this._hexToHsv(args.color);
+        await this.changeDimLevel(brightness, opts);
+        return this.changeColor({ hue, saturation, value: brightness }, opts);
+    }
+
     // Sleep for blink
     sleep(milliseconds) {
         return new Promise(resolve => this.homey.setTimeout(resolve, milliseconds));
