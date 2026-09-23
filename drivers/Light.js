@@ -219,15 +219,9 @@ class Light extends ZigBeeLightDevice {
             throw new Error('Invalid gradient color value');
         }
 
-        let red = parseInt(hex.slice(1, 3), 16) / 255;
-        let green = parseInt(hex.slice(3, 5), 16) / 255;
-        let blue = parseInt(hex.slice(5, 7), 16) / 255;
-        const gamma = value => value > 0.04045
-            ? ((value + 0.055) / 1.055) ** 2.4
-            : value / 12.92;
-        red = gamma(red);
-        green = gamma(green);
-        blue = gamma(blue);
+        const red = parseInt(hex.slice(1, 3), 16) / 255;
+        const green = parseInt(hex.slice(3, 5), 16) / 255;
+        const blue = parseInt(hex.slice(5, 7), 16) / 255;
 
         const X = red * 0.664511 + green * 0.154324 + blue * 0.162028;
         const Y = red * 0.283881 + green * 0.668433 + blue * 0.047685;
