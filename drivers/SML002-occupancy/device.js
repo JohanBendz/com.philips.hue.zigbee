@@ -12,6 +12,7 @@ const {
   applyHueSensorBattery,
   refreshHueSensorBattery,
 } = require('../../lib/HueSensorBattery');
+const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -105,8 +106,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
       this.log("Event listeners registered");
     }
 
-    await refreshHueSensorBattery(this);
-
+    // Battery is refreshed when the sleepy sensor actually announces/wakes.
   }
 
   async onUninit() {
@@ -158,6 +158,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
   }
   
   onOccupancyAttributeReport(occupancyStatus) {
+    markHueSensorAvailable(this);
     const parsedOccupancyStatus = Object.values(occupancyStatus);
     this.log("Occupancy status:", parsedOccupancyStatus[2]);
     if (parsedOccupancyStatus[2] == true) {
@@ -173,6 +174,7 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
   }
 
   onTemperatureMeasuredAttributeReport(measuredTempValue) {
+    markHueSensorAvailable(this);
 		const temperatureOffset = this.getSetting('temperature_offset') || 0;
 		const parsedTempValue = this.getSetting('temperature_decimals') === '2' ? Math.round((measuredTempValue / 100) * 100) / 100 : Math.round((measuredTempValue / 100) * 10) / 10;
 		this.log('Temperature:', parsedTempValue, '+ temperature offset', temperatureOffset);
@@ -180,12 +182,14 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 	}
 
 	onLuminanceMeasuredAttributeReport(measuredLuxValue) {
+    markHueSensorAvailable(this);
 		const parsedLumValue = Math.round(Math.pow(10, (measuredLuxValue - 1) / 10000));
 		this.log('measure_luminance:', parsedLumValue);
 		this.setCapabilityValue('measure_luminance', parsedLumValue).catch(this.error);
   }
 
 	onBatteryPercentageRemainingAttributeReport(batteryPercentageRemaining) {
+    markHueSensorAvailable(this);
     applyHueSensorBattery(this, batteryPercentageRemaining)
       .catch(error => this.error('Could not apply Hue motion sensor battery report', error));
   }
