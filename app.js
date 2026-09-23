@@ -69,6 +69,14 @@ class PhilipsHueZigbeeApp extends Homey.App {
         return args.device.setHueEffect(args);
     });
 
+    this.homey.flow.getActionCard('hue_gradient_3')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setHueGradient !== 'function') {
+            throw new Error('This device does not support Hue gradients');
+        }
+        return args.device.setHueGradient(args);
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
