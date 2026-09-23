@@ -2,7 +2,9 @@
   "name": {
     "en": "GU10 Spot Color"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 6.5,
@@ -17,7 +19,12 @@
     "productId": [
       "LCG002",
       "5055131P7",
-      "5055148P7"
+      "5055148P7",
+      "929003047701",
+      "929003526202_01",
+      "929003526202_02",
+      "929003526202_03",
+      "929003526101"
     ],
     "endpoints": {
       "11": {
