@@ -61,6 +61,14 @@ class PhilipsHueZigbeeApp extends Homey.App {
         return args.device.adjustLightTemperature(args);
     });
 
+    this.homey.flow.getActionCard('hue_effect')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setHueEffect !== 'function') {
+            throw new Error('This device does not support Hue effects');
+        }
+        return args.device.setHueEffect(args);
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
