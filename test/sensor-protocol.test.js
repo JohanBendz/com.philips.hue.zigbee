@@ -35,15 +35,27 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     clusters.occupancySensing.writeAttributes = async value => writes.push(['occupancy', value]);
     clusters.HueSpecificBasicCluster.writeAttributes = async value => writes.push(['basic', value]);
     clusters.powerConfiguration.readAttributes = async () => ({ batteryPercentageRemaining: 160 });
-    await device.onSettings({ oldSettings: {}, newSettings: { motion_sensitivity: '0', ledIndicator: 'true' },
-      changedKeys: ['motion_sensitivity', 'ledIndicator'] });
+    await device.onSettings({
+      oldSettings: {},
+      newSettings: { motion_sensitivity: '0', ledIndicator: 'true', occupancy_timeout: 45 },
+      changedKeys: ['motion_sensitivity', 'ledIndicator', 'occupancy_timeout'],
+    });
     await device.onEndDeviceAnnounce();
-    assert.deepEqual(writes, [['basic', { ledIndication: true }], ['occupancy', { sensitivity: 0 }]]);
+    assert.deepEqual(writes, [
+      ['basic', { ledIndication: true }],
+      ['occupancy', { sensitivity: 0 }],
+      ['occupancy', { pirOccupiedToUnoccupiedDelay: 45 }],
+    ]);
     writes.length = 0;
     await device.onSettings({ oldSettings: {}, newSettings: { ledIndicator: 'false' }, changedKeys: ['ledIndicator'] });
     await device.onEndDeviceAnnounce();
-    assert.deepEqual(writes, [['basic', { ledIndication: false }], ['occupancy', { sensitivity: 0 }]]);
+    assert.deepEqual(writes, [
+      ['basic', { ledIndication: false }],
+      ['occupancy', { sensitivity: 0 }],
+      ['occupancy', { pirOccupiedToUnoccupiedDelay: 45 }],
+    ]);
     assert.equal(clusters.occupancySensing.constructor.ATTRIBUTES.sensitivity.manufacturerId, 0x100b);
+    assert.equal(clusters.occupancySensing.constructor.ATTRIBUTES.pirOccupiedToUnoccupiedDelay.id, 0x10);
   });
 }
 
@@ -152,6 +164,7 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     assert.deepEqual(calls[0], migrated);
     assert.equal(migrated.ledIndicator, 'false');
     assert.equal(migrated.motion_sensitivity, '2');
+    assert.equal(migrated.occupancy_timeout, 0);
     assert.equal(migrated.minReportLux, undefined);
     assert.equal(migrated.maxReportLux, 300);
 
@@ -170,6 +183,29 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     assert.equal(migrated.ledIndicator, 'true');
   });
 }
+
+test('occupancy timeout validates Zigbee uint16 seconds', async () => {
+  for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+
+    await device.onSettings({
+      oldSettings: {},
+      newSettings: { occupancy_timeout: 65535 },
+      changedKeys: ['occupancy_timeout'],
+    });
+    assert.equal(device.getStoreValue('occupancy_timeout'), 65535);
+
+    await assert.rejects(
+      device.onSettings({
+        oldSettings: {},
+        newSettings: { occupancy_timeout: 65536 },
+        changedKeys: ['occupancy_timeout'],
+      }),
+      /between 0 and 65535/,
+    );
+  }
+});
 
 test('occupancy sensor settings declare initial values for every editable setting', () => {
   for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
