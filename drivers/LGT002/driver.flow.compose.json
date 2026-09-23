@@ -1,0 +1,35 @@
+{
+  "triggers": [
+    {
+      "id": "LGT002_buttons",
+      "title": {
+        "en": "Twilight button action",
+        "sv": "Twilight-knapp"
+      },
+      "titleFormatted": {
+        "en": "Button [[action]]",
+        "sv": "Knapp [[action]]"
+      },
+      "args": [
+        {
+          "name": "action",
+          "type": "dropdown",
+          "values": [
+            { "id": "Dot-Press", "label": { "en": "Dot pressed", "sv": "Punkt trycks in" } },
+            { "id": "Dot-Hold", "label": { "en": "Dot hold started", "sv": "Punkt hålls in" } },
+            { "id": "Dot-Release", "label": { "en": "Dot released before hold", "sv": "Punkt släpps före långtryck" } },
+            { "id": "Dot-LongRelease", "label": { "en": "Dot released after hold", "sv": "Punkt släpps efter långtryck" } },
+            { "id": "Hue-Press", "label": { "en": "Hue pressed", "sv": "Hue trycks in" } },
+            { "id": "Hue-Hold", "label": { "en": "Hue hold started", "sv": "Hue hålls in" } },
+            { "id": "Hue-Release", "label": { "en": "Hue released before hold", "sv": "Hue släpps före långtryck" } },
+            { "id": "Hue-LongRelease", "label": { "en": "Hue released after hold", "sv": "Hue släpps efter långtryck" } }
+          ],
+          "title": {
+            "en": "Action",
+            "sv": "Händelse"
+          }
+        }
+      ]
+    }
+  ]
+}
