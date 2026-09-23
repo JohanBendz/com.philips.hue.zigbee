@@ -67,6 +67,13 @@ test('Hue effects fail safely when the physical endpoint lacks cluster 0xfc03', 
   assert.equal(payloads.length, 0);
 });
 
+test('gradient color encoding matches upstream Bifrost for non-primary RGB', () => {
+  const { device } = effectFixture();
+
+  assert.equal(device._encodeGradientColor('#663399'), 'b9f642');
+  assert.equal(device._encodeGradientColor('#336699'), '066556');
+});
+
 test('native Hue three-color gradient matches verified Bifrost encoding', async () => {
   const { device, payloads } = effectFixture();
 
