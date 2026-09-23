@@ -267,6 +267,14 @@ class OccupancySensor extends ZigBeeDevice {
       }
     }
 
+    if (changedKeys.includes('occupancy_timeout')) {
+      const occupancyTimeout = Number.parseInt(newSettings.occupancy_timeout, 10);
+      if (!Number.isInteger(occupancyTimeout) || occupancyTimeout < 0 || occupancyTimeout > 65535) {
+        throw new Error('Occupancy timeout must be an integer between 0 and 65535 seconds.');
+      }
+      await this.setStoreValue('occupancy_timeout', occupancyTimeout);
+    }
+
 	}
 
   async onEndDeviceAnnounce() {
@@ -278,7 +286,7 @@ class OccupancySensor extends ZigBeeDevice {
     await refreshHueSensorBattery(this);
     
     const ledIndicator = this.getStoreValue('ledIndicator');
-    if (ledIndicator !== null) {
+    if (ledIndicator !== null && ledIndicator !== undefined) {
       try {
         await this.zclNode.endpoints[2].clusters[HueSpecificBasicCluster.NAME]
           .writeAttributes({ ledIndication: ledIndicator === true || ledIndicator === 1 });
@@ -289,13 +297,24 @@ class OccupancySensor extends ZigBeeDevice {
     }
 
     const sensitivity = this.getStoreValue('sensitivity');
-    if (sensitivity !== null) {
+    if (sensitivity !== null && sensitivity !== undefined) {
       try {
         await this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
           .writeAttributes({ sensitivity });
         this.log("Setting sensitivity to: ", sensitivity);
       } catch (error) {
         this.log("This device does not support sensitivity setting");
+      }
+    }
+
+    const occupancyTimeout = this.getStoreValue('occupancy_timeout');
+    if (occupancyTimeout !== null && occupancyTimeout !== undefined) {
+      try {
+        await this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
+          .writeAttributes({ pirOccupiedToUnoccupiedDelay: occupancyTimeout });
+        this.log("Setting occupancy timeout to: ", occupancyTimeout);
+      } catch (error) {
+        this.log("This device does not support occupancy timeout setting");
       }
     }
 
