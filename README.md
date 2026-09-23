@@ -76,15 +76,15 @@ npm test
 npm run run
 ```
 
-`npm run validate` first preprocesses Homey Compose, generates the root `app.json`, and then runs publish-level validation. A small number of manifest regression tests consume that generated file.
+The root `app.json` is generated from Homey Compose, but the current Homey CLI expects that file to exist before validation starts. It is therefore kept in the repository as a generated baseline. Do not edit it manually or include incidental regenerated changes in normal pull requests.
 
-Pull requests automatically run the same Compose build, Homey publish validation, the regression test suite and `git diff --check`.
+Pull requests automatically run Homey publish validation, the regression test suite and `git diff --check`.
 
 ### Generated manifest
 
-**Do not edit or commit root `app.json`.**
+**Do not edit root `app.json` manually.**
 
-The source manifest lives in `.homeycompose/` and the driver compose files. Homey generates `app.json` during preprocessing/validation.
+The source manifest lives in `.homeycompose/` and the driver compose files. Homey Compose generates `app.json`. The file remains tracked because the current Homey CLI expects a baseline manifest to exist before validation; incidental regenerated `app.json` changes should not be included in unrelated pull requests.
 
 ## Release history
 
