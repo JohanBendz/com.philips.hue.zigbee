@@ -86,6 +86,17 @@ Pull requests automatically run Homey publish validation, the regression test su
 
 The source manifest lives in `.homeycompose/` and the driver compose files. Homey Compose generates `app.json`. The file remains tracked because the current Homey CLI expects a baseline manifest to exist before validation; incidental regenerated `app.json` changes should not be included in unrelated pull requests.
 
+## Release files
+
+The repository keeps GitHub/project documentation separate from Homey App Store release metadata:
+
+- `README.md` — project documentation for GitHub and contributors.
+- `README.txt` — the long-form Homey App Store description consumed by the Homey CLI during publishing.
+- `CHANGELOG.md` — detailed human-readable release history.
+- `.homeychangelog.json` — concise Homey release notes keyed by exact app version.
+
+When preparing a release, add the new version to `.homeychangelog.json` at the same time as the version bump. Keep the entry short and describe what changed in that version rather than whether it is currently in Test or Live.
+
 ## Release history
 
 See [CHANGELOG.md](CHANGELOG.md).
