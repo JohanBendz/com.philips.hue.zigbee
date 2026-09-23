@@ -8,9 +8,11 @@ const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
 const HueSpecificLevelControlCluster = require('../lib/HueSpecificLevelControlCluster');
 const HueSpecificColorControlCluster = require('../lib/HueSpecificColorControlCluster');
+const HueSpecificPhilips2Cluster = require('../lib/HueSpecificPhilips2Cluster');
 Cluster.addCluster(HueSpecificOnOffCluster);
 Cluster.addCluster(HueSpecificLevelControlCluster);
 Cluster.addCluster(HueSpecificColorControlCluster);
+Cluster.addCluster(HueSpecificPhilips2Cluster);
 
 // Alert mode need these
 const HueSpecificIdentifyCluster = require('../lib/HueSpecificIdentifyCluster');
@@ -119,6 +121,33 @@ class Light extends ZigBeeLightDevice {
         await this.setCapabilityValue('light_temperature', target);
         if (this.hasCapability('light_mode')) await this.setCapabilityValue('light_mode', 'temperature');
         return target;
+    }
+
+    async setHueEffect(args) {
+        const effects = {
+            none: 0x00,
+            candle: 0x01,
+            fireplace: 0x02,
+        };
+        const effectType = effects[args.effect];
+        if (effectType === undefined) {
+            throw new Error('Unsupported Hue effect');
+        }
+
+        const endpoint = Object.values(this.zclNode?.endpoints || {})
+            .find(item => item.clusters?.[HueSpecificPhilips2Cluster.NAME]);
+        if (!endpoint) {
+            throw new Error('This Hue light does not support native Candle/Fireplace effects');
+        }
+
+        // Philips2 flags are little-endian. 0x0001 = on/off, 0x0020 = effect.
+        // Payload order is flags, onOff, effectType.
+        const payload = Buffer.from([0x21, 0x00, effectType === 0 ? 0x01 : 0x01, effectType]);
+        await endpoint.clusters[HueSpecificPhilips2Cluster.NAME].multiColor({ data: payload });
+
+        if (this.hasCapability('onoff')) {
+            await this.setCapabilityValue('onoff', true);
+        }
     }
 
     // Sleep for blink
