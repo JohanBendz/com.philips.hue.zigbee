@@ -1,8 +1,10 @@
 {
   "name": {
-    "en": "Enrave"
+    "en": "Enrave S White Ambiance"
   },
-  "$extends": ["light_white_ambiance"],
+  "$extends": [
+    "light_white_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9.6,
@@ -15,7 +17,8 @@
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "915005996401"
+      "915005996401",
+      "915005996501"
     ],
     "endpoints": {
       "11": {
