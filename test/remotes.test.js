@@ -181,3 +181,18 @@ test('RWL022: announce refreshes battery after reporting is configured', async (
   device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
   assert.equal(device.values.measure_battery, 60);
 });
+
+test('RDM001: pushbutton mode exposes press, hold and release-after-hold actions', async () => {
+  const { device, calls, card } = remote('RDM001');
+  device.settings.mode = 'singlepushbutton';
+  await device.onNodeInit({ zclNode: device.zclNode });
+
+  for (const action of [0, 1, 3]) {
+    await device._buttonCommandParser(buttonFrame(1, action));
+  }
+
+  assert.deepEqual(calls.map(call => call.state.action), ['Press', 'Hold', 'LongRelease']);
+  assert.equal(await card.listener({ action: 'Hold' }, { action: 'Hold' }), true);
+  assert.equal(await card.listener({ action: 'LongRelease' }, { action: 'LongRelease' }), true);
+  assert.equal(await card.listener({ action: 'Release' }, { action: 'Hold' }), false);
+});
