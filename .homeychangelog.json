@@ -157,5 +157,8 @@
   },
   "2.1.2": {
     "en": "Updated the Homey App Store description and repository release documentation."
+  },
+  "2.2.0": {
+    "en": "Major Hue Zigbee update with improved remote and sensor handling, new Flow controls, native effects and gradient support on compatible lights, and support for additional Hue devices including Twilight, Datura Small, A60 LWA024 and Smart Button RDM005."
   }
 }
