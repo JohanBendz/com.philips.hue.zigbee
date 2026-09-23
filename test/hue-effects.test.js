@@ -66,3 +66,33 @@ test('Hue effects fail safely when the physical endpoint lacks cluster 0xfc03', 
   );
   assert.equal(payloads.length, 0);
 });
+
+test('native Hue three-color gradient matches verified Bifrost encoding', async () => {
+  const { device, payloads } = effectFixture();
+
+  await device.setHueGradient({
+    color1: '#FF0000',
+    color2: '#00FF00',
+    color3: '#0000FF',
+  });
+
+  assert.equal(
+    payloads[0].toString('hex'),
+    '500104000d30000000f3620cc153e741bf5c1800',
+  );
+  assert.equal(device.values.onoff, true);
+});
+
+test('Hue gradient fails safely without Philips2 cluster', async () => {
+  const { device, payloads } = effectFixture(false);
+
+  await assert.rejects(
+    device.setHueGradient({
+      color1: '#FF0000',
+      color2: '#00FF00',
+      color3: '#0000FF',
+    }),
+    /does not support native gradient control/,
+  );
+  assert.equal(payloads.length, 0);
+});
