@@ -45,6 +45,14 @@ class PhilipsHueZigbeeApp extends Homey.App {
         return args.device.stopDim();
     });
 
+    this.homey.flow.getActionCard('set_light_state')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setLightState !== 'function') {
+            throw new Error('This device does not support combined light state');
+        }
+        return args.device.setLightState(args);
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);
