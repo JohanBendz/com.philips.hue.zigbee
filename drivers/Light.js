@@ -32,6 +32,67 @@ class Light extends ZigBeeLightDevice {
  	async onNodeInit({zclNode}) {
 
         await super.onNodeInit({zclNode});
+        this._registerStateReportListeners();
+    }
+
+    _registerStateReportListeners() {
+        this._removeStateReportListeners();
+
+        try {
+            const onOffEndpoint = this.getClusterEndpoint(CLUSTER.ON_OFF);
+            const onOffCluster = onOffEndpoint === null
+                ? null
+                : this.zclNode.endpoints[onOffEndpoint]?.clusters?.[CLUSTER.ON_OFF.NAME];
+
+            if (onOffCluster?.on) {
+                this._onOffReportListener = (value) => {
+                    if (typeof value === 'boolean') {
+                        this.setCapabilityValue('onoff', value)
+                            .catch(err => this.error('Failed to sync reported on/off state:', err));
+                    }
+                };
+                onOffCluster.on('attr.onOff', this._onOffReportListener);
+                this._onOffReportCluster = onOffCluster;
+            }
+        } catch (error) {
+            this.log('Could not register on/off report listener:', error);
+        }
+
+        try {
+            const levelEndpoint = this.getClusterEndpoint(CLUSTER.LEVEL_CONTROL);
+            const levelCluster = levelEndpoint === null
+                ? null
+                : this.zclNode.endpoints[levelEndpoint]?.clusters?.[CLUSTER.LEVEL_CONTROL.NAME];
+
+            if (levelCluster?.on) {
+                this._levelReportListener = (currentLevel) => {
+                    if (typeof currentLevel !== 'number' || currentLevel < 0 || currentLevel > MAX_LEVEL) {
+                        return;
+                    }
+
+                    this.setCapabilityValue('dim', Math.min(1, Math.max(0, currentLevel / MAX_LEVEL)))
+                        .catch(err => this.error('Failed to sync reported dim level:', err));
+                };
+                levelCluster.on('attr.currentLevel', this._levelReportListener);
+                this._levelReportCluster = levelCluster;
+            }
+        } catch (error) {
+            this.log('Could not register level report listener:', error);
+        }
+    }
+
+    _removeStateReportListeners() {
+        if (this._onOffReportCluster && this._onOffReportListener) {
+            this._onOffReportCluster.removeListener('attr.onOff', this._onOffReportListener);
+        }
+        if (this._levelReportCluster && this._levelReportListener) {
+            this._levelReportCluster.removeListener('attr.currentLevel', this._levelReportListener);
+        }
+
+        this._onOffReportCluster = null;
+        this._onOffReportListener = null;
+        this._levelReportCluster = null;
+        this._levelReportListener = null;
     }
 
     _withDefaultTransition(opts = {}) {
@@ -349,6 +410,7 @@ class Light extends ZigBeeLightDevice {
 
     async onUninit() {
         this._clearDimMove();
+        this._removeStateReportListeners();
         if (typeof super.onUninit === 'function') {
             return super.onUninit();
         }
