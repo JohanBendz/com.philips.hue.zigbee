@@ -4,6 +4,50 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.2.0
+
+Major issue-resolution and device-support release.
+
+#### Remotes and switches
+
+- Improved battery handling for Hue Dimmer Switch, Wall Switch Module and Tap Dial devices, including safer wake-based refresh behaviour for sleepy devices.
+- Ignore invalid battery value `255`.
+- Fixed per-device routing for Wall Switch Module second-input devices.
+- Added pushbutton-mode hold / long-release coverage for Wall Switch Module.
+- Clarified Hue Dimmer Switch v2 button-event labels while preserving existing Flow card IDs.
+- Added Hue Smart Button RDM005 support.
+
+#### Sensors
+
+- Restore Homey availability when genuine Zigbee reports are received.
+- Added configurable occupancy timeout support for compatible indoor and outdoor Hue occupancy sensors.
+- Added lifecycle and battery regression coverage.
+- Zigbee network/rejoin problems remain tracked separately and are not claimed as resolved by these app-level changes.
+
+#### Lights and Flows
+
+- Added a 400 ms Hue-like fallback transition when no explicit transition duration is supplied; explicit durations, including zero, remain authoritative.
+- Fixed Homey `light_mode` synchronization after color changes.
+- Added a combined light-state Flow action.
+- Added relative color-temperature adjustment.
+- Added passive synchronization from incoming Zigbee on/off and level reports without introducing new fleet-wide bindings.
+- Added guarded native Hue Candle and Fireplace effects for compatible lights.
+- Added native three-color Hue gradient control using the Signify/Bifrost protocol for compatible gradient products.
+- Added endpoint-safe native Hue command routing, including multi-zone fixtures such as Twilight.
+
+#### Device support
+
+- Added Hue A60 White 800 lm / LWA024.
+- Expanded supported Hue GU10 color-family identities.
+- Added Hue Datura Small.
+- Added Hue Enrave S variants.
+- Added Hue Twilight front/back light zones and physical button events; gradient control is limited to the back zone where exposed by the device.
+- Added Hue Gradient Signe support for verified model identities.
+- Added Hue Smart Button RDM005.
+- Improved legacy Hue Iris pairing guidance.
+
+This release should be verified in the Homey Test channel before promotion to Live, with particular focus on sleepy remotes, motion/occupancy sensors, transitions, external state reporting, native effects/gradient behaviour and multi-zone Twilight routing.
+
 ### v2.1.2
 
 Repository and App Store maintenance release.
