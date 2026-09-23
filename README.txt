@@ -1,6 +1,11 @@
-Connect your lights and accessories directly to your Homey without the need for a Philips Hue bridge.
+Connect Philips Hue lights and accessories directly to Homey over Zigbee — no Philips Hue Bridge required.
 
-Philips Hue brings smart lighting to everyday homes, allowing anyone to create special moments and automate with light. Lights that are easy to install. It only takes a few minutes, and you don't need to rewire your home.
+This community-maintained app supports a broad range of Philips Hue and Signify Zigbee devices, including bulbs, fixtures, lightstrips, plugs, motion and contact sensors, dimmer switches, Smart Buttons, Tap Dial switches and Wall Switch modules.
 
-Discover a whole range of lights, sensors and switches that help you light your home smarter. Replace your existing light bulbs with smart bulbs or explore many styles of lamps and fixtures. Philips Hue offers light for every room in your home.
+Supported devices are paired directly with Homey's Zigbee network and exposed through native Homey capabilities and Flows. Depending on the device, features can include on/off, dimming, color, color temperature, power-on behaviour, sensor values, button events and selected native Hue effects.
 
+Device support is based on the actual Zigbee model ID and endpoint/cluster information. Visually identical Hue products can use different Zigbee hardware. If a device pairs as a Generic Zigbee Device, please report it on GitHub and include the Homey Developer Tools Zigbee interview, especially modelId, manufacturerName and endpoint clusters.
+
+This app is a direct Zigbee integration, not a replacement implementation of the Hue Bridge. Hue cloud services and features that are not exposed over local Zigbee are outside the app's scope.
+
+For support, device requests and bug reports, use the GitHub issue tracker linked from the app.
