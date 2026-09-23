@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Smart Button"
+    "en": "Smart Button (ROM001 / RDM003 / RDM005)"
   },
   "class": "remote",
   "icon": "{{driverAssetsPath}}/icon.svg",
@@ -24,7 +24,8 @@
     ],
     "productId": [
       "ROM001",
-      "RDM003"
+      "RDM003",
+      "RDM005"
     ],
     "endpoints": {
       "1": {
