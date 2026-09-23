@@ -125,3 +125,12 @@ test('relative light temperature clamps and uses Hue-like transition fallback', 
   assert.equal(cooler, 0.75);
   assert.equal(commands.temperature[1].transitionTime, 10);
 });
+
+test('standard color changes keep Homey light_mode synchronized', async () => {
+  const { device } = lightFixture();
+  device.values.light_mode = 'temperature';
+
+  await device.changeColor({ hue: 0.1, saturation: 0.8 });
+
+  assert.equal(device.values.light_mode, 'color');
+});
