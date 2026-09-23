@@ -1,7 +1,7 @@
 {
   "name": "com.philips.hue.zigbee",
   "version": "2.1.1",
-  "description": "Get control of your Philips Hue RGBW and Tunable White bulbs with Homey! No need for the Philips Hue Bridge.",
+  "description": "Control Philips Hue lights, sensors, switches and accessories directly with Homey over Zigbee, without a Hue Bridge.",
   "main": "app.js",
   "dependencies": {
     "homey-zigbeedriver": "2.2.18",
