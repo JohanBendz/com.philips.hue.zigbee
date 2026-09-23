@@ -23,12 +23,33 @@ const MAX_DIM_RATE = 254;
 const MAX_LEVEL = 254;
 const DIM_MOVE_MAX_DURATION = 255000;
 const LEVEL_READBACK_DELAY = 500;
+const DEFAULT_TRANSITION_DURATION_MS = 400;
 
 class Light extends ZigBeeLightDevice {
 
  	async onNodeInit({zclNode}) {
 
         await super.onNodeInit({zclNode});
+    }
+
+    _withDefaultTransition(opts = {}) {
+        const options = opts && typeof opts === 'object' ? opts : {};
+        if (Number.isFinite(options.duration)) {
+            return options;
+        }
+        return { ...options, duration: DEFAULT_TRANSITION_DURATION_MS };
+    }
+
+    changeDimLevel(dim, opts = {}) {
+        return super.changeDimLevel(dim, this._withDefaultTransition(opts));
+    }
+
+    changeColorTemperature(temperature, opts = {}) {
+        return super.changeColorTemperature(temperature, this._withDefaultTransition(opts));
+    }
+
+    changeColor(color, opts = {}) {
+        return super.changeColor(color, this._withDefaultTransition(opts));
     }
 
     // Sleep for blink
