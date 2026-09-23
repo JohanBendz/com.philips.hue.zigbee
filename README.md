@@ -71,10 +71,12 @@ Common commands:
 
 ```bash
 npm ci
-npm test
 npm run validate
+npm test
 npm run run
 ```
+
+Run validation before the test suite on a fresh checkout because Homey Compose generates the root `app.json` used by a small number of manifest regression tests.
 
 Pull requests are automatically checked with Homey publish validation, the regression test suite and `git diff --check`.
 
