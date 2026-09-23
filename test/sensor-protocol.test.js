@@ -380,3 +380,91 @@ test('occupancy battery refresh failure does not make device initialization fail
   };
   assert.equal(await refreshHueSensorBattery(device), null);
 });
+
+for (const id of ['SML001', 'SML002', 'SML001-occupancy', 'SML002-occupancy']) {
+  test(`${id}: first wake after restart refreshes temperature/luminance reporting once`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.capabilities = new Set(['measure_temperature', 'measure_luminance']);
+    device.settings = {
+      minReportTemp: 120,
+      maxReportTemp: 600,
+      minReportLux: 180,
+      maxReportLux: 900,
+    };
+    device.zclNode = {
+      endpoints: {
+        2: {
+          clusters: {
+            powerConfiguration: {
+              readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
+            },
+          },
+        },
+      },
+    };
+
+    const reportingCalls = [];
+    device.configureAttributeReporting = async configurations => {
+      reportingCalls.push(configurations.map(configuration => ({
+        cluster: configuration.cluster.NAME,
+        attributeName: configuration.attributeName,
+        minInterval: configuration.minInterval,
+        maxInterval: configuration.maxInterval,
+      })));
+    };
+
+    await device.onEndDeviceAnnounce();
+    await device.onEndDeviceAnnounce();
+
+    assert.equal(reportingCalls.length, 1);
+    assert.deepEqual(reportingCalls[0], [
+      {
+        cluster: 'temperatureMeasurement',
+        attributeName: 'measuredValue',
+        minInterval: 120,
+        maxInterval: 600,
+      },
+      {
+        cluster: 'illuminanceMeasurement',
+        attributeName: 'measuredValue',
+        minInterval: 180,
+        maxInterval: 900,
+      },
+    ]);
+    assert.equal(device._measurementReportingRefreshPending, false);
+  });
+
+  test(`${id}: failed measurement reporting recovery retries on the next wake`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.capabilities = new Set(['measure_temperature', 'measure_luminance']);
+    device.zclNode = {
+      endpoints: {
+        2: {
+          clusters: {
+            powerConfiguration: {
+              readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
+            },
+          },
+        },
+      },
+    };
+
+    let attempts = 0;
+    device.configureAttributeReporting = async () => {
+      attempts += 1;
+      if (attempts === 1) throw new Error('sleepy device already asleep');
+    };
+
+    await device.onEndDeviceAnnounce();
+    assert.equal(device._measurementReportingRefreshPending, true);
+
+    await device.onEndDeviceAnnounce();
+    assert.equal(device._measurementReportingRefreshPending, false);
+
+    await device.onEndDeviceAnnounce();
+    assert.equal(attempts, 2);
+  });
+}
+
