@@ -5,6 +5,26 @@ const assert = require('node:assert/strict');
 const { loadDriver, zclFixture } = require('./helpers');
 
 for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+  test(`${id}: live sensor reports restore device availability`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    device.settings = { temperature_decimals: '1', batteryThreshold: 20 };
+    device.capabilities = new Set(['alarm_motion', 'measure_temperature', 'measure_luminance', 'measure_battery', 'alarm_battery']);
+    let availableCalls = 0;
+    device.setAvailable = async () => { availableCalls += 1; };
+
+    device.onOccupancyAttributeReport({ a: 0, b: 0, occupancy: true });
+    device.onTemperatureMeasuredAttributeReport(2150);
+    device.onLuminanceMeasuredAttributeReport(10001);
+    device.onBatteryPercentageRemainingAttributeReport(160);
+
+    // Availability should recover from real incoming traffic, not only from an
+    // end-device announce that may be missed by Homey's unavailable state.
+    assert.equal(availableCalls, 4);
+  });
+}
+
+for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
   test(`${id}: settings use real cluster names and preserve low/disabled values`, async () => {
     const Driver = loadDriver(id);
     const device = new Driver();
