@@ -9,7 +9,7 @@
   },
   "scripts": {
     "run": "homey app run",
-    "validate": "homey app build && homey app validate --level publish",
+    "validate": "homey app validate --level publish",
     "test": "node --test test/*.test.js"
   },
   "engines": {
