@@ -76,9 +76,9 @@ npm test
 npm run run
 ```
 
-Run validation before the test suite on a fresh checkout because Homey Compose generates the root `app.json` used by a small number of manifest regression tests.
+`npm run validate` first preprocesses Homey Compose, generates the root `app.json`, and then runs publish-level validation. A small number of manifest regression tests consume that generated file.
 
-Pull requests are automatically checked with Homey publish validation, the regression test suite and `git diff --check`.
+Pull requests automatically run the same Compose build, Homey publish validation, the regression test suite and `git diff --check`.
 
 ### Generated manifest
 
