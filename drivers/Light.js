@@ -153,6 +153,75 @@ class Light extends ZigBeeLightDevice {
         }
     }
 
+    _encodeGradientColor(hex) {
+        if (typeof hex !== 'string' || !/^#[0-9a-f]{6}$/i.test(hex)) {
+            throw new Error('Invalid gradient color value');
+        }
+
+        let red = parseInt(hex.slice(1, 3), 16) / 255;
+        let green = parseInt(hex.slice(3, 5), 16) / 255;
+        let blue = parseInt(hex.slice(5, 7), 16) / 255;
+        const gamma = value => value > 0.04045
+            ? ((value + 0.055) / 1.055) ** 2.4
+            : value / 12.92;
+        red = gamma(red);
+        green = gamma(green);
+        blue = gamma(blue);
+
+        const X = red * 0.664511 + green * 0.154324 + blue * 0.162028;
+        const Y = red * 0.283881 + green * 0.668433 + blue * 0.047685;
+        const Z = red * 0.000088 + green * 0.07231 + blue * 0.986039;
+        const sum = X + Y + Z;
+        const x = sum === 0 ? 0 : X / sum;
+        const y = sum === 0 ? 0 : Y / sum;
+
+        const scaledX = Math.round((x * 4095) / 0.7347)
+            .toString(16).padStart(3, '0');
+        const scaledY = Math.round((y * 4095) / 0.8264)
+            .toString(16).padStart(3, '0');
+
+        return `${scaledX[1]}${scaledX[2]}${scaledY[2]}${scaledX[0]}${scaledY[0]}${scaledY[1]}`;
+    }
+
+    _buildThreeColorGradientPayload(colors) {
+        if (!Array.isArray(colors) || colors.length !== 3) {
+            throw new Error('Hue three-color gradient requires exactly three colors');
+        }
+
+        // Philips gradient devices (including Signe) use the reverse physical
+        // ordering used by the Hue/Bifrost implementation.
+        const encodedColors = [...colors].reverse()
+            .map(color => this._encodeGradientColor(color))
+            .join('');
+
+        // Bifrost gradient payload:
+        // mode 0x0150, header 0x0004, payload length, color count/style,
+        // two reserved bytes, scaled colors, segment count, offset.
+        return Buffer.from(
+            `500104000d30000000${encodedColors}1800`,
+            'hex',
+        );
+    }
+
+    async setHueGradient(args) {
+        const endpoint = Object.values(this.zclNode?.endpoints || {})
+            .find(item => item.clusters?.[HueSpecificPhilips2Cluster.NAME]);
+        if (!endpoint) {
+            throw new Error('This Hue light does not support native gradient control');
+        }
+
+        const payload = this._buildThreeColorGradientPayload([
+            args.color1,
+            args.color2,
+            args.color3,
+        ]);
+        await endpoint.clusters[HueSpecificPhilips2Cluster.NAME].multiColor({ data: payload });
+
+        if (this.hasCapability('onoff')) {
+            await this.setCapabilityValue('onoff', true);
+        }
+    }
+
     // Sleep for blink
     sleep(milliseconds) {
         return new Promise(resolve => this.homey.setTimeout(resolve, milliseconds));
