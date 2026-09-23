@@ -2,6 +2,7 @@
 
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
+const { EventEmitter } = require('node:events');
 const { loadDriver } = require('./helpers');
 
 function lightFixture() {
@@ -133,4 +134,36 @@ test('standard color changes keep Homey light_mode synchronized', async () => {
   await device.changeColor({ hue: 0.1, saturation: 0.8 });
 
   assert.equal(device.values.light_mode, 'color');
+});
+
+test('incoming on/off and level reports synchronize Homey without enabling reporting', async () => {
+  const { device } = lightFixture();
+  const onOff = new EventEmitter();
+  const levelControl = new EventEmitter();
+
+  device.zclNode.endpoints[11].clusters.onOff = onOff;
+  device.zclNode.endpoints[11].clusters.levelControl = levelControl;
+
+  device._registerStateReportListeners();
+  assert.equal(onOff.listenerCount('attr.onOff'), 1);
+  assert.equal(levelControl.listenerCount('attr.currentLevel'), 1);
+
+  onOff.emit('attr.onOff', false);
+  levelControl.emit('attr.currentLevel', 127);
+  await Promise.resolve();
+
+  assert.equal(device.values.onoff, false);
+  assert.equal(device.values.dim, 127 / 254);
+
+  levelControl.emit('attr.currentLevel', 255);
+  await Promise.resolve();
+  assert.equal(device.values.dim, 127 / 254);
+
+  device._registerStateReportListeners();
+  assert.equal(onOff.listenerCount('attr.onOff'), 1);
+  assert.equal(levelControl.listenerCount('attr.currentLevel'), 1);
+
+  device._removeStateReportListeners();
+  assert.equal(onOff.listenerCount('attr.onOff'), 0);
+  assert.equal(levelControl.listenerCount('attr.currentLevel'), 0);
 });
