@@ -4,6 +4,14 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.1.2
+
+Repository and App Store maintenance release.
+
+- Updated the Homey App Store description.
+- Clarified repository documentation and release-file responsibilities.
+- No runtime or device behaviour changes.
+
 ### v2.1.1
 
 2026 modernization release.
