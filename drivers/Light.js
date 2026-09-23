@@ -87,12 +87,38 @@ class Light extends ZigBeeLightDevice {
 
         const opts = Number.isFinite(args.duration) ? { duration: args.duration } : {};
         if (brightness === 0) {
-            return this.changeDimLevel(0, opts);
+            await this.changeDimLevel(0, opts);
+            await this.setCapabilityValue('dim', 0);
+            if (this.hasCapability('onoff')) await this.setCapabilityValue('onoff', false);
+            return;
         }
 
         const { hue, saturation } = this._hexToHsv(args.color);
         await this.changeDimLevel(brightness, opts);
-        return this.changeColor({ hue, saturation, value: brightness }, opts);
+        await this.setCapabilityValue('dim', brightness);
+        if (this.hasCapability('onoff')) await this.setCapabilityValue('onoff', true);
+
+        await this.changeColor({ hue, saturation, value: brightness }, opts);
+        if (this.hasCapability('light_hue')) await this.setCapabilityValue('light_hue', hue);
+        if (this.hasCapability('light_saturation')) await this.setCapabilityValue('light_saturation', saturation);
+        if (this.hasCapability('light_mode')) await this.setCapabilityValue('light_mode', 'color');
+    }
+
+    async adjustLightTemperature(args) {
+        const delta = Number(args.delta);
+        if (!Number.isFinite(delta) || delta < -1 || delta > 1) {
+            throw new Error('Temperature change must be between -1 and 1');
+        }
+
+        const current = Number(this.getCapabilityValue('light_temperature'));
+        const base = Number.isFinite(current) ? current : 0.5;
+        const target = Math.min(1, Math.max(0, base + delta));
+        const opts = Number.isFinite(args.duration) ? { duration: args.duration } : {};
+
+        await this.changeColorTemperature(target, opts);
+        await this.setCapabilityValue('light_temperature', target);
+        if (this.hasCapability('light_mode')) await this.setCapabilityValue('light_mode', 'temperature');
+        return target;
     }
 
     // Sleep for blink
