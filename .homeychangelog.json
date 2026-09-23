@@ -154,5 +154,8 @@
   },
   "2.1.1": {
     "en": "2026 modernization: updated Zigbee stack, lifecycle and stability fixes, improved sensor and remote handling, and additional Hue device support including Dymera and Slim Recessed Spot."
+  },
+  "2.1.2": {
+    "en": "Updated the Homey App Store description and repository release documentation."
   }
 }
