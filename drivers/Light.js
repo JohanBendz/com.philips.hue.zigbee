@@ -50,8 +50,14 @@ class Light extends ZigBeeLightDevice {
         return super.changeColorTemperature(temperature, this._withDefaultTransition(opts));
     }
 
-    changeColor(color, opts = {}) {
-        return super.changeColor(color, this._withDefaultTransition(opts));
+    async changeColor(color, opts = {}) {
+        const result = await super.changeColor(color, this._withDefaultTransition(opts));
+        // homey-zigbeedriver 2.2.18 has a malformed light_mode capability check
+        // in changeColor(), so ensure the capability reflects the command that succeeded.
+        if (this.hasCapability('light_mode')) {
+            await this.setCapabilityValue('light_mode', 'color');
+        }
+        return result;
     }
 
     _hexToHsv(hex) {
