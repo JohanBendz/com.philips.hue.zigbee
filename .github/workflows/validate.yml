@@ -19,7 +19,9 @@ jobs:
           cache: npm
       - run: npm ci --ignore-scripts
       - name: Generate manifest and run Homey publish validation
-        run: npx --yes homey@4.5.0 app validate --level publish
+        run: |
+          npx --yes homey@4.5.0 app build
+          npx --yes homey@4.5.0 app validate --level publish
       - run: npm test
       - name: Whitespace check
         run: git diff --check
