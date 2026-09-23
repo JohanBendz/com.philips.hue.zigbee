@@ -124,13 +124,13 @@ class Light extends ZigBeeLightDevice {
     }
 
     async setHueEffect(args) {
-        const effects = {
-            none: 0x00,
-            candle: 0x01,
-            fireplace: 0x02,
+        const effectPayloads = {
+            none: Buffer.from([0x20, 0x00, 0x00]),
+            candle: Buffer.from([0x21, 0x00, 0x01, 0x01]),
+            fireplace: Buffer.from([0x21, 0x00, 0x01, 0x02]),
         };
-        const effectType = effects[args.effect];
-        if (effectType === undefined) {
+        const payload = effectPayloads[args.effect];
+        if (!payload) {
             throw new Error('Unsupported Hue effect');
         }
 
@@ -140,12 +140,9 @@ class Light extends ZigBeeLightDevice {
             throw new Error('This Hue light does not support native Candle/Fireplace effects');
         }
 
-        // Philips2 flags are little-endian. 0x0001 = on/off, 0x0020 = effect.
-        // Payload order is flags, onOff, effectType.
-        const payload = Buffer.from([0x21, 0x00, 0x01, effectType]);
         await endpoint.clusters[HueSpecificPhilips2Cluster.NAME].multiColor({ data: payload });
 
-        if (this.hasCapability('onoff')) {
+        if (args.effect !== 'none' && this.hasCapability('onoff')) {
             await this.setCapabilityValue('onoff', true);
         }
     }
