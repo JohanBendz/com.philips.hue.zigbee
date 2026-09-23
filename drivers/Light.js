@@ -142,7 +142,7 @@ class Light extends ZigBeeLightDevice {
 
         // Philips2 flags are little-endian. 0x0001 = on/off, 0x0020 = effect.
         // Payload order is flags, onOff, effectType.
-        const payload = Buffer.from([0x21, 0x00, effectType === 0 ? 0x01 : 0x01, effectType]);
+        const payload = Buffer.from([0x21, 0x00, 0x01, effectType]);
         await endpoint.clusters[HueSpecificPhilips2Cluster.NAME].multiColor({ data: payload });
 
         if (this.hasCapability('onoff')) {
