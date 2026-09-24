@@ -68,8 +68,10 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
         assert.equal(data.readUInt32LE(14), file.fileVersion, filename);
         assert.equal(data.readUInt32LE(52), file.size, filename);
 
-        const digest = crypto.createHash('sha256').update(data).digest('hex');
-        assert.equal(file.integrity, `sha256:${digest}`, filename);
+        const [algorithm, expectedDigest] = file.integrity.split(':');
+        assert.ok(algorithm && expectedDigest, `${filename}: invalid integrity format`);
+        const digest = crypto.createHash(algorithm).update(data).digest('hex');
+        assert.equal(digest, expectedDigest, filename);
       }
     }
   }
