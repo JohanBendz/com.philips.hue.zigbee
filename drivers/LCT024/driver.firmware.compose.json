@@ -1,0 +1,36 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Play Lightbar (LCT024)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCT024"
+      },
+      "files": [
+        {
+          "fileVersion": 16783620,
+          "imageType": 270,
+          "manufacturerCode": 4107,
+          "size": 271050,
+          "name": "100B-010E-01001904-ConfLight-ModuLum_0012.zigbee",
+          "integrity": "sha256:0f388d8cb518c1280b8c0a5f0e5fe41f8b049d33691442c8fec48ec3ec69c89c",
+          "maxFileVersion": 16783619
+        },
+        {
+          "fileVersion": 16787456,
+          "imageType": 270,
+          "manufacturerCode": 4107,
+          "size": 269002,
+          "name": "100B-010E-01002800-ConfLight-ModuLum_0012.zigbee",
+          "integrity": "sha256:448d8e2023a36f8811b8e0258b690be222e23b01fd526ae3cd8ba976f7cd9446",
+          "minFileVersion": 16783620
+        }
+      ]
+    }
+  ]
+}
