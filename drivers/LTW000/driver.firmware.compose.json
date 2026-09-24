@@ -96,6 +96,38 @@
           "minFileVersion": 16786690
         }
       ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White Ambiance A19 (LTW001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTW001"
+      },
+      "files": [
+        {
+          "fileVersion": 1107326256,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256632,
+          "name": "ConnectedLamp-Atmel_0104_5.130.1.30000_0012.sbl-ota",
+          "integrity": "sha256:eb1920abf315cf4de8b3d0531090e4f6c05abe998fae33634ad85d76b0327be9",
+          "maxFileVersion": 1107326255
+        },
+        {
+          "fileVersion": 1124103180,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256696,
+          "name": "ConnectedLamp-Atmel-Target_0012.sbl-ota",
+          "integrity": "sha256:d18f0e188847f3b002e7dfe221e563691f17ed22fdb80ca1b8fe558540979d8b",
+          "minFileVersion": 1107326256
+        }
+      ]
     }
   ]
 }
