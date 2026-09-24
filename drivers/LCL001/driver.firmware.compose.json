@@ -13,42 +13,22 @@
       },
       "files": [
         {
-          "fileVersion": 16780032,
-          "imageType": 279,
+          "fileVersion": 16786436,
+          "imageType": 287,
           "manufacturerCode": 4107,
-          "size": 300890,
-          "name": "100B-0117-01000B00-ConfLightBLE-ModuLum-EFR32MG21.zigbee",
-          "integrity": "sha256:63cd4d12fe2b7fe5b96826cb24b3849a93f129d302214dd164ad1eba53cd9148",
-          "maxFileVersion": 16780031
+          "size": 447238,
+          "name": "100B-011F-01002404-ConfLightBLE-ModuLumV3-EFR32MG21.zigbee",
+          "integrity": "sha512:221ed158776145ef9881cf42d134e2cdbd84ae6383d67d455b9d613be80f300705a0116eb20a1a6e344285675ec8088b40e2f14890b20f7a923b970d895fc657",
+          "maxFileVersion": 16786435
         },
         {
-          "fileVersion": 16780288,
-          "imageType": 279,
+          "fileVersion": 16787456,
+          "imageType": 287,
           "manufacturerCode": 4107,
-          "size": 317506,
-          "name": "100B-0117-01000C00-ConfLightBLE-ModuLum-EFR32MG21.zigbee",
-          "integrity": "sha256:2897d1098f8d4c00bc347e3da04070bc1628c4676ca597a5926688473c0355a2",
-          "minFileVersion": 16780032,
-          "maxFileVersion": 16780287
-        },
-        {
-          "fileVersion": 16780292,
-          "imageType": 279,
-          "manufacturerCode": 4107,
-          "size": 317618,
-          "name": "100B-0117-01000C04-ConfLightBLE-ModuLum-EFR32MG21.zigbee",
-          "integrity": "sha256:58a0266b82ccb4b50814c1838684187f74fcef9d5b2a5474c01d257b38067621",
-          "minFileVersion": 16780288,
-          "maxFileVersion": 16780291
-        },
-        {
-          "fileVersion": 16784654,
-          "imageType": 279,
-          "manufacturerCode": 4107,
-          "size": 421738,
-          "name": "100B-0117-01001D0E-ConfLightBLE-ModuLum-EFR32MG21.zigbee",
-          "integrity": "sha256:e0241a27d85f9b14a220258734d9da248d4df411a3ba506dad24f55fa70662aa",
-          "minFileVersion": 16780292
+          "size": 444074,
+          "name": "100B-011F-01002800-ConfLightBLE-ModuLumV3-EFR32MG21.zigbee",
+          "integrity": "sha512:2385a21a3192f9daea7738020bc1ef36dc9fe642b82c2c1cfaeea1ebb01530246b50635a04e87c4ec2da327ef5049b85e9688d67652463245ef8df267fcb5e0a",
+          "minFileVersion": 16786436
         }
       ]
     }
