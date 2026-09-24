@@ -32,10 +32,13 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     assert.ok(Array.isArray(firmware.updates) && firmware.updates.length > 0, driverName);
 
     for (const update of firmware.updates) {
-      assert.ok(
-        supportedProducts.includes(update.device.productId),
-        `${driverName}: unsupported productId ${update.device.productId}`,
-      );
+      const updateProducts = asArray(update.device.productId);
+      for (const productId of updateProducts) {
+        assert.ok(
+          supportedProducts.includes(productId),
+          `${driverName}: unsupported productId ${productId}`,
+        );
+      }
 
       for (const manufacturer of asArray(update.device.manufacturerName)) {
         assert.ok(
