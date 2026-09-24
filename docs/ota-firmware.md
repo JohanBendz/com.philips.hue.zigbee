@@ -12,30 +12,63 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 - Preserve intermediate images whenever the upstream catalogue specifies `minFileVersion` / `maxFileVersion`; do not assume devices may jump directly to the latest image.
 - Enable an update only for product IDs with an independently supported image-type mapping. A broad Homey driver does not imply that every product ID in that driver uses the same firmware family.
 - Treat driver compose files as source of truth. `app.json` is generated during validation and should not be hand-edited.
-- `test/firmware.test.js` validates every bundled OTA file against the compose metadata and the binary header and the declared integrity algorithm.
+- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm.
 
-## Implemented mappings
+## Current coverage
 
-| Homey driver | Zigbee product ID | Hue image type | Confidence |
-| --- | --- | ---: | --- |
-| LOM002 | LOM006 | `0x011A` | High |
-| LTA011 | LTA015 | `0x0129` | High |
-| LCA001 | LCA001 | `0x0112` | High |
-| LWA001 | LWA001 | `0x0112` | High |
-| LCG002 | LCG002 | `0x0114` | High |
-| LTE002 | LTE002 | `0x0114` | High |
-| LCL001 | LCL001 | `0x0117` | High |
-| LCL003 | LCL003 | `0x0117` | High |
+The branch currently contains **32 firmware-enabled Homey drivers** and **84 bundled firmware files**.
 
-LOM006 is documented as image type `0x011A` in the public deCONZ/zigpy Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The remaining mappings above are documented in the public Hue OTA mapping and cross-checked against Koenkk/zigbee-OTA.
+| Homey driver | Zigbee product ID(s) | Hue image type(s) | Battery wake instruction |
+| --- | --- | --- | --- |
+| LCA001 | LCA001 | `0x0112` | — |
+| LCE002 | LCE002 | `0x0114` | — |
+| LCF003 | LCF003 | `0x010E` | — |
+| LCG002 | LCG002 | `0x0114` | — |
+| LCL001 | LCL001 | `0x0117` | — |
+| LCL003 | LCL003 | `0x0117` | — |
+| LCT000 | LCT010, LCT014, LCT015, LCT016 | `0x010C` | — |
+| LCT000 | LCT007 | `0x0104` | — |
+| LCT012 | LCT012 | `0x010C` | — |
+| LCT024 | LCT024 | `0x010E` | — |
+| LLC010 | LLC010 | `0x0108` | — |
+| LLC020 | LLC020 | `0x0108` | — |
+| LOM002 | LOM006 | `0x011A` | — |
+| LTA011 | LTA015 | `0x0129` | — |
+| LTC001 | LTC001 | `0x010E` | — |
+| LTC011 | LTC011 | `0x010E` | — |
+| LTE002 | LTE002 | `0x0114` | — |
+| LTO001 | LTO001 | `0x0114` | — |
+| LTP002 | LTP002 | `0x010E` | — |
+| LTW000 | LTW010, LTW015 | `0x010C` | — |
+| LTW012 | LTW012 | `0x010C` | — |
+| LTW013 | LTW013 | `0x010C` | — |
+| LWA001 | LWA001 | `0x0112` | — |
+| LWA017 | LWA029 | `0x0114` | — |
+| LWB000 | LWB010, LWB014 | `0x010C` | — |
+| LWB000 | LWB006 | `0x0105` | — |
+| RDM001 | RDM001 | `0x011C` | Yes |
+| RDM002 | RDM002 | `0x0121` | Yes |
+| RWL000 | RWL020, RWL021 | `0x0109` | Yes |
+| RWL022 | RWL022 | `0x0119` | Yes |
+| SML001-occupancy | SML001 | `0x010D` | Yes |
+| SML001-occupancy | SML003 | `0x011B` | Yes |
+| SML001 | SML001 | `0x010D` | Yes |
+| SML002-occupancy | SML002 | `0x010D` | Yes |
+| SML002-occupancy | SML004 | `0x011B` | Yes |
+| SML002 | SML002 | `0x010D` | Yes |
 
-## Next mappings to assess
+LOM006 is documented as image type `0x011A` in the public deCONZ/zigpy Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The remaining mappings were added only after cross-checking public Hue OTA mappings, Koenkk/zigbee-OTA metadata and the matching Zigbee OTA image headers.
 
-Public mappings also cover:
+## Battery devices
 
-- SML001 → `0x010D`
-- RWL020 / RWL021 → `0x0109`
-- LCT012 / LTW012 / LTW013 / LWB010 and related legacy lights → `0x010C`
-- LCF003 / LCT024 / LTP002 and related luminaires → `0x010E`
+Battery-powered devices use a separate `wakeInstruction` in their firmware compose manifest. The instruction is device-specific:
 
-Battery devices should be handled separately because wake behaviour and update timing need explicit testing.
+- Hue Dimmer Switch: briefly press a button every few seconds.
+- Hue motion sensors: briefly press the setup button every few seconds; do not hold it.
+- Hue Tap Dial Switch and Wall Switch Module: follow the instruction declared by their driver manifest.
+
+Battery-device OTA should be verified on real hardware because update timing depends on keeping the device awake.
+
+## Expansion rule
+
+Do not infer OTA support from a shared Homey driver alone. Add another product only when its Hue image type can be independently established and the required image chain is available and header-verified. New mappings should be added in small groups, followed by the firmware regression test and Homey publish validation before further expansion.
