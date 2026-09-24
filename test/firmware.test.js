@@ -9,6 +9,23 @@ const test = require('node:test');
 const ROOT = path.join(__dirname, '..');
 const DRIVERS = path.join(ROOT, 'drivers');
 
+const VERIFIED_IMAGE_TYPES = Object.freeze({
+  '1741530P7': [0x011f],
+  '1743430P7': [0x011f],
+  '1746430P7': [0x011f],
+  '4080248P9': [0x011d],
+  LCL001: [0x011f],
+  LCT026: [0x0111],
+  LLC011: [0x0103],
+  LTA001: [0x0112],
+  LTA009: [0x0114],
+  LTG002: [0x0114],
+  LTO002: [0x0114],
+  LWA004: [0x0112],
+  LWE002: [0x0112],
+  LWO001: [0x0112],
+});
+
 function asArray(value) {
   return Array.isArray(value) ? value : [value];
 }
@@ -38,6 +55,17 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
           supportedProducts.includes(productId),
           `${driverName}: unsupported productId ${productId}`,
         );
+      }
+
+      for (const productId of updateProducts) {
+        const expectedImageTypes = VERIFIED_IMAGE_TYPES[productId];
+        if (!expectedImageTypes) continue;
+        for (const file of update.files) {
+          assert.ok(
+            expectedImageTypes.includes(file.imageType),
+            `${driverName}/${productId}: unverified imageType 0x${file.imageType.toString(16)}`,
+          );
+        }
       }
 
       for (const manufacturer of asArray(update.device.manufacturerName)) {
