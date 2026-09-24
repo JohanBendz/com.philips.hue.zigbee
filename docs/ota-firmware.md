@@ -23,7 +23,7 @@ The branch currently contains **45 firmware-enabled Homey drivers** and **132 bu
 | 1743130P7 | 1743430P7 | `0x011F` | — |
 | 1746447P7 | 1746430P7 | `0x011F` | — |
 | LCA001 | LCA001 | `0x0112` | — |
-| LCA001 | LCA005 | `0x0114` | — |
+| LCA001 | LCA004, LCA005 | `0x0114` | — |
 | LCE002 | LCE002 | `0x0114` | — |
 | LCF003 | LCF003 | `0x010E` | — |
 | LCF003 | 4080248P9 | `0x011D` | — |
@@ -57,7 +57,7 @@ The branch currently contains **45 firmware-enabled Homey drivers** and **132 bu
 | LWA001 | LWA001 | `0x0112` | — |
 | LWA001 | LWA011 | `0x0114` | — |
 | LWA004 | LWA004 | `0x0112` | — |
-| LWA017 | LWA029 | `0x0114` | — |
+| LWA017 | LWA017, LWA029 | `0x0114` | — |
 | LWE002 | LWE002 | `0x0112` | — |
 | LWO001 | LWO001 | `0x0112` | — |
 | LWU001 | LWU001 | `0x0114` | — |
