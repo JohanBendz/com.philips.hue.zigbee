@@ -24,6 +24,28 @@
           "integrity": "sha512:3a4266047f88641f9d9706c2bfbde31f15698493203f66ba3281af4e6047829c593a45dc3ff10156d6920810e68d4e6a1bc0036749d012a3076e1fab24c734f0"
         }
       ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Outdoor Motion Sensor (SML004)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "SML004"
+      },
+      "files": [
+        {
+          "fileVersion": 33576193,
+          "imageType": 283,
+          "manufacturerCode": 4107,
+          "size": 204806,
+          "name": "100B-011B-02005501-Sensor-EFR32MG22.zigbee",
+          "integrity": "sha512:d61c9bc773e1990d442228b96ba2202b3b4621222e6a63deee72e02c812cefafc8cab8ee57b2bc8af4ce8deca4635502b09abf3c25cc0a2153bf9f4e76248b42"
+        }
+      ]
     }
   ]
 }
