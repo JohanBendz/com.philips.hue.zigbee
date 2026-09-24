@@ -30,6 +30,7 @@ const VERIFIED_IMAGE_TYPES = Object.freeze({
   LWA011: [0x0114],
   LWE002: [0x0112],
   LWO001: [0x0112],
+  ROM001: [0x0116],
   LWU001: [0x0114],
 });
 

@@ -16,7 +16,7 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 
 ## Current coverage
 
-The branch currently contains **44 firmware-enabled Homey drivers** and **130 bundled firmware files**.
+The branch currently contains **45 firmware-enabled Homey drivers** and **132 bundled firmware files**.
 
 | Homey driver | Zigbee product ID(s) | Hue image type(s) | Battery wake instruction |
 | --- | --- | --- | --- |
@@ -63,6 +63,7 @@ The branch currently contains **44 firmware-enabled Homey drivers** and **130 bu
 | LWU001 | LWU001 | `0x0114` | — |
 | LWB000 | LWB010, LWB014 | `0x010C` | — |
 | LWB000 | LWB006 | `0x0105` | — |
+| ROM001 | ROM001 | `0x0116` | Yes |
 | RDM001 | RDM001 | `0x011C` | Yes |
 | RDM002 | RDM002 | `0x0121` | Yes |
 | RWL000 | RWL020, RWL021 | `0x0109` | Yes |
@@ -89,6 +90,7 @@ Do not restore a single image-type mapping for these product IDs from model name
 
 Battery-powered devices use a separate `wakeInstruction` in their firmware compose manifest. The instruction is device-specific:
 
+- Hue Smart Button: briefly press the button immediately before starting the update; press it again if Homey asks you to wake it.
 - Hue Dimmer Switch: briefly press a button every few seconds.
 - Hue motion sensors: briefly press the setup button every few seconds; do not hold it.
 - Hue Tap Dial Switch and Wall Switch Module: follow the instruction declared by their driver manifest.

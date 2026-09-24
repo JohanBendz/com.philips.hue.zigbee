@@ -1,0 +1,39 @@
+{
+  "wakeInstruction": {
+    "en": "Briefly press the Smart Button immediately before starting the firmware update to wake it. If Homey asks you to wake it again, briefly press the button."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Smart Button (ROM001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "ROM001"
+      },
+      "files": [
+        {
+          "fileVersion": 33559296,
+          "imageType": 278,
+          "manufacturerCode": 4107,
+          "size": 243610,
+          "name": "100B-0116-02001300-Switch-EFR32MG13.zigbee",
+          "integrity": "sha512:615c6b6d88bac398c7e01fe857ada5c2a95f2e201cd98f4483fa4220de8c045cefbd7203db006eb7fe5bac4353666bde88987764848e51d452ae6bc854b79a6d",
+          "maxFileVersion": 33559295
+        },
+        {
+          "fileVersion": 33576193,
+          "imageType": 278,
+          "manufacturerCode": 4107,
+          "size": 239462,
+          "name": "100B-0116-02005501-Switch-EFR32MG13.zigbee",
+          "integrity": "sha512:3e8d304914ca531d3b78504ce821f6f15920b635c1b3cf18dac6922e1528e7efe7c71b778c25bc1ba0a18182332c2e06be25822da0bffedb08d18cee0fce3b8d",
+          "minFileVersion": 33559296
+        }
+      ]
+    }
+  ]
+}
