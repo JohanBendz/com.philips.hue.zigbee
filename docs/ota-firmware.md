@@ -16,7 +16,7 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 
 ## Current coverage
 
-The branch currently contains **34 firmware-enabled Homey drivers** and **88 bundled firmware files**.
+The branch currently contains **36 firmware-enabled Homey drivers** and **92 bundled firmware files**.
 
 | Homey driver | Zigbee product ID(s) | Hue image type(s) | Battery wake instruction |
 | --- | --- | --- | --- |
@@ -46,6 +46,8 @@ The branch currently contains **34 firmware-enabled Homey drivers** and **88 bun
 | LWA001 | LWA001 | `0x0112` | — |
 | LWA004 | LWA004 | `0x0112` | — |
 | LWA017 | LWA029 | `0x0114` | — |
+| LWE002 | LWE002 | `0x0112` | — |
+| LWO001 | LWO001 | `0x0112` | — |
 | LWB000 | LWB010, LWB014 | `0x010C` | — |
 | LWB000 | LWB006 | `0x0105` | — |
 | RDM001 | RDM001 | `0x011C` | Yes |
