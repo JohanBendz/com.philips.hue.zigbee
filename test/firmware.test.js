@@ -17,6 +17,7 @@ const VERIFIED_IMAGE_TYPES = Object.freeze({
   LCL001: [0x011f],
   LCT026: [0x0111],
   LLC011: [0x0103],
+  LST001: [0x0103],
   LTA001: [0x0112],
   LTA009: [0x0114],
   LTG002: [0x0114],
