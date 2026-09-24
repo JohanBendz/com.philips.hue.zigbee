@@ -1,0 +1,29 @@
+{
+  "wakeInstruction": {
+    "en": "Press any button or turn the dial briefly every few seconds during the firmware update to keep the Tap Dial Switch awake."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Tap Dial Switch (RDM002)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "RDM002"
+      },
+      "files": [
+        {
+          "fileVersion": 33576193,
+          "imageType": 289,
+          "manufacturerCode": 4107,
+          "size": 212446,
+          "name": "100B-0121-02005501-Switch-EFR32MG22-40xf.zigbee",
+          "integrity": "sha512:fe29bb9358e2f4e5e6e56e57d4556d4138aaa9590ca194d78730c357349a0855c739e3ae2aee7e6eae463187ee5def1b9b6b5c8ee59f0a36d30bc16011db822e"
+        }
+      ]
+    }
+  ]
+}
