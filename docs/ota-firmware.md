@@ -16,7 +16,7 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 
 ## Current coverage
 
-The branch currently contains **43 firmware-enabled Homey drivers** and **112 bundled firmware files**.
+The branch currently contains **42 firmware-enabled Homey drivers** and **111 bundled firmware files**.
 
 | Homey driver | Zigbee product ID(s) | Hue image type(s) | Battery wake instruction |
 | --- | --- | --- | --- |
@@ -34,7 +34,6 @@ The branch currently contains **43 firmware-enabled Homey drivers** and **112 bu
 | LCT000 | LCT007 | `0x0104` | — |
 | LCT012 | LCT012 | `0x010C` | — |
 | LCT024 | LCT024 | `0x010E` | — |
-| LCT026 | LCT026 | `0x0111` | — |
 | LLC010 | LLC010 | `0x0108` | — |
 | LLC011 | LLC011 | `0x0103` | — |
 | LLC020 | LLC020 | `0x0108` | — |
@@ -71,6 +70,15 @@ The branch currently contains **43 firmware-enabled Homey drivers** and **112 bu
 | SML002 | SML002 | `0x010D` | Yes |
 
 LOM006 is documented as image type `0x011A` in the public deCONZ/zigpy Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The remaining mappings were added only after cross-checking public Hue OTA mappings, captured Hue V2 `product_data`, observed Zigbee OTA requests, Koenkk/zigbee-OTA metadata and matching Zigbee OTA image headers.
+
+## Known revision conflicts
+
+The following product IDs are deliberately withheld from OTA until hardware-revision matching is proven safe in Homey:
+
+- `LCT026`: observed as both `0x0111` and `0x011E` on different Hue hardware revisions.
+- `3261031P6`: observed as both `0x0117` and `0x011D` on different Hue hardware revisions.
+
+Do not restore a single image-type mapping for these product IDs from model name alone.
 
 ## Battery devices
 
