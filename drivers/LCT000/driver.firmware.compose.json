@@ -2,7 +2,7 @@
   "updates": [
     {
       "changelog": {
-        "en": "Philips Hue firmware update for A19 Color (LCT010/LCT015)."
+        "en": "Philips Hue firmware update for A19 Color (LCT010/LCT014/LCT015/LCT016)."
       },
       "device": {
         "manufacturerName": [
@@ -11,7 +11,9 @@
         ],
         "productId": [
           "LCT010",
-          "LCT015"
+          "LCT014",
+          "LCT015",
+          "LCT016"
         ]
       },
       "files": [
