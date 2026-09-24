@@ -2,14 +2,17 @@
   "updates": [
     {
       "changelog": {
-        "en": "Philips Hue firmware update for A60 E27 White (LWB010)."
+        "en": "Philips Hue firmware update for A60 E27 White (LWB010/LWB014)."
       },
       "device": {
         "manufacturerName": [
           "Philips",
           "Signify Netherlands B.V."
         ],
-        "productId": "LWB010"
+        "productId": [
+          "LWB010",
+          "LWB014"
+        ]
       },
       "files": [
         {
