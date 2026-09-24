@@ -8,11 +8,11 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 - Prefer Signify's `originalUrl` from the Koenkk index as provenance when available.
 - Never identify an image by filename or visible software version alone.
 - Verify every Zigbee OTA header before adding a file: `0x0BEEF11E`, header version `0x0100`, manufacturer code `0x100B` (4107), image type, file version and total image size.
-- Store a SHA-256 integrity value in Homey's firmware compose metadata.
+- Store a cryptographic integrity value in Homey's firmware compose metadata. Prefer the SHA-512 published by Koenkk when available; locally computed SHA-256 remains valid.
 - Preserve intermediate images whenever the upstream catalogue specifies `minFileVersion` / `maxFileVersion`; do not assume devices may jump directly to the latest image.
 - Enable an update only for product IDs with an independently supported image-type mapping. A broad Homey driver does not imply that every product ID in that driver uses the same firmware family.
 - Treat driver compose files as source of truth. `app.json` is generated during validation and should not be hand-edited.
-- `test/firmware.test.js` validates every bundled OTA file against the compose metadata and the binary header.
+- `test/firmware.test.js` validates every bundled OTA file against the compose metadata and the binary header and the declared integrity algorithm.
 
 ## Implemented mappings
 
