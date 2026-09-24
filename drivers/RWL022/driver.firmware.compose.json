@@ -1,0 +1,39 @@
+{
+  "wakeInstruction": {
+    "en": "Press a button briefly every few seconds during the firmware update to keep the dimmer switch awake."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Dimmer Switch (RWL022)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "RWL022"
+      },
+      "files": [
+        {
+          "fileVersion": 33562880,
+          "imageType": 281,
+          "manufacturerCode": 4107,
+          "size": 169450,
+          "name": "100B-0119-02002100-Switch-EFR32MG22.zigbee",
+          "integrity": "sha512:b89acc3a4146c033ab96a9f11d07d11f9dcf8e432a357fe063c83065a49e588ec92031bc560462c1e1db2242f49823e1e1528a7660b6970ba576f20135a5b54e",
+          "maxFileVersion": 33562879
+        },
+        {
+          "fileVersion": 33576193,
+          "imageType": 281,
+          "manufacturerCode": 4107,
+          "size": 207290,
+          "name": "100B-0119-02005501-Switch-EFR32MG22.zigbee",
+          "integrity": "sha512:6678ca6bba6b057d32978d6ca461ffc9ead321ae1f947d38731d8e66c1778a98c01c0a05ecccab0a832c6106962a9fdb478634be817cfb1ba50d8c3bc37713ba",
+          "minFileVersion": 33562880
+        }
+      ]
+    }
+  ]
+}
