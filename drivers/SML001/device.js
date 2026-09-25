@@ -4,7 +4,6 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
-const { refreshHueSensorMeasurementReportingOnce } = require('../../lib/HueSensorReporting');
 
 class MotionSensor extends ZigBeeDevice {
 
@@ -14,7 +13,6 @@ class MotionSensor extends ZigBeeDevice {
 		this._boundTemperatureListener = null;
 		this._boundLuminanceListener = null;
 		this._listenersRegistered = false;
-		this._measurementReportingRefreshPending = true;
 	}
 
 	async onNodeInit({ zclNode }) {
@@ -88,7 +86,6 @@ class MotionSensor extends ZigBeeDevice {
 				}
 			}
 
-			this._measurementReportingRefreshPending = false;
 			this._listenersRegistered = true;
 			this.log("Event listeners registered (first init)");
 
@@ -280,7 +277,6 @@ class MotionSensor extends ZigBeeDevice {
     await this.setAvailable() // Mark the device as available upon re-announcement
       .then(() => this.log('Device is now available'))
       .catch(err => this.error('Error setting device available', err));
-    await refreshHueSensorMeasurementReportingOnce(this);
   }
   
 }
