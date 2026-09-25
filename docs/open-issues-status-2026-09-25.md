@@ -1,98 +1,85 @@
-# Remaining open issues — status after 2.2.0 / issues-2026-next audit
+# Remaining open issues — status after 2.2.0 / issues-2026-next cleanup
 
 Date: 2026-09-25
 
-There are 25 real open issues. This classification is based on the frozen 2.2.0 candidate, the current `issues-2026-next` branch, the completed regression/audit work, and the latest issue discussions.
+After the 2.2.0 implementation review, post-2.2.0 audits and issue consolidation, the repository now has **10 real open issues**.
 
-The purpose is to separate **remaining code work** from **physical verification**, **platform/network behavior**, and **separate feature tracks**.
+Historical requests that are implemented have been closed as completed. Overlapping network/reporting reports have been consolidated into canonical issues so the open backlog describes work that actually remains.
 
-## 1. Implementation/audit complete — physical Test is now the next useful action (17)
+## Open issues
 
-### Implemented in 2.2.0; keep open until physical verification
+### Physical Test / model evidence required (6)
 
-- #607 — Wall Switch Long Press
-- #694 — Twilight LGT002
-- #428 — Gradient Signe
-- #376 — color/light_mode restoration
-- #522 — additional Flow actions, including relative temperature and native Candle/Fireplace
-- #688 — Mood transitions / default transition
-- #347 — combined light-state Flow action
-- #307 — default smooth transition
-- #701 — RDM005 Smart Button V3
-- #622 — Datura Small
-- #639 — sensor availability restored from real incoming reports
-- #582 — occupancy timeout / cooldown
-- #616 — RWL022 press/hold Flow semantics without breaking action IDs
+- #428 — Gradient Signe native three-color gradient: implementation exists; physical color-order/behavior confirmation remains.
+- #694 — Twilight LGT002: front/back, physical buttons and back gradient implemented; physical confirmation remains.
+- #645 — light state reporting: passive on/off/current-level synchronization is implemented and regression-covered. Active bindings/reporting are deliberately not added without physical evidence.
+- #699 — intermittent transition duration under frequent traffic: explicit and fallback durations survive stress tests; physical command-sequence evidence is still required.
+- #598 — GU10 reconnect: verified current GU10 Zigbee IDs are mapped. Exact modelId/interview is required if the affected lamp still fails on 2.2.0.
+- #633 — RWL022: label/protocol path and all 16 button/action combinations are regression-covered. Pairing/binding changes are deliberately deferred pending physical evidence.
 
-### Audited on issues-2026-next; no further runtime change justified before hardware evidence
+### Canonical unresolved technical tracks (2)
 
-- #645 — passive on/off + current-level synchronization is regression-covered; active bindings/reporting would change Zigbee network behavior and require a separate decision.
-- #699 — explicit durations remain intact under rapid synthetic load; no command queue/debounce is justified without a physical failing sequence.
-- #598 — verified current GU10 Zigbee IDs are already mapped and regression-tested; the exact failing lamp modelId/interview is still needed if Test pairing fails.
-- #633 — RWL022 label/protocol path plus all 16 button/action combinations are regression-covered; no binding/manufacturer-setting change is justified without physical evidence.
+- #615 — **Hue sleepy devices intermittently leave Zigbee network / rejoin instability**.
+  - Canonical for historical #579, #580 and #657 network-loss symptoms.
+  - App-side polling/battery/availability handling is hardened.
+  - Genuine coordinator/Trust Center/rejoin behavior remains unresolved at platform/network level.
 
-These 17 issues are not active code backlog at present.
+- #654 — **Hue motion sensors stop updating temperature / luminance**.
+  - Canonical for the reporting side of historical #663.
+  - Listener lifecycle is fixed.
+  - Wake-based configure-reporting recovery remains deliberately parked until physical evidence justifies it.
 
-## 2. Controlled sensor investigations — experiment parked (2)
+### Identity ambiguity (1)
 
-- #654 — old motion sensors stop temperature/luminance updates.
-- #663 — outdoor sensor eventually freezes; mixed reporting/network symptom.
+- #597 — A60 E27 800 lm.
+  - `8719514329843` maps upstream to `LWF004`.
+  - `9290018216A` maps upstream to `LWA024`.
+  - 2.2.0 already contains `LWA024`; draft PR #751 keeps the separate `LWF004` hypothesis isolated.
+  - A physical Homey Zigbee interview is the deciding evidence.
 
-The earlier wake-based measurement-reporting refresh was deliberately removed from `issues-2026-next` because it adds configure-reporting traffic during a sleepy-device wake window.
-
-Current action: reproduce physically on 2.2.0 first. Reintroduce the reporting experiment only as a separate controlled test if the evidence supports it.
-
-## 3. Genuine Zigbee leave/rejoin / platform track (4)
-
-- #579 — Hue Dimmer loses connectivity.
-- #580 — Tap Dial battery + network loss.
-- #615 — SML001 genuinely reported as leaving Zigbee network.
-- #657 — SML003 battery + network drop.
-
-The app-side parts have been hardened:
-
-- unsafe startup/generic-online battery reads were reduced;
-- invalid battery values are rejected where applicable;
-- real incoming traffic can restore stale Homey availability.
-
-No supported app-level Trust Center/insecure-rejoin control has been identified. No speculative repair/rejoin, keep-alive polling or network workaround should be added.
-
-These remain open primarily as platform/network compatibility cases unless physical evidence identifies an app-level trigger.
-
-## 4. Device identity ambiguity — physical modelId required (1)
-
-### #597 — A60 E27 800 lm
-
-The issue contains two identifiers that currently map to different Zigbee identities upstream:
-
-- linked product number `8719514329843` maps to Zigbee model `LWF004`;
-- stated commercial model `9290018216A` maps to Zigbee model `LWA024`.
-
-2.2.0 already adds `LWA024`. Draft PR #751 separately adds `LWF004`.
-
-Neither should be treated as proof of the reporter's actual Zigbee `modelId`. Keep #751 isolated and do not merge it solely to close #597. A physical pairing/interview is the deciding evidence.
-
-## 5. Separate feature/workstream (1)
+### Separate feature workstream (1)
 
 - #668 — Hue OTA without Bridge.
+  - Homey's OTA mechanism is available.
+  - Firmware provenance/licensing/distribution remains a separate maintainability decision.
 
-Homey's OTA mechanism is no longer the primary blocker. Firmware provenance/licensing/distribution remains a separate workstream and should not be mixed into the issue-fix branch.
+## Closed during the 2026-09-25 cleanup
+
+### Completed implementations
+
+- #307 — default smooth transition
+- #347 — combined light-state Flow action
+- #376 — color/light_mode restoration
+- #522 — additional Flow actions
+- #582 — motion cooldown / occupancy timeout
+- #607 — Wall Switch long press
+- #616 — RWL022 press/hold semantics
+- #622 — Datura Small support
+- #639 — stale sensor availability recovery
+- #701 — RDM005 Smart Button V3
+- #688 — known Mood-transition path
+
+### Consolidated into canonical issues
+
+- #579 → #615
+- #580 → #615
+- #657 → #615
+- #663 → #654 for reporting; #615 for genuine network loss
 
 ## Net result
 
 | Status | Count |
 |---|---:|
-| Implementation/audit complete; physical Test next | 17 |
-| Controlled sensor investigation | 2 |
-| Zigbee rejoin/platform track | 4 |
-| Device identity ambiguity | 1 |
+| Physical Test / model evidence | 6 |
+| Canonical unresolved technical tracks | 2 |
+| Identity ambiguity | 1 |
 | Separate OTA workstream | 1 |
-| **Total** | **25** |
+| **Open real issues** | **10** |
 
-### What is still a real app-code backlog?
+## Engineering boundary
 
-At this point, **none of the 25 has a safe, evidence-backed runtime change that should simply be implemented next on `issues-2026-next`**.
+There is still no safe evidence-backed runtime change that should simply be added next to `issues-2026-next`.
 
-The next productive work is therefore evidence gathering / physical Test. Further runtime work should start only when one of those tests produces a concrete reproducible gap.
+The productive next step is physical verification of the six Test/evidence issues. Runtime changes to bindings, reporting, command ordering or rejoin behavior require concrete failing evidence first.
 
-This does not mean the issues are solved. It means adding more code now would be more speculative than evidence-driven.
+This is intentionally stricter than the old backlog: an implemented request does not stay open indefinitely merely because every hardware variant has not yet been re-tested. A reproducible regression should become a focused new bug rather than keeping the original feature request open forever.
