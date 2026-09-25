@@ -271,7 +271,10 @@ for (const [id, threshold] of [['SML001', 20], ['SML002', 20]]) {
     device.isFirstInit = () => false;
     device.registerCapability = (...args) => {
       device.registeredCapabilities = device.registeredCapabilities || [];
-      device.registeredCapabilities.push(args[0]);
+      device.registeredCapabilities.push({
+        id: args[0],
+        options: args[2],
+      });
     };
     const listeners = { on() {}, removeListener() {} };
     device.zclNode = {
@@ -290,7 +293,15 @@ for (const [id, threshold] of [['SML001', 20], ['SML002', 20]]) {
     };
 
     await device.onNodeInit({ zclNode: device.zclNode });
-    assert.deepEqual(device.registeredCapabilities, ['measure_battery', 'alarm_battery']);
+    assert.deepEqual(
+      device.registeredCapabilities.map(entry => entry.id),
+      ['measure_battery', 'alarm_battery'],
+    );
+    for (const registration of device.registeredCapabilities) {
+      assert.equal(registration.options.getOpts.getOnStart, false);
+      assert.equal(registration.options.getOpts.getOnOnline, undefined);
+      assert.equal(registration.options.getOpts.pollInterval, undefined);
+    }
 
     await device.onEndDeviceAnnounce();
     assert.equal(device.values.measure_battery, 42);
