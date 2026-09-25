@@ -1,6 +1,6 @@
 {
   "name": "com.philips.hue.zigbee",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "Control Philips Hue lights, sensors, switches and accessories directly with Homey over Zigbee, without a Hue Bridge.",
   "main": "app.js",
   "dependencies": {

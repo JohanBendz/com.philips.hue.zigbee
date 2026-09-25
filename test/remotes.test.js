@@ -85,6 +85,8 @@ for (const id of ['RDM001', 'RDM002', 'RWL022']) {
     assert.equal(device.values.measure_battery, 75);
     device._powerParser(Buffer.from([0x18, 2, 0x0a, 0x21, 0, 0x20, 100]));
     assert.equal(device.values.measure_battery, 50);
+    device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
+    assert.equal(device.values.measure_battery, 50);
     for (const frame of [null, Buffer.alloc(3), Buffer.from([0x18, 1, 1, 0x21, 0, 0x86, 0x20, 0])]) {
       device._powerParser(frame);
     }
@@ -93,6 +95,24 @@ for (const id of ['RDM001', 'RDM002', 'RWL022']) {
 }
 
 
+for (const id of ['RDM001', 'RDM002']) {
+  test(`${id}: wake refreshes battery and preserves last valid value`, async () => {
+    const { device } = remote(id);
+    await device.onNodeInit({ zclNode: device.zclNode });
+
+    device.zclNode.endpoints[1].clusters.powerConfiguration = {
+      readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
+    };
+    await device.onEndDeviceAnnounce();
+    assert.equal(device.values.measure_battery, 80);
+
+    device.zclNode.endpoints[1].clusters.powerConfiguration.readAttributes =
+      async () => ({ batteryPercentageRemaining: 255 });
+    await device.onEndDeviceAnnounce();
+    assert.equal(device.values.measure_battery, 80);
+  });
+}
+
 test('RWL000: legacy devices migrate measure_battery and refresh on wake', async () => {
   const Driver = loadDriver('RWL000');
   const device = new Driver();
@@ -100,7 +120,7 @@ test('RWL000: legacy devices migrate measure_battery and refresh on wake', async
   device.isFirstInit = () => false;
 
   const registered = [];
-  device.registerCapability = id => registered.push(id);
+  device.registerCapability = (id, cluster, options) => registered.push({ id, cluster, options });
   const card = {
     registerRunListener() { return this; },
     async trigger() {},
@@ -123,7 +143,10 @@ test('RWL000: legacy devices migrate measure_battery and refresh on wake', async
 
   await device.onNodeInit({ zclNode: device.zclNode });
   assert.equal(device.hasCapability('measure_battery'), true);
-  assert.deepEqual(registered, ['measure_battery', 'alarm_battery']);
+  assert.deepEqual(registered.map(entry => entry.id), ['measure_battery', 'alarm_battery']);
+  const measureBatteryRegistration = registered.find(entry => entry.id === 'measure_battery');
+  assert.equal(measureBatteryRegistration.options.getOpts.getOnStart, false);
+  assert.equal(measureBatteryRegistration.options.getOpts.getOnOnline, false);
 
   await device.onEndDeviceAnnounce();
   assert.equal(device.values.measure_battery, 75);
@@ -157,4 +180,19 @@ test('RWL022: announce refreshes battery after reporting is configured', async (
 
   device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
   assert.equal(device.values.measure_battery, 60);
+});
+
+test('RDM001: pushbutton mode exposes press, hold and release-after-hold actions', async () => {
+  const { device, calls, card } = remote('RDM001');
+  device.settings.mode = 'singlepushbutton';
+  await device.onNodeInit({ zclNode: device.zclNode });
+
+  for (const action of [0, 1, 3]) {
+    await device._buttonCommandParser(buttonFrame(1, action));
+  }
+
+  assert.deepEqual(calls.map(call => call.state.action), ['Press', 'Hold', 'LongRelease']);
+  assert.equal(await card.listener({ action: 'Hold' }, { action: 'Hold' }), true);
+  assert.equal(await card.listener({ action: 'LongRelease' }, { action: 'LongRelease' }), true);
+  assert.equal(await card.listener({ action: 'Release' }, { action: 'Hold' }), false);
 });

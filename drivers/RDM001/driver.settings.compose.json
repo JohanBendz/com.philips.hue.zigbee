@@ -3,24 +3,39 @@
     "id": "mode",
     "type": "dropdown",
     "value": "singlerocker",
-    "label": { "en": "Default mode" },
+    "label": {
+      "en": "Connected switch type",
+      "sv": "Ansluten brytartyp"
+    },
     "values": [
       {
         "id": "singlerocker",
-        "label": { "en": "Single Rocker" }
+        "label": {
+          "en": "Single Rocker"
+        }
       },
       {
         "id": "singlepushbutton",
-        "label": { "en": "Single pushbutton" }
+        "label": {
+          "en": "Single pushbutton"
+        }
       },
       {
         "id": "dualrocker",
-        "label": { "en": "Dual Rocker" }
+        "label": {
+          "en": "Dual Rocker"
+        }
       },
       {
         "id": "dualpushbutton",
-        "label": { "en": "Dual pushbutton" }
+        "label": {
+          "en": "Dual pushbutton"
+        }
       }
-    ]
+    ],
+    "hint": {
+      "en": "Choose pushbutton for momentary buttons and long-press/hold Flow events. Rocker modes report a toggle when the rocker changes position and do not expose hold actions.",
+      "sv": "Välj tryckknapp för återfjädrande knappar och Flow-händelser för långtryck/håll. Vippbrytarlägen rapporterar växling när brytaren ändrar läge och ger inte hold-händelser."
+    }
   }
 ]
