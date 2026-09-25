@@ -13,7 +13,6 @@ const {
   refreshHueSensorBattery,
 } = require('../../lib/HueSensorBattery');
 const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
-const { refreshHueSensorMeasurementReportingOnce } = require('../../lib/HueSensorReporting');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -29,7 +28,6 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
 		this._boundLuminanceListener = null;
 		this._boundBatteryListener = null;
 		this._listenersRegistered = false;
-		this._measurementReportingRefreshPending = true;
 	}
 
 	async onNodeInit({ zclNode }) {
@@ -76,7 +74,6 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
         }
       ]);
 
-      this._measurementReportingRefreshPending = false;
       this.log("Config updated");
 
     }
@@ -287,7 +284,6 @@ class OutDoorOccupancySensor extends ZigBeeDevice {
     .catch(err => this.error('Error setting device available', err));
 
     await refreshHueSensorBattery(this);
-    await refreshHueSensorMeasurementReportingOnce(this);
     
     const ledIndicator = this.getStoreValue('ledIndicator');
     if (ledIndicator !== null && ledIndicator !== undefined) {
