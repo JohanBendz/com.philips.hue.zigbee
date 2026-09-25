@@ -95,6 +95,25 @@ for (const id of ['RDM001', 'RDM002', 'RWL022']) {
 }
 
 
+test('RWL022: all four buttons and four actions map to stable Flow action IDs', async () => {
+  const { device, calls } = remote('RWL022');
+  await device.onNodeInit({ zclNode: device.zclNode });
+
+  const buttons = ['OnOff', 'DimUp', 'DimDown', 'Hue'];
+  const actions = ['ShortPress', 'LongPress', 'ShortRelease', 'LongRelease'];
+
+  for (let button = 1; button <= 4; button += 1) {
+    for (let action = 0; action <= 3; action += 1) {
+      await device._buttonCommandParser(buttonFrame(button, action));
+    }
+  }
+
+  assert.deepEqual(
+    calls.map(call => call.state.action),
+    buttons.flatMap(button => actions.map(action => `${button}-${action}`)),
+  );
+});
+
 for (const id of ['RDM001', 'RDM002']) {
   test(`${id}: wake refreshes battery and preserves last valid value`, async () => {
     const { device } = remote(id);
