@@ -129,6 +129,31 @@ test('2.2.0: passive light state reports sync Homey without configuring reportin
   assert.equal(levelCluster.listenerCount('attr.currentLevel'), 0);
 });
 
+test('2.2.0: rapid light commands preserve explicit and fallback transition durations', async () => {
+  const { device, calls } = light('929003665001');
+  await device.onNodeInit({ zclNode: device.zclNode });
+  calls.length = 0;
+
+  await Promise.all(Array.from({ length: 20 }, (_, index) =>
+    device.changeDimLevel((index + 1) / 20, { duration: 2500 })));
+
+  const dimCalls = calls.filter(call => call.name === 'dim');
+  assert.equal(dimCalls.length, 20);
+  assert.ok(dimCalls.every(call => call.args.transitionTime === 25));
+
+  calls.length = 0;
+  await Promise.all(Array.from({ length: 20 }, (_, index) =>
+    device.changeColor(
+      { hue: index / 20, saturation: 0.8, value: 0.5 },
+      index % 2 === 0 ? { duration: 1800 } : {},
+    )));
+
+  const colorCalls = calls.filter(call => call.name === 'color');
+  assert.equal(colorCalls.length, 20);
+  assert.equal(colorCalls.filter(call => call.args.transitionTime === 18).length, 10);
+  assert.equal(colorCalls.filter(call => call.args.transitionTime === 4).length, 10);
+});
+
 test('2.2.18: on/off readback does not overwrite an explicit dim command', async () => {
   const { device, calls } = light('929003665001');
   await device.onNodeInit({ zclNode: device.zclNode });
