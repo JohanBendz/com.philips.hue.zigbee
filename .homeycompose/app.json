@@ -5,7 +5,7 @@
     "en": "Philips Hue, without the bridge"
   },
   "description": {
-    "en": "Control Philips Hue lights and accessories directly with Homey over Zigbee — no Hue Bridge required."
+    "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
   "version": "2.2.0",
