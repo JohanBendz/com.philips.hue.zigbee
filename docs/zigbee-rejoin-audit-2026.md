@@ -38,11 +38,11 @@ These changes should be preserved.
 
 This does not send Zigbee traffic and does not attempt a network repair. It only corrects Homey's availability state when the device has demonstrated that it is still communicating.
 
-### Measurement-reporting recovery
+### Measurement-reporting recovery — parked
 
-The current draft also refreshes temperature/luminance reporting for SML001/SML002 families on the first announce after an app restart, retrying on a later announce after failure.
+An earlier draft refreshed temperature/luminance reporting for SML001/SML002 families on the first announce after an app restart, retrying on a later announce after failure.
 
-This is separate from leave/rejoin. It sends Zigbee configuration traffic and must not be presented as a rejoin fix.
+That experiment has now been removed from `issues-2026-next`. It sends Zigbee configuration traffic during the sleepy-device wake window, so it is being kept separate from the rejoin/availability work until it can be tested physically. It must not be presented as a rejoin fix.
 
 ## homey-zigbeedriver 2.2.18 behavior relevant to this audit
 
@@ -141,7 +141,7 @@ Without changing released or 2.2.0 behavior, the safe investigation path is:
 1. keep passive availability recovery from real inbound traffic;
 2. physically distinguish "Homey says unavailable/left but events still arrive" from "device genuinely stops all Zigbee traffic";
 3. collect Homey firmware, device model/firmware and whether Repair restores the device without re-pairing;
-4. treat measurement-reporting recovery as its own #654/#663 experiment, not as a leave/rejoin fix;
+4. keep measurement-reporting recovery parked as its own #654/#663 experiment until physical testing justifies reintroducing it;
 5. only introduce further runtime changes after a reproducible app-level mechanism is identified.
 
 ## Current conclusion
