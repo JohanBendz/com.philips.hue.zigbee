@@ -12,7 +12,9 @@ const DRIVERS = path.join(ROOT, 'drivers');
 const VERIFIED_IMAGE_TYPES = Object.freeze({
   '1741530P7': [0x011f],
   '1743430P7': [0x011f],
+  '1746330P7': [0x011f],
   '1746430P7': [0x011f],
+  '3216231P6': [0x011d],
   '4080248P9': [0x011d],
   '440400982842': [0x011f],
   LCA004: [0x0114],
