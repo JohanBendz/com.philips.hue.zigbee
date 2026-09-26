@@ -12,7 +12,7 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 - Preserve intermediate images whenever the upstream catalogue specifies `minFileVersion` / `maxFileVersion`; do not assume devices may jump directly to the latest image.
 - Enable an update only for product IDs with an independently supported image-type mapping. A broad Homey driver does not imply that every product ID in that driver uses the same firmware family.
 - Treat driver compose files as source of truth. `app.json` is generated during validation and should not be hand-edited.
-- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm.
+- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also rejects orphan firmware files, multiple image types for the same mapped product ID and accidental OTA enablement of known revision-conflicted models.
 
 ## Current coverage
 
@@ -81,6 +81,32 @@ The branch currently contains **47 firmware-enabled Homey drivers** and **141 bu
 | SML002 | SML002 | `0x010D` | Yes |
 
 LOM006 is documented as image type `0x011A` in the public deCONZ/zigpy Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The remaining mappings were added only after cross-checking public Hue OTA mappings, captured Hue V2 `product_data`, observed Zigbee OTA requests, Koenkk/zigbee-OTA metadata and matching Zigbee OTA image headers.
+
+## Gap audit
+
+The source-of-truth inventory is derived from every active `drivers/*/driver.compose.json`, not from generated `app.json`.
+
+As of this branch state:
+
+- **380** unique Zigbee product IDs are supported by active driver compose files.
+- **67** product IDs have an explicit, evidence-backed OTA mapping.
+- **313** product IDs remain intentionally unmapped for OTA.
+- **47** Homey drivers contain firmware manifests.
+- **141** firmware binaries are physically bundled; those binaries are referenced **157** times across product-specific update entries.
+
+The 313 unmapped IDs do **not** represent 313 distinct physical products. Many are retail IDs, aliases, regional variants or multiple IDs owned by the same Homey driver. An unmapped alias must not inherit firmware from another product in the driver unless its image type is independently established.
+
+This audit added two mains-powered mappings after external verification:
+
+- `1746330P7` (Hue Appear Outdoor Wall) → `0x011F`: observed in Hue V2 product data as hardware platform `100b-11f`; the exact model is also OTA-enabled in Zigbee2MQTT.
+- `3216231P6` (Hue Aurelle square panel) → `0x011D`: observed in Hue V2 product data as hardware platform `100b-11d`; the exact model is also OTA-enabled in Zigbee2MQTT.
+
+High-confidence candidates that remain withheld:
+
+- `SOC001` → `0x0125`: multiple independent Hue V2 resources agree on `100b-125`, and Koenkk/zigbee-OTA contains the Signify Hue Secure Contact Sensor image chain. It remains withheld until battery wake/update behaviour is explicit enough for a safe Homey instruction.
+- `929003053301_01` and `929003053301_02` (Ensis zones) → `0x011F`: currently supported by one public Hue device database, but no independent raw platform observation or OTA request has been found yet.
+
+Newer compose aliases such as `LCA011`, `LWG005`, `LCL007`, `5047131P9`, `LWO005`, `929003597801`, `LCU001`, `LCL008` and `915005821901` were checked against external sources during this audit. No explicit model-to-hardware-platform evidence was found, so none inherited firmware from related models.
 
 ## Known revision conflicts
 
