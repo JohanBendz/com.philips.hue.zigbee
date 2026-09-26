@@ -86,6 +86,7 @@ The following product IDs are deliberately withheld from OTA until hardware-revi
 
 - `LCT026`: observed as both `0x0111` and `0x011E` on different Hue hardware revisions.
 - `3261031P6`: observed as both `0x0117` and `0x011D` on different Hue hardware revisions.
+- `LST002`: observed requesting `0x010B`, while a public Hue device database maps the same model ID to `0x010F`.
 
 Do not restore a single image-type mapping for these product IDs from model name alone.
 
