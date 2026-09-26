@@ -123,6 +123,38 @@
           "minFileVersion": 16781060
         }
       ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Smart Plug (LOM001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LOM001"
+      },
+      "files": [
+        {
+          "fileVersion": 16782338,
+          "imageType": 277,
+          "manufacturerCode": 4107,
+          "size": 413406,
+          "name": "100B-0115-01001402-SmartPlug-EFR32MG13.zigbee",
+          "integrity": "sha512:d2b85f5575c9e5f93966ae3d918a9ace2c725549c7e55c58993217c7bc131ceee20a717912c9b32e697ea840f2c747afdd0a5861b581c4d6bc30416ac26d8360",
+          "maxFileVersion": 16782337
+        },
+        {
+          "fileVersion": 16783104,
+          "imageType": 277,
+          "manufacturerCode": 4107,
+          "size": 396550,
+          "name": "100B-0115-01001700-SmartPlug-EFR32MG13.zigbee",
+          "integrity": "sha512:4361808f63f16c5fc6cac68760415dc36f2dcfb11508d90deffab33c61e1557096858673dafdd7527be86fc02122627830e0280ee0cbe7501b94e83a8b009156",
+          "minFileVersion": 16782338
+        }
+      ]
     }
   ]
 }
