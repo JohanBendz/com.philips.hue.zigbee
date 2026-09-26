@@ -9,6 +9,12 @@ const test = require('node:test');
 const ROOT = path.join(__dirname, '..');
 const DRIVERS = path.join(ROOT, 'drivers');
 
+const WITHHELD_REVISION_CONFLICTS = new Set([
+  '3261031P6',
+  'LCT026',
+  'LST002',
+]);
+
 const VERIFIED_IMAGE_TYPES = Object.freeze({
   '1741530P7': [0x011f],
   '1743430P7': [0x011f],
@@ -49,6 +55,8 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
   const driverNames = fs.readdirSync(DRIVERS);
   let firmwareDrivers = 0;
   let firmwareFiles = 0;
+  const supportedProductIds = new Set();
+  const mappedImageTypes = new Map();
 
   for (const driverName of driverNames) {
     const driverDir = path.join(DRIVERS, driverName);
@@ -59,6 +67,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     const firmware = JSON.parse(fs.readFileSync(firmwareComposePath, 'utf8'));
     const driver = JSON.parse(fs.readFileSync(path.join(driverDir, 'driver.compose.json'), 'utf8'));
     const supportedProducts = asArray(driver.zigbee.productId);
+    for (const productId of supportedProducts) supportedProductIds.add(productId);
     const supportedManufacturers = asArray(driver.zigbee.manufacturerName);
     const referencedFirmwareFiles = new Set();
 
@@ -67,6 +76,8 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     for (const update of firmware.updates) {
       const updateProducts = asArray(update.device.productId);
       for (const productId of updateProducts) {
+        if (!mappedImageTypes.has(productId)) mappedImageTypes.set(productId, new Set());
+        for (const file of update.files || []) mappedImageTypes.get(productId).add(file.imageType);
         assert.ok(
           supportedProducts.includes(productId),
           `${driverName}: unsupported productId ${productId}`,
@@ -136,6 +147,24 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
       );
     }
   }
+
+  for (const [productId, imageTypes] of mappedImageTypes) {
+    assert.equal(
+      imageTypes.size,
+      1,
+      `${productId}: multiple OTA image types declared: ${[...imageTypes].map(type => `0x${type.toString(16)}`).join(', ')}`,
+    );
+    assert.ok(
+      !WITHHELD_REVISION_CONFLICTS.has(productId),
+      `${productId}: revision-conflicted product must remain withheld from OTA`,
+    );
+  }
+
+  const mappedProductIds = new Set(mappedImageTypes.keys());
+  const unmappedProductIds = [...supportedProductIds].filter(productId => !mappedProductIds.has(productId));
+  console.log(
+    `[OTA audit] supported product IDs=${supportedProductIds.size}; mapped=${mappedProductIds.size}; gaps=${unmappedProductIds.length}; firmware drivers=${firmwareDrivers}; bundled files=${firmwareFiles}`,
+  );
 
   assert.ok(firmwareDrivers > 0);
   assert.ok(firmwareFiles > 0);
