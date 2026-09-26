@@ -1,3 +1,3 @@
-Connect your Philips Hue lights and accessories directly to Homey without the need for a Philips Hue Bridge. Pair supported Hue devices directly with Homey's Zigbee network and make them part of your Homey setup.
+Make light part of the way your home lives. Let Philips Hue set the mood, welcome you home, respond to movement and bring everyday routines to life — all from Homey.
 
-Bring smart lighting into everyday life with lights, sensors and switches that work together in Homey. Create the atmosphere you want and let your home respond automatically to movement, button presses and routines.
+Connect supported Hue lights and accessories directly to Homey and bring them together with the rest of your smart home. No Hue Bridge required.
