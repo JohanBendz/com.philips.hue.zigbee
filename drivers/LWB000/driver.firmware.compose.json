@@ -1,0 +1,71 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for A60 E27 White (LWB010/LWB014)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LWB010",
+          "LWB014"
+        ]
+      },
+      "files": [
+        {
+          "fileVersion": 16783874,
+          "imageType": 268,
+          "manufacturerCode": 4107,
+          "size": 267452,
+          "name": "100B-010C-01001A02-ConfLight-Lamps_0012.zigbee",
+          "integrity": "sha256:4cb2eee7bc6bb504028a21081f243039ddc7dec8eea61cd24ac9bef9114bcb43",
+          "maxFileVersion": 16783873
+        },
+        {
+          "fileVersion": 16787968,
+          "imageType": 268,
+          "manufacturerCode": 4107,
+          "size": 266684,
+          "name": "100B-010C-01002A00-ConfLight-Lamps_0012.zigbee",
+          "integrity": "sha256:d5a540f74a8e6b89b1f696f1823152e1ab175202a5725104e03062da07b296af",
+          "minFileVersion": 16783874
+        }
+      ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White A60 E27 (LWB006)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWB006"
+      },
+      "files": [
+        {
+          "fileVersion": 1107326256,
+          "imageType": 261,
+          "manufacturerCode": 4107,
+          "size": 256632,
+          "name": "WhiteLamp-Atmel-Target_0105_5.130.1.30000_0012.sbl-ota",
+          "integrity": "sha256:b04f5ec43f66e474ad99ee13fa24a236fe8f066da52c78dd4156b7fc50876f31",
+          "maxFileVersion": 1107326255
+        },
+        {
+          "fileVersion": 1124103180,
+          "imageType": 261,
+          "manufacturerCode": 4107,
+          "size": 256696,
+          "name": "WhiteLamp-Atmel-Target_0012.sbl-ota",
+          "integrity": "sha256:28dab86f01c19618ef3c8c70eebd03afe5be539a701ec45dea8822bfeb3c5694",
+          "minFileVersion": 1107326256
+        }
+      ]
+    }
+  ]
+}

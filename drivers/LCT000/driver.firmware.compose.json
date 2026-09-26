@@ -1,0 +1,73 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for A19 Color (LCT010/LCT014/LCT015/LCT016)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LCT010",
+          "LCT014",
+          "LCT015",
+          "LCT016"
+        ]
+      },
+      "files": [
+        {
+          "fileVersion": 16783874,
+          "imageType": 268,
+          "manufacturerCode": 4107,
+          "size": 267452,
+          "name": "100B-010C-01001A02-ConfLight-Lamps_0012.zigbee",
+          "integrity": "sha256:4cb2eee7bc6bb504028a21081f243039ddc7dec8eea61cd24ac9bef9114bcb43",
+          "maxFileVersion": 16783873
+        },
+        {
+          "fileVersion": 16787968,
+          "imageType": 268,
+          "manufacturerCode": 4107,
+          "size": 266684,
+          "name": "100B-010C-01002A00-ConfLight-Lamps_0012.zigbee",
+          "integrity": "sha256:d5a540f74a8e6b89b1f696f1823152e1ab175202a5725104e03062da07b296af",
+          "minFileVersion": 16783874
+        }
+      ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Color A19 (LCT007, hardware platform 100b-104)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCT007"
+      },
+      "files": [
+        {
+          "fileVersion": 1107326256,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256632,
+          "name": "ConnectedLamp-Atmel_0104_5.130.1.30000_0012.sbl-ota",
+          "integrity": "sha256:eb1920abf315cf4de8b3d0531090e4f6c05abe998fae33634ad85d76b0327be9",
+          "maxFileVersion": 1107326255
+        },
+        {
+          "fileVersion": 1124103180,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256696,
+          "name": "ConnectedLamp-Atmel-Target_0012.sbl-ota",
+          "integrity": "sha256:d18f0e188847f3b002e7dfe221e563691f17ed22fdb80ca1b8fe558540979d8b",
+          "minFileVersion": 1107326256
+        }
+      ]
+    }
+  ]
+}

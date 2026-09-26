@@ -1,0 +1,160 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White and Color Ambiance A60 E27 Bluetooth (LCA001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCA001"
+      },
+      "files": [
+        {
+          "fileVersion": 16787714,
+          "imageType": 274,
+          "manufacturerCode": 4107,
+          "size": 477486,
+          "name": "100B-0112-01002902-ConfLightBLE-Lamps-EFR32MG13.zigbee",
+          "integrity": "sha256:e81e341b1a1e9dbbf0002e096047d40374b56dfa2070bf7f0509f05448fa267a",
+          "maxFileVersion": 16787713
+        },
+        {
+          "fileVersion": 16788992,
+          "imageType": 274,
+          "manufacturerCode": 4107,
+          "size": 458534,
+          "name": "100B-0112-01002E00-ConfLightBLE-Lamps-EFR32MG13.zigbee",
+          "integrity": "sha256:cdfcd331c459d3140c910cfb9a076f1aaf823158006cc196611a38b641aecc23",
+          "minFileVersion": 16787714
+        }
+      ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA005)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCA005"
+      },
+      "files": [
+        {
+          "fileVersion": 16781824,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 336644,
+          "name": "100B-0114-01001200-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:e5f89794e0750439dba86c1d3ee61f1d1ef92ddbfa1097f4d2b0fe298648ef19",
+          "maxFileVersion": 16781823
+        },
+        {
+          "fileVersion": 16782080,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 353220,
+          "name": "100B-0114-01001300-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:030166c2e0f27700ea7fdfd81b8d2b712f7b8fb2701bb3463e5c73d933c7875b",
+          "minFileVersion": 16781824,
+          "maxFileVersion": 16782079
+        },
+        {
+          "fileVersion": 16782084,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 353296,
+          "name": "100B-0114-01001304-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:d8b7306d9fd484fd51b1a569a03293e1a3aa6d9ffe06d7bb9b189ec93f4c3948",
+          "minFileVersion": 16782080,
+          "maxFileVersion": 16782083
+        },
+        {
+          "fileVersion": 16786690,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 534968,
+          "name": "100B-0114-01002502-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:695beca81334cbd5b6c1f6c97a2739a7c79073e24dfc4e931d9c05d32ba34612",
+          "minFileVersion": 16782084,
+          "maxFileVersion": 16786689
+        },
+        {
+          "fileVersion": 16787968,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 532178,
+          "name": "100B-0114-01002A00-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:1d128a6e05958dcf84175bce23f3088326c1a0fcf3534270c5c5d75d62e5eca5",
+          "minFileVersion": 16786690
+        }
+      ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA004)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCA004"
+      },
+      "files": [
+        {
+          "fileVersion": 16781824,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 336644,
+          "name": "100B-0114-01001200-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:e5f89794e0750439dba86c1d3ee61f1d1ef92ddbfa1097f4d2b0fe298648ef19",
+          "maxFileVersion": 16781823
+        },
+        {
+          "fileVersion": 16782080,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 353220,
+          "name": "100B-0114-01001300-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:030166c2e0f27700ea7fdfd81b8d2b712f7b8fb2701bb3463e5c73d933c7875b",
+          "minFileVersion": 16781824,
+          "maxFileVersion": 16782079
+        },
+        {
+          "fileVersion": 16782084,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 353296,
+          "name": "100B-0114-01001304-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:d8b7306d9fd484fd51b1a569a03293e1a3aa6d9ffe06d7bb9b189ec93f4c3948",
+          "minFileVersion": 16782080,
+          "maxFileVersion": 16782083
+        },
+        {
+          "fileVersion": 16786690,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 534968,
+          "name": "100B-0114-01002502-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:695beca81334cbd5b6c1f6c97a2739a7c79073e24dfc4e931d9c05d32ba34612",
+          "minFileVersion": 16782084,
+          "maxFileVersion": 16786689
+        },
+        {
+          "fileVersion": 16787968,
+          "imageType": 276,
+          "manufacturerCode": 4107,
+          "size": 532178,
+          "name": "100B-0114-01002A00-ConfLightBLE-Lamps-EFR32MG21.zigbee",
+          "integrity": "sha256:1d128a6e05958dcf84175bce23f3088326c1a0fcf3534270c5c5d75d62e5eca5",
+          "minFileVersion": 16786690
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "wakeInstruction": {
+    "en": "Briefly trigger one of the connected wall-switch inputs every few seconds during the firmware update. Do not hold the setup/reset button."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Wall Switch Module (RDM001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "RDM001"
+      },
+      "files": [
+        {
+          "fileVersion": 33576197,
+          "imageType": 284,
+          "manufacturerCode": 4107,
+          "size": 230506,
+          "name": "100B-011C-02005505-SwitchModule-EFR32MG13.zigbee",
+          "integrity": "sha512:b4603829db672476e10f6a19139bdda96d17cb36d56a94ac9063a95843267be0523146b68fcd2b1c2041b25fdd94e29a0a3c2b85361ecaa2baeff7eba4d68b5a"
+        }
+      ]
+    },
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Wall Switch Module (RDM004)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "RDM004"
+      },
+      "files": [
+        {
+          "fileVersion": 33576193,
+          "imageType": 290,
+          "manufacturerCode": 4107,
+          "size": 200262,
+          "name": "100B-0122-02005501-SwitchModule-EFR32MG22.zigbee",
+          "integrity": "sha512:6851da6d05714ecff280b15c58fd62a0be244f1fff3c4bec9dafa517e101d09f68612273870801729b2ba5902ec2f95f1fd1211022c54ef876f69998673ce992"
+        }
+      ]
+    }
+  ]
+}

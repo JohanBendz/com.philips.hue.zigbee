@@ -1,0 +1,26 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White Ambiance E27 (LTA015)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTA015"
+      },
+      "files": [
+        {
+          "fileVersion": 16780550,
+          "imageType": 297,
+          "manufacturerCode": 4107,
+          "size": 833604,
+          "name": "100B-0129-01000D06-Light-EFR32MG26.zigbee",
+          "integrity": "sha256:5ff65ab595d661f7b02bfcad82b2fd2578c9b4987289b567da5b7172c78b134f"
+        }
+      ]
+    }
+  ]
+}

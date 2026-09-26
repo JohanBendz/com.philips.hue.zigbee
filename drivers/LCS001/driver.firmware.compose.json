@@ -1,0 +1,36 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Lily Outdoor Spot (1741530P7)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "1741530P7"
+      },
+      "files": [
+        {
+          "fileVersion": 16786436,
+          "imageType": 287,
+          "manufacturerCode": 4107,
+          "size": 447238,
+          "name": "100B-011F-01002404-ConfLightBLE-ModuLumV3-EFR32MG21.zigbee",
+          "integrity": "sha512:221ed158776145ef9881cf42d134e2cdbd84ae6383d67d455b9d613be80f300705a0116eb20a1a6e344285675ec8088b40e2f14890b20f7a923b970d895fc657",
+          "maxFileVersion": 16786435
+        },
+        {
+          "fileVersion": 16787456,
+          "imageType": 287,
+          "manufacturerCode": 4107,
+          "size": 444074,
+          "name": "100B-011F-01002800-ConfLightBLE-ModuLumV3-EFR32MG21.zigbee",
+          "integrity": "sha512:2385a21a3192f9daea7738020bc1ef36dc9fe642b82c2c1cfaeea1ebb01530246b50635a04e87c4ec2da327ef5049b85e9688d67652463245ef8df267fcb5e0a",
+          "minFileVersion": 16786436
+        }
+      ]
+    }
+  ]
+}

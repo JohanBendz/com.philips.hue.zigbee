@@ -1,0 +1,36 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Filament Bulb G93 (LWO001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LWO001"
+      },
+      "files": [
+        {
+          "fileVersion": 16787714,
+          "imageType": 274,
+          "manufacturerCode": 4107,
+          "size": 477486,
+          "name": "100B-0112-01002902-ConfLightBLE-Lamps-EFR32MG13.zigbee",
+          "integrity": "sha256:e81e341b1a1e9dbbf0002e096047d40374b56dfa2070bf7f0509f05448fa267a",
+          "maxFileVersion": 16787713
+        },
+        {
+          "fileVersion": 16788992,
+          "imageType": 274,
+          "manufacturerCode": 4107,
+          "size": 458534,
+          "name": "100B-0112-01002E00-ConfLightBLE-Lamps-EFR32MG13.zigbee",
+          "integrity": "sha256:cdfcd331c459d3140c910cfb9a076f1aaf823158006cc196611a38b641aecc23",
+          "minFileVersion": 16787714
+        }
+      ]
+    }
+  ]
+}

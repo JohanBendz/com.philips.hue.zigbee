@@ -1,0 +1,29 @@
+{
+  "wakeInstruction": {
+    "en": "Briefly press the setup button every few seconds during the firmware update to keep the motion sensor awake. Do not hold the button."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Motion Sensor (SML001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "SML001"
+      },
+      "files": [
+        {
+          "fileVersion": 1124103169,
+          "imageType": 269,
+          "manufacturerCode": 4107,
+          "size": 240760,
+          "name": "Sensor-ATmega_0012.sbl-ota",
+          "integrity": "sha512:3a4266047f88641f9d9706c2bfbde31f15698493203f66ba3281af4e6047829c593a45dc3ff10156d6920810e68d4e6a1bc0036749d012a3076e1fab24c734f0"
+        }
+      ]
+    }
+  ]
+}
