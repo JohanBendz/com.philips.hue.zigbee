@@ -14,6 +14,7 @@ const VERIFIED_IMAGE_TYPES = Object.freeze({
   '1743430P7': [0x011f],
   '1746430P7': [0x011f],
   '4080248P9': [0x011d],
+  '440400982842': [0x011f],
   LCA004: [0x0114],
   LCA005: [0x0114],
   LCL001: [0x011f],
@@ -32,6 +33,7 @@ const VERIFIED_IMAGE_TYPES = Object.freeze({
   LWA017: [0x0114],
   LWE002: [0x0112],
   LWO001: [0x0112],
+  RDM004: [0x0122],
   ROM001: [0x0116],
   LWU001: [0x0114],
 });
