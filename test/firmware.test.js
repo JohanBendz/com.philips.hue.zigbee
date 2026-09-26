@@ -55,19 +55,21 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
   const driverNames = fs.readdirSync(DRIVERS);
   let firmwareDrivers = 0;
   let firmwareFiles = 0;
+  let bundledFirmwareFilesCount = 0;
   const supportedProductIds = new Set();
   const mappedImageTypes = new Map();
 
   for (const driverName of driverNames) {
     const driverDir = path.join(DRIVERS, driverName);
+    const driver = JSON.parse(fs.readFileSync(path.join(driverDir, 'driver.compose.json'), 'utf8'));
+    const supportedProducts = asArray(driver.zigbee?.productId).filter(Boolean);
+    for (const productId of supportedProducts) supportedProductIds.add(productId);
+
     const firmwareComposePath = path.join(driverDir, 'driver.firmware.compose.json');
     if (!fs.existsSync(firmwareComposePath)) continue;
 
     firmwareDrivers += 1;
     const firmware = JSON.parse(fs.readFileSync(firmwareComposePath, 'utf8'));
-    const driver = JSON.parse(fs.readFileSync(path.join(driverDir, 'driver.compose.json'), 'utf8'));
-    const supportedProducts = asArray(driver.zigbee.productId);
-    for (const productId of supportedProducts) supportedProductIds.add(productId);
     const supportedManufacturers = asArray(driver.zigbee.manufacturerName);
     const referencedFirmwareFiles = new Set();
 
@@ -135,6 +137,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     const bundledFirmwareFiles = fs.readdirSync(firmwareDir).filter(entry =>
       fs.statSync(path.join(firmwareDir, entry)).isFile(),
     );
+    bundledFirmwareFilesCount += bundledFirmwareFiles.length;
     assert.equal(
       bundledFirmwareFiles.length,
       referencedFirmwareFiles.size,
@@ -163,7 +166,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
   const mappedProductIds = new Set(mappedImageTypes.keys());
   const unmappedProductIds = [...supportedProductIds].filter(productId => !mappedProductIds.has(productId));
   console.log(
-    `[OTA audit] supported product IDs=${supportedProductIds.size}; mapped=${mappedProductIds.size}; gaps=${unmappedProductIds.length}; firmware drivers=${firmwareDrivers}; bundled files=${firmwareFiles}`,
+    `[OTA audit] supported product IDs=${supportedProductIds.size}; mapped=${mappedProductIds.size}; gaps=${unmappedProductIds.length}; firmware drivers=${firmwareDrivers}; bundled files=${bundledFirmwareFilesCount}; manifest file refs=${firmwareFiles}`,
   );
 
   assert.ok(firmwareDrivers > 0);
