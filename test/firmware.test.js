@@ -58,6 +58,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     const driver = JSON.parse(fs.readFileSync(path.join(driverDir, 'driver.compose.json'), 'utf8'));
     const supportedProducts = asArray(driver.zigbee.productId);
     const supportedManufacturers = asArray(driver.zigbee.manufacturerName);
+    const referencedFirmwareFiles = new Set();
 
     assert.ok(Array.isArray(firmware.updates) && firmware.updates.length > 0, driverName);
 
@@ -98,6 +99,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
 
       for (const file of update.files) {
         firmwareFiles += 1;
+        referencedFirmwareFiles.add(file.name);
         const filename = path.join(driverDir, 'assets', 'firmware', file.name);
         const data = fs.readFileSync(filename);
 
@@ -114,6 +116,22 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
         const digest = crypto.createHash(algorithm).update(data).digest('hex');
         assert.equal(digest, expectedDigest, filename);
       }
+    }
+
+    const firmwareDir = path.join(driverDir, 'assets', 'firmware');
+    const bundledFirmwareFiles = fs.readdirSync(firmwareDir).filter(entry =>
+      fs.statSync(path.join(firmwareDir, entry)).isFile(),
+    );
+    assert.equal(
+      bundledFirmwareFiles.length,
+      referencedFirmwareFiles.size,
+      `${driverName}: bundled firmware file count does not match manifest references`,
+    );
+    for (const bundledFirmwareFile of bundledFirmwareFiles) {
+      assert.ok(
+        referencedFirmwareFiles.has(bundledFirmwareFile),
+        `${driverName}: orphan firmware file ${bundledFirmwareFile}`,
+      );
     }
   }
 
