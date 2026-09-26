@@ -61,7 +61,10 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
 
   for (const driverName of driverNames) {
     const driverDir = path.join(DRIVERS, driverName);
-    const driver = JSON.parse(fs.readFileSync(path.join(driverDir, 'driver.compose.json'), 'utf8'));
+    if (!fs.statSync(driverDir).isDirectory()) continue;
+    const driverComposePath = path.join(driverDir, 'driver.compose.json');
+    if (!fs.existsSync(driverComposePath)) continue;
+    const driver = JSON.parse(fs.readFileSync(driverComposePath, 'utf8'));
     const supportedProducts = asArray(driver.zigbee?.productId).filter(Boolean);
     for (const productId of supportedProducts) supportedProductIds.add(productId);
 
