@@ -1,0 +1,40 @@
+{
+  "id": "adjust_light_temperature",
+  "title": {
+    "en": "Adjust color temperature",
+    "sv": "Justera färgtemperatur"
+  },
+  "titleFormatted": {
+    "en": "Adjust [[device]] color temperature by [[delta]]",
+    "sv": "Justera färgtemperaturen för [[device]] med [[delta]]"
+  },
+  "hint": {
+    "en": "Positive values make the light warmer; negative values make it cooler.",
+    "sv": "Positiva värden gör ljuset varmare; negativa värden gör det kallare."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=light_temperature",
+      "title": {
+        "en": "Light",
+        "sv": "Lampa"
+      }
+    },
+    {
+      "type": "range",
+      "name": "delta",
+      "min": -1,
+      "max": 1,
+      "step": 0.01,
+      "label": "%",
+      "labelMultiplier": 100,
+      "labelDecimals": 0,
+      "title": {
+        "en": "Change",
+        "sv": "Ändring"
+      }
+    }
+  ]
+}

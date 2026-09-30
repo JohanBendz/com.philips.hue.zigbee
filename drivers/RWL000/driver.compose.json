@@ -1,6 +1,6 @@
 {
   "name": {
-    "en": "Dimmer Switch (Gen 1 & 2)"
+    "en": "Dimmer Switch (RWL020 / RWL021)"
   },
   "class": "remote",
   "icon": "{{driverAssetsPath}}/icon.svg",

@@ -153,6 +153,12 @@
     "en": "Updated Homey Zigbee modules and added Contact Sensor."
   },
   "2.1.1": {
-    "en": "Test release: 2026 modernization with an updated Zigbee stack, stability and lifecycle fixes, improved sensor and remote handling, and additional Hue device support including Dymera and Slim Recessed Spot. Please report regressions on GitHub."
+    "en": "2026 modernization: updated Zigbee stack, lifecycle and stability fixes, improved sensor and remote handling, and additional Hue device support including Dymera and Slim Recessed Spot."
+  },
+  "2.1.2": {
+    "en": "Updated the Homey App Store description and repository release documentation."
+  },
+  "2.2.0": {
+    "en": "Major Hue Zigbee update with improved remote and sensor handling, new Flow controls, native effects and gradient support on compatible lights, and support for additional Hue devices including Twilight, Datura Small, A60 LWA024 and Smart Button RDM005."
   }
 }

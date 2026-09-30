@@ -111,6 +111,32 @@ class DualWallSwitch extends ZigBeeDevice {
     }
   }
   
+  _applyBatteryPercentage(rawPercentage) {
+    if (typeof rawPercentage !== 'number' || rawPercentage < 0 || rawPercentage > 200 || rawPercentage === 255) {
+      return null;
+    }
+
+    const percentage = Math.round(rawPercentage / 2);
+    this.setCapabilityValue('measure_battery', percentage)
+      .catch(err => this.error('Failed to update battery level:', err));
+    return percentage;
+  }
+
+  async _refreshBattery() {
+    try {
+      const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
+        .readAttributes(['batteryPercentageRemaining']);
+      return this._applyBatteryPercentage(result.batteryPercentageRemaining);
+    } catch (error) {
+      this.log('Could not refresh wall-switch battery state:', error);
+      return null;
+    }
+  }
+
+  async onEndDeviceAnnounce() {
+    await this._refreshBattery();
+  }
+
   _powerParser(frame) {
     if (!Buffer.isBuffer(frame) || frame.length < 7) {
       return;
@@ -131,9 +157,7 @@ class DualWallSwitch extends ZigBeeDevice {
     }
 
     if (rawPercentage !== undefined) {
-      const percentage = rawPercentage / 2;
-      this.setCapabilityValue('measure_battery', percentage)
-        .catch(err => this.error('Failed to update battery level:', err));
+      this._applyBatteryPercentage(rawPercentage);
     }
   }
 

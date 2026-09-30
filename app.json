@@ -9,7 +9,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"

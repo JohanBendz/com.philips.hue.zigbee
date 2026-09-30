@@ -45,6 +45,38 @@ class PhilipsHueZigbeeApp extends Homey.App {
         return args.device.stopDim();
     });
 
+    this.homey.flow.getActionCard('set_light_state')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setLightState !== 'function') {
+            throw new Error('This device does not support combined light state');
+        }
+        return args.device.setLightState(args);
+    });
+
+    this.homey.flow.getActionCard('adjust_light_temperature')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.adjustLightTemperature !== 'function') {
+            throw new Error('This device does not support color temperature');
+        }
+        return args.device.adjustLightTemperature(args);
+    });
+
+    this.homey.flow.getActionCard('hue_effect')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setHueEffect !== 'function') {
+            throw new Error('This device does not support Hue effects');
+        }
+        return args.device.setHueEffect(args);
+    });
+
+    this.homey.flow.getActionCard('hue_gradient_3')
+    .registerRunListener(async (args) => {
+        if (typeof args.device.setHueGradient !== 'function') {
+            throw new Error('This device does not support Hue gradients');
+        }
+        return args.device.setHueGradient(args);
+    });
+
     this.homey.flow.getActionCard('suppress_sensor')
     .registerRunListener((args, state) => {
         return args.device.suppressSensor(args, state);

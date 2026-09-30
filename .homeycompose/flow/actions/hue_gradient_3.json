@@ -1,0 +1,38 @@
+{
+  "id": "hue_gradient_3",
+  "title": {
+    "en": "Set 3-color Hue gradient",
+    "sv": "Ställ in Hue-gradient med 3 färger"
+  },
+  "titleFormatted": {
+    "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
+    "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]"
+  },
+  "hint": {
+    "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
+    "sv": "För Hue-gradientlampor som exponerar Signify-kluster 0xFC03, till exempel Gradient Signe. Lampor utan stöd avvisas säkert."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=light_hue,light_saturation",
+      "title": { "en": "Light", "sv": "Lampa" }
+    },
+    {
+      "type": "color",
+      "name": "color1",
+      "title": { "en": "Color 1", "sv": "Färg 1" }
+    },
+    {
+      "type": "color",
+      "name": "color2",
+      "title": { "en": "Color 2", "sv": "Färg 2" }
+    },
+    {
+      "type": "color",
+      "name": "color3",
+      "title": { "en": "Color 3", "sv": "Färg 3" }
+    }
+  ]
+}

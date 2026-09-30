@@ -1,6 +1,3 @@
-Connect your lights and accessories directly to your Homey without the need for a Philips Hue bridge.
+Make light part of the way your home lives. Let Philips Hue set the mood, welcome you home, respond to movement and bring everyday routines to life — all from Homey.
 
-Philips Hue brings smart lighting to everyday homes, allowing anyone to create special moments and automate with light. Lights that are easy to install. It only takes a few minutes, and you don't need to rewire your home.
-
-Discover a whole range of lights, sensors and switches that help you light your home smarter. Replace your existing light bulbs with smart bulbs or explore many styles of lamps and fixtures. Philips Hue offers light for every room in your home.
-
+Connect supported Hue lights and accessories directly to Homey and bring them together with the rest of your smart home. No Hue Bridge required.

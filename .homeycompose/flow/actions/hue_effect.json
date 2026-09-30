@@ -1,0 +1,48 @@
+{
+  "id": "hue_effect",
+  "title": {
+    "en": "Set Hue effect",
+    "sv": "Ställ in Hue-effekt"
+  },
+  "titleFormatted": {
+    "en": "Set [[device]] effect to [[effect]]",
+    "sv": "Ställ effekten för [[device]] till [[effect]]"
+  },
+  "hint": {
+    "en": "Uses the native Signify effect protocol. Only lights that expose native Hue effect support can run these effects.",
+    "sv": "Använder Signifys inbyggda effektprotokoll. Endast lampor som exponerar stöd för Hue-effekter kan köra dem."
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=light_hue,light_saturation",
+      "title": {
+        "en": "Light",
+        "sv": "Lampa"
+      }
+    },
+    {
+      "type": "dropdown",
+      "name": "effect",
+      "values": [
+        {
+          "id": "none",
+          "label": { "en": "Stop effect", "sv": "Stoppa effekt" }
+        },
+        {
+          "id": "candle",
+          "label": { "en": "Candle", "sv": "Levande ljus" }
+        },
+        {
+          "id": "fireplace",
+          "label": { "en": "Fireplace", "sv": "Eldstad" }
+        }
+      ],
+      "title": {
+        "en": "Effect",
+        "sv": "Effekt"
+      }
+    }
+  ]
+}

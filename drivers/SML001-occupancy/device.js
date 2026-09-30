@@ -12,6 +12,7 @@ const {
   applyHueSensorBattery,
   refreshHueSensorBattery,
 } = require('../../lib/HueSensorBattery');
+const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -105,8 +106,7 @@ class OccupancySensor extends ZigBeeDevice {
       this.log("Event listeners registered");
     }
 
-    await refreshHueSensorBattery(this);
-
+    // Battery is refreshed when the sleepy sensor actually announces/wakes.
   }
 
   async onUninit() {
@@ -158,6 +158,7 @@ class OccupancySensor extends ZigBeeDevice {
   }
 
   onOccupancyAttributeReport(occupancyStatus) {
+    markHueSensorAvailable(this);
     const parsedOccupancyStatus = Object.values(occupancyStatus);
     this.log("Occupancy status:", parsedOccupancyStatus[2]);
     if (parsedOccupancyStatus[2] == true) {
@@ -173,6 +174,7 @@ class OccupancySensor extends ZigBeeDevice {
   }
 
   onTemperatureMeasuredAttributeReport(measuredTempValue) {
+    markHueSensorAvailable(this);
 		const temperatureOffset = this.getSetting('temperature_offset') || 0;
 		const parsedTempValue = this.getSetting('temperature_decimals') === '2' ? Math.round((measuredTempValue / 100) * 100) / 100 : Math.round((measuredTempValue / 100) * 10) / 10;
 		this.log('Temperature:', parsedTempValue, '+ temperature offset', temperatureOffset);
@@ -180,12 +182,14 @@ class OccupancySensor extends ZigBeeDevice {
 	}
 
 	onLuminanceMeasuredAttributeReport(measuredLuxValue) {
+    markHueSensorAvailable(this);
 		const parsedLumValue = Math.round(Math.pow(10, (measuredLuxValue - 1) / 10000));
 		this.log('measure_luminance:', parsedLumValue);
 		this.setCapabilityValue('measure_luminance', parsedLumValue).catch(this.error);
   }
 
 	onBatteryPercentageRemainingAttributeReport(batteryPercentageRemaining) {
+    markHueSensorAvailable(this);
     applyHueSensorBattery(this, batteryPercentageRemaining)
       .catch(error => this.error('Could not apply Hue motion sensor battery report', error));
   }
@@ -263,6 +267,14 @@ class OccupancySensor extends ZigBeeDevice {
       }
     }
 
+    if (changedKeys.includes('occupancy_timeout')) {
+      const occupancyTimeout = Number.parseInt(newSettings.occupancy_timeout, 10);
+      if (!Number.isInteger(occupancyTimeout) || occupancyTimeout < 0 || occupancyTimeout > 65535) {
+        throw new Error('Occupancy timeout must be an integer between 0 and 65535 seconds.');
+      }
+      await this.setStoreValue('occupancy_timeout', occupancyTimeout);
+    }
+
 	}
 
   async onEndDeviceAnnounce() {
@@ -274,7 +286,7 @@ class OccupancySensor extends ZigBeeDevice {
     await refreshHueSensorBattery(this);
     
     const ledIndicator = this.getStoreValue('ledIndicator');
-    if (ledIndicator !== null) {
+    if (ledIndicator !== null && ledIndicator !== undefined) {
       try {
         await this.zclNode.endpoints[2].clusters[HueSpecificBasicCluster.NAME]
           .writeAttributes({ ledIndication: ledIndicator === true || ledIndicator === 1 });
@@ -285,13 +297,24 @@ class OccupancySensor extends ZigBeeDevice {
     }
 
     const sensitivity = this.getStoreValue('sensitivity');
-    if (sensitivity !== null) {
+    if (sensitivity !== null && sensitivity !== undefined) {
       try {
         await this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
           .writeAttributes({ sensitivity });
         this.log("Setting sensitivity to: ", sensitivity);
       } catch (error) {
         this.log("This device does not support sensitivity setting");
+      }
+    }
+
+    const occupancyTimeout = this.getStoreValue('occupancy_timeout');
+    if (occupancyTimeout !== null && occupancyTimeout !== undefined) {
+      try {
+        await this.zclNode.endpoints[2].clusters[CLUSTER.OCCUPANCY_SENSING.NAME]
+          .writeAttributes({ pirOccupiedToUnoccupiedDelay: occupancyTimeout });
+        this.log("Setting occupancy timeout to: ", occupancyTimeout);
+      } catch (error) {
+        this.log("This device does not support occupancy timeout setting");
       }
     }
 

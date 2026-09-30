@@ -17,113 +17,113 @@
             {
               "id": "OnOff-ShortPress",
               "label": {
-                "en": "On/Off (short press)",
-                "nl": "Aan/Uit (kort gedrukt)"
+                "en": "On/Off (pressed)",
+                "nl": "Aan/Uit (ingedrukt)"
               }
             },
             {
               "id": "OnOff-ShortRelease",
               "label": {
-                "en": "On/Off (short release)",
-                "nl": "Aan/Uit (kort losgelaten)"
+                "en": "On/Off (released before hold)",
+                "nl": "Aan/Uit (losgelaten vóór vasthouden)"
               }
             },
             {
               "id": "OnOff-LongPress",
               "label": {
-                "en": "On/Off (long press)",
-                "nl": "Aan/Uit (lang gedrukt)"
+                "en": "On/Off (hold started)",
+                "nl": "Aan/Uit (vasthouden gestart)"
               }
             },
             {
               "id": "OnOff-LongRelease",
               "label": {
-                "en": "On/Off (long release)",
-                "nl": "Aan/Uit (lang losgelaten)"
+                "en": "On/Off (released after hold)",
+                "nl": "Aan/Uit (losgelaten na vasthouden)"
               }
             },
             {
               "id": "DimUp-ShortPress",
               "label": {
-                "en": "Dim up (short press)",
-                "nl": "Dim op (kort gedrukt)"
+                "en": "Dim up (pressed)",
+                "nl": "Dim op (ingedrukt)"
               }
             },
             {
               "id": "DimUp-ShortRelease",
               "label": {
-                "en": "Dim up (short release)",
-                "nl": "Dim op (kort losgelaten)"
+                "en": "Dim up (released before hold)",
+                "nl": "Dim op (losgelaten vóór vasthouden)"
               }
             },
             {
               "id": "DimUp-LongPress",
               "label": {
-                "en": "Dim up (long press)",
-                "nl": "Dim op (lang gedrukt)"
+                "en": "Dim up (hold started)",
+                "nl": "Dim op (vasthouden gestart)"
               }
             },
             {
               "id": "DimUp-LongRelease",
               "label": {
-                "en": "Dim up (long release)",
-                "nl": "Dim op (lang losgelaten)"
+                "en": "Dim up (released after hold)",
+                "nl": "Dim op (losgelaten na vasthouden)"
               }
             },
             {
               "id": "DimDown-ShortPress",
               "label": {
-                "en": "Dim down (short press)",
-                "nl": "Dim neer (kort gedrukt)"
+                "en": "Dim down (pressed)",
+                "nl": "Dim neer (ingedrukt)"
               }
             },
             {
               "id": "DimDown-ShortRelease",
               "label": {
-                "en": "Dim down (short release)",
-                "nl": "Dim neer (kort losgelaten)"
+                "en": "Dim down (released before hold)",
+                "nl": "Dim neer (losgelaten vóór vasthouden)"
               }
             },
             {
               "id": "DimDown-LongPress",
               "label": {
-                "en": "Dim down (long press)",
-                "nl": "Dim neer (lang gedrukt)"
+                "en": "Dim down (hold started)",
+                "nl": "Dim neer (vasthouden gestart)"
               }
             },
             {
               "id": "DimDown-LongRelease",
               "label": {
-                "en": "Dim down (long release)",
-                "nl": "Dim neer (lang losgelaten)"
+                "en": "Dim down (released after hold)",
+                "nl": "Dim neer (losgelaten na vasthouden)"
               }
             },
             {
               "id": "Hue-ShortPress",
               "label": {
-                "en": "Hue (short press)",
-                "nl": "Hue (kort gedrukt)"
+                "en": "Hue (pressed)",
+                "nl": "Hue (ingedrukt)"
               }
             },
             {
               "id": "Hue-ShortRelease",
               "label": {
-                "en": "Hue (short release)",
-                "nl": "Hue (kort losgelaten)"
+                "en": "Hue (released before hold)",
+                "nl": "Hue (losgelaten vóór vasthouden)"
               }
             },
             {
               "id": "Hue-LongPress",
               "label": {
-                "en": "Hue (long press)",
-                "nl": "Hue (lang gedrukt)"
+                "en": "Hue (hold started)",
+                "nl": "Hue (vasthouden gestart)"
               }
             },
             {
               "id": "Hue-LongRelease",
               "label": {
-                "en": "Hue (long release)",
-                "nl": "Hue (lang losgelaten)"
+                "en": "Hue (released after hold)",
+                "nl": "Hue (losgelaten na vasthouden)"
               }
             }
           ],

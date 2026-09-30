@@ -1,0 +1,44 @@
+{
+  "id": "set_light_state",
+  "title": {
+    "en": "Set light state",
+    "sv": "Ställ in ljusläge"
+  },
+  "titleFormatted": {
+    "en": "Set [[device]] to [[brightness]] and [[color]]",
+    "sv": "Ställ [[device]] på [[brightness]] och [[color]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light&capabilities=dim,light_hue,light_saturation",
+      "title": {
+        "en": "Light",
+        "sv": "Lampa"
+      }
+    },
+    {
+      "type": "range",
+      "name": "brightness",
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "label": "%",
+      "labelMultiplier": 100,
+      "labelDecimals": 0,
+      "title": {
+        "en": "Brightness",
+        "sv": "Ljusstyrka"
+      }
+    },
+    {
+      "type": "color",
+      "name": "color",
+      "title": {
+        "en": "Color",
+        "sv": "Färg"
+      }
+    }
+  ]
+}
