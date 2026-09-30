@@ -159,9 +159,21 @@ class OccupancySensor extends ZigBeeDevice {
 
   onOccupancyAttributeReport(occupancyStatus) {
     markHueSensorAvailable(this);
-    const parsedOccupancyStatus = Object.values(occupancyStatus);
-    this.log("Occupancy status:", parsedOccupancyStatus[2]);
-    if (parsedOccupancyStatus[2] == true) {
+
+    // zigbee-clusters exposes the mandatory Occupancy bitmap as a named
+    // `occupied` flag. Do not depend on Object.values() ordering of the
+    // Bitmap's internal fields; an unknown payload must not clear motion.
+    const occupied = typeof occupancyStatus?.occupied === 'boolean'
+      ? occupancyStatus.occupied
+      : null;
+
+    this.log("Occupancy status:", occupied);
+    if (occupied === null) {
+      this.log("Ignoring malformed occupancy report");
+      return;
+    }
+
+    if (occupied) {
       if (this.isSuppressed) {
         return;
       }
