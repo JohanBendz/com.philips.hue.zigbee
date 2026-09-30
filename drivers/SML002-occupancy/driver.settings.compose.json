@@ -145,7 +145,15 @@
       "en": "Seconds before the sensor reports unoccupied after motion. The value is written to the Hue sensor when it wakes.",
       "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Värdet skrivs till Hue-sensorn när den vaknar."
     },
-    "value": 0,
+    "value": "Seconds before the sensor reports unoccupied after motion. The normal Hue/Zigbee default is 90 seconds. The value is written to the Hue sensor when it wakes.","id": "occupancy_timeout",
+    "type": "number",
+    "label": {
+      "en": "Motion cooldown / occupancy timeout (s)",
+      "sv": "Rörelse-cooldown / närvarotid (s)"
+    },
+    "hint": {
+      "en": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Normalvärdet för Hue/Zigbee är 90 sekunder. Värdet skrivs till Hue-sensorn när den vaknar."
+      "sv": 90,
     "attr": {
       "step": 1,
       "min": 0,
