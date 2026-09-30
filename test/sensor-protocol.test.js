@@ -4,6 +4,54 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { loadDriver, zclFixture } = require('./helpers');
 
+
+const OCCUPANCY_DEFAULT_SETTINGS = Object.freeze({
+  motion_sensitivity: '2',
+  ledIndicator: 'false',
+  temperature_offset: 0,
+  temperature_decimals: '1',
+  batteryThreshold: 20,
+  occupancy_timeout: 90,
+  minReportLux: 60,
+  maxReportLux: 300,
+  minReportTemp: 60,
+  maxReportTemp: 300,
+});
+
+for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+  test(`${id}: real Zigbee occupancy bitmap reports update motion safely`, async () => {
+    const Driver = loadDriver(id);
+    const device = new Driver();
+    const { node, zclNode } = zclFixture(2, [0, 1, 3, 1024, 1026, 1030], [25]);
+    device.zclNode = zclNode;
+    device.settings = { ...OCCUPANCY_DEFAULT_SETTINGS };
+    device.capabilities = new Set([
+      'alarm_motion',
+      'measure_temperature',
+      'measure_luminance',
+      'measure_battery',
+      'alarm_battery',
+    ]);
+    device.isFirstInit = () => false;
+
+    await device.onNodeInit({ zclNode });
+
+    // ZCL global Report Attributes, occupancy attribute 0x0000, map8 value bit0=1.
+    await node.handleFrame(2, 0x0406, Buffer.from([0x18, 1, 0x0a, 0, 0, 0x18, 1]), {});
+    assert.equal(device.values.alarm_motion, true);
+
+    // A malformed application-level payload must not silently clear motion.
+    device.onOccupancyAttributeReport({});
+    assert.equal(device.values.alarm_motion, true);
+
+    // Real unoccupied bitmap report clears the capability.
+    await node.handleFrame(2, 0x0406, Buffer.from([0x18, 2, 0x0a, 0, 0, 0x18, 0]), {});
+    assert.equal(device.values.alarm_motion, false);
+
+    await device.onUninit();
+  });
+}
+
 for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
   test(`${id}: live sensor reports restore device availability`, async () => {
     const Driver = loadDriver(id);
@@ -164,7 +212,7 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     assert.deepEqual(calls[0], migrated);
     assert.equal(migrated.ledIndicator, 'false');
     assert.equal(migrated.motion_sensitivity, '2');
-    assert.equal(migrated.occupancy_timeout, 0);
+    assert.equal(migrated.occupancy_timeout, 90);
     assert.equal(migrated.minReportLux, undefined);
     assert.equal(migrated.maxReportLux, 300);
 
@@ -183,6 +231,14 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     assert.equal(migrated.ledIndicator, 'true');
   });
 }
+
+test('occupancy timeout uses the normal Hue/Zigbee 90 second default', () => {
+  for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
+    const settings = require(`../drivers/${id}/driver.settings.compose.json`);
+    const timeout = settings.find(setting => setting.id === 'occupancy_timeout');
+    assert.equal(timeout.value, 90);
+  }
+});
 
 test('occupancy timeout validates Zigbee uint16 seconds', async () => {
   for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
@@ -271,7 +327,10 @@ for (const [id, threshold] of [['SML001', 20], ['SML002', 20]]) {
     device.isFirstInit = () => false;
     device.registerCapability = (...args) => {
       device.registeredCapabilities = device.registeredCapabilities || [];
-      device.registeredCapabilities.push(args[0]);
+      device.registeredCapabilities.push({
+        id: args[0],
+        options: args[2],
+      });
     };
     const listeners = { on() {}, removeListener() {} };
     device.zclNode = {
@@ -290,7 +349,15 @@ for (const [id, threshold] of [['SML001', 20], ['SML002', 20]]) {
     };
 
     await device.onNodeInit({ zclNode: device.zclNode });
-    assert.deepEqual(device.registeredCapabilities, ['measure_battery', 'alarm_battery']);
+    assert.deepEqual(
+      device.registeredCapabilities.map(entry => entry.id),
+      ['measure_battery', 'alarm_battery'],
+    );
+    for (const registration of device.registeredCapabilities) {
+      assert.equal(registration.options.getOpts.getOnStart, false);
+      assert.equal(registration.options.getOpts.getOnOnline, undefined);
+      assert.equal(registration.options.getOpts.pollInterval, undefined);
+    }
 
     await device.onEndDeviceAnnounce();
     assert.equal(device.values.measure_battery, 42);

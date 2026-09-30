@@ -4,6 +4,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
+const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
 
 class DimmerSwitch extends ZigBeeDevice {
 
@@ -96,18 +97,21 @@ async onNodeInit({ zclNode }) {
   }
 
   _onCommandParser() {
+    markHueRemoteAvailable(this);
     return this._switchOnTriggerDevice.trigger(this, {}, {})
       .then(() => this.log('triggered RWL000_on'))
       .catch(err => this.error('Error triggering RWL000_on', err));
   }
 
   _offCommandParser() {
+    markHueRemoteAvailable(this);
     return this._switchOffTriggerDevice.trigger(this, {}, {})
       .then(() => this.log('triggered RWL000_off'))
       .catch(err => this.error('Error triggering RWL000_off', err));
   }
 
   _stepCommandParser(payload) {
+    markHueRemoteAvailable(this);
     var action = payload.stepSize === 30 ? 'press' : 'hold'; // 30=press,56=hold
     return this._switchDimTriggerDevice.trigger(this, {}, { action: `${payload.mode}-${action}` })
       .then(() => this.log(`triggered RWL000_dim, action=${payload.mode}-${action}`))
@@ -115,6 +119,7 @@ async onNodeInit({ zclNode }) {
   }
 
   _stopCommandParser() {
+    markHueRemoteAvailable(this);
     return this._switchDimTriggerDevice.trigger(this, {}, { action: 'release' })
     .then(() => this.log('triggered RWL000_dim, action=release'))
     .catch(err => this.error('Error triggering RWL000_dim', err));

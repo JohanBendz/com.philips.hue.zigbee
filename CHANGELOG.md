@@ -4,6 +4,32 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.3.0
+
+Test candidate for the next Hue Zigbee feature and device-support line.
+
+#### Reliability and protocol handling
+
+- Improved passive availability recovery for Hue remotes when genuine Zigbee traffic is received.
+- Hardened occupancy parsing by using the documented occupancy bitmap instead of internal object ordering.
+- Changed the new occupancy-timeout default to the normal Hue/Zigbee value of 90 seconds without automatically overwriting an explicit existing value.
+- Added and expanded regression coverage for remote events, occupancy reports, transitions and light-state handling.
+- Kept network/rejoin and reporting-repair experiments conservative: no fleet-wide wake-time Zigbee reconfiguration was added.
+
+#### Device support
+
+- Added Hue A60 White 800 lm model LWF004.
+- Added Hue OmniGlow lightstrip family support with verified wide color-temperature handling.
+- Added Hue Flux lightstrip family support with verified wide color-temperature handling.
+- Added Hue White A60 LWA033 support.
+- Added dedicated Hue White Ambiance E14 P45 LTU001 support.
+- Added experimental Hue wired dimmer LWM007 support for standard dimming and explicit rocker/push-button configuration.
+
+#### Deliberately deferred for hardware verification
+
+- Native gradient activation for OmniGlow and Flux remains disabled until real-device segment behavior is confirmed.
+- LWM007 minimum-brightness and dim-speed controls remain unresolved until the relevant Signify Zigbee attributes are verified.
+
 ### v2.2.1
 
 Major issue-resolution and device-support release, ready for Live.
