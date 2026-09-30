@@ -1,0 +1,7 @@
+[
+  {
+    "$extends": [
+      "light_temp_powerOnCtrl"
+    ]
+  }
+]
