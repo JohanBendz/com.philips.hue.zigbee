@@ -4,6 +4,10 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.2.1
+
+Major issue-resolution and device-support release, ready for Live.
+
 ### v2.2.0
 
 Major issue-resolution and device-support release.
@@ -45,8 +49,6 @@ Major issue-resolution and device-support release.
 - Added Hue Gradient Signe support for verified model identities.
 - Added Hue Smart Button RDM005.
 - Improved legacy Hue Iris pairing guidance.
-
-This release should be verified in the Homey Test channel before promotion to Live, with particular focus on sleepy remotes, motion/occupancy sensors, transitions, external state reporting, native effects/gradient behaviour and multi-zone Twilight routing.
 
 ### v2.1.2
 
