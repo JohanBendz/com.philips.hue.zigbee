@@ -2,7 +2,9 @@
   "name": {
     "en": "Bulb 9W A60 E27 EUR White"
   },
-  "$extends": ["light_white"],
+  "$extends": [
+    "light_white"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 9,
@@ -17,7 +19,8 @@
     "productId": [
       "LWA001",
       "LWA011",
-      "LWA024"
+      "LWA024",
+      "LWA033"
     ],
     "endpoints": {
       "11": {
