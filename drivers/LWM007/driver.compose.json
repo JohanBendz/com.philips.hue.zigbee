@@ -1,0 +1,40 @@
+{
+  "name": {
+    "en": "Hue Wired Dimmer Switch"
+  },
+  "$extends": [
+    "light_white"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LWM007"
+    ],
+    "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          64512
+        ]
+      },
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Power the wired dimmer to start pairing. If pairing does not automatically start, reset it according to the Philips Hue instructions."
+      }
+    }
+  }
+}
