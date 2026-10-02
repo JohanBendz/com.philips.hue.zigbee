@@ -1,4 +1,6 @@
 {
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
   "name": {
     "en": "Smart Button (ROM001 / RDM003 / RDM005)"
   },
