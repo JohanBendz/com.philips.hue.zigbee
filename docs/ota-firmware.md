@@ -12,7 +12,40 @@ This branch uses Homey's native Zigbee firmware update support. Firmware binarie
 - Preserve intermediate images whenever the upstream catalogue specifies `minFileVersion` / `maxFileVersion`; do not assume devices may jump directly to the latest image.
 - Enable an update only for product IDs with an independently supported image-type mapping. A broad Homey driver does not imply that every product ID in that driver uses the same firmware family.
 - Treat driver compose files as source of truth. `app.json` is generated during validation and should not be hand-edited.
-- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also rejects orphan firmware files, multiple image types for the same mapped product ID and accidental OTA enablement of known revision-conflicted models.
+- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also checks SHA-512 against the reviewed upstream catalogue, preserves the complete image chain and its file/hardware-version limits, and rejects orphan files, conflicting image types and accidental enablement of withheld models.
+
+## Catalogue verification — 2026-10-02
+
+The active firmware families were compared with [Koenkk/zigbee-OTA at `9f46fc5208eab9890dfe31696652428fa497850c`](https://github.com/Koenkk/zigbee-OTA/blob/9f46fc5208eab9890dfe31696652428fa497850c/index.json).
+
+- All **40 unique firmware images** match the upstream SHA-512 and file size.
+- All **21 enabled image types** include every image listed for that family at the reviewed source revision.
+- All **157 manifest file references** preserve the catalogue's `minFileVersion` / `maxFileVersion` limits. There were no source mismatches or missing chain images.
+- `test/fixtures/hue-ota-catalogue.json` records the source commit, whole-index SHA-256, original source URLs where present, image checksums and version constraints. Tests use this fixed reference without network access.
+- Mutation tests prove that deleting an intermediate image, removing a minimum version or widening a maximum version is rejected.
+
+This establishes consistency with the reviewed catalogue, not physical OTA success. New firmware requires a fresh source review and a deliberate catalogue-reference update. The reference is not automatically refreshed from `master`.
+
+Official [Hue lamp release notes](https://www.philips-hue.com/en-us/support/release-notes/lamps) and [accessory release notes](https://www.philips-hue.com/en-us/support/release-notes/accessories) provide platform/version context. Their human-readable software versions do not replace the numeric version and image type in the OTA header or prove a model-to-platform mapping.
+
+## Packaging verification — 2026-10-02
+
+Homey CLI **4.5.0** built the app and its archive locally. This did not upload or install it.
+
+| Measurement | Result |
+| --- | ---: |
+| Firmware files in the source/build | 141 |
+| Firmware bytes, including per-driver copies | 51,894,298 |
+| Unique firmware image bytes | 13,141,920 |
+| Build file count | 1,073 |
+| Build file bytes, including firmware and dependencies | 61,982,101 |
+| Compressed CLI upload archive bytes | 58,916,959 |
+
+The project-level `test/` and `docs/` directories are excluded by `.homeyignore`. Firmware files must remain in their driver asset directories for validation and upload; per-driver copies are part of Homey's declared layout.
+
+The upload archive size is **not** the installed App Store app size. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. Backend extraction and actual installed size have not been measured here. Removing required intermediate images is therefore not an appropriate way to reduce the installed app.
+
+See [the OTA hardware test plan](ota-test-plan.md) for the next verification stage.
 
 ## Current coverage
 

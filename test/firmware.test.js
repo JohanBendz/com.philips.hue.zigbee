@@ -8,11 +8,19 @@ const test = require('node:test');
 
 const ROOT = path.join(__dirname, '..');
 const DRIVERS = path.join(ROOT, 'drivers');
+const CATALOGUE = require('./fixtures/hue-ota-catalogue.json');
+const CATALOGUE_IMAGES = new Map(CATALOGUE.images.map(image => [catalogueKey(image), image]));
 
 const WITHHELD_REVISION_CONFLICTS = new Set([
   '3261031P6',
   'LCT026',
   'LST002',
+]);
+
+const WITHHELD_PENDING_EVIDENCE = new Set([
+  'SOC001',
+  '929003053301_01',
+  '929003053301_02',
 ]);
 
 const VERIFIED_IMAGE_TYPES = Object.freeze({
@@ -49,6 +57,32 @@ const VERIFIED_IMAGE_TYPES = Object.freeze({
 
 function asArray(value) {
   return Array.isArray(value) ? value : [value];
+}
+
+function catalogueKey(image) {
+  return `${image.manufacturerCode}:${image.imageType}:${image.fileVersion}`;
+}
+
+function assertCatalogueChain(files, label) {
+  assert.ok(Array.isArray(files) && files.length > 0, `${label}: empty firmware chain`);
+  const first = files[0];
+  const expected = CATALOGUE.images.filter(image =>
+    image.manufacturerCode === first.manufacturerCode && image.imageType === first.imageType,
+  );
+  assert.ok(expected.length > 0, `${label}: firmware family absent from reviewed catalogue`);
+  assert.deepEqual(
+    files.map(catalogueKey),
+    expected.map(catalogueKey),
+    `${label}: incomplete or changed reviewed catalogue chain`,
+  );
+
+  for (const file of files) {
+    const image = CATALOGUE_IMAGES.get(catalogueKey(file));
+    assert.equal(file.size, image.fileSize, `${label}/${file.name}: catalogue size`);
+    for (const field of ['minFileVersion', 'maxFileVersion', 'minHardwareVersion', 'maxHardwareVersion']) {
+      assert.equal(file[field], image[field], `${label}/${file.name}: catalogue ${field}`);
+    }
+  }
 }
 
 test('bundled Zigbee firmware matches compose metadata, driver identity, headers and integrity', () => {
@@ -108,6 +142,7 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
       }
 
       assert.ok(Array.isArray(update.files) && update.files.length > 0, driverName);
+      assertCatalogueChain(update.files, driverName);
       const versions = update.files.map(file => file.fileVersion);
       assert.deepEqual(
         versions,
@@ -133,6 +168,11 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
         assert.ok(algorithm && expectedDigest, `${filename}: invalid integrity format`);
         const digest = crypto.createHash(algorithm).update(data).digest('hex');
         assert.equal(digest, expectedDigest, filename);
+        assert.equal(
+          crypto.createHash('sha512').update(data).digest('hex'),
+          CATALOGUE_IMAGES.get(catalogueKey(file)).sha512,
+          `${filename}: bytes differ from reviewed upstream catalogue`,
+        );
       }
     }
 
@@ -164,6 +204,10 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
       !WITHHELD_REVISION_CONFLICTS.has(productId),
       `${productId}: revision-conflicted product must remain withheld from OTA`,
     );
+    assert.ok(
+      !WITHHELD_PENDING_EVIDENCE.has(productId),
+      `${productId}: product awaiting mapping or wake evidence must remain withheld from OTA`,
+    );
   }
 
   const mappedProductIds = new Set(mappedImageTypes.keys());
@@ -174,4 +218,23 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
 
   assert.ok(firmwareDrivers > 0);
   assert.ok(firmwareFiles > 0);
+});
+
+test('OTA catalogue check rejects removal of a required intermediate image', () => {
+  const firmware = require('../drivers/LCA001/driver.firmware.compose.json');
+  const files = structuredClone(firmware.updates.find(update => update.device.productId === 'LCA005').files);
+  files.splice(1, 1);
+  assert.throws(() => assertCatalogueChain(files, 'LCA005'), /incomplete or changed reviewed catalogue chain/);
+});
+
+test('OTA catalogue check rejects removed or widened source version limits', () => {
+  const firmware = require('../drivers/LCA001/driver.firmware.compose.json');
+  const original = firmware.updates.find(update => update.device.productId === 'LCA005').files;
+  const widened = structuredClone(original);
+  widened[0].maxFileVersion += 1;
+  assert.throws(() => assertCatalogueChain(widened, 'LCA005'), /catalogue maxFileVersion/);
+
+  const removed = structuredClone(original);
+  delete removed[1].minFileVersion;
+  assert.throws(() => assertCatalogueChain(removed, 'LCA005'), /catalogue minFileVersion/);
 });
