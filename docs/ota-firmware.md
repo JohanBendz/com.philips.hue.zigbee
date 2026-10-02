@@ -2,6 +2,8 @@
 
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
+See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for current coverage limits, the direct Hue-server cross-check and open release/test follow-ups. Catalogue consistency does not mean full Hue coverage.
+
 ## Source and verification policy
 
 - Use Koenkk/zigbee-OTA as the maintained catalogue/archive.
@@ -170,13 +172,15 @@ Newer compose aliases such as `LCA011`, `LWG005`, `LCL007`, `5047131P9`, `LWO005
 
 ## Known revision conflicts
 
-The following product IDs are deliberately withheld from OTA until hardware-revision matching is proven safe in Homey:
+The following product IDs are deliberately withheld while their platform/revision evidence is reconciled:
 
 - `LCT026`: observed as both `0x0111` and `0x011E` on different Hue hardware revisions.
 - `3261031P6`: observed as both `0x0117` and `0x011D` on different Hue hardware revisions.
 - `LST002`: observed requesting `0x010B`, while a public Hue device database maps the same model ID to `0x010F`.
 
 Do not restore a single image-type mapping for these product IDs from model name alone.
+
+Homey also matches the image type reported by the device, so multiple reviewed platform variants can in principle be supported for one product ID. The current one-family-per-product test is a repository policy, not a Homey limitation; see the [variant review](ota-review-2026-10-03.md#3-replace-the-blanket-single-family-assumption-with-reviewed-variant-support), including the additional observations for 3261031P6 and LCL001.
 
 ## Battery devices
 

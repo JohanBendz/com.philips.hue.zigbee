@@ -31,6 +31,9 @@ Start with one device at a time. Exact-model rows can be used independently depe
 | First | LOM002 | LOM001 | `0x0115` | `0x01001700` | 2 |
 | First | LOM002 | LOM006 or LOM007 | `0x011A` | `0x01001200` | 5 |
 | Additional multi-step check | LCA001 | LCA004 or LCA005 | `0x0114` | `0x01002A00` | 5 |
+| Legacy SBL container check | LCT003 | LCT003 | `0x0104` | `0x4300740C` | 2 |
+
+Include a legacy SBL lamp as well as a modern `.zigbee` lamp. The [readiness review](ota-review-2026-10-03.md) identifies nine legacy SBL images with Hue-specific payload structure; a successful update on modern hardware does not verify that path.
 
 For each device:
 
@@ -87,4 +90,4 @@ Copy one record per actual model and starting version into the OTA issue/PR. Kee
 | Evidence link / relevant sanitized log | |
 | Verdict: completed transfer, no update available, failed, or unavailable | |
 
-Keep PR #758 in Draft while the physical results are being collected. Catalogue expansion can continue after results establish how the native Homey OTA path behaves on the intended hardware.
+Keep PR #758 in Draft while the physical results are being collected. Catalogue and mapping research can continue alongside these tests; enable additional mappings only after their identity/platform evidence and complete firmware chains have been reviewed.
