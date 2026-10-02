@@ -63,7 +63,7 @@ function remote(id, data = { id: 'node-a' }) {
       flow: { getDeviceTriggerCard: () => card },
     },
     zclNode: { endpoints: { 1: { clusters: {
-      HueSpecificBasicCluster: { writeAttributes: async () => {} },
+      basic: { writeAttributes: async () => {} },
     } } } },
     registerCapability() {},
     isFirstInit: () => false,

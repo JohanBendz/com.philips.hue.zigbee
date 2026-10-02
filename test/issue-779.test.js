@@ -23,7 +23,7 @@ test('LWM007 reads switch mode without writing it back automatically', async () 
     endpoints: {
       1: {
         clusters: {
-          HueSpecificBasicCluster: {
+          basic: {
             readAttributes: async () => ({ deviceMode: 'singlepushbutton' }),
             writeAttributes: async value => writes.push(value),
           },
@@ -50,7 +50,7 @@ test('LWM007 writes only the explicitly selected single-input switch mode', asyn
     endpoints: {
       1: {
         clusters: {
-          HueSpecificBasicCluster: {
+          basic: {
             writeAttributes: async value => writes.push(value),
           },
         },
