@@ -28,6 +28,33 @@ This establishes consistency with the reviewed catalogue, not physical OTA succe
 
 Official [Hue lamp release notes](https://www.philips-hue.com/en-us/support/release-notes/lamps) and [accessory release notes](https://www.philips-hue.com/en-us/support/release-notes/accessories) provide platform/version context. Their human-readable software versions do not replace the numeric version and image type in the OTA header or prove a model-to-platform mapping.
 
+## Manual catalogue maintenance
+
+Run `npm run ota:audit` to compare the reviewed reference with Koenkk's current catalogue. The command resolves `master` to a commit SHA before fetching `index.json`, then reports that SHA and the index's SHA-256 for reproducibility. It downloads catalogue metadata only and never writes driver manifests, firmware binaries or the reviewed reference.
+
+The report identifies added and removed images in active families, including intermediate versions, and changes to checksums, sizes, version limits, source URLs and upstream eligibility filters. Koenkk's `hardwareVersionMin` / `hardwareVersionMax` are compared with Homey's `minHardwareVersion` / `maxHardwareVersion`; a zero boundary is preserved. Duplicate image identities and malformed Hue metadata fail the audit.
+
+```sh
+# Inspect a specific source revision instead of the current master.
+npm run ota:audit -- --ref 9f46fc5208eab9890dfe31696652428fa497850c
+
+# Compare a previously downloaded upstream index without network access.
+npm run ota:audit -- --index /path/to/index.json
+
+# Emit JSON, including changed fields and the list of unmapped product IDs.
+npm run --silent ota:audit -- --json
+```
+
+| Exit code | Meaning |
+| --- | --- |
+| `0` | No catalogue changes in active firmware families |
+| `1` | Active-family changes require manual review |
+| `2` | Invalid arguments, network failure or invalid catalogue data |
+
+Catalogue-only image families are reported separately as information. Their presence does not establish which Homey product IDs use them and does not enable OTA. This command does not inspect newly published binary headers or test device updates. Any import still requires source and mapping evidence, binary verification, a deliberate reference update, regression tests and Homey publish validation. There is no scheduled updater or automatic pull request creation.
+
+The audit on 2026-10-02 resolved to the reviewed `9f46fc5` revision: **0 active-family changes**, **69 upstream Hue images** and **17 catalogue-only image families**. The existing 67 mapped product IDs and 313 unmapped IDs were unchanged.
+
 ## Packaging verification — 2026-10-02
 
 Homey CLI **4.5.0** built the app and its archive locally. This did not upload or install it.
@@ -38,10 +65,10 @@ Homey CLI **4.5.0** built the app and its archive locally. This did not upload o
 | Firmware bytes, including per-driver copies | 51,894,298 |
 | Unique firmware image bytes | 13,141,920 |
 | Build file count | 1,073 |
-| Build file bytes, including firmware and dependencies | 61,982,101 |
-| Compressed CLI upload archive bytes | 58,916,959 |
+| Build file bytes, including firmware and dependencies | 61,982,157 |
+| Compressed CLI upload archive bytes | 58,916,974 |
 
-The project-level `test/` and `docs/` directories are excluded by `.homeyignore`. Firmware files must remain in their driver asset directories for validation and upload; per-driver copies are part of Homey's declared layout.
+The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files must remain in their driver asset directories for validation and upload; per-driver copies are part of Homey's declared layout.
 
 The upload archive size is **not** the installed App Store app size. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. Backend extraction and actual installed size have not been measured here. Removing required intermediate images is therefore not an appropriate way to reduce the installed app.
 
