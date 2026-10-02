@@ -1,35 +1,31 @@
 {
-  "class": "light",
-  "icon": "{{driverAssetsPath}}/icon.svg",
-  "images": {
-    "large": "{{driverAssetsPath}}/images/large.png",
-    "small": "{{driverAssetsPath}}/images/small.png"
-  },
-  "capabilities": [
-    "onoff",
-    "dim",
-    "light_temperature",
-    "light_mode"
-  ],
-  "capabilitiesOptions": {
-    "dim": {
-      "opts": {
-        "duration": true
-      }
+    "platforms": ["local"],
+    "connectivity": ["zigbee"],
+    "class": "light",
+    "icon": "{{driverAssetsPath}}/icon.svg",
+    "images": {
+      "large": "{{driverAssetsPath}}/images/large.png",
+      "small": "{{driverAssetsPath}}/images/small.png"
     },
-    "light_temperature": {
-      "opts": {
-        "duration": true
-      }
-    },
-    "onoff": {
-      "setOnDim": false
+    "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+    ],
+    "capabilitiesOptions": {
+        "dim": {
+            "opts": {
+            "duration": true
+            }
+        },
+        "light_temperature": {
+            "opts": {
+            "duration": true
+            }
+        },
+        "onoff": {
+            "setOnDim": false
+          }
     }
-  },
-  "platforms": [
-    "local"
-  ],
-  "connectivity": [
-    "zigbee"
-  ]
 }
