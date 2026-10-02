@@ -54,7 +54,7 @@ class HueWallSwitchModule extends ZigBeeDevice {
 
   async _writeDeviceMode(deviceMode) {
     try {
-      await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({ deviceMode });
+      await this.zclNode.endpoints[1].clusters[HueSpecificBasicCluster.NAME].writeAttributes({ deviceMode });
     } catch (err) {
       if (err.message !== 'TimeoutError') {
         this.error('ROM002: failed to update device mode:', err.message);
