@@ -20,3 +20,13 @@ test('all Zigbee drivers declare local-only platform and Zigbee connectivity', (
     }));
   assert.deepEqual(incorrect, [], 'all Hue Zigbee drivers must explicitly describe local Zigbee');
 });
+
+test('Node 22 Homey compatibility is aligned with the generated manifest', () => {
+  const compose = require('../.homeycompose/app.json');
+  const pkg = require('../package.json');
+
+  assert.equal(pkg.engines.node, '>=22');
+  assert.equal(compose.compatibility, '>=12.9.0');
+  assert.equal(manifest.compatibility, compose.compatibility);
+  assert.equal(manifest.version, compose.version);
+});
