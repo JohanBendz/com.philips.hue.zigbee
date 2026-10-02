@@ -3,11 +3,9 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-const HueSpecificBasicBoundCluster = require('../../lib/HueSpecificBasicBoundCluster');
 const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
 
 Cluster.addCluster(HueSpecificBasicCluster);
-Cluster.addCluster(HueSpecificBasicBoundCluster);
 
 class TapDialSwitch extends ZigBeeDevice {
 
