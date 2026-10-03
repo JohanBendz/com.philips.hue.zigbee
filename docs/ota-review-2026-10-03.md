@@ -21,6 +21,7 @@ Product IDs include aliases and regional variants. These counts do not measure t
 
 - [CI on the reviewed commit](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37070472946) passed Homey publish validation and all **133 tests**. The **13 OTA-focused tests** were rerun during this review and passed.
 - After integrating `develop-2.4`, Homey CLI 4.5.0 publish validation and all **161 tests** passed locally. The integrated tree preserves every existing OTA manifest, firmware binary and catalogue-reference byte. The offline catalogue audit still reports zero active-family changes against the reviewed index.
+- After completing the model evidence register and regression guards, Homey CLI 4.5.0 publish validation and all **167 tests** passed locally. The register covers all **67 enabled product IDs**, with three database-only evidence follow-ups labelled explicitly. This change leaves runtime code, firmware declarations and binary files unchanged.
 - `npm run ota:audit` resolved upstream to [`9f46fc5`](https://github.com/Koenkk/zigbee-OTA/blob/9f46fc5208eab9890dfe31696652428fa497850c/index.json), reporting **zero changes** in active families. Whole-index SHA-256: `b1a18d3fc8111106f2e77d7789f8b0277ea3cac4f2f9b7963a11a14f26575141`.
 - All 40 unique images match the reviewed source checksums and metadata. All headers have field control zero, so none contains an additional hardware-version range or device-specific destination hidden in optional header fields.
 - A selection simulation checked zero, every file/constraint boundary and adjacent versions through each family's latest image. All 21 chains reach their reviewed latest version without a gap; the longest require five steps. This verifies selection metadata, not transfer behaviour.
@@ -45,19 +46,21 @@ The initial review found `compatibility: ">=5.0.0"` despite the app and both pin
 
 Separately, [native Zigbee OTA](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) needs Homey 13.2+ on supported platforms and mobile app 9.10+. The app's runtime minimum does not promise OTA on Homey 12.9. The 2016–2019 Homey models are not listed as supported OTA platforms. This app declares the `local` platform; generic Homey Cloud OTA availability does not add Cloud support to this app.
 
-### 2. Complete the model-mapping regression guard
+### 2. Model-mapping regression guard — completed for all enabled IDs
 
-`VERIFIED_IMAGE_TYPES` in `test/firmware.test.js` independently constrains the expected family for **29 of the 67 enabled product IDs**. The other 38 still receive manufacturer/product identity, binary, integrity and complete-chain checks, but lack that separate expected model-to-family assertion. Examples include LCA001, LOM006, RWL022 and SML001.
+The initial `VERIFIED_IMAGE_TYPES` check covered only **29 of the 67 enabled product IDs**. It is now replaced by [a complete source-linked model register](ota-model-evidence.md), covering **all 67 IDs** and matching the declared product/family sets exactly. The guard rejects unreviewed aliases, substituted families, changed manufacturers, missing model mappings and missing or unrelated evidence.
 
-Create a complete reviewed model-to-family register with evidence links, then use it to check every enabled product and reject unreviewed additions. Do not treat a snapshot copied from current manifests as independent proof of the mapping.
+The external review found explicit model/platform records for every enabled mapping. For **LTO001, LTW015 and LWA029**, only a curated device database was located; independent device captures remain open and are explicitly labelled. The other **64** have API fixtures/captures, OTA requests, owner reports or maintained model-table entries. These records do not establish physical OTA success. No firmware or model mapping was changed.
 
-### 3. Replace the blanket single-family assumption with reviewed variant support
+### 3. Explicit reviewed variant policy — implemented
 
-Homey's documented selection also matches the device-reported manufacturer code and image type. A product ID occurring on multiple hardware platforms is therefore not inherently unsupported by Homey OTA. Our current global one-image-type-per-product assertion is a conservative repository policy, not a Homey restriction.
+Homey's documented selection also matches the device-reported manufacturer code and image type. A product ID occurring on multiple hardware platforms is therefore not inherently unsupported by Homey OTA. The global one-image-type-per-product assertion has been replaced with explicit reviewed family sets. Existing mappings still each approve one family; no additional hardware variant is enabled.
 
-Reconcile each variant's evidence before replacing this assertion with explicit allowed families. For example, the [deCONZ mapping](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions) distinguishes two LST002 generations (`0x010B` and `0x010F`). It also lists LCL001 under `0x0117`, while [a captured LCL001 OTA query](https://github.com/Koenkk/zigbee-OTA/issues/400) reports `0x011F`, which is the family currently enabled here. That supports the current family without establishing coverage of every LCL001 revision.
+Reconcile each variant's evidence before adding it to an approved family set. For example, the [deCONZ mapping](https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions) distinguishes two LST002 generations (`0x010B` and `0x010F`). It also lists LCL001 under `0x0117`, while [a captured LCL001 OTA query](https://github.com/Koenkk/zigbee-OTA/issues/400) reports `0x011F`, which is the family currently enabled here. That supports the current family without establishing coverage of every LCL001 revision.
 
 The same evidence review should revisit LCT026 and 3261031P6. The latter is listed as `0x0111` in the deCONZ table, in addition to the differing observations recorded in our earlier notes. No replacement mapping was inferred during this review.
+
+The new source review also found an LLC010 fixture reporting `100b-103`, while the deCONZ model table supports the enabled `0x0108` family. The alternative remains unapproved pending reconciliation; see the [model evidence register](ota-model-evidence.md).
 
 ### 4. Expand model coverage deliberately
 
@@ -73,7 +76,7 @@ Use the [hardware test plan](ota-test-plan.md) to record controlled Test/local r
 
 ## Recommended order
 
-1. Complete the evidence-backed model mapping guard on `ota-2026`, keeping `develop-2.4` as its integration base.
-2. Prepare the selected OTA test build and collect the hardware results in parallel with mapping research.
+1. Prepare release metadata for the selected OTA Test build on `ota-2026`, keeping `develop-2.4` as its integration base.
+2. Collect hardware results and independent captures for the three database-only mappings in parallel with variant/mapping research.
 3. Add supported variants and additional verified products in small groups.
 4. Promote only the scope supported by the collected results; retain an explicit coverage list.

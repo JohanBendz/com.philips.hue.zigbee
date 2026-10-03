@@ -16,7 +16,8 @@ See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for current cove
 - Preserve intermediate images whenever the upstream catalogue specifies `minFileVersion` / `maxFileVersion`; do not assume devices may jump directly to the latest image.
 - Enable an update only for product IDs with an independently supported image-type mapping. A broad Homey driver does not imply that every product ID in that driver uses the same firmware family.
 - Treat driver compose files as source of truth. `app.json` is generated during validation and should not be hand-edited.
-- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also checks SHA-512 against the reviewed upstream catalogue, preserves the complete image chain and its file/hardware-version limits, and rejects orphan files, conflicting image types and accidental enablement of withheld models.
+- `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also checks SHA-512 against the reviewed upstream catalogue, preserves the complete image chain and its file/hardware-version limits, and rejects orphan files, unreviewed image types and accidental enablement of withheld models.
+- Every enabled product ID must match the fixed [model evidence register](ota-model-evidence.md). All 67 IDs have expected-family checks and source references; LTO001, LTW015 and LWA029 currently rely only on a curated device database and still need independent device captures. The checks reject unreviewed aliases, missing models and unsupported family additions.
 
 ## Catalogue verification — 2026-10-02
 
@@ -144,7 +145,7 @@ The branch currently contains **47 firmware-enabled Homey drivers** and **141 bu
 | SML002-occupancy | SML004 | `0x011B` | Yes |
 | SML002 | SML002 | `0x010D` | Yes |
 
-LOM006 is documented as image type `0x011A` in the public deCONZ/zigpy Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The remaining mappings were added only after cross-checking public Hue OTA mappings, captured Hue V2 `product_data`, observed Zigbee OTA requests, Koenkk/zigbee-OTA metadata and matching Zigbee OTA image headers.
+LOM006 is documented as image type `0x011A` in the public deCONZ Hue OTA mapping. LTA015 is backed by issue #673 in this repository, which reports hardware platform `100b-129`. The [per-model evidence review](ota-model-evidence.md) links each enabled mapping to a maintained table, published Hue V2 fixture/capture, OTA request, owner report or curated database, and explicitly identifies the three database-only mappings. Firmware availability and matching image headers alone do not prove a model mapping.
 
 ## Gap audit
 
@@ -153,7 +154,7 @@ The source-of-truth inventory is derived from every active `drivers/*/driver.com
 As of this branch state:
 
 - **398** unique Zigbee product IDs are supported by active driver compose files after integrating `develop-2.4`.
-- **67** product IDs have an explicit, evidence-backed OTA mapping.
+- **67** product IDs have an explicit OTA mapping with a source-linked expected-family check; three currently have curated-database evidence only.
 - **331** product IDs remain intentionally unmapped for OTA.
 - **47** Homey drivers contain firmware manifests.
 - **141** firmware binaries are physically bundled; those binaries are referenced **157** times across product-specific update entries.
@@ -182,7 +183,7 @@ The following product IDs are deliberately withheld while their platform/revisio
 
 Do not restore a single image-type mapping for these product IDs from model name alone.
 
-Homey also matches the image type reported by the device, so multiple reviewed platform variants can in principle be supported for one product ID. The current one-family-per-product test is a repository policy, not a Homey limitation; see the [variant review](ota-review-2026-10-03.md#3-replace-the-blanket-single-family-assumption-with-reviewed-variant-support), including the additional observations for 3261031P6 and LCL001.
+Homey also matches the image type reported by the device, so multiple reviewed platform variants can be supported for one product ID. The tests now require an explicit reviewed family set instead of a blanket one-family rule. No additional variant is enabled by that policy change; see the [model evidence review](ota-model-evidence.md#variant-observations-still-under-review), including the additional observations for LLC010 and LCL001, and the [earlier variant review](ota-review-2026-10-03.md#3-explicit-reviewed-variant-policy--implemented).
 
 ## Battery devices
 

@@ -8,6 +8,8 @@ Prepared **2026-10-02** for `ota-2026`, tracked in [PR #758](https://github.com/
 
 Use a controlled OTA build/channel supplied by the maintainer and record its app version and exact `ota-2026` commit. The current maintained manifest version, **2.4.0**, is inherited from the `develop-2.4` development baseline, not a newly published OTA release. OTA work and test builds remain on `ota-2026`, targeting `develop-2.4`. This plan does not select a release version or replace the existing Homey Test channel.
 
+The [model evidence register](ota-model-evidence.md) covers all 67 enabled IDs. Alongside the staged transfer checks, collect independent model/platform observations for LTO001, LTW015 and LWA029, whose existing mappings currently rely only on a curated database. Record any LLC010/LCL001 variant observations with the exact model and reported image type; the alternative families remain unapproved.
+
 According to [Athom's OTA documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates), the OTA feature requires a supported Homey platform with firmware **13.2.0 or newer**, and Homey Mobile App **9.10.0 or newer** when using the mobile app. Record the Homey model, Homey firmware and client version.
 
 Before starting, record:

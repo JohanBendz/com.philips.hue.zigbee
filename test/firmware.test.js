@@ -9,6 +9,7 @@ const test = require('node:test');
 const ROOT = path.join(__dirname, '..');
 const DRIVERS = path.join(ROOT, 'drivers');
 const CATALOGUE = require('./fixtures/hue-ota-catalogue.json');
+const MODEL_REGISTRY = require('./fixtures/hue-ota-models.json');
 const CATALOGUE_IMAGES = new Map(CATALOGUE.images.map(image => [catalogueKey(image), image]));
 
 const WITHHELD_REVISION_CONFLICTS = new Set([
@@ -23,44 +24,83 @@ const WITHHELD_PENDING_EVIDENCE = new Set([
   '929003053301_02',
 ]);
 
-const VERIFIED_IMAGE_TYPES = Object.freeze({
-  '1741530P7': [0x011f],
-  '1743430P7': [0x011f],
-  '1746330P7': [0x011f],
-  '1746430P7': [0x011f],
-  '3216231P6': [0x011d],
-  '4080248P9': [0x011d],
-  '440400982842': [0x011f],
-  LCA004: [0x0114],
-  LCA005: [0x0114],
-  LCL001: [0x011f],
-  LCT003: [0x0104],
-  LLC011: [0x0103],
-  LLC012: [0x0103],
-  LOM001: [0x0115],
-  LOM007: [0x011a],
-  LST001: [0x0103],
-  LTA001: [0x0112],
-  LTA009: [0x0114],
-  LTG002: [0x0114],
-  LTW001: [0x0104],
-  LTO002: [0x0114],
-  LWA004: [0x0112],
-  LWA011: [0x0114],
-  LWA017: [0x0114],
-  LWE002: [0x0112],
-  LWO001: [0x0112],
-  RDM004: [0x0122],
-  ROM001: [0x0116],
-  LWU001: [0x0114],
-});
-
 function asArray(value) {
   return Array.isArray(value) ? value : [value];
 }
 
 function catalogueKey(image) {
   return `${image.manufacturerCode}:${image.imageType}:${image.fileVersion}`;
+}
+
+function assertModelRegistry(registry) {
+  assert.equal(registry.schemaVersion, 1);
+  assert.equal(registry.manufacturerCode, 0x100b);
+  assert.ok(Object.keys(registry.models).length > 0, 'empty model registry');
+  const sourceKinds = new Set([
+    'maintained-mapping', 'hue-v2-fixture', 'hue-v2-capture',
+    'ota-request', 'device-report', 'curated-device-database',
+  ]);
+
+  for (const [sourceId, source] of Object.entries(registry.sources)) {
+    assert.equal(new URL(source.url).protocol, 'https:', `${sourceId}: source URL`);
+    assert.ok(sourceKinds.has(source.kind), `${sourceId}: evidence kind`);
+    assert.ok(Object.keys(source.observations).length > 0, `${sourceId}: no observations`);
+  }
+
+  for (const [productId, model] of Object.entries(registry.models)) {
+    assert.ok(Array.isArray(model.imageTypes) && model.imageTypes.length > 0, `${productId}: no reviewed families`);
+    assert.equal(new Set(model.imageTypes).size, model.imageTypes.length, `${productId}: duplicate family`);
+    assert.ok(model.imageTypes.every(type => Number.isInteger(type) && type >= 0 && type <= 0xffff), `${productId}: invalid family`);
+    assert.ok(Array.isArray(model.sources) && model.sources.length > 0, `${productId}: no evidence`);
+    assert.equal(new Set(model.sources).size, model.sources.length, `${productId}: duplicate source`);
+    const evidencedTypes = new Set();
+
+    for (const sourceId of model.sources) {
+      assert.ok(Object.hasOwn(registry.sources, sourceId), `${productId}: unknown source ${sourceId}`);
+      const observations = registry.sources[sourceId].observations[productId];
+      assert.ok(Array.isArray(observations) && observations.length > 0, `${productId}: source ${sourceId} has no model evidence`);
+      let supportsApprovedFamily = false;
+      for (const platform of observations) {
+        const match = /^([0-9a-f]{4})-([0-9a-f]{3,4})$/i.exec(platform);
+        assert.ok(match, `${productId}: invalid observed platform ${platform}`);
+        assert.equal(parseInt(match[1], 16), registry.manufacturerCode, `${productId}: observed manufacturer`);
+        const imageType = parseInt(match[2], 16);
+        evidencedTypes.add(imageType);
+        supportsApprovedFamily ||= model.imageTypes.includes(imageType);
+      }
+      assert.ok(supportsApprovedFamily, `${productId}: source ${sourceId} does not support an approved family`);
+    }
+    for (const imageType of model.imageTypes) {
+      assert.ok(evidencedTypes.has(imageType), `${productId}: family 0x${imageType.toString(16)} has no evidence`);
+    }
+    if (model.sources.every(sourceId => registry.sources[sourceId].kind === 'curated-device-database')) {
+      assert.ok(model.reviewNote?.trim(), `${productId}: curated-only evidence needs a review note`);
+    }
+  }
+}
+
+function assertReviewedModel(update, label, registry = MODEL_REGISTRY) {
+  for (const productId of asArray(update.device.productId)) {
+    assert.ok(Object.hasOwn(registry.models, productId), `${label}/${productId}: unreviewed model`);
+    for (const file of update.files) {
+      assert.equal(file.manufacturerCode, registry.manufacturerCode, `${label}/${productId}: unreviewed manufacturer`);
+      assert.ok(
+        registry.models[productId].imageTypes.includes(file.imageType),
+        `${label}/${productId}: unreviewed imageType 0x${file.imageType.toString(16)}`,
+      );
+    }
+  }
+}
+
+function assertReviewedCoverage(mappedImageTypes, registry = MODEL_REGISTRY) {
+  assert.deepEqual([...mappedImageTypes.keys()].sort(), Object.keys(registry.models).sort(), 'OTA model coverage differs from the reviewed registry');
+  for (const [productId, imageTypes] of mappedImageTypes) {
+    assert.deepEqual(
+      [...imageTypes].sort((a, b) => a - b),
+      [...registry.models[productId].imageTypes].sort((a, b) => a - b),
+      `${productId}: declared families differ from the reviewed registry`,
+    );
+  }
 }
 
 function assertCatalogueChain(files, label) {
@@ -84,6 +124,10 @@ function assertCatalogueChain(files, label) {
     }
   }
 }
+
+test('OTA model registry records source-backed families and labels curated-only evidence', () => {
+  assertModelRegistry(MODEL_REGISTRY);
+});
 
 test('bundled Zigbee firmware matches compose metadata, driver identity, headers and integrity', () => {
   const driverNames = fs.readdirSync(DRIVERS);
@@ -113,6 +157,8 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     assert.ok(Array.isArray(firmware.updates) && firmware.updates.length > 0, driverName);
 
     for (const update of firmware.updates) {
+      assert.ok(Array.isArray(update.files) && update.files.length > 0, driverName);
+      assertReviewedModel(update, driverName);
       const updateProducts = asArray(update.device.productId);
       for (const productId of updateProducts) {
         if (!mappedImageTypes.has(productId)) mappedImageTypes.set(productId, new Set());
@@ -123,17 +169,6 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
         );
       }
 
-      for (const productId of updateProducts) {
-        const expectedImageTypes = VERIFIED_IMAGE_TYPES[productId];
-        if (!expectedImageTypes) continue;
-        for (const file of update.files) {
-          assert.ok(
-            expectedImageTypes.includes(file.imageType),
-            `${driverName}/${productId}: unverified imageType 0x${file.imageType.toString(16)}`,
-          );
-        }
-      }
-
       for (const manufacturer of asArray(update.device.manufacturerName)) {
         assert.ok(
           supportedManufacturers.includes(manufacturer),
@@ -141,7 +176,6 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
         );
       }
 
-      assert.ok(Array.isArray(update.files) && update.files.length > 0, driverName);
       assertCatalogueChain(update.files, driverName);
       const versions = update.files.map(file => file.fileVersion);
       assert.deepEqual(
@@ -194,12 +228,8 @@ test('bundled Zigbee firmware matches compose metadata, driver identity, headers
     }
   }
 
-  for (const [productId, imageTypes] of mappedImageTypes) {
-    assert.equal(
-      imageTypes.size,
-      1,
-      `${productId}: multiple OTA image types declared: ${[...imageTypes].map(type => `0x${type.toString(16)}`).join(', ')}`,
-    );
+  assertReviewedCoverage(mappedImageTypes);
+  for (const productId of mappedImageTypes.keys()) {
     assert.ok(
       !WITHHELD_REVISION_CONFLICTS.has(productId),
       `${productId}: revision-conflicted product must remain withheld from OTA`,
@@ -237,4 +267,70 @@ test('OTA catalogue check rejects removed or widened source version limits', () 
   const removed = structuredClone(original);
   delete removed[1].minFileVersion;
   assert.throws(() => assertCatalogueChain(removed, 'LCA005'), /catalogue minFileVersion/);
+});
+
+test('OTA model guard rejects an unreviewed alias even when it shares a supported driver', () => {
+  const firmware = require('../drivers/LWA001/driver.firmware.compose.json');
+  const update = structuredClone(firmware.updates.find(entry => entry.device.productId === 'LWA011'));
+  update.device.productId = ['LWA011', 'LWA033'];
+  assert.throws(() => assertReviewedModel(update, 'LWA001'), /LWA033: unreviewed model/);
+});
+
+test('OTA model guard rejects another valid family and a changed manufacturer', () => {
+  const firmware = require('../drivers/LCA001/driver.firmware.compose.json');
+  const update = structuredClone(firmware.updates.find(entry => entry.device.productId === 'LCA001'));
+  update.files = firmware.updates.find(entry => entry.device.productId === 'LCA005').files;
+  assert.throws(() => assertReviewedModel(update, 'LCA001'), /LCA001: unreviewed imageType/);
+
+  const wrongManufacturer = structuredClone(firmware.updates.find(entry => entry.device.productId === 'LCA001'));
+  wrongManufacturer.files[0].manufacturerCode = 0x100c;
+  assert.throws(() => assertReviewedModel(wrongManufacturer, 'LCA001'), /unreviewed manufacturer/);
+});
+
+test('OTA model registry rejects missing evidence, unrelated citations and unsupported allowed families', () => {
+  const missing = structuredClone(MODEL_REGISTRY);
+  missing.models.LCA001.sources = [];
+  assert.throws(() => assertModelRegistry(missing), /LCA001: no evidence/);
+
+  const unrelated = structuredClone(MODEL_REGISTRY);
+  unrelated.models.LCA001.sources = ['hueex'];
+  assert.throws(() => assertModelRegistry(unrelated), /LCA001: source hueex has no model evidence/);
+
+  const widened = structuredClone(MODEL_REGISTRY);
+  widened.models.LCA001.imageTypes.push(0x0114);
+  assert.throws(() => assertModelRegistry(widened), /LCA001: family 0x114 has no evidence/);
+});
+
+test('OTA coverage guard rejects a removed model or an additional unapproved family', () => {
+  const families = new Map();
+  for (const driverName of fs.readdirSync(DRIVERS)) {
+    const filename = path.join(DRIVERS, driverName, 'driver.firmware.compose.json');
+    if (!fs.existsSync(filename)) continue;
+    for (const update of JSON.parse(fs.readFileSync(filename, 'utf8')).updates) {
+      for (const productId of asArray(update.device.productId)) {
+        if (!families.has(productId)) families.set(productId, new Set());
+        for (const file of update.files) families.get(productId).add(file.imageType);
+      }
+    }
+  }
+
+  const missing = structuredClone(families);
+  missing.delete('RWL022');
+  assert.throws(() => assertReviewedCoverage(missing), /OTA model coverage differs/);
+
+  families.get('LLC010').add(0x0103);
+  assert.throws(() => assertReviewedCoverage(families), /LLC010: declared families differ/);
+});
+
+test('OTA variant policy requires an explicitly reviewed family instead of a blanket single-family rule', () => {
+  const registry = structuredClone(MODEL_REGISTRY);
+  // Synthetic approval in this test only; no production manifest or registry is widened.
+  registry.models.LLC010.imageTypes.push(0x0103);
+  registry.models.LLC010.sources.push('hueex');
+  assertModelRegistry(registry);
+
+  const update = structuredClone(require('../drivers/LLC011/driver.firmware.compose.json').updates[0]);
+  update.device.productId = 'LLC010';
+  assert.throws(() => assertReviewedModel(update, 'LLC010'), /unreviewed imageType/);
+  assert.doesNotThrow(() => assertReviewedModel(update, 'LLC010', registry));
 });
