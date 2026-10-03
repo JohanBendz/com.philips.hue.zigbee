@@ -17,8 +17,9 @@ test('pinned standard startup attributes match the legacy Hue attribute IDs', ()
     OnOffCluster.ATTRIBUTES.startUpOnOff.id);
   assert.equal(HueSpecificLevelControlCluster.ATTRIBUTES.powerOnCtrl.id,
     LevelControlCluster.ATTRIBUTES.startUpCurrentLevel.id);
-  assert.equal(HueSpecificColorControlCluster.ATTRIBUTES.powerOnCtrl.id,
+  assert.equal(HueSpecificColorControlCluster.ATTRIBUTES.startUpColorTemperatureMireds.id,
     ColorControlCluster.ATTRIBUTES.startUpColorTemperatureMireds.id);
+  assert.equal(Object.hasOwn(HueSpecificColorControlCluster.ATTRIBUTES, 'powerOnCtrl'), false);
 
   // This command is unrelated to startup attributes and must not disappear
   // when the redundant Hue color-control attribute is eventually retired.
