@@ -1,4 +1,6 @@
 {
+  "platforms": ["local"],
+  "connectivity": ["zigbee"],
   "name": {
     "en": "Occupancy Sensor"
   },

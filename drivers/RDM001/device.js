@@ -62,7 +62,7 @@ class DualWallSwitch extends ZigBeeDevice {
     if (this._wakeupaction){
       this._wakeupaction =  false;
       try {
-        await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({
+        await this.zclNode.endpoints[1].clusters[HueSpecificBasicCluster.NAME].writeAttributes({
           deviceMode: this._deviceMode
         });
       } catch (err) {
