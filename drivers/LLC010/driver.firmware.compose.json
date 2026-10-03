@@ -1,0 +1,36 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Iris LivingColors (LLC010)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LLC010"
+      },
+      "files": [
+        {
+          "fileVersion": 1107326256,
+          "imageType": 264,
+          "manufacturerCode": 4107,
+          "size": 256632,
+          "name": "LivingColors-Target_0108_5.130.1.30000_0012.sbl-ota",
+          "integrity": "sha256:c5cc235135db89eef4886a5657edc8685a154feb66c36e7e6435f789c8eea3ca",
+          "maxFileVersion": 1107326255
+        },
+        {
+          "fileVersion": 1124103180,
+          "imageType": 264,
+          "manufacturerCode": 4107,
+          "size": 256696,
+          "name": "LivingColors-Atmel-Target_0012.sbl-ota",
+          "integrity": "sha256:3c475533a516740a64a771bd4ed0df93e8121acd9ffa9a61745f6c708dce8357",
+          "minFileVersion": 1107326256
+        }
+      ]
+    }
+  ]
+}

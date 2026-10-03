@@ -288,4 +288,3 @@ test('RWL000: real bound button commands restore availability', async () => {
 
   assert.equal(availableCalls, 4);
 });
-

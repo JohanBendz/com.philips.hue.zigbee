@@ -1,0 +1,26 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for LightStrip (LST001)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LST001"
+      },
+      "files": [
+        {
+          "fileVersion": 1124103178,
+          "imageType": 259,
+          "manufacturerCode": 4107,
+          "size": 258104,
+          "name": "LivingColors-Hue-Target_0012_1.sbl-ota",
+          "integrity": "sha512:ef34b196b4ef74a8f2e1a36123175f481685163569386e4252766b3f0b22a2411e3df0e41d630e5c8cd031ae2befcee054b859ba3fb5176e1adb5a49d62d241f"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Aurelle Panel Square (3216231P6)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "3216231P6"
+      },
+      "files": [
+        {
+          "fileVersion": 16786692,
+          "imageType": 285,
+          "manufacturerCode": 4107,
+          "size": 485542,
+          "name": "100B-011D-01002504-ConfLight-ModuLumV2-EFR32MG13.zigbee",
+          "integrity": "sha512:ca172fda58aac17c731cb55fdf4c4856596917725d1a127c77d64e344b68dbafc063984772e408f94b4dfd8b4a815dc259e48234e55314124b8ca75f4c457c13",
+          "maxFileVersion": 16786691
+        },
+        {
+          "fileVersion": 16787714,
+          "imageType": 285,
+          "manufacturerCode": 4107,
+          "size": 471054,
+          "name": "100B-011D-01002902-ConfLight-ModuLumV2-EFR32MG13.zigbee",
+          "integrity": "sha512:353581e8d660d0d91063f9b5d3942dc9d2c95305d12ee8cff014be298496c7c30235cd15a21ec4b4394225184f68fbc830a86d20f09882b1a457b2916e21eee6",
+          "minFileVersion": 16786692
+        }
+      ]
+    }
+  ]
+}

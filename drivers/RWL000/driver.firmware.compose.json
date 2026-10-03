@@ -1,0 +1,32 @@
+{
+  "wakeInstruction": {
+    "en": "Press a button briefly every few seconds during the firmware update to keep the dimmer switch awake."
+  },
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Dimmer Switch (RWL020/RWL021)."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "RWL020",
+          "RWL021"
+        ]
+      },
+      "files": [
+        {
+          "fileVersion": 1124103169,
+          "imageType": 265,
+          "manufacturerCode": 4107,
+          "size": 240760,
+          "name": "Switch-ATmega_0012.sbl-ota",
+          "integrity": "sha512:5e846e5ba6f29a64a6ee1b287b24fe3f82a818797f0005dcb936992536a4432eb02b70d45559e95a7d5567a3292684c4cc68fe4c0d91e47c28603fe0e81bc3cd"
+        }
+      ]
+    }
+  ]
+}
