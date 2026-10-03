@@ -1,6 +1,8 @@
 # OTA readiness review — 2026-10-03
 
-Reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/3c79e7225d7376c1ea4922bf8824b74a5fe622c9) on `ota-2026`. Date uses Europe/Stockholm. This review changes documentation and the hardware test plan; firmware, mappings, runtime requirements and release metadata are unchanged.
+Initial reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/3c79e7225d7376c1ea4922bf8824b74a5fe622c9) on `ota-2026`. Date uses Europe/Stockholm. Updated on the same date for the integration of [`develop-2.4` at `29d9db0`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/29d9db03a2a2699c1bead2ee238f2afe27c3eac5). Work remains on `ota-2026`, with PR #758 targeting `develop-2.4`.
+
+The new development baseline supplies version **2.4.0**, Homey compatibility **`>=12.9.0`**, and consistent package/lockfile versions. It adds four drivers and 18 product IDs; OTA manifests, firmware binaries and the reviewed catalogue are unchanged. The coverage inventory below reflects the integrated baseline; the source/API observations retain their original audit scope.
 
 **Verdict: native OTA declarations and catalogue maintenance are implemented for a selected set of devices. Coverage is incomplete, release preparation has open items, and physical transfer/rejoin results are still pending.**
 
@@ -8,9 +10,9 @@ Reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/
 
 | Measure | Result |
 | --- | ---: |
-| Driver compose files with OTA / total | 47 / 168 |
-| Explicitly OTA-mapped product IDs / supported IDs | 67 / 380 |
-| Supported product IDs without OTA mappings | 313 |
+| Driver compose files with OTA / total | 47 / 172 |
+| Explicitly OTA-mapped product IDs / supported IDs | 67 / 398 |
+| Supported product IDs without OTA mappings | 331 |
 | Enabled image families / families in the Hue catalogue | 21 / 38 |
 | Unique bundled images / Hue images in the catalogue | 40 / 69 |
 | Per-driver firmware files / manifest references | 141 / 157 |
@@ -18,6 +20,7 @@ Reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/
 Product IDs include aliases and regional variants. These counts do not measure the proportion of physical Hue products or installed devices covered. The public catalogue is not an exhaustive inventory of every product or firmware available through a Hue Bridge.
 
 - [CI on the reviewed commit](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37070472946) passed Homey publish validation and all **133 tests**. The **13 OTA-focused tests** were rerun during this review and passed.
+- After integrating `develop-2.4`, Homey CLI 4.5.0 publish validation and all **161 tests** passed locally. The integrated tree preserves every existing OTA manifest, firmware binary and catalogue-reference byte. The offline catalogue audit still reports zero active-family changes against the reviewed index.
 - `npm run ota:audit` resolved upstream to [`9f46fc5`](https://github.com/Koenkk/zigbee-OTA/blob/9f46fc5208eab9890dfe31696652428fa497850c/index.json), reporting **zero changes** in active families. Whole-index SHA-256: `b1a18d3fc8111106f2e77d7789f8b0277ea3cac4f2f9b7963a11a14f26575141`.
 - All 40 unique images match the reviewed source checksums and metadata. All headers have field control zero, so none contains an additional hardware-version range or device-specific destination hidden in optional header fields.
 - A selection simulation checked zero, every file/constraint boundary and adjacent versions through each family's latest image. All 21 chains reach their reviewed latest version without a gap; the longest require five steps. This verifies selection metadata, not transfer behaviour.
@@ -36,11 +39,11 @@ An empty response is not evidence that a family has no firmware. These results c
 
 ## Findings and follow-up work
 
-### 1. Reconcile the declared Homey minimum before release
+### 1. Declared Homey minimum — resolved by development baseline integration
 
-`.homeycompose/app.json` still declares `compatibility: ">=5.0.0"`. The app and both pinned Zigbee dependencies declare Node.js `>=22`. [Athom documents Node.js 22 across Homey platforms from v12.9.0](https://apps.developer.homey.app/the-basics/app#node.js).
+The initial review found `compatibility: ">=5.0.0"` despite the app and both pinned Zigbee dependencies declaring Node.js `>=22`. The integrated `develop-2.4` baseline resolves this with `compatibility: ">=12.9.0"` and generated-manifest regression checks. [Athom documents Node.js 22 across Homey platforms from v12.9.0](https://apps.developer.homey.app/the-basics/app#node.js).
 
-This inherited metadata mismatch should be resolved for the OTA release: at least `>=12.9.0` for the current runtime dependencies, or a deliberately higher release minimum. Separately, [native Zigbee OTA](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) needs Homey 13.2+ on supported platforms and mobile app 9.10+. The 2016–2019 Homey models are not listed as supported OTA platforms. This app declares the `local` platform; generic Homey Cloud OTA availability does not add Cloud support to this app.
+Separately, [native Zigbee OTA](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) needs Homey 13.2+ on supported platforms and mobile app 9.10+. The app's runtime minimum does not promise OTA on Homey 12.9. The 2016–2019 Homey models are not listed as supported OTA platforms. This app declares the `local` platform; generic Homey Cloud OTA availability does not add Cloud support to this app.
 
 ### 2. Complete the model-mapping regression guard
 
@@ -64,13 +67,13 @@ Useful next candidates from the deCONZ table are LWB004 (`0x0105`), LTC013 (`0x0
 
 ### 5. Finish release preparation and record physical results
 
-The maintained app version is still the inherited **2.2.1** baseline. No OTA release version/channel or matching OTA changelog entry has been selected; the package-lock root package record also still says 2.2.0. Align release metadata together when preparing the chosen build, without replacing another active Test workstream accidentally.
+The maintained app version and both package-lock version records now match the inherited **2.4.0** development baseline. No OTA release version/channel or matching OTA changelog entry has been selected. Confirm release metadata together when preparing the chosen build, without replacing another active Test workstream accidentally.
 
 Use the [hardware test plan](ota-test-plan.md) to record controlled Test/local results: modern mains-powered devices, a multi-step chain, a legacy SBL lamp, then battery devices and their wake instructions. Include transfer completion, rejoin, retained settings and existing controls/Flows. No physical success is claimed by this review.
 
 ## Recommended order
 
-1. Reconcile the runtime minimum and complete the evidence-backed model mapping guard.
+1. Complete the evidence-backed model mapping guard on `ota-2026`, keeping `develop-2.4` as its integration base.
 2. Prepare the selected OTA test build and collect the hardware results in parallel with mapping research.
 3. Add supported variants and additional verified products in small groups.
 4. Promote only the scope supported by the collected results; retain an explicit coverage list.

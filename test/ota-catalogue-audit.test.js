@@ -171,7 +171,7 @@ test('offline CLI reports inventory and exit codes without changing drivers, bin
     references: report.inventory.fileReferences,
     images: report.reviewedImageCount,
     families: report.activeImageTypes.length,
-  }, { drivers: 47, mapped: 67, supported: 380, unmapped: 313, files: 141, references: 157, images: 40, families: 21 });
+  }, { drivers: 47, mapped: 67, supported: 398, unmapped: 331, files: 141, references: 157, images: 40, families: 21 });
 
   fs.writeFileSync(indexPath, JSON.stringify(upstreamImages.slice(1)));
   const changed = run(['--index', indexPath, '--json']);

@@ -4,6 +4,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
 Cluster.addCluster(HueSpecificBasicCluster);
 
 class DimmerSwitchGen3 extends ZigBeeDevice {
@@ -86,6 +87,7 @@ async onNodeInit({ zclNode }) {
   }
 
   async onEndDeviceAnnounce() {
+    markHueRemoteAvailable(this);
     if (!this._batteryReportingConfigured) {
       await this._setupBatteryReporting()
         .catch(err => this.error('Battery reporting setup on announce failed:', err));
@@ -114,8 +116,8 @@ async onNodeInit({ zclNode }) {
       rawPercentage = frame.readUInt8(6);
     }
 
-    if (rawPercentage !== undefined) {
-      this._applyBatteryPercentage(rawPercentage);
+    if (rawPercentage !== undefined && this._applyBatteryPercentage(rawPercentage) !== null) {
+      markHueRemoteAvailable(this);
     }
   }
 
@@ -126,6 +128,7 @@ async onNodeInit({ zclNode }) {
 
     var button = payload[5] === 1 ? 'OnOff' : payload[5] === 2 ? 'DimUp' : payload[5] === 3 ? 'DimDown' : 'Hue';
     var action = payload[9] === 0 ? 'ShortPress' : payload[9] === 1 ? 'LongPress' : payload[9] === 2 ? 'ShortRelease' : 'LongRelease';
+    markHueRemoteAvailable(this);
     return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
       .then(() => this.log(`triggered RWL022_buttons, action=${button}-${action}`))
       .catch(err => this.error('Error triggering RWL022_buttons', err));

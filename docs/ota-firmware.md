@@ -2,6 +2,8 @@
 
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
+OTA development remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-03 integration includes development baseline [`29d9db0`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/29d9db03a2a2699c1bead2ee238f2afe27c3eac5), version **2.4.0** and Homey compatibility **`>=12.9.0`**. This baseline change does not publish an OTA release or enable firmware for newly added product IDs.
+
 See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for current coverage limits, the direct Hue-server cross-check and open release/test follow-ups. Catalogue consistency does not mean full Hue coverage.
 
 ## Source and verification policy
@@ -59,7 +61,7 @@ The audit on 2026-10-02 resolved to the reviewed `9f46fc5` revision: **0 active-
 
 ## Packaging verification — 2026-10-02
 
-Homey CLI **4.5.0** built the app and its archive locally. This did not upload or install it.
+Homey CLI **4.5.0** built the app and its archive locally at the earlier `3c79e72` code baseline. These measurements predate the `develop-2.4` integration. This did not upload or install it.
 
 | Measurement | Result |
 | --- | ---: |
@@ -150,13 +152,13 @@ The source-of-truth inventory is derived from every active `drivers/*/driver.com
 
 As of this branch state:
 
-- **380** unique Zigbee product IDs are supported by active driver compose files.
+- **398** unique Zigbee product IDs are supported by active driver compose files after integrating `develop-2.4`.
 - **67** product IDs have an explicit, evidence-backed OTA mapping.
-- **313** product IDs remain intentionally unmapped for OTA.
+- **331** product IDs remain intentionally unmapped for OTA.
 - **47** Homey drivers contain firmware manifests.
 - **141** firmware binaries are physically bundled; those binaries are referenced **157** times across product-specific update entries.
 
-The 313 unmapped IDs do **not** represent 313 distinct physical products. Many are retail IDs, aliases, regional variants or multiple IDs owned by the same Homey driver. An unmapped alias must not inherit firmware from another product in the driver unless its image type is independently established.
+The 331 unmapped IDs do **not** represent 331 distinct physical products. Many are retail IDs, aliases, regional variants or multiple IDs owned by the same Homey driver. An unmapped alias must not inherit firmware from another product in the driver unless its image type is independently established.
 
 This audit added two mains-powered mappings after external verification:
 

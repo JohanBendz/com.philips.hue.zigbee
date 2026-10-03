@@ -1,0 +1,39 @@
+{
+  "name": {
+    "en": "OmniGlow Lightstrip"
+  },
+  "$extends": [
+    "light_color_ambiance"
+  ],
+  "zigbee": {
+    "manufacturerName": [
+      "Philips",
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "929004608001",
+      "929004608003",
+      "929004608004",
+      "929004608101",
+      "929004608103",
+      "929004608201"
+    ],
+    "endpoints": {
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          6,
+          8,
+          768
+        ]
+      }
+    },
+    "learnmode": {
+      "instruction": {
+        "en": "Plug in the OmniGlow lightstrip to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+      }
+    }
+  }
+}

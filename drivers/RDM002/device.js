@@ -3,10 +3,9 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-const HueSpecificBasicBoundCluster = require('../../lib/HueSpecificBasicBoundCluster');
+const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
 
 Cluster.addCluster(HueSpecificBasicCluster);
-Cluster.addCluster(HueSpecificBasicBoundCluster);
 
 class TapDialSwitch extends ZigBeeDevice {
 
@@ -76,6 +75,7 @@ class TapDialSwitch extends ZigBeeDevice {
   }
 
   async onEndDeviceAnnounce() {
+    markHueRemoteAvailable(this);
     await this._refreshBattery();
   }
 
@@ -98,8 +98,8 @@ class TapDialSwitch extends ZigBeeDevice {
       rawPercentage = frame.readUInt8(6);
     }
 
-    if (rawPercentage !== undefined) {
-      this._applyBatteryPercentage(rawPercentage);
+    if (rawPercentage !== undefined && this._applyBatteryPercentage(rawPercentage) !== null) {
+      markHueRemoteAvailable(this);
     }
   }
   
@@ -150,6 +150,7 @@ class TapDialSwitch extends ZigBeeDevice {
     }
 
     if (action) {
+        markHueRemoteAvailable(this);
         return this._switchTriggerDevice.trigger(this, {}, { action: `${button}-${action}` })
             .then(() => this.log(`triggered RDM002_buttons, action=${button}-${action}`))
             .catch(err => this.error('Error triggering RDM002_buttons', err));
