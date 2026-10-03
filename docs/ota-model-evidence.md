@@ -102,7 +102,7 @@ All families below use manufacturer **0x100B**. Links point to the reviewed sour
 
 ## Maintenance
 
-For an intentional mapping change, review the exact product ID and hardware/image family, add or amend its source observation, then update the approved model entry and driver firmware declaration together. Re-run `node --test test/firmware.test.js`, generate the Homey manifest, run publish validation and the full suite. Do not obtain expected families by copying the updated driver declaration.
+For an intentional mapping change, review the exact product ID and hardware/image family, add or amend its source observation, then update the approved model entry and driver firmware declaration together. Generate the Homey manifest with publish validation, then run `node --test test/firmware.test.js` and the full suite. The generated-manifest check also verifies that every declaration and wake instruction survives Homey Compose. Do not obtain expected families by copying the updated driver declaration.
 
 Collect direct device observations for the three database-only models alongside controlled Test/local runs. Prefer an OTA query containing manufacturerCode/imageType or a Hue V2 product_data record containing model_id/hardware_platform_type. Physical transfer/rejoin results belong in [the hardware test plan](ota-test-plan.md).
 

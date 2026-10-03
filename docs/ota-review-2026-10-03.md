@@ -1,5 +1,7 @@
 # OTA readiness review — 2026-10-03
 
+**2026-10-04 follow-up:** The selected destination is now the planned **2.4.0 Homey Test** release with `develop-2.4`. Develop at `5c4dd47` is included in the OTA preparation, release notes are prepared, and physical results will be collected during Test. See the [current release handoff](ota-test-release-2.4.0.md); it supersedes the release-selection items in this dated review. Coverage and evidence limitations below remain applicable.
+
 Initial reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/3c79e7225d7376c1ea4922bf8824b74a5fe622c9) on `ota-2026`. Date uses Europe/Stockholm. Updated on the same date for the integration of [`develop-2.4` at `29d9db0`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/29d9db03a2a2699c1bead2ee238f2afe27c3eac5). Work remains on `ota-2026`, with PR #758 targeting `develop-2.4`.
 
 The new development baseline supplies version **2.4.0**, Homey compatibility **`>=12.9.0`**, and consistent package/lockfile versions. It adds four drivers and 18 product IDs; OTA manifests, firmware binaries and the reviewed catalogue are unchanged. The coverage inventory below reflects the integrated baseline; the source/API observations retain their original audit scope.

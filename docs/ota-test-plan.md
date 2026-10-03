@@ -2,11 +2,11 @@
 
 Prepared **2026-10-02** for `ota-2026`, tracked in [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
-**Status: planned. No physical end-to-end OTA result has been recorded.** Catalogue checks, binary validation and publish validation are separate evidence from successful transfer, restart and device operation on Homey.
+**Status: prepared for the planned 2.4.0 Homey Test release. No physical end-to-end OTA result has been recorded.** Transfer, restart and device-operation results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
 
 ## Setup and evidence
 
-Use a controlled OTA build/channel supplied by the maintainer and record its app version and exact `ota-2026` commit. The current maintained manifest version, **2.4.0**, is inherited from the `develop-2.4` development baseline, not a newly published OTA release. OTA work and test builds remain on `ota-2026`, targeting `develop-2.4`. This plan does not select a release version or replace the existing Homey Test channel.
+The selected release is **2.4.0 on Homey Test**, together with the `develop-2.4` changes. OTA preparation stays on `ota-2026` until PR #758 is integrated for that release. Record the exact final `develop-2.4` commit used for publication (or the exact local-build commit), not just the OTA source commit. See the [release handoff](ota-test-release-2.4.0.md). The currently published 2.3.0 Test remains in place until the maintainer publishes 2.4.0.
 
 The [model evidence register](ota-model-evidence.md) covers all 67 enabled IDs. Alongside the staged transfer checks, collect independent model/platform observations for LTO001, LTW015 and LWA029, whose existing mappings currently rely only on a curated database. Record any LLC010/LCL001 variant observations with the exact model and reported image type; the alternative families remain unapproved.
 
@@ -78,7 +78,7 @@ Copy one record per actual model and starting version into the OTA issue/PR. Kee
 | Field | Observation |
 | --- | --- |
 | Date / tester | |
-| App version / ota-2026 commit / build channel | |
+| App version / exact published or local-build commit / build channel | |
 | Homey model / firmware / client version | |
 | Homey driver / actual modelId / manufacturerName | |
 | Image type / hardware version, if exposed | |
@@ -92,4 +92,4 @@ Copy one record per actual model and starting version into the OTA issue/PR. Kee
 | Evidence link / relevant sanitized log | |
 | Verdict: completed transfer, no update available, failed, or unavailable | |
 
-Keep PR #758 in Draft while the physical results are being collected. Catalogue and mapping research can continue alongside these tests; enable additional mappings only after their identity/platform evidence and complete firmware chains have been reviewed.
+PR #758 can be reviewed and integrated for the planned Test release once the software checks pass. Physical results are Test work, not a prerequisite for starting Test. Use the recorded results and unresolved failures to decide the scope of any later Live promotion. Catalogue and mapping research can continue alongside testing; enable additional mappings only after their identity/platform evidence and complete firmware chains have been reviewed.

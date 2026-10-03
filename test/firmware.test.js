@@ -129,6 +129,24 @@ test('OTA model registry records source-backed families and labels curated-only 
   assertModelRegistry(MODEL_REGISTRY);
 });
 
+test('generated Homey manifest preserves every OTA declaration and battery wake instruction', () => {
+  const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'app.json'), 'utf8'));
+  const expected = new Map();
+  for (const driverName of fs.readdirSync(DRIVERS)) {
+    const filename = path.join(DRIVERS, driverName, 'driver.firmware.compose.json');
+    if (fs.existsSync(filename)) expected.set(driverName, JSON.parse(fs.readFileSync(filename, 'utf8')));
+  }
+  const generated = manifest.drivers.filter(driver => driver.firmwareUpdates !== undefined);
+  assert.deepEqual(
+    generated.map(driver => driver.id).sort(),
+    [...expected.keys()].sort(),
+    'generate app.json with Homey publish validation before running tests; OTA driver coverage must match',
+  );
+  for (const driver of generated) {
+    assert.deepEqual(driver.firmwareUpdates, expected.get(driver.id), `${driver.id}: generated OTA metadata differs from compose`);
+  }
+});
+
 test('bundled Zigbee firmware matches compose metadata, driver identity, headers and integrity', () => {
   const driverNames = fs.readdirSync(DRIVERS);
   let firmwareDrivers = 0;
