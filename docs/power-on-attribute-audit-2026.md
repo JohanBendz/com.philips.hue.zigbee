@@ -43,3 +43,18 @@ temperature clamping and unsupported clusters. Use a Homey Test build to
 physically verify a White bulb, White Ambiance bulb, Color Ambiance bulb and
 Hue Smart Plug before considering the change release-verified. No migration
 of stored Homey setting IDs and no expansion of reporting or polling.
+
+## Runtime migration draft
+
+The runtime implementation is isolated from the contract PR. Standard
+OnOff/LevelControl implementations replace the two app-side registrations.
+The custom ColorControl class stays registered **only for colorLoop**;
+its duplicate `powerOnCtrl` attribute alias is removed so the upstream
+`startUpColorTemperatureMireds` definition is unambiguous.
+
+The settings code preserves read-before-write, existing setting IDs,
+brightness defaults, color-temperature bounds and exception handling. It
+only substitutes the three standard ZCL attribute names and explicitly
+maps the saved `recover` state to `previous`. All four device-family
+paths must be physically checked when 2.4 reaches Homey Test. Keep this
+runtime PR in Draft until regression scope and hardware strategy are approved.

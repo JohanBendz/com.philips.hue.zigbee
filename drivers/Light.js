@@ -4,13 +4,11 @@ const { ZigBeeLightDevice } = require('homey-zigbeedriver');
 
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 
-// Power On Behaviour need these
-const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
-const HueSpecificLevelControlCluster = require('../lib/HueSpecificLevelControlCluster');
+// Use standard ZCL startup attributes. Preserve Hue's separate colorLoop
+// extension and manufacturer-specific Philips cluster.
+const { toStandardStartupState } = require('../lib/HuePowerOnStartup');
 const HueSpecificColorControlCluster = require('../lib/HueSpecificColorControlCluster');
 const HueSpecificPhilips2Cluster = require('../lib/HueSpecificPhilips2Cluster');
-Cluster.addCluster(HueSpecificOnOffCluster);
-Cluster.addCluster(HueSpecificLevelControlCluster);
 Cluster.addCluster(HueSpecificColorControlCluster);
 Cluster.addCluster(HueSpecificPhilips2Cluster);
 
@@ -368,9 +366,9 @@ class Light extends ZigBeeLightDevice {
         if (changedKeys.includes('powerOnCtrl_state') || changedKeys.includes('powerOnCtrl_dimvalue') || changedKeys.includes('powerOnCtrl_colorvalue')) {
 
             try {
-                await this.onOffCluster.readAttributes(['powerOnCtrl']);
-                await this.onOffCluster.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
-                await this.levelControlCluster.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_dimvalue}); // default: 255 (0-255)
+                await this.onOffCluster.readAttributes(['startUpOnOff']);
+                await this.onOffCluster.writeAttributes({ startUpOnOff: toStandardStartupState(newSettings.powerOnCtrl_state) }); // recover -> previous (0xFF)
+                await this.levelControlCluster.writeAttributes({ startUpCurrentLevel: newSettings.powerOnCtrl_dimvalue }); // default: 255 (0-255)
                 this.log("Power On Control supported by device");
             } catch (error) {
                 this.log("This device does not support Power On Control");
@@ -390,7 +388,7 @@ class Light extends ZigBeeLightDevice {
                     this.log("Setting Power On Control, value within limits");
                 }
 
-                await this.colorControlCluster.writeAttributes({powerOnCtrl: colorValue});
+                await this.colorControlCluster.writeAttributes({ startUpColorTemperatureMireds: colorValue });
                 this.log("Color Temperature supported by device. Min Mireds: ", colorTempMin,". Max Mireds: ", colorTempMax);
             } else {
                 this.log("This device does not support Color Temperature");
