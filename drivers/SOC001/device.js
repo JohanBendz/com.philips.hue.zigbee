@@ -122,8 +122,8 @@ class ContactSensor extends ZigBeeDevice {
   }
 
   onBatteryPercentageAttributeReport(value, fromReport = false) {
-    if (!Number.isFinite(value) || !Number.isInteger(value) || value < 0 || value > 200) return;
-    if (fromReport) markHueSensorReportObserved(this);
+    if (!Number.isFinite(value) || value < 0 || value > 200) return;
+    if (fromReport && Number.isInteger(value)) markHueSensorReportObserved(this);
     const batteryPercentage = value / 2;
     this.log('Battery percentage attribute report received:', batteryPercentage);
     return this.setCapabilityValue('measure_battery', batteryPercentage)
