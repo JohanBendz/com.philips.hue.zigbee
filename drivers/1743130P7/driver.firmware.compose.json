@@ -2,7 +2,8 @@
   "updates": [
     {
       "changelog": {
-        "en": "Philips Hue firmware update for Impress Outdoor Pedestal (1743430P7)."
+        "en": "Philips Hue firmware update for Impress Outdoor Pedestal (1743430P7).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (1743430P7).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [

@@ -2,7 +2,7 @@
 
 Prepared **2026-10-02**, refreshed **2026-10-05** for `ota-2026`, tracked in [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
-**Status: prepared for the planned 2.4.0 Homey Test release. No physical end-to-end OTA result has been recorded.** Transfer, restart and device-operation results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
+**Status: prepared for the planned 2.4.0 Homey Test release. A first LCT015 hardware observation confirms transfer, rejoin and the resulting version; post-update controls/Flows and app-restart checks remain pending.** See the [LCT015 result record](ota-test-results.md#lct015--2026-10-05). Further physical results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
 
 ## Setup and evidence
 
@@ -33,6 +33,7 @@ Start with one device at a time. Exact-model rows can be used independently depe
 | First | LOM002 | LOM001 | `0x0115` | `0x01001700` | 2 |
 | First | LOM002 | LOM006 or LOM007 | `0x011A` | `0x01001200` | 5 |
 | Additional multi-step check | LCA001 | LCA004 or LCA005 | `0x0114` | `0x01002A00` | 5 |
+| Observed transfer; functional checks pending | LCT000 | LCT015 | `0x010C` | `0x01002A00` | 2 |
 | Legacy SBL container check | LCT003 | LCT003 | `0x0104` | `0x4300740C` | 2 |
 
 Include a legacy SBL lamp as well as a modern `.zigbee` lamp. The [readiness review](ota-review-2026-10-03.md) identifies nine legacy SBL images with Hue-specific payload structure; a successful update on modern hardware does not verify that path.
@@ -42,7 +43,7 @@ For each device:
 1. Confirm normal controls and one existing device-dependent Flow before OTA.
 2. Start the offered update through Homey's device-update UI. Record the offered version, start time, progress and any failure/retry message.
 3. Record the image/version actually transferred if visible in the logs. For old firmware, confirm that each prerequisite image is used before a later image becomes eligible; the first image offered may not be the latest image.
-4. Wait for Homey to report the result and the device to rejoin. Record the resulting software version and any new update offered. Follow additional offered steps until the reviewed chain is complete or a failure is recorded.
+4. Wait for Homey to report the result and the device to rejoin. Firmware information and update status can take a few minutes to refresh after rejoin. If Homey initially cannot verify success, preserve that message, wait a few minutes and check the status again before retrying. Record both the initial and final result, the resulting software version and any new update offered. Follow additional offered steps until the reviewed chain is complete or a failure is recorded.
 5. Confirm the same paired Homey identity and settings remain, and that the existing Flow still works.
 6. For bulbs, check on/off, dimming, color temperature and color where supported, plus state reporting. For plugs, check on/off, state reporting and the existing power-on setting.
 7. Check again after an app restart. Confirm no recurring initialization errors or loss of normal controls/reporting.

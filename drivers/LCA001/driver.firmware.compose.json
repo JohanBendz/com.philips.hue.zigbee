@@ -2,7 +2,8 @@
   "updates": [
     {
       "changelog": {
-        "en": "Philips Hue firmware update for White and Color Ambiance A60 E27 Bluetooth (LCA001)."
+        "en": "Philips Hue firmware update for White and Color Ambiance A60 E27 Bluetooth (LCA001).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCA001).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [
@@ -34,7 +35,8 @@
     },
     {
       "changelog": {
-        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA005)."
+        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA005).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCA005).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [
@@ -96,7 +98,8 @@
     },
     {
       "changelog": {
-        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA004)."
+        "en": "Philips Hue firmware update for White and Color Ambiance bulb (LCA004).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCA004).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [

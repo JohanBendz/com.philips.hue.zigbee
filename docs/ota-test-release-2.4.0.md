@@ -20,7 +20,7 @@ Physical OTA results are collected **during Test**. Their absence is not a softw
 | Model guards | All 67 enabled IDs have explicit source-linked family checks |
 | Release files | `.homeychangelog.json` 2.4.0 entry, `CHANGELOG.md`, `README.md` and `README.txt` |
 
-The Develop refresh includes the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, update declarations and approved model families are unchanged by this release preparation.
+The Develop refresh includes the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, image-selection metadata and approved model families are unchanged by this release preparation. The later help-text update adds English/Swedish post-restart guidance to the firmware changelogs.
 
 See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [model evidence register](ota-model-evidence.md). A driver's retail name is not a firmware-family identifier. Of the enabled mappings, 64 have an explicit maintained model-table entry, API fixture/capture, OTA request or owner report. LTO001, LTW015 and LWA029 currently have curated-database evidence only and need independent device observations during Test.
 
@@ -28,7 +28,7 @@ See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [mod
 
 Local verification used a clean dependency install, Node.js **24.19.0** and Homey CLI **4.5.0**. Publish validation passed and **215 tests passed / 0 failed**. The repository's PR CI separately runs on Node.js 22; its exact commit and result are recorded in PR #758 and the dashboard. All 67 evidence-register rows, every driver/model coverage row, the hardware-plan versions and local Markdown file links were checked against the repository.
 
-The fresh catalogue audit resolved upstream to `62c7798c8d8a4712733c6cc668ea491a2637f329` and found **zero active-family changes** against the fixed reviewed reference `9f46fc5`. All app/package/lockfile versions and the release-note key agree on **2.4.0**. The final generated manifest and local CLI archive contain all **47 OTA declarations** and **141 firmware files**, with every firmware checksum matching the source tree. Development directories are excluded. Product README and release notes describe functionality; Test/publication status is kept in this handoff and the dashboard.
+The fresh catalogue audit resolved upstream to `62c7798c8d8a4712733c6cc668ea491a2637f329` and found **zero active-family changes** against the fixed reviewed reference `9f46fc5`. All app/package/lockfile versions and the release-note key agree on **2.4.0**. The generated manifest and local CLI archive verified at OTA commit `f5dbfdd` contain all **47 OTA declarations** and **141 firmware files**, with every firmware checksum matching the source tree. Development directories are excluded. Product README and release notes describe functionality; Test/publication status is kept in this handoff and the dashboard.
 
 | Local CLI archive measurement | Result |
 | --- | ---: |
@@ -37,7 +37,7 @@ The fresh catalogue audit resolved upstream to `62c7798c8d8a4712733c6cc668ea491a
 | Compressed bytes | 58,842,961 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 
-Archive SHA-256: `8f8548af4f5c8d375973956252c7f787df064a768baf187f30374fcf969391e1`. This identifies the local verification archive, not a published build. Rebuild and record the final release commit at the Test cut. The earlier `80ab1a3` snapshot passed 180 tests; its older archive measurements are superseded by this Develop refresh.
+Archive SHA-256: `8f8548af4f5c8d375973956252c7f787df064a768baf187f30374fcf969391e1`. This identifies the `f5dbfdd` local verification archive, before the later post-restart help-text change, not a published build. Rebuild and record the final release commit at the Test cut. The earlier `80ab1a3` snapshot passed 180 tests; its older archive measurements are superseded by this Develop refresh.
 
 ## Software checks before integration and publication
 
@@ -66,6 +66,8 @@ git diff --check
 
 ## Test observations and remaining coverage work
 
+The first [LCT015 result](ota-test-results.md#lct015--2026-10-05) confirms transfer/rejoin, OTA `0x01001A02` → `0x01002A00` and software `1.50.2_r30933` → `1.116.12`. Homey initially could not verify success, then showed the installed target and up-to-date status after a delay. The exact installed app build/Homey/client versions and post-update controls/Flows/app-restart results have not yet been supplied. This is not a complete functional result or proof for other models.
+
 Follow the [hardware test plan](ota-test-plan.md), including its per-device result template:
 
 - Modern mains-powered devices: LCA001 and exact LOM001/LOM006/LOM007 plug models; include an old starting version that exercises an intermediate chain.
@@ -77,6 +79,6 @@ Follow the [hardware test plan](ota-test-plan.md), including its per-device resu
 
 LCT026, LST002, 3261031P6, SOC001 and the two Ensis zone IDs remain withheld. LLC010 `0x0103` and LCL001 `0x0117` remain unapproved alternatives. The 331 unmapped product IDs and other catalogue-only families are future coverage work, not promised 2.4.0 OTA support.
 
-For a failed transfer, stop that test case and retain the Homey result/log before another attempt; do not force a different image or factory-reset the device to conceal the failure. Verify normal operation and record whether the problem follows one model, firmware family or Homey platform. A confirmed targeting error requires withholding the affected mapping in a subsequent Test build. App rollback does not roll back firmware already installed on a Hue device.
+For an initial verification error after rejoin, preserve the message, wait a few minutes and check the firmware/update status again before retrying. Record both outcomes. For a persistent failed transfer, stop that test case and retain the Homey result/log before another attempt; do not force a different image or factory-reset the device to conceal the failure. Verify normal operation and record whether the problem follows one model, firmware family or Homey platform. A confirmed targeting error requires withholding the affected mapping in a subsequent Test build. App rollback does not roll back firmware already installed on a Hue device.
 
 Athom's [native OTA documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) requires correct targeting and physical end-to-end verification before broad release. Keep Test results explicit; software checks alone do not establish device-level success.

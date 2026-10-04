@@ -2,7 +2,8 @@
   "updates": [
     {
       "changelog": {
-        "en": "Philips Hue firmware update for A19 Color (LCT010/LCT014/LCT015/LCT016)."
+        "en": "Philips Hue firmware update for A19 Color (LCT010/LCT014/LCT015/LCT016).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCT010, LCT014, LCT015, LCT016).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [
@@ -39,7 +40,8 @@
     },
     {
       "changelog": {
-        "en": "Philips Hue firmware update for Color A19 (LCT007, hardware platform 100b-104)."
+        "en": "Philips Hue firmware update for Color A19 (LCT007, hardware platform 100b-104).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCT007).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
       },
       "device": {
         "manufacturerName": [

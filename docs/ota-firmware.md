@@ -63,7 +63,7 @@ The original audit on 2026-10-02, before the Develop integration, resolved to th
 
 ## Packaging verification — 2026-10-05
 
-Homey CLI **4.5.0** built the prepared 2.4.0 Test candidate with Develop `349e342` included. The generated manifest and archive preserve all OTA declarations and battery wake instructions, and every packaged firmware file matches its source checksum. All 215 local tests and publish validation passed. This did not upload or install the app; see the [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) for the archive checksum and final-release procedure.
+Homey CLI **4.5.0** built the prepared 2.4.0 Test candidate at OTA commit `f5dbfdd`, with Develop `349e342` included, before the post-restart help-text change. The generated manifest and archive preserve all OTA declarations and battery wake instructions, and every packaged firmware file matches its source checksum. All 215 local tests and publish validation passed. This did not upload or install the app; see the [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) for the archive checksum and final-release procedure.
 
 | Measurement | Result |
 | --- | ---: |
@@ -185,6 +185,14 @@ The following product IDs are deliberately withheld while their platform/revisio
 Do not restore a single image-type mapping for these product IDs from model name alone.
 
 Homey also matches the image type reported by the device, so multiple reviewed platform variants can be supported for one product ID. The tests now require an explicit reviewed family set instead of a blanket one-family rule. No additional variant is enabled by that policy change; see the [model evidence review](ota-model-evidence.md#variant-observations-still-under-review), including the additional observations for LLC010 and LCL001, and the [earlier variant review](ota-review-2026-10-03.md#3-explicit-reviewed-variant-policy--implemented).
+
+## After the device restarts
+
+The device-information firmware string (Basic cluster `swBuildId`) and the numeric OTA `fileVersion` are separate identifiers. Homey may format the latter as two release/build values; they do not need to look like the Hue software version.
+
+Firmware information and update status can take a few minutes to refresh after a device restarts. If Homey initially reports that it cannot verify success, preserve the message, wait a few minutes and check the status again before retrying. Rejoin alone is not proof of the installed version; confirm the resulting OTA version and normal device operation. A persistent error or unchanged version still needs investigation.
+
+The 2026-10-05 [LCT015 observation](ota-test-results.md#lct015--2026-10-05) initially showed `Unable to verify if update was successful`, then confirmed OTA version `0x01002A00` (`0.1b0 / 2.10b0`) and Hue software `1.116.12`. The delay was observed; its cause inside Homey has not been established. All firmware update changelogs contain this guidance in English and Swedish. Homey's built-in verification error text is owned by Homey.
 
 ## Battery devices
 
