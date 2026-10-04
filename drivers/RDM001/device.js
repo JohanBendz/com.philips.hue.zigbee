@@ -4,6 +4,7 @@ const { isDeepStrictEqual } = require('node:util');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const { markHueLastSeenFromTraffic } = require('../../lib/HueLastSeen');
 
 Cluster.addCluster(HueSpecificBasicCluster);
 
@@ -134,6 +135,9 @@ class DualWallSwitch extends ZigBeeDevice {
   }
 
   async onEndDeviceAnnounce() {
+    // The announce itself is received device traffic; the following explicit
+    // battery read response must not be mistaken for an unsolicited report.
+    void markHueLastSeenFromTraffic(this);
     await this._refreshBattery();
   }
 
@@ -157,7 +161,10 @@ class DualWallSwitch extends ZigBeeDevice {
     }
 
     if (rawPercentage !== undefined) {
-      this._applyBatteryPercentage(rawPercentage);
+      const battery = this._applyBatteryPercentage(rawPercentage);
+      if (commandId === 0x0a && battery !== null) {
+        void markHueLastSeenFromTraffic(this);
+      }
     }
   }
 
@@ -199,6 +206,11 @@ class DualWallSwitch extends ZigBeeDevice {
     }
 
     const action = ['Press', 'Hold', 'Release', 'LongRelease'][actionValue] || 'Unknown';
+    // Preserve the legacy Unknown Flow action, but never count it as
+    // verified button traffic for Homey's observational timestamp.
+    if (actionValue <= 3) {
+      void markHueLastSeenFromTraffic(this);
+    }
     const targetName = inputNumber === 1 ? 'firstInput' : 'secondInput';
 
     if (this.deviceMode === 'singlerocker' || this.deviceMode === 'dualrocker') {
