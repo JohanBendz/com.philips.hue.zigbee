@@ -4,6 +4,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueContactCluster = require('../../lib/HueContactCluster');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
+const { markHueSensorReportObserved } = require('../../lib/HueSensorAvailability');
 
 Cluster.addCluster(HueContactCluster);
 
@@ -27,8 +28,10 @@ class ContactSensor extends ZigBeeDevice {
     this._endpoint = zclNode.endpoints[2];
     this._contactCluster = this._endpoint.clusters[HueContactCluster.NAME];
     this._powerCluster = zclNode.endpoints[2].clusters[CLUSTER.POWER_CONFIGURATION.NAME];
-    this._contactListener = this.onContactAlarmAttributeReport.bind(this);
-    this._batteryListener = this.onBatteryPercentageAttributeReport.bind(this);
+    // These listeners are invoked by ZCL onReportAttributes, never by the
+    // explicit initial read calls below. Preserve the source distinction.
+    this._contactListener = value => this.onContactAlarmAttributeReport(value, true);
+    this._batteryListener = value => this.onBatteryPercentageAttributeReport(value, true);
 
     this._contactCluster.on('attr.contact', this._contactListener);
     this._powerCluster.on('attr.batteryPercentageRemaining', this._batteryListener);
@@ -37,8 +40,8 @@ class ContactSensor extends ZigBeeDevice {
     // Keep this compatibility path, without a raw handleFrame override.
     this._previousOnOffBinding = this._endpoint.bindings[CLUSTER.ON_OFF.NAME];
     this._onOffBinding = new OnOffBoundCluster({
-      onSetOn: () => this.onContactAlarmAttributeReport('open'),
-      onSetOff: () => this.onContactAlarmAttributeReport('closed'),
+      onSetOn: () => this.onContactAlarmAttributeReport('open', true),
+      onSetOff: () => this.onContactAlarmAttributeReport('closed', true),
     });
     this._endpoint.bind(CLUSTER.ON_OFF.NAME, this._onOffBinding);
 
@@ -110,15 +113,17 @@ class ContactSensor extends ZigBeeDevice {
     }
   }
 
-  onContactAlarmAttributeReport(value) {
+  onContactAlarmAttributeReport(value, fromReport = false) {
     if (!['open', 'closed', 0, 1, false, true].includes(value)) return;
+    if (fromReport) markHueSensorReportObserved(this);
     this.log('Contact alarm attribute report received:', value);
     return this.setCapabilityValue('alarm_contact', value === 'open' || value === true || value === 1)
       .catch(err => this.error('Failed to update contact alarm:', err));
   }
 
-  onBatteryPercentageAttributeReport(value) {
-    if (!Number.isFinite(value) || value < 0 || value > 200) return;
+  onBatteryPercentageAttributeReport(value, fromReport = false) {
+    if (!Number.isFinite(value) || !Number.isInteger(value) || value < 0 || value > 200) return;
+    if (fromReport) markHueSensorReportObserved(this);
     const batteryPercentage = value / 2;
     this.log('Battery percentage attribute report received:', batteryPercentage);
     return this.setCapabilityValue('measure_battery', batteryPercentage)

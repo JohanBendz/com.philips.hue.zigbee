@@ -214,7 +214,10 @@ class MotionSensor extends ZigBeeDevice {
 	 * @param {number} offWaitTime - Time in 1/10th seconds for which the alarm should be off
 	 */
 	_onWithTimedOffCommandHandler({ onOffControl, onTime, offWaitTime }) {
-    markHueSensorAvailable(this);
+    // Only count a successfully decoded command as fresh traffic.
+    const validReport = Number.isInteger(onTime) && onTime >= 0 && onTime <= 65535 &&
+      Number.isInteger(offWaitTime) && offWaitTime >= 0 && offWaitTime <= 65535;
+    markHueSensorAvailable(this, { validReport });
 		const alarmResetTime = this.getSetting('alarm_reset_time') || 3;
 		this.setCapabilityValue('alarm_motion', true)
 		.catch(err => this.error('Error: could not set alarm_motion capability value', err));
