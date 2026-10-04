@@ -136,6 +136,29 @@ class DualWallSwitch extends ZigBeeDevice {
     await this._refreshBattery();
   }
 
+  _getInputDevice(inputNumber) {
+    if (inputNumber === 1) {
+      return this;
+    }
+
+    if (inputNumber !== 2) {
+      return null;
+    }
+
+    const rootData = this.getData();
+    const devices = Object.values(this.driver.getDevices());
+
+    return devices.find(device => {
+      const data = device.getData();
+      if (data.subDeviceId !== 'secondInput') {
+        return false;
+      }
+
+      return Object.entries(rootData)
+        .every(([key, value]) => isDeepStrictEqual(data[key], value));
+    }) || null;
+  }
+
   _buttonCommandParser(frame) {
     if (!Buffer.isBuffer(frame) || frame.length < 10) {
       return;
