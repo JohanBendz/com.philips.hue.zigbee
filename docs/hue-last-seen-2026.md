@@ -19,27 +19,18 @@ validated battery values and incoming end-device announce events.
 Existing `setAvailable()` behaviour is unchanged and is not awaited
 by the telemetry update.
 
-**Do not simply add telemetry to `markHueSensorAvailable()` yet**:
-the current SML001/SML002 occupancy handler calls that helper *before*
-verifying `occupancyStatus.occupied`, and some temperature/luminance
-handlers do not validate inputs at this boundary. Adding telemetry at
-that location would classify malformed callback data as genuine traffic.
+**Part 1 decision, addressed by part 2:** Do not blindly add telemetry
+to the sensor availability helper. Several callbacks recover availability
+before validating a payload. Part 2 introduces an explicit `validReport`
+gate while preserving that recovery behavior. SOC001 now distinguishes
+incoming reports/physical OnOff commands from explicit startup reads.
 
-**SOC001 requires a separate discriminator**: the same contact/battery
-handlers are invoked by fresh reports and initial explicit reads. A
-last-seen timestamp should not be advanced simply because a queued
-initial read was requested or a synthetic handler/test was invoked.
+## Remaining stages
 
-## Next stages
-
-1. Add tests and valid-report gating for occupancy, temperature, luminance
-   and battery before integrating last-seen into the sensor path.
-2. Give SOC001 report-originated callbacks a dedicated last-seen path;
-   do not alter its existing attribute-value handling or compatibility
-   On/Off command path.
-3. Inspect the remaining remotes separately, including #769 raw event
-   normalization. Do not use last-seen as a proxy for network rejoin
-   or for scheduled read responses.
+1. Inspect the remaining remotes independently, including #769 raw event
+   normalization, before expanding last-seen to additional families.
+2. Verify all sensor families physically in a later 2.4 Test build. Never
+   use last-seen as a proxy for network rejoin or scheduled read responses.
 
 Scope here is `develop-2.4`. Published 2.3.0 Test, 2.2.1 Live,
 rollback and OTA are untouched.
