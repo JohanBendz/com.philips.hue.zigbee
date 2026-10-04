@@ -81,12 +81,13 @@ test('ROM002: hold deduplication, release and both saved Flow action IDs', async
 
 for (const id of ['RDM001', 'RDM002', 'RWL022']) {
   test(`${id}: SDK parses genuine battery reports exactly once and ignores unknown values`, async () => {
-    const { device, cluster, updates, registration } = batteryFixture(id);
+    const fixture = batteryFixture(id);
+    const { device, cluster, updates } = fixture;
     let available = 0;
     device.setAvailable = async () => { available += 1; };
     await device.onNodeInit({ zclNode: device.zclNode });
-    assert.equal(registration.opts.getOpts.getOnStart, false);
-    assert.equal(registration.opts.getOpts.getOnOnline, false);
+    assert.equal(fixture.registration.opts.getOpts.getOnStart, false);
+    assert.equal(fixture.registration.opts.getOpts.getOnOnline, false);
 
     for (const raw of [0, 100, 200, 255, -1, 201, NaN, 0.5]) {
       cluster.emit('attr.batteryPercentageRemaining', raw);
