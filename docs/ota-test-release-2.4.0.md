@@ -1,6 +1,6 @@
 # OTA handoff for 2.4.0 Test
 
-Prepared **2026-10-04** (Europe/Stockholm) for [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758), [OTA tracking #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
+Prepared **2026-10-04**, refreshed **2026-10-05** (Europe/Stockholm) for [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758), [OTA tracking #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
 The selected destination is **2.4.0 on Homey Test**, together with the `develop-2.4` release. Preparation and validation are performed on `ota-2026`. PR #758 is the integration path into `develop-2.4`; publication belongs to the maintainer's scheduled Test release. This work does not publish a build or modify the active 2.3.0 Test release.
 
@@ -10,7 +10,7 @@ Physical OTA results are collected **during Test**. Their absence is not a softw
 
 | Item | Prepared scope |
 | --- | --- |
-| Development baseline | `develop-2.4` at `5c4dd47964900fd3208b79d875bb12da0039938f` |
+| Development baseline | `develop-2.4` at `349e3423396b57e6f0cd1e6933624115161d40b2` |
 | App / package / lockfile version | `2.4.0` |
 | App runtime minimum | Homey `>=12.9.0`, Node.js `>=22` |
 | Native OTA requirements | Supported Homey platform on `13.2.0+`; Homey Mobile App `9.10.0+` |
@@ -20,24 +20,24 @@ Physical OTA results are collected **during Test**. Their absence is not a softw
 | Model guards | All 67 enabled IDs have explicit source-linked family checks |
 | Release files | `.homeychangelog.json` 2.4.0 entry, `CHANGELOG.md`, `README.md` and `README.txt` |
 
-The Develop refresh brings the Power-on and remote-protocol contract tests plus validated Tap Dial/RWL022 last-seen handling. It does not include the separate Power-on runtime migration in PR #792. Firmware binaries, update declarations and approved model families are unchanged by this release preparation.
+The Develop refresh includes the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, update declarations and approved model families are unchanged by this release preparation.
 
 See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [model evidence register](ota-model-evidence.md). A driver's retail name is not a firmware-family identifier. Of the enabled mappings, 64 have an explicit maintained model-table entry, API fixture/capture, OTA request or owner report. LTO001, LTW015 and LWA029 currently have curated-database evidence only and need independent device observations during Test.
 
 ## Prepared candidate verification
 
-Local verification used a clean dependency install, Node.js **24.19.0** and Homey CLI **4.5.0**. Publish validation passed and **180 tests passed / 0 failed**. The repository's PR CI separately runs on Node.js 22; its exact commit and result are recorded in PR #758 and the dashboard.
+Local verification used a clean dependency install, Node.js **24.19.0** and Homey CLI **4.5.0**. Publish validation passed and **215 tests passed / 0 failed**. The repository's PR CI separately runs on Node.js 22; its exact commit and result are recorded in PR #758 and the dashboard. All 67 evidence-register rows, every driver/model coverage row, the hardware-plan versions and local Markdown file links were checked against the repository.
 
-The fresh catalogue audit resolved to the reviewed `9f46fc5` source with **zero active-family changes**. All app/package/lockfile versions and the release-note key agree on **2.4.0**. The final generated manifest and local CLI archive contain all **47 OTA declarations** and **141 firmware files**, with every firmware checksum matching the source tree. Development directories are excluded.
+The fresh catalogue audit resolved upstream to `62c7798c8d8a4712733c6cc668ea491a2637f329` and found **zero active-family changes** against the fixed reviewed reference `9f46fc5`. All app/package/lockfile versions and the release-note key agree on **2.4.0**. The final generated manifest and local CLI archive contain all **47 OTA declarations** and **141 firmware files**, with every firmware checksum matching the source tree. Development directories are excluded. Product README and release notes describe functionality; Test/publication status is kept in this handoff and the dashboard.
 
 | Local CLI archive measurement | Result |
 | --- | ---: |
-| Files | 869 |
-| File bytes before compression | 60,984,233 |
-| Compressed bytes | 58,841,311 |
+| Files | 870 |
+| File bytes before compression | 60,988,593 |
+| Compressed bytes | 58,842,961 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 
-Archive SHA-256: `f3b514dca4afa4aff0c2c69b4b663efa59181f547dde44d83b3811ed6931b8d1`. This identifies the local verification archive, not a published build. Rebuild and record the final release commit at the Test cut.
+Archive SHA-256: `8f8548af4f5c8d375973956252c7f787df064a768baf187f30374fcf969391e1`. This identifies the local verification archive, not a published build. Rebuild and record the final release commit at the Test cut. The earlier `80ab1a3` snapshot passed 180 tests; its older archive measurements are superseded by this Develop refresh.
 
 ## Software checks before integration and publication
 
@@ -71,6 +71,7 @@ Follow the [hardware test plan](ota-test-plan.md), including its per-device resu
 - Modern mains-powered devices: LCA001 and exact LOM001/LOM006/LOM007 plug models; include an old starting version that exercises an intermediate chain.
 - Legacy path: LCT003 with its SBL images.
 - Battery path: RWL022, RDM001 and SML001, including wake instructions, normal button/sensor behaviour and battery reporting.
+- With the #771 baseline, verify battery reports and wake-up reads on RDM001/RDM002/RWL022, including both RDM001 inputs and existing subdevices/Flows. Check last-seen from real traffic after OTA.
 - For every transferred image, record the starting/resulting version, progress/result, rejoin, retained paired identity/settings, existing Flows and behaviour after app restart. An already-current device verifies the no-update path only.
 - Collect independent model/platform observations for LTO001, LTW015 and LWA029. Record exact LLC010/LCL001 variants without enabling additional families from a model name alone.
 

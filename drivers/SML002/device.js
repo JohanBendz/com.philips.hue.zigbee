@@ -3,7 +3,11 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
-const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
+const {
+  markHueSensorAvailable,
+  isValidHueTemperatureReport,
+  isValidHueLuminanceReport,
+} = require('../../lib/HueSensorAvailability');
 
 class OutDoorSensor extends ZigBeeDevice {
 
@@ -47,7 +51,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				// Only register listeners if not already registered
 				if (!this._listenersRegistered) {
 					this._boundTemperatureListener = (currentTempValue) => {
-            markHueSensorAvailable(this);
+            markHueSensorAvailable(this, { validReport: isValidHueTemperatureReport(currentTempValue) });
 						const temperatureOffset = this.getSetting('temperature_offset') || 0;
 						const temperature = Math.round((currentTempValue / 100) * 10) / 10;
 						this.log('Temperature: ', temperature, ', Offset: ', temperatureOffset);
@@ -77,7 +81,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				// Only register listeners if not already registered
 				if (!this._listenersRegistered) {
 					this._boundLuminanceListener = (currentLuxValue) => {
-            markHueSensorAvailable(this);
+            markHueSensorAvailable(this, { validReport: isValidHueLuminanceReport(currentLuxValue) });
 						const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
 						this.log('Lux: ', luminance);
 						this.setCapabilityValue('measure_luminance', luminance).catch(this.error);
@@ -97,7 +101,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				// measure_temperature
 				if (this.hasCapability('measure_temperature')) {
 					this._boundTemperatureListener = (currentTempValue) => {
-            markHueSensorAvailable(this);
+            markHueSensorAvailable(this, { validReport: isValidHueTemperatureReport(currentTempValue) });
 						const temperatureOffset = this.getSetting('temperature_offset') || 0;
 						const temperature = Math.round((currentTempValue / 100) * 10) / 10;
 						this.log('temp: ', temperature);
@@ -110,7 +114,7 @@ class OutDoorSensor extends ZigBeeDevice {
 				// measure_luminance
 				if (this.hasCapability('measure_luminance')) {
 					this._boundLuminanceListener = (currentLuxValue) => {
-            markHueSensorAvailable(this);
+            markHueSensorAvailable(this, { validReport: isValidHueLuminanceReport(currentLuxValue) });
 						const luminance = Math.round(Math.pow(10, (currentLuxValue - 1) / 10000));
 						this.log('lux: ', luminance);
 						this.setCapabilityValue('measure_luminance', luminance).catch(this.error);
@@ -223,7 +227,10 @@ class OutDoorSensor extends ZigBeeDevice {
 	 * @param {number} offWaitTime - Time in 1/10th seconds for which the alarm should be off
 	 */
 	_onWithTimedOffCommandHandler({ onOffControl, onTime, offWaitTime }) {
-    markHueSensorAvailable(this);
+    // Only count a successfully decoded command as fresh traffic.
+    const validReport = Number.isInteger(onTime) && onTime >= 0 && onTime <= 65535 &&
+      Number.isInteger(offWaitTime) && offWaitTime >= 0 && offWaitTime <= 65535;
+    markHueSensorAvailable(this, { validReport });
 		const alarmResetTime = this.getSetting('alarm_reset_time') || 3;
 		this.setCapabilityValue('alarm_motion', true)
 		.catch(err => this.error('Error: could not set alarm_motion capability value', err));

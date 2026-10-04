@@ -168,6 +168,6 @@
     "en": "Test release with improved Hue remote and occupancy handling plus support for additional devices including OmniGlow, Flux, LWA033, LTU001, LWF004 and experimental LWM007 wired dimmer support."
   },
   "2.4.0": {
-    "en": "Adds firmware updates through Homey for selected Hue lights and accessories, plus Zigbee identity and remote last-seen improvements. Requires Homey 12.9.0 or newer; firmware updates require a supported Homey platform on 13.2.0 or newer."
+    "en": "Adds firmware updates through Homey for selected Hue lights and accessories, plus Zigbee identity, battery reporting and last-seen improvements. Requires Homey 12.9.0 or newer; firmware updates require a supported Homey platform on 13.2.0 or newer."
   }
 }

@@ -2,7 +2,7 @@
 
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
-OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-04 refresh includes Develop [`5c4dd47`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/5c4dd47964900fd3208b79d875bb12da0039938f), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is prepared to join the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
+OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-05 refresh includes Develop [`349e342`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/349e3423396b57e6f0cd1e6933624115161d40b2), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is prepared to join the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
 
 See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for coverage limits and the direct Hue-server cross-check. The release handoff supersedes that review's open version/channel preparation items. Catalogue consistency does not mean full Hue coverage.
 
@@ -59,20 +59,20 @@ npm run --silent ota:audit -- --json
 
 Catalogue-only image families are reported separately as information. Their presence does not establish which Homey product IDs use them and does not enable OTA. This command does not inspect newly published binary headers or test device updates. Any import still requires source and mapping evidence, binary verification, a deliberate reference update, regression tests and Homey publish validation. There is no scheduled updater or automatic pull request creation.
 
-The audit on 2026-10-02 resolved to the reviewed `9f46fc5` revision: **0 active-family changes**, **69 upstream Hue images** and **17 catalogue-only image families**. The existing 67 mapped product IDs and 313 unmapped IDs were unchanged.
+The original audit on 2026-10-02, before the Develop integration, resolved to the reviewed `9f46fc5` revision: **0 active-family changes**, **69 upstream Hue images** and **17 catalogue-only image families**. At that baseline, 67 product IDs were mapped and 313 were unmapped. The current baseline has 398 supported IDs and 331 unmapped IDs. The 2026-10-05 check against upstream `62c7798c8d8a4712733c6cc668ea491a2637f329` again reports **zero active-family changes**; the fixed reviewed reference remains `9f46fc5`.
 
-## Packaging verification — 2026-10-04
+## Packaging verification — 2026-10-05
 
-Homey CLI **4.5.0** built the prepared 2.4.0 Test candidate with Develop `5c4dd47` included. The generated manifest and archive preserve all OTA declarations and battery wake instructions, and every packaged firmware file matches its source checksum. All 180 local tests and publish validation passed. This did not upload or install the app; see the [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) for the archive checksum and final-release procedure.
+Homey CLI **4.5.0** built the prepared 2.4.0 Test candidate with Develop `349e342` included. The generated manifest and archive preserve all OTA declarations and battery wake instructions, and every packaged firmware file matches its source checksum. All 215 local tests and publish validation passed. This did not upload or install the app; see the [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) for the archive checksum and final-release procedure.
 
 | Measurement | Result |
 | --- | ---: |
 | Firmware files in the source/build | 141 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 | Unique firmware image bytes | 13,141,920 |
-| Build file count | 869 |
-| Build file bytes, including firmware and dependencies | 60,984,233 |
-| Compressed CLI upload archive bytes | 58,841,311 |
+| Build file count | 870 |
+| Build file bytes, including firmware and dependencies | 60,988,593 |
+| Compressed CLI upload archive bytes | 58,842,961 |
 
 The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files must remain in their driver asset directories for validation and upload; per-driver copies are part of Homey's declared layout.
 

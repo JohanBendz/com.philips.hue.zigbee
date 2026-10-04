@@ -6,7 +6,7 @@ For current development work, see the open issues and pull requests in this repo
 
 ### v2.4.0
 
-Prepared for the next Test release, including the OTA workstream. Not yet published.
+Native Hue firmware updates and Zigbee reliability improvements.
 
 #### Firmware updates
 
@@ -14,13 +14,14 @@ Prepared for the next Test release, including the OTA workstream. Not yet publis
 - Preserved required intermediate firmware images and version limits. Updates use the device's exact identity and reported firmware family; other aliases in the same driver do not inherit support.
 - Added wake instructions for supported battery devices, a source-linked model register, firmware integrity checks and a manual upstream catalogue audit.
 - Firmware updates require a supported Homey platform running 13.2.0 or newer and Homey Mobile App 9.10.0 or newer. Support does not cover every Hue device or every hardware revision.
-- Physical transfer, rejoin and retained settings are evaluated during Test. See the [2.4.0 OTA Test handoff](docs/ota-test-release-2.4.0.md) for the frozen scope, known evidence gaps and result plan.
+- See the [coverage and evidence register](docs/ota-model-evidence.md) for exact model scope and known hardware-variant limitations.
 
 #### Development baseline
 
 - Aligned the app's Homey minimum with its Node.js 22 dependencies: Homey 12.9.0 or newer.
 - Updated Basic device-identity handling and removed invalid BoundCluster registrations without adding fleet-wide Zigbee reconfiguration.
-- Added throttled Homey last-seen updates for validated incoming Tap Dial and RWL022 traffic.
+- Added throttled Homey last-seen updates for validated incoming Hue remote, sensor and contact traffic, keeping explicit read responses separate from unsolicited reports.
+- Simplified RDM001, RDM002 and RWL022 battery handling through the SDK, preserving wake-up reads, strict invalid-value checks and two-input routing.
 - Added Power-on and remote-protocol contract checks. The separate Power-on runtime migration remains outside this release scope until explicitly integrated.
 
 ### v2.3.0

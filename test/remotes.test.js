@@ -3,6 +3,8 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { loadDriver, remote, buttonFrame } = require('./helpers');
+const { batteryFixture } = require('./remote-battery-fixture');
+const tick = () => new Promise(resolve => setImmediate(resolve));
 
 for (const id of ['RDM001', 'RDM002', 'RWL022', 'ROM002']) {
   test(`${id}: ZCL pass-through preserves receiver, arguments and cleanup`, async () => {
@@ -78,22 +80,30 @@ test('ROM002: hold deduplication, release and both saved Flow action IDs', async
 });
 
 for (const id of ['RDM001', 'RDM002', 'RWL022']) {
-  test(`${id}: battery read response, report, errors and short buffers`, () => {
-    const { device } = remote(id);
-    // Synthetic standard ZCL read response and attribute report (not hardware captures).
-    device._powerParser(Buffer.from([0x18, 1, 1, 0x21, 0, 0, 0x20, 150]));
-    assert.equal(device.values.measure_battery, 75);
-    device._powerParser(Buffer.from([0x18, 2, 0x0a, 0x21, 0, 0x20, 100]));
-    assert.equal(device.values.measure_battery, 50);
-    device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
-    assert.equal(device.values.measure_battery, 50);
-    for (const frame of [null, Buffer.alloc(3), Buffer.from([0x18, 1, 1, 0x21, 0, 0x86, 0x20, 0])]) {
-      device._powerParser(frame);
+  test(`${id}: SDK parses genuine battery reports exactly once and ignores unknown values`, async () => {
+    const fixture = batteryFixture(id);
+    const { device, cluster, updates } = fixture;
+    let available = 0;
+    device.setAvailable = async () => { available += 1; };
+    await device.onNodeInit({ zclNode: device.zclNode });
+    assert.equal(fixture.registration.opts.getOpts.getOnStart, false);
+    assert.equal(fixture.registration.opts.getOpts.getOnOnline, false);
+
+    for (const raw of [0, 100, 200, 255, -1, 201, NaN, 0.5]) {
+      cluster.emit('attr.batteryPercentageRemaining', raw);
+      await tick();
     }
-    assert.equal(device.values.measure_battery, 50);
+    assert.deepEqual(updates.map(x => x.value), [0, 50, 100],
+      'SDK is the only writer; invalid values must not overwrite battery');
+    assert.equal(device.values.measure_battery, 100);
+    if (id !== 'RDM001') {
+      assert.equal(available, 3, 'only accepted report traffic restores availability');
+    } else {
+      assert.equal(available, 0, 'RDM001 does not acquire new availability behavior');
+    }
+    await device.onUninit();
   });
 }
-
 
 test('RWL022: all four buttons and four actions map to stable Flow action IDs', async () => {
   const { device, calls } = remote('RWL022');
@@ -115,20 +125,19 @@ test('RWL022: all four buttons and four actions map to stable Flow action IDs', 
 });
 
 for (const id of ['RDM001', 'RDM002']) {
-  test(`${id}: wake refreshes battery and preserves last valid value`, async () => {
-    const { device } = remote(id);
+  test(`${id}: announce retains one SDK-mapped wake read and last valid battery value`, async () => {
+    const f = batteryFixture(id);
+    const { device, reads, updates } = f;
     await device.onNodeInit({ zclNode: device.zclNode });
-
-    device.zclNode.endpoints[1].clusters.powerConfiguration = {
-      readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
-    };
     await device.onEndDeviceAnnounce();
+    assert.deepEqual(reads, [['batteryPercentageRemaining']]);
     assert.equal(device.values.measure_battery, 80);
-
-    device.zclNode.endpoints[1].clusters.powerConfiguration.readAttributes =
-      async () => ({ batteryPercentageRemaining: 255 });
+    f.setReadValue(255);
     await device.onEndDeviceAnnounce();
+    assert.deepEqual(reads, [['batteryPercentageRemaining'], ['batteryPercentageRemaining']]);
     assert.equal(device.values.measure_battery, 80);
+    assert.deepEqual(updates.map(x => x.value), [80]);
+    await device.onUninit();
   });
 }
 
@@ -179,26 +188,30 @@ test('RWL000: legacy devices migrate measure_battery and refresh on wake', async
 });
 
 
-test('RWL022: announce refreshes battery after reporting is configured', async () => {
-  const { device } = remote('RWL022');
+test('RWL022: original reporting setup and SDK battery wake refresh remain intact', async () => {
+  const f = batteryFixture('RWL022');
+  const { device, reads, updates } = f;
   await device.onNodeInit({ zclNode: device.zclNode });
-
-  device.configureAttributeReporting = async () => {};
-  device.zclNode.endpoints[1].clusters.powerConfiguration = {
-    readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
-  };
-
+  const configs = [];
+  device.configureAttributeReporting = async values => { configs.push(values); };
   await device.onEndDeviceAnnounce();
   assert.equal(device.values.measure_battery, 80);
   assert.equal(device._batteryReportingConfigured, true);
+  assert.equal(configs.length, 1);
+  assert.equal(configs[0][0].minInterval, 0);
+  assert.equal(configs[0][0].maxInterval, 21600);
+  assert.equal(configs[0][0].minChange, 1);
 
-  device.zclNode.endpoints[1].clusters.powerConfiguration.readAttributes =
-    async () => ({ batteryPercentageRemaining: 120 });
+  f.setReadValue(120);
   await device.onEndDeviceAnnounce();
   assert.equal(device.values.measure_battery, 60);
-
-  device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
+  assert.equal(configs.length, 1, 'do not reconfigure on every announce');
+  assert.equal(reads.length, 2);
+  f.cluster.emit('attr.batteryPercentageRemaining', 255);
+  await tick();
   assert.equal(device.values.measure_battery, 60);
+  assert.deepEqual(updates.map(x => x.value), [80, 60]);
+  await device.onUninit();
 });
 
 test('RDM001: pushbutton mode exposes press, hold and release-after-hold actions', async () => {
@@ -217,37 +230,32 @@ test('RDM001: pushbutton mode exposes press, hold and release-after-hold actions
 });
 
 for (const id of ['RWL022', 'RDM002']) {
-  test(`${id}: real button and battery traffic restores availability, invalid frames do not`, async () => {
-    const { device } = remote(id);
+  test(`${id}: button and valid battery report traffic restores availability, invalid data does not`, async () => {
+    const { device, cluster } = batteryFixture(id);
     let availableCalls = 0;
     device.setAvailable = async () => { availableCalls += 1; };
     await device.onNodeInit({ zclNode: device.zclNode });
 
     await device._buttonCommandParser(buttonFrame(1, 0));
     assert.equal(availableCalls, 1);
-
-    device._powerParser(Buffer.from([0x18, 2, 0x0a, 0x21, 0, 0x20, 100]));
+    cluster.emit('attr.batteryPercentageRemaining', 100);
     assert.equal(availableCalls, 2);
-
-    device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 255]));
-    device._powerParser(Buffer.alloc(3));
+    cluster.emit('attr.batteryPercentageRemaining', 255);
+    cluster.emit('attr.batteryPercentageRemaining', -1);
     await device._buttonCommandParser(Buffer.alloc(5));
     assert.equal(availableCalls, 2);
+    await device.onUninit();
   });
 
-  test(`${id}: end-device announce restores availability without claiming network repair`, async () => {
-    const { device } = remote(id);
+  test(`${id}: announce restores availability without claiming network repair`, async () => {
+    const { device } = batteryFixture(id);
     let availableCalls = 0;
     device.setAvailable = async () => { availableCalls += 1; };
     await device.onNodeInit({ zclNode: device.zclNode });
-
-    device.zclNode.endpoints[1].clusters.powerConfiguration = {
-      readAttributes: async () => ({ batteryPercentageRemaining: 160 }),
-    };
     device.configureAttributeReporting = async () => {};
-
     await device.onEndDeviceAnnounce();
     assert.equal(availableCalls, 1);
+    await device.onUninit();
   });
 }
 

@@ -1,6 +1,6 @@
 # Philips Hue Zigbee OTA hardware test plan
 
-Prepared **2026-10-02** for `ota-2026`, tracked in [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
+Prepared **2026-10-02**, refreshed **2026-10-05** for `ota-2026`, tracked in [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
 **Status: prepared for the planned 2.4.0 Homey Test release. No physical end-to-end OTA result has been recorded.** Transfer, restart and device-operation results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
 
@@ -60,6 +60,8 @@ Begin after a mains-powered transfer succeeds on the same Homey setup. Test the 
 | SML001-occupancy or legacy SML001 | SML001 | `0x010D` | `0x43007401` | Brief setup-button press every few seconds; do not hold it |
 
 Record whether the instruction allows the update to start and finish, any timeout/retry, total time and rejoin. After OTA, check all existing button/switch Flow actions or sensor motion, temperature and luminance reports as applicable, advanced settings and battery reporting. For a sensor with multiple Homey devices, check the existing related devices too.
+
+The current Develop baseline includes the SDK battery simplification for RDM001, RDM002 and RWL022. Verify battery updates from both real reports and the preserved wake-up reads after OTA. On a two-input RDM001, verify both existing Homey subdevices and their Flows. Check that last-seen advances on real incoming traffic without treating an explicit battery read response as a separate report. These checks are part of Test feedback for the combined release.
 
 The RDM004, SML003/SML004 and other battery model mappings need their own result rows when hardware is available. Success on an older revision does not verify those newer revisions.
 

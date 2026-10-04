@@ -1,12 +1,12 @@
 # OTA readiness review — 2026-10-03
 
-**2026-10-04 follow-up:** The selected destination is now the planned **2.4.0 Homey Test** release with `develop-2.4`. Develop at `5c4dd47` is included in the OTA preparation, release notes are prepared, and physical results will be collected during Test. See the [current release handoff](ota-test-release-2.4.0.md); it supersedes the release-selection items in this dated review. Coverage and evidence limitations below remain applicable.
+**2026-10-05 follow-up:** OTA is prepared for the planned **2.4.0 Homey Test** release with `develop-2.4`, including Develop at `349e342`. See the [current release handoff](ota-test-release-2.4.0.md) for current validation and packaging evidence. It supersedes the baseline, test-count and release-selection status in this dated review. The original source/API observations and coverage/evidence limitations below remain applicable; physical results are collected during Test.
 
 Initial reviewed code: [`3c79e72`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/3c79e7225d7376c1ea4922bf8824b74a5fe622c9) on `ota-2026`. Date uses Europe/Stockholm. Updated on the same date for the integration of [`develop-2.4` at `29d9db0`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/29d9db03a2a2699c1bead2ee238f2afe27c3eac5). Work remains on `ota-2026`, with PR #758 targeting `develop-2.4`.
 
 The new development baseline supplies version **2.4.0**, Homey compatibility **`>=12.9.0`**, and consistent package/lockfile versions. It adds four drivers and 18 product IDs; OTA manifests, firmware binaries and the reviewed catalogue are unchanged. The coverage inventory below reflects the integrated baseline; the source/API observations retain their original audit scope.
 
-**Verdict: native OTA declarations and catalogue maintenance are implemented for a selected set of devices. Coverage is incomplete, release preparation has open items, and physical transfer/rejoin results are still pending.**
+**Verdict at the initial review:** native OTA declarations and catalogue maintenance were implemented for a selected set of devices. Coverage was incomplete, release preparation had open items, and physical transfer/rejoin results were pending. Current release readiness is recorded in the handoff linked above.
 
 ## Verified state
 
