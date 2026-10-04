@@ -5,6 +5,7 @@ const { Cluster, CLUSTER } = require('zigbee-clusters');
 
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
 const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
+const { parseHueRemoteBattery, observeHueRemoteBatteryReports } = require('../../lib/HueRemoteBattery');
 Cluster.addCluster(HueSpecificBasicCluster);
 
 class DimmerSwitchGen3 extends ZigBeeDevice {
@@ -14,12 +15,16 @@ async onNodeInit({ zclNode }) {
       await this.addCapability('measure_battery');
     }
     this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+      reportParser: parseHueRemoteBattery,
       getOpts: {
         getOnStart: false,
         getOnOnline: false,
       },
     });
     this._batteryReportingConfigured = false;
+    this._removeBatteryReportObserver = observeHueRemoteBatteryReports(
+      this, zclNode.endpoints[1].clusters.powerConfiguration, { recoverAvailability: true },
+    );
 
     this._node = await this.homey.zigbee.getNode(this);
     this._previousHandleFrame = this._node.handleFrame;
@@ -33,9 +38,7 @@ async onNodeInit({ zclNode }) {
       if (clusterId === 64512) {
         return this._buttonCommandParser(frame);
       }
-      if (clusterId === 1) {
-        this._powerParser(frame);
-      }
+      
     };
     this._node.handleFrame = this._rawHandleFrame;
 
@@ -50,22 +53,10 @@ async onNodeInit({ zclNode }) {
     }
   }
 
-  _applyBatteryPercentage(rawPercentage) {
-    if (typeof rawPercentage !== 'number' || rawPercentage < 0 || rawPercentage > 200 || rawPercentage === 255) {
-      return null;
-    }
-
-    const percentage = Math.round(rawPercentage / 2);
-    this.setCapabilityValue('measure_battery', percentage)
-      .catch(err => this.error('Failed to update battery level:', err));
-    return percentage;
-  }
-
   async _refreshBattery() {
     try {
-      const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
-        .readAttributes(['batteryPercentageRemaining']);
-      return this._applyBatteryPercentage(result.batteryPercentageRemaining);
+      // One SDK parsing/capability path for both wake reads and reports.
+      return await this.getClusterCapabilityValue('measure_battery', CLUSTER.POWER_CONFIGURATION);
     } catch (error) {
       this.log('Could not refresh Gen 3 dimmer battery state:', error);
       return null;
@@ -97,30 +88,6 @@ async onNodeInit({ zclNode }) {
     await this._refreshBattery();
   }
 
-  _powerParser(frame) {
-    if (!Buffer.isBuffer(frame) || frame.length < 7) {
-      return;
-    }
-
-    const commandId = frame.readUInt8(2);
-    const attributeId = frame.readUInt16LE(3);
-
-    if (attributeId !== 0x0021) {
-      return;
-    }
-
-    let rawPercentage;
-    if (commandId === 0x01 && frame.length >= 8 && frame.readUInt8(5) === 0x00 && frame.readUInt8(6) === 0x20) {
-      rawPercentage = frame.readUInt8(7);
-    } else if (commandId === 0x0a && frame.readUInt8(5) === 0x20) {
-      rawPercentage = frame.readUInt8(6);
-    }
-
-    if (rawPercentage !== undefined && this._applyBatteryPercentage(rawPercentage) !== null) {
-      markHueRemoteAvailable(this);
-    }
-  }
-
   _buttonCommandParser(payload) {
     if (!Buffer.isBuffer(payload) || payload.length < 10) {
       return;
@@ -135,6 +102,7 @@ async onNodeInit({ zclNode }) {
   }
 
   async onUninit() {
+    this._removeBatteryReportObserver?.();
     if (this._node && this._rawHandleFrame && this._node.handleFrame === this._rawHandleFrame) {
       this._node.handleFrame = this._previousHandleFrame;
     }

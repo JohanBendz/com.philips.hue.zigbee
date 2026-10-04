@@ -3,6 +3,7 @@
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const { loadDriver, remote, buttonFrame } = require('./helpers');
+const { batteryFixture } = require('./remote-battery-fixture');
 
 const tick = () => new Promise(resolve => setImmediate(resolve));
 function watch(device) {
@@ -34,40 +35,39 @@ test('RDM001: only recognized button input/action advances last-seen without alt
   assert.deepEqual(calls.slice(-2).map(c => c.state.action), ['Press', 'Hold']);
 });
 
-test('RDM001: unsolicited valid battery reports count, explicit read responses and invalid batteries do not', async () => {
-  const { device } = remote('RDM001');
+test('RDM001: valid report counts, explicit battery refresh and invalid report do not', async () => {
+  const fixture = batteryFixture('RDM001');
+  const { device, cluster } = fixture;
   const t = watch(device);
   await device.onNodeInit({ zclNode: device.zclNode });
-  // ZCL read response with accepted value still updates the existing battery
-  // capability, but is not independent unsolicited last-seen evidence.
-  device._powerParser(Buffer.from([0x18, 1, 0x01, 0x21, 0, 0x00, 0x20, 160]));
-  device._powerParser(Buffer.from([0x18, 2, 0x0a, 0x21, 0, 0x20, 255]));
-  device._powerParser(Buffer.alloc(3));
+  // Same SDK capability path as production: a deliberate battery refresh
+  // updates the capability but emits no attr report, hence no last-seen.
+  await device._refreshBattery();
+  cluster.emit('attr.batteryPercentageRemaining', 255);
   await tick();
   assert.equal(device.values.measure_battery, 80);
   assert.equal(t.seen(), 0);
 
-  device._powerParser(Buffer.from([0x18, 3, 0x0a, 0x21, 0, 0x20, 150]));
+  cluster.emit('attr.batteryPercentageRemaining', 150);
   await tick();
   assert.equal(t.seen(), 1);
   assert.equal(device.values.measure_battery, 75);
   assert.equal(t.availability(), 0);
+  await device.onUninit();
 });
 
-test('RDM001: actual announce counts once, while an ensuing battery read does not create a second observation', async () => {
-  const { device } = remote('RDM001');
+test('RDM001: announce counts once; ensuing battery read cannot create a second observation', async () => {
+  const fixture = batteryFixture('RDM001');
+  const { device, reads } = fixture;
   const t = watch(device);
   await device.onNodeInit({ zclNode: device.zclNode });
-  let reads = 0;
-  device.zclNode.endpoints[1].clusters.powerConfiguration = {
-    readAttributes: async () => { reads += 1; return { batteryPercentageRemaining: 160 }; },
-  };
   await device.onEndDeviceAnnounce();
   await tick();
-  assert.equal(reads, 1, 'retain original on-announce battery refresh');
+  assert.equal(reads.length, 1, 'retain original on-announce battery refresh');
   assert.equal(t.seen(), 1);
   assert.equal(t.availability(), 0);
   assert.equal(device.values.measure_battery, 80);
+  await device.onUninit();
 });
 
 test('ROM002: only supported, resolvable button actions count; hold de-duplication and Flow IDs survive', async () => {

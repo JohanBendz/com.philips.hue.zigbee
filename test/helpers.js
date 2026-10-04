@@ -64,6 +64,7 @@ function remote(id, data = { id: 'node-a' }) {
     },
     zclNode: { endpoints: { 1: { clusters: {
       basic: { writeAttributes: async () => {} },
+      powerConfiguration: new EventEmitter(),
     } } } },
     registerCapability() {},
     isFirstInit: () => false,
