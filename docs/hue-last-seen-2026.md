@@ -76,8 +76,10 @@ before concluding the entire #770 acceptance list has been satisfied.
   the battery capability from 0x01 read responses, but never treat those
   responses as independent last-seen evidence. Legacy Unknown Flow actions,
   mode-writing, two-input routing and availability behavior are preserved.
-- ROM002: count accepted physical button actions after resolving the input,
-  retaining existing hold de-duplication, subdevice routing and Flow aliases.
+- ROM002: count recognized physical input/action frames, including duplicate
+  Hold traffic suppressed from Flow, while retaining subdevice routing and
+  Flow aliases. A missing Homey subdevice does not invalidate contact with
+  the root Zigbee device.
 - ROM001: count decoded OnOff/LevelControl bound actions without changing
   historical multi-trigger pressed/hold events or adding availability writes.
 - LGT002 Twilight: count recognized root-device dot/Hue button actions only,

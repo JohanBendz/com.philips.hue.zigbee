@@ -99,6 +99,10 @@ class HueWallSwitchModule extends ZigBeeDevice {
       return;
     }
 
+    // Every recognized physical frame is evidence of contact, including
+    // repeat Hold commands suppressed from Flow by the existing de-duplicator.
+    void markHueLastSeenFromTraffic(this);
+
     if (action === 'Hold') {
       if (this._heldInputs.has(inputNumber)) {
         return;
@@ -114,9 +118,6 @@ class HueWallSwitchModule extends ZigBeeDevice {
       return;
     }
 
-    // Only accepted physical inputs/actions update the timestamp. Preserve
-    // held-input suppression and existing availability/Flow behavior.
-    void markHueLastSeenFromTraffic(this);
     return this._triggerDevice.trigger(targetDevice, {}, { action })
       .then(() => this.log(`triggered ROM002_button, input=${inputNumber}, action=${action}`))
       .catch(err => this.error(`ROM002: error triggering ${action}`, err));
