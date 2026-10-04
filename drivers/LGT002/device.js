@@ -1,6 +1,7 @@
 'use strict';
 
 const Light = require('../Light.js');
+const { markHueLastSeenFromTraffic } = require('../../lib/HueLastSeen');
 
 // Philips maps Twilight as:
 //   endpoint 12 = front light
@@ -62,6 +63,8 @@ class HueTwilightDevice extends Light {
     }
 
     const event = `${button}-${action}`;
+    // Count the recognized physical button event only on the Twilight root.
+    void markHueLastSeenFromTraffic(this);
     return this._twilightTriggerDevice.trigger(this, {}, { action: event })
       .then(() => this.log(`triggered LGT002_buttons, action=${event}`))
       .catch(err => this.error('Error triggering LGT002_buttons', err));

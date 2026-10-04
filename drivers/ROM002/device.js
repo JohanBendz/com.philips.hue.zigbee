@@ -4,6 +4,7 @@ const { isDeepStrictEqual } = require('node:util');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const { markHueLastSeenFromTraffic } = require('../../lib/HueLastSeen');
 
 Cluster.addCluster(HueSpecificBasicCluster);
 
@@ -113,6 +114,9 @@ class HueWallSwitchModule extends ZigBeeDevice {
       return;
     }
 
+    // Only accepted physical inputs/actions update the timestamp. Preserve
+    // held-input suppression and existing availability/Flow behavior.
+    void markHueLastSeenFromTraffic(this);
     return this._triggerDevice.trigger(targetDevice, {}, { action })
       .then(() => this.log(`triggered ROM002_button, input=${inputNumber}, action=${action}`))
       .catch(err => this.error(`ROM002: error triggering ${action}`, err));

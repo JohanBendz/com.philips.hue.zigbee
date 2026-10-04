@@ -65,3 +65,26 @@ read suppression, and the existing contact/legacy motion behavior.
 
 Remaining: inspect other remotes and battery device families independently
 before concluding the entire #770 acceptance list has been satisfied.
+
+## Third pass: remaining remote-button families (2026-10-04)
+
+- RWL000 **already** uses `markHueRemoteAvailable()` for standard
+  endpoint-bound OnOff/LevelControl callbacks. As of #794, it shares the
+  same per-device 60-second last-seen throttle. No duplicate implementation.
+- RDM001: count accepted button input/action values, validated unsolicited
+  0x0A battery reports, and actual end-device announces. Continue to update
+  the battery capability from 0x01 read responses, but never treat those
+  responses as independent last-seen evidence. Legacy Unknown Flow actions,
+  mode-writing, two-input routing and availability behavior are preserved.
+- ROM002: count accepted physical button actions after resolving the input,
+  retaining existing hold de-duplication, subdevice routing and Flow aliases.
+- ROM001: count decoded OnOff/LevelControl bound actions without changing
+  historical multi-trigger pressed/hold events or adding availability writes.
+- LGT002 Twilight: count recognized root-device dot/Hue button actions only,
+  without touching front/back light subdevice endpoints or the inherited
+  lighting behavior.
+
+The existing 0xFC00 raw parsing stays untouched. #769 still needs genuine
+redacted manufacturer-specific frames before any Cluster/BoundCluster
+migration. These changes add only observational Homey telemetry, not
+Zigbee reads, reporting subscriptions, Flow migrations or rejoin logic.
