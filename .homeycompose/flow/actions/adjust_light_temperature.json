@@ -2,15 +2,48 @@
   "id": "adjust_light_temperature",
   "title": {
     "en": "Adjust color temperature",
-    "sv": "Justera färgtemperatur"
+    "sv": "Justera färgtemperatur",
+    "nl": "Kleurtemperatuur aanpassen",
+    "de": "Farbtemperatur anpassen",
+    "fr": "Ajuster la température de couleur",
+    "it": "Regola la temperatura colore",
+    "no": "Juster fargetemperatur",
+    "es": "Ajustar la temperatura de color",
+    "da": "Juster farvetemperatur",
+    "ru": "Настроить цветовую температуру",
+    "pl": "Dostosuj temperaturę barwową",
+    "ko": "색온도 조정",
+    "ar": "ضبط درجة حرارة اللون"
   },
   "titleFormatted": {
     "en": "Adjust [[device]] color temperature by [[delta]]",
-    "sv": "Justera färgtemperaturen för [[device]] med [[delta]]"
+    "sv": "Justera färgtemperaturen för [[device]] med [[delta]]",
+    "nl": "Pas de kleurtemperatuur van [[device]] aan met [[delta]]",
+    "de": "Farbtemperatur von [[device]] um [[delta]] anpassen",
+    "fr": "Ajuster la température de couleur de [[device]] de [[delta]]",
+    "it": "Regola la temperatura colore di [[device]] di [[delta]]",
+    "no": "Juster fargetemperaturen til [[device]] med [[delta]]",
+    "es": "Ajustar la temperatura de color de [[device]] en [[delta]]",
+    "da": "Juster farvetemperaturen for [[device]] med [[delta]]",
+    "ru": "Изменить цветовую температуру [[device]] на [[delta]]",
+    "pl": "Zmień temperaturę barwową [[device]] o [[delta]]",
+    "ko": "[[device]]의 색온도를 [[delta]]만큼 조정",
+    "ar": "اضبط درجة حرارة لون [[device]] بمقدار [[delta]]"
   },
   "hint": {
     "en": "Positive values make the light warmer; negative values make it cooler.",
-    "sv": "Positiva värden gör ljuset varmare; negativa värden gör det kallare."
+    "sv": "Positiva värden gör ljuset varmare; negativa värden gör det kallare.",
+    "nl": "Positieve waarden maken het licht warmer; negatieve waarden maken het koeler.",
+    "de": "Positive Werte machen das Licht wärmer; negative Werte kühler.",
+    "fr": "Les valeurs positives rendent la lumière plus chaude ; les valeurs négatives la rendent plus froide.",
+    "it": "I valori positivi rendono la luce più calda; quelli negativi più fredda.",
+    "no": "Positive verdier gjør lyset varmere; negative verdier gjør det kjøligere.",
+    "es": "Los valores positivos hacen la luz más cálida; los negativos, más fría.",
+    "da": "Positive værdier gør lyset varmere; negative værdier gør det køligere.",
+    "ru": "Положительные значения делают свет теплее, отрицательные — холоднее.",
+    "pl": "Wartości dodatnie ocieplają światło, a ujemne je ochładzają.",
+    "ko": "양수 값은 빛을 더 따뜻하게, 음수 값은 더 차갑게 만듭니다.",
+    "ar": "القيم الموجبة تجعل الضوء أكثر دفئًا، والقيم السالبة تجعله أبرد."
   },
   "args": [
     {
@@ -19,7 +52,18 @@
       "filter": "class=light&capabilities=light_temperature",
       "title": {
         "en": "Light",
-        "sv": "Lampa"
+        "sv": "Lampa",
+        "nl": "Lamp",
+        "de": "Lampe",
+        "fr": "Lampe",
+        "it": "Luce",
+        "no": "Lys",
+        "es": "Luz",
+        "da": "Lys",
+        "ru": "Светильник",
+        "pl": "Światło",
+        "ko": "조명",
+        "ar": "ضوء"
       }
     },
     {
@@ -33,7 +77,18 @@
       "labelDecimals": 0,
       "title": {
         "en": "Change",
-        "sv": "Ändring"
+        "sv": "Ändring",
+        "nl": "Wijziging",
+        "de": "Änderung",
+        "fr": "Modification",
+        "it": "Variazione",
+        "no": "Endring",
+        "es": "Cambio",
+        "da": "Ændring",
+        "ru": "Изменение",
+        "pl": "Zmiana",
+        "ko": "변경",
+        "ar": "التغيير"
       }
     }
   ]
