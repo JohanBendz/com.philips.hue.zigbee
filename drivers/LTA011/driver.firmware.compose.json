@@ -1,0 +1,27 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for White Ambiance E27 (LTA015).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LTA015).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LTA015"
+      },
+      "files": [
+        {
+          "fileVersion": 16780550,
+          "imageType": 297,
+          "manufacturerCode": 4107,
+          "size": 833604,
+          "name": "100B-0129-01000D06-Light-EFR32MG26.zigbee",
+          "integrity": "sha256:5ff65ab595d661f7b02bfcad82b2fd2578c9b4987289b567da5b7172c78b134f"
+        }
+      ]
+    }
+  ]
+}

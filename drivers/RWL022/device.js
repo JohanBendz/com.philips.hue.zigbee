@@ -38,7 +38,7 @@ async onNodeInit({ zclNode }) {
       if (clusterId === 64512) {
         return this._buttonCommandParser(frame);
       }
-      
+
     };
     this._node.handleFrame = this._rawHandleFrame;
 

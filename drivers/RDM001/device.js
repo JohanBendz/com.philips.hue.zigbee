@@ -57,7 +57,7 @@ class DualWallSwitch extends ZigBeeDevice {
         if (clusterId === 64512) {
           return this._buttonCommandParser(frame);
         }
-        
+
       };
       this._node.handleFrame = this._rawHandleFrame;
 

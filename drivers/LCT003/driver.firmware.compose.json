@@ -1,0 +1,37 @@
+{
+  "updates": [
+    {
+      "changelog": {
+        "en": "Philips Hue firmware update for Connected Lamp GU10 (LCT003).\n\nAfter the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying.",
+        "sv": "Firmwareuppdatering för Philips Hue (LCT003).\n\nEfter att enheten har startat om kan det dröja några minuter innan firmwareversionen och uppdateringsstatusen visas korrekt. Om Homey inte kan verifiera uppdateringen direkt, vänta några minuter och kontrollera statusen igen innan du försöker på nytt."
+      },
+      "device": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": "LCT003"
+      },
+      "files": [
+        {
+          "fileVersion": 1107326256,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256632,
+          "name": "ConnectedLamp-Atmel_0104_5.130.1.30000_0012.sbl-ota",
+          "integrity": "sha256:eb1920abf315cf4de8b3d0531090e4f6c05abe998fae33634ad85d76b0327be9",
+          "maxFileVersion": 1107326255
+        },
+        {
+          "fileVersion": 1124103180,
+          "imageType": 260,
+          "manufacturerCode": 4107,
+          "size": 256696,
+          "name": "ConnectedLamp-Atmel-Target_0012.sbl-ota",
+          "integrity": "sha256:d18f0e188847f3b002e7dfe221e563691f17ed22fdb80ca1b8fe558540979d8b",
+          "minFileVersion": 1107326256
+        }
+      ]
+    }
+  ]
+}

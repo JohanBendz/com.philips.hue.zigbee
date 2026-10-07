@@ -4,6 +4,26 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.4.0
+
+Native Hue firmware updates and Zigbee reliability improvements.
+
+#### Firmware updates
+
+- Added native Homey Zigbee firmware updates for 67 exact Hue product IDs across 47 drivers, covering selected lights, plugs, remotes and motion sensors.
+- Preserved required intermediate firmware images and version limits. Updates use the device's exact identity and reported firmware family; other aliases in the same driver do not inherit support.
+- Added wake instructions for supported battery devices, a source-linked model register, firmware integrity checks and a manual upstream catalogue audit.
+- Firmware updates require a supported Homey platform running 13.2.0 or newer and Homey Mobile App 9.10.0 or newer. Support does not cover every Hue device or every hardware revision.
+- See the [coverage and evidence register](docs/ota-model-evidence.md) for exact model scope and known hardware-variant limitations.
+
+#### Development baseline
+
+- Aligned the app's Homey minimum with its Node.js 22 dependencies: Homey 12.9.0 or newer.
+- Updated Basic device-identity handling and removed invalid BoundCluster registrations without adding fleet-wide Zigbee reconfiguration.
+- Added throttled Homey last-seen updates for validated incoming Hue remote, sensor and contact traffic, keeping explicit read responses separate from unsolicited reports.
+- Simplified RDM001, RDM002 and RWL022 battery handling through the SDK, preserving wake-up reads, strict invalid-value checks and two-input routing.
+- Added Power-on and remote-protocol contract checks. The separate Power-on runtime migration remains outside this release scope until explicitly integrated.
+
 ### v2.3.0
 
 Test candidate for the next Hue Zigbee feature and device-support line.
