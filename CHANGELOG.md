@@ -4,9 +4,17 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.3.1
+
+Live release of the 2.3 Hue Zigbee feature and device-support line after Homey Test validation.
+
+- No runtime changes from the published 2.3.0 Test build.
+- Removed Test-specific release wording and aligned release metadata for Live publication.
+- Retains the remote/occupancy reliability work and device support documented under v2.3.0 below.
+
 ### v2.3.0
 
-Test candidate for the next Hue Zigbee feature and device-support line.
+Homey Test release for the 2.3 Hue Zigbee feature and device-support line.
 
 #### Reliability and protocol handling
 

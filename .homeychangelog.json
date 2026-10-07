@@ -166,5 +166,8 @@
   },
   "2.3.0": {
     "en": "Test release with improved Hue remote and occupancy handling plus support for additional devices including OmniGlow, Flux, LWA033, LTU001, LWF004 and experimental LWM007 wired dimmer support."
+  },
+  "2.3.1": {
+    "en": "Improved Hue remote and occupancy handling, with expanded device support for OmniGlow, Flux, LWA033, LTU001, LWF004 and experimental LWM007 wired dimmer support."
   }
 }
