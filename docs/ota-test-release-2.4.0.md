@@ -1,6 +1,6 @@
 # OTA handoff for 2.4.0 Test
 
-Prepared **2026-10-04**, refreshed **2026-10-05** (Europe/Stockholm) for [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758), [OTA tracking #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
+Prepared **2026-10-04**, refreshed **2026-10-07** (Europe/Stockholm) for [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758), [OTA tracking #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
 The selected destination is **2.4.0 on Homey Test**, together with the `develop-2.4` release. Preparation and validation are performed on `ota-2026`. PR #758 is the integration path into `develop-2.4`; publication belongs to the maintainer's scheduled Test release. This work does not publish a build or modify the active 2.3.0 Test release.
 
@@ -26,18 +26,24 @@ See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [mod
 
 ## Prepared candidate verification
 
-Local verification used a clean dependency install, Node.js **24.19.0** and Homey CLI **4.5.0**. Publish validation passed and **215 tests passed / 0 failed**. The repository's PR CI separately runs on Node.js 22; its exact commit and result are recorded in PR #758 and the dashboard. All 67 evidence-register rows, every driver/model coverage row, the hardware-plan versions and local Markdown file links were checked against the repository.
+**Merge review: 2026-10-07.** Reviewed OTA source: `41c3927a391970df2ab8d0167a0a5b19ddd05bab`; current `develop-2.4` is still `349e3423396b57e6f0cd1e6933624115161d40b2` and is already included. PR #758 is open, ready for review and conflict-free. No blocking implementation finding remains for integration into the planned 2.4.0 Test release. The follow-up commit records this review only in `docs/`, which is excluded from the packaged app.
 
-The fresh catalogue audit resolved upstream to `62c7798c8d8a4712733c6cc668ea491a2637f329` and found **zero active-family changes** against the fixed reviewed reference `9f46fc5`. All app/package/lockfile versions and the release-note key agree on **2.4.0**. The generated manifest and local CLI archive verified at OTA commit `f5dbfdd` contain all **47 OTA declarations** and **141 firmware files**, with every firmware checksum matching the source tree. Development directories are excluded. Product README and release notes describe functionality; Test/publication status is kept in this handoff and the dashboard.
+A clean `npm ci --ignore-scripts`, Node.js **24.19.0** and Homey CLI **4.5.0** passed publish validation and **215 tests / 0 failures**. [PR CI for the reviewed source](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37240962101) also passed on Node.js 22. CI for the documentation follow-up is recorded in PR #758 and the dashboard. All 67 evidence-register rows and 29 local documentation links/anchors were checked. Selection checks across 63 update entries and 691 file-version boundary scenarios reach the reviewed target or correctly have no newer image. The three runtime file differences against Develop are whitespace only.
+
+The fresh catalogue audit resolved upstream to `10797024f00acd9530f10e8517a68823c59f3b3b` (index SHA-256 `e5cbc330ae03b307154bd4940752d4525487875e1552cfc691c8cde9019a7676`), with **zero active-family changes** against the fixed reviewed reference `9f46fc5`. App/package/lockfile versions and the release-note key agree on **2.4.0**.
+
+The native CLI `app build` and archive pipeline were used to rebuild the verification package. All **47 OTA drivers**, **63 update entries** and **141 firmware files** are present; generated declarations, English/Swedish help, wake instructions and every firmware byte match the source. Runtime files match, and development directories are excluded. The pinned `homey-zigbeedriver` **2.2.18**, `zigbee-clusters` **3.8.0**, their production dependencies and Homey's CLI-provided runtime shim are included. Thirteen dependency package manifests and 168 JavaScript files match the clean dependency tree or the CLI shim.
 
 | Local CLI archive measurement | Result |
 | --- | ---: |
-| Files | 870 |
-| File bytes before compression | 60,988,593 |
-| Compressed bytes | 58,842,961 |
+| Files | 1,093 |
+| File bytes before compression | 62,294,893 |
+| Compressed bytes | 59,112,930 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 
-Archive SHA-256: `8f8548af4f5c8d375973956252c7f787df064a768baf187f30374fcf969391e1`. This identifies the `f5dbfdd` local verification archive, before the later post-restart help-text change, not a published build. Rebuild and record the final release commit at the Test cut. The earlier `80ab1a3` snapshot passed 180 tests; its older archive measurements are superseded by this Develop refresh.
+Archive SHA-256: `85113935bee5faf20a95ad5f737c4c95fe6d654e9a54b9a79116fbef5f60a165`. This identifies the local verification archive built from `41c3927`, not a published build. Rebuild and record the final Develop release commit at the Test cut.
+
+The earlier `f5dbfdd` verification archive omitted the production dependencies and also predates the post-restart help text. Its 870-file measurements and SHA-256 are superseded; it must not be used for publication. Source-level firmware validation remains valid, and no firmware or runtime change was needed to correct the package verification. Always include the CLI production-dependency build step when inspecting an upload archive.
 
 ## Software checks before integration and publication
 
@@ -47,6 +53,7 @@ Use Node.js 22 or newer. Start from a clean checkout, retain the tracked generat
 npm ci --ignore-scripts
 npx --yes homey@4.5.0 app validate --level publish
 npm test
+npx --yes homey@4.5.0 app build
 npm run ota:audit
 git diff --check
 ```
@@ -54,7 +61,7 @@ git diff --check
 - Publish validation must succeed with all 47 firmware-enabled drivers present in the generated manifest.
 - Regression tests check exact model coverage, source evidence, binary integrity, complete firmware chains and selection limits, as well as preservation of every declaration and wake instruction in the generated manifest.
 - Catalogue audit exit code `0` means no active-family changes; `1` requires a source review; `2` means the audit failed. Review new upstream metadata before changing this candidate. Do not silently refresh the fixed references.
-- Inspect the built app: all 141 firmware files must be present with matching checksums, and development `test/`, `docs/` and `scripts/` directories must be excluded. The CLI upload archive includes firmware; it is not the installed app size.
+- Inspect the actual CLI-built app: pinned Zigbee libraries and production dependencies, along with all 141 firmware files, must be present with matching checksums, and development `test/`, `docs/` and `scripts/` directories must be excluded. The CLI upload archive includes firmware; it is not the installed app size.
 - Verify `.homeycompose/app.json`, `package.json`, both lockfile version records and the release-note key agree on `2.4.0`. Discard incidental generated root `app.json` changes after validation.
 
 ## Integration at the Test cut

@@ -2,7 +2,7 @@
 
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
-OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-05 refresh includes Develop [`349e342`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/349e3423396b57e6f0cd1e6933624115161d40b2), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is prepared to join the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
+OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-07 merge review confirms Develop [`349e342`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/349e3423396b57e6f0cd1e6933624115161d40b2), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is ready for integration into the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
 
 See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for coverage limits and the direct Hue-server cross-check. The release handoff supersedes that review's open version/channel preparation items. Catalogue consistency does not mean full Hue coverage.
 
@@ -61,24 +61,28 @@ Catalogue-only image families are reported separately as information. Their pres
 
 The original audit on 2026-10-02, before the Develop integration, resolved to the reviewed `9f46fc5` revision: **0 active-family changes**, **69 upstream Hue images** and **17 catalogue-only image families**. At that baseline, 67 product IDs were mapped and 313 were unmapped. The current baseline has 398 supported IDs and 331 unmapped IDs. The 2026-10-05 check against upstream `62c7798c8d8a4712733c6cc668ea491a2637f329` again reports **zero active-family changes**; the fixed reviewed reference remains `9f46fc5`.
 
-## Packaging verification — 2026-10-05
+## Packaging and merge verification — 2026-10-07
 
-Homey CLI **4.5.0** built the prepared 2.4.0 Test candidate at OTA commit `f5dbfdd`, with Develop `349e342` included, before the post-restart help-text change. The generated manifest and archive preserve all OTA declarations and battery wake instructions, and every packaged firmware file matches its source checksum. All 215 local tests and publish validation passed. This did not upload or install the app; see the [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) for the archive checksum and final-release procedure.
+The current `develop-2.4` baseline `349e342` is already included in reviewed OTA source `41c3927`. Homey CLI **4.5.0** publish validation, **215 local tests**, the source PR CI and whitespace checks pass. All 67 model-evidence rows, 29 local documentation links/anchors and 691 file-version boundary scenarios were checked. There are no blocking code findings for the planned Test integration. The [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) records the exact review scope and remaining Test observations.
+
+The 2026-10-07 upstream audit resolved to `10797024f00acd9530f10e8517a68823c59f3b3b` and again found **zero active-family changes** against the fixed `9f46fc5` reference. The reviewed catalogue and all firmware bytes are unchanged.
+
+A fresh native CLI `app build` and archive inspection confirms all **47 OTA drivers / 63 update entries**, English/Swedish post-restart help, battery wake instructions and all firmware files. Every packaged firmware byte and app runtime file matches the source. The pinned Zigbee libraries, production dependencies and CLI Homey shim are included. The earlier `f5dbfdd` verification archive omitted production dependencies; its measurements are superseded by this complete build.
 
 | Measurement | Result |
 | --- | ---: |
 | Firmware files in the source/build | 141 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 | Unique firmware image bytes | 13,141,920 |
-| Build file count | 870 |
-| Build file bytes, including firmware and dependencies | 60,988,593 |
-| Compressed CLI upload archive bytes | 58,842,961 |
+| Build file count | 1,093 |
+| Build file bytes, including firmware and dependencies | 62,294,893 |
+| Compressed CLI upload archive bytes | 59,112,930 |
 
-The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files must remain in their driver asset directories for validation and upload; per-driver copies are part of Homey's declared layout.
+Archive SHA-256: `85113935bee5faf20a95ad5f737c4c95fe6d654e9a54b9a79116fbef5f60a165`. This local package was built from `41c3927`; the documentation follow-up changes excluded `docs/` files only. No merge into Develop, upload or installation was performed. Record the final release commit and rebuild at publication.
 
-The upload archive size is **not** the installed App Store app size. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. Backend extraction and actual installed size have not been measured here. Removing required intermediate images is therefore not an appropriate way to reduce the installed app.
+The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files remain in their declared driver asset directories. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. The upload archive size therefore does not establish installed App Store app size.
 
-See [the OTA hardware test plan](ota-test-plan.md) for the next verification stage.
+See [the OTA hardware test plan](ota-test-plan.md) and [recorded hardware observations](ota-test-results.md) for Test follow-up.
 
 ## Current coverage
 
