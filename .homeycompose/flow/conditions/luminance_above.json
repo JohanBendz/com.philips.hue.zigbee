@@ -1,21 +1,44 @@
 {
-    "id": "luminance_above",
-    "title": "Luminance is above",
-    "titleFormatted": {
-      "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
-      "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
-      "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-      "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+  "id": "luminance_above",
+  "title": {
+    "en": "Luminance is above",
+    "nl": "Lichtsterkte is hoger dan",
+    "de": "Helligkeit ist über",
+    "fr": "La luminosité est supérieure à",
+    "it": "La luminosità è superiore a",
+    "sv": "Ljusstyrkan är över",
+    "no": "Lysstyrken er over",
+    "es": "La luminosidad es superior a",
+    "da": "Lysstyrken er over",
+    "ru": "Освещённость выше",
+    "pl": "Natężenie światła jest powyżej",
+    "ko": "조도가 다음보다 높음",
+    "ar": "شدة الإضاءة أعلى من"
+  },
+  "titleFormatted": {
+    "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
+    "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+    "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+    "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux",
+    "fr": "[[device]] La luminosité est !{{supérieure|inférieure}} à [[luminance]] lux",
+    "it": "[[device]] La luminosità è !{{sopra|sotto}} [[luminance]] lux",
+    "no": "[[device]] Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "es": "[[device]] La luminosidad está !{{por encima|por debajo}} de [[luminance]] lux",
+    "da": "[[device]] Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "ru": "[[device]] Освещённость !{{выше|ниже}} [[luminance]] лк",
+    "pl": "[[device]] Natężenie światła jest !{{powyżej|poniżej}} [[luminance]] lx",
+    "ko": "[[device]] 조도가 [[luminance]] lux !{{초과|미만}}",
+    "ar": "[[device]] شدة الإضاءة !{{أعلى|أقل}} من [[luminance]] لوكس"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "class=sensor"
     },
-    "args": [
-      {
-        "name": "device",
-        "type": "device",
-        "filter": "class=sensor"
-      },
-      {
-        "name": "luminance",
-        "type": "number"
-      }
-    ]
-  }
+    {
+      "name": "luminance",
+      "type": "number"
+    }
+  ]
+}

@@ -2,15 +2,48 @@
   "id": "hue_effect",
   "title": {
     "en": "Set Hue effect",
-    "sv": "Ställ in Hue-effekt"
+    "sv": "Ställ in Hue-effekt",
+    "nl": "Hue-effect instellen",
+    "de": "Hue-Effekt einstellen",
+    "fr": "Définir l’effet Hue",
+    "it": "Imposta effetto Hue",
+    "no": "Angi Hue-effekt",
+    "es": "Establecer efecto Hue",
+    "da": "Indstil Hue-effekt",
+    "ru": "Установить эффект Hue",
+    "pl": "Ustaw efekt Hue",
+    "ko": "Hue 효과 설정",
+    "ar": "تعيين تأثير Hue"
   },
   "titleFormatted": {
     "en": "Set [[device]] effect to [[effect]]",
-    "sv": "Ställ effekten för [[device]] till [[effect]]"
+    "sv": "Ställ effekten för [[device]] till [[effect]]",
+    "nl": "Stel het effect van [[device]] in op [[effect]]",
+    "de": "Effekt von [[device]] auf [[effect]] setzen",
+    "fr": "Régler l’effet de [[device]] sur [[effect]]",
+    "it": "Imposta l’effetto di [[device]] su [[effect]]",
+    "no": "Sett effekten for [[device]] til [[effect]]",
+    "es": "Establecer el efecto de [[device]] en [[effect]]",
+    "da": "Indstil effekten for [[device]] til [[effect]]",
+    "ru": "Установить эффект [[device]]: [[effect]]",
+    "pl": "Ustaw efekt [[device]] na [[effect]]",
+    "ko": "[[device]] 효과를 [[effect]](으)로 설정",
+    "ar": "اضبط تأثير [[device]] على [[effect]]"
   },
   "hint": {
     "en": "Uses the native Signify effect protocol. Only lights that expose native Hue effect support can run these effects.",
-    "sv": "Använder Signifys inbyggda effektprotokoll. Endast lampor som exponerar stöd för Hue-effekter kan köra dem."
+    "sv": "Använder Signifys inbyggda effektprotokoll. Endast lampor som exponerar stöd för Hue-effekter kan köra dem.",
+    "nl": "Gebruikt het native Signify-effectprotocol. Alleen lampen met native ondersteuning voor Hue-effecten kunnen deze effecten uitvoeren.",
+    "de": "Verwendet das native Signify-Effektprotokoll. Nur Lampen mit nativer Hue-Effektunterstützung können diese Effekte ausführen.",
+    "fr": "Utilise le protocole d’effets natif de Signify. Seules les lampes prenant en charge nativement les effets Hue peuvent les exécuter.",
+    "it": "Usa il protocollo effetti nativo di Signify. Solo le luci che espongono il supporto nativo agli effetti Hue possono eseguirli.",
+    "no": "Bruker Signifys innebygde effektprotokoll. Bare lys med innebygd støtte for Hue-effekter kan kjøre dem.",
+    "es": "Usa el protocolo de efectos nativo de Signify. Solo las luces con soporte nativo para efectos Hue pueden ejecutarlos.",
+    "da": "Bruger Signifys indbyggede effektprotokol. Kun lys med indbygget understøttelse af Hue-effekter kan køre dem.",
+    "ru": "Использует встроенный протокол эффектов Signify. Эффекты работают только на светильниках с нативной поддержкой эффектов Hue.",
+    "pl": "Używa natywnego protokołu efektów Signify. Efekty działają tylko na światłach z natywną obsługą efektów Hue.",
+    "ko": "Signify 기본 효과 프로토콜을 사용합니다. Hue 효과를 기본 지원하는 조명만 이 효과를 실행할 수 있습니다.",
+    "ar": "يستخدم بروتوكول تأثيرات Signify الأصلي. لا يمكن تشغيل هذه التأثيرات إلا على الأضواء التي تدعم تأثيرات Hue بشكل أصلي."
   },
   "args": [
     {
@@ -19,7 +52,18 @@
       "filter": "class=light&capabilities=light_hue,light_saturation",
       "title": {
         "en": "Light",
-        "sv": "Lampa"
+        "sv": "Lampa",
+        "nl": "Lamp",
+        "de": "Lampe",
+        "fr": "Lampe",
+        "it": "Luce",
+        "no": "Lys",
+        "es": "Luz",
+        "da": "Lys",
+        "ru": "Светильник",
+        "pl": "Światło",
+        "ko": "조명",
+        "ar": "ضوء"
       }
     },
     {
@@ -28,20 +72,73 @@
       "values": [
         {
           "id": "none",
-          "label": { "en": "Stop effect", "sv": "Stoppa effekt" }
+          "label": {
+            "en": "Stop effect",
+            "sv": "Stoppa effekt",
+            "nl": "Effect stoppen",
+            "de": "Effekt stoppen",
+            "fr": "Arrêter l’effet",
+            "it": "Interrompi effetto",
+            "no": "Stopp effekt",
+            "es": "Detener efecto",
+            "da": "Stop effekt",
+            "ru": "Остановить эффект",
+            "pl": "Zatrzymaj efekt",
+            "ko": "효과 중지",
+            "ar": "إيقاف التأثير"
+          }
         },
         {
           "id": "candle",
-          "label": { "en": "Candle", "sv": "Levande ljus" }
+          "label": {
+            "en": "Candle",
+            "sv": "Levande ljus",
+            "nl": "Kaars",
+            "de": "Kerze",
+            "fr": "Bougie",
+            "it": "Candela",
+            "no": "Stearinlys",
+            "es": "Vela",
+            "da": "Stearinlys",
+            "ru": "Свеча",
+            "pl": "Świeca",
+            "ko": "촛불",
+            "ar": "شمعة"
+          }
         },
         {
           "id": "fireplace",
-          "label": { "en": "Fireplace", "sv": "Eldstad" }
+          "label": {
+            "en": "Fireplace",
+            "sv": "Eldstad",
+            "nl": "Open haard",
+            "de": "Kamin",
+            "fr": "Cheminée",
+            "it": "Camino",
+            "no": "Peis",
+            "es": "Chimenea",
+            "da": "Pejs",
+            "ru": "Камин",
+            "pl": "Kominek",
+            "ko": "벽난로",
+            "ar": "مدفأة"
+          }
         }
       ],
       "title": {
         "en": "Effect",
-        "sv": "Effekt"
+        "sv": "Effekt",
+        "nl": "Effect",
+        "de": "Effekt",
+        "fr": "Effet",
+        "it": "Effetto",
+        "no": "Effekt",
+        "es": "Efecto",
+        "da": "Effekt",
+        "ru": "Эффект",
+        "pl": "Efekt",
+        "ko": "효과",
+        "ar": "التأثير"
       }
     }
   ]

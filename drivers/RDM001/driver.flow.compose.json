@@ -4,21 +4,66 @@
       "id": "RDM001_rockerswitch",
       "title": {
         "en": "Rockerswitch toggled",
-        "nl": "Tuimelschakelaar omgezet"
+        "nl": "Tuimelschakelaar omgezet",
+        "de": "Wippschalter umgelegt",
+        "fr": "Interrupteur à bascule actionné",
+        "it": "Interruttore a bilanciere commutato",
+        "sv": "Vippbrytare växlad",
+        "no": "Vippebryter skiftet",
+        "es": "Interruptor basculante cambiado",
+        "da": "Vippekontakt skiftet",
+        "ru": "Клавишный выключатель переключён",
+        "pl": "Przełącznik kołyskowy przełączony",
+        "ko": "로커 스위치 전환됨",
+        "ar": "تم تبديل المفتاح الهزاز"
       },
       "titleFormatted": {
         "en": "Rockerswitch toggled",
-        "nl": "Tuimelschakelaar omgezet"
+        "nl": "Tuimelschakelaar omgezet",
+        "de": "Wippschalter umgelegt",
+        "fr": "Interrupteur à bascule actionné",
+        "it": "Interruttore a bilanciere commutato",
+        "sv": "Vippbrytare växlad",
+        "no": "Vippebryter skiftet",
+        "es": "Interruptor basculante cambiado",
+        "da": "Vippekontakt skiftet",
+        "ru": "Клавишный выключатель переключён",
+        "pl": "Przełącznik kołyskowy przełączony",
+        "ko": "로커 스위치 전환됨",
+        "ar": "تم تبديل المفتاح الهزاز"
       }
     },
     {
       "id": "RDM001_pushbuttons",
       "title": {
-        "en": "Button Action"
+        "en": "Button Action",
+        "nl": "Knopactie",
+        "de": "Tastenaktion",
+        "fr": "Action du bouton",
+        "it": "Azione pulsante",
+        "sv": "Knapphändelse",
+        "no": "Knappehandling",
+        "es": "Acción del botón",
+        "da": "Knappehandling",
+        "ru": "Действие кнопки",
+        "pl": "Akcja przycisku",
+        "ko": "버튼 동작",
+        "ar": "إجراء الزر"
       },
       "titleFormatted": {
         "en": "Pushbutton [[action]]",
-        "nl": "Drukknop [[action]]"
+        "nl": "Drukknop [[action]]",
+        "de": "Taster [[action]]",
+        "fr": "Bouton-poussoir [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Tryckknapp [[action]]",
+        "no": "Trykknapp [[action]]",
+        "es": "Pulsador [[action]]",
+        "da": "Trykknap [[action]]",
+        "ru": "Кнопочный выключатель [[action]]",
+        "pl": "Przycisk chwilowy [[action]]",
+        "ko": "푸시버튼 [[action]]",
+        "ar": "زر ضاغط [[action]]"
       },
       "args": [
         {
@@ -29,34 +74,89 @@
               "id": "Press",
               "label": {
                 "en": "pressed",
-                "nl": "drukken"
+                "nl": "drukken",
+                "de": "gedrückt",
+                "fr": "appuyé",
+                "it": "premuto",
+                "sv": "trycks in",
+                "no": "trykket",
+                "es": "pulsado",
+                "da": "trykket",
+                "ru": "нажата",
+                "pl": "naciśnięty",
+                "ko": "누름",
+                "ar": "مضغوط"
               }
             },
             {
               "id": "Release",
               "label": {
                 "en": "released",
-                "nl": "loslaten"
+                "nl": "loslaten",
+                "de": "losgelassen",
+                "fr": "relâché",
+                "it": "rilasciato",
+                "sv": "släppt",
+                "no": "sluppet",
+                "es": "soltado",
+                "da": "sluppet",
+                "ru": "отпущена",
+                "pl": "zwolniony",
+                "ko": "놓음",
+                "ar": "تم الإفلات"
               }
             },
             {
               "id": "Hold",
               "label": {
                 "en": "hold",
-                "nl": "vasthouden"
+                "nl": "vasthouden",
+                "de": "halten",
+                "fr": "maintenu",
+                "it": "tenuto premuto",
+                "sv": "hålls in",
+                "no": "hold",
+                "es": "mantener",
+                "da": "hold",
+                "ru": "удержание",
+                "pl": "przytrzymanie",
+                "ko": "길게 누름",
+                "ar": "ضغط مطول"
               }
             },
             {
               "id": "LongRelease",
               "label": {
                 "en": "released after hold",
-                "nl": "loslaten na vasthouden"
+                "nl": "loslaten na vasthouden",
+                "de": "nach Halten losgelassen",
+                "fr": "relâché après maintien",
+                "it": "rilasciato dopo pressione prolungata",
+                "sv": "släppt efter håll",
+                "no": "sluppet etter hold",
+                "es": "soltado después de mantener",
+                "da": "sluppet efter hold",
+                "ru": "отпущена после удержания",
+                "pl": "zwolniony po przytrzymaniu",
+                "ko": "길게 누른 후 놓음",
+                "ar": "تم الإفلات بعد الضغط المطول"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

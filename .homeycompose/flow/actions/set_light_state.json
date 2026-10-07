@@ -2,11 +2,33 @@
   "id": "set_light_state",
   "title": {
     "en": "Set light state",
-    "sv": "Ställ in ljusläge"
+    "sv": "Ställ in ljusläge",
+    "nl": "Lichtstatus instellen",
+    "de": "Lichtzustand einstellen",
+    "fr": "Définir l’état de la lumière",
+    "it": "Imposta stato luce",
+    "no": "Angi lysstatus",
+    "es": "Establecer estado de la luz",
+    "da": "Indstil lysstatus",
+    "ru": "Установить состояние света",
+    "pl": "Ustaw stan światła",
+    "ko": "조명 상태 설정",
+    "ar": "تعيين حالة الضوء"
   },
   "titleFormatted": {
     "en": "Set [[device]] to [[brightness]] and [[color]]",
-    "sv": "Ställ [[device]] på [[brightness]] och [[color]]"
+    "sv": "Ställ [[device]] på [[brightness]] och [[color]]",
+    "nl": "Stel [[device]] in op [[brightness]] en [[color]]",
+    "de": "[[device]] auf [[brightness]] und [[color]] setzen",
+    "fr": "Régler [[device]] sur [[brightness]] et [[color]]",
+    "it": "Imposta [[device]] su [[brightness]] e [[color]]",
+    "no": "Sett [[device]] til [[brightness]] og [[color]]",
+    "es": "Establecer [[device]] en [[brightness]] y [[color]]",
+    "da": "Indstil [[device]] til [[brightness]] og [[color]]",
+    "ru": "Установить [[device]] на [[brightness]] и [[color]]",
+    "pl": "Ustaw [[device]] na [[brightness]] i [[color]]",
+    "ko": "[[device]]을(를) [[brightness]] 및 [[color]](으)로 설정",
+    "ar": "اضبط [[device]] على [[brightness]] و[[color]]"
   },
   "args": [
     {
@@ -15,7 +37,18 @@
       "filter": "class=light&capabilities=dim,light_hue,light_saturation",
       "title": {
         "en": "Light",
-        "sv": "Lampa"
+        "sv": "Lampa",
+        "nl": "Lamp",
+        "de": "Lampe",
+        "fr": "Lampe",
+        "it": "Luce",
+        "no": "Lys",
+        "es": "Luz",
+        "da": "Lys",
+        "ru": "Светильник",
+        "pl": "Światło",
+        "ko": "조명",
+        "ar": "ضوء"
       }
     },
     {
@@ -29,7 +62,18 @@
       "labelDecimals": 0,
       "title": {
         "en": "Brightness",
-        "sv": "Ljusstyrka"
+        "sv": "Ljusstyrka",
+        "nl": "Helderheid",
+        "de": "Helligkeit",
+        "fr": "Luminosité",
+        "it": "Luminosità",
+        "no": "Lysstyrke",
+        "es": "Brillo",
+        "da": "Lysstyrke",
+        "ru": "Яркость",
+        "pl": "Jasność",
+        "ko": "밝기",
+        "ar": "السطوع"
       }
     },
     {
@@ -37,7 +81,18 @@
       "name": "color",
       "title": {
         "en": "Color",
-        "sv": "Färg"
+        "sv": "Färg",
+        "nl": "Kleur",
+        "de": "Farbe",
+        "fr": "Couleur",
+        "it": "Colore",
+        "no": "Farge",
+        "es": "Color",
+        "da": "Farve",
+        "ru": "Цвет",
+        "pl": "Kolor",
+        "ko": "색상",
+        "ar": "اللون"
       }
     }
   ]

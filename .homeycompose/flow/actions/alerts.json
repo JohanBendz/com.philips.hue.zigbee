@@ -1,100 +1,199 @@
 {
-    "id": "Alert",
-    "title": {
+  "id": "Alert",
+  "title": {
     "en": "Alert mode",
     "sv": "Larm-läge",
     "nl": "Waarschuwingsmodus",
-    "de": "Alarmmodus"
+    "de": "Alarmmodus",
+    "fr": "Mode d’alerte",
+    "it": "Modalità avviso",
+    "no": "Varselmodus",
+    "es": "Modo de alerta",
+    "da": "Alarmtilstand",
+    "ru": "Режим оповещения",
+    "pl": "Tryb alertu",
+    "ko": "알림 모드",
+    "ar": "وضع التنبيه"
+  },
+  "titleFormatted": {
+    "en": "Set alert mode for [[device]] to [[alert_mode]]",
+    "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+    "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+    "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen",
+    "fr": "Régler le mode d’alerte de [[device]] sur [[alert_mode]]",
+    "it": "Imposta la modalità avviso di [[device]] su [[alert_mode]]",
+    "no": "Sett varselmodus for [[device]] til [[alert_mode]]",
+    "es": "Establecer el modo de alerta de [[device]] en [[alert_mode]]",
+    "da": "Indstil alarmtilstand for [[device]] til [[alert_mode]]",
+    "ru": "Установить режим оповещения [[device]]: [[alert_mode]]",
+    "pl": "Ustaw tryb alertu [[device]] na [[alert_mode]]",
+    "ko": "[[device]]의 알림 모드를 [[alert_mode]](으)로 설정",
+    "ar": "اضبط وضع تنبيه [[device]] على [[alert_mode]]"
+  },
+  "args": [
+    {
+      "type": "device",
+      "name": "device",
+      "filter": "class=light",
+      "title": {
+        "en": "Select Light Device",
+        "sv": "Välj ljusenhet",
+        "nl": "Selecteer lichtapparaat",
+        "de": "Lichtgerät auswählen",
+        "fr": "Sélectionner un éclairage",
+        "it": "Seleziona dispositivo luce",
+        "no": "Velg lysenhet",
+        "es": "Seleccionar dispositivo de luz",
+        "da": "Vælg lysenhed",
+        "ru": "Выберите светильник",
+        "pl": "Wybierz urządzenie oświetleniowe",
+        "ko": "조명 장치 선택",
+        "ar": "حدد جهاز الإضاءة"
+      }
     },
-    "titleFormatted": {
-      "en": "Set alert mode for [[device]] to [[alert_mode]]",
-      "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
-      "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
-      "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
-    },
-    "args": [
+    {
+      "type": "dropdown",
+      "name": "alert_mode",
+      "title": {
+        "en": "Set an alert mode",
+        "sv": "Välj ett larm-läge",
+        "nl": "Stel een waarschuwingsmodus in",
+        "de": "Alarmmodus auswählen",
+        "fr": "Définir un mode d’alerte",
+        "it": "Imposta una modalità avviso",
+        "no": "Velg en varselmodus",
+        "es": "Establecer un modo de alerta",
+        "da": "Vælg en alarmtilstand",
+        "ru": "Выберите режим оповещения",
+        "pl": "Ustaw tryb alertu",
+        "ko": "알림 모드 설정",
+        "ar": "حدد وضع تنبيه"
+      },
+      "titleFormatted": {
+        "en": "Set alert mode for [[device]] to [[alert_mode]]",
+        "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+        "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+        "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen",
+        "fr": "Régler le mode d’alerte de [[device]] sur [[alert_mode]]",
+        "it": "Imposta la modalità avviso di [[device]] su [[alert_mode]]",
+        "no": "Sett varselmodus for [[device]] til [[alert_mode]]",
+        "es": "Establecer el modo de alerta de [[device]] en [[alert_mode]]",
+        "da": "Indstil alarmtilstand for [[device]] til [[alert_mode]]",
+        "ru": "Установить режим оповещения [[device]]: [[alert_mode]]",
+        "pl": "Ustaw tryb alertu [[device]] na [[alert_mode]]",
+        "ko": "[[device]]의 알림 모드를 [[alert_mode]](으)로 설정",
+        "ar": "اضبط وضع تنبيه [[device]] على [[alert_mode]]"
+      },
+      "values": [
         {
-          "type": "device",
-          "name": "device",
-          "filter": "class=light",
-          "title": {
-            "en": "Select Light Device",
-            "sv": "Välj ljusenhet",
-            "nl": "Selecteer lichtapparaat",
-            "de": "Lichtgerät auswählen"
-            }
+          "id": "blink",
+          "label": {
+            "en": "Blink (1 time)",
+            "sv": "Blinka (1 gång)",
+            "nl": "Knipperen (1 keer)",
+            "de": "Blinken (1 mal)",
+            "fr": "Clignoter (1 fois)",
+            "it": "Lampeggia (1 volta)",
+            "no": "Blink (1 gang)",
+            "es": "Parpadear (1 vez)",
+            "da": "Blink (1 gang)",
+            "ru": "Мигание (1 раз)",
+            "pl": "Mignięcie (1 raz)",
+            "ko": "깜박임 (1회)",
+            "ar": "وميض (مرة واحدة)"
+          }
         },
         {
-          "type": "dropdown",
-          "name": "alert_mode",
-          "title": {
-            "en": "Set an alert mode",
-            "sv": "Välj ett larm-läge",
-            "nl": "Stel een waarschuwingsmodus in",
-            "de": "Alarmmodus auswählen"
-          },
-          "titleFormatted": {
-            "en": "Set alert mode for [[device]] to [[alert_mode]]",
-            "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
-            "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
-            "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
-          },
-          "values": [
-            {
-              "id": "blink",
-              "label": {
-                "en": "Blink (1 time)",
-                "sv": "Blinka (1 gång)",
-                "nl": "Knipperen (1 keer)",
-                "de": "Blinken (1 mal)"
-              }
-            },
-            {
-              "id": "breath",
-              "label": {
-                "en": "Breath (15 times)",
-                "sv": "Andas (15 gånger)",
-                "nl": "Ademen (15 keer)",
-                "de": "Atmen (15 mal)"
-              }
-            },
-            {
-              "id": "okay",
-              "label": {
-                "en": "Indicate OK",
-                "sv": "Indikera OK",
-                "nl": "Geef aan OK",
-                "de": "OK anzeigen"
-              }
-            },
-            {
-              "id": "channel_change",
-              "label": {
-                "en": "Indicate problem",
-                "sv": "Indikera problem",
-                "nl": "Geef een probleem aan",
-                "de": "Problem anzeigen"
-              }
-            },
-            {
-              "id": "finish_effect",
-              "label": {
-                "en": "Soft Stop",
-                "sv": "Mjuk stopp",
-                "nl": "Zachte stop",
-                "de": "Sanfter Stopp"
-              }
-            },
-            {
-              "id": "stop_effect",
-              "label": {
-                "en": "Hard Stop",
-                "sv": "Hård stopp",
-                "nl": "Harde stop",
-                "de": "Harter Stopp"
-              }
-            }
-          ]
+          "id": "breath",
+          "label": {
+            "en": "Breath (15 times)",
+            "sv": "Andas (15 gånger)",
+            "nl": "Ademen (15 keer)",
+            "de": "Atmen (15 mal)",
+            "fr": "Respiration (15 fois)",
+            "it": "Respiro (15 volte)",
+            "no": "Pust (15 ganger)",
+            "es": "Respirar (15 veces)",
+            "da": "Pulser (15 gange)",
+            "ru": "Пульсация (15 раз)",
+            "pl": "Pulsowanie (15 razy)",
+            "ko": "브리딩 (15회)",
+            "ar": "تنفس (15 مرة)"
+          }
+        },
+        {
+          "id": "okay",
+          "label": {
+            "en": "Indicate OK",
+            "sv": "Indikera OK",
+            "nl": "Geef aan OK",
+            "de": "OK anzeigen",
+            "fr": "Indiquer OK",
+            "it": "Indica OK",
+            "no": "Vis OK",
+            "es": "Indicar OK",
+            "da": "Vis OK",
+            "ru": "Показать OK",
+            "pl": "Wskaż OK",
+            "ko": "정상 표시",
+            "ar": "إظهار موافق"
+          }
+        },
+        {
+          "id": "channel_change",
+          "label": {
+            "en": "Indicate problem",
+            "sv": "Indikera problem",
+            "nl": "Geef een probleem aan",
+            "de": "Problem anzeigen",
+            "fr": "Indiquer un problème",
+            "it": "Indica un problema",
+            "no": "Vis problem",
+            "es": "Indicar problema",
+            "da": "Vis problem",
+            "ru": "Показать проблему",
+            "pl": "Wskaż problem",
+            "ko": "문제 표시",
+            "ar": "إظهار مشكلة"
+          }
+        },
+        {
+          "id": "finish_effect",
+          "label": {
+            "en": "Soft Stop",
+            "sv": "Mjuk stopp",
+            "nl": "Zachte stop",
+            "de": "Sanfter Stopp",
+            "fr": "Arrêt doux",
+            "it": "Arresto morbido",
+            "no": "Myk stopp",
+            "es": "Parada suave",
+            "da": "Blødt stop",
+            "ru": "Плавная остановка",
+            "pl": "Łagodne zatrzymanie",
+            "ko": "부드럽게 정지",
+            "ar": "إيقاف سلس"
+          }
+        },
+        {
+          "id": "stop_effect",
+          "label": {
+            "en": "Hard Stop",
+            "sv": "Hård stopp",
+            "nl": "Harde stop",
+            "de": "Harter Stopp",
+            "fr": "Arrêt immédiat",
+            "it": "Arresto immediato",
+            "no": "Hard stopp",
+            "es": "Parada inmediata",
+            "da": "Hårdt stop",
+            "ru": "Немедленная остановка",
+            "pl": "Natychmiastowe zatrzymanie",
+            "ko": "즉시 정지",
+            "ar": "إيقاف فوري"
+          }
         }
       ]
+    }
+  ]
 }

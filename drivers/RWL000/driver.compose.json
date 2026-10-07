@@ -1,6 +1,10 @@
 {
-  "platforms": ["local"],
-  "connectivity": ["zigbee"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "name": {
     "en": "Dimmer Switch (RWL020 / RWL021)"
   },
@@ -47,7 +51,19 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!",
+        "nl": "Houd de setupknop aan de achterkant minimaal 10 seconden ingedrukt tot de LED groen is.\n\rLet op: hiermee wordt de dimmerschakelaar gereset!",
+        "de": "Halte die Setup-Taste auf der Rückseite mindestens 10 Sekunden gedrückt, bis die LED grün ist.\n\rAchtung: Dadurch wird der Dimmschalter zurückgesetzt!",
+        "fr": "Maintenez le bouton de configuration à l’arrière au moins 10 secondes jusqu’à ce que la LED soit verte.\n\rAttention : cela réinitialise le variateur !",
+        "it": "Tieni premuto il pulsante di configurazione sul retro per almeno 10 secondi finché il LED diventa verde.\n\rAttenzione: questa operazione reimposta il dimmer!",
+        "sv": "Håll setup-knappen på baksidan intryckt i minst 10 sekunder tills LED-lampan lyser grönt.\n\rObs: detta återställer dimmerbrytaren!",
+        "no": "Hold oppsettknappen på baksiden inne i minst 10 sekunder til LED-en lyser grønt.\n\rMerk: Dette tilbakestiller dimmerbryteren!",
+        "es": "Mantén pulsado el botón de configuración de la parte trasera al menos 10 segundos hasta que el LED sea verde.\n\rAtención: esto restablecerá el regulador!",
+        "da": "Hold opsætningsknappen på bagsiden nede i mindst 10 sekunder, indtil LED'en lyser grønt.\n\rBemærk: Dette nulstiller dæmperkontakten!",
+        "ru": "Удерживайте кнопку настройки сзади не менее 10 секунд, пока индикатор не станет зелёным.\n\rВнимание: это сбросит диммер!",
+        "pl": "Przytrzymaj przycisk konfiguracji z tyłu przez co najmniej 10 sekund, aż dioda zaświeci na zielono.\n\rUwaga: spowoduje to zresetowanie ściemniacza!",
+        "ko": "LED가 녹색이 될 때까지 뒷면의 설정 버튼을 최소 10초간 누르세요.\n\r주의: 디머 스위치가 재설정됩니다!",
+        "ar": "اضغط مطولًا على زر الإعداد في الخلف لمدة 10 ثوانٍ على الأقل حتى يضيء مؤشر LED بالأخضر.\n\rتنبيه: سيؤدي ذلك إلى إعادة ضبط مفتاح التعتيم!"
       }
     }
   }

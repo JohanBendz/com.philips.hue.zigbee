@@ -39,7 +39,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times."
+        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start, try turning the bulb on and off 6 times.",
+        "nl": "Plaats de lamp of schakel deze uit en weer in om het koppelen te starten.\n\nAls het koppelen niet automatisch start, probeer de lamp dan 6 keer uit en aan te zetten.",
+        "de": "Setze die Lampe ein oder schalte sie aus und wieder ein, um die Kopplung zu starten.\n\nWenn die Kopplung nicht automatisch startet, schalte die Lampe 6-mal aus und wieder ein.",
+        "fr": "Installez l’ampoule ou éteignez-la puis rallumez-la pour lancer l’association.\n\nSi l’association ne démarre pas automatiquement, essayez d’éteindre et de rallumer l’ampoule 6 fois.",
+        "it": "Installa la lampadina oppure spegnila e riaccendila per avviare l’associazione.\n\nSe l’associazione non parte automaticamente, prova a spegnere e riaccendere la lampadina 6 volte.",
+        "sv": "Anslut lampan eller stäng av och slå på den för att starta parkopplingen.\n\nOm parkopplingen inte startar automatiskt, prova att slå av och på lampan 6 gånger.",
+        "no": "Koble til pæren, eller slå den av og på for å starte paringen.\n\nHvis paringen ikke starter automatisk, prøv å slå pæren av og på 6 ganger.",
+        "es": "Instala la bombilla o apágala y vuelve a encenderla para iniciar el emparejamiento.\n\nSi el emparejamiento no comienza automáticamente, prueba a apagar y encender la bombilla 6 veces.",
+        "da": "Tilslut pæren, eller sluk og tænd den for at starte parringen.\n\nHvis parringen ikke starter automatisk, prøv at slukke og tænde pæren 6 gange.",
+        "ru": "Установите лампу или выключите и снова включите её, чтобы начать сопряжение.\n\nЕсли сопряжение не начинается автоматически, попробуйте 6 раз выключить и включить лампу.",
+        "pl": "Podłącz żarówkę lub wyłącz ją i włącz ponownie, aby rozpocząć parowanie.\n\nJeśli parowanie nie rozpocznie się automatycznie, spróbuj 6 razy wyłączyć i włączyć żarówkę.",
+        "ko": "전구를 연결하거나 껐다 켜 페어링을 시작하세요.\n\n페어링이 자동으로 시작되지 않으면 전구를 6번 껐다 켜 보세요.",
+        "ar": "وصّل المصباح أو أطفئه ثم شغّله لبدء الاقتران.\n\nإذا لم يبدأ الاقتران تلقائيًا، فجرّب إطفاء المصباح وتشغيله 6 مرات."
       }
     }
   }

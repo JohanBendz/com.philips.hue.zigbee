@@ -1,21 +1,44 @@
 {
-    "id": "temperature_above",
-    "title": "Temperature is above",
-    "titleFormatted": {
-      "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
-      "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
-      "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
-      "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad"
+  "id": "temperature_above",
+  "title": {
+    "en": "Temperature is above",
+    "nl": "Temperatuur is hoger dan",
+    "de": "Temperatur ist über",
+    "fr": "La température est supérieure à",
+    "it": "La temperatura è superiore a",
+    "sv": "Temperaturen är över",
+    "no": "Temperaturen er over",
+    "es": "La temperatura es superior a",
+    "da": "Temperaturen er over",
+    "ru": "Температура выше",
+    "pl": "Temperatura jest powyżej",
+    "ko": "온도가 다음보다 높음",
+    "ar": "درجة الحرارة أعلى من"
+  },
+  "titleFormatted": {
+    "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
+    "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
+    "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
+    "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad",
+    "fr": "[[device]] La température est !{{supérieure|inférieure}} à [[temperature]] degrés",
+    "it": "[[device]] La temperatura è !{{sopra|sotto}} [[temperature]] gradi",
+    "no": "[[device]] Temperaturen er !{{over|under}} [[temperature]] grader",
+    "es": "[[device]] La temperatura está !{{por encima|por debajo}} de [[temperature]] grados",
+    "da": "[[device]] Temperaturen er !{{over|under}} [[temperature]] grader",
+    "ru": "[[device]] Температура !{{выше|ниже}} [[temperature]] градусов",
+    "pl": "[[device]] Temperatura jest !{{powyżej|poniżej}} [[temperature]] stopni",
+    "ko": "[[device]] 온도가 [[temperature]]도 !{{초과|미만}}",
+    "ar": "[[device]] درجة الحرارة !{{أعلى|أقل}} من [[temperature]] درجة"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "class=sensor"
     },
-    "args": [
-      {
-        "name": "device",
-        "type": "device",
-        "filter": "class=sensor"
-      },
-      {
-        "name": "temperature",
-        "type": "number"
-      }
-    ]
+    {
+      "name": "temperature",
+      "type": "number"
+    }
+  ]
 }
