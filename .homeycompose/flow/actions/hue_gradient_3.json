@@ -2,37 +2,126 @@
   "id": "hue_gradient_3",
   "title": {
     "en": "Set 3-color Hue gradient",
-    "sv": "Ställ in Hue-gradient med 3 färger"
+    "sv": "Ställ in Hue-gradient med 3 färger",
+    "nl": "Hue-kleurverloop met 3 kleuren instellen",
+    "de": "3-Farben-Hue-Verlauf einstellen",
+    "fr": "Définir un dégradé Hue à 3 couleurs",
+    "it": "Imposta gradiente Hue a 3 colori",
+    "no": "Angi Hue-gradient med 3 farger",
+    "es": "Establecer degradado Hue de 3 colores",
+    "da": "Indstil Hue-gradient med 3 farver",
+    "ru": "Установить 3-цветный градиент Hue",
+    "pl": "Ustaw 3-kolorowy gradient Hue",
+    "ko": "3색 Hue 그라데이션 설정",
+    "ar": "تعيين تدرج Hue بثلاثة ألوان"
   },
   "titleFormatted": {
     "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
-    "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]"
+    "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]",
+    "nl": "Stel het verloop van [[device]] in op [[color1]], [[color2]], [[color3]]",
+    "de": "Verlauf von [[device]] auf [[color1]], [[color2]], [[color3]] setzen",
+    "fr": "Régler le dégradé de [[device]] sur [[color1]], [[color2]], [[color3]]",
+    "it": "Imposta il gradiente di [[device]] su [[color1]], [[color2]], [[color3]]",
+    "no": "Sett gradienten for [[device]] til [[color1]], [[color2]], [[color3]]",
+    "es": "Establecer el degradado de [[device]] en [[color1]], [[color2]], [[color3]]",
+    "da": "Indstil gradienten for [[device]] til [[color1]], [[color2]], [[color3]]",
+    "ru": "Установить градиент [[device]]: [[color1]], [[color2]], [[color3]]",
+    "pl": "Ustaw gradient [[device]] na [[color1]], [[color2]], [[color3]]",
+    "ko": "[[device]] 그라데이션을 [[color1]], [[color2]], [[color3]](으)로 설정",
+    "ar": "اضبط تدرج [[device]] على [[color1]]، [[color2]]، [[color3]]"
   },
   "hint": {
     "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
-    "sv": "För Hue-gradientlampor som exponerar Signify-kluster 0xFC03, till exempel Gradient Signe. Lampor utan stöd avvisas säkert."
+    "sv": "För Hue-gradientlampor som exponerar Signify-kluster 0xFC03, till exempel Gradient Signe. Lampor utan stöd avvisas säkert.",
+    "nl": "Voor Hue-gradientlampen die Signify-cluster 0xFC03 aanbieden, zoals Gradient Signe. Niet-ondersteunde lampen worden veilig geweigerd.",
+    "de": "Für Hue-Verlaufslampen mit Signify-Cluster 0xFC03, z. B. Gradient Signe. Nicht unterstützte Lampen werden sicher abgewiesen.",
+    "fr": "Pour les lampes Hue à dégradé exposant le cluster Signify 0xFC03, comme Gradient Signe. Les lampes non prises en charge échouent sans risque.",
+    "it": "Per luci Hue con gradiente che espongono il cluster Signify 0xFC03, come Gradient Signe. Le luci non supportate vengono rifiutate in sicurezza.",
+    "no": "For Hue-gradientlys som eksponerer Signify-klynge 0xFC03, som Gradient Signe. Lys uten støtte avvises trygt.",
+    "es": "Para luces Hue con degradado que exponen el clúster Signify 0xFC03, como Gradient Signe. Las luces no compatibles fallan de forma segura.",
+    "da": "Til Hue-gradientlys der eksponerer Signify-klynge 0xFC03, f.eks. Gradient Signe. Ikke-understøttede lys afvises sikkert.",
+    "ru": "Для градиентных светильников Hue с кластером Signify 0xFC03, например Gradient Signe. Неподдерживаемые светильники безопасно отклоняются.",
+    "pl": "Dla świateł Hue z gradientem udostępniających klaster Signify 0xFC03, np. Gradient Signe. Nieobsługiwane światła są bezpiecznie odrzucane.",
+    "ko": "Gradient Signe처럼 Signify 클러스터 0xFC03을 제공하는 Hue 그라데이션 조명용입니다. 지원하지 않는 조명에서는 안전하게 실패합니다.",
+    "ar": "لأضواء Hue المتدرجة التي تعرض مجموعة Signify ‏0xFC03، مثل Gradient Signe. يتم رفض الأضواء غير المدعومة بأمان."
   },
   "args": [
     {
       "type": "device",
       "name": "device",
       "filter": "class=light&capabilities=light_hue,light_saturation",
-      "title": { "en": "Light", "sv": "Lampa" }
+      "title": {
+        "en": "Light",
+        "sv": "Lampa",
+        "nl": "Lamp",
+        "de": "Lampe",
+        "fr": "Lampe",
+        "it": "Luce",
+        "no": "Lys",
+        "es": "Luz",
+        "da": "Lys",
+        "ru": "Светильник",
+        "pl": "Światło",
+        "ko": "조명",
+        "ar": "ضوء"
+      }
     },
     {
       "type": "color",
       "name": "color1",
-      "title": { "en": "Color 1", "sv": "Färg 1" }
+      "title": {
+        "en": "Color 1",
+        "sv": "Färg 1",
+        "nl": "Kleur 1",
+        "de": "Farbe 1",
+        "fr": "Couleur 1",
+        "it": "Colore 1",
+        "no": "Farge 1",
+        "es": "Color 1",
+        "da": "Farve 1",
+        "ru": "Цвет 1",
+        "pl": "Kolor 1",
+        "ko": "색상 1",
+        "ar": "اللون 1"
+      }
     },
     {
       "type": "color",
       "name": "color2",
-      "title": { "en": "Color 2", "sv": "Färg 2" }
+      "title": {
+        "en": "Color 2",
+        "sv": "Färg 2",
+        "nl": "Kleur 2",
+        "de": "Farbe 2",
+        "fr": "Couleur 2",
+        "it": "Colore 2",
+        "no": "Farge 2",
+        "es": "Color 2",
+        "da": "Farve 2",
+        "ru": "Цвет 2",
+        "pl": "Kolor 2",
+        "ko": "색상 2",
+        "ar": "اللون 2"
+      }
     },
     {
       "type": "color",
       "name": "color3",
-      "title": { "en": "Color 3", "sv": "Färg 3" }
+      "title": {
+        "en": "Color 3",
+        "sv": "Färg 3",
+        "nl": "Kleur 3",
+        "de": "Farbe 3",
+        "fr": "Couleur 3",
+        "it": "Colore 3",
+        "no": "Farge 3",
+        "es": "Color 3",
+        "da": "Farve 3",
+        "ru": "Цвет 3",
+        "pl": "Kolor 3",
+        "ko": "색상 3",
+        "ar": "اللون 3"
+      }
     }
   ]
 }

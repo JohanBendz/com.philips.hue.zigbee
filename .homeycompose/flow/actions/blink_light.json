@@ -4,13 +4,31 @@
     "en": "Blink the light",
     "sv": "Blinka ljuset",
     "nl": "Knipper de lamp",
-    "de": "Blink das Licht"
+    "de": "Blink das Licht",
+    "fr": "Faire clignoter la lumière",
+    "it": "Fai lampeggiare la luce",
+    "no": "Blink lyset",
+    "es": "Hacer parpadear la luz",
+    "da": "Blink lyset",
+    "ru": "Мигать светом",
+    "pl": "Migaj światłem",
+    "ko": "조명 깜박이기",
+    "ar": "اجعل الضوء يومض"
   },
   "titleFormatted": {
     "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
     "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
     "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
-    "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+    "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen",
+    "fr": "Régler [[device]] sur [[blink_type]] avec [[blinks]] clignotements",
+    "it": "Imposta [[device]] su [[blink_type]] con [[blinks]] lampeggi",
+    "no": "Sett blinktype for [[device]] til [[blink_type]] med [[blinks]] blink",
+    "es": "Establecer [[device]] en [[blink_type]] con [[blinks]] parpadeos",
+    "da": "Indstil blinktype for [[device]] til [[blink_type]] med [[blinks]] blink",
+    "ru": "Установить для [[device]] тип [[blink_type]] с числом миганий [[blinks]]",
+    "pl": "Ustaw dla [[device]] typ [[blink_type]] z liczbą mignięć [[blinks]]",
+    "ko": "[[device]]의 깜박임 유형을 [[blink_type]](으)로 설정하고 [[blinks]]회 깜박임",
+    "ar": "اضبط نوع وميض [[device]] على [[blink_type]] مع [[blinks]] ومضات"
   },
   "args": [
     {
@@ -25,7 +43,16 @@
         "en": "Long or short blink",
         "sv": "Lång eller kort blinkning",
         "nl": "Lang of kort knipperen",
-        "de": "Langes oder kurzes blinken"
+        "de": "Langes oder kurzes blinken",
+        "fr": "Clignotement long ou court",
+        "it": "Lampeggio lungo o breve",
+        "no": "Langt eller kort blink",
+        "es": "Parpadeo largo o corto",
+        "da": "Langt eller kort blink",
+        "ru": "Длинное или короткое мигание",
+        "pl": "Długie lub krótkie mignięcie",
+        "ko": "길게 또는 짧게 깜박임",
+        "ar": "وميض طويل أو قصير"
       },
       "values": [
         {
@@ -34,7 +61,16 @@
             "en": "long blink",
             "sv": "lång blinkning",
             "nl": "lang knipperen",
-            "de": "langes blinken"
+            "de": "langes blinken",
+            "fr": "clignotement long",
+            "it": "lampeggio lungo",
+            "no": "langt blink",
+            "es": "parpadeo largo",
+            "da": "langt blink",
+            "ru": "длинное мигание",
+            "pl": "długie mignięcie",
+            "ko": "길게 깜박임",
+            "ar": "وميض طويل"
           }
         },
         {
@@ -43,7 +79,16 @@
             "en": "short blink",
             "sv": "kort blinkning",
             "nl": "kort knipperen",
-            "de": "kurzes Blinken"
+            "de": "kurzes Blinken",
+            "fr": "clignotement court",
+            "it": "lampeggio breve",
+            "no": "kort blink",
+            "es": "parpadeo corto",
+            "da": "kort blink",
+            "ru": "короткое мигание",
+            "pl": "krótkie mignięcie",
+            "ko": "짧게 깜박임",
+            "ar": "وميض قصير"
           }
         }
       ]
@@ -55,7 +100,16 @@
         "en": "Blinks",
         "sv": "Blinkningar",
         "nl": "Knippert",
-        "de": "Blinkt"
+        "de": "Blinkt",
+        "fr": "Clignotements",
+        "it": "Lampeggi",
+        "no": "Blink",
+        "es": "Parpadeos",
+        "da": "Blink",
+        "ru": "Мигания",
+        "pl": "Mignięcia",
+        "ko": "깜박임",
+        "ar": "الومضات"
       },
       "min": 1,
       "max": 25,
@@ -64,9 +118,17 @@
         "en": "Number of blinks",
         "sv": "Antal blinkningar",
         "nl": "Aantal keer knipperen",
-        "de": "Anzahl der Blinkzeichen"
+        "de": "Anzahl der Blinkzeichen",
+        "fr": "Nombre de clignotements",
+        "it": "Numero di lampeggi",
+        "no": "Antall blink",
+        "es": "Número de parpadeos",
+        "da": "Antal blink",
+        "ru": "Количество миганий",
+        "pl": "Liczba mignięć",
+        "ko": "깜박임 횟수",
+        "ar": "عدد الومضات"
       }
     }
   ]
 }
-

@@ -3,11 +3,34 @@
     {
       "id": "ROM001_button",
       "title": {
-        "en": "Button pressed"
+        "en": "Button pressed",
+        "nl": "Knop ingedrukt",
+        "de": "Taste gedrückt",
+        "fr": "Bouton appuyé",
+        "it": "Pulsante premuto",
+        "sv": "Knapp tryckt",
+        "no": "Knapp trykket",
+        "es": "Botón pulsado",
+        "da": "Knap trykket",
+        "ru": "Кнопка нажата",
+        "pl": "Przycisk naciśnięty",
+        "ko": "버튼 누름",
+        "ar": "تم الضغط على الزر"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "nl": "Knop [[action]]"
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Knapp [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
@@ -18,55 +41,143 @@
               "id": "pressed",
               "label": {
                 "en": "Pressed",
-                "nl": "Gedrukt"
+                "nl": "Gedrukt",
+                "de": "Gedrückt",
+                "fr": "Appuyé",
+                "it": "Premuto",
+                "sv": "Tryckt",
+                "no": "Trykket",
+                "es": "Pulsado",
+                "da": "Trykket",
+                "ru": "Нажато",
+                "pl": "Naciśnięto",
+                "ko": "누름",
+                "ar": "تم الضغط"
               }
             },
             {
               "id": "pressed-odd",
               "label": {
                 "en": "Pressed on (odd times)",
-                "nl": "Aan gedrukt (oneven)"
+                "nl": "Aan gedrukt (oneven)",
+                "de": "Ein gedrückt (ungerade)",
+                "fr": "Appuyé sur marche (nombre impair)",
+                "it": "Premuto accensione (volte dispari)",
+                "sv": "På tryckt (udda antal)",
+                "no": "På trykket (oddetall)",
+                "es": "Encendido pulsado (veces impares)",
+                "da": "Til trykket (ulige antal)",
+                "ru": "Нажато вкл. (нечётное число)",
+                "pl": "Naciśnięto włącz (nieparzyście)",
+                "ko": "켜기 누름 (홀수 회)",
+                "ar": "ضغط تشغيل (عدد فردي)"
               }
             },
             {
               "id": "pressed-even",
               "label": {
                 "en": "Pressed off (even times)",
-                "nl": "Uit gedrukt (even)"
+                "nl": "Uit gedrukt (even)",
+                "de": "Aus gedrückt (gerade)",
+                "fr": "Appuyé sur arrêt (nombre pair)",
+                "it": "Premuto spegnimento (volte pari)",
+                "sv": "Av tryckt (jämnt antal)",
+                "no": "Av trykket (partall)",
+                "es": "Apagado pulsado (veces pares)",
+                "da": "Fra trykket (lige antal)",
+                "ru": "Нажато выкл. (чётное число)",
+                "pl": "Naciśnięto wyłącz (parzyście)",
+                "ko": "끄기 누름 (짝수 회)",
+                "ar": "ضغط إيقاف (عدد زوجي)"
               }
             },
             {
               "id": "hold",
               "label": {
                 "en": "Held (any time)",
-                "nl": "Vast gehouden (alle)"
+                "nl": "Vast gehouden (alle)",
+                "de": "Gehalten (beliebig lang)",
+                "fr": "Maintenu (toute durée)",
+                "it": "Tenuto premuto (qualsiasi durata)",
+                "sv": "Hållen (valfri tid)",
+                "no": "Holdt (uansett tid)",
+                "es": "Mantenido (cualquier duración)",
+                "da": "Holdt (vilkårlig tid)",
+                "ru": "Удержание (любая длительность)",
+                "pl": "Przytrzymano (dowolny czas)",
+                "ko": "길게 누름 (시간 무관)",
+                "ar": "ضغط مطول (أي مدة)"
               }
             },
             {
               "id": "short-hold",
               "label": {
                 "en": "Held (<1 sec)",
-                "nl": "Vast gehouden (<1 sec)"
+                "nl": "Vast gehouden (<1 sec)",
+                "de": "Gehalten (<1 Sek.)",
+                "fr": "Maintenu (<1 s)",
+                "it": "Tenuto premuto (<1 s)",
+                "sv": "Hållen (<1 s)",
+                "no": "Holdt (<1 s)",
+                "es": "Mantenido (<1 s)",
+                "da": "Holdt (<1 s)",
+                "ru": "Удержание (<1 с)",
+                "pl": "Przytrzymano (<1 s)",
+                "ko": "길게 누름 (<1초)",
+                "ar": "ضغط مطول (<1 ثانية)"
               }
             },
             {
               "id": "long-hold",
               "label": {
                 "en": "Held (>1 sec)",
-                "nl": "Vast gehouden (>1 sec)"
+                "nl": "Vast gehouden (>1 sec)",
+                "de": "Gehalten (>1 Sek.)",
+                "fr": "Maintenu (>1 s)",
+                "it": "Tenuto premuto (>1 s)",
+                "sv": "Hållen (>1 s)",
+                "no": "Holdt (>1 s)",
+                "es": "Mantenido (>1 s)",
+                "da": "Holdt (>1 s)",
+                "ru": "Удержание (>1 с)",
+                "pl": "Przytrzymano (>1 s)",
+                "ko": "길게 누름 (>1초)",
+                "ar": "ضغط مطول (>1 ثانية)"
               }
             },
             {
               "id": "released",
               "label": {
                 "en": "Released (if status=on and held)",
-                "nl": "Losgelaten (als status=aan en lang gedrukt)"
+                "nl": "Losgelaten (als status=aan en lang gedrukt)",
+                "de": "Losgelassen (wenn Status=ein und gehalten)",
+                "fr": "Relâché (si état=marche et maintenu)",
+                "it": "Rilasciato (se stato=acceso e tenuto)",
+                "sv": "Släppt (om status=på och hållen)",
+                "no": "Sluppet (hvis status=på og holdt)",
+                "es": "Soltado (si estado=encendido y mantenido)",
+                "da": "Sluppet (hvis status=til og holdt)",
+                "ru": "Отпущено (если состояние=вкл. и удерживалось)",
+                "pl": "Zwolniono (gdy stan=wł. i przytrzymano)",
+                "ko": "놓음 (상태=켜짐 및 길게 누름)",
+                "ar": "تم الإفلات (إذا كانت الحالة=تشغيل مع ضغط مطول)"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

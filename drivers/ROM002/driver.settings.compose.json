@@ -5,13 +5,92 @@
     "value": "dualpushbutton",
     "label": {
       "en": "Default mode",
-      "nl": "Standaardmodus"
+      "nl": "Standaardmodus",
+      "de": "Standardmodus",
+      "fr": "Mode par défaut",
+      "it": "Modalità predefinita",
+      "sv": "Standardläge",
+      "no": "Standardmodus",
+      "es": "Modo predeterminado",
+      "da": "Standardtilstand",
+      "ru": "Режим по умолчанию",
+      "pl": "Tryb domyślny",
+      "ko": "기본 모드",
+      "ar": "الوضع الافتراضي"
     },
     "values": [
-      { "id": "singlerocker", "label": { "en": "Single Rocker", "nl": "Enkele wip" } },
-      { "id": "singlepushbutton", "label": { "en": "Single pushbutton", "nl": "Enkele drukknop" } },
-      { "id": "dualrocker", "label": { "en": "Dual Rocker", "nl": "Dubbele wip" } },
-      { "id": "dualpushbutton", "label": { "en": "Dual pushbutton", "nl": "Dubbele drukknop" } }
+      {
+        "id": "singlerocker",
+        "label": {
+          "en": "Single Rocker",
+          "nl": "Enkele wip",
+          "de": "Einfacher Wippschalter",
+          "fr": "Interrupteur simple à bascule",
+          "it": "Interruttore singolo a bilanciere",
+          "sv": "Enkel vippbrytare",
+          "no": "Enkel vippebryter",
+          "es": "Interruptor basculante simple",
+          "da": "Enkelt vippekontakt",
+          "ru": "Одинарный клавишный выключатель",
+          "pl": "Pojedynczy przełącznik kołyskowy",
+          "ko": "단일 로커 스위치",
+          "ar": "مفتاح هزاز مفرد"
+        }
+      },
+      {
+        "id": "singlepushbutton",
+        "label": {
+          "en": "Single pushbutton",
+          "nl": "Enkele drukknop",
+          "de": "Einfacher Taster",
+          "fr": "Bouton-poussoir simple",
+          "it": "Pulsante singolo",
+          "sv": "Enkel tryckknapp",
+          "no": "Enkel trykknapp",
+          "es": "Pulsador simple",
+          "da": "Enkelt trykknap",
+          "ru": "Одинарная кнопка",
+          "pl": "Pojedynczy przycisk chwilowy",
+          "ko": "단일 푸시버튼",
+          "ar": "زر ضاغط مفرد"
+        }
+      },
+      {
+        "id": "dualrocker",
+        "label": {
+          "en": "Dual Rocker",
+          "nl": "Dubbele wip",
+          "de": "Doppel-Wippschalter",
+          "fr": "Double interrupteur à bascule",
+          "it": "Interruttore doppio a bilanciere",
+          "sv": "Dubbel vippbrytare",
+          "no": "Dobbel vippebryter",
+          "es": "Interruptor basculante doble",
+          "da": "Dobbelt vippekontakt",
+          "ru": "Двойной клавишный выключатель",
+          "pl": "Podwójny przełącznik kołyskowy",
+          "ko": "듀얼 로커 스위치",
+          "ar": "مفتاح هزاز مزدوج"
+        }
+      },
+      {
+        "id": "dualpushbutton",
+        "label": {
+          "en": "Dual pushbutton",
+          "nl": "Dubbele drukknop",
+          "de": "Doppeltaster",
+          "fr": "Double bouton-poussoir",
+          "it": "Doppio pulsante",
+          "sv": "Dubbel tryckknapp",
+          "no": "Dobbel trykknapp",
+          "es": "Pulsador doble",
+          "da": "Dobbelt trykknap",
+          "ru": "Двойная кнопка",
+          "pl": "Podwójny przycisk chwilowy",
+          "ko": "듀얼 푸시버튼",
+          "ar": "زر ضاغط مزدوج"
+        }
+      }
     ]
   }
 ]

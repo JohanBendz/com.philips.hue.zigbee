@@ -2,7 +2,9 @@
   "name": {
     "en": "Infuse Medium Ceiling Light"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 33.5,
@@ -32,7 +34,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge."
+        "en": "Plug in or toggle the unit to start pairing.\n\nIf pairing does not automatically start you probably need to reset the unit with a remote or a philips hue bridge.",
+        "nl": "Sluit het apparaat aan of schakel het in en uit om het koppelen te starten.\n\nAls het koppelen niet automatisch start, moet je het apparaat waarschijnlijk resetten met een afstandsbediening of een Philips Hue Bridge.",
+        "de": "Schließe das Gerät an oder schalte es aus und wieder ein, um die Kopplung zu starten.\n\nWenn die Kopplung nicht automatisch startet, musst du das Gerät wahrscheinlich mit einer Fernbedienung oder einer Philips Hue Bridge zurücksetzen.",
+        "fr": "Branchez l’appareil ou éteignez-le puis rallumez-le pour lancer l’association.\n\nSi l’association ne démarre pas automatiquement, vous devrez probablement réinitialiser l’appareil avec une télécommande ou un pont Philips Hue.",
+        "it": "Collega il dispositivo oppure spegnilo e riaccendilo per avviare l’associazione.\n\nSe l’associazione non parte automaticamente, probabilmente devi reimpostare il dispositivo con un telecomando o un bridge Philips Hue.",
+        "sv": "Anslut enheten eller stäng av och slå på den för att starta parkopplingen.\n\nOm parkopplingen inte startar automatiskt behöver du troligen återställa enheten med en fjärrkontroll eller en Philips Hue Bridge.",
+        "no": "Koble til enheten, eller slå den av og på for å starte paringen.\n\nHvis paringen ikke starter automatisk, må du sannsynligvis tilbakestille enheten med en fjernkontroll eller en Philips Hue Bridge.",
+        "es": "Conecta el dispositivo o apágalo y vuelve a encenderlo para iniciar el emparejamiento.\n\nSi el emparejamiento no comienza automáticamente, probablemente debas restablecer el dispositivo con un mando o un Philips Hue Bridge.",
+        "da": "Tilslut enheden, eller sluk og tænd den for at starte parringen.\n\nHvis parringen ikke starter automatisk, skal du sandsynligvis nulstille enheden med en fjernbetjening eller en Philips Hue Bridge.",
+        "ru": "Подключите устройство или выключите и снова включите его, чтобы начать сопряжение.\n\nЕсли сопряжение не начинается автоматически, вероятно, потребуется сбросить устройство с помощью пульта или Philips Hue Bridge.",
+        "pl": "Podłącz urządzenie lub wyłącz je i włącz ponownie, aby rozpocząć parowanie.\n\nJeśli parowanie nie rozpocznie się automatycznie, prawdopodobnie trzeba zresetować urządzenie za pomocą pilota lub Philips Hue Bridge.",
+        "ko": "장치를 연결하거나 껐다 켜 페어링을 시작하세요.\n\n페어링이 자동으로 시작되지 않으면 리모컨 또는 Philips Hue Bridge를 사용해 장치를 재설정해야 할 수 있습니다.",
+        "ar": "وصّل الجهاز أو أطفئه ثم شغّله لبدء الاقتران.\n\nإذا لم يبدأ الاقتران تلقائيًا، فقد تحتاج إلى إعادة ضبط الجهاز باستخدام جهاز تحكم أو Philips Hue Bridge."
       }
     }
   }

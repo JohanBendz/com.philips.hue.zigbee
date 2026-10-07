@@ -1,6 +1,10 @@
 {
-  "platforms": ["local"],
-  "connectivity": ["zigbee"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "name": {
     "en": "Dimmer Switch (RWL022 / v2)"
   },
@@ -47,7 +51,19 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Push a pin down the small hole under the battery lid for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!"
+        "en": "Push a pin down the small hole under the battery lid for at least 10 seconds until the LED is green.\n\rDisclaimer: This will reset the dimmer switch!",
+        "nl": "Druk met een pinnetje minimaal 10 seconden in het kleine gaatje onder het batterijklepje tot de LED groen is.\n\rLet op: hiermee wordt de dimmerschakelaar gereset!",
+        "de": "Drücke mindestens 10 Sekunden mit einem Stift in das kleine Loch unter dem Batteriedeckel, bis die LED grün ist.\n\rAchtung: Dadurch wird der Dimmschalter zurückgesetzt!",
+        "fr": "Enfoncez une pointe dans le petit trou sous le couvercle de la pile pendant au moins 10 secondes jusqu’à ce que la LED soit verte.\n\rAttention : cela réinitialise le variateur !",
+        "it": "Premi con uno spillo nel piccolo foro sotto il coperchio della batteria per almeno 10 secondi finché il LED diventa verde.\n\rAttenzione: questa operazione reimposta il dimmer!",
+        "sv": "Tryck in en nål i det lilla hålet under batteriluckan i minst 10 sekunder tills LED-lampan lyser grönt.\n\rObs: detta återställer dimmerbrytaren!",
+        "no": "Trykk en pinne inn i det lille hullet under batteridekselet i minst 10 sekunder til LED-en lyser grønt.\n\rMerk: Dette tilbakestiller dimmerbryteren!",
+        "es": "Introduce un alfiler en el pequeño orificio bajo la tapa de la batería durante al menos 10 segundos hasta que el LED sea verde.\n\rAtención: esto restablecerá el regulador!",
+        "da": "Tryk en nål ned i det lille hul under batteridækslet i mindst 10 sekunder, indtil LED'en lyser grønt.\n\rBemærk: Dette nulstiller dæmperkontakten!",
+        "ru": "Нажмите тонким предметом в маленькое отверстие под крышкой батареи и удерживайте не менее 10 секунд, пока индикатор не станет зелёным.\n\rВнимание: это сбросит диммер!",
+        "pl": "Wciśnij szpilkę w mały otwór pod pokrywą baterii i przytrzymaj przez co najmniej 10 sekund, aż dioda zaświeci na zielono.\n\rUwaga: spowoduje to zresetowanie ściemniacza!",
+        "ko": "배터리 덮개 아래의 작은 구멍을 핀으로 최소 10초간 눌러 LED가 녹색이 되게 하세요.\n\r주의: 디머 스위치가 재설정됩니다!",
+        "ar": "اضغط بدبوس داخل الفتحة الصغيرة أسفل غطاء البطارية لمدة 10 ثوانٍ على الأقل حتى يضيء مؤشر LED بالأخضر.\n\rتنبيه: سيؤدي ذلك إلى إعادة ضبط مفتاح التعتيم!"
       }
     }
   }
