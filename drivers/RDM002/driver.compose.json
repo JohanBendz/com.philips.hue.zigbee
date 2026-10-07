@@ -1,6 +1,10 @@
 {
-  "platforms": ["local"],
-  "connectivity": ["zigbee"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "name": {
     "en": "Tap Dial Switch"
   },
@@ -47,7 +51,19 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Push the setup button inside the device for aprox 12 seconds until the LED on the front turns green."
+        "en": "Push the setup button inside the device for aprox 12 seconds until the LED on the front turns green.",
+        "nl": "Houd de setupknop in het apparaat ongeveer 12 seconden ingedrukt tot de LED aan de voorkant groen wordt.",
+        "de": "Halte die Setup-Taste im Gerät etwa 12 Sekunden gedrückt, bis die LED an der Vorderseite grün wird.",
+        "fr": "Maintenez le bouton de configuration à l’intérieur de l’appareil environ 12 secondes jusqu’à ce que la LED avant devienne verte.",
+        "it": "Tieni premuto il pulsante di configurazione all’interno del dispositivo per circa 12 secondi finché il LED anteriore diventa verde.",
+        "sv": "Håll setup-knappen inuti enheten intryckt i cirka 12 sekunder tills LED-lampan på framsidan blir grön.",
+        "no": "Hold oppsettknappen inne i enheten i omtrent 12 sekunder til LED-en foran blir grønn.",
+        "es": "Mantén pulsado el botón de configuración dentro del dispositivo durante unos 12 segundos hasta que el LED frontal se vuelva verde.",
+        "da": "Hold opsætningsknappen inde i enheden nede i ca. 12 sekunder, indtil LED'en på forsiden bliver grøn.",
+        "ru": "Удерживайте кнопку настройки внутри устройства около 12 секунд, пока индикатор спереди не станет зелёным.",
+        "pl": "Przytrzymaj przycisk konfiguracji wewnątrz urządzenia przez około 12 sekund, aż przednia dioda zmieni kolor na zielony.",
+        "ko": "전면 LED가 녹색이 될 때까지 장치 내부의 설정 버튼을 약 12초간 누르세요.",
+        "ar": "اضغط مطولًا على زر الإعداد داخل الجهاز لمدة نحو 12 ثانية حتى يتحول مؤشر LED الأمامي إلى الأخضر."
       }
     }
   }
