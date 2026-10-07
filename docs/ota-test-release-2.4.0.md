@@ -10,7 +10,7 @@ Physical OTA results are collected **during Test**. Their absence is not a softw
 
 | Item | Prepared scope |
 | --- | --- |
-| Development baseline | `develop-2.4` at `349e3423396b57e6f0cd1e6933624115161d40b2` |
+| Development baseline | `develop-2.4` at `e33e6f292a86d461c5ee3e8f2cc2fd6cf43fd261` |
 | App / package / lockfile version | `2.4.0` |
 | App runtime minimum | Homey `>=12.9.0`, Node.js `>=22` |
 | Native OTA requirements | Supported Homey platform on `13.2.0+`; Homey Mobile App `9.10.0+` |
@@ -20,15 +20,15 @@ Physical OTA results are collected **during Test**. Their absence is not a softw
 | Model guards | All 67 enabled IDs have explicit source-linked family checks |
 | Release files | `.homeychangelog.json` 2.4.0 entry, `CHANGELOG.md`, `README.md` and `README.txt` |
 
-The Develop refresh includes the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, image-selection metadata and approved model families are unchanged by this release preparation. The later help-text update adds English/Swedish post-restart guidance to the firmware changelogs.
+The Develop refresh includes #806 app-language localization, the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, image-selection metadata and approved model families are unchanged by this release preparation. The later help-text update adds English/Swedish post-restart guidance to the firmware changelogs.
 
 See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [model evidence register](ota-model-evidence.md). A driver's retail name is not a firmware-family identifier. Of the enabled mappings, 64 have an explicit maintained model-table entry, API fixture/capture, OTA request or owner report. LTO001, LTW015 and LWA029 currently have curated-database evidence only and need independent device observations during Test.
 
 ## Prepared candidate verification
 
-**Merge review: 2026-10-07.** Reviewed OTA source: `41c3927a391970df2ab8d0167a0a5b19ddd05bab`; current `develop-2.4` is still `349e3423396b57e6f0cd1e6933624115161d40b2` and is already included. PR #758 is open, ready for review and conflict-free. No blocking implementation finding remains for integration into the planned 2.4.0 Test release. The follow-up commit records this review only in `docs/`, which is excluded from the packaged app.
+**Merge review: 2026-10-07.** Reviewed OTA source: `eb8b87127aeb60c3d64525100818ba41c6ff398e`; current `develop-2.4` is `e33e6f292a86d461c5ee3e8f2cc2fd6cf43fd261` and is already included. PR #758 is open, ready for review and conflict-free. No blocking implementation finding remains for integration into the planned 2.4.0 Test release. The latest Develop language merge (#806) was synced into `ota-2026` without conflicts and validated together with OTA. The documentation follow-up changes only `docs/`, which is excluded from the packaged app.
 
-A clean `npm ci --ignore-scripts`, Node.js **24.19.0** and Homey CLI **4.5.0** passed publish validation and **215 tests / 0 failures**. [PR CI for the reviewed source](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37240962101) also passed on Node.js 22. CI for the documentation follow-up is recorded in PR #758 and the dashboard. All 67 evidence-register rows and 29 local documentation links/anchors were checked. Selection checks across 63 update entries and 691 file-version boundary scenarios reach the reviewed target or correctly have no newer image. The three runtime file differences against Develop are whitespace only.
+A clean `npm ci --ignore-scripts`, Node.js **24.19.0** and Homey CLI **4.5.0** passed publish validation and **219 tests / 0 failures**. [PR CI for the reviewed source](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37240962101) passed on Node.js 22 before the localization refresh. CI for the final refreshed candidate is recorded in PR #758 and the dashboard. All 67 evidence-register rows and 30 local documentation links/anchors were checked. Selection checks across 63 update entries and 691 file-version boundary scenarios reach the reviewed target or correctly have no newer image. The three runtime file differences against Develop are whitespace only.
 
 The fresh catalogue audit resolved upstream to `10797024f00acd9530f10e8517a68823c59f3b3b` (index SHA-256 `e5cbc330ae03b307154bd4940752d4525487875e1552cfc691c8cde9019a7676`), with **zero active-family changes** against the fixed reviewed reference `9f46fc5`. App/package/lockfile versions and the release-note key agree on **2.4.0**.
 
@@ -36,14 +36,14 @@ The native CLI `app build` and archive pipeline were used to rebuild the verific
 
 | Local CLI archive measurement | Result |
 | --- | ---: |
-| Files | 1,093 |
-| File bytes before compression | 62,294,893 |
-| Compressed bytes | 59,112,930 |
+| Files | 1,105 |
+| File bytes before compression | 64,758,250 |
+| Compressed bytes | 59,246,063 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 
-Archive SHA-256: `85113935bee5faf20a95ad5f737c4c95fe6d654e9a54b9a79116fbef5f60a165`. This identifies the local verification archive built from `41c3927`, not a published build. Rebuild and record the final Develop release commit at the Test cut.
+Archive SHA-256: `35beb66938e458f441f3939a7e4887e363a7bdb6fa160e7ce0fb046f1d792403`. This identifies the local verification archive built from `eb8b871`, not a published build. Rebuild and record the final Develop release commit at the Test cut.
 
-The earlier `f5dbfdd` verification archive omitted the production dependencies and also predates the post-restart help text. Its 870-file measurements and SHA-256 are superseded; it must not be used for publication. Source-level firmware validation remains valid, and no firmware or runtime change was needed to correct the package verification. Always include the CLI production-dependency build step when inspecting an upload archive.
+The earlier `f5dbfdd` verification archive omitted the production dependencies and also predates the post-restart help text. Its 870-file measurements and SHA-256 are superseded; it must not be used for publication. Source-level firmware validation remains valid, and no firmware or runtime change was needed to correct the package verification. Always run the CLI production-dependency build step after validation when inspecting an upload archive: validation preprocesses the build directory and does not copy production dependencies.
 
 ## Software checks before integration and publication
 

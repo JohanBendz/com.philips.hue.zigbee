@@ -2,7 +2,7 @@
 
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
-OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-07 merge review confirms Develop [`349e342`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/349e3423396b57e6f0cd1e6933624115161d40b2), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is ready for integration into the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
+OTA preparation remains on `ota-2026`, based on and targeting `develop-2.4`. The 2026-10-07 merge review confirms Develop [`e33e6f2`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/e33e6f292a86d461c5ee3e8f2cc2fd6cf43fd261), version **2.4.0** and Homey compatibility **`>=12.9.0`**. OTA is ready for integration into the planned **2.4.0 Homey Test** release. See the [release handoff](ota-test-release-2.4.0.md) for integration, validation and Test follow-up. No release has been published by this preparation.
 
 See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for coverage limits and the direct Hue-server cross-check. The release handoff supersedes that review's open version/channel preparation items. Catalogue consistency does not mean full Hue coverage.
 
@@ -63,7 +63,7 @@ The original audit on 2026-10-02, before the Develop integration, resolved to th
 
 ## Packaging and merge verification — 2026-10-07
 
-The current `develop-2.4` baseline `349e342` is already included in reviewed OTA source `41c3927`. Homey CLI **4.5.0** publish validation, **215 local tests**, the source PR CI and whitespace checks pass. All 67 model-evidence rows, 29 local documentation links/anchors and 691 file-version boundary scenarios were checked. There are no blocking code findings for the planned Test integration. The [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) records the exact review scope and remaining Test observations.
+The current `develop-2.4` baseline `e33e6f2` is already included in reviewed OTA source `eb8b871`. Homey CLI **4.5.0** publish validation, **219 local tests**, the source PR CI and whitespace checks pass. All 67 model-evidence rows, 30 local documentation links/anchors and 691 file-version boundary scenarios were checked. There are no blocking code findings for the planned Test integration. The [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) records the exact review scope and remaining Test observations.
 
 The 2026-10-07 upstream audit resolved to `10797024f00acd9530f10e8517a68823c59f3b3b` and again found **zero active-family changes** against the fixed `9f46fc5` reference. The reviewed catalogue and all firmware bytes are unchanged.
 
@@ -74,11 +74,11 @@ A fresh native CLI `app build` and archive inspection confirms all **47 OTA driv
 | Firmware files in the source/build | 141 |
 | Firmware bytes, including per-driver copies | 51,894,298 |
 | Unique firmware image bytes | 13,141,920 |
-| Build file count | 1,093 |
-| Build file bytes, including firmware and dependencies | 62,294,893 |
-| Compressed CLI upload archive bytes | 59,112,930 |
+| Build file count | 1,105 |
+| Build file bytes, including firmware and dependencies | 64,758,250 |
+| Compressed CLI upload archive bytes | 59,246,063 |
 
-Archive SHA-256: `85113935bee5faf20a95ad5f737c4c95fe6d654e9a54b9a79116fbef5f60a165`. This local package was built from `41c3927`; the documentation follow-up changes excluded `docs/` files only. No merge into Develop, upload or installation was performed. Record the final release commit and rebuild at publication.
+Archive SHA-256: `35beb66938e458f441f3939a7e4887e363a7bdb6fa160e7ce0fb046f1d792403`. This local package was built from `eb8b871`; the documentation follow-up changes excluded `docs/` files only. No merge into Develop, upload or installation was performed. Record the final release commit and rebuild at publication.
 
 The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files remain in their declared driver asset directories. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. The upload archive size therefore does not establish installed App Store app size.
 
