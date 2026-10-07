@@ -33,7 +33,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power the wired dimmer to start pairing. If pairing does not automatically start, reset it according to the Philips Hue instructions."
+        "en": "Power the wired dimmer to start pairing. If pairing does not automatically start, reset it according to the Philips Hue instructions.",
+        "nl": "Voorzie de bedrade dimmer van stroom om het koppelen te starten. Als het koppelen niet automatisch start, reset je deze volgens de Philips Hue-instructies.",
+        "de": "Versorge den kabelgebundenen Dimmer mit Strom, um die Kopplung zu starten. Wenn die Kopplung nicht automatisch startet, setze ihn gemäß den Philips-Hue-Anweisungen zurück.",
+        "fr": "Mettez le variateur câblé sous tension pour lancer l’association. Si l’association ne démarre pas automatiquement, réinitialisez-le selon les instructions Philips Hue.",
+        "it": "Alimenta il dimmer cablato per avviare l’associazione. Se l’associazione non parte automaticamente, reimpostalo secondo le istruzioni Philips Hue.",
+        "sv": "Strömsätt den trådbundna dimmern för att starta parkopplingen. Om parkopplingen inte startar automatiskt, återställ den enligt Philips Hue-instruktionerna.",
+        "no": "Sett strøm på den kablede dimmeren for å starte paringen. Hvis paringen ikke starter automatisk, tilbakestill den i henhold til Philips Hue-instruksjonene.",
+        "es": "Alimenta el regulador cableado para iniciar el emparejamiento. Si no comienza automáticamente, restablécelo según las instrucciones de Philips Hue.",
+        "da": "Tilslut strøm til den kablede dæmper for at starte parringen. Hvis parringen ikke starter automatisk, nulstil den efter Philips Hue-instruktionerne.",
+        "ru": "Подайте питание на проводной диммер, чтобы начать сопряжение. Если сопряжение не начинается автоматически, сбросьте его согласно инструкциям Philips Hue.",
+        "pl": "Włącz zasilanie przewodowego ściemniacza, aby rozpocząć parowanie. Jeśli parowanie nie rozpocznie się automatycznie, zresetuj go zgodnie z instrukcjami Philips Hue.",
+        "ko": "유선 디머에 전원을 공급해 페어링을 시작하세요. 페어링이 자동으로 시작되지 않으면 Philips Hue 지침에 따라 재설정하세요.",
+        "ar": "زوّد مخفت الإضاءة السلكي بالطاقة لبدء الاقتران. إذا لم يبدأ الاقتران تلقائيًا، فأعد ضبطه وفق تعليمات Philips Hue."
       }
     }
   }
