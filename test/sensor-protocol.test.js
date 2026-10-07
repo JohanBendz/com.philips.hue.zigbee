@@ -81,7 +81,7 @@ for (const id of ['SML001-occupancy', 'SML002-occupancy']) {
     const clusters = zclNode.endpoints[2].clusters;
     const writes = [];
     clusters.occupancySensing.writeAttributes = async value => writes.push(['occupancy', value]);
-    clusters.HueSpecificBasicCluster.writeAttributes = async value => writes.push(['basic', value]);
+    clusters.basic.writeAttributes = async value => writes.push(['basic', value]);
     clusters.powerConfiguration.readAttributes = async () => ({ batteryPercentageRemaining: 160 });
     await device.onSettings({
       oldSettings: {},

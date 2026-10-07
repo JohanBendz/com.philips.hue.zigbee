@@ -83,7 +83,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the Twilight and start pairing. Two light devices will be added: Front and Back. If pairing does not start, reset the lamp using the Philips Hue app or bridge."
+        "en": "Power on the Twilight and start pairing. Two light devices will be added: Front and Back. If pairing does not start, reset the lamp using the Philips Hue app or bridge.",
+        "nl": "Schakel de Twilight in en start het koppelen. Er worden twee lichtapparaten toegevoegd: Voor en Achter. Als het koppelen niet start, reset de lamp dan met de Philips Hue-app of bridge.",
+        "de": "Schalte die Twilight ein und starte die Kopplung. Es werden zwei Lichtgeräte hinzugefügt: Vorne und Hinten. Wenn die Kopplung nicht startet, setze die Lampe mit der Philips Hue-App oder Bridge zurück.",
+        "fr": "Allumez la Twilight et lancez l’association. Deux appareils d’éclairage seront ajoutés : Avant et Arrière. Si l’association ne démarre pas, réinitialisez la lampe avec l’application ou le pont Philips Hue.",
+        "it": "Accendi Twilight e avvia l’associazione. Verranno aggiunti due dispositivi luce: Anteriore e Posteriore. Se l’associazione non parte, reimposta la lampada con l’app o il bridge Philips Hue.",
+        "sv": "Slå på Twilight och starta parkopplingen. Två ljusenheter läggs till: Fram och Bak. Om parkopplingen inte startar, återställ lampan med Philips Hue-appen eller bridge.",
+        "no": "Slå på Twilight og start paringen. To lysenheter legges til: Foran og Bak. Hvis paringen ikke starter, tilbakestill lampen med Philips Hue-appen eller bridge.",
+        "es": "Enciende Twilight e inicia el emparejamiento. Se añadirán dos dispositivos de luz: Frontal y Trasero. Si no comienza, restablece la lámpara con la app o el bridge Philips Hue.",
+        "da": "Tænd Twilight og start parringen. To lysenheder tilføjes: Foran og Bagpå. Hvis parringen ikke starter, nulstil lampen med Philips Hue-appen eller bridge.",
+        "ru": "Включите Twilight и начните сопряжение. Будут добавлены два световых устройства: Переднее и Заднее. Если сопряжение не начинается, сбросьте лампу с помощью приложения или моста Philips Hue.",
+        "pl": "Włącz Twilight i rozpocznij parowanie. Zostaną dodane dwa urządzenia świetlne: Przód i Tył. Jeśli parowanie się nie rozpocznie, zresetuj lampę za pomocą aplikacji lub mostka Philips Hue.",
+        "ko": "Twilight를 켜고 페어링을 시작하세요. 앞쪽과 뒤쪽의 두 조명 장치가 추가됩니다. 페어링이 시작되지 않으면 Philips Hue 앱 또는 브리지로 램프를 재설정하세요.",
+        "ar": "شغّل Twilight وابدأ الاقتران. ستتم إضافة جهازي إضاءة: الأمامي والخلفي. إذا لم يبدأ الاقتران، فأعد ضبط المصباح باستخدام تطبيق Philips Hue أو الجسر."
       }
     }
   }

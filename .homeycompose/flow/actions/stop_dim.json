@@ -4,19 +4,46 @@
     "en": "Stop dimming",
     "sv": "Stoppa dimning",
     "nl": "Stop dimmen",
-    "de": "Dimmen stoppen"
+    "de": "Dimmen stoppen",
+    "fr": "Arrêter la variation",
+    "it": "Interrompi dimmerazione",
+    "no": "Stopp dimming",
+    "es": "Detener atenuación",
+    "da": "Stop dæmpning",
+    "ru": "Остановить диммирование",
+    "pl": "Zatrzymaj ściemnianie",
+    "ko": "디밍 중지",
+    "ar": "إيقاف التعتيم"
   },
   "titleFormatted": {
     "en": "Stop dimming [[device]]",
     "sv": "Stoppa dimning av [[device]]",
     "nl": "Stop dimmen van [[device]]",
-    "de": "Dimmen von [[device]] stoppen"
+    "de": "Dimmen von [[device]] stoppen",
+    "fr": "Arrêter la variation de [[device]]",
+    "it": "Interrompi la dimmerazione di [[device]]",
+    "no": "Stopp dimming av [[device]]",
+    "es": "Detener la atenuación de [[device]]",
+    "da": "Stop dæmpning af [[device]]",
+    "ru": "Остановить диммирование [[device]]",
+    "pl": "Zatrzymaj ściemnianie [[device]]",
+    "ko": "[[device]] 디밍 중지",
+    "ar": "أوقف تعتيم [[device]]"
   },
   "hint": {
     "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
     "sv": "Skickar Zigbee-kommandot 'stop' för att avsluta en dimning som startats med 'Starta dimning', och läser tillbaka ljusstyrkan som lampan hamnade på.",
     "nl": "Stuurt het Zigbee 'stop'-commando om een dimbeweging van 'Start dimmen' te beëindigen, en leest terug op welke helderheid de lamp is uitgekomen.",
-    "de": "Sendet den Zigbee-Befehl 'stop', um ein mit 'Dimmen starten' begonnenes Dimmen zu beenden, und liest die erreichte Helligkeit zurück."
+    "de": "Sendet den Zigbee-Befehl 'stop', um ein mit 'Dimmen starten' begonnenes Dimmen zu beenden, und liest die erreichte Helligkeit zurück.",
+    "fr": "Envoie la commande Zigbee 'stop' pour terminer la variation et relit la luminosité finale.",
+    "it": "Invia il comando Zigbee 'stop' per terminare la dimmerazione e legge la luminosità finale.",
+    "no": "Sender Zigbee-kommandoen 'stop' for å avslutte dimming og leser endelig lysstyrke.",
+    "es": "Envía el comando Zigbee 'stop' para terminar la atenuación y lee el brillo final.",
+    "da": "Sender Zigbee-kommandoen 'stop' for at afslutte dæmpning og læser den endelige lysstyrke.",
+    "ru": "Отправляет команду Zigbee 'stop', чтобы завершить диммирование и считать конечную яркость.",
+    "pl": "Wysyła polecenie Zigbee 'stop', aby zakończyć ściemnianie i odczytać końcową jasność.",
+    "ko": "Zigbee 'stop' 명령으로 디밍을 종료하고 최종 밝기를 읽습니다.",
+    "ar": "يرسل أمر Zigbee ‏'stop' لإنهاء التعتيم وقراءة مستوى السطوع النهائي."
   },
   "args": [
     {

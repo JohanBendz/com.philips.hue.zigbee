@@ -3,11 +3,34 @@
     {
       "id": "RWL022_buttons",
       "title": {
-        "en": "Button Action"
+        "en": "Button Action",
+        "nl": "Knopactie",
+        "de": "Tastenaktion",
+        "fr": "Action du bouton",
+        "it": "Azione pulsante",
+        "sv": "Knapphändelse",
+        "no": "Knappehandling",
+        "es": "Acción del botón",
+        "da": "Knappehandling",
+        "ru": "Действие кнопки",
+        "pl": "Akcja przycisku",
+        "ko": "버튼 동작",
+        "ar": "إجراء الزر"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "nl": "Knop [[action]]"
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Knapp [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
@@ -18,118 +41,305 @@
               "id": "OnOff-ShortPress",
               "label": {
                 "en": "On/Off (pressed)",
-                "nl": "Aan/Uit (ingedrukt)"
+                "nl": "Aan/Uit (ingedrukt)",
+                "de": "Ein/Aus (gedrückt)",
+                "fr": "Marche/Arrêt (appuyé)",
+                "it": "On/Off (premuto)",
+                "sv": "På/Av (tryckt)",
+                "no": "På/Av (trykket)",
+                "es": "Encendido/Apagado (pulsado)",
+                "da": "Til/Fra (trykket)",
+                "ru": "Вкл./Выкл. (нажато)",
+                "pl": "Wł./Wył. (naciśnięto)",
+                "ko": "켜기/끄기 (누름)",
+                "ar": "تشغيل/إيقاف (ضغط)"
               }
             },
             {
               "id": "OnOff-ShortRelease",
               "label": {
                 "en": "On/Off (released before hold)",
-                "nl": "Aan/Uit (losgelaten vóór vasthouden)"
+                "nl": "Aan/Uit (losgelaten vóór vasthouden)",
+                "de": "Ein/Aus (vor Halten losgelassen)",
+                "fr": "Marche/Arrêt (relâché avant maintien)",
+                "it": "On/Off (rilasciato prima della pressione prolungata)",
+                "sv": "På/Av (släppt före håll)",
+                "no": "På/Av (sluppet før hold)",
+                "es": "Encendido/Apagado (soltado antes de mantener)",
+                "da": "Til/Fra (sluppet før hold)",
+                "ru": "Вкл./Выкл. (отпущено до удержания)",
+                "pl": "Wł./Wył. (zwolniono przed przytrzymaniem)",
+                "ko": "켜기/끄기 (길게 누르기 전 놓음)",
+                "ar": "تشغيل/إيقاف (إفلات قبل الضغط المطول)"
               }
             },
             {
               "id": "OnOff-LongPress",
               "label": {
                 "en": "On/Off (hold started)",
-                "nl": "Aan/Uit (vasthouden gestart)"
+                "nl": "Aan/Uit (vasthouden gestart)",
+                "de": "Ein/Aus (Halten gestartet)",
+                "fr": "Marche/Arrêt (maintien commencé)",
+                "it": "On/Off (pressione prolungata iniziata)",
+                "sv": "På/Av (håll startat)",
+                "no": "På/Av (hold startet)",
+                "es": "Encendido/Apagado (mantener iniciado)",
+                "da": "Til/Fra (hold startet)",
+                "ru": "Вкл./Выкл. (начато удержание)",
+                "pl": "Wł./Wył. (rozpoczęto przytrzymanie)",
+                "ko": "켜기/끄기 (길게 누르기 시작)",
+                "ar": "تشغيل/إيقاف (بدأ الضغط المطول)"
               }
             },
             {
               "id": "OnOff-LongRelease",
               "label": {
                 "en": "On/Off (released after hold)",
-                "nl": "Aan/Uit (losgelaten na vasthouden)"
+                "nl": "Aan/Uit (losgelaten na vasthouden)",
+                "de": "Ein/Aus (nach Halten losgelassen)",
+                "fr": "Marche/Arrêt (relâché après maintien)",
+                "it": "On/Off (rilasciato dopo pressione prolungata)",
+                "sv": "På/Av (släppt efter håll)",
+                "no": "På/Av (sluppet etter hold)",
+                "es": "Encendido/Apagado (soltado después de mantener)",
+                "da": "Til/Fra (sluppet efter hold)",
+                "ru": "Вкл./Выкл. (отпущено после удержания)",
+                "pl": "Wł./Wył. (zwolniono po przytrzymaniu)",
+                "ko": "켜기/끄기 (길게 누른 후 놓음)",
+                "ar": "تشغيل/إيقاف (إفلات بعد الضغط المطول)"
               }
             },
             {
               "id": "DimUp-ShortPress",
               "label": {
                 "en": "Dim up (pressed)",
-                "nl": "Dim op (ingedrukt)"
+                "nl": "Dim op (ingedrukt)",
+                "de": "Heller (gedrückt)",
+                "fr": "Augmenter (appuyé)",
+                "it": "Aumenta luminosità (premuto)",
+                "sv": "Dim upp (tryckt)",
+                "no": "Dim opp (trykket)",
+                "es": "Aumentar brillo (pulsado)",
+                "da": "Dæmp op (trykket)",
+                "ru": "Ярче (нажато)",
+                "pl": "Jaśniej (naciśnięto)",
+                "ko": "밝게 (누름)",
+                "ar": "زيادة السطوع (ضغط)"
               }
             },
             {
               "id": "DimUp-ShortRelease",
               "label": {
                 "en": "Dim up (released before hold)",
-                "nl": "Dim op (losgelaten vóór vasthouden)"
+                "nl": "Dim op (losgelaten vóór vasthouden)",
+                "de": "Heller (vor Halten losgelassen)",
+                "fr": "Augmenter (relâché avant maintien)",
+                "it": "Aumenta luminosità (rilasciato prima della pressione prolungata)",
+                "sv": "Dim upp (släppt före håll)",
+                "no": "Dim opp (sluppet før hold)",
+                "es": "Aumentar brillo (soltado antes de mantener)",
+                "da": "Dæmp op (sluppet før hold)",
+                "ru": "Ярче (отпущено до удержания)",
+                "pl": "Jaśniej (zwolniono przed przytrzymaniem)",
+                "ko": "밝게 (길게 누르기 전 놓음)",
+                "ar": "زيادة السطوع (إفلات قبل الضغط المطول)"
               }
             },
             {
               "id": "DimUp-LongPress",
               "label": {
                 "en": "Dim up (hold started)",
-                "nl": "Dim op (vasthouden gestart)"
+                "nl": "Dim op (vasthouden gestart)",
+                "de": "Heller (Halten gestartet)",
+                "fr": "Augmenter (maintien commencé)",
+                "it": "Aumenta luminosità (pressione prolungata iniziata)",
+                "sv": "Dim upp (håll startat)",
+                "no": "Dim opp (hold startet)",
+                "es": "Aumentar brillo (mantener iniciado)",
+                "da": "Dæmp op (hold startet)",
+                "ru": "Ярче (начато удержание)",
+                "pl": "Jaśniej (rozpoczęto przytrzymanie)",
+                "ko": "밝게 (길게 누르기 시작)",
+                "ar": "زيادة السطوع (بدأ الضغط المطول)"
               }
             },
             {
               "id": "DimUp-LongRelease",
               "label": {
                 "en": "Dim up (released after hold)",
-                "nl": "Dim op (losgelaten na vasthouden)"
+                "nl": "Dim op (losgelaten na vasthouden)",
+                "de": "Heller (nach Halten losgelassen)",
+                "fr": "Augmenter (relâché après maintien)",
+                "it": "Aumenta luminosità (rilasciato dopo pressione prolungata)",
+                "sv": "Dim upp (släppt efter håll)",
+                "no": "Dim opp (sluppet etter hold)",
+                "es": "Aumentar brillo (soltado después de mantener)",
+                "da": "Dæmp op (sluppet efter hold)",
+                "ru": "Ярче (отпущено после удержания)",
+                "pl": "Jaśniej (zwolniono po przytrzymaniu)",
+                "ko": "밝게 (길게 누른 후 놓음)",
+                "ar": "زيادة السطوع (إفلات بعد الضغط المطول)"
               }
             },
             {
               "id": "DimDown-ShortPress",
               "label": {
                 "en": "Dim down (pressed)",
-                "nl": "Dim neer (ingedrukt)"
+                "nl": "Dim neer (ingedrukt)",
+                "de": "Dunkler (gedrückt)",
+                "fr": "Diminuer (appuyé)",
+                "it": "Riduci luminosità (premuto)",
+                "sv": "Dim ner (tryckt)",
+                "no": "Dim ned (trykket)",
+                "es": "Reducir brillo (pulsado)",
+                "da": "Dæmp ned (trykket)",
+                "ru": "Темнее (нажато)",
+                "pl": "Ciemniej (naciśnięto)",
+                "ko": "어둡게 (누름)",
+                "ar": "خفض السطوع (ضغط)"
               }
             },
             {
               "id": "DimDown-ShortRelease",
               "label": {
                 "en": "Dim down (released before hold)",
-                "nl": "Dim neer (losgelaten vóór vasthouden)"
+                "nl": "Dim neer (losgelaten vóór vasthouden)",
+                "de": "Dunkler (vor Halten losgelassen)",
+                "fr": "Diminuer (relâché avant maintien)",
+                "it": "Riduci luminosità (rilasciato prima della pressione prolungata)",
+                "sv": "Dim ner (släppt före håll)",
+                "no": "Dim ned (sluppet før hold)",
+                "es": "Reducir brillo (soltado antes de mantener)",
+                "da": "Dæmp ned (sluppet før hold)",
+                "ru": "Темнее (отпущено до удержания)",
+                "pl": "Ciemniej (zwolniono przed przytrzymaniem)",
+                "ko": "어둡게 (길게 누르기 전 놓음)",
+                "ar": "خفض السطوع (إفلات قبل الضغط المطول)"
               }
             },
             {
               "id": "DimDown-LongPress",
               "label": {
                 "en": "Dim down (hold started)",
-                "nl": "Dim neer (vasthouden gestart)"
+                "nl": "Dim neer (vasthouden gestart)",
+                "de": "Dunkler (Halten gestartet)",
+                "fr": "Diminuer (maintien commencé)",
+                "it": "Riduci luminosità (pressione prolungata iniziata)",
+                "sv": "Dim ner (håll startat)",
+                "no": "Dim ned (hold startet)",
+                "es": "Reducir brillo (mantener iniciado)",
+                "da": "Dæmp ned (hold startet)",
+                "ru": "Темнее (начато удержание)",
+                "pl": "Ciemniej (rozpoczęto przytrzymanie)",
+                "ko": "어둡게 (길게 누르기 시작)",
+                "ar": "خفض السطوع (بدأ الضغط المطول)"
               }
             },
             {
               "id": "DimDown-LongRelease",
               "label": {
                 "en": "Dim down (released after hold)",
-                "nl": "Dim neer (losgelaten na vasthouden)"
+                "nl": "Dim neer (losgelaten na vasthouden)",
+                "de": "Dunkler (nach Halten losgelassen)",
+                "fr": "Diminuer (relâché après maintien)",
+                "it": "Riduci luminosità (rilasciato dopo pressione prolungata)",
+                "sv": "Dim ner (släppt efter håll)",
+                "no": "Dim ned (sluppet etter hold)",
+                "es": "Reducir brillo (soltado después de mantener)",
+                "da": "Dæmp ned (sluppet efter hold)",
+                "ru": "Темнее (отпущено после удержания)",
+                "pl": "Ciemniej (zwolniono po przytrzymaniu)",
+                "ko": "어둡게 (길게 누른 후 놓음)",
+                "ar": "خفض السطوع (إفلات بعد الضغط المطول)"
               }
             },
             {
               "id": "Hue-ShortPress",
               "label": {
                 "en": "Hue (pressed)",
-                "nl": "Hue (ingedrukt)"
+                "nl": "Hue (ingedrukt)",
+                "de": "Hue (gedrückt)",
+                "fr": "Hue (appuyé)",
+                "it": "Hue (premuto)",
+                "sv": "Hue (tryckt)",
+                "no": "Hue (trykket)",
+                "es": "Hue (pulsado)",
+                "da": "Hue (trykket)",
+                "ru": "Hue (нажато)",
+                "pl": "Hue (naciśnięto)",
+                "ko": "Hue (누름)",
+                "ar": "Hue (ضغط)"
               }
             },
             {
               "id": "Hue-ShortRelease",
               "label": {
                 "en": "Hue (released before hold)",
-                "nl": "Hue (losgelaten vóór vasthouden)"
+                "nl": "Hue (losgelaten vóór vasthouden)",
+                "de": "Hue (vor Halten losgelassen)",
+                "fr": "Hue (relâché avant maintien)",
+                "it": "Hue (rilasciato prima della pressione prolungata)",
+                "sv": "Hue (släppt före håll)",
+                "no": "Hue (sluppet før hold)",
+                "es": "Hue (soltado antes de mantener)",
+                "da": "Hue (sluppet før hold)",
+                "ru": "Hue (отпущено до удержания)",
+                "pl": "Hue (zwolniono przed przytrzymaniem)",
+                "ko": "Hue (길게 누르기 전 놓음)",
+                "ar": "Hue (إفلات قبل الضغط المطول)"
               }
             },
             {
               "id": "Hue-LongPress",
               "label": {
                 "en": "Hue (hold started)",
-                "nl": "Hue (vasthouden gestart)"
+                "nl": "Hue (vasthouden gestart)",
+                "de": "Hue (Halten gestartet)",
+                "fr": "Hue (maintien commencé)",
+                "it": "Hue (pressione prolungata iniziata)",
+                "sv": "Hue (håll startat)",
+                "no": "Hue (hold startet)",
+                "es": "Hue (mantener iniciado)",
+                "da": "Hue (hold startet)",
+                "ru": "Hue (начато удержание)",
+                "pl": "Hue (rozpoczęto przytrzymanie)",
+                "ko": "Hue (길게 누르기 시작)",
+                "ar": "Hue (بدأ الضغط المطول)"
               }
             },
             {
               "id": "Hue-LongRelease",
               "label": {
                 "en": "Hue (released after hold)",
-                "nl": "Hue (losgelaten na vasthouden)"
+                "nl": "Hue (losgelaten na vasthouden)",
+                "de": "Hue (nach Halten losgelassen)",
+                "fr": "Hue (relâché après maintien)",
+                "it": "Hue (rilasciato dopo pressione prolungata)",
+                "sv": "Hue (släppt efter håll)",
+                "no": "Hue (sluppet etter hold)",
+                "es": "Hue (soltado después de mantener)",
+                "da": "Hue (sluppet efter hold)",
+                "ru": "Hue (отпущено после удержания)",
+                "pl": "Hue (zwolniono po przytrzymaniu)",
+                "ko": "Hue (길게 누른 후 놓음)",
+                "ar": "Hue (إفلات بعد الضغط المطول)"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

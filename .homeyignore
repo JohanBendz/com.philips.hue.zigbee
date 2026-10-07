@@ -1,3 +1,4 @@
 # Development-only files; never needed on the Homey hub.
 /test/
 /docs/
+/scripts/

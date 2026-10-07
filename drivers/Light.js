@@ -17,8 +17,6 @@ Cluster.addCluster(HueSpecificPhilips2Cluster);
 // Alert mode need these
 const HueSpecificIdentifyCluster = require('../lib/HueSpecificIdentifyCluster');
 Cluster.addCluster(HueSpecificIdentifyCluster);
-const HueSpecificIdentifyBoundCluster = require('../lib/HueSpecificIdentifyBoundCluster');
-Cluster.addCluster(HueSpecificIdentifyBoundCluster);
 
 const DEFAULT_DIM_RATE = 50;
 const MAX_DIM_RATE = 254;

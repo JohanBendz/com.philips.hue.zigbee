@@ -4,6 +4,7 @@ const { isDeepStrictEqual } = require('node:util');
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
+const { markHueLastSeenFromTraffic } = require('../../lib/HueLastSeen');
 
 Cluster.addCluster(HueSpecificBasicCluster);
 
@@ -54,7 +55,7 @@ class HueWallSwitchModule extends ZigBeeDevice {
 
   async _writeDeviceMode(deviceMode) {
     try {
-      await this.zclNode.endpoints[1].clusters.HueSpecificBasicCluster.writeAttributes({ deviceMode });
+      await this.zclNode.endpoints[1].clusters[HueSpecificBasicCluster.NAME].writeAttributes({ deviceMode });
     } catch (err) {
       if (err.message !== 'TimeoutError') {
         this.error('ROM002: failed to update device mode:', err.message);
@@ -97,6 +98,10 @@ class HueWallSwitchModule extends ZigBeeDevice {
     if (!action) {
       return;
     }
+
+    // Every recognized physical frame is evidence of contact, including
+    // repeat Hold commands suppressed from Flow by the existing de-duplicator.
+    void markHueLastSeenFromTraffic(this);
 
     if (action === 'Hold') {
       if (this._heldInputs.has(inputNumber)) {

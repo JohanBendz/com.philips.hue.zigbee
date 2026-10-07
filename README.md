@@ -35,6 +35,20 @@ The app contains a large number of device drivers and product IDs covering, amon
 
 The driver manifests under `drivers/` are the authoritative source for exact Zigbee product IDs.
 
+## Hue firmware updates
+
+Version **2.4.0** adds firmware updates through Homey's device-update screen for selected Hue lights and accessories. The declared scope covers **67 exact product IDs across 47 drivers**; see the [coverage list](docs/ota-firmware.md#current-coverage). An update is offered only when the exact device identity, firmware family and current version match an eligible image. Some older devices need several consecutive updates.
+
+Firmware updates require a supported Homey platform running **13.2.0 or newer** and Homey Mobile App **9.10.0 or newer**. The app itself requires Homey **12.9.0 or newer**. Homey Pro 2016–2019 models are not listed as OTA-supported by Athom. Follow any wake instructions shown for battery devices.
+
+After the device restarts, its firmware version and update status may take a few minutes to refresh. If Homey cannot verify the update immediately, wait a few minutes and check the status again before retrying. The device-information firmware string and the OTA version shown by Homey use different formats.
+
+Not every Hue device or hardware revision has OTA support. When reporting an update problem, include the exact model, starting/resulting firmware versions, Homey's update result and post-update behaviour. Report issues in [#668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
+
+Development and release status are tracked in the [OTA release handoff](docs/ota-test-release-2.4.0.md), with physical checks in the [hardware test plan](docs/ota-test-plan.md).
+
+## Requesting device support
+
 If your Hue device pairs as **Generic Zigbee Device**, please open an issue and include the Homey Zigbee interview from Homey Developer Tools. At minimum, include:
 
 - `modelId`
