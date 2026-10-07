@@ -4,19 +4,46 @@
     "en": "Start dimming",
     "sv": "Starta dimning",
     "nl": "Start dimmen",
-    "de": "Dimmen starten"
+    "de": "Dimmen starten",
+    "fr": "Commencer la variation",
+    "it": "Avvia dimmerazione",
+    "no": "Start dimming",
+    "es": "Iniciar atenuación",
+    "da": "Start dæmpning",
+    "ru": "Начать диммирование",
+    "pl": "Rozpocznij ściemnianie",
+    "ko": "디밍 시작",
+    "ar": "بدء التعتيم"
   },
   "titleFormatted": {
     "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
     "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
     "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
-    "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+    "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten",
+    "fr": "Faire varier [[device]] [[direction]] à la vitesse [[rate]]",
+    "it": "Avvia la dimmerazione di [[device]] [[direction]] alla velocità [[rate]]",
+    "no": "Start dimming av [[device]] [[direction]] med hastighet [[rate]]",
+    "es": "Iniciar atenuación de [[device]] [[direction]] a velocidad [[rate]]",
+    "da": "Start dæmpning af [[device]] [[direction]] med hastighed [[rate]]",
+    "ru": "Начать диммирование [[device]] [[direction]] со скоростью [[rate]]",
+    "pl": "Rozpocznij ściemnianie [[device]] [[direction]] z prędkością [[rate]]",
+    "ko": "[[device]]을(를) [[direction]] 방향으로 속도 [[rate]]로 디밍 시작",
+    "ar": "ابدأ تعتيم [[device]] باتجاه [[direction]] بسرعة [[rate]]"
   },
   "hint": {
     "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
     "sv": "Skickar Zigbee-kommandot 'move', så att ljuset dimmas kontinuerligt tills det stoppas med 'Stoppa dimning' eller når sitt ändläge. Använd detta med en strömbrytares håll-händelse och kombinera med 'Stoppa dimning' vid släpp.",
     "nl": "Stuurt het Zigbee 'move'-commando, waardoor de lamp vloeiend blijft dimmen totdat je 'Stop dimmen' stuurt of het eindpunt bereikt is. Gebruik dit bij de hold-actie van een schakelaar, samen met 'Stop dimmen' bij het loslaten.",
-    "de": "Sendet den Zigbee-Befehl 'move', sodass die Lampe kontinuierlich dimmt, bis sie mit 'Dimmen stoppen' angehalten wird oder den Endanschlag erreicht. Nutze dies bei der Halten-Aktion eines Schalters, zusammen mit 'Dimmen stoppen' beim Loslassen."
+    "de": "Sendet den Zigbee-Befehl 'move', sodass die Lampe kontinuierlich dimmt, bis sie mit 'Dimmen stoppen' angehalten wird oder den Endanschlag erreicht. Nutze dies bei der Halten-Aktion eines Schalters, zusammen mit 'Dimmen stoppen' beim Loslassen.",
+    "fr": "Envoie la commande Zigbee 'move' afin que la lumière varie en continu jusqu’à l’arrêt ou sa limite. Utilisez-la avec le maintien d’un interrupteur et arrêtez la variation au relâchement.",
+    "it": "Invia il comando Zigbee 'move' per variare continuamente la luce fino all’arresto o al limite. Usalo con la pressione prolungata di un interruttore e arresta la dimmerazione al rilascio.",
+    "no": "Sender Zigbee-kommandoen 'move', slik at lyset dimmes kontinuerlig til det stoppes eller når endepunktet. Bruk dette med hold på en bryter og stopp dimming ved slipp.",
+    "es": "Envía el comando Zigbee 'move' para atenuar continuamente la luz hasta detenerla o alcanzar el límite. Úsalo al mantener pulsado un interruptor y detén la atenuación al soltar.",
+    "da": "Sender Zigbee-kommandoen 'move', så lyset dæmpes kontinuerligt, indtil det stoppes eller når endepunktet. Brug dette med hold på en kontakt og stop dæmpning ved slip.",
+    "ru": "Отправляет команду Zigbee 'move' для непрерывного изменения яркости до остановки или достижения предела. Используйте при удержании выключателя и остановите при отпускании.",
+    "pl": "Wysyła polecenie Zigbee 'move' do ciągłej zmiany jasności aż do zatrzymania lub końca zakresu. Użyj przy przytrzymaniu przełącznika i zatrzymaj po zwolnieniu.",
+    "ko": "Zigbee 'move' 명령으로 조명이 중지되거나 끝 범위에 도달할 때까지 계속 디밍됩니다. 스위치를 길게 누를 때 시작하고 놓을 때 중지하세요.",
+    "ar": "يرسل أمر Zigbee ‏'move' ليستمر تعتيم الضوء حتى يتم إيقافه أو يصل إلى الحد النهائي. استخدمه مع الضغط المطول للمفتاح وأوقف التعتيم عند الإفلات."
   },
   "args": [
     {
@@ -31,16 +58,53 @@
         "en": "Direction",
         "sv": "Riktning",
         "nl": "Richting",
-        "de": "Richtung"
+        "de": "Richtung",
+        "fr": "Direction",
+        "it": "Direzione",
+        "no": "Retning",
+        "es": "Dirección",
+        "da": "Retning",
+        "ru": "Направление",
+        "pl": "Kierunek",
+        "ko": "방향",
+        "ar": "الاتجاه"
       },
       "values": [
         {
           "id": "up",
-          "label": { "en": "brighter", "sv": "ljusare", "nl": "feller", "de": "heller" }
+          "label": {
+            "en": "brighter",
+            "sv": "ljusare",
+            "nl": "feller",
+            "de": "heller",
+            "fr": "plus clair",
+            "it": "più luminoso",
+            "no": "lysere",
+            "es": "más brillante",
+            "da": "lysere",
+            "ru": "ярче",
+            "pl": "jaśniej",
+            "ko": "더 밝게",
+            "ar": "أكثر سطوعًا"
+          }
         },
         {
           "id": "down",
-          "label": { "en": "dimmer", "sv": "mörkare", "nl": "zachter", "de": "dunkler" }
+          "label": {
+            "en": "dimmer",
+            "sv": "mörkare",
+            "nl": "zachter",
+            "de": "dunkler",
+            "fr": "plus sombre",
+            "it": "più tenue",
+            "no": "mørkere",
+            "es": "más tenue",
+            "da": "mørkere",
+            "ru": "темнее",
+            "pl": "ciemniej",
+            "ko": "더 어둡게",
+            "ar": "أخفت"
+          }
         }
       ]
     },
@@ -51,7 +115,16 @@
         "en": "Speed",
         "sv": "Hastighet",
         "nl": "Snelheid",
-        "de": "Geschwindigkeit"
+        "de": "Geschwindigkeit",
+        "fr": "Vitesse",
+        "it": "Velocità",
+        "no": "Hastighet",
+        "es": "Velocidad",
+        "da": "Hastighed",
+        "ru": "Скорость",
+        "pl": "Prędkość",
+        "ko": "속도",
+        "ar": "السرعة"
       },
       "min": 1,
       "max": 254,
@@ -60,7 +133,16 @@
         "en": "Brightness steps per second (1-254, try 50)",
         "sv": "Ljusstyrkesteg per sekund (1-254, prova 50)",
         "nl": "Helderheidsstappen per seconde (1-254, probeer 50)",
-        "de": "Helligkeitsschritte pro Sekunde (1-254, versuche 50)"
+        "de": "Helligkeitsschritte pro Sekunde (1-254, versuche 50)",
+        "fr": "Pas de luminosité par seconde (1-254, essayez 50)",
+        "it": "Passi di luminosità al secondo (1-254, prova 50)",
+        "no": "Lysstyrketrinn per sekund (1-254, prøv 50)",
+        "es": "Pasos de brillo por segundo (1-254, prueba 50)",
+        "da": "Lysstyrketrin pr. sekund (1-254, prøv 50)",
+        "ru": "Шагов яркости в секунду (1-254, попробуйте 50)",
+        "pl": "Kroki jasności na sekundę (1-254, spróbuj 50)",
+        "ko": "초당 밝기 단계 (1-254, 50 권장)",
+        "ar": "خطوات السطوع في الثانية (1-254، جرّب 50)"
       }
     }
   ]

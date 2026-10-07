@@ -1,39 +1,75 @@
 {
-"id": "suppress_sensor",
-"title": {
+  "id": "suppress_sensor",
+  "title": {
     "en": "Suppress sensor",
     "sv": "Tysta sensorn",
     "nl": "Onderdruk sensor",
-    "de": "Sensor unterdrücken"
-},
-"titleFormatted": {
+    "de": "Sensor unterdrücken",
+    "fr": "Suspendre le capteur",
+    "it": "Sospendi sensore",
+    "no": "Undertrykk sensor",
+    "es": "Suprimir sensor",
+    "da": "Undertryk sensor",
+    "ru": "Подавить датчик",
+    "pl": "Wycisz czujnik",
+    "ko": "센서 억제",
+    "ar": "تعطيل المستشعر مؤقتًا"
+  },
+  "titleFormatted": {
     "en": "Suppress the sensor [[device]] for [[duration]] seconds",
     "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
     "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-    "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
-},
-"args": [
+    "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken",
+    "fr": "Suspendre le capteur [[device]] pendant [[duration]] secondes",
+    "it": "Sospendi il sensore [[device]] per [[duration]] secondi",
+    "no": "Undertrykk sensoren [[device]] i [[duration]] sekunder",
+    "es": "Suprimir el sensor [[device]] durante [[duration]] segundos",
+    "da": "Undertryk sensoren [[device]] i [[duration]] sekunder",
+    "ru": "Подавить датчик [[device]] на [[duration]] секунд",
+    "pl": "Wycisz czujnik [[device]] na [[duration]] sekund",
+    "ko": "센서 [[device]]을(를) [[duration]]초 동안 억제",
+    "ar": "عطّل المستشعر [[device]] مؤقتًا لمدة [[duration]] ثانية"
+  },
+  "args": [
     {
-    "name": "device",
-    "type": "device",
-    "filter": "class=sensor",
-    "title": {
+      "name": "device",
+      "type": "device",
+      "filter": "class=sensor",
+      "title": {
         "en": "Sensor",
         "sv": "Sensor",
         "nl": "Sensor",
-        "de": "Sensor"
-        }
+        "de": "Sensor",
+        "fr": "Capteur",
+        "it": "Sensore",
+        "no": "Sensor",
+        "es": "Sensor",
+        "da": "Sensor",
+        "ru": "Датчик",
+        "pl": "Czujnik",
+        "ko": "센서",
+        "ar": "مستشعر"
+      }
     },
     {
-    "name": "duration",
-    "type": "number",
-    "placeholder": "30",
-    "label": {
+      "name": "duration",
+      "type": "number",
+      "placeholder": "30",
+      "label": {
         "en": "time in seconds",
         "sv": "tid i sekunder",
         "nl": "tijd in seconden",
-        "de": "Zeit in Sekunden"
+        "de": "Zeit in Sekunden",
+        "fr": "temps en secondes",
+        "it": "tempo in secondi",
+        "no": "tid i sekunder",
+        "es": "tiempo en segundos",
+        "da": "tid i sekunder",
+        "ru": "время в секундах",
+        "pl": "czas w sekundach",
+        "ko": "시간(초)",
+        "ar": "الوقت بالثواني"
       }
     }
-]
+  ]
 }
