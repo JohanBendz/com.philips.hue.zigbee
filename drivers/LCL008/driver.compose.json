@@ -27,7 +27,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in the lightstrip to start pairing.\n\nIf pairing does not automatically start you probably need to reset it with a remote or a Philips Hue bridge."
+        "en": "Plug in the lightstrip to start pairing.\n\nIf pairing does not automatically start you probably need to reset it with a remote or a Philips Hue bridge.",
+        "nl": "Sluit de lightstrip aan om het koppelen te starten. Als het koppelen niet automatisch start, reset het apparaat dan met een Hue-afstandsbediening of Philips Hue Bridge.",
+        "de": "Schließe den Lightstrip an, um die Kopplung zu starten. Wenn die Kopplung nicht automatisch startet, setze das Gerät mit einer Hue-Fernbedienung oder Philips Hue Bridge zurück.",
+        "fr": "Branchez le ruban lumineux pour lancer l’association. Si l’association ne démarre pas automatiquement, réinitialisez l’appareil avec une télécommande Hue ou un pont Philips Hue.",
+        "it": "Collega la striscia luminosa per avviare l’associazione. Se l’associazione non parte automaticamente, reimposta il dispositivo con un telecomando Hue o un bridge Philips Hue.",
+        "sv": "Anslut ljuslisten för att starta parkopplingen. Om parkopplingen inte startar automatiskt, återställ enheten med en Hue-fjärrkontroll eller Philips Hue Bridge.",
+        "no": "Koble til lyslisten for å starte paringen. Hvis paringen ikke starter automatisk, tilbakestill enheten med en Hue-fjernkontroll eller Philips Hue Bridge.",
+        "es": "Conecta la tira de luz para iniciar el emparejamiento. Si no comienza automáticamente, restablece el dispositivo con un mando Hue o Philips Hue Bridge.",
+        "da": "Tilslut lysstrippen for at starte parringen. Hvis parringen ikke starter automatisk, nulstil enheden med en Hue-fjernbetjening eller Philips Hue Bridge.",
+        "ru": "Подключите световую ленту, чтобы начать сопряжение. Если сопряжение не начинается автоматически, сбросьте устройство с помощью пульта Hue или Philips Hue Bridge.",
+        "pl": "Podłącz taśmę świetlną, aby rozpocząć parowanie. Jeśli parowanie nie rozpocznie się automatycznie, zresetuj urządzenie pilotem Hue lub Philips Hue Bridge.",
+        "ko": "라이트스트립을(를) 연결해 페어링을 시작하세요. 페어링이 자동으로 시작되지 않으면 Hue 리모컨 또는 Philips Hue Bridge를 사용해 장치를 재설정하세요.",
+        "ar": "وصّل شريط الإضاءة لبدء الاقتران. إذا لم يبدأ الاقتران تلقائيًا، فأعد ضبط الجهاز باستخدام جهاز تحكم Hue أو Philips Hue Bridge."
       }
     }
   }
