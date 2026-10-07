@@ -2,7 +2,9 @@
   "name": {
     "en": "Garnea Downlight"
   },
-  "$extends": ["light_white_temperature"],
+  "$extends": [
+    "light_white_temperature"
+  ],
   "energy": {
     "approximation": {
       "usageOn": 7,
@@ -31,7 +33,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times."
+        "en": "Plug in the lamp, or toggle the lamp to start pairing.\n\nIf pairing does not automatically start, try turning the lamp on and off 6 times.",
+        "nl": "Sluit de lamp aan of schakel deze uit en weer in om het koppelen te starten.\n\nAls het koppelen niet automatisch start, probeer de lamp dan 6 keer uit en aan te zetten.",
+        "de": "Schließe die Lampe an oder schalte sie aus und wieder ein, um die Kopplung zu starten.\n\nWenn die Kopplung nicht automatisch startet, schalte die Lampe 6-mal aus und wieder ein.",
+        "fr": "Branchez la lampe ou éteignez-la puis rallumez-la pour lancer l’association.\n\nSi l’association ne démarre pas automatiquement, essayez d’éteindre et de rallumer la lampe 6 fois.",
+        "it": "Collega la lampada oppure spegnila e riaccendila per avviare l’associazione.\n\nSe l’associazione non parte automaticamente, prova a spegnere e riaccendere la lampada 6 volte.",
+        "sv": "Anslut lampan eller stäng av och slå på den för att starta parkopplingen.\n\nOm parkopplingen inte startar automatiskt, prova att slå av och på lampan 6 gånger.",
+        "no": "Koble til lampen, eller slå den av og på for å starte paringen.\n\nHvis paringen ikke starter automatisk, prøv å slå lampen av og på 6 ganger.",
+        "es": "Conecta la lámpara o apágala y vuelve a encenderla para iniciar el emparejamiento.\n\nSi el emparejamiento no comienza automáticamente, prueba a apagar y encender la lámpara 6 veces.",
+        "da": "Tilslut lampen, eller sluk og tænd den for at starte parringen.\n\nHvis parringen ikke starter automatisk, prøv at slukke og tænde lampen 6 gange.",
+        "ru": "Подключите лампу или выключите и снова включите её, чтобы начать сопряжение.\n\nЕсли сопряжение не начинается автоматически, попробуйте 6 раз выключить и включить лампу.",
+        "pl": "Podłącz lampę lub wyłącz ją i włącz ponownie, aby rozpocząć parowanie.\n\nJeśli parowanie nie rozpocznie się automatycznie, spróbuj 6 razy wyłączyć i włączyć lampę.",
+        "ko": "램프를 연결하거나 껐다 켜 페어링을 시작하세요.\n\n페어링이 자동으로 시작되지 않으면 램프를 6번 껐다 켜 보세요.",
+        "ar": "وصّل المصباح أو أطفئه ثم شغّله لبدء الاقتران.\n\nإذا لم يبدأ الاقتران تلقائيًا، فجرّب إطفاء المصباح وتشغيله 6 مرات."
       }
     }
   }
