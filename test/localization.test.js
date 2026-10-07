@@ -89,6 +89,24 @@ test('all Flow cards and device settings cover every supported app language', ()
   }
 });
 
+test('all driver pairing instructions cover every supported app language', () => {
+  let pairingInstructions = 0;
+
+  for (const id of fs.readdirSync(path.join(root, 'drivers'))) {
+    const file = path.join(root, 'drivers', id, 'driver.compose.json');
+    if (!fs.existsSync(file)) continue;
+
+    const compose = readJson(file);
+    const instruction = compose.zigbee?.learnmode?.instruction;
+    if (!instruction?.en) continue;
+
+    pairingInstructions += 1;
+    assertLocalizedObject(instruction, `drivers/${id}/driver.compose.json:zigbee.learnmode.instruction`);
+  }
+
+  assert.equal(pairingInstructions, 172, 'Expected every current driver to expose a localized pairing instruction');
+});
+
 test('App Store README exists for every supported app language', () => {
   assert.ok(fs.existsSync(path.join(root, 'README.txt')));
   for (const language of languages.slice(1)) {
