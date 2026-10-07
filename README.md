@@ -76,6 +76,12 @@ Network dropouts and rejoin problems should be reported separately from battery,
 
 The app uses Homey SDK 3, Homey Compose and the current Homey Zigbee driver stack used by this repository.
 
+### Development and release branches
+
+`develop-2.4` is frozen for the 2.4.0 Test scope at `e7e9a07` (2026-10-07). Only direct bug fixes to 2.4 or earlier behaviour and necessary release preparation belong on that line while Test observations are collected.
+
+New features, device support, migrations and other planned changes branch from and target `develop-2.5` (version 2.5.0). Forward-port every accepted earlier-release bug fix to 2.5. Do not merge the whole 2.5 branch back into the frozen 2.4 line. See the [release-branch policy](docs/release-branches.md) for routing and the [dashboard](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776) for current publication status.
+
 Requirements:
 
 - Node.js 22 or newer
@@ -92,7 +98,7 @@ npm run run
 
 The root `app.json` is generated from Homey Compose, but the current Homey CLI expects that file to exist before validation starts. It is therefore kept in the repository as a generated baseline. Do not edit it manually or include incidental regenerated changes in normal pull requests.
 
-Pull requests automatically run Homey publish validation, the regression test suite and `git diff --check`.
+Pull requests and pushes to `develop-2.5` automatically run Homey publish validation, the regression test suite and `git diff --check`.
 
 ### Generated manifest
 

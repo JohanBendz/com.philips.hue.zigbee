@@ -32,7 +32,7 @@
     "ar": "إضاءة ذكية — بطريقتك."
   },
   "brandColor": "#035ED8",
-  "version": "2.4.0",
+  "version": "2.5.0",
   "compatibility": ">=12.9.0",
   "category": [
     "lights"

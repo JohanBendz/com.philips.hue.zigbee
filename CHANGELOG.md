@@ -4,6 +4,10 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.5.0 (unreleased)
+
+Development line opened from the frozen 2.4.0 OTA baseline. No additional user-facing changes have been added yet.
+
 ### v2.4.0
 
 Native Hue firmware updates and Zigbee reliability improvements.
