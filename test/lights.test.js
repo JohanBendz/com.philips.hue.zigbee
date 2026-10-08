@@ -2,6 +2,7 @@
 
 const { test } = require('node:test');
 const assert = require('node:assert/strict');
+const { EventEmitter } = require('node:events');
 const { loadDriver } = require('./helpers');
 const { CLUSTER } = require('zigbee-clusters');
 
@@ -93,6 +94,64 @@ test('Slim: inherits shared initialization with zclNode and Hue Flow methods', a
     assert.equal(typeof device[method], 'function');
   }
   assert.equal(typeof device.listeners.dim, 'function');
+});
+
+test('2.2.0: passive light state reports sync Homey without configuring reporting', async () => {
+  const { device } = light('929003665001');
+
+  const onOffCluster = Object.assign(new EventEmitter(), device.zclNode.endpoints[12].clusters.onOff);
+  const levelCluster = Object.assign(new EventEmitter(), device.zclNode.endpoints[12].clusters.levelControl);
+  device.zclNode.endpoints[12].clusters.onOff = onOffCluster;
+  device.zclNode.endpoints[12].clusters.levelControl = levelCluster;
+
+  device.configureAttributeReporting = async () => {
+    throw new Error('passive state synchronization must not configure reporting');
+  };
+
+  device._registerStateReportListeners();
+
+  assert.equal(onOffCluster.listenerCount('attr.onOff'), 1);
+  assert.equal(levelCluster.listenerCount('attr.currentLevel'), 1);
+
+  onOffCluster.emit('attr.onOff', false);
+  levelCluster.emit('attr.currentLevel', 127);
+  await Promise.resolve();
+
+  assert.equal(device.values.onoff, false);
+  assert.equal(device.values.dim, 0.5);
+
+  levelCluster.emit('attr.currentLevel', 255);
+  await Promise.resolve();
+  assert.equal(device.values.dim, 0.5);
+
+  device._removeStateReportListeners();
+  assert.equal(onOffCluster.listenerCount('attr.onOff'), 0);
+  assert.equal(levelCluster.listenerCount('attr.currentLevel'), 0);
+});
+
+test('2.2.0: rapid light commands preserve explicit and fallback transition durations', async () => {
+  const { device, calls } = light('929003665001');
+  await device.onNodeInit({ zclNode: device.zclNode });
+  calls.length = 0;
+
+  await Promise.all(Array.from({ length: 20 }, (_, index) =>
+    device.changeDimLevel((index + 1) / 20, { duration: 2500 })));
+
+  const dimCalls = calls.filter(call => call.name === 'dim');
+  assert.equal(dimCalls.length, 20);
+  assert.ok(dimCalls.every(call => call.args.transitionTime === 25));
+
+  calls.length = 0;
+  await Promise.all(Array.from({ length: 20 }, (_, index) =>
+    device.changeColor(
+      { hue: index / 20, saturation: 0.8, value: 0.5 },
+      index % 2 === 0 ? { duration: 1800 } : {},
+    )));
+
+  const colorCalls = calls.filter(call => call.name === 'color');
+  assert.equal(colorCalls.length, 20);
+  assert.equal(colorCalls.filter(call => call.args.transitionTime === 18).length, 10);
+  assert.equal(colorCalls.filter(call => call.args.transitionTime === 4).length, 10);
 });
 
 test('2.2.18: on/off readback does not overwrite an explicit dim command', async () => {

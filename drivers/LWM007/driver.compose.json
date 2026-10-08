@@ -1,28 +1,26 @@
 {
   "name": {
-    "en": "Bulb 9W A60 E27 EUR White"
+    "en": "Hue Wired Dimmer Switch"
   },
   "$extends": [
     "light_white"
   ],
-  "energy": {
-    "approximation": {
-      "usageOn": 9,
-      "usageOff": 0.2
-    }
-  },
   "zigbee": {
     "manufacturerName": [
       "Philips",
       "Signify Netherlands B.V."
     ],
     "productId": [
-      "LWA001",
-      "LWA011",
-      "LWA024",
-      "LWA033"
+      "LWM007"
     ],
     "endpoints": {
+      "1": {
+        "clusters": [
+          0,
+          3,
+          64512
+        ]
+      },
       "11": {
         "clusters": [
           0,
@@ -35,7 +33,7 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Plug in the bulb, or toggle the bulb to start pairing.\n\nIf pairing does not automatically start you probably need to reset the bulb with a remote or a philips hue bridge."
+        "en": "Power the wired dimmer to start pairing. If pairing does not automatically start, reset it according to the Philips Hue instructions."
       }
     }
   }

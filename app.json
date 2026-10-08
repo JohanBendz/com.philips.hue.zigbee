@@ -9,7 +9,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.2.1",
+  "version": "2.3.1",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"
@@ -10394,6 +10394,308 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/929004608001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929004608001/assets/images/large.png",
+        "small": "/drivers/929004608001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "OmniGlow Lightstrip"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929004608001",
+          "929004608003",
+          "929004608004",
+          "929004608101",
+          "929004608103",
+          "929004608201"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the OmniGlow lightstrip to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+          }
+        }
+      },
+      "id": "929004608001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/929004610402/assets/icon.svg",
+      "images": {
+        "large": "/drivers/929004610402/assets/images/large.png",
+        "small": "/drivers/929004610402/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_hue",
+        "light_saturation",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_hue": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_saturation": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Flux Lightstrip"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "929004610401",
+          "929004610402",
+          "929004610403",
+          "929004610502",
+          "929004610601",
+          "929004610602",
+          "929004610702",
+          "929004610802"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the Flux lightstrip to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+          }
+        }
+      },
+      "id": "929004610402",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/HBL001/assets/icon.svg",
       "images": {
         "large": "/drivers/HBL001/assets/images/large.png",
@@ -20364,6 +20666,139 @@
     },
     {
       "class": "light",
+      "icon": "/drivers/LTU001/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LTU001/assets/images/large.png",
+        "small": "/drivers/LTU001/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim",
+        "light_temperature",
+        "light_mode"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "light_temperature": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Bulb E14 P45 White Ambiance"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LTU001"
+        ],
+        "endpoints": {
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8,
+              768
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Plug in the bulb, or toggle the bulb to start pairing. If pairing does not automatically start, reset it using a Hue remote or Philips Hue bridge."
+          }
+        }
+      },
+      "id": "LTU001",
+      "settings": [
+        {
+          "id": "light_temp_powerOnCtrl",
+          "type": "group",
+          "label": {
+            "en": "Behavior after power loss"
+          },
+          "children": [
+            {
+              "id": "powerOnCtrl_dimvalue",
+              "type": "number",
+              "label": {
+                "en": "Default brightness"
+              },
+              "value": 255,
+              "min": 0,
+              "max": 255,
+              "units": {
+                "en": "steps"
+              },
+              "hint": {
+                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_colorvalue",
+              "type": "number",
+              "label": {
+                "en": "Default light temperature on Power On"
+              },
+              "value": 366,
+              "min": 153,
+              "max": 500,
+              "units": {
+                "en": "Mireds"
+              },
+              "hint": {
+                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              }
+            },
+            {
+              "id": "powerOnCtrl_state",
+              "type": "radio",
+              "label": {
+                "en": "Behavior when power is restored"
+              },
+              "value": "on",
+              "hint": {
+                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
+              },
+              "values": [
+                {
+                  "id": "on",
+                  "label": {
+                    "en": "On with default brightness"
+                  }
+                },
+                {
+                  "id": "off",
+                  "label": {
+                    "en": "Off"
+                  }
+                },
+                {
+                  "id": "recover",
+                  "label": {
+                    "en": "Restore last state and brightness"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "light",
       "icon": "/drivers/LTV001/assets/icon.svg",
       "images": {
         "large": "/drivers/LTV001/assets/images/large.png",
@@ -21220,7 +21655,8 @@
         "productId": [
           "LWA001",
           "LWA011",
-          "LWA024"
+          "LWA024",
+          "LWA033"
         ],
         "endpoints": {
           "11": {
@@ -21688,7 +22124,8 @@
           "LWB004",
           "LWB006",
           "LWB007",
-          "LWF002"
+          "LWF002",
+          "LWF004"
         ],
         "endpoints": {
           "11": {
@@ -22334,6 +22771,95 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "class": "light",
+      "icon": "/drivers/LWM007/assets/icon.svg",
+      "images": {
+        "large": "/drivers/LWM007/assets/images/large.png",
+        "small": "/drivers/LWM007/assets/images/small.png"
+      },
+      "capabilities": [
+        "onoff",
+        "dim"
+      ],
+      "capabilitiesOptions": {
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        },
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "name": {
+        "en": "Hue Wired Dimmer Switch"
+      },
+      "zigbee": {
+        "manufacturerName": [
+          "Philips",
+          "Signify Netherlands B.V."
+        ],
+        "productId": [
+          "LWM007"
+        ],
+        "endpoints": {
+          "1": {
+            "clusters": [
+              0,
+              3,
+              64512
+            ]
+          },
+          "11": {
+            "clusters": [
+              0,
+              3,
+              4,
+              6,
+              8
+            ]
+          }
+        },
+        "learnmode": {
+          "instruction": {
+            "en": "Power the wired dimmer to start pairing. If pairing does not automatically start, reset it according to the Philips Hue instructions."
+          }
+        }
+      },
+      "id": "LWM007",
+      "settings": [
+        {
+          "id": "mode",
+          "type": "dropdown",
+          "value": "singlerocker",
+          "label": {
+            "en": "Connected switch type",
+            "sv": "Ansluten brytartyp"
+          },
+          "values": [
+            {
+              "id": "singlerocker",
+              "label": {
+                "en": "Single rocker",
+                "sv": "Enkel vippbrytare"
+              }
+            },
+            {
+              "id": "singlepushbutton",
+              "label": {
+                "en": "Single push button",
+                "sv": "Enkel tryckknapp"
+              }
+            }
+          ],
+          "hint": {
+            "en": "Choose the physical wall-switch type connected to the wired dimmer. The app only writes this setting when you change it.",
+            "sv": "Välj typen av fysisk väggbrytare som är ansluten till dimmern. Appen skriver bara inställningen när du själv ändrar den."
+          }
         }
       ]
     },
@@ -24189,10 +24715,10 @@
             "sv": "Rörelse-cooldown / närvarotid (s)"
           },
           "hint": {
-            "en": "Seconds before the sensor reports unoccupied after motion. The value is written to the Hue sensor when it wakes.",
-            "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Värdet skrivs till Hue-sensorn när den vaknar."
+            "en": "Seconds before the sensor reports unoccupied after motion. The normal Hue/Zigbee default is 90 seconds. The value is written to the Hue sensor when it wakes.",
+            "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Normalvärdet för Hue/Zigbee är 90 sekunder. Värdet skrivs till Hue-sensorn när den vaknar."
           },
-          "value": 0,
+          "value": 90,
           "attr": {
             "step": 1,
             "min": 0,
@@ -24649,10 +25175,10 @@
             "sv": "Rörelse-cooldown / närvarotid (s)"
           },
           "hint": {
-            "en": "Seconds before the sensor reports unoccupied after motion. The value is written to the Hue sensor when it wakes.",
-            "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Värdet skrivs till Hue-sensorn när den vaknar."
+            "en": "Seconds before the sensor reports unoccupied after motion. The normal Hue/Zigbee default is 90 seconds. The value is written to the Hue sensor when it wakes.",
+            "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Normalvärdet för Hue/Zigbee är 90 sekunder. Värdet skrivs till Hue-sensorn när den vaknar."
           },
-          "value": 0,
+          "value": 90,
           "attr": {
             "step": 1,
             "min": 0,

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "mode",
+    "type": "dropdown",
+    "value": "singlerocker",
+    "label": {
+      "en": "Connected switch type",
+      "sv": "Ansluten brytartyp"
+    },
+    "values": [
+      {
+        "id": "singlerocker",
+        "label": {
+          "en": "Single rocker",
+          "sv": "Enkel vippbrytare"
+        }
+      },
+      {
+        "id": "singlepushbutton",
+        "label": {
+          "en": "Single push button",
+          "sv": "Enkel tryckknapp"
+        }
+      }
+    ],
+    "hint": {
+      "en": "Choose the physical wall-switch type connected to the wired dimmer. The app only writes this setting when you change it.",
+      "sv": "Välj typen av fysisk väggbrytare som är ansluten till dimmern. Appen skriver bara inställningen när du själv ändrar den."
+    }
+  }
+]
