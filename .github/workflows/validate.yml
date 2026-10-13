@@ -42,8 +42,15 @@ jobs:
           npm ls @types/homey typescript || true
           echo "=== Beta package metadata ==="
           cat node_modules/@types/homey/package.json
-          echo "=== Beta dependency audit ==="
-          npm audit --json || true
+          echo "=== Beta dependency audit (isolated lockfile) ==="
+          rm -rf /tmp/homey-beta-audit
+          mkdir -p /tmp/homey-beta-audit
+          (
+            cd /tmp/homey-beta-audit
+            npm init -y >/dev/null 2>&1
+            npm install --package-lock-only --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@1.7.0 >/dev/null 2>&1
+            npm audit --json || true
+          )
           npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-beta.log 2>&1
           beta_status=$?
           cat /tmp/homey-beta.log
