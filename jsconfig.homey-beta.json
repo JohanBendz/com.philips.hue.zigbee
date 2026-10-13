@@ -17,13 +17,9 @@
     "noImplicitAny": false
   },
   "include": [
-    "app.js",
-    "drivers/**/*.js",
-    "lib/**/*.js"
+    "app.js"
   ],
   "exclude": [
-    "node_modules",
-    "test",
-    "scripts"
+    "node_modules"
   ]
 }
