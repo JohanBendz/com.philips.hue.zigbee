@@ -21,5 +21,59 @@ jobs:
       - name: Generate manifest and run Homey publish validation
         run: npx --yes homey@4.5.0 app validate --level publish
       - run: npm test
+      - name: Compare stable and beta Homey SDK types
+        if: github.head_ref == 'audit/homey-types-beta' || github.ref == 'refs/heads/audit/homey-types-beta'
+        shell: bash
+        run: |
+          set +e
+
+          npm install --no-save --package-lock=false --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@0.3.12
+          echo "=== Stable types ==="
+          npm ls @types/homey typescript || true
+          rm -rf /tmp/homey-types-stable
+          cp -R node_modules/@types/homey /tmp/homey-types-stable
+          npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-stable.log 2>&1
+          stable_status=$?
+          cat /tmp/homey-stable.log
+          echo "stable_tsc_exit=$stable_status"
+
+          npm install --no-save --package-lock=false --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@beta
+          echo "=== Beta types ==="
+          npm ls @types/homey typescript || true
+          echo "=== Beta package metadata ==="
+          cat node_modules/@types/homey/package.json
+          echo "=== Beta dependency audit (isolated lockfile) ==="
+          rm -rf /tmp/homey-beta-audit
+          mkdir -p /tmp/homey-beta-audit
+          (
+            cd /tmp/homey-beta-audit
+            npm init -y >/dev/null 2>&1
+            npm install --package-lock-only --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@1.7.0 >/dev/null 2>&1
+            npm audit --json || true
+          )
+          npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-beta.log 2>&1
+          beta_status=$?
+          cat /tmp/homey-beta.log
+          echo "beta_tsc_exit=$beta_status"
+
+          grep 'error TS' /tmp/homey-stable.log | sort -u > /tmp/homey-stable-errors.log || true
+          grep 'error TS' /tmp/homey-beta.log | sort -u > /tmp/homey-beta-errors.log || true
+          comm -13 /tmp/homey-stable-errors.log /tmp/homey-beta-errors.log > /tmp/homey-beta-only.log
+
+          echo "=== Beta-only diagnostics ==="
+          cat /tmp/homey-beta-only.log
+
+          echo "=== SDK/device lifecycle declarations relevant to current audit ==="
+          grep -nE 'fromJSON|getDeviceById|setLastSeenAt|ready\(\)|onInit\(\)'             node_modules/@types/homey/lib/SDK.d.ts             node_modules/@types/homey/lib/HomeyClient.d.ts             node_modules/@types/homey/lib/Driver.d.ts             node_modules/@types/homey/lib/Device.d.ts 2>/dev/null || true
+
+          echo "=== Changed declaration files: stable 0.3.12 -> beta ==="
+          diff -rq /tmp/homey-types-stable node_modules/@types/homey || true
+
+          if [ -s /tmp/homey-beta-only.log ]; then
+            echo "Beta introduced diagnostics not present with stable 0.3.12."
+            exit 1
+          fi
+
+          echo "No beta-only TypeScript diagnostics detected."
       - name: Whitespace check
         run: git diff --check
