@@ -21,11 +21,44 @@ jobs:
       - name: Generate manifest and run Homey publish validation
         run: npx --yes homey@4.5.0 app validate --level publish
       - run: npm test
-      - name: Homey SDK beta types audit
+      - name: Compare stable and beta Homey SDK types
         if: github.head_ref == 'audit/homey-types-beta' || github.ref == 'refs/heads/audit/homey-types-beta'
+        shell: bash
         run: |
-          npm install --no-save --package-lock=false --ignore-scripts typescript@latest @types/homey@npm:homey-apps-sdk-v3-types@beta
+          set +e
+
+          npm install --no-save --package-lock=false --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@0.3.12
+          echo "=== Stable types ==="
           npm ls @types/homey typescript || true
-          npx tsc -p jsconfig.homey-beta.json --pretty false
+          rm -rf /tmp/homey-types-stable
+          cp -R node_modules/@types/homey /tmp/homey-types-stable
+          npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-stable.log 2>&1
+          stable_status=$?
+          cat /tmp/homey-stable.log
+          echo "stable_tsc_exit=$stable_status"
+
+          npm install --no-save --package-lock=false --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@beta
+          echo "=== Beta types ==="
+          npm ls @types/homey typescript || true
+          npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-beta.log 2>&1
+          beta_status=$?
+          cat /tmp/homey-beta.log
+          echo "beta_tsc_exit=$beta_status"
+
+          echo "=== Changed declaration files: stable 0.3.12 -> beta ==="
+          diff -rq /tmp/homey-types-stable node_modules/@types/homey || true
+
+          echo "=== App declaration diff ==="
+          diff -u /tmp/homey-types-stable/lib/App.d.ts node_modules/@types/homey/lib/App.d.ts || true
+
+          echo "=== Device declaration diff (first 250 lines) ==="
+          diff -u /tmp/homey-types-stable/lib/Device.d.ts node_modules/@types/homey/lib/Device.d.ts | head -n 250 || true
+
+          echo "=== Driver declaration diff (first 250 lines) ==="
+          diff -u /tmp/homey-types-stable/lib/Driver.d.ts node_modules/@types/homey/lib/Driver.d.ts | head -n 250 || true
+
+          if [ "$beta_status" -ne 0 ]; then
+            exit "$beta_status"
+          fi
       - name: Whitespace check
         run: git diff --check
