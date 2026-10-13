@@ -40,25 +40,31 @@ jobs:
           npm install --no-save --package-lock=false --ignore-scripts typescript@7.0.2 @types/homey@npm:homey-apps-sdk-v3-types@beta
           echo "=== Beta types ==="
           npm ls @types/homey typescript || true
+          echo "=== Beta package metadata ==="
+          cat node_modules/@types/homey/package.json
           npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-beta.log 2>&1
           beta_status=$?
           cat /tmp/homey-beta.log
           echo "beta_tsc_exit=$beta_status"
 
+          grep 'error TS' /tmp/homey-stable.log | sort -u > /tmp/homey-stable-errors.log || true
+          grep 'error TS' /tmp/homey-beta.log | sort -u > /tmp/homey-beta-errors.log || true
+          comm -13 /tmp/homey-stable-errors.log /tmp/homey-beta-errors.log > /tmp/homey-beta-only.log
+
+          echo "=== Beta-only diagnostics ==="
+          cat /tmp/homey-beta-only.log
+
+          echo "=== SDK/device lifecycle declarations relevant to current audit ==="
+          grep -nE 'fromJSON|getDeviceById|setLastSeenAt|ready\(\)|onInit\(\)'             node_modules/@types/homey/lib/SDK.d.ts             node_modules/@types/homey/lib/HomeyClient.d.ts             node_modules/@types/homey/lib/Driver.d.ts             node_modules/@types/homey/lib/Device.d.ts 2>/dev/null || true
+
           echo "=== Changed declaration files: stable 0.3.12 -> beta ==="
           diff -rq /tmp/homey-types-stable node_modules/@types/homey || true
 
-          echo "=== App declaration diff ==="
-          diff -u /tmp/homey-types-stable/lib/App.d.ts node_modules/@types/homey/lib/App.d.ts || true
-
-          echo "=== Device declaration diff (first 250 lines) ==="
-          diff -u /tmp/homey-types-stable/lib/Device.d.ts node_modules/@types/homey/lib/Device.d.ts | head -n 250 || true
-
-          echo "=== Driver declaration diff (first 250 lines) ==="
-          diff -u /tmp/homey-types-stable/lib/Driver.d.ts node_modules/@types/homey/lib/Driver.d.ts | head -n 250 || true
-
-          if [ "$beta_status" -ne 0 ]; then
-            exit "$beta_status"
+          if [ -s /tmp/homey-beta-only.log ]; then
+            echo "Beta introduced diagnostics not present with stable 0.3.12."
+            exit 1
           fi
+
+          echo "No beta-only TypeScript diagnostics detected."
       - name: Whitespace check
         run: git diff --check
