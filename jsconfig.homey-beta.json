@@ -17,9 +17,14 @@
     "noImplicitAny": false
   },
   "include": [
-    "app.js"
+    "types/homey-zigbeedriver.audit.d.ts",
+    "app.js",
+    "drivers/**/*.js",
+    "lib/**/*.js"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test",
+    "scripts"
   ]
 }
