@@ -21,5 +21,11 @@ jobs:
       - name: Generate manifest and run Homey publish validation
         run: npx --yes homey@4.5.0 app validate --level publish
       - run: npm test
+      - name: Homey SDK beta types audit
+        if: github.head_ref == 'audit/homey-types-beta' || github.ref == 'refs/heads/audit/homey-types-beta'
+        run: |
+          npm install --no-save --package-lock=false --ignore-scripts typescript@latest @types/homey@npm:homey-apps-sdk-v3-types@beta
+          npm ls @types/homey typescript || true
+          npx tsc -p jsconfig.homey-beta.json --pretty false
       - name: Whitespace check
         run: git diff --check
