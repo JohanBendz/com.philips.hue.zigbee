@@ -42,6 +42,8 @@ jobs:
           npm ls @types/homey typescript || true
           echo "=== Beta package metadata ==="
           cat node_modules/@types/homey/package.json
+          echo "=== Beta dependency audit ==="
+          npm audit --json || true
           npx tsc -p jsconfig.homey-beta.json --pretty false > /tmp/homey-beta.log 2>&1
           beta_status=$?
           cat /tmp/homey-beta.log
