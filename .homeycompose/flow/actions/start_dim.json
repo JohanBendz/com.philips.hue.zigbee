@@ -7,10 +7,10 @@
     "de": "Dimmen starten"
   },
   "titleFormatted": {
-    "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
-    "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
-    "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
-    "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+    "en": "Start dimming [[direction]] at speed [[rate]]",
+    "sv": "Starta dimning [[direction]] med hastighet [[rate]]",
+    "nl": "Start dimmen [[direction]] met snelheid [[rate]]",
+    "de": "Dimmen [[direction]] mit Geschwindigkeit [[rate]] starten"
   },
   "hint": {
     "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
