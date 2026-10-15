@@ -95,3 +95,20 @@ test('known foreign driver IDs cannot be selected by Hue global Flow cards', () 
     }
   }
 });
+
+test('device-scoped global cards do not use [[device]] in titleFormatted', () => {
+  for (const filename of flowFiles) {
+    const card = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    const deviceArg = (card.args || []).find(arg => arg.type === 'device');
+
+    if (!deviceArg || !/(?:^|&)driver_id=[^&]+/.test(String(deviceArg.filter || ''))) continue;
+
+    for (const [language, title] of Object.entries(card.titleFormatted || {})) {
+      assert.doesNotMatch(
+        String(title),
+        /\[\[device\]\]/,
+        `${card.id} (${language}): driver-scoped cards must not render [[device]] in titleFormatted`,
+      );
+    }
+  }
+});
