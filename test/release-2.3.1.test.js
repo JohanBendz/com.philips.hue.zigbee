@@ -10,15 +10,16 @@ const pkg = require('../package.json');
 const lock = require('../package-lock.json');
 const changelog = require('../.homeychangelog.json');
 
-test('2.3.1 Live release metadata is aligned', () => {
-  assert.equal(compose.version, '2.3.1');
-  assert.equal(pkg.version, '2.3.1');
-  assert.equal(lock.version, '2.3.1');
-  assert.equal(lock.packages[''].version, '2.3.1');
+test('current release metadata is aligned', () => {
+  const version = pkg.version;
 
-  assert.equal(typeof changelog['2.3.1']?.en, 'string');
-  assert.ok(changelog['2.3.1'].en.length > 20);
-  assert.doesNotMatch(changelog['2.3.1'].en, /\btest(?:\s+release|\s+candidate)?\b/i);
+  assert.equal(compose.version, version);
+  assert.equal(lock.version, version);
+  assert.equal(lock.packages[''].version, version);
+
+  assert.equal(typeof changelog[version]?.en, 'string');
+  assert.ok(changelog[version].en.length > 20);
+  assert.doesNotMatch(changelog[version].en, /\btest(?:\s+release|\s+candidate)?\b/i);
 });
 
 test('App Store copy is release-neutral and present', () => {
