@@ -1,21 +1,21 @@
 {
-    "id": "luminance_above",
-    "title": "Luminance is above",
-    "titleFormatted": {
-      "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
-      "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
-      "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-      "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+  "id": "luminance_above",
+  "title": "Luminance is above",
+  "titleFormatted": {
+    "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
+    "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+    "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+    "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
     },
-    "args": [
-      {
-        "name": "device",
-        "type": "device",
-        "filter": "class=sensor"
-      },
-      {
-        "name": "luminance",
-        "type": "number"
-      }
-    ]
-  }
+    {
+      "name": "luminance",
+      "type": "number"
+    }
+  ]
+}
