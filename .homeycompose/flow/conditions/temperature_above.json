@@ -2,10 +2,10 @@
   "id": "temperature_above",
   "title": "Temperature is above",
   "titleFormatted": {
-    "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
-    "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
-    "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
-    "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad"
+    "en": "Temperature is !{{above|below}} [[temperature]] degrees",
+    "sv": "Temperaturen är !{{över|under}} [[temperature]] grader",
+    "nl": "Temperatuur is !{{boven|onder}} [[temperature]] graden",
+    "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad"
   },
   "args": [
     {
