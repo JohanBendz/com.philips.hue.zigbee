@@ -7,10 +7,10 @@
     "de": "Dimmen stoppen"
   },
   "titleFormatted": {
-    "en": "Stop dimming [[device]]",
-    "sv": "Stoppa dimning av [[device]]",
-    "nl": "Stop dimmen van [[device]]",
-    "de": "Dimmen von [[device]] stoppen"
+    "en": "Stop dimming",
+    "sv": "Stoppa dimning",
+    "nl": "Stop dimmen",
+    "de": "Dimmen stoppen"
   },
   "hint": {
     "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
