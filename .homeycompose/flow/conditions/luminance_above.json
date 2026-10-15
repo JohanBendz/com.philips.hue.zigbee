@@ -2,10 +2,10 @@
   "id": "luminance_above",
   "title": "Luminance is above",
   "titleFormatted": {
-    "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
-    "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
-    "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-    "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+    "en": "Luminance is !{{above|below}} [[luminance]] lux",
+    "sv": "Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+    "nl": "Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+    "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux"
   },
   "args": [
     {
