@@ -5,8 +5,8 @@
     "sv": "Ställ in Hue-gradient med 3 färger"
   },
   "titleFormatted": {
-    "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
-    "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]"
+    "en": "Set gradient to [[color1]], [[color2]], [[color3]]",
+    "sv": "Ställ gradienten till [[color1]], [[color2]], [[color3]]"
   },
   "hint": {
     "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
