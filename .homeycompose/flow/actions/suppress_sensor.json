@@ -7,10 +7,10 @@
     "de": "Sensor unterdrücken"
   },
   "titleFormatted": {
-    "en": "Suppress the sensor [[device]] for [[duration]] seconds",
-    "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
-    "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-    "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
+    "en": "Suppress for [[duration]] seconds",
+    "sv": "Tysta i [[duration]] sekunder",
+    "nl": "Onderdruk gedurende [[duration]] seconden",
+    "de": "Für [[duration]] Sekunden unterdrücken"
   },
   "args": [
     {
