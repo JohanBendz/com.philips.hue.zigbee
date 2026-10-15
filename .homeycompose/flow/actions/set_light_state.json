@@ -5,8 +5,8 @@
     "sv": "Ställ in ljusläge"
   },
   "titleFormatted": {
-    "en": "Set [[device]] to [[brightness]] and [[color]]",
-    "sv": "Ställ [[device]] på [[brightness]] och [[color]]"
+    "en": "Set brightness to [[brightness]] and color to [[color]]",
+    "sv": "Ställ ljusstyrkan till [[brightness]] och färgen till [[color]]"
   },
   "args": [
     {
