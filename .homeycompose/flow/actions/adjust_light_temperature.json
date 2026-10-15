@@ -5,8 +5,8 @@
     "sv": "Justera färgtemperatur"
   },
   "titleFormatted": {
-    "en": "Adjust [[device]] color temperature by [[delta]]",
-    "sv": "Justera färgtemperaturen för [[device]] med [[delta]]"
+    "en": "Adjust color temperature by [[delta]]",
+    "sv": "Justera färgtemperaturen med [[delta]]"
   },
   "hint": {
     "en": "Positive values make the light warmer; negative values make it cooler.",
