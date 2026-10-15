@@ -7,10 +7,10 @@
     "de": "Alarmmodus"
   },
   "titleFormatted": {
-    "en": "Set alert mode for [[device]] to [[alert_mode]]",
-    "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
-    "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
-    "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
+    "en": "Set alert mode to [[alert_mode]]",
+    "sv": "Ställ in larm-läge till [[alert_mode]]",
+    "nl": "Stel waarschuwingsmodus in op [[alert_mode]]",
+    "de": "Alarmmodus auf [[alert_mode]] setzen"
   },
   "args": [
     {
