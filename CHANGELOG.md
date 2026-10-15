@@ -4,6 +4,16 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.3.2
+
+Hotfix for app-global Flow cards selecting devices owned by other Homey apps.
+
+- Restricts every global `device` Flow argument to the Hue drivers that can actually use that card.
+- Prevents foreign light and sensor drivers such as IKEA Trådfri, Aqara and bridge-based Hue devices from being selected for Hue app Flow cards.
+- Keeps capability-specific scope for dim, color, color-temperature and sensor cards by deriving the allowed Hue driver set from the current manifest.
+- Adds regression coverage that rejects future app-global `device` Flow arguments without a `driver_id` filter.
+- No Zigbee pairing, reporting, polling or device runtime behavior is changed.
+
 ### v2.3.1
 
 Live release of the 2.3 Hue Zigbee feature and device-support line after Homey Test validation.
