@@ -7,10 +7,10 @@
     "de": "Blink das Licht"
   },
   "titleFormatted": {
-    "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
-    "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
-    "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
-    "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+    "en": "Set blink type to [[blink_type]] with [[blinks]] blinks",
+    "sv": "Ställ in blinkningstyp till [[blink_type]] med [[blinks]] blinkningar",
+    "nl": "Stel knipper-type in op [[blink_type]] met [[blinks]] keer knipperen",
+    "de": "Blinktyp auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
   },
   "args": [
     {
