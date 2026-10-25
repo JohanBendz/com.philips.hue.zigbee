@@ -23,14 +23,16 @@ Updated 2026-10-25. Applies to `JohanBendz/com.philips.hue.zigbee`.
 ## Near-term release sequence
 
 1. **2.3.1** is Live; new `main` and `dev` start at the identical published source commit `0eb6bd2`. Repository CI/documentation-only commits after this baseline do not alter app runtime or app version.
-2. **PR #809** (2.3.2, `hotfix/2.3.2-flow-device-filters`) targets `dev`; keep Draft until regenerated root `app.json`, local verification and Homey Test observations are complete.
+2. **PR #809** (2.3.2, `hotfix/2.3.2-flow-device-filters`) targets `dev`; keep Draft until local verification and Homey Test observations are complete. Committing a regenerated root `app.json` is **not** a prerequisite.
 3. **PR #786** (frozen 2.4.0 branch) tracks a future distinct Test candidate, not the immediate 2.3.2 hotfix.
 4. **PR #813** RWL022 battery experiment and **#803** LOM002 reporting experiment are *not* in the 2.3.2 candidate.
 5. When promoting a Test build to Live, record exact version, commit and Homey Build ID. Keep rollback reference; verify Flow compatibility and crash trend.
 
 ## Validation and safety
 
-The validation workflow runs on pushes to `main`, `dev`, `develop-2.4` and `develop-2.5`, and on PRs. It does not publish releases. Root `app.json` is generated from Homey Compose and must match the build intended for Test/Live before publication. Avoid committing incidental root-manifest churn to experimental branches.
+The validation workflow runs on pushes to `main`, `dev`, `develop-2.4` and `develop-2.5`, and on PRs. It does not publish releases.
+
+**Important Homey Compose bootstrap rule:** the repository-root `app.json` **must exist and remain tracked**. We have established that the Compose workflow does not work if this file is absent. It is an output/bootstrap manifest, **not the source of truth**, and is explicitly allowed to be out of sync with `.homeycompose` files. Homey CLI overwrites/regenerates it during run/validation/build/publication. Never remove it or add it to `.gitignore`; do not include incidental generated changes in feature/fix PRs, and do not require a commit merely to synchronize it. Compose files plus release package metadata define the intended application. **Tests reading `app.json` must run after a CLI regeneration** (the GitHub CI workflow already validates before running `npm test`); directly invoking `npm test` without generating may read stale contents. For each actual Test/Live build verify the generated manifest and app version, without requiring a git-tracked manifest update.
 
 Recommended GitHub repository rules: require PR review and successful CI for `main`, disallow force-pushes/deletion and prefer only release-approved promotions. These controls are configured in GitHub Settings; this document does not assert they are already enabled.
 
