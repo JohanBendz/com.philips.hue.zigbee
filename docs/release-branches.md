@@ -1,5 +1,21 @@
 # Release branches
 
+## Current publication routing — 2026-10-25
+
+The repository has adopted permanent **`main` = latest published Homey Live** and **`dev` = next Homey Test candidate** branches. Both were initialized from the published v2.3.1 source (commit `0eb6bd2`), and synchronized following repository-only CI/documentation maintenance. GitHub's default branch is now `main`.
+
+- Bug fixes intended for the next Test use PRs against `dev` (currently Draft #809, proposed 2.3.2).
+- `develop-2.4` remains the **frozen** 2.4.0 release-candidate branch (Draft #786 targets `dev`). Do not overwrite `dev` with the 2.4 code until that later Test cut has been reconciled and approved.
+- `develop-2.5` is a version-scoped workspace for experiments and new features; it is not the Test or Live channel. #792, #803, #808 and #813 remain separate Drafts here.
+- `modernize-2026` preserves the earlier 2.1.2 rollback. Former `issues-2026` / `issues-2026-next` / `ota-2026` are historical, no longer release destinations.
+- Homey publish actions remain explicit maintainer steps. Never infer that a PR merge publishes to Homey.
+
+The canonical current policy and release procedure is [docs/branching-and-releases.md](https://github.com/JohanBendz/com.philips.hue.zigbee/blob/main/docs/branching-and-releases.md). The 2026-10-07 material below is retained as a historical record of the 2.4/2.5 scope freeze.
+
+---
+
+## Historical release-branch decision — 2026-10-07
+
 Decision recorded **2026-10-07** (Europe/Stockholm). Current publication status is maintained in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
 ## Frozen 2.4 scope
