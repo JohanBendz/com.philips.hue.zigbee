@@ -1,11 +1,8 @@
 "use strict";
 
 const { ZigBeeDevice } = require('homey-zigbeedriver');
-const { Cluster, CLUSTER } = require('zigbee-clusters');
-
-// Power On Behaviour need these
-const HueSpecificOnOffCluster = require('../lib/HueSpecificOnOffCluster');
-Cluster.addCluster(HueSpecificOnOffCluster);
+const { CLUSTER } = require('zigbee-clusters');
+const { toStandardStartupState } = require('../lib/HuePowerOnStartup');
 
 class Plug extends ZigBeeDevice {
 
@@ -29,8 +26,8 @@ class Plug extends ZigBeeDevice {
                 }
 
                 const onOffCluster = this.zclNode.endpoints[onOffEndpoint].clusters[CLUSTER.ON_OFF.NAME];
-                await onOffCluster.readAttributes(['powerOnCtrl']);
-                await onOffCluster.writeAttributes({powerOnCtrl: newSettings.powerOnCtrl_state}); // default: On (On, Off, 255 = Recover)
+                await onOffCluster.readAttributes(['startUpOnOff']);
+                await onOffCluster.writeAttributes({ startUpOnOff: toStandardStartupState(newSettings.powerOnCtrl_state) }); // recover -> previous (0xFF)
                 this.log("Power On Control supported by device");
             } catch (error) {
                 this.log("This device does not support Power On Control");
