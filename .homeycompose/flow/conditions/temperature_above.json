@@ -16,25 +16,25 @@
     "ar": "درجة الحرارة أعلى من"
   },
   "titleFormatted": {
-    "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
-    "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
-    "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
-    "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad",
-    "fr": "[[device]] La température est !{{supérieure|inférieure}} à [[temperature]] degrés",
-    "it": "[[device]] La temperatura è !{{sopra|sotto}} [[temperature]] gradi",
-    "no": "[[device]] Temperaturen er !{{over|under}} [[temperature]] grader",
-    "es": "[[device]] La temperatura está !{{por encima|por debajo}} de [[temperature]] grados",
-    "da": "[[device]] Temperaturen er !{{over|under}} [[temperature]] grader",
-    "ru": "[[device]] Температура !{{выше|ниже}} [[temperature]] градусов",
-    "pl": "[[device]] Temperatura jest !{{powyżej|poniżej}} [[temperature]] stopni",
-    "ko": "[[device]] 온도가 [[temperature]]도 !{{초과|미만}}",
-    "ar": "[[device]] درجة الحرارة !{{أعلى|أقل}} من [[temperature]] درجة"
+    "en": "Temperature is !{{above|below}} [[temperature]] degrees",
+    "sv": "Temperaturen är !{{över|under}} [[temperature]] grader",
+    "nl": "Temperatuur is !{{boven|onder}} [[temperature]] graden",
+    "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad",
+    "fr": "La température est !{{supérieure|inférieure}} à [[temperature]] degrés",
+    "it": "La temperatura è !{{sopra|sotto}} [[temperature]] gradi",
+    "no": "Temperaturen er !{{over|under}} [[temperature]] grader",
+    "es": "La temperatura está !{{por encima|por debajo}} de [[temperature]] grados",
+    "da": "Temperaturen er !{{over|under}} [[temperature]] grader",
+    "ru": "Температура !{{выше|ниже}} [[temperature]] градусов",
+    "pl": "Temperatura jest !{{powyżej|poniżej}} [[temperature]] stopni",
+    "ko": "온도가 [[temperature]]도 !{{초과|미만}}",
+    "ar": "درجة الحرارة !{{أعلى|أقل}} من [[temperature]] درجة"
   },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "class=sensor"
+      "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
     },
     {
       "name": "temperature",

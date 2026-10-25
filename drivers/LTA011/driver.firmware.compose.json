@@ -14,12 +14,12 @@
       },
       "files": [
         {
-          "fileVersion": 16780550,
+          "fileVersion": 16781824,
           "imageType": 297,
           "manufacturerCode": 4107,
-          "size": 833604,
-          "name": "100B-0129-01000D06-Light-EFR32MG26.zigbee",
-          "integrity": "sha256:5ff65ab595d661f7b02bfcad82b2fd2578c9b4987289b567da5b7172c78b134f"
+          "size": 888130,
+          "name": "100B-0129-01001200-Light-EFR32MG26.zigbee",
+          "integrity": "sha256:c1a1b9f1e4a1a6368a245d8896284d4dec6a64bad41e3ad3c6ee01595e0afd89"
         }
       ]
     }

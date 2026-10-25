@@ -16,19 +16,19 @@
     "ar": "تعيين تدرج Hue بثلاثة ألوان"
   },
   "titleFormatted": {
-    "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
-    "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]",
-    "nl": "Stel het verloop van [[device]] in op [[color1]], [[color2]], [[color3]]",
-    "de": "Verlauf von [[device]] auf [[color1]], [[color2]], [[color3]] setzen",
-    "fr": "Régler le dégradé de [[device]] sur [[color1]], [[color2]], [[color3]]",
-    "it": "Imposta il gradiente di [[device]] su [[color1]], [[color2]], [[color3]]",
-    "no": "Sett gradienten for [[device]] til [[color1]], [[color2]], [[color3]]",
-    "es": "Establecer el degradado de [[device]] en [[color1]], [[color2]], [[color3]]",
-    "da": "Indstil gradienten for [[device]] til [[color1]], [[color2]], [[color3]]",
-    "ru": "Установить градиент [[device]]: [[color1]], [[color2]], [[color3]]",
-    "pl": "Ustaw gradient [[device]] na [[color1]], [[color2]], [[color3]]",
-    "ko": "[[device]] 그라데이션을 [[color1]], [[color2]], [[color3]](으)로 설정",
-    "ar": "اضبط تدرج [[device]] على [[color1]]، [[color2]]، [[color3]]"
+    "en": "Set gradient to [[color1]], [[color2]], [[color3]]",
+    "sv": "Ställ gradienten till [[color1]], [[color2]], [[color3]]",
+    "nl": "Stel het verloop in op [[color1]], [[color2]], [[color3]]",
+    "de": "Verlauf auf [[color1]], [[color2]], [[color3]] setzen",
+    "fr": "Régler le dégradé sur [[color1]], [[color2]], [[color3]]",
+    "it": "Imposta il gradiente su [[color1]], [[color2]], [[color3]]",
+    "no": "Sett gradienten til [[color1]], [[color2]], [[color3]]",
+    "es": "Establecer el degradado en [[color1]], [[color2]], [[color3]]",
+    "da": "Indstil gradienten til [[color1]], [[color2]], [[color3]]",
+    "ru": "Установить градиент: [[color1]], [[color2]], [[color3]]",
+    "pl": "Ustaw gradient na [[color1]], [[color2]], [[color3]]",
+    "ko": "그라데이션을 [[color1]], [[color2]], [[color3]](으)로 설정",
+    "ar": "اضبط التدرج على [[color1]]، [[color2]]، [[color3]]"
   },
   "hint": {
     "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
@@ -49,7 +49,7 @@
     {
       "type": "device",
       "name": "device",
-      "filter": "class=light&capabilities=light_hue,light_saturation",
+      "filter": "driver_id=1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|5045131P7|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|915005987101|915005997201|915005997601|915005997801|929002966401|929002966501|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003",
       "title": {
         "en": "Light",
         "sv": "Lampa",

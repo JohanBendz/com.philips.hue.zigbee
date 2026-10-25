@@ -16,25 +16,25 @@
     "ar": "تعطيل المستشعر مؤقتًا"
   },
   "titleFormatted": {
-    "en": "Suppress the sensor [[device]] for [[duration]] seconds",
-    "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
-    "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-    "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken",
-    "fr": "Suspendre le capteur [[device]] pendant [[duration]] secondes",
-    "it": "Sospendi il sensore [[device]] per [[duration]] secondi",
-    "no": "Undertrykk sensoren [[device]] i [[duration]] sekunder",
-    "es": "Suprimir el sensor [[device]] durante [[duration]] segundos",
-    "da": "Undertryk sensoren [[device]] i [[duration]] sekunder",
-    "ru": "Подавить датчик [[device]] на [[duration]] секунд",
-    "pl": "Wycisz czujnik [[device]] na [[duration]] sekund",
-    "ko": "센서 [[device]]을(를) [[duration]]초 동안 억제",
-    "ar": "عطّل المستشعر [[device]] مؤقتًا لمدة [[duration]] ثانية"
+    "en": "Suppress for [[duration]] seconds",
+    "sv": "Tysta i [[duration]] sekunder",
+    "nl": "Onderdruk gedurende [[duration]] seconden",
+    "de": "Für [[duration]] Sekunden unterdrücken",
+    "fr": "Suspendre le capteur pendant [[duration]] secondes",
+    "it": "Sospendi il sensore per [[duration]] secondi",
+    "no": "Undertrykk sensoren i [[duration]] sekunder",
+    "es": "Suprimir el sensor durante [[duration]] segundos",
+    "da": "Undertryk sensoren i [[duration]] sekunder",
+    "ru": "Подавить датчик на [[duration]] секунд",
+    "pl": "Wycisz czujnik na [[duration]] sekund",
+    "ko": "센서를 [[duration]]초 동안 억제",
+    "ar": "عطّل المستشعر مؤقتًا لمدة [[duration]] ثانية"
   },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "class=sensor",
+      "filter": "driver_id=SML001-occupancy|SML002-occupancy",
       "title": {
         "en": "Sensor",
         "sv": "Sensor",
