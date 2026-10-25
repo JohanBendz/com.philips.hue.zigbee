@@ -1,12 +1,12 @@
 # Philips Hue Zigbee OTA hardware test plan
 
-Prepared **2026-10-02**, refreshed **2026-10-05** for `ota-2026`, tracked in [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
+Prepared **2026-10-02**, refreshed **2026-10-25** for `develop-2.4` → `dev`, tracked in [PR #786](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/786) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
 **Status: prepared for the planned 2.4.0 Homey Test release. A first LCT015 hardware observation confirms transfer, rejoin and the resulting version; post-update controls/Flows and app-restart checks remain pending.** See the [LCT015 result record](ota-test-results.md#lct015--2026-10-05). Further physical results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
 
 ## Setup and evidence
 
-The selected release is **2.4.0 on Homey Test**, together with the `develop-2.4` changes. OTA preparation stays on `ota-2026` until PR #758 is integrated for that release. Record the exact final `develop-2.4` commit used for publication (or the exact local-build commit), not just the OTA source commit. See the [release handoff](ota-test-release-2.4.0.md). The currently published 2.3.0 Test remains in place until the maintainer publishes 2.4.0.
+The selected release is **2.4.0 on Homey Test**, staged through PR #786 from `develop-2.4` into `dev`. OTA #758 is already integrated. The 2026-10-25 candidate includes the 2.3.2 Flow-filter correction and the verified LTA015 `0x0129` target `0x01001200`. Record the exact final `dev` release commit and Homey Build ID when publishing; branch contents do not establish publication. See the [current handoff](ota-test-release-2.4.0.md) and [dashboard](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
 The [model evidence register](ota-model-evidence.md) covers all 67 enabled IDs. Alongside the staged transfer checks, collect independent model/platform observations for LTO001, LTW015 and LWA029, whose existing mappings currently rely only on a curated database. Record any LLC010/LCL001 variant observations with the exact model and reported image type; the alternative families remain unapproved.
 
@@ -63,6 +63,8 @@ Begin after a mains-powered transfer succeeds on the same Homey setup. Test the 
 Record whether the instruction allows the update to start and finish, any timeout/retry, total time and rejoin. After OTA, check all existing button/switch Flow actions or sensor motion, temperature and luminance reports as applicable, advanced settings and battery reporting. For a sensor with multiple Homey devices, check the existing related devices too.
 
 The current Develop baseline includes the SDK battery simplification for RDM001, RDM002 and RWL022. Verify battery updates from both real reports and the preserved wake-up reads after OTA. On a two-input RDM001, verify both existing Homey subdevices and their Flows. Check that last-seen advances on real incoming traffic without treating an explicit battery read response as a separate report. These checks are part of Test feedback for the combined release.
+
+Include the SML003 battery-percentage report in #812 and the separate possible RWL022 battery-drain investigation #813 in Test observations. Record battery/reporting behaviour before and after OTA; do not attribute either problem to firmware without evidence or include the passive-reporting experiment in this build. LTA015 needs a result row for its refreshed `0x01001200` target when hardware is available.
 
 The RDM004, SML003/SML004 and other battery model mappings need their own result rows when hardware is available. Success on an older revision does not verify those newer revisions.
 

@@ -16,25 +16,25 @@
     "ar": "شدة الإضاءة أعلى من"
   },
   "titleFormatted": {
-    "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
-    "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
-    "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-    "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux",
-    "fr": "[[device]] La luminosité est !{{supérieure|inférieure}} à [[luminance]] lux",
-    "it": "[[device]] La luminosità è !{{sopra|sotto}} [[luminance]] lux",
-    "no": "[[device]] Lysstyrken er !{{over|under}} [[luminance]] lux",
-    "es": "[[device]] La luminosidad está !{{por encima|por debajo}} de [[luminance]] lux",
-    "da": "[[device]] Lysstyrken er !{{over|under}} [[luminance]] lux",
-    "ru": "[[device]] Освещённость !{{выше|ниже}} [[luminance]] лк",
-    "pl": "[[device]] Natężenie światła jest !{{powyżej|poniżej}} [[luminance]] lx",
-    "ko": "[[device]] 조도가 [[luminance]] lux !{{초과|미만}}",
-    "ar": "[[device]] شدة الإضاءة !{{أعلى|أقل}} من [[luminance]] لوكس"
+    "en": "Luminance is !{{above|below}} [[luminance]] lux",
+    "sv": "Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+    "nl": "Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+    "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux",
+    "fr": "La luminosité est !{{supérieure|inférieure}} à [[luminance]] lux",
+    "it": "La luminosità è !{{sopra|sotto}} [[luminance]] lux",
+    "no": "Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "es": "La luminosidad está !{{por encima|por debajo}} de [[luminance]] lux",
+    "da": "Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "ru": "Освещённость !{{выше|ниже}} [[luminance]] лк",
+    "pl": "Natężenie światła jest !{{powyżej|poniżej}} [[luminance]] lx",
+    "ko": "조도가 [[luminance]] lux !{{초과|미만}}",
+    "ar": "شدة الإضاءة !{{أعلى|أقل}} من [[luminance]] لوكس"
   },
   "args": [
     {
       "name": "device",
       "type": "device",
-      "filter": "class=sensor"
+      "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
     },
     {
       "name": "luminance",

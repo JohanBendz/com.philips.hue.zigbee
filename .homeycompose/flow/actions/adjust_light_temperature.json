@@ -16,19 +16,19 @@
     "ar": "ضبط درجة حرارة اللون"
   },
   "titleFormatted": {
-    "en": "Adjust [[device]] color temperature by [[delta]]",
-    "sv": "Justera färgtemperaturen för [[device]] med [[delta]]",
-    "nl": "Pas de kleurtemperatuur van [[device]] aan met [[delta]]",
-    "de": "Farbtemperatur von [[device]] um [[delta]] anpassen",
-    "fr": "Ajuster la température de couleur de [[device]] de [[delta]]",
-    "it": "Regola la temperatura colore di [[device]] di [[delta]]",
-    "no": "Juster fargetemperaturen til [[device]] med [[delta]]",
-    "es": "Ajustar la temperatura de color de [[device]] en [[delta]]",
-    "da": "Juster farvetemperaturen for [[device]] med [[delta]]",
-    "ru": "Изменить цветовую температуру [[device]] на [[delta]]",
-    "pl": "Zmień temperaturę barwową [[device]] o [[delta]]",
-    "ko": "[[device]]의 색온도를 [[delta]]만큼 조정",
-    "ar": "اضبط درجة حرارة لون [[device]] بمقدار [[delta]]"
+    "en": "Adjust color temperature by [[delta]]",
+    "sv": "Justera färgtemperaturen med [[delta]]",
+    "nl": "Pas de kleurtemperatuur aan met [[delta]]",
+    "de": "Farbtemperatur um [[delta]] anpassen",
+    "fr": "Ajuster la température de couleur de [[delta]]",
+    "it": "Regola la temperatura colore di [[delta]]",
+    "no": "Juster fargetemperaturen med [[delta]]",
+    "es": "Ajustar la temperatura de color en [[delta]]",
+    "da": "Juster farvetemperaturen med [[delta]]",
+    "ru": "Изменить цветовую температуру на [[delta]]",
+    "pl": "Zmień temperaturę barwową o [[delta]]",
+    "ko": "색온도를 [[delta]]만큼 조정",
+    "ar": "اضبط درجة حرارة اللون بمقدار [[delta]]"
   },
   "hint": {
     "en": "Positive values make the light warmer; negative values make it cooler.",
@@ -49,7 +49,7 @@
     {
       "type": "device",
       "name": "device",
-      "filter": "class=light&capabilities=light_temperature",
+      "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC013|LLC020|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017",
       "title": {
         "en": "Light",
         "sv": "Lampa",

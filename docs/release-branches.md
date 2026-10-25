@@ -16,13 +16,15 @@ The canonical current policy and release procedure is [docs/branching-and-releas
 
 ## Historical release-branch decision — 2026-10-07
 
-Decision recorded **2026-10-07** (Europe/Stockholm). Current publication status is maintained in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
+Decision recorded **2026-10-07**, refreshed **2026-10-25** (Europe/Stockholm). Current publication status is maintained in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
 ## Frozen 2.4 scope
 
 `develop-2.4` remains version **2.4.0**, frozen at [`e7e9a07`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/e7e9a07a5c2fb35c9405f667b4657f88e42f9a12) after OTA PR #758 and language PR #806. This is a scope freeze while physical Test observations are collected, not a claim that 2.4.0 has already been published.
 
 Only direct fixes to faults in 2.4 or earlier code, regression tests for those fixes, and necessary release preparation may enter this line. New device support, feature work, capability migrations, dependency migrations and reporting experiments belong on 2.5. A confirmed device-targeting fault can require withholding an affected OTA mapping in a corrective build; do not expand OTA families as part of such a fix.
+
+The 2026-10-25 correction reconciles the 2.3.2 Flow hotfix and the verified LTA015 firmware refresh on 2.4, integrated through #786 into `dev`. Both corrections are forward-ported to 2.5 with its 2.5.0 version retained. The freeze continues to exclude new features and experimental runtime migrations.
 
 ## New development
 
@@ -44,6 +46,6 @@ For #804, the Power-on exception-handling fault and overly broad sensor Flow car
 
 Use the maintained Compose manifest and package/lockfile versions. **Keep root `app.json` tracked and present**: Homey Compose needs that file to bootstrap, but it may be stale in the repository. Homey CLI regenerates it on validation/run/build; do not commit incidental generated diffs in PRs, and do not demand in-repository version synchronization. Ensure manifest-reading tests run after CLI regeneration (as CI already does). Pull requests and pushes to `develop-2.5` run Homey publish validation, regression tests and whitespace checks.
 
-The initial 2.5 branch has no new user-facing release changes. Keep the existing `.homeychangelog.json` entries intact; add the exact 2.5 release entry with the implemented changes before preparing publication. App Store README and release notes describe functionality rather than branch/Test/Live status.
+The 2.5 release-note entry records the actual forward-ported Flow-scope and firmware corrections. Keep existing release entries intact and update 2.5 notes with any further implemented changes before preparing publication. App Store README and release notes describe functionality rather than branch/Test/Live status.
 
 The freeze is a documented development policy. This setup does not add GitHub branch-protection rules, change the repository default branch or publish a Homey release.
