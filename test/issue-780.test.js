@@ -16,6 +16,7 @@ test('Flux family matches verified Zigbee model IDs with standard light clusters
     '929004610602',
     '929004610702',
     '929004610802',
+    '929004276602',
   ]);
   assert.deepEqual(compose.zigbee.endpoints['11'].clusters, [0, 3, 4, 6, 8, 768]);
   assert.equal(compose.zigbee.productId.includes('929004610603'), false);

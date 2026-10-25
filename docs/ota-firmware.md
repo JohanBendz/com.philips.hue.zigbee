@@ -1,5 +1,7 @@
 # Philips Hue Zigbee OTA firmware
 
+**2.5 development note (2026-10-25):** the four new pairing IDs in this line do not inherit firmware updates. Current 2.5 inventory is 402 supported IDs, 67 OTA-mapped and 335 unmapped; all 47 OTA drivers, 63 entries and 141 firmware files are unchanged. The release/package records below describe the separately frozen 2.4 candidate. See the [2.5 issue review](2.5-issue-review-2026-10-25.md).
+
 This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
 
 The **2026-10-25** candidate is version **2.4.0**, prepared on `develop-2.4` for integration into the permanent `dev` Test-staging branch through [PR #786](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/786). OTA #758 is integrated. The candidate includes the 2.3.2 Flow-filter correction, all 13 app languages and the reviewed LTA015 firmware refresh. Homey runtime compatibility remains **`>=12.9.0`**. Publication is a separate maintainer action, recorded in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776). See the [current release handoff](ota-test-release-2.4.0.md).
@@ -172,7 +174,7 @@ The source-of-truth inventory is derived from every active `drivers/*/driver.com
 
 As of this branch state:
 
-- **398** unique Zigbee product IDs are supported by active driver compose files after integrating `develop-2.4`.
+- **402** unique Zigbee product IDs are supported by active driver compose files after integrating `develop-2.4`.
 - **67** product IDs have an explicit OTA mapping with a source-linked expected-family check; three currently have curated-database evidence only.
 - **331** product IDs remain intentionally unmapped for OTA.
 - **47** Homey drivers contain firmware manifests.

@@ -167,3 +167,12 @@ test('incoming on/off and level reports synchronize Homey without enabling repor
   assert.equal(onOff.listenerCount('attr.onOff'), 0);
   assert.equal(levelControl.listenerCount('attr.currentLevel'), 0);
 });
+
+test('combined light action forwards native Flow milliseconds to both Zigbee commands', async () => {
+  for (const [duration, transitionTime] of [[0, 0], [2500, 25]]) {
+    const { device, commands } = lightFixture();
+    await device.setLightState({ brightness: 0.5, color: '#FF0000', duration });
+    assert.equal(commands.level[0].transitionTime, transitionTime);
+    assert.equal(commands.color[0].transitionTime, transitionTime);
+  }
+});
