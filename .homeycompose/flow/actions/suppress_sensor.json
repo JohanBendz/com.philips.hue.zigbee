@@ -1,39 +1,39 @@
 {
-"id": "suppress_sensor",
-"title": {
+  "id": "suppress_sensor",
+  "title": {
     "en": "Suppress sensor",
     "sv": "Tysta sensorn",
     "nl": "Onderdruk sensor",
     "de": "Sensor unterdrücken"
-},
-"titleFormatted": {
-    "en": "Suppress the sensor [[device]] for [[duration]] seconds",
-    "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
-    "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-    "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
-},
-"args": [
+  },
+  "titleFormatted": {
+    "en": "Suppress for [[duration]] seconds",
+    "sv": "Tysta i [[duration]] sekunder",
+    "nl": "Onderdruk gedurende [[duration]] seconden",
+    "de": "Für [[duration]] Sekunden unterdrücken"
+  },
+  "args": [
     {
-    "name": "device",
-    "type": "device",
-    "filter": "class=sensor",
-    "title": {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=SML001-occupancy|SML002-occupancy",
+      "title": {
         "en": "Sensor",
         "sv": "Sensor",
         "nl": "Sensor",
         "de": "Sensor"
-        }
+      }
     },
     {
-    "name": "duration",
-    "type": "number",
-    "placeholder": "30",
-    "label": {
+      "name": "duration",
+      "type": "number",
+      "placeholder": "30",
+      "label": {
         "en": "time in seconds",
         "sv": "tid i sekunder",
         "nl": "tijd in seconden",
         "de": "Zeit in Sekunden"
       }
     }
-]
+  ]
 }
