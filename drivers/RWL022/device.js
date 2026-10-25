@@ -8,6 +8,10 @@ const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
 const { parseHueRemoteBattery, observeHueRemoteBatteryReports } = require('../../lib/HueRemoteBattery');
 Cluster.addCluster(HueSpecificBasicCluster);
 
+// Lab only: never enable this experiment in a published release.
+// On an already-paired sleepy remote, reporting changes take effect on its next announce.
+const isPassiveBatteryLab = () => process.env.HUE_RWL022_BATTERY_LAB === 'passive';
+
 class DimmerSwitchGen3 extends ZigBeeDevice {
 
 async onNodeInit({ zclNode }) {
@@ -47,7 +51,7 @@ async onNodeInit({ zclNode }) {
       return (null, args.action === state.action);
     });
 
-    if (this.isFirstInit()) {
+    if (this.isFirstInit() && !isPassiveBatteryLab()) {
       await this._setupBatteryReporting()
         .catch(err => this.error('Initial battery reporting setup failed:', err));
     }
@@ -64,12 +68,16 @@ async onNodeInit({ zclNode }) {
   }
 
   async _setupBatteryReporting() {
+    // 0xFFFF disables automatic reports. Explicit wake-up reads remain unchanged.
+    // Do not attempt a configuration write on first pairing in passive lab mode;
+    // wait for End Device Announce, when the sleepy remote is actually awake.
+    const passive = isPassiveBatteryLab();
     await this.configureAttributeReporting([{
       endpointId: 1,
       cluster: CLUSTER.POWER_CONFIGURATION,
       attributeName: 'batteryPercentageRemaining',
       minInterval: 0,
-      maxInterval: 21600,
+      maxInterval: passive ? 0xFFFF : 21600,
       minChange: 1,
     }]);
 
