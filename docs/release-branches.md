@@ -42,7 +42,7 @@ For #804, the Power-on exception-handling fault and overly broad sensor Flow car
 
 ## Validation and release metadata
 
-Use the maintained Compose manifest and package/lockfile versions. Root `app.json` remains a generated baseline; discard incidental regeneration from normal commits. Pull requests and pushes to `develop-2.5` run Homey publish validation, the regression tests and whitespace checks.
+Use the maintained Compose manifest and package/lockfile versions. **Keep root `app.json` tracked and present**: Homey Compose needs that file to bootstrap, but it may be stale in the repository. Homey CLI regenerates it on validation/run/build; do not commit incidental generated diffs in PRs, and do not demand in-repository version synchronization. Ensure manifest-reading tests run after CLI regeneration (as CI already does). Pull requests and pushes to `develop-2.5` run Homey publish validation, regression tests and whitespace checks.
 
 The initial 2.5 branch has no new user-facing release changes. Keep the existing `.homeychangelog.json` entries intact; add the exact 2.5 release entry with the implemented changes before preparing publication. App Store README and release notes describe functionality rather than branch/Test/Live status.
 
