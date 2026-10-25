@@ -9,7 +9,7 @@
     "en": "Smart light — your way."
   },
   "brandColor": "#035ED8",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "compatibility": ">=5.0.0",
   "category": [
     "lights"
@@ -81,16 +81,16 @@
         "id": "luminance_above",
         "title": "Luminance is above",
         "titleFormatted": {
-          "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
-          "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
-          "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-          "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+          "en": "Luminance is !{{above|below}} [[luminance]] lux",
+          "sv": "Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+          "nl": "Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+          "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "class=sensor"
+            "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
           },
           {
             "name": "luminance",
@@ -102,16 +102,16 @@
         "id": "temperature_above",
         "title": "Temperature is above",
         "titleFormatted": {
-          "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
-          "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
-          "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
-          "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad"
+          "en": "Temperature is !{{above|below}} [[temperature]] degrees",
+          "sv": "Temperaturen är !{{över|under}} [[temperature]] grader",
+          "nl": "Temperatuur is !{{boven|onder}} [[temperature]] graden",
+          "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "class=sensor"
+            "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
           },
           {
             "name": "temperature",
@@ -128,8 +128,8 @@
           "sv": "Justera färgtemperatur"
         },
         "titleFormatted": {
-          "en": "Adjust [[device]] color temperature by [[delta]]",
-          "sv": "Justera färgtemperaturen för [[device]] med [[delta]]"
+          "en": "Adjust color temperature by [[delta]]",
+          "sv": "Justera färgtemperaturen med [[delta]]"
         },
         "hint": {
           "en": "Positive values make the light warmer; negative values make it cooler.",
@@ -139,7 +139,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=light_temperature",
+            "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC013|LLC020|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017",
             "title": {
               "en": "Light",
               "sv": "Lampa"
@@ -170,16 +170,16 @@
           "de": "Alarmmodus"
         },
         "titleFormatted": {
-          "en": "Set alert mode for [[device]] to [[alert_mode]]",
-          "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
-          "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
-          "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
+          "en": "Set alert mode to [[alert_mode]]",
+          "sv": "Ställ in larm-läge till [[alert_mode]]",
+          "nl": "Stel waarschuwingsmodus in op [[alert_mode]]",
+          "de": "Alarmmodus auf [[alert_mode]] setzen"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light",
+            "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743630P7|1743830P7|1743930P7|1744030P7|1744130P7|1744430P7|1744530P7|1744630P7|1744830P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017|LWA001|LWA004|LWA009|LWA017|LWB000|LWE002|LWE004|LWE007|LWG001|LWG004|LWM007|LWO001|LWO003|LWU001|LWV001|LWV003|LWV005|LWW001|LWW002|LWW003",
             "title": {
               "en": "Select Light Device",
               "sv": "Välj ljusenhet",
@@ -270,16 +270,16 @@
           "de": "Blink das Licht"
         },
         "titleFormatted": {
-          "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
-          "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
-          "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
-          "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+          "en": "Set blink type to [[blink_type]] with [[blinks]] blinks",
+          "sv": "Ställ in blinkningstyp till [[blink_type]] med [[blinks]] blinkningar",
+          "nl": "Stel knipper-type in op [[blink_type]] met [[blinks]] keer knipperen",
+          "de": "Blinktyp auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light"
+            "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743630P7|1743830P7|1743930P7|1744030P7|1744130P7|1744430P7|1744530P7|1744630P7|1744830P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017|LWA001|LWA004|LWA009|LWA017|LWB000|LWE002|LWE004|LWE007|LWG001|LWG004|LWM007|LWO001|LWO003|LWU001|LWV001|LWV003|LWV005|LWW001|LWW002|LWW003"
           },
           {
             "type": "dropdown",
@@ -339,8 +339,8 @@
           "sv": "Ställ in Hue-effekt"
         },
         "titleFormatted": {
-          "en": "Set [[device]] effect to [[effect]]",
-          "sv": "Ställ effekten för [[device]] till [[effect]]"
+          "en": "Set effect to [[effect]]",
+          "sv": "Ställ effekten till [[effect]]"
         },
         "hint": {
           "en": "Uses the native Signify effect protocol. Only lights that expose native Hue effect support can run these effects.",
@@ -350,7 +350,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=light_hue,light_saturation",
+            "filter": "driver_id=1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|5045131P7|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|915005987101|915005997201|915005997601|915005997801|929002966401|929002966501|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003",
             "title": {
               "en": "Light",
               "sv": "Lampa"
@@ -396,8 +396,8 @@
           "sv": "Ställ in Hue-gradient med 3 färger"
         },
         "titleFormatted": {
-          "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
-          "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]"
+          "en": "Set gradient to [[color1]], [[color2]], [[color3]]",
+          "sv": "Ställ gradienten till [[color1]], [[color2]], [[color3]]"
         },
         "hint": {
           "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
@@ -407,7 +407,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=light_hue,light_saturation",
+            "filter": "driver_id=1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|5045131P7|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|915005987101|915005997201|915005997601|915005997801|929002966401|929002966501|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003",
             "title": {
               "en": "Light",
               "sv": "Lampa"
@@ -446,14 +446,14 @@
           "sv": "Ställ in ljusläge"
         },
         "titleFormatted": {
-          "en": "Set [[device]] to [[brightness]] and [[color]]",
-          "sv": "Ställ [[device]] på [[brightness]] och [[color]]"
+          "en": "Set brightness to [[brightness]] and color to [[color]]",
+          "sv": "Ställ ljusstyrkan till [[brightness]] och färgen till [[color]]"
         },
         "args": [
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=dim,light_hue,light_saturation",
+            "filter": "driver_id=1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|5045131P7|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|915005987101|915005997201|915005997601|915005997801|929002966401|929002966501|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003",
             "title": {
               "en": "Light",
               "sv": "Lampa"
@@ -492,10 +492,10 @@
           "de": "Dimmen starten"
         },
         "titleFormatted": {
-          "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
-          "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
-          "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
-          "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+          "en": "Start dimming [[direction]] at speed [[rate]]",
+          "sv": "Starta dimning [[direction]] med hastighet [[rate]]",
+          "nl": "Start dimmen [[direction]] met snelheid [[rate]]",
+          "de": "Dimmen [[direction]] mit Geschwindigkeit [[rate]] starten"
         },
         "hint": {
           "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
@@ -507,7 +507,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=dim"
+            "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743630P7|1743830P7|1743930P7|1744030P7|1744130P7|1744430P7|1744530P7|1744630P7|1744830P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017|LWA001|LWA004|LWA009|LWA017|LWB000|LWE002|LWE004|LWE007|LWG001|LWG004|LWM007|LWO001|LWO003|LWU001|LWV001|LWV003|LWV005|LWW001|LWW002|LWW003"
           },
           {
             "type": "dropdown",
@@ -569,10 +569,10 @@
           "de": "Dimmen stoppen"
         },
         "titleFormatted": {
-          "en": "Stop dimming [[device]]",
-          "sv": "Stoppa dimning av [[device]]",
-          "nl": "Stop dimmen van [[device]]",
-          "de": "Dimmen von [[device]] stoppen"
+          "en": "Stop dimming",
+          "sv": "Stoppa dimning",
+          "nl": "Stop dimmen",
+          "de": "Dimmen stoppen"
         },
         "hint": {
           "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
@@ -584,7 +584,7 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "class=light&capabilities=dim"
+            "filter": "driver_id=1740447P0|1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743630P7|1743830P7|1743930P7|1744030P7|1744130P7|1744430P7|1744530P7|1744630P7|1744830P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|3216331P6|3216431P6|3417611P6|3418131P6|3418631P6|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|4440156P6|5041148P7|5045131P7|5047131P6|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|5309031P9|5633031P9|915005987101|915005996401|915005997201|915005997601|915005997801|929002966401|929002966501|929003054001|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|HML003|HML004|HML005|HML006|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003|LTA001|LTA005|LTA011|LTC001|LTC002|LTC003|LTC011|LTC012|LTC014|LTC015|LTC021|LTD011|LTE002|LTE005|LTG002|LTG003|LTG005|LTO001|LTO002|LTP001|LTP002|LTP003|LTP008|LTU001|LTV001|LTV002|LTW000|LTW012|LTW013|LTW017|LWA001|LWA004|LWA009|LWA017|LWB000|LWE002|LWE004|LWE007|LWG001|LWG004|LWM007|LWO001|LWO003|LWU001|LWV001|LWV003|LWV005|LWW001|LWW002|LWW003"
           }
         ]
       },
@@ -597,16 +597,16 @@
           "de": "Sensor unterdrücken"
         },
         "titleFormatted": {
-          "en": "Suppress the sensor [[device]] for [[duration]] seconds",
-          "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
-          "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
-          "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
+          "en": "Suppress for [[duration]] seconds",
+          "sv": "Tysta i [[duration]] sekunder",
+          "nl": "Onderdruk gedurende [[duration]] seconden",
+          "de": "Für [[duration]] Sekunden unterdrücken"
         },
         "args": [
           {
             "name": "device",
             "type": "device",
-            "filter": "class=sensor",
+            "filter": "driver_id=SML001-occupancy|SML002-occupancy",
             "title": {
               "en": "Sensor",
               "sv": "Sensor",
