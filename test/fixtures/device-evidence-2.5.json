@@ -1,0 +1,77 @@
+{
+  "LTA016": {
+    "driver": "LTA011",
+    "issue": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues/805",
+    "manufacturerName": "Signify Netherlands B.V.",
+    "endpoint": 11,
+    "inputClusters": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      8,
+      4096,
+      64515,
+      768,
+      64516
+    ]
+  },
+  "LCG006": {
+    "driver": "LCG002",
+    "issue": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues/799",
+    "manufacturerName": "Signify Netherlands B.V.",
+    "endpoint": 11,
+    "inputClusters": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      8,
+      4096,
+      64515,
+      64516,
+      64513,
+      768
+    ]
+  },
+  "LCG008": {
+    "driver": "LCG002",
+    "issue": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues/760#issuecomment-6366099276",
+    "manufacturerName": "Signify Netherlands B.V.",
+    "endpoint": 11,
+    "inputClusters": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      8,
+      4096,
+      64515,
+      64516,
+      64513,
+      768
+    ]
+  },
+  "929004276602": {
+    "driver": "929004610402",
+    "issue": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues/795",
+    "manufacturerName": "Signify Netherlands B.V.",
+    "endpoint": 11,
+    "inputClusters": [
+      0,
+      3,
+      4,
+      5,
+      6,
+      8,
+      4096,
+      64515,
+      64516,
+      64513,
+      768
+    ]
+  }
+}

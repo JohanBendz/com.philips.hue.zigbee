@@ -6,10 +6,14 @@ For current development work, see the open issues and pull requests in this repo
 
 ### v2.5.0 (unreleased)
 
-Development line opened from the frozen 2.4.0 OTA baseline.
+- Added exact-model pairing support for LTA016 White Ambiance A67, LCG006 color GU10, LCG008 Essential color GU10 and Flux Ultra Bright 929004276602 using the supplied Zigbee interviews.
+- Applied model-specific color-temperature ranges to LTA016 and LCG008 while preserving older models' discovered profiles.
+- Added source-backed Homey Energy approximations for LTA016, LCG006 and LCG008; existing model fallbacks are retained.
+- Enabled native Flow transition duration for the existing combined light-state and relative color-temperature actions.
+- Contained rejected power-on color-temperature writes without changing attributes, values or clamping.
+- Retained the forward-ported 2.3.2 Flow scope correction, all 13 app languages and the verified LTA015 firmware target from 2.4.
 
-- Forward-ported the 2.3.2 Flow device-filter correction, preserving all 13 app languages.
-- Inherited the verified LTA015 `0x0129` firmware refresh from the 2026-10-25 2.4 candidate.
+See the [2.5 issue review](docs/2.5-issue-review-2026-10-25.md) for evidence, exact scope and remaining Test work. The four new IDs do not inherit OTA support.
 
 ### v2.4.0
 

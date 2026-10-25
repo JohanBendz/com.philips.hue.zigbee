@@ -390,8 +390,12 @@ class Light extends ZigBeeLightDevice {
                     this.log("Setting Power On Control, value within limits");
                 }
 
-                await this.colorControlCluster.writeAttributes({powerOnCtrl: colorValue});
-                this.log("Color Temperature supported by device. Min Mireds: ", colorTempMin,". Max Mireds: ", colorTempMax);
+                try {
+                    await this.colorControlCluster.writeAttributes({powerOnCtrl: colorValue});
+                    this.log("Color Temperature supported by device. Min Mireds: ", colorTempMin,". Max Mireds: ", colorTempMax);
+                } catch (error) {
+                    this.log("Could not set Power On Color Temperature", error);
+                }
             } else {
                 this.log("This device does not support Color Temperature");
             }

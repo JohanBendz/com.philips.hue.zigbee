@@ -18,6 +18,10 @@ The canonical current policy and release procedure is [docs/branching-and-releas
 
 Decision recorded **2026-10-07**, refreshed **2026-10-25** (Europe/Stockholm). Current publication status is maintained in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
+## Publication freeze while 2.5 work proceeds
+
+The maintainer explicitly froze `dev` and `main` on 2026-10-25 while publishing and verifying 2.4.0. Baselines: `dev` at `b57a42d550a8649a01352f93874d803683fa8445`, `main` at `9f9ae18cac2646035abe0990be5a93748399648e`. New work targets `develop-2.5` only. Do not forward-port back to either publication branch, merge into them, or publish a release until the maintainer confirms the freeze is lifted.
+
 ## Frozen 2.4 scope
 
 `develop-2.4` remains version **2.4.0**, frozen at [`e7e9a07`](https://github.com/JohanBendz/com.philips.hue.zigbee/commit/e7e9a07a5c2fb35c9405f667b4657f88e42f9a12) after OTA PR #758 and language PR #806. This is a scope freeze while physical Test observations are collected, not a claim that 2.4.0 has already been published.

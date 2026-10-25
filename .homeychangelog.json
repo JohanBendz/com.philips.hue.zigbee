@@ -177,6 +177,6 @@
     "en": "Adds firmware updates through Homey for selected Hue lights and accessories, plus Zigbee identity, battery reporting and last-seen improvements. Requires Homey 12.9.0 or newer; firmware updates require a supported Homey platform on 13.2.0 or newer."
   },
   "2.5.0": {
-    "en": "Includes updated Hue firmware and fixes that limit Hue Flow cards to compatible devices."
+    "en": "Adds support for selected Hue A67, GU10 and Flux Ultra Bright models, model-specific color-temperature and energy profiles, transition duration on additional Flow actions, and improved handling of unsupported power-on settings."
   }
 }
