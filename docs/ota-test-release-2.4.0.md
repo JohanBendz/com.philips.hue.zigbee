@@ -1,53 +1,54 @@
 # OTA handoff for 2.4.0 Test
 
-Prepared **2026-10-04**, refreshed **2026-10-07** (Europe/Stockholm) for [PR #758](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/758), [OTA tracking #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
+Updated **2026-10-25** (Europe/Stockholm) for [PR #786](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/786), [OTA tracker #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) and [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
 
-The selected destination is **2.4.0 on Homey Test**, together with the `develop-2.4` release. Preparation and validation are performed on `ota-2026`. PR #758 is the integration path into `develop-2.4`; publication belongs to the maintainer's scheduled Test release. This work does not publish a build or modify the active 2.3.0 Test release.
+Version **2.4.0** is prepared for the permanent **`dev`** Test-staging branch. The frozen OTA/localization source `e7e9a07` has been reconciled with `dev` at `e5a9ee0`, including #809's 2.3.2 Flow correction. All 16 merge conflicts were resolved while preserving the 2.4.0 version, exact Hue device filters, all 13 languages and existing Zigbee runtime behaviour. Merging code does not publish a Homey build. `main` remains the 2.3.1 Live source until a separate verified promotion.
 
-Physical OTA results are collected **during Test**. Their absence is not a software-preparation blocker for this Test candidate. They remain necessary evidence when deciding the scope of a later Live release.
+Physical OTA results are collected **during Test**. Missing results for other models do not block software preparation; they remain evidence needed for a later Live-scope decision.
 
-## Frozen OTA scope
+## Prepared scope
 
-| Item | Prepared scope |
+| Item | Candidate |
 | --- | --- |
-| Development baseline | `develop-2.4` at `e33e6f292a86d461c5ee3e8f2cc2fd6cf43fd261` |
-| App / package / lockfile version | `2.4.0` |
-| App runtime minimum | Homey `>=12.9.0`, Node.js `>=22` |
-| Native OTA requirements | Supported Homey platform on `13.2.0+`; Homey Mobile App `9.10.0+` |
-| OTA coverage | 47 of 172 drivers; 67 of 398 supported product IDs |
-| Firmware | 21 families; 40 unique images; 141 per-driver files; 157 manifest references |
-| Catalogue | Koenkk/zigbee-OTA `9f46fc5208eab9890dfe31696652428fa497850c` |
-| Model guards | All 67 enabled IDs have explicit source-linked family checks |
-| Release files | `.homeychangelog.json` 2.4.0 entry, `CHANGELOG.md`, `README.md` and `README.txt` |
+| App / package / both lockfile version records | `2.4.0` |
+| App minimum | Homey `>=12.9.0`, Node.js `>=22` |
+| Native OTA minimum | Supported platform on `13.2.0+`; mobile client `9.10.0+` |
+| Enabled OTA | 47/172 drivers; 67/398 exact product IDs; 21 families |
+| Firmware | 63 update entries; 141 files; 40 unique images; 157 references |
+| Fixed catalogue | Koenkk/zigbee-OTA `7798da234349eaa937b22f9aebad909a741d1e4b` |
+| Catalogue SHA-256 | `d6d7d1afa46bfb056bc4c8730082105aec59d0734fc8ae1a531206dff1ae317d` |
+| App-source commit used for the package below | `082d97467d648304aac33c7c0b1a7ea0af182ad5` |
 
-The Develop refresh includes #806 app-language localization, the completed #770 last-seen work and #771 SDK battery simplification, alongside the Power-on and remote-protocol contract tests. The separate Power-on runtime migration in PR #792 and Smart Plug reporting experiment in PR #803 are outside this candidate. The existing 15-second plug polling is retained. Firmware binaries, image-selection metadata and approved model families are unchanged by this release preparation. The later help-text update adds English/Swedish post-restart guidance to the firmware changelogs.
+The enabled model/family set is unchanged. The one firmware refresh replaces LTA015's `0x0129` target `0x01000D06` with `0x01001200`. Signify bytes, upstream SHA-512, the OTA header, size and model mapping were verified. Upstream archived the older image on 2026-10-18 and specifies no prerequisite or version/hardware limit for the replacement. All other families' intermediate chains remain unchanged. See [catalogue verification](ota-firmware.md#current-verification--2026-10-25) and the [model register](ota-model-evidence.md).
 
-See [exact driver/model coverage](ota-firmware.md#current-coverage) and the [model evidence register](ota-model-evidence.md). A driver's retail name is not a firmware-family identifier. Of the enabled mappings, 64 have an explicit maintained model-table entry, API fixture/capture, OTA request or owner report. LTO001, LTW015 and LWA029 currently have curated-database evidence only and need independent device observations during Test.
+No Power-on runtime migration (#792), plug-reporting lab (#803), beta-types audit (#808), contributed Tento addition (#797) or passive RWL022 battery experiment (#813) is included. The proven 15-second plug polling remains.
 
 ## Prepared candidate verification
 
-**Merge review: 2026-10-07.** Reviewed OTA source: `eb8b87127aeb60c3d64525100818ba41c6ff398e`; current `develop-2.4` is `e33e6f292a86d461c5ee3e8f2cc2fd6cf43fd261` and is already included. PR #758 is open, ready for review and conflict-free. No blocking implementation finding remains for integration into the planned 2.4.0 Test release. The latest Develop language merge (#806) was synced into `ota-2026` without conflicts and validated together with OTA. The documentation follow-up changes only `docs/`, which is excluded from the packaged app.
+- Clean `npm ci --ignore-scripts`, Node.js 24.22.1, Homey CLI **4.5.0** publish validation and **225 tests / 0 failures** passed.
+- Tests verify firmware headers and integrity, upstream SHA-512, exact approved model/family sets, complete intermediate chains and limits, withheld models, generated OTA declarations and battery wake instructions.
+- All 11 app-global Flow device arguments retain #809's exact Hue scope. The imported Flow regression checks and existing language checks verify driver scope, device-scoped titles, argument tokens and all 13 supported app languages together.
+- The audit against the fixed current index reports **zero active-family changes**. A refresh is always deliberate; the audit never imports firmware automatically.
+- Runtime JavaScript under `app.js`, `drivers/` and `lib/` is unchanged from the frozen 2.4 source. Changes to the inherited source consist of Flow metadata, release/CI preparation, regression coverage and the single verified firmware replacement.
+- Final branch/PR CI and the integration commit are linked in PR #786 and dashboard #776. Recheck the actual branch heads if either line advances.
 
-A clean `npm ci --ignore-scripts`, Node.js **24.19.0** and Homey CLI **4.5.0** passed publish validation and **219 tests / 0 failures**. [PR CI for the reviewed source](https://github.com/JohanBendz/com.philips.hue.zigbee/actions/runs/37240962101) passed on Node.js 22 before the localization refresh. CI for the final refreshed candidate is recorded in PR #758 and the dashboard. All 67 evidence-register rows and 30 local documentation links/anchors were checked. Selection checks across 63 update entries and 691 file-version boundary scenarios reach the reviewed target or correctly have no newer image. The three runtime file differences against Develop are whitespace only.
+## Package verification
 
-The fresh catalogue audit resolved upstream to `10797024f00acd9530f10e8517a68823c59f3b3b` (index SHA-256 `e5cbc330ae03b307154bd4940752d4525487875e1552cfc691c8cde9019a7676`), with **zero active-family changes** against the fixed reviewed reference `9f46fc5`. App/package/lockfile versions and the release-note key agree on **2.4.0**.
+The native CLI `app build` plus its archive pipeline were used. Every packaged source file, all firmware bytes and production dependencies match the source; the generated manifest matches Compose output and the CLI Homey shim matches CLI assets. The pinned libraries are `homey-zigbeedriver` **2.2.18** and `zigbee-clusters` **3.8.0**. Project `test/`, `docs/` and `scripts/` directories are excluded.
 
-The native CLI `app build` and archive pipeline were used to rebuild the verification package. All **47 OTA drivers**, **63 update entries** and **141 firmware files** are present; generated declarations, English/Swedish help, wake instructions and every firmware byte match the source. Runtime files match, and development directories are excluded. The pinned `homey-zigbeedriver` **2.2.18**, `zigbee-clusters` **3.8.0**, their production dependencies and Homey's CLI-provided runtime shim are included. Thirteen dependency package manifests and 168 JavaScript files match the clean dependency tree or the CLI shim.
-
-| Local CLI archive measurement | Result |
+| Measurement | Value |
 | --- | ---: |
 | Files | 1,105 |
-| File bytes before compression | 64,758,250 |
-| Compressed bytes | 59,246,063 |
-| Firmware bytes, including per-driver copies | 51,894,298 |
+| File bytes | 64,821,516 |
+| Compressed bytes | 59,300,021 |
+| Firmware bytes including per-driver copies | 51,948,824 |
+| Unique firmware bytes | 13,196,446 |
 
-Archive SHA-256: `35beb66938e458f441f3939a7e4887e363a7bdb6fa160e7ce0fb046f1d792403`. This identifies the local verification archive built from `eb8b871`, not a published build. Rebuild and record the final Develop release commit at the Test cut.
+Archive SHA-256: `6a4de684e113d35995ff5556ab0e4bbfcc19459a376403ccf41bafe3bb6b4a82`. This identifies a local verification archive from app-source commit `082d974`, not a published build. A documentation-only follow-up changes excluded `docs/` files. Rebuild from the final `dev` release commit at publication and record that commit and Homey Build ID. Earlier 2026-10-07 archive measurements are historical. The earlier `f5dbfdd` archive omitted production dependencies and must not be used for publication.
 
-The earlier `f5dbfdd` verification archive omitted the production dependencies and also predates the post-restart help text. Its 870-file measurements and SHA-256 are superseded; it must not be used for publication. Source-level firmware validation remains valid, and no firmware or runtime change was needed to correct the package verification. Always run the CLI production-dependency build step after validation when inspecting an upload archive: validation preprocesses the build directory and does not copy production dependencies.
+## Build and publication
 
-## Software checks before integration and publication
-
-Use Node.js 22 or newer. Start from a clean checkout, retain the tracked generated `app.json` baseline, and run in this order:
+Use Node.js 22 or newer and retain the tracked root `app.json` bootstrap file. Run in this order:
 
 ```sh
 npm ci --ignore-scripts
@@ -58,34 +59,16 @@ npm run ota:audit
 git diff --check
 ```
 
-- Publish validation must succeed with all 47 firmware-enabled drivers present in the generated manifest.
-- Regression tests check exact model coverage, source evidence, binary integrity, complete firmware chains and selection limits, as well as preservation of every declaration and wake instruction in the generated manifest.
-- Catalogue audit exit code `0` means no active-family changes; `1` requires a source review; `2` means the audit failed. Review new upstream metadata before changing this candidate. Do not silently refresh the fixed references.
-- Inspect the actual CLI-built app: pinned Zigbee libraries and production dependencies, along with all 141 firmware files, must be present with matching checksums, and development `test/`, `docs/` and `scripts/` directories must be excluded. The CLI upload archive includes firmware; it is not the installed app size.
-- Verify `.homeycompose/app.json`, `package.json`, both lockfile version records and the release-note key agree on `2.4.0`. Discard incidental generated root `app.json` changes after validation.
+Validation regenerates root `app.json` for tests, but the generated diff is not committed. Keep the file present and tracked. Validation also preprocesses the build directory without copying production dependencies, so run **`app build` after validation** before inspecting the upload archive. Do not treat the compressed upload size as installed App Store size.
 
-## Integration at the Test cut
+Integrate the reviewed #786 into `dev` with its latest fixes intact, rebuild/validate from the final release commit, and publish **2.4.0 to Homey Test** through the maintainer's normal process. Publication is not performed by this preparation. Keep `main` unchanged until a separately approved Live promotion. Forward-port accepted release fixes to the active 2.5 line while preserving its version.
 
-1. Check PR #758 against the actual `develop-2.4` head used for the release. If Develop advances, sync those changes into `ota-2026` and rerun the checks. The PR's green temporary-merge CI is additional evidence; it does not itself update either branch.
-2. Integrate the reviewed OTA PR into `develop-2.4` as part of the planned 2.4.0 Test cut. Keep the existing Develop changes and combine any later 2.4.0 release-note additions. Do not transfer OTA into the frozen 2.3.0 Test or Live branches.
-3. Run the checks again on the final release commit, record that exact commit and archive, and publish **2.4.0 to Test** through the maintainer's normal process. Merge/publication have not been performed by this preparation.
-4. Record publication in the dashboard and direct testers to the hardware plan and #668. Keep the OTA issue open while Test feedback is collected.
+## Test observations and follow-up
 
-## Test observations and remaining coverage work
+The [LCT015 observation](ota-test-results.md#lct015--2026-10-05) confirms transfer/rejoin, OTA `0x01001A02` → `0x01002A00` and Hue software `1.50.2_r30933` → `1.116.12`. Homey first could not verify success, then showed the target and current-version status after a delay. Full controls/Flows/settings/app-restart checks and exact installed build/platform/client details were not supplied. This is not proof for another model or an older prerequisite path.
 
-The first [LCT015 result](ota-test-results.md#lct015--2026-10-05) confirms transfer/rejoin, OTA `0x01001A02` → `0x01002A00` and software `1.50.2_r30933` → `1.116.12`. Homey initially could not verify success, then showed the installed target and up-to-date status after a delay. The exact installed app build/Homey/client versions and post-update controls/Flows/app-restart results have not yet been supplied. This is not a complete functional result or proof for other models.
+Use the [hardware test plan](ota-test-plan.md) for mains-powered lights/plugs, an older intermediate chain, legacy LCT003 SBL images, battery devices, both RDM001 inputs and existing Flows. Add an LTA015 result for the refreshed target when available. Preserve initial verification errors, wait a few minutes and recheck before retrying; all 63 update changelogs include this guidance in English and Swedish.
 
-Follow the [hardware test plan](ota-test-plan.md), including its per-device result template:
+Record #812's SML003 battery-percentage behaviour and the possible RWL022 battery-drain report separately, before and after OTA. Neither is established as an OTA fault. #813 remains an isolated experiment and is not included in this release. Keep report/wake behaviour unchanged while collecting evidence.
 
-- Modern mains-powered devices: LCA001 and exact LOM001/LOM006/LOM007 plug models; include an old starting version that exercises an intermediate chain.
-- Legacy path: LCT003 with its SBL images.
-- Battery path: RWL022, RDM001 and SML001, including wake instructions, normal button/sensor behaviour and battery reporting.
-- With the #771 baseline, verify battery reports and wake-up reads on RDM001/RDM002/RWL022, including both RDM001 inputs and existing subdevices/Flows. Check last-seen from real traffic after OTA.
-- For every transferred image, record the starting/resulting version, progress/result, rejoin, retained paired identity/settings, existing Flows and behaviour after app restart. An already-current device verifies the no-update path only.
-- Collect independent model/platform observations for LTO001, LTW015 and LWA029. Record exact LLC010/LCL001 variants without enabling additional families from a model name alone.
-
-LCT026, LST002, 3261031P6, SOC001 and the two Ensis zone IDs remain withheld. LLC010 `0x0103` and LCL001 `0x0117` remain unapproved alternatives. The 331 unmapped product IDs and other catalogue-only families are future coverage work, not promised 2.4.0 OTA support.
-
-For an initial verification error after rejoin, preserve the message, wait a few minutes and check the firmware/update status again before retrying. Record both outcomes. For a persistent failed transfer, stop that test case and retain the Homey result/log before another attempt; do not force a different image or factory-reset the device to conceal the failure. Verify normal operation and record whether the problem follows one model, firmware family or Homey platform. A confirmed targeting error requires withholding the affected mapping in a subsequent Test build. App rollback does not roll back firmware already installed on a Hue device.
-
-Athom's [native OTA documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) requires correct targeting and physical end-to-end verification before broad release. Keep Test results explicit; software checks alone do not establish device-level success.
+LTO001, LTW015 and LWA029 still need independent observations beyond curated-database model evidence. LCT026, LST002, 3261031P6, SOC001 and both Ensis zone IDs remain withheld; additional LLC010 `0x0103` and LCL001 `0x0117` variants remain unapproved. No broader Hue coverage or Live readiness is claimed by the software checks.
