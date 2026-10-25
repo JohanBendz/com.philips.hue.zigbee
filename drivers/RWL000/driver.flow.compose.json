@@ -4,24 +4,69 @@
       "id": "RWL000_on",
       "title": {
         "en": "On-button pressed",
-        "nl": "Aan knop gedrukt"
+        "nl": "Aan knop gedrukt",
+        "de": "Ein-Taste gedrückt",
+        "fr": "Bouton marche appuyé",
+        "it": "Pulsante accensione premuto",
+        "sv": "På-knapp tryckt",
+        "no": "På-knapp trykket",
+        "es": "Botón de encendido pulsado",
+        "da": "Tænd-knap trykket",
+        "ru": "Нажата кнопка включения",
+        "pl": "Naciśnięto przycisk włączania",
+        "ko": "켜기 버튼 누름",
+        "ar": "تم الضغط على زر التشغيل"
       }
     },
     {
       "id": "RWL000_off",
       "title": {
         "en": "Off-button pressed",
-        "nl": "Uit knop gedrukt"
+        "nl": "Uit knop gedrukt",
+        "de": "Aus-Taste gedrückt",
+        "fr": "Bouton arrêt appuyé",
+        "it": "Pulsante spegnimento premuto",
+        "sv": "Av-knapp tryckt",
+        "no": "Av-knapp trykket",
+        "es": "Botón de apagado pulsado",
+        "da": "Sluk-knap trykket",
+        "ru": "Нажата кнопка выключения",
+        "pl": "Naciśnięto przycisk wyłączania",
+        "ko": "끄기 버튼 누름",
+        "ar": "تم الضغط على زر الإيقاف"
       }
     },
     {
       "id": "RWL000_dim",
       "title": {
-        "en": "Dim buttons"
+        "en": "Dim buttons",
+        "nl": "Dimknoppen",
+        "de": "Dimmtasten",
+        "fr": "Boutons de variation",
+        "it": "Pulsanti dimmer",
+        "sv": "Dimknappar",
+        "no": "Dimme-knapper",
+        "es": "Botones de atenuación",
+        "da": "Dæmpeknapper",
+        "ru": "Кнопки яркости",
+        "pl": "Przyciski ściemniania",
+        "ko": "디밍 버튼",
+        "ar": "أزرار التعتيم"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "nl": "Knop [[action]]"
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Knapp [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
@@ -32,41 +77,107 @@
               "id": "up-press",
               "label": {
                 "en": "Dim-up (pressed)",
-                "nl": "Dim-op (gedrukt)"
+                "nl": "Dim-op (gedrukt)",
+                "de": "Heller (gedrückt)",
+                "fr": "Augmenter (appuyé)",
+                "it": "Aumenta luminosità (premuto)",
+                "sv": "Dim upp (tryckt)",
+                "no": "Dim opp (trykket)",
+                "es": "Aumentar brillo (pulsado)",
+                "da": "Dæmp op (trykket)",
+                "ru": "Ярче (нажато)",
+                "pl": "Jaśniej (naciśnięto)",
+                "ko": "밝게 (누름)",
+                "ar": "زيادة السطوع (ضغط)"
               }
             },
             {
               "id": "up-hold",
               "label": {
                 "en": "Dim-up (hold)",
-                "nl": "Dim-op (lang gedrukt)"
+                "nl": "Dim-op (lang gedrukt)",
+                "de": "Heller (halten)",
+                "fr": "Augmenter (maintenu)",
+                "it": "Aumenta luminosità (tenuto)",
+                "sv": "Dim upp (håll)",
+                "no": "Dim opp (hold)",
+                "es": "Aumentar brillo (mantener)",
+                "da": "Dæmp op (hold)",
+                "ru": "Ярче (удержание)",
+                "pl": "Jaśniej (przytrzymanie)",
+                "ko": "밝게 (길게 누름)",
+                "ar": "زيادة السطوع (ضغط مطول)"
               }
             },
             {
               "id": "down-press",
               "label": {
                 "en": "Dim-down (pressed)",
-                "nl": "Dim-neer (gedrukt)"
+                "nl": "Dim-neer (gedrukt)",
+                "de": "Dunkler (gedrückt)",
+                "fr": "Diminuer (appuyé)",
+                "it": "Riduci luminosità (premuto)",
+                "sv": "Dim ner (tryckt)",
+                "no": "Dim ned (trykket)",
+                "es": "Reducir brillo (pulsado)",
+                "da": "Dæmp ned (trykket)",
+                "ru": "Темнее (нажато)",
+                "pl": "Ciemniej (naciśnięto)",
+                "ko": "어둡게 (누름)",
+                "ar": "خفض السطوع (ضغط)"
               }
             },
             {
               "id": "down-hold",
               "label": {
                 "en": "Dim-down (hold)",
-                "nl": "Dim-neer (lang gedrukt)"
+                "nl": "Dim-neer (lang gedrukt)",
+                "de": "Dunkler (halten)",
+                "fr": "Diminuer (maintenu)",
+                "it": "Riduci luminosità (tenuto)",
+                "sv": "Dim ner (håll)",
+                "no": "Dim ned (hold)",
+                "es": "Reducir brillo (mantener)",
+                "da": "Dæmp ned (hold)",
+                "ru": "Темнее (удержание)",
+                "pl": "Ciemniej (przytrzymanie)",
+                "ko": "어둡게 (길게 누름)",
+                "ar": "خفض السطوع (ضغط مطول)"
               }
             },
             {
               "id": "release",
               "label": {
                 "en": "Dim-button (released)",
-                "nl": "Dim (losgelaten)"
+                "nl": "Dim (losgelaten)",
+                "de": "Dimmtaste (losgelassen)",
+                "fr": "Bouton de variation (relâché)",
+                "it": "Pulsante dimmer (rilasciato)",
+                "sv": "Dimknapp (släppt)",
+                "no": "Dimme-knapp (sluppet)",
+                "es": "Botón de atenuación (soltado)",
+                "da": "Dæmpeknap (sluppet)",
+                "ru": "Кнопка яркости (отпущена)",
+                "pl": "Przycisk ściemniania (zwolniony)",
+                "ko": "디밍 버튼 (놓음)",
+                "ar": "زر التعتيم (إفلات)"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

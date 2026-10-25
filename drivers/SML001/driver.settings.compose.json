@@ -3,10 +3,34 @@
     "id": "alarm_reset_time",
     "type": "number",
     "label": {
-      "en": "Time until motion alarm is reset (s)"
+      "en": "Time until motion alarm is reset (s)",
+      "nl": "Tijd tot bewegingsalarm wordt gereset (s)",
+      "de": "Zeit bis Bewegungsalarm zurückgesetzt wird (s)",
+      "fr": "Délai de réinitialisation du mouvement (s)",
+      "it": "Tempo al reset dell’allarme movimento (s)",
+      "sv": "Tid tills rörelselarm återställs (s)",
+      "no": "Tid til bevegelsesalarm nullstilles (s)",
+      "es": "Tiempo hasta restablecer alarma de movimiento (s)",
+      "da": "Tid til bevægelsesalarm nulstilles (s)",
+      "ru": "Время до сброса тревоги движения (с)",
+      "pl": "Czas do resetu alarmu ruchu (s)",
+      "ko": "모션 알람 재설정 시간 (초)",
+      "ar": "الوقت حتى إعادة ضبط إنذار الحركة (ث)"
     },
     "hint": {
-      "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]"
+      "en": "Time from motion alarm triggers until it resets.\ndefault: 3 [s]",
+      "nl": "Tijd vanaf bewegingsalarm tot reset.\nstandaard: 3 [s]",
+      "de": "Zeit vom Bewegungsalarm bis zum Reset.\nStandard: 3 [s]",
+      "fr": "Temps entre le déclenchement et la réinitialisation.\npar défaut : 3 [s]",
+      "it": "Tempo dal rilevamento al reset.\npredefinito: 3 [s]",
+      "sv": "Tid från rörelselarm tills det återställs.\nstandard: 3 [s]",
+      "no": "Tid fra bevegelsesalarm til nullstilling.\nstandard: 3 [s]",
+      "es": "Tiempo desde la alarma hasta el restablecimiento.\npredeterminado: 3 [s]",
+      "da": "Tid fra bevægelsesalarm til nulstilling.\nstandard: 3 [s]",
+      "ru": "Время от тревоги движения до сброса.\nпо умолчанию: 3 [с]",
+      "pl": "Czas od alarmu ruchu do resetu.\ndomyślnie: 3 [s]",
+      "ko": "모션 알람 발생부터 재설정까지의 시간입니다.\n기본값: 3 [초]",
+      "ar": "الوقت من تشغيل إنذار الحركة حتى إعادة ضبطه.\nالافتراضي: 3 [ث]"
     },
     "value": 3,
     "attr": {
@@ -20,11 +44,33 @@
     "type": "number",
     "label": {
       "en": "Temperature offset (°C)",
-      "nl": "Temperatuur compensatie (°C)"
+      "nl": "Temperatuur compensatie (°C)",
+      "de": "Temperaturkorrektur (°C)",
+      "fr": "Correction de température (°C)",
+      "it": "Correzione temperatura (°C)",
+      "sv": "Temperaturkorrigering (°C)",
+      "no": "Temperaturkorrigering (°C)",
+      "es": "Corrección de temperatura (°C)",
+      "da": "Temperaturkorrektion (°C)",
+      "ru": "Поправка температуры (°C)",
+      "pl": "Korekta temperatury (°C)",
+      "ko": "온도 보정 (°C)",
+      "ar": "تصحيح درجة الحرارة (°C)"
     },
     "hint": {
       "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
-      "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
+      "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]",
+      "de": "Lege eine Korrektur für eine Temperaturabweichung fest.\nBereich: -10 - 10, Schritt 0,1,\nStandard: 0 [°C]",
+      "fr": "Définissez une correction de température.\nPlage : -10 - 10, pas 0,1,\npar défaut : 0 [°C]",
+      "it": "Imposta una correzione della temperatura.\nIntervallo: -10 - 10, passo 0,1,\npredefinito: 0 [°C]",
+      "sv": "Ange en korrigering för temperaturavvikelse.\nIntervall: -10 - 10, steg 0,1,\nstandard: 0 [°C]",
+      "no": "Angi en korreksjon for temperaturavvikelse.\nOmråde: -10 - 10, trinn 0,1,\nstandard: 0 [°C]",
+      "es": "Establece una corrección de temperatura.\nRango: -10 - 10, paso 0,1,\npredeterminado: 0 [°C]",
+      "da": "Angiv en korrektion for temperaturafvigelse.\nOmråde: -10 - 10, trin 0,1,\nstandard: 0 [°C]",
+      "ru": "Задайте поправку температуры.\nДиапазон: -10 - 10, шаг 0,1,\nпо умолчанию: 0 [°C]",
+      "pl": "Ustaw korektę temperatury.\nZakres: -10 - 10, krok 0,1,\ndomyślnie: 0 [°C]",
+      "ko": "온도 오차 보정값을 설정합니다.\n범위: -10 - 10, 단계 0.1,\n기본값: 0 [°C]",
+      "ar": "اضبط تصحيحًا لتعويض انحراف درجة الحرارة.\nالنطاق: -10 - 10، الخطوة 0.1،\nالافتراضي: 0 [°C]"
     },
     "value": 0,
     "attr": {
@@ -37,10 +83,34 @@
     "id": "batteryThreshold",
     "type": "number",
     "label": {
-      "en": "Low Battery Alarm Threshold (%)"
+      "en": "Low Battery Alarm Threshold (%)",
+      "nl": "Drempel batterij-alarm (%)",
+      "de": "Schwelle für Batteriealarm (%)",
+      "fr": "Seuil d’alarme batterie faible (%)",
+      "it": "Soglia allarme batteria scarica (%)",
+      "sv": "Tröskel för lågt batteri (%)",
+      "no": "Terskel for lavt batteri (%)",
+      "es": "Umbral de batería baja (%)",
+      "da": "Tærskel for lavt batteri (%)",
+      "ru": "Порог низкого заряда батареи (%)",
+      "pl": "Próg niskiego poziomu baterii (%)",
+      "ko": "배터리 부족 알림 임계값 (%)",
+      "ar": "حد تنبيه انخفاض البطارية (%)"
     },
     "hint": {
-      "en": "This setting determines the threshold before a battery alarm is given."
+      "en": "This setting determines the threshold before a battery alarm is given.",
+      "nl": "Deze instelling bepaalt de drempel voor een batterij-alarm.",
+      "de": "Diese Einstellung legt die Schwelle für den Batteriealarm fest.",
+      "fr": "Ce réglage détermine le seuil de déclenchement de l’alarme batterie.",
+      "it": "Questa impostazione determina la soglia dell’allarme batteria.",
+      "sv": "Denna inställning bestämmer tröskeln för batterilarm.",
+      "no": "Denne innstillingen bestemmer terskelen for batterialarm.",
+      "es": "Este ajuste determina el umbral de la alarma de batería.",
+      "da": "Denne indstilling bestemmer tærsklen for batterialarm.",
+      "ru": "Эта настройка задаёт порог сигнала низкого заряда.",
+      "pl": "To ustawienie określa próg alarmu baterii.",
+      "ko": "이 설정은 배터리 알림 임계값을 결정합니다.",
+      "ar": "يحدد هذا الإعداد حد تنبيه البطارية."
     },
     "value": 20,
     "attr": {
@@ -53,10 +123,34 @@
     "id": "minReportLux",
     "type": "number",
     "label": {
-      "en": "Min report interval for lux (s)"
+      "en": "Min report interval for lux (s)",
+      "nl": "Min. rapportinterval lux (s)",
+      "de": "Min. Meldeintervall Lux (s)",
+      "fr": "Intervalle min. lux (s)",
+      "it": "Intervallo min. lux (s)",
+      "sv": "Minsta rapportintervall lux (s)",
+      "no": "Min. rapportintervall lux (s)",
+      "es": "Intervalo mín. lux (s)",
+      "da": "Min. rapportinterval lux (s)",
+      "ru": "Мин. интервал отчёта освещённости (с)",
+      "pl": "Min. interwał raportu lux (s)",
+      "ko": "최소 조도 보고 간격 (초)",
+      "ar": "الحد الأدنى لفاصل تقرير الإضاءة (ث)"
     },
     "hint": {
-      "en": "Min interval before a report is sent to Homey (s)"
+      "en": "Min interval before a report is sent to Homey (s)",
+      "nl": "Min. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Min. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle min. avant envoi à Homey (s)",
+      "it": "Intervallo min. prima dell’invio a Homey (s)",
+      "sv": "Minsta intervall innan rapport skickas till Homey (s)",
+      "no": "Min. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo mín. antes de enviar a Homey (s)",
+      "da": "Min. interval før rapport sendes til Homey (s)",
+      "ru": "Мин. интервал перед отправкой в Homey (с)",
+      "pl": "Min. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최소 간격 (초)",
+      "ar": "الحد الأدنى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 60,
     "attr": {
@@ -69,10 +163,34 @@
     "id": "maxReportLux",
     "type": "number",
     "label": {
-      "en": "Max report interval for lux (s)"
+      "en": "Max report interval for lux (s)",
+      "nl": "Max. rapportinterval lux (s)",
+      "de": "Max. Meldeintervall Lux (s)",
+      "fr": "Intervalle max. lux (s)",
+      "it": "Intervallo max. lux (s)",
+      "sv": "Största rapportintervall lux (s)",
+      "no": "Maks. rapportintervall lux (s)",
+      "es": "Intervalo máx. lux (s)",
+      "da": "Maks. rapportinterval lux (s)",
+      "ru": "Макс. интервал отчёта освещённости (с)",
+      "pl": "Maks. interwał raportu lux (s)",
+      "ko": "최대 조도 보고 간격 (초)",
+      "ar": "الحد الأقصى لفاصل تقرير الإضاءة (ث)"
     },
     "hint": {
-      "en": "Max interval before a report is sent to Homey (s)"
+      "en": "Max interval before a report is sent to Homey (s)",
+      "nl": "Max. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Max. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle max. avant envoi à Homey (s)",
+      "it": "Intervallo max. prima dell’invio a Homey (s)",
+      "sv": "Största intervall innan rapport skickas till Homey (s)",
+      "no": "Maks. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo máx. antes de enviar a Homey (s)",
+      "da": "Maks. interval før rapport sendes til Homey (s)",
+      "ru": "Макс. интервал перед отправкой в Homey (с)",
+      "pl": "Maks. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최대 간격 (초)",
+      "ar": "الحد الأقصى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 300,
     "attr": {
@@ -85,10 +203,34 @@
     "id": "minReportTemp",
     "type": "number",
     "label": {
-      "en": "Min report interval for temperature (s)"
+      "en": "Min report interval for temperature (s)",
+      "nl": "Min. rapportinterval temperatuur (s)",
+      "de": "Min. Meldeintervall Temperatur (s)",
+      "fr": "Intervalle min. température (s)",
+      "it": "Intervallo min. temperatura (s)",
+      "sv": "Minsta rapportintervall temperatur (s)",
+      "no": "Min. rapportintervall temperatur (s)",
+      "es": "Intervalo mín. temperatura (s)",
+      "da": "Min. rapportinterval temperatur (s)",
+      "ru": "Мин. интервал отчёта температуры (с)",
+      "pl": "Min. interwał raportu temperatury (s)",
+      "ko": "최소 온도 보고 간격 (초)",
+      "ar": "الحد الأدنى لفاصل تقرير الحرارة (ث)"
     },
     "hint": {
-      "en": "Min interval before a report is sent to Homey (s)"
+      "en": "Min interval before a report is sent to Homey (s)",
+      "nl": "Min. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Min. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle min. avant envoi à Homey (s)",
+      "it": "Intervallo min. prima dell’invio a Homey (s)",
+      "sv": "Minsta intervall innan rapport skickas till Homey (s)",
+      "no": "Min. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo mín. antes de enviar a Homey (s)",
+      "da": "Min. interval før rapport sendes til Homey (s)",
+      "ru": "Мин. интервал перед отправкой в Homey (с)",
+      "pl": "Min. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최소 간격 (초)",
+      "ar": "الحد الأدنى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 60,
     "attr": {
@@ -101,10 +243,34 @@
     "id": "maxReportTemp",
     "type": "number",
     "label": {
-      "en": "Max report interval for temperature (s)"
+      "en": "Max report interval for temperature (s)",
+      "nl": "Max. rapportinterval temperatuur (s)",
+      "de": "Max. Meldeintervall Temperatur (s)",
+      "fr": "Intervalle max. température (s)",
+      "it": "Intervallo max. temperatura (s)",
+      "sv": "Största rapportintervall temperatur (s)",
+      "no": "Maks. rapportintervall temperatur (s)",
+      "es": "Intervalo máx. temperatura (s)",
+      "da": "Maks. rapportinterval temperatur (s)",
+      "ru": "Макс. интервал отчёта температуры (с)",
+      "pl": "Maks. interwał raportu temperatury (s)",
+      "ko": "최대 온도 보고 간격 (초)",
+      "ar": "الحد الأقصى لفاصل تقرير الحرارة (ث)"
     },
     "hint": {
-      "en": "Max interval before a report is sent to Homey (s)"
+      "en": "Max interval before a report is sent to Homey (s)",
+      "nl": "Max. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Max. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle max. avant envoi à Homey (s)",
+      "it": "Intervallo max. prima dell’invio a Homey (s)",
+      "sv": "Största intervall innan rapport skickas till Homey (s)",
+      "no": "Maks. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo máx. antes de enviar a Homey (s)",
+      "da": "Maks. interval før rapport sendes til Homey (s)",
+      "ru": "Макс. интервал перед отправкой в Homey (с)",
+      "pl": "Maks. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최대 간격 (초)",
+      "ar": "الحد الأقصى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 300,
     "attr": {

@@ -1,11 +1,34 @@
 {
   "id": "temperature_above",
-  "title": "Temperature is above",
+  "title": {
+    "en": "Temperature is above",
+    "nl": "Temperatuur is hoger dan",
+    "de": "Temperatur ist über",
+    "fr": "La température est supérieure à",
+    "it": "La temperatura è superiore a",
+    "sv": "Temperaturen är över",
+    "no": "Temperaturen er over",
+    "es": "La temperatura es superior a",
+    "da": "Temperaturen er over",
+    "ru": "Температура выше",
+    "pl": "Temperatura jest powyżej",
+    "ko": "온도가 다음보다 높음",
+    "ar": "درجة الحرارة أعلى من"
+  },
   "titleFormatted": {
     "en": "Temperature is !{{above|below}} [[temperature]] degrees",
     "sv": "Temperaturen är !{{över|under}} [[temperature]] grader",
     "nl": "Temperatuur is !{{boven|onder}} [[temperature]] graden",
-    "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad"
+    "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad",
+    "fr": "La température est !{{supérieure|inférieure}} à [[temperature]] degrés",
+    "it": "La temperatura è !{{sopra|sotto}} [[temperature]] gradi",
+    "no": "Temperaturen er !{{over|under}} [[temperature]] grader",
+    "es": "La temperatura está !{{por encima|por debajo}} de [[temperature]] grados",
+    "da": "Temperaturen er !{{over|under}} [[temperature]] grader",
+    "ru": "Температура !{{выше|ниже}} [[temperature]] градусов",
+    "pl": "Temperatura jest !{{powyżej|poniżej}} [[temperature]] stopni",
+    "ko": "온도가 [[temperature]]도 !{{초과|미만}}",
+    "ar": "درجة الحرارة !{{أعلى|أقل}} من [[temperature]] درجة"
   },
   "args": [
     {

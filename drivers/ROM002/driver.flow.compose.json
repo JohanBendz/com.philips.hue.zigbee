@@ -4,11 +4,33 @@
       "id": "ROM002_button",
       "title": {
         "en": "Button Action",
-        "nl": "Knopactie"
+        "nl": "Knopactie",
+        "de": "Tastenaktion",
+        "fr": "Action du bouton",
+        "it": "Azione pulsante",
+        "sv": "Knapphändelse",
+        "no": "Knappehandling",
+        "es": "Acción del botón",
+        "da": "Knappehandling",
+        "ru": "Действие кнопки",
+        "pl": "Akcja przycisku",
+        "ko": "버튼 동작",
+        "ar": "إجراء الزر"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "nl": "Knop [[action]]"
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Knapp [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
@@ -19,41 +41,107 @@
               "id": "Press",
               "label": {
                 "en": "pressed",
-                "nl": "drukken"
+                "nl": "drukken",
+                "de": "gedrückt",
+                "fr": "appuyé",
+                "it": "premuto",
+                "sv": "trycks in",
+                "no": "trykket",
+                "es": "pulsado",
+                "da": "trykket",
+                "ru": "нажата",
+                "pl": "naciśnięty",
+                "ko": "누름",
+                "ar": "مضغوط"
               }
             },
             {
               "id": "Release",
               "label": {
                 "en": "released",
-                "nl": "loslaten"
+                "nl": "loslaten",
+                "de": "losgelassen",
+                "fr": "relâché",
+                "it": "rilasciato",
+                "sv": "släppt",
+                "no": "sluppet",
+                "es": "soltado",
+                "da": "sluppet",
+                "ru": "отпущена",
+                "pl": "zwolniony",
+                "ko": "놓음",
+                "ar": "تم الإفلات"
               }
             },
             {
               "id": "Hold",
               "label": {
                 "en": "hold",
-                "nl": "vasthouden"
+                "nl": "vasthouden",
+                "de": "halten",
+                "fr": "maintenu",
+                "it": "tenuto premuto",
+                "sv": "hålls in",
+                "no": "hold",
+                "es": "mantener",
+                "da": "hold",
+                "ru": "удержание",
+                "pl": "przytrzymanie",
+                "ko": "길게 누름",
+                "ar": "ضغط مطول"
               }
             },
             {
               "id": "LongRelease",
               "label": {
                 "en": "released after hold",
-                "nl": "loslaten na vasthouden"
+                "nl": "loslaten na vasthouden",
+                "de": "nach Halten losgelassen",
+                "fr": "relâché après maintien",
+                "it": "rilasciato dopo pressione prolungata",
+                "sv": "släppt efter håll",
+                "no": "sluppet etter hold",
+                "es": "soltado después de mantener",
+                "da": "sluppet efter hold",
+                "ru": "отпущена после удержания",
+                "pl": "zwolniony po przytrzymaniu",
+                "ko": "길게 누른 후 놓음",
+                "ar": "تم الإفلات بعد الضغط المطول"
               }
             },
             {
               "id": "LongPress",
               "label": {
                 "en": "long press (legacy alias for release after hold)",
-                "nl": "lang indrukken (oude naam voor loslaten na vasthouden)"
+                "nl": "lang indrukken (oude naam voor loslaten na vasthouden)",
+                "de": "Langes Drücken (alter Alias für Loslassen nach Halten)",
+                "fr": "Appui long (ancien alias du relâchement après maintien)",
+                "it": "Pressione lunga (alias precedente del rilascio dopo pressione prolungata)",
+                "sv": "Långtryck (äldre alias för släpp efter håll)",
+                "no": "Langt trykk (eldre alias for slipp etter hold)",
+                "es": "Pulsación larga (alias antiguo de soltar tras mantener)",
+                "da": "Langt tryk (ældre alias for slip efter hold)",
+                "ru": "Долгое нажатие (старый псевдоним отпускания после удержания)",
+                "pl": "Długie naciśnięcie (starszy alias zwolnienia po przytrzymaniu)",
+                "ko": "길게 누르기 (길게 누른 후 놓기의 이전 별칭)",
+                "ar": "ضغط طويل (اسم قديم للإفلات بعد الضغط المطول)"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

@@ -30,7 +30,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the Datura ceiling light to start pairing. The two light sources pair as separate Zigbee devices. If pairing does not automatically start, reset the light using a Hue remote or Philips Hue bridge."
+        "en": "Power on the Datura ceiling light to start pairing. The two light sources pair as separate Zigbee devices. If pairing does not automatically start, reset the light using a Hue remote or Philips Hue bridge.",
+        "nl": "Schakel de Datura-plafondlamp in om het koppelen te starten. De twee lichtbronnen worden als afzonderlijke Zigbee-apparaten gekoppeld. Als het koppelen niet automatisch start, reset de lamp dan met een Hue-afstandsbediening of Philips Hue Bridge.",
+        "de": "Schalte die Datura-Deckenleuchte ein, um die Kopplung zu starten. Die beiden Lichtquellen werden als separate Zigbee-Geräte gekoppelt. Wenn die Kopplung nicht automatisch startet, setze die Leuchte mit einer Hue-Fernbedienung oder Philips Hue Bridge zurück.",
+        "fr": "Allumez le plafonnier Datura pour lancer l’association. Les deux sources lumineuses sont associées comme deux appareils Zigbee distincts. Si l’association ne démarre pas automatiquement, réinitialisez la lampe avec une télécommande Hue ou un pont Philips Hue.",
+        "it": "Accendi la plafoniera Datura per avviare l’associazione. Le due sorgenti luminose vengono associate come dispositivi Zigbee separati. Se l’associazione non parte automaticamente, reimposta la luce con un telecomando Hue o un bridge Philips Hue.",
+        "sv": "Slå på Datura-taklampan för att starta parkopplingen. De två ljuskällorna parkopplas som separata Zigbee-enheter. Om parkopplingen inte startar automatiskt, återställ lampan med en Hue-fjärrkontroll eller Philips Hue Bridge.",
+        "no": "Slå på Datura-taklampen for å starte paringen. De to lyskildene pares som separate Zigbee-enheter. Hvis paringen ikke starter automatisk, tilbakestill lyset med en Hue-fjernkontroll eller Philips Hue Bridge.",
+        "es": "Enciende la lámpara de techo Datura para iniciar el emparejamiento. Las dos fuentes de luz se emparejan como dispositivos Zigbee separados. Si no comienza automáticamente, restablece la luz con un mando Hue o Philips Hue Bridge.",
+        "da": "Tænd Datura-loftlampen for at starte parringen. De to lyskilder parres som separate Zigbee-enheder. Hvis parringen ikke starter automatisk, nulstil lyset med en Hue-fjernbetjening eller Philips Hue Bridge.",
+        "ru": "Включите потолочный светильник Datura, чтобы начать сопряжение. Два источника света сопрягаются как отдельные устройства Zigbee. Если сопряжение не начинается автоматически, сбросьте светильник с помощью пульта Hue или Philips Hue Bridge.",
+        "pl": "Włącz lampę sufitową Datura, aby rozpocząć parowanie. Dwa źródła światła są parowane jako osobne urządzenia Zigbee. Jeśli parowanie nie rozpocznie się automatycznie, zresetuj światło pilotem Hue lub Philips Hue Bridge.",
+        "ko": "Datura 천장 조명을 켜 페어링을 시작하세요. 두 광원은 별도의 Zigbee 장치로 페어링됩니다. 페어링이 자동으로 시작되지 않으면 Hue 리모컨 또는 Philips Hue Bridge로 조명을 재설정하세요.",
+        "ar": "شغّل مصباح السقف Datura لبدء الاقتران. يتم اقتران مصدري الضوء كجهازي Zigbee منفصلين. إذا لم يبدأ الاقتران تلقائيًا، فأعد ضبط الضوء باستخدام جهاز تحكم Hue أو Philips Hue Bridge."
       }
     }
   }

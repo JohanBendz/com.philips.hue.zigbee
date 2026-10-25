@@ -1,11 +1,34 @@
 {
   "id": "luminance_above",
-  "title": "Luminance is above",
+  "title": {
+    "en": "Luminance is above",
+    "nl": "Lichtsterkte is hoger dan",
+    "de": "Helligkeit ist über",
+    "fr": "La luminosité est supérieure à",
+    "it": "La luminosità è superiore a",
+    "sv": "Ljusstyrkan är över",
+    "no": "Lysstyrken er over",
+    "es": "La luminosidad es superior a",
+    "da": "Lysstyrken er over",
+    "ru": "Освещённость выше",
+    "pl": "Natężenie światła jest powyżej",
+    "ko": "조도가 다음보다 높음",
+    "ar": "شدة الإضاءة أعلى من"
+  },
   "titleFormatted": {
     "en": "Luminance is !{{above|below}} [[luminance]] lux",
     "sv": "Ljusstyrkan är !{{över|under}} [[luminance]] lux",
     "nl": "Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
-    "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+    "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux",
+    "fr": "La luminosité est !{{supérieure|inférieure}} à [[luminance]] lux",
+    "it": "La luminosità è !{{sopra|sotto}} [[luminance]] lux",
+    "no": "Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "es": "La luminosidad está !{{por encima|por debajo}} de [[luminance]] lux",
+    "da": "Lysstyrken er !{{over|under}} [[luminance]] lux",
+    "ru": "Освещённость !{{выше|ниже}} [[luminance]] лк",
+    "pl": "Natężenie światła jest !{{powyżej|poniżej}} [[luminance]] lx",
+    "ko": "조도가 [[luminance]] lux !{{초과|미만}}",
+    "ar": "شدة الإضاءة !{{أعلى|أقل}} من [[luminance]] لوكس"
   },
   "args": [
     {

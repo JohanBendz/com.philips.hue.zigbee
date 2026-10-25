@@ -12,7 +12,13 @@ const {
   applyHueSensorBattery,
   refreshHueSensorBattery,
 } = require('../../lib/HueSensorBattery');
-const { markHueSensorAvailable } = require('../../lib/HueSensorAvailability');
+const {
+  markHueSensorAvailable,
+  isValidHueOccupancyReport,
+  isValidHueTemperatureReport,
+  isValidHueLuminanceReport,
+  isValidHueBatteryReport,
+} = require('../../lib/HueSensorAvailability');
 
 Cluster.addCluster(HueSpecificOccupancySensingCluster);
 Cluster.addCluster(HueSpecificBasicCluster);
@@ -158,7 +164,7 @@ class OccupancySensor extends ZigBeeDevice {
   }
 
   onOccupancyAttributeReport(occupancyStatus) {
-    markHueSensorAvailable(this);
+    markHueSensorAvailable(this, { validReport: isValidHueOccupancyReport(occupancyStatus) });
 
     // zigbee-clusters exposes the mandatory Occupancy bitmap as a named
     // `occupied` flag. Do not depend on Object.values() ordering of the
@@ -186,7 +192,7 @@ class OccupancySensor extends ZigBeeDevice {
   }
 
   onTemperatureMeasuredAttributeReport(measuredTempValue) {
-    markHueSensorAvailable(this);
+    markHueSensorAvailable(this, { validReport: isValidHueTemperatureReport(measuredTempValue) });
 		const temperatureOffset = this.getSetting('temperature_offset') || 0;
 		const parsedTempValue = this.getSetting('temperature_decimals') === '2' ? Math.round((measuredTempValue / 100) * 100) / 100 : Math.round((measuredTempValue / 100) * 10) / 10;
 		this.log('Temperature:', parsedTempValue, '+ temperature offset', temperatureOffset);
@@ -194,14 +200,14 @@ class OccupancySensor extends ZigBeeDevice {
 	}
 
 	onLuminanceMeasuredAttributeReport(measuredLuxValue) {
-    markHueSensorAvailable(this);
+    markHueSensorAvailable(this, { validReport: isValidHueLuminanceReport(measuredLuxValue) });
 		const parsedLumValue = Math.round(Math.pow(10, (measuredLuxValue - 1) / 10000));
 		this.log('measure_luminance:', parsedLumValue);
 		this.setCapabilityValue('measure_luminance', parsedLumValue).catch(this.error);
   }
 
 	onBatteryPercentageRemainingAttributeReport(batteryPercentageRemaining) {
-    markHueSensorAvailable(this);
+    markHueSensorAvailable(this, { validReport: isValidHueBatteryReport(batteryPercentageRemaining) });
     applyHueSensorBattery(this, batteryPercentageRemaining)
       .catch(error => this.error('Could not apply Hue motion sensor battery report', error));
   }

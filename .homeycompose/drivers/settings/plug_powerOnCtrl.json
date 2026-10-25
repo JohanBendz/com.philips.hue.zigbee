@@ -1,39 +1,111 @@
 {
-    "type": "group",
-    "label": {
-        "en": "Behavior after power loss"
-    },
-    "children": [
+  "type": "group",
+  "label": {
+    "en": "Behavior after power loss",
+    "nl": "Gedrag na stroomuitval",
+    "de": "Verhalten nach Stromausfall",
+    "fr": "Comportement après une coupure de courant",
+    "it": "Comportamento dopo un’interruzione di corrente",
+    "sv": "Beteende efter strömavbrott",
+    "no": "Oppførsel etter strømbrudd",
+    "es": "Comportamiento tras un corte de corriente",
+    "da": "Adfærd efter strømafbrydelse",
+    "ru": "Поведение после отключения питания",
+    "pl": "Zachowanie po utracie zasilania",
+    "ko": "정전 후 동작",
+    "ar": "السلوك بعد انقطاع الطاقة"
+  },
+  "children": [
+    {
+      "id": "powerOnCtrl_state",
+      "type": "radio",
+      "label": {
+        "en": "Behavior when power is restored",
+        "nl": "Gedrag wanneer de stroom terugkeert",
+        "de": "Verhalten bei Stromwiederkehr",
+        "fr": "Comportement au retour du courant",
+        "it": "Comportamento al ripristino dell’alimentazione",
+        "sv": "Beteende när strömmen återkommer",
+        "no": "Oppførsel når strømmen kommer tilbake",
+        "es": "Comportamiento al restablecerse la corriente",
+        "da": "Adfærd når strømmen vender tilbage",
+        "ru": "Поведение при восстановлении питания",
+        "pl": "Zachowanie po przywróceniu zasilania",
+        "ko": "전원 복구 시 동작",
+        "ar": "السلوك عند عودة الطاقة"
+      },
+      "value": "on",
+      "hint": {
+        "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all).",
+        "nl": "Het apparaat moet deze functie ondersteunen. Sommige apparaten hebben een firmware-update nodig en andere ondersteunen de functie niet.",
+        "de": "Das Gerät muss diese Funktion unterstützen. Einige Geräte benötigen ein Firmware-Update, andere unterstützen sie nicht.",
+        "fr": "L’appareil doit prendre en charge cette fonction. Certains appareils nécessitent une mise à jour du firmware et d’autres ne la prennent pas en charge.",
+        "it": "Il dispositivo deve supportare questa funzione. Alcuni dispositivi richiedono un aggiornamento firmware e altri non la supportano.",
+        "sv": "Enheten måste stödja funktionen. Vissa enheter behöver en firmwareuppdatering och andra stöder den inte.",
+        "no": "Enheten må støtte funksjonen. Noen enheter trenger en fastvareoppdatering, og andre støtter den ikke.",
+        "es": "El dispositivo debe admitir esta función. Algunos dispositivos necesitan una actualización de firmware y otros no la admiten.",
+        "da": "Enheden skal understøtte funktionen. Nogle enheder kræver en firmwareopdatering, og andre understøtter den ikke.",
+        "ru": "Устройство должно поддерживать эту функцию. Некоторым устройствам требуется обновление прошивки, а другие её не поддерживают.",
+        "pl": "Urządzenie musi obsługiwać tę funkcję. Niektóre urządzenia wymagają aktualizacji firmware, a inne jej nie obsługują.",
+        "ko": "장치가 이 기능을 지원해야 합니다. 일부 장치는 펌웨어 업데이트가 필요하며 일부는 지원하지 않습니다.",
+        "ar": "يجب أن يدعم الجهاز هذه الميزة. تحتاج بعض الأجهزة إلى تحديث البرنامج الثابت، وبعضها لا يدعمها."
+      },
+      "values": [
         {
-            "id": "powerOnCtrl_state",
-            "type": "radio",
-            "label": {
-                "en": "Behavior when power is restored"
-            },
-            "value": "on",
-            "hint": {
-                "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-            },
-            "values": [
-                {
-                "id": "on",
-                "label": {
-                    "en": "On"
-                }
-                },
-                {
-                "id": "off",
-                "label": {
-                    "en": "Off"
-                }
-                },
-                {
-                "id": "recover",
-                "label": {
-                    "en": "Restore last state"
-                }
-                }
-            ]
+          "id": "on",
+          "label": {
+            "en": "On",
+            "nl": "Aan",
+            "de": "Ein",
+            "fr": "Allumé",
+            "it": "Acceso",
+            "sv": "På",
+            "no": "På",
+            "es": "Encendido",
+            "da": "Til",
+            "ru": "Вкл.",
+            "pl": "Włączone",
+            "ko": "켜짐",
+            "ar": "تشغيل"
+          }
+        },
+        {
+          "id": "off",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+            "de": "Aus",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл.",
+            "pl": "Wyłączone",
+            "ko": "꺼짐",
+            "ar": "إيقاف"
+          }
+        },
+        {
+          "id": "recover",
+          "label": {
+            "en": "Restore last state",
+            "nl": "Herstel laatste status",
+            "de": "Letzten Zustand wiederherstellen",
+            "fr": "Restaurer le dernier état",
+            "it": "Ripristina ultimo stato",
+            "sv": "Återställ senaste läge",
+            "no": "Gjenopprett siste tilstand",
+            "es": "Restaurar último estado",
+            "da": "Gendan seneste tilstand",
+            "ru": "Восстановить последнее состояние",
+            "pl": "Przywróć ostatni stan",
+            "ko": "마지막 상태 복원",
+            "ar": "استعادة آخر حالة"
+          }
         }
-    ]
+      ]
+    }
+  ]
 }

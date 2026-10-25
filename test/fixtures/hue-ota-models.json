@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-03",
+  "manufacturerCode": 4107,
+  "sources": {
+    "deconz-wiki": {
+      "kind": "maintained-mapping",
+      "url": "https://github.com/dresden-elektronik/deconz-rest-plugin/wiki/OTA-Image-Types---Firmware-versions",
+      "sha256": "a5713376c96f76a1d9dd7dfafd4cce82ff34c253341d3e8f0190ef2810b37c90",
+      "note": "Explicit model/image-type rows in the Philips Hue section; manufacturer code 0x100B.",
+      "observations": {
+        "LCA001": [
+          "100b-0112"
+        ],
+        "LCF003": [
+          "100b-010e"
+        ],
+        "LCG002": [
+          "100b-0114"
+        ],
+        "LCT007": [
+          "100b-0104"
+        ],
+        "LCT010": [
+          "100b-010c"
+        ],
+        "LCT012": [
+          "100b-010c"
+        ],
+        "LCT015": [
+          "100b-010c"
+        ],
+        "LCT024": [
+          "100b-010e"
+        ],
+        "LLC010": [
+          "100b-0108"
+        ],
+        "LLC020": [
+          "100b-0108"
+        ],
+        "LOM006": [
+          "100b-011a"
+        ],
+        "LTC001": [
+          "100b-010e"
+        ],
+        "LTC011": [
+          "100b-010e"
+        ],
+        "LTE002": [
+          "100b-0114"
+        ],
+        "LTP002": [
+          "100b-010e"
+        ],
+        "LTW001": [
+          "100b-0104"
+        ],
+        "LTW010": [
+          "100b-010c"
+        ],
+        "LTW012": [
+          "100b-010c"
+        ],
+        "LTW013": [
+          "100b-010c"
+        ],
+        "LWA001": [
+          "100b-0112"
+        ],
+        "LWB006": [
+          "100b-0105"
+        ],
+        "LWB010": [
+          "100b-010c"
+        ],
+        "RWL020": [
+          "100b-0109"
+        ],
+        "RWL021": [
+          "100b-0109"
+        ],
+        "SML001": [
+          "100b-010d"
+        ],
+        "LCL001": [
+          "100b-0117"
+        ]
+      }
+    },
+    "hue4j": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/JimmyyyW/hue4j/blob/c2daccd8db1087de7b144e646692fd38b17e28ff/lib/src/test/resources/device.json",
+      "observations": {
+        "LCE002": [
+          "100b-114"
+        ],
+        "LCT015": [
+          "100b-10c"
+        ]
+      }
+    },
+    "morpheus": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/bjlamarca/morpheus/blob/9ec3a279e8bb156a1d470b25bf08c5012bcee0a2/morpheus/hue/json/all_devices.json",
+      "observations": {
+        "LCA005": [
+          "100b-114"
+        ],
+        "LCT014": [
+          "100b-10c"
+        ],
+        "LCT016": [
+          "100b-10c"
+        ],
+        "LWB014": [
+          "100b-10c"
+        ],
+        "RWL020": [
+          "100b-109"
+        ]
+      }
+    },
+    "indigo": {
+      "kind": "hue-v2-capture",
+      "url": "https://github.com/kw123/Hue-Lights-Indigo-plugin/blob/1385264f1d328c242af63dd4b7e0b1827daec325/Hue%20Lights.indigoPlugin/Contents/Server%20Plugin/v2_data_structures.txt",
+      "observations": {
+        "1746330P7": [
+          "100b-11f"
+        ]
+      }
+    },
+    "aiohue": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/home-assistant-libs/aiohue/blob/ea0b3f69c4d9af3f4d3376ac25658a75435c2b47/tests/fixtures/v2_resources.json",
+      "observations": {
+        "1741530P7": [
+          "100b-11f"
+        ],
+        "1743430P7": [
+          "100b-11f"
+        ],
+        "1746430P7": [
+          "100b-11f"
+        ],
+        "4080248P9": [
+          "100b-11d"
+        ],
+        "LCL001": [
+          "100b-11f"
+        ],
+        "LLC011": [
+          "100b-103"
+        ],
+        "LTA009": [
+          "100b-114"
+        ],
+        "LTG002": [
+          "100b-114"
+        ],
+        "LTO002": [
+          "100b-114"
+        ],
+        "RDM001": [
+          "100b-11c"
+        ],
+        "RDM002": [
+          "100b-121"
+        ],
+        "RWL022": [
+          "100b-119"
+        ],
+        "SML001": [
+          "100b-10d"
+        ],
+        "SML003": [
+          "100b-11b"
+        ]
+      }
+    },
+    "mqtt2hue": {
+      "kind": "hue-v2-capture",
+      "url": "https://github.com/jyp/mqtt2hue/blob/b225b44d81eb641e07b8e303dbe88c3808b06de4/doc/api/v2.org",
+      "observations": {
+        "3216231P6": [
+          "100b-11d"
+        ],
+        "440400982842": [
+          "100b-11f"
+        ],
+        "LTW010": [
+          "100b-10c"
+        ],
+        "LWA004": [
+          "100b-112"
+        ],
+        "RWL021": [
+          "100b-109"
+        ],
+        "RWL022": [
+          "100b-119"
+        ],
+        "SML001": [
+          "100b-10d"
+        ]
+      }
+    },
+    "hues": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/rektdeckard/hues/blob/818243b0504b7a92f9488f9965b28f107ab91a96/test/fixtures/resource/sample2.json",
+      "observations": {
+        "LCT015": [
+          "100b-10c"
+        ],
+        "LTO002": [
+          "100b-114"
+        ],
+        "LWU001": [
+          "100b-114"
+        ],
+        "RDM004": [
+          "100b-122"
+        ],
+        "RWL021": [
+          "100b-109"
+        ]
+      }
+    },
+    "vault": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/vault1701/hue-controller/blob/420f5bf2c479d7d58a194d864cc09a40637cc481/requestparser_test.go",
+      "observations": {
+        "LCA004": [
+          "100b-114"
+        ],
+        "LWA017": [
+          "100b-114"
+        ],
+        "ROM001": [
+          "100b-116"
+        ]
+      }
+    },
+    "hueex": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/ShawnMcCool/hue-ex/blob/c27e0ed0ea8f4ec507564ce72f720ef9ed1d889a/test/support/fixtures/full_state.json",
+      "observations": {
+        "440400982842": [
+          "100b-11f"
+        ],
+        "LCT003": [
+          "100b-104"
+        ],
+        "LCT007": [
+          "100b-104"
+        ],
+        "LCT015": [
+          "100b-10c"
+        ],
+        "LLC012": [
+          "100b-103"
+        ],
+        "LOM007": [
+          "100b-11a"
+        ],
+        "LST001": [
+          "100b-103"
+        ],
+        "LLC010": [
+          "100b-103"
+        ]
+      }
+    },
+    "openhab": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/openhab/openhab-addons/blob/8d09a0997f6cf1ca817b94d5cdfa647b5b51e1e1/bundles/org.openhab.binding.hue/src/test/resources/device.json",
+      "observations": {
+        "LCT007": [
+          "100b-104"
+        ],
+        "LTA001": [
+          "100b-112"
+        ],
+        "LTW001": [
+          "100b-104"
+        ],
+        "LTW013": [
+          "100b-10c"
+        ],
+        "LWB010": [
+          "100b-10c"
+        ],
+        "RDM001": [
+          "100b-11c"
+        ],
+        "ROM001": [
+          "100b-116"
+        ],
+        "RWL021": [
+          "100b-109"
+        ]
+      }
+    },
+    "gohue": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/tdrn-org/go-hue/blob/37293104bbe97b4a76ad74a6905a7394a26d0017/mock/mock.json",
+      "observations": {
+        "LCT010": [
+          "100b-10c"
+        ],
+        "LTW012": [
+          "100b-10c"
+        ],
+        "LWA001": [
+          "100b-112"
+        ],
+        "LWA011": [
+          "100b-114"
+        ],
+        "LWB006": [
+          "100b-105"
+        ],
+        "SML001": [
+          "100b-10d"
+        ]
+      }
+    },
+    "enconnect": {
+      "kind": "hue-v2-fixture",
+      "url": "https://github.com/enasisnetwork/enconnect/blob/3a4d3fd713c5e563fdeda5c210d650ec9d16937f/enconnect/philips/test/samples/source/resource.json",
+      "observations": {
+        "RDM001": [
+          "100b-11c"
+        ],
+        "RDM002": [
+          "100b-121"
+        ],
+        "SML002": [
+          "100b-10d"
+        ]
+      }
+    },
+    "johan-673": {
+      "kind": "device-report",
+      "url": "https://github.com/JohanBendz/com.philips.hue.zigbee/issues/673",
+      "note": "Owner reports exact model LTA015 and hardware platform 100b-129.",
+      "observations": {
+        "LTA015": [
+          "100b-129"
+        ]
+      }
+    },
+    "zigbee-ota-2": {
+      "kind": "device-report",
+      "url": "https://github.com/Koenkk/zigbee-OTA/issues/2",
+      "note": "Owner identifies LOM001 requesting image type 277 (0x0115); confirmed as a separate image type by the maintainer.",
+      "observations": {
+        "LOM001": [
+          "100b-115"
+        ]
+      }
+    },
+    "z2m-14923": {
+      "kind": "ota-request",
+      "url": "https://github.com/Koenkk/zigbee2mqtt/issues/14923",
+      "note": "SML004 queryNextImageRequest explicitly reports manufacturerCode 4107 and imageType 283.",
+      "observations": {
+        "SML004": [
+          "100b-11b"
+        ]
+      }
+    },
+    "zigbee-ota-400": {
+      "kind": "ota-request",
+      "url": "https://github.com/Koenkk/zigbee-OTA/issues/400",
+      "note": "LCL001 queryNextImageRequest explicitly reports manufacturerCode 4107 and imageType 287.",
+      "observations": {
+        "LCL001": [
+          "100b-11f"
+        ]
+      }
+    },
+    "jeedom-110703": {
+      "kind": "hue-v2-capture",
+      "url": "https://community.jeedom.com/t/ajout-configurations/110703",
+      "note": "First post contains Hue V2 product_data for LWE002 and LWO001, both on platform 100b-112.",
+      "observations": {
+        "LWE002": [
+          "100b-112"
+        ],
+        "LWO001": [
+          "100b-112"
+        ]
+      }
+    },
+    "bifrost": {
+      "kind": "curated-device-database",
+      "url": "https://github.com/chrivers/bifrost/blob/12d9e37e6ea032fb0708ddcd2faaa6db0133d7c8/crates/hue/src/devicedb.rs",
+      "note": "Author describes a best-effort database collected from community samples and public examples. Per-model original captures are not linked. Used only for the three existing mappings whose primary evidence remains open.",
+      "observations": {
+        "LTO001": [
+          "100b-114"
+        ],
+        "LTW015": [
+          "100b-10c"
+        ],
+        "LWA029": [
+          "100b-114"
+        ]
+      }
+    }
+  },
+  "models": {
+    "1741530P7": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "1743430P7": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "1746330P7": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "indigo"
+      ]
+    },
+    "1746430P7": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "3216231P6": {
+      "imageTypes": [
+        285
+      ],
+      "sources": [
+        "mqtt2hue"
+      ]
+    },
+    "4080248P9": {
+      "imageTypes": [
+        285
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "440400982842": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "hueex",
+        "mqtt2hue"
+      ]
+    },
+    "LCA001": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LCA004": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "vault"
+      ]
+    },
+    "LCA005": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "morpheus"
+      ]
+    },
+    "LCE002": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "hue4j"
+      ]
+    },
+    "LCF003": {
+      "imageTypes": [
+        270
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LCG002": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LCL001": {
+      "imageTypes": [
+        287
+      ],
+      "sources": [
+        "aiohue",
+        "zigbee-ota-400"
+      ],
+      "reviewNote": "0x011F is supported by a captured OTA request and Hue V2 fixture. The deCONZ wiki also lists 0x0117; that variant remains unapproved."
+    },
+    "LCT003": {
+      "imageTypes": [
+        260
+      ],
+      "sources": [
+        "hueex"
+      ]
+    },
+    "LCT007": {
+      "imageTypes": [
+        260
+      ],
+      "sources": [
+        "deconz-wiki",
+        "hueex",
+        "openhab"
+      ]
+    },
+    "LCT010": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "gohue"
+      ]
+    },
+    "LCT012": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LCT014": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "morpheus"
+      ]
+    },
+    "LCT015": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "hue4j",
+        "hueex",
+        "hues"
+      ]
+    },
+    "LCT016": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "morpheus"
+      ]
+    },
+    "LCT024": {
+      "imageTypes": [
+        270
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LLC010": {
+      "imageTypes": [
+        264
+      ],
+      "sources": [
+        "deconz-wiki"
+      ],
+      "reviewNote": "0x0108 is supported by the deCONZ model table. The hueex fixture also labels LLC010 as 100b-103; this alternative is unapproved pending reconciliation and is not enabled."
+    },
+    "LLC011": {
+      "imageTypes": [
+        259
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "LLC012": {
+      "imageTypes": [
+        259
+      ],
+      "sources": [
+        "hueex"
+      ]
+    },
+    "LLC020": {
+      "imageTypes": [
+        264
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LOM001": {
+      "imageTypes": [
+        277
+      ],
+      "sources": [
+        "zigbee-ota-2"
+      ]
+    },
+    "LOM006": {
+      "imageTypes": [
+        282
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LOM007": {
+      "imageTypes": [
+        282
+      ],
+      "sources": [
+        "hueex"
+      ]
+    },
+    "LST001": {
+      "imageTypes": [
+        259
+      ],
+      "sources": [
+        "hueex"
+      ]
+    },
+    "LTA001": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "openhab"
+      ]
+    },
+    "LTA009": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "LTA015": {
+      "imageTypes": [
+        297
+      ],
+      "sources": [
+        "johan-673"
+      ]
+    },
+    "LTC001": {
+      "imageTypes": [
+        270
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LTC011": {
+      "imageTypes": [
+        270
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LTE002": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LTG002": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "LTO001": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "bifrost"
+      ],
+      "reviewNote": "Existing mapping retained from the curated database. Independent Hue V2 capture or OTA query still needed; this is not physical OTA validation."
+    },
+    "LTO002": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "aiohue",
+        "hues"
+      ]
+    },
+    "LTP002": {
+      "imageTypes": [
+        270
+      ],
+      "sources": [
+        "deconz-wiki"
+      ]
+    },
+    "LTW001": {
+      "imageTypes": [
+        260
+      ],
+      "sources": [
+        "deconz-wiki",
+        "openhab"
+      ]
+    },
+    "LTW010": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "mqtt2hue"
+      ]
+    },
+    "LTW012": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "gohue"
+      ]
+    },
+    "LTW013": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "openhab"
+      ]
+    },
+    "LTW015": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "bifrost"
+      ],
+      "reviewNote": "Existing mapping retained from the curated database. Independent Hue V2 capture or OTA query still needed; this is not physical OTA validation."
+    },
+    "LWA001": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "deconz-wiki",
+        "gohue"
+      ]
+    },
+    "LWA004": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "mqtt2hue"
+      ]
+    },
+    "LWA011": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "gohue"
+      ]
+    },
+    "LWA017": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "vault"
+      ]
+    },
+    "LWA029": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "bifrost"
+      ],
+      "reviewNote": "Existing mapping retained from the curated database. Independent Hue V2 capture or OTA query still needed; this is not physical OTA validation."
+    },
+    "LWB006": {
+      "imageTypes": [
+        261
+      ],
+      "sources": [
+        "deconz-wiki",
+        "gohue"
+      ]
+    },
+    "LWB010": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "deconz-wiki",
+        "openhab"
+      ]
+    },
+    "LWB014": {
+      "imageTypes": [
+        268
+      ],
+      "sources": [
+        "morpheus"
+      ]
+    },
+    "LWE002": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "jeedom-110703"
+      ]
+    },
+    "LWO001": {
+      "imageTypes": [
+        274
+      ],
+      "sources": [
+        "jeedom-110703"
+      ]
+    },
+    "LWU001": {
+      "imageTypes": [
+        276
+      ],
+      "sources": [
+        "hues"
+      ]
+    },
+    "RDM001": {
+      "imageTypes": [
+        284
+      ],
+      "sources": [
+        "aiohue",
+        "enconnect",
+        "openhab"
+      ]
+    },
+    "RDM002": {
+      "imageTypes": [
+        289
+      ],
+      "sources": [
+        "aiohue",
+        "enconnect"
+      ]
+    },
+    "RDM004": {
+      "imageTypes": [
+        290
+      ],
+      "sources": [
+        "hues"
+      ]
+    },
+    "ROM001": {
+      "imageTypes": [
+        278
+      ],
+      "sources": [
+        "openhab",
+        "vault"
+      ]
+    },
+    "RWL020": {
+      "imageTypes": [
+        265
+      ],
+      "sources": [
+        "deconz-wiki",
+        "morpheus"
+      ]
+    },
+    "RWL021": {
+      "imageTypes": [
+        265
+      ],
+      "sources": [
+        "deconz-wiki",
+        "hues",
+        "mqtt2hue",
+        "openhab"
+      ]
+    },
+    "RWL022": {
+      "imageTypes": [
+        281
+      ],
+      "sources": [
+        "aiohue",
+        "mqtt2hue"
+      ]
+    },
+    "SML001": {
+      "imageTypes": [
+        269
+      ],
+      "sources": [
+        "aiohue",
+        "deconz-wiki",
+        "gohue",
+        "mqtt2hue"
+      ]
+    },
+    "SML002": {
+      "imageTypes": [
+        269
+      ],
+      "sources": [
+        "enconnect"
+      ]
+    },
+    "SML003": {
+      "imageTypes": [
+        283
+      ],
+      "sources": [
+        "aiohue"
+      ]
+    },
+    "SML004": {
+      "imageTypes": [
+        283
+      ],
+      "sources": [
+        "z2m-14923"
+      ]
+    }
+  }
+}

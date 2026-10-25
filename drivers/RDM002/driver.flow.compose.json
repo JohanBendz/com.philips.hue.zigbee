@@ -3,11 +3,34 @@
     {
       "id": "RDM002_buttons",
       "title": {
-        "en": "Button Action"
+        "en": "Button Action",
+        "nl": "Knopactie",
+        "de": "Tastenaktion",
+        "fr": "Action du bouton",
+        "it": "Azione pulsante",
+        "sv": "Knapphändelse",
+        "no": "Knappehandling",
+        "es": "Acción del botón",
+        "da": "Knappehandling",
+        "ru": "Действие кнопки",
+        "pl": "Akcja przycisku",
+        "ko": "버튼 동작",
+        "ar": "إجراء الزر"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "nl": "Knop [[action]]"
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "sv": "Knapp [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
@@ -17,139 +40,414 @@
             {
               "id": "Button1-Press",
               "label": {
-                "en": "Button 1, press"
+                "en": "Button 1, press",
+                "nl": "Knop 1, indrukken",
+                "de": "Taste 1, drücken",
+                "fr": "Bouton 1, appui",
+                "it": "Pulsante 1, pressione",
+                "sv": "Knapp 1, tryck",
+                "no": "Knapp 1, trykk",
+                "es": "Botón 1, pulsar",
+                "da": "Knap 1, tryk",
+                "ru": "Кнопка 1, нажатие",
+                "pl": "Przycisk 1, naciśnięcie",
+                "ko": "버튼 1, 누름",
+                "ar": "الزر 1, ضغط"
               }
             },
             {
               "id": "Button1-Release",
               "label": {
-                "en": "Button 1, release"
+                "en": "Button 1, release",
+                "nl": "Knop 1, loslaten",
+                "de": "Taste 1, loslassen",
+                "fr": "Bouton 1, relâchement",
+                "it": "Pulsante 1, rilascio",
+                "sv": "Knapp 1, släpp",
+                "no": "Knapp 1, slipp",
+                "es": "Botón 1, soltar",
+                "da": "Knap 1, slip",
+                "ru": "Кнопка 1, отпускание",
+                "pl": "Przycisk 1, zwolnienie",
+                "ko": "버튼 1, 놓음",
+                "ar": "الزر 1, إفلات"
               }
             },
             {
               "id": "Button1-Hold",
               "label": {
-                "en": "Button 1, hold"
+                "en": "Button 1, hold",
+                "nl": "Knop 1, vasthouden",
+                "de": "Taste 1, halten",
+                "fr": "Bouton 1, maintien",
+                "it": "Pulsante 1, pressione prolungata",
+                "sv": "Knapp 1, håll",
+                "no": "Knapp 1, hold",
+                "es": "Botón 1, mantener",
+                "da": "Knap 1, hold",
+                "ru": "Кнопка 1, удержание",
+                "pl": "Przycisk 1, przytrzymanie",
+                "ko": "버튼 1, 길게 누름",
+                "ar": "الزر 1, ضغط مطول"
               }
             },
             {
               "id": "Button1-LongRelease",
               "label": {
-                "en": "Button 1, long release"
+                "en": "Button 1, long release",
+                "nl": "Knop 1, loslaten na vasthouden",
+                "de": "Taste 1, loslassen nach Halten",
+                "fr": "Bouton 1, relâchement après maintien",
+                "it": "Pulsante 1, rilascio dopo pressione prolungata",
+                "sv": "Knapp 1, släpp efter håll",
+                "no": "Knapp 1, slipp etter hold",
+                "es": "Botón 1, soltar tras mantener",
+                "da": "Knap 1, slip efter hold",
+                "ru": "Кнопка 1, отпускание после удержания",
+                "pl": "Przycisk 1, zwolnienie po przytrzymaniu",
+                "ko": "버튼 1, 길게 누른 후 놓음",
+                "ar": "الزر 1, إفلات بعد ضغط مطول"
               }
             },
             {
               "id": "Button2-Press",
               "label": {
-                "en": "Button 2, press"
+                "en": "Button 2, press",
+                "nl": "Knop 2, indrukken",
+                "de": "Taste 2, drücken",
+                "fr": "Bouton 2, appui",
+                "it": "Pulsante 2, pressione",
+                "sv": "Knapp 2, tryck",
+                "no": "Knapp 2, trykk",
+                "es": "Botón 2, pulsar",
+                "da": "Knap 2, tryk",
+                "ru": "Кнопка 2, нажатие",
+                "pl": "Przycisk 2, naciśnięcie",
+                "ko": "버튼 2, 누름",
+                "ar": "الزر 2, ضغط"
               }
             },
             {
               "id": "Button2-Release",
               "label": {
-                "en": "Button 2, release"
+                "en": "Button 2, release",
+                "nl": "Knop 2, loslaten",
+                "de": "Taste 2, loslassen",
+                "fr": "Bouton 2, relâchement",
+                "it": "Pulsante 2, rilascio",
+                "sv": "Knapp 2, släpp",
+                "no": "Knapp 2, slipp",
+                "es": "Botón 2, soltar",
+                "da": "Knap 2, slip",
+                "ru": "Кнопка 2, отпускание",
+                "pl": "Przycisk 2, zwolnienie",
+                "ko": "버튼 2, 놓음",
+                "ar": "الزر 2, إفلات"
               }
             },
             {
               "id": "Button2-Hold",
               "label": {
-                "en": "Button 2, hold"
+                "en": "Button 2, hold",
+                "nl": "Knop 2, vasthouden",
+                "de": "Taste 2, halten",
+                "fr": "Bouton 2, maintien",
+                "it": "Pulsante 2, pressione prolungata",
+                "sv": "Knapp 2, håll",
+                "no": "Knapp 2, hold",
+                "es": "Botón 2, mantener",
+                "da": "Knap 2, hold",
+                "ru": "Кнопка 2, удержание",
+                "pl": "Przycisk 2, przytrzymanie",
+                "ko": "버튼 2, 길게 누름",
+                "ar": "الزر 2, ضغط مطول"
               }
             },
             {
               "id": "Button2-LongRelease",
               "label": {
-                "en": "Button 2, long release"
+                "en": "Button 2, long release",
+                "nl": "Knop 2, loslaten na vasthouden",
+                "de": "Taste 2, loslassen nach Halten",
+                "fr": "Bouton 2, relâchement après maintien",
+                "it": "Pulsante 2, rilascio dopo pressione prolungata",
+                "sv": "Knapp 2, släpp efter håll",
+                "no": "Knapp 2, slipp etter hold",
+                "es": "Botón 2, soltar tras mantener",
+                "da": "Knap 2, slip efter hold",
+                "ru": "Кнопка 2, отпускание после удержания",
+                "pl": "Przycisk 2, zwolnienie po przytrzymaniu",
+                "ko": "버튼 2, 길게 누른 후 놓음",
+                "ar": "الزر 2, إفلات بعد ضغط مطول"
               }
             },
             {
               "id": "Button3-Press",
               "label": {
-                "en": "Button 3, press"
+                "en": "Button 3, press",
+                "nl": "Knop 3, indrukken",
+                "de": "Taste 3, drücken",
+                "fr": "Bouton 3, appui",
+                "it": "Pulsante 3, pressione",
+                "sv": "Knapp 3, tryck",
+                "no": "Knapp 3, trykk",
+                "es": "Botón 3, pulsar",
+                "da": "Knap 3, tryk",
+                "ru": "Кнопка 3, нажатие",
+                "pl": "Przycisk 3, naciśnięcie",
+                "ko": "버튼 3, 누름",
+                "ar": "الزر 3, ضغط"
               }
             },
             {
               "id": "Button3-Release",
               "label": {
-                "en": "Button 3, release"
+                "en": "Button 3, release",
+                "nl": "Knop 3, loslaten",
+                "de": "Taste 3, loslassen",
+                "fr": "Bouton 3, relâchement",
+                "it": "Pulsante 3, rilascio",
+                "sv": "Knapp 3, släpp",
+                "no": "Knapp 3, slipp",
+                "es": "Botón 3, soltar",
+                "da": "Knap 3, slip",
+                "ru": "Кнопка 3, отпускание",
+                "pl": "Przycisk 3, zwolnienie",
+                "ko": "버튼 3, 놓음",
+                "ar": "الزر 3, إفلات"
               }
             },
             {
               "id": "Button3-Hold",
               "label": {
-                "en": "Button 3, hold"
+                "en": "Button 3, hold",
+                "nl": "Knop 3, vasthouden",
+                "de": "Taste 3, halten",
+                "fr": "Bouton 3, maintien",
+                "it": "Pulsante 3, pressione prolungata",
+                "sv": "Knapp 3, håll",
+                "no": "Knapp 3, hold",
+                "es": "Botón 3, mantener",
+                "da": "Knap 3, hold",
+                "ru": "Кнопка 3, удержание",
+                "pl": "Przycisk 3, przytrzymanie",
+                "ko": "버튼 3, 길게 누름",
+                "ar": "الزر 3, ضغط مطول"
               }
             },
             {
               "id": "Button3-LongRelease",
               "label": {
-                "en": "Button 3, long release"
+                "en": "Button 3, long release",
+                "nl": "Knop 3, loslaten na vasthouden",
+                "de": "Taste 3, loslassen nach Halten",
+                "fr": "Bouton 3, relâchement après maintien",
+                "it": "Pulsante 3, rilascio dopo pressione prolungata",
+                "sv": "Knapp 3, släpp efter håll",
+                "no": "Knapp 3, slipp etter hold",
+                "es": "Botón 3, soltar tras mantener",
+                "da": "Knap 3, slip efter hold",
+                "ru": "Кнопка 3, отпускание после удержания",
+                "pl": "Przycisk 3, zwolnienie po przytrzymaniu",
+                "ko": "버튼 3, 길게 누른 후 놓음",
+                "ar": "الزر 3, إفلات بعد ضغط مطول"
               }
             },
             {
               "id": "Button4-Press",
               "label": {
-                "en": "Button 4, press"
+                "en": "Button 4, press",
+                "nl": "Knop 4, indrukken",
+                "de": "Taste 4, drücken",
+                "fr": "Bouton 4, appui",
+                "it": "Pulsante 4, pressione",
+                "sv": "Knapp 4, tryck",
+                "no": "Knapp 4, trykk",
+                "es": "Botón 4, pulsar",
+                "da": "Knap 4, tryk",
+                "ru": "Кнопка 4, нажатие",
+                "pl": "Przycisk 4, naciśnięcie",
+                "ko": "버튼 4, 누름",
+                "ar": "الزر 4, ضغط"
               }
             },
             {
               "id": "Button4-Release",
               "label": {
-                "en": "Button 4, release"
+                "en": "Button 4, release",
+                "nl": "Knop 4, loslaten",
+                "de": "Taste 4, loslassen",
+                "fr": "Bouton 4, relâchement",
+                "it": "Pulsante 4, rilascio",
+                "sv": "Knapp 4, släpp",
+                "no": "Knapp 4, slipp",
+                "es": "Botón 4, soltar",
+                "da": "Knap 4, slip",
+                "ru": "Кнопка 4, отпускание",
+                "pl": "Przycisk 4, zwolnienie",
+                "ko": "버튼 4, 놓음",
+                "ar": "الزر 4, إفلات"
               }
             },
             {
               "id": "Button4-Hold",
               "label": {
-                "en": "Button 4, hold"
+                "en": "Button 4, hold",
+                "nl": "Knop 4, vasthouden",
+                "de": "Taste 4, halten",
+                "fr": "Bouton 4, maintien",
+                "it": "Pulsante 4, pressione prolungata",
+                "sv": "Knapp 4, håll",
+                "no": "Knapp 4, hold",
+                "es": "Botón 4, mantener",
+                "da": "Knap 4, hold",
+                "ru": "Кнопка 4, удержание",
+                "pl": "Przycisk 4, przytrzymanie",
+                "ko": "버튼 4, 길게 누름",
+                "ar": "الزر 4, ضغط مطول"
               }
             },
             {
               "id": "Button4-LongRelease",
               "label": {
-                "en": "Button 4, long release"
+                "en": "Button 4, long release",
+                "nl": "Knop 4, loslaten na vasthouden",
+                "de": "Taste 4, loslassen nach Halten",
+                "fr": "Bouton 4, relâchement après maintien",
+                "it": "Pulsante 4, rilascio dopo pressione prolungata",
+                "sv": "Knapp 4, släpp efter håll",
+                "no": "Knapp 4, slipp etter hold",
+                "es": "Botón 4, soltar tras mantener",
+                "da": "Knap 4, slip efter hold",
+                "ru": "Кнопка 4, отпускание после удержания",
+                "pl": "Przycisk 4, zwolnienie po przytrzymaniu",
+                "ko": "버튼 4, 길게 누른 후 놓음",
+                "ar": "الزر 4, إفلات بعد ضغط مطول"
               }
             },
             {
               "id": "Ring-RotateLeftStep",
               "label": {
-                "en": "Ring, rotate left step"
+                "en": "Ring, rotate left step",
+                "nl": "Ring, links stap",
+                "de": "Ring, links Schritt",
+                "fr": "Anneau, gauche pas",
+                "it": "Anello, sinistra scatto",
+                "sv": "Ring, vänster steg",
+                "no": "Ring, venstre trinn",
+                "es": "Anillo, izquierda paso",
+                "da": "Ring, venstre trin",
+                "ru": "Кольцо, влево шаг",
+                "pl": "Pierścień, w lewo krok",
+                "ko": "링, 왼쪽 단계",
+                "ar": "الحلقة, يسارًا خطوة"
               }
             },
             {
               "id": "Ring-RotateLeftSlow",
               "label": {
-                "en": "Ring, rotate left slow"
+                "en": "Ring, rotate left slow",
+                "nl": "Ring, links langzaam",
+                "de": "Ring, links langsam",
+                "fr": "Anneau, gauche lentement",
+                "it": "Anello, sinistra lentamente",
+                "sv": "Ring, vänster långsamt",
+                "no": "Ring, venstre sakte",
+                "es": "Anillo, izquierda lento",
+                "da": "Ring, venstre langsomt",
+                "ru": "Кольцо, влево медленно",
+                "pl": "Pierścień, w lewo wolno",
+                "ko": "링, 왼쪽 느리게",
+                "ar": "الحلقة, يسارًا ببطء"
               }
             },
             {
               "id": "Ring-RotateLeftFast",
               "label": {
-                "en": "Ring, rotate left fast"
+                "en": "Ring, rotate left fast",
+                "nl": "Ring, links snel",
+                "de": "Ring, links schnell",
+                "fr": "Anneau, gauche rapidement",
+                "it": "Anello, sinistra velocemente",
+                "sv": "Ring, vänster snabbt",
+                "no": "Ring, venstre raskt",
+                "es": "Anillo, izquierda rápido",
+                "da": "Ring, venstre hurtigt",
+                "ru": "Кольцо, влево быстро",
+                "pl": "Pierścień, w lewo szybko",
+                "ko": "링, 왼쪽 빠르게",
+                "ar": "الحلقة, يسارًا بسرعة"
               }
             },
             {
               "id": "Ring-RotateRightStep",
               "label": {
-                "en": "Ring, rotate right step"
+                "en": "Ring, rotate right step",
+                "nl": "Ring, rechts stap",
+                "de": "Ring, rechts Schritt",
+                "fr": "Anneau, droite pas",
+                "it": "Anello, destra scatto",
+                "sv": "Ring, höger steg",
+                "no": "Ring, høyre trinn",
+                "es": "Anillo, derecha paso",
+                "da": "Ring, højre trin",
+                "ru": "Кольцо, вправо шаг",
+                "pl": "Pierścień, w prawo krok",
+                "ko": "링, 오른쪽 단계",
+                "ar": "الحلقة, يمينًا خطوة"
               }
             },
             {
               "id": "Ring-RotateRightSlow",
               "label": {
-                "en": "Ring, rotate right slow"
+                "en": "Ring, rotate right slow",
+                "nl": "Ring, rechts langzaam",
+                "de": "Ring, rechts langsam",
+                "fr": "Anneau, droite lentement",
+                "it": "Anello, destra lentamente",
+                "sv": "Ring, höger långsamt",
+                "no": "Ring, høyre sakte",
+                "es": "Anillo, derecha lento",
+                "da": "Ring, højre langsomt",
+                "ru": "Кольцо, вправо медленно",
+                "pl": "Pierścień, w prawo wolno",
+                "ko": "링, 오른쪽 느리게",
+                "ar": "الحلقة, يمينًا ببطء"
               }
             },
             {
               "id": "Ring-RotateRightFast",
               "label": {
-                "en": "Ring, rotate right fast"
+                "en": "Ring, rotate right fast",
+                "nl": "Ring, rechts snel",
+                "de": "Ring, rechts schnell",
+                "fr": "Anneau, droite rapidement",
+                "it": "Anello, destra velocemente",
+                "sv": "Ring, höger snabbt",
+                "no": "Ring, høyre raskt",
+                "es": "Anillo, derecha rápido",
+                "da": "Ring, højre hurtigt",
+                "ru": "Кольцо, вправо быстро",
+                "pl": "Pierścień, w prawo szybko",
+                "ko": "링, 오른쪽 빠르게",
+                "ar": "الحلقة, يمينًا بسرعة"
               }
             }
           ],
           "title": {
             "en": "Action",
-            "nl": "Actie"
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "sv": "Händelse",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

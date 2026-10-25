@@ -4,8 +4,12 @@
     "en": "Hue Wall Switch Module - Wired"
   },
   "class": "remote",
-  "platforms": ["local"],
-  "connectivity": ["zigbee"],
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "icon": "{{driverAssetsPath}}/icon.svg",
   "images": {
     "large": "{{driverAssetsPath}}/images/large.png",
@@ -22,22 +26,45 @@
     ],
     "endpoints": {
       "1": {
-        "clusters": [0, 3, 64512, 4096, 64516],
-        "bindings": [6, 64512]
+        "clusters": [
+          0,
+          3,
+          64512,
+          4096,
+          64516
+        ],
+        "bindings": [
+          6,
+          64512
+        ]
       }
     },
     "devices": {
       "secondInput": {
         "class": "remote",
         "capabilities": [],
-        "name": { "en": "Hue Wall Switch Module - Wired, Second Input" },
+        "name": {
+          "en": "Hue Wall Switch Module - Wired, Second Input"
+        },
         "settings": []
       }
     },
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Press the reset button for approximately 12 seconds until the LED is bright red, then trigger a button twice."
+        "en": "Press the reset button for approximately 12 seconds until the LED is bright red, then trigger a button twice.",
+        "nl": "Houd de resetknop ongeveer 12 seconden ingedrukt tot de LED fel rood is en activeer daarna twee keer een knop.",
+        "de": "Halte die Reset-Taste etwa 12 Sekunden gedrückt, bis die LED hellrot leuchtet, und betätige danach zweimal eine Taste.",
+        "fr": "Maintenez le bouton de réinitialisation environ 12 secondes jusqu’à ce que la LED soit rouge vif, puis actionnez deux fois un bouton.",
+        "it": "Tieni premuto il pulsante di reset per circa 12 secondi finché il LED diventa rosso brillante, quindi aziona due volte un pulsante.",
+        "sv": "Håll återställningsknappen intryckt i cirka 12 sekunder tills LED-lampan lyser klarrött och aktivera sedan en knapp två gånger.",
+        "no": "Hold reset-knappen inne i omtrent 12 sekunder til LED-en lyser klart rødt, og aktiver deretter en knapp to ganger.",
+        "es": "Mantén pulsado el botón de reinicio durante unos 12 segundos hasta que el LED sea rojo brillante y, a continuación, acciona un botón dos veces.",
+        "da": "Hold nulstillingsknappen nede i ca. 12 sekunder, indtil LED'en lyser klart rødt, og aktivér derefter en knap to gange.",
+        "ru": "Удерживайте кнопку сброса около 12 секунд, пока индикатор не загорится ярко-красным, затем дважды нажмите кнопку.",
+        "pl": "Przytrzymaj przycisk resetowania przez około 12 sekund, aż dioda zaświeci jasno na czerwono, a następnie naciśnij przycisk dwa razy.",
+        "ko": "LED가 밝은 빨간색이 될 때까지 재설정 버튼을 약 12초간 누른 다음 버튼을 두 번 작동하세요.",
+        "ar": "اضغط مطولًا على زر إعادة الضبط لمدة نحو 12 ثانية حتى يضيء مؤشر LED بالأحمر الساطع، ثم فعّل زرًا مرتين."
       }
     }
   }

@@ -4,6 +4,7 @@ const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { CLUSTER } = require('zigbee-clusters');
 const OnOffBoundCluster = require('../../lib/OnOffBoundCluster');
 const LevelControlBoundCluster = require('../../lib/LevelControlBoundCluster');
+const { markHueLastSeenFromTraffic } = require('../../lib/HueLastSeen');
 
 class SmartButton extends ZigBeeDevice {
 
@@ -58,6 +59,7 @@ async onNodeInit({ zclNode }) {
   }
 
   _onCommandParser() {
+    void markHueLastSeenFromTraffic(this);
     this._buttonPressedTriggerDevice.trigger(this, {}, { action: 'pressed' })
     .then(() => this.log(`triggered ROM001 button, action=pressed`))
     .catch(err => this.error('Error triggering ROM001 button', err));
@@ -69,6 +71,7 @@ async onNodeInit({ zclNode }) {
   }
 
   _offCommandParser() {
+    void markHueLastSeenFromTraffic(this);
     this._buttonPressedTriggerDevice.trigger(this, {}, { action: 'pressed' })
     .then(() => this.log(`triggered ROM001 button, action=pressed`))
     .catch(err => this.error('Error triggering ROM001 button', err));
@@ -80,6 +83,10 @@ async onNodeInit({ zclNode }) {
   }
 
   _stepCommandParser(payload) {
+    // The bound ZCL callback has decoded a physical step command.
+    if (Number.isInteger(payload?.stepSize) && typeof payload.mode === 'string') {
+      void markHueLastSeenFromTraffic(this);
+    }
     var action = payload.stepSize === 30 ? 'short-hold' : 'long-hold'; // 30=short-hold,56=long-hold
     var action2 = payload.mode;
     this._buttonPressedTriggerDevice.trigger(this, {}, { action: 'hold' })
@@ -97,6 +104,7 @@ async onNodeInit({ zclNode }) {
   }
 
   _stopCommandParser() {
+    void markHueLastSeenFromTraffic(this);
     return this._buttonPressedTriggerDevice.trigger(this, {}, { action: 'released' })
     .then(() => this.log(`triggered ROM001 button, action=released`))
     .catch(err => this.error('Error triggering ROM001 button', err));

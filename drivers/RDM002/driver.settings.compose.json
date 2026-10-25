@@ -1,9 +1,37 @@
 [
-    {
-        "id": "info",
-        "type": "label",
-        "label": { "en": "Is the battery level not reported?" },
-        "value": "Use maintenance option *try to repair*",
-        "hint": { "en": "This is found under device settings." }
+  {
+    "id": "info",
+    "type": "label",
+    "label": {
+      "en": "Is the battery level not reported?",
+      "nl": "Wordt het batterijniveau niet gemeld?",
+      "de": "Wird der Batteriestand nicht gemeldet?",
+      "fr": "Le niveau de batterie n’est-il pas signalé ?",
+      "it": "Il livello della batteria non viene segnalato?",
+      "sv": "Rapporteras inte batterinivån?",
+      "no": "Rapporteres ikke batterinivået?",
+      "es": "¿No se informa el nivel de batería?",
+      "da": "Rapporteres batteriniveauet ikke?",
+      "ru": "Уровень батареи не передаётся?",
+      "pl": "Poziom baterii nie jest raportowany?",
+      "ko": "배터리 잔량이 보고되지 않나요?",
+      "ar": "هل لا يتم الإبلاغ عن مستوى البطارية؟"
+    },
+    "value": "Use maintenance option *try to repair*",
+    "hint": {
+      "en": "This is found under device settings.",
+      "nl": "Dit staat onder de apparaatinstellingen.",
+      "de": "Dies findest du in den Geräteeinstellungen.",
+      "fr": "Cette option se trouve dans les paramètres de l’appareil.",
+      "it": "Si trova nelle impostazioni del dispositivo.",
+      "sv": "Detta finns under enhetsinställningar.",
+      "no": "Dette finnes under enhetsinnstillinger.",
+      "es": "Se encuentra en los ajustes del dispositivo.",
+      "da": "Dette findes under enhedsindstillinger.",
+      "ru": "Это находится в настройках устройства.",
+      "pl": "Znajdziesz to w ustawieniach urządzenia.",
+      "ko": "장치 설정에서 찾을 수 있습니다.",
+      "ar": "يوجد هذا ضمن إعدادات الجهاز."
     }
+  }
 ]

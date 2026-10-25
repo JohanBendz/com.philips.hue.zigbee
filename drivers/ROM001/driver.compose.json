@@ -1,4 +1,10 @@
 {
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "name": {
     "en": "Smart Button (ROM001 / RDM003 / RDM005)"
   },
@@ -42,7 +48,19 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Hold the button for at least 3 seconds until the LED blinks red.\n\rIf this does not work, reset the button and try again."
+        "en": "Hold the button for at least 3 seconds until the LED blinks red.\n\rIf this does not work, reset the button and try again.",
+        "nl": "Houd de knop minimaal 3 seconden ingedrukt tot de LED rood knippert.\n\rAls dit niet werkt, reset je de knop en probeer je het opnieuw.",
+        "de": "Halte die Taste mindestens 3 Sekunden gedrückt, bis die LED rot blinkt.\n\rWenn das nicht funktioniert, setze die Taste zurück und versuche es erneut.",
+        "fr": "Maintenez le bouton au moins 3 secondes jusqu’à ce que la LED clignote en rouge.\n\rSi cela ne fonctionne pas, réinitialisez le bouton et réessayez.",
+        "it": "Tieni premuto il pulsante per almeno 3 secondi finché il LED lampeggia in rosso.\n\rSe non funziona, reimposta il pulsante e riprova.",
+        "sv": "Håll knappen intryckt i minst 3 sekunder tills LED-lampan blinkar rött.\n\rOm det inte fungerar, återställ knappen och försök igen.",
+        "no": "Hold knappen inne i minst 3 sekunder til LED-en blinker rødt.\n\rHvis dette ikke fungerer, tilbakestill knappen og prøv igjen.",
+        "es": "Mantén pulsado el botón al menos 3 segundos hasta que el LED parpadee en rojo.\n\rSi no funciona, restablece el botón e inténtalo de nuevo.",
+        "da": "Hold knappen nede i mindst 3 sekunder, indtil LED'en blinker rødt.\n\rHvis det ikke virker, nulstil knappen og prøv igen.",
+        "ru": "Удерживайте кнопку не менее 3 секунд, пока индикатор не начнёт мигать красным.\n\rЕсли это не сработает, сбросьте кнопку и повторите попытку.",
+        "pl": "Przytrzymaj przycisk przez co najmniej 3 sekundy, aż dioda zacznie migać na czerwono.\n\rJeśli to nie zadziała, zresetuj przycisk i spróbuj ponownie.",
+        "ko": "LED가 빨간색으로 깜박일 때까지 버튼을 최소 3초간 누르세요.\n\r작동하지 않으면 버튼을 재설정하고 다시 시도하세요.",
+        "ar": "اضغط مطولًا على الزر لمدة 3 ثوانٍ على الأقل حتى يومض مؤشر LED بالأحمر.\n\rإذا لم ينجح ذلك، فأعد ضبط الزر وحاول مرة أخرى."
       }
     }
   }

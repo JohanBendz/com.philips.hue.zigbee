@@ -1,4 +1,6 @@
 {
+    "platforms": ["local"],
+    "connectivity": ["zigbee"],
     "class": "light",
     "icon": "{{driverAssetsPath}}/icon.svg",
     "images": {

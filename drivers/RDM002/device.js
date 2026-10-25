@@ -3,11 +3,10 @@
 const { ZigBeeDevice } = require('homey-zigbeedriver');
 const { Cluster, CLUSTER } = require('zigbee-clusters');
 const HueSpecificBasicCluster = require('../../lib/HueSpecificBasicCluster');
-const HueSpecificBasicBoundCluster = require('../../lib/HueSpecificBasicBoundCluster');
 const { markHueRemoteAvailable } = require('../../lib/HueRemoteAvailability');
+const { parseHueRemoteBattery, observeHueRemoteBatteryReports } = require('../../lib/HueRemoteBattery');
 
 Cluster.addCluster(HueSpecificBasicCluster);
-Cluster.addCluster(HueSpecificBasicBoundCluster);
 
 class TapDialSwitch extends ZigBeeDevice {
 
@@ -16,6 +15,7 @@ class TapDialSwitch extends ZigBeeDevice {
       await this.addCapability('measure_battery');
     }						
     this.registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION, {
+      reportParser: parseHueRemoteBattery,
       getOpts: {
         getOnStart: false,
         getOnOnline: false,
@@ -29,6 +29,10 @@ class TapDialSwitch extends ZigBeeDevice {
       },
     });
 
+    this._removeBatteryReportObserver = observeHueRemoteBatteryReports(
+      this, zclNode.endpoints[1].clusters.powerConfiguration, { recoverAvailability: true },
+    );
+
     this._node = await this.homey.zigbee.getNode(this);
     this._previousHandleFrame = this._node.handleFrame;
     this._rawHandleFrame = async (endpointId, clusterId, frame, meta) => {
@@ -41,9 +45,7 @@ class TapDialSwitch extends ZigBeeDevice {
       if (clusterId === 64512) {
         return this._buttonCommandParser(frame);
       }
-      if (clusterId === 1) {
-        this._powerParser(frame);
-      }
+
     };
     this._node.handleFrame = this._rawHandleFrame;
       
@@ -54,22 +56,11 @@ class TapDialSwitch extends ZigBeeDevice {
   
   }
 
-  _applyBatteryPercentage(rawPercentage) {
-    if (typeof rawPercentage !== 'number' || rawPercentage < 0 || rawPercentage > 200 || rawPercentage === 255) {
-      return null;
-    }
-
-    const percentage = Math.round(rawPercentage / 2);
-    this.setCapabilityValue('measure_battery', percentage)
-      .catch(err => this.error('Failed to update battery level:', err));
-    return percentage;
-  }
-
   async _refreshBattery() {
     try {
-      const result = await this.zclNode.endpoints[1].clusters.powerConfiguration
-        .readAttributes(['batteryPercentageRemaining']);
-      return this._applyBatteryPercentage(result.batteryPercentageRemaining);
+      // Preserve a single explicit read on wake, but let the registered
+      // SDK capability parser perform the only battery capability update.
+      return await this.getClusterCapabilityValue('measure_battery', CLUSTER.POWER_CONFIGURATION);
     } catch (error) {
       this.log('Could not refresh Tap Dial battery state:', error);
       return null;
@@ -81,30 +72,6 @@ class TapDialSwitch extends ZigBeeDevice {
     await this._refreshBattery();
   }
 
-  _powerParser(frame) {
-    if (!Buffer.isBuffer(frame) || frame.length < 7) {
-      return;
-    }
-
-    const commandId = frame.readUInt8(2);
-    const attributeId = frame.readUInt16LE(3);
-
-    if (attributeId !== 0x0021) {
-      return;
-    }
-
-    let rawPercentage;
-    if (commandId === 0x01 && frame.length >= 8 && frame.readUInt8(5) === 0x00 && frame.readUInt8(6) === 0x20) {
-      rawPercentage = frame.readUInt8(7);
-    } else if (commandId === 0x0a && frame.readUInt8(5) === 0x20) {
-      rawPercentage = frame.readUInt8(6);
-    }
-
-    if (rawPercentage !== undefined && this._applyBatteryPercentage(rawPercentage) !== null) {
-      markHueRemoteAvailable(this);
-    }
-  }
-  
   _buttonCommandParser(frame) {
     if (!Buffer.isBuffer(frame) || frame.length < 6) {
       return;
@@ -161,6 +128,7 @@ class TapDialSwitch extends ZigBeeDevice {
   }
 
   async onUninit() {
+    this._removeBatteryReportObserver?.();
     if (this._node && this._rawHandleFrame && this._node.handleFrame === this._rawHandleFrame) {
       this._node.handleFrame = this._previousHandleFrame;
     }

@@ -172,5 +172,8 @@
   },
   "2.3.2": {
     "en": "Restricts Hue Flow cards to devices from this app, preventing foreign-device references from causing Invalid Driver ID crashes."
+  },
+  "2.4.0": {
+    "en": "Adds firmware updates through Homey for selected Hue lights and accessories, plus Zigbee identity, battery reporting and last-seen improvements. Requires Homey 12.9.0 or newer; firmware updates require a supported Homey platform on 13.2.0 or newer."
   }
 }

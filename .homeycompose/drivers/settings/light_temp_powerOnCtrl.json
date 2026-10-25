@@ -1,71 +1,215 @@
 {
-    "type": "group",
-    "label": {
-        "en": "Behavior after power loss"
+  "type": "group",
+  "label": {
+    "en": "Behavior after power loss",
+    "nl": "Gedrag na stroomuitval",
+    "de": "Verhalten nach Stromausfall",
+    "fr": "Comportement après une coupure de courant",
+    "it": "Comportamento dopo un’interruzione di corrente",
+    "sv": "Beteende efter strömavbrott",
+    "no": "Oppførsel etter strømbrudd",
+    "es": "Comportamiento tras un corte de corriente",
+    "da": "Adfærd efter strømafbrydelse",
+    "ru": "Поведение после отключения питания",
+    "pl": "Zachowanie po utracie zasilania",
+    "ko": "정전 후 동작",
+    "ar": "السلوك بعد انقطاع الطاقة"
+  },
+  "children": [
+    {
+      "id": "powerOnCtrl_dimvalue",
+      "type": "number",
+      "label": {
+        "en": "Default brightness",
+        "nl": "Standaardhelderheid",
+        "de": "Standardhelligkeit",
+        "fr": "Luminosité par défaut",
+        "it": "Luminosità predefinita",
+        "sv": "Standardljusstyrka",
+        "no": "Standard lysstyrke",
+        "es": "Brillo predeterminado",
+        "da": "Standardlysstyrke",
+        "ru": "Яркость по умолчанию",
+        "pl": "Domyślna jasność",
+        "ko": "기본 밝기",
+        "ar": "السطوع الافتراضي"
+      },
+      "value": 255,
+      "min": 0,
+      "max": 255,
+      "units": {
+        "en": "steps",
+        "nl": "stappen",
+        "de": "Schritte",
+        "fr": "pas",
+        "it": "passi",
+        "sv": "steg",
+        "no": "trinn",
+        "es": "pasos",
+        "da": "trin",
+        "ru": "шаги",
+        "pl": "kroki",
+        "ko": "단계",
+        "ar": "خطوات"
+      },
+      "hint": {
+        "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all).",
+        "nl": "(0-255). Het apparaat moet deze functie ondersteunen. Sommige apparaten hebben een firmware-update nodig en andere ondersteunen de functie niet.",
+        "de": "(0-255). Das Gerät muss diese Funktion unterstützen. Einige Geräte benötigen ein Firmware-Update, andere unterstützen sie nicht.",
+        "fr": "(0-255). L’appareil doit prendre en charge cette fonction. Certains appareils nécessitent une mise à jour du firmware et d’autres ne la prennent pas en charge.",
+        "it": "(0-255). Il dispositivo deve supportare questa funzione. Alcuni dispositivi richiedono un aggiornamento firmware e altri non la supportano.",
+        "sv": "(0-255). Enheten måste stödja funktionen. Vissa enheter behöver en firmwareuppdatering och andra stöder den inte.",
+        "no": "(0-255). Enheten må støtte funksjonen. Noen enheter trenger en fastvareoppdatering, og andre støtter den ikke.",
+        "es": "(0-255). El dispositivo debe admitir esta función. Algunos dispositivos necesitan una actualización de firmware y otros no la admiten.",
+        "da": "(0-255). Enheden skal understøtte funktionen. Nogle enheder kræver en firmwareopdatering, og andre understøtter den ikke.",
+        "ru": "(0-255). Устройство должно поддерживать эту функцию. Некоторым устройствам требуется обновление прошивки, а другие её не поддерживают.",
+        "pl": "(0-255). Urządzenie musi obsługiwać tę funkcję. Niektóre urządzenia wymagają aktualizacji firmware, a inne jej nie obsługują.",
+        "ko": "(0-255). 장치가 이 기능을 지원해야 합니다. 일부 장치는 펌웨어 업데이트가 필요하며 일부는 지원하지 않습니다.",
+        "ar": "(0-255). يجب أن يدعم الجهاز هذه الميزة. تحتاج بعض الأجهزة إلى تحديث البرنامج الثابت، وبعضها لا يدعمها."
+      }
     },
-    "children": [
+    {
+      "id": "powerOnCtrl_colorvalue",
+      "type": "number",
+      "label": {
+        "en": "Default light temperature on Power On",
+        "nl": "Standaardkleurtemperatuur bij inschakelen",
+        "de": "Standard-Farbtemperatur beim Einschalten",
+        "fr": "Température de couleur par défaut à l’allumage",
+        "it": "Temperatura colore predefinita all’accensione",
+        "sv": "Standardfärgtemperatur vid strömpåslag",
+        "no": "Standard fargetemperatur ved oppstart",
+        "es": "Temperatura de color predeterminada al encender",
+        "da": "Standardfarvetemperatur ved opstart",
+        "ru": "Цветовая температура по умолчанию при включении",
+        "pl": "Domyślna temperatura barwowa po włączeniu",
+        "ko": "전원 켤 때 기본 색온도",
+        "ar": "درجة حرارة اللون الافتراضية عند التشغيل"
+      },
+      "value": 366,
+      "min": 153,
+      "max": 500,
+      "units": {
+        "en": "Mireds",
+        "nl": "mired",
+        "de": "Mired",
+        "fr": "mired",
+        "it": "mired",
+        "sv": "mired",
+        "no": "mired",
+        "es": "mired",
+        "da": "mired",
+        "ru": "миред",
+        "pl": "mired",
+        "ko": "미레드",
+        "ar": "ميرد"
+      },
+      "hint": {
+        "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all).",
+        "nl": "(153-500). Het apparaat moet deze functie ondersteunen. Sommige apparaten hebben een firmware-update nodig en andere ondersteunen de functie niet.",
+        "de": "(153-500). Das Gerät muss diese Funktion unterstützen. Einige Geräte benötigen ein Firmware-Update, andere unterstützen sie nicht.",
+        "fr": "(153-500). L’appareil doit prendre en charge cette fonction. Certains appareils nécessitent une mise à jour du firmware et d’autres ne la prennent pas en charge.",
+        "it": "(153-500). Il dispositivo deve supportare questa funzione. Alcuni dispositivi richiedono un aggiornamento firmware e altri non la supportano.",
+        "sv": "(153-500). Enheten måste stödja funktionen. Vissa enheter behöver en firmwareuppdatering och andra stöder den inte.",
+        "no": "(153-500). Enheten må støtte funksjonen. Noen enheter trenger en fastvareoppdatering, og andre støtter den ikke.",
+        "es": "(153-500). El dispositivo debe admitir esta función. Algunos dispositivos necesitan una actualización de firmware y otros no la admiten.",
+        "da": "(153-500). Enheden skal understøtte funktionen. Nogle enheder kræver en firmwareopdatering, og andre understøtter den ikke.",
+        "ru": "(153-500). Устройство должно поддерживать эту функцию. Некоторым устройствам требуется обновление прошивки, а другие её не поддерживают.",
+        "pl": "(153-500). Urządzenie musi obsługiwać tę funkcję. Niektóre urządzenia wymagają aktualizacji firmware, a inne jej nie obsługują.",
+        "ko": "(153-500). 장치가 이 기능을 지원해야 합니다. 일부 장치는 펌웨어 업데이트가 필요하며 일부는 지원하지 않습니다.",
+        "ar": "(153-500). يجب أن يدعم الجهاز هذه الميزة. تحتاج بعض الأجهزة إلى تحديث البرنامج الثابت، وبعضها لا يدعمها."
+      }
+    },
+    {
+      "id": "powerOnCtrl_state",
+      "type": "radio",
+      "label": {
+        "en": "Behavior when power is restored",
+        "nl": "Gedrag wanneer de stroom terugkeert",
+        "de": "Verhalten bei Stromwiederkehr",
+        "fr": "Comportement au retour du courant",
+        "it": "Comportamento al ripristino dell’alimentazione",
+        "sv": "Beteende när strömmen återkommer",
+        "no": "Oppførsel når strømmen kommer tilbake",
+        "es": "Comportamiento al restablecerse la corriente",
+        "da": "Adfærd når strømmen vender tilbage",
+        "ru": "Поведение при восстановлении питания",
+        "pl": "Zachowanie po przywróceniu zasilania",
+        "ko": "전원 복구 시 동작",
+        "ar": "السلوك عند عودة الطاقة"
+      },
+      "value": "on",
+      "hint": {
+        "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all).",
+        "nl": "Het apparaat moet deze functie ondersteunen. Sommige apparaten hebben een firmware-update nodig en andere ondersteunen de functie niet.",
+        "de": "Das Gerät muss diese Funktion unterstützen. Einige Geräte benötigen ein Firmware-Update, andere unterstützen sie nicht.",
+        "fr": "L’appareil doit prendre en charge cette fonction. Certains appareils nécessitent une mise à jour du firmware et d’autres ne la prennent pas en charge.",
+        "it": "Il dispositivo deve supportare questa funzione. Alcuni dispositivi richiedono un aggiornamento firmware e altri non la supportano.",
+        "sv": "Enheten måste stödja funktionen. Vissa enheter behöver en firmwareuppdatering och andra stöder den inte.",
+        "no": "Enheten må støtte funksjonen. Noen enheter trenger en fastvareoppdatering, og andre støtter den ikke.",
+        "es": "El dispositivo debe admitir esta función. Algunos dispositivos necesitan una actualización de firmware y otros no la admiten.",
+        "da": "Enheden skal understøtte funktionen. Nogle enheder kræver en firmwareopdatering, og andre understøtter den ikke.",
+        "ru": "Устройство должно поддерживать эту функцию. Некоторым устройствам требуется обновление прошивки, а другие её не поддерживают.",
+        "pl": "Urządzenie musi obsługiwać tę funkcję. Niektóre urządzenia wymagają aktualizacji firmware, a inne jej nie obsługują.",
+        "ko": "장치가 이 기능을 지원해야 합니다. 일부 장치는 펌웨어 업데이트가 필요하며 일부는 지원하지 않습니다.",
+        "ar": "يجب أن يدعم الجهاز هذه الميزة. تحتاج بعض الأجهزة إلى تحديث البرنامج الثابت، وبعضها لا يدعمها."
+      },
+      "values": [
         {
-            "id": "powerOnCtrl_dimvalue",
-            "type": "number",
-            "label": {
-                "en": "Default brightness"
-            },
-            "value": 255,
-            "min": 0,
-            "max": 255,
-            "units": {
-                "en": "steps"
-            },
-            "hint": {
-                "en": "(0-255). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-            }
+          "id": "on",
+          "label": {
+            "en": "On with default brightness",
+            "nl": "Aan met standaardhelderheid",
+            "de": "Ein mit Standardhelligkeit",
+            "fr": "Allumé avec luminosité par défaut",
+            "it": "Acceso con luminosità predefinita",
+            "sv": "På med standardljusstyrka",
+            "no": "På med standard lysstyrke",
+            "es": "Encendido con brillo predeterminado",
+            "da": "Til med standardlysstyrke",
+            "ru": "Включить с яркостью по умолчанию",
+            "pl": "Włącz z domyślną jasnością",
+            "ko": "기본 밝기로 켜기",
+            "ar": "تشغيل بالسطوع الافتراضي"
+          }
         },
         {
-            "id": "powerOnCtrl_colorvalue",
-            "type": "number",
-            "label": {
-                "en": "Default light temperature on Power On"
-            },
-            "value": 366,
-            "min": 153,
-            "max": 500,
-            "units": {
-                "en": "Mireds"
-            },
-            "hint": {
-                "en": "(153-500). The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-            }
+          "id": "off",
+          "label": {
+            "en": "Off",
+            "nl": "Uit",
+            "de": "Aus",
+            "fr": "Éteint",
+            "it": "Spento",
+            "sv": "Av",
+            "no": "Av",
+            "es": "Apagado",
+            "da": "Fra",
+            "ru": "Выкл.",
+            "pl": "Wyłączone",
+            "ko": "꺼짐",
+            "ar": "إيقاف"
+          }
         },
         {
-        "id": "powerOnCtrl_state",
-        "type": "radio",
-        "label": {
-            "en": "Behavior when power is restored"
-        },
-        "value": "on",
-        "hint": {
-            "en": "The device must support this feature. (Some device need a firmware update and some does not support it at all)."
-        },
-        "values": [
-            {
-            "id": "on",
-            "label": {
-                "en": "On with default brightness"
-            }
-            },
-            {
-            "id": "off",
-            "label": {
-                "en": "Off"
-            }
-            },
-            {
-            "id": "recover",
-            "label": {
-                "en": "Restore last state and brightness"
-            }
-            }
-        ]
+          "id": "recover",
+          "label": {
+            "en": "Restore last state and brightness",
+            "nl": "Herstel laatste status en helderheid",
+            "de": "Letzten Zustand und Helligkeit wiederherstellen",
+            "fr": "Restaurer le dernier état et la luminosité",
+            "it": "Ripristina ultimo stato e luminosità",
+            "sv": "Återställ senaste läge och ljusstyrka",
+            "no": "Gjenopprett siste tilstand og lysstyrke",
+            "es": "Restaurar último estado y brillo",
+            "da": "Gendan seneste tilstand og lysstyrke",
+            "ru": "Восстановить последнее состояние и яркость",
+            "pl": "Przywróć ostatni stan i jasność",
+            "ko": "마지막 상태 및 밝기 복원",
+            "ar": "استعادة آخر حالة وسطوع"
+          }
         }
-    ]
+      ]
+    }
+  ]
 }

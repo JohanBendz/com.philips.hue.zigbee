@@ -5,27 +5,71 @@
     "value": "singlerocker",
     "label": {
       "en": "Connected switch type",
-      "sv": "Ansluten brytartyp"
+      "sv": "Ansluten brytartyp",
+      "nl": "Type aangesloten schakelaar",
+      "de": "Angeschlossener Schaltertyp",
+      "fr": "Type d’interrupteur connecté",
+      "it": "Tipo di interruttore collegato",
+      "no": "Type tilkoblet bryter",
+      "es": "Tipo de interruptor conectado",
+      "da": "Tilsluttet kontakttype",
+      "ru": "Тип подключённого выключателя",
+      "pl": "Typ podłączonego przełącznika",
+      "ko": "연결된 스위치 유형",
+      "ar": "نوع المفتاح المتصل"
     },
     "values": [
       {
         "id": "singlerocker",
         "label": {
           "en": "Single rocker",
-          "sv": "Enkel vippbrytare"
+          "sv": "Enkel vippbrytare",
+          "nl": "Enkele wip",
+          "de": "Einfacher Wippschalter",
+          "fr": "Interrupteur simple à bascule",
+          "it": "Interruttore singolo a bilanciere",
+          "no": "Enkel vippebryter",
+          "es": "Interruptor basculante simple",
+          "da": "Enkelt vippekontakt",
+          "ru": "Одинарный клавишный выключатель",
+          "pl": "Pojedynczy przełącznik kołyskowy",
+          "ko": "단일 로커 스위치",
+          "ar": "مفتاح هزاز مفرد"
         }
       },
       {
         "id": "singlepushbutton",
         "label": {
           "en": "Single push button",
-          "sv": "Enkel tryckknapp"
+          "sv": "Enkel tryckknapp",
+          "nl": "Enkele drukknop",
+          "de": "Einfacher Taster",
+          "fr": "Bouton-poussoir simple",
+          "it": "Pulsante singolo",
+          "no": "Enkel trykknapp",
+          "es": "Pulsador simple",
+          "da": "Enkelt trykknap",
+          "ru": "Одинарная кнопка",
+          "pl": "Pojedynczy przycisk chwilowy",
+          "ko": "단일 푸시버튼",
+          "ar": "زر ضاغط مفرد"
         }
       }
     ],
     "hint": {
       "en": "Choose the physical wall-switch type connected to the wired dimmer. The app only writes this setting when you change it.",
-      "sv": "Välj typen av fysisk väggbrytare som är ansluten till dimmern. Appen skriver bara inställningen när du själv ändrar den."
+      "sv": "Välj typen av fysisk väggbrytare som är ansluten till dimmern. Appen skriver bara inställningen när du själv ändrar den.",
+      "nl": "Kies het type fysieke wandschakelaar dat op de bedrade dimmer is aangesloten. De app schrijft deze instelling alleen wanneer je deze wijzigt.",
+      "de": "Wähle den Typ des physischen Wandschalters, der mit dem kabelgebundenen Dimmer verbunden ist. Die App schreibt diese Einstellung nur, wenn du sie änderst.",
+      "fr": "Choisissez le type d’interrupteur mural physique connecté au variateur câblé. L’application n’écrit ce réglage que lorsque vous le modifiez.",
+      "it": "Scegli il tipo di interruttore a parete fisico collegato al dimmer cablato. L’app scrive questa impostazione solo quando la modifichi.",
+      "no": "Velg typen fysisk veggbryter som er koblet til den kablede dimmeren. Appen skriver bare innstillingen når du endrer den.",
+      "es": "Elige el tipo de interruptor de pared físico conectado al regulador cableado. La app solo escribe este ajuste cuando lo cambias.",
+      "da": "Vælg typen af fysisk vægkontakt, der er tilsluttet den kablede dæmper. Appen skriver kun indstillingen, når du ændrer den.",
+      "ru": "Выберите тип физического настенного выключателя, подключённого к проводному диммеру. Приложение записывает настройку только при её изменении.",
+      "pl": "Wybierz typ fizycznego przełącznika ściennego podłączonego do przewodowego ściemniacza. Aplikacja zapisuje to ustawienie tylko po jego zmianie.",
+      "ko": "유선 디머에 연결된 실제 벽 스위치 유형을 선택하세요. 앱은 사용자가 설정을 변경할 때만 이 값을 기록합니다.",
+      "ar": "اختر نوع مفتاح الحائط الفعلي المتصل بمخفت الإضاءة السلكي. يكتب التطبيق هذا الإعداد فقط عند تغييره."
     }
   }
 ]

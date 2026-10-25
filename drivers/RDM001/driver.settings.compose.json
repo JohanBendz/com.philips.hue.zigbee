@@ -5,37 +5,107 @@
     "value": "singlerocker",
     "label": {
       "en": "Connected switch type",
-      "sv": "Ansluten brytartyp"
+      "sv": "Ansluten brytartyp",
+      "nl": "Type aangesloten schakelaar",
+      "de": "Angeschlossener Schaltertyp",
+      "fr": "Type d’interrupteur connecté",
+      "it": "Tipo di interruttore collegato",
+      "no": "Type tilkoblet bryter",
+      "es": "Tipo de interruptor conectado",
+      "da": "Tilsluttet kontakttype",
+      "ru": "Тип подключённого выключателя",
+      "pl": "Typ podłączonego przełącznika",
+      "ko": "연결된 스위치 유형",
+      "ar": "نوع المفتاح المتصل"
     },
     "values": [
       {
         "id": "singlerocker",
         "label": {
-          "en": "Single Rocker"
+          "en": "Single Rocker",
+          "nl": "Enkele wip",
+          "de": "Einfacher Wippschalter",
+          "fr": "Interrupteur simple à bascule",
+          "it": "Interruttore singolo a bilanciere",
+          "sv": "Enkel vippbrytare",
+          "no": "Enkel vippebryter",
+          "es": "Interruptor basculante simple",
+          "da": "Enkelt vippekontakt",
+          "ru": "Одинарный клавишный выключатель",
+          "pl": "Pojedynczy przełącznik kołyskowy",
+          "ko": "단일 로커 스위치",
+          "ar": "مفتاح هزاز مفرد"
         }
       },
       {
         "id": "singlepushbutton",
         "label": {
-          "en": "Single pushbutton"
+          "en": "Single pushbutton",
+          "nl": "Enkele drukknop",
+          "de": "Einfacher Taster",
+          "fr": "Bouton-poussoir simple",
+          "it": "Pulsante singolo",
+          "sv": "Enkel tryckknapp",
+          "no": "Enkel trykknapp",
+          "es": "Pulsador simple",
+          "da": "Enkelt trykknap",
+          "ru": "Одинарная кнопка",
+          "pl": "Pojedynczy przycisk chwilowy",
+          "ko": "단일 푸시버튼",
+          "ar": "زر ضاغط مفرد"
         }
       },
       {
         "id": "dualrocker",
         "label": {
-          "en": "Dual Rocker"
+          "en": "Dual Rocker",
+          "nl": "Dubbele wip",
+          "de": "Doppel-Wippschalter",
+          "fr": "Double interrupteur à bascule",
+          "it": "Interruttore doppio a bilanciere",
+          "sv": "Dubbel vippbrytare",
+          "no": "Dobbel vippebryter",
+          "es": "Interruptor basculante doble",
+          "da": "Dobbelt vippekontakt",
+          "ru": "Двойной клавишный выключатель",
+          "pl": "Podwójny przełącznik kołyskowy",
+          "ko": "듀얼 로커 스위치",
+          "ar": "مفتاح هزاز مزدوج"
         }
       },
       {
         "id": "dualpushbutton",
         "label": {
-          "en": "Dual pushbutton"
+          "en": "Dual pushbutton",
+          "nl": "Dubbele drukknop",
+          "de": "Doppeltaster",
+          "fr": "Double bouton-poussoir",
+          "it": "Doppio pulsante",
+          "sv": "Dubbel tryckknapp",
+          "no": "Dobbel trykknapp",
+          "es": "Pulsador doble",
+          "da": "Dobbelt trykknap",
+          "ru": "Двойная кнопка",
+          "pl": "Podwójny przycisk chwilowy",
+          "ko": "듀얼 푸시버튼",
+          "ar": "زر ضاغط مزدوج"
         }
       }
     ],
     "hint": {
       "en": "Choose pushbutton for momentary buttons and long-press/hold Flow events. Rocker modes report a toggle when the rocker changes position and do not expose hold actions.",
-      "sv": "Välj tryckknapp för återfjädrande knappar och Flow-händelser för långtryck/håll. Vippbrytarlägen rapporterar växling när brytaren ändrar läge och ger inte hold-händelser."
+      "sv": "Välj tryckknapp för återfjädrande knappar och Flow-händelser för långtryck/håll. Vippbrytarlägen rapporterar växling när brytaren ändrar läge och ger inte hold-händelser.",
+      "nl": "Kies drukknop voor momentknoppen en Flow-gebeurtenissen voor lang indrukken/vasthouden. Wipmodi melden een omschakeling wanneer de wip van positie verandert en bieden geen vasthoudacties.",
+      "de": "Wähle Taster für momentane Tasten und Flow-Ereignisse für langes Drücken/Halten. Wippschalter-Modi melden beim Positionswechsel ein Umschalten und bieten keine Halteaktionen.",
+      "fr": "Choisissez bouton-poussoir pour les boutons momentanés et les événements Flow d’appui long/maintien. Les modes à bascule signalent un changement de position et n’exposent pas d’actions de maintien.",
+      "it": "Scegli pulsante per i pulsanti momentanei e gli eventi Flow di pressione prolungata. Le modalità a bilanciere segnalano un cambio quando cambia posizione e non espongono azioni di pressione prolungata.",
+      "no": "Velg trykknapp for momentane knapper og Flow-hendelser for langt trykk/hold. Vippebrytermoduser rapporterer bytte når bryteren endrer posisjon og har ikke hold-handlinger.",
+      "es": "Elige pulsador para botones momentáneos y eventos Flow de pulsación larga/mantener. Los modos basculantes informan un cambio al cambiar de posición y no exponen acciones de mantener.",
+      "da": "Vælg trykknap til momentane knapper og Flow-hændelser for langt tryk/hold. Vippekontakt-tilstande rapporterer et skift ved positionsændring og har ikke hold-handlinger.",
+      "ru": "Выберите кнопку для безфиксационных кнопок и событий Flow долгого нажатия/удержания. Режимы клавишного выключателя сообщают переключение при смене положения и не дают событий удержания.",
+      "pl": "Wybierz przycisk chwilowy dla przycisków chwilowych i zdarzeń Flow długiego naciśnięcia/przytrzymania. Tryby kołyskowe zgłaszają przełączenie przy zmianie położenia i nie udostępniają akcji przytrzymania.",
+      "ko": "모멘터리 버튼과 Flow의 길게 누르기/유지 이벤트에는 푸시버튼을 선택하세요. 로커 모드는 위치가 바뀔 때 전환을 보고하며 길게 누르기 동작을 제공하지 않습니다.",
+      "ar": "اختر زرًا ضاغطًا للأزرار اللحظية وأحداث Flow للضغط المطول. أوضاع المفتاح الهزاز تبلغ عن تبديل عند تغيير الموضع ولا توفر إجراءات الضغط المطول."
     }
   }
 ]

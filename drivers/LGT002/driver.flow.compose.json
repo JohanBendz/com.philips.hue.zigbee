@@ -4,29 +4,198 @@
       "id": "LGT002_buttons",
       "title": {
         "en": "Twilight button action",
-        "sv": "Twilight-knapp"
+        "sv": "Twilight-knapp",
+        "nl": "Twilight-knopactie",
+        "de": "Twilight-Tastenaktion",
+        "fr": "Action du bouton Twilight",
+        "it": "Azione pulsante Twilight",
+        "no": "Twilight-knappehandling",
+        "es": "Acción del botón Twilight",
+        "da": "Twilight-knappehandling",
+        "ru": "Действие кнопки Twilight",
+        "pl": "Akcja przycisku Twilight",
+        "ko": "Twilight 버튼 동작",
+        "ar": "إجراء زر Twilight"
       },
       "titleFormatted": {
         "en": "Button [[action]]",
-        "sv": "Knapp [[action]]"
+        "sv": "Knapp [[action]]",
+        "nl": "Knop [[action]]",
+        "de": "Taste [[action]]",
+        "fr": "Bouton [[action]]",
+        "it": "Pulsante [[action]]",
+        "no": "Knapp [[action]]",
+        "es": "Botón [[action]]",
+        "da": "Knap [[action]]",
+        "ru": "Кнопка [[action]]",
+        "pl": "Przycisk [[action]]",
+        "ko": "버튼 [[action]]",
+        "ar": "الزر [[action]]"
       },
       "args": [
         {
           "name": "action",
           "type": "dropdown",
           "values": [
-            { "id": "Dot-Press", "label": { "en": "Dot pressed", "sv": "Punkt trycks in" } },
-            { "id": "Dot-Hold", "label": { "en": "Dot hold started", "sv": "Punkt hålls in" } },
-            { "id": "Dot-Release", "label": { "en": "Dot released before hold", "sv": "Punkt släpps före långtryck" } },
-            { "id": "Dot-LongRelease", "label": { "en": "Dot released after hold", "sv": "Punkt släpps efter långtryck" } },
-            { "id": "Hue-Press", "label": { "en": "Hue pressed", "sv": "Hue trycks in" } },
-            { "id": "Hue-Hold", "label": { "en": "Hue hold started", "sv": "Hue hålls in" } },
-            { "id": "Hue-Release", "label": { "en": "Hue released before hold", "sv": "Hue släpps före långtryck" } },
-            { "id": "Hue-LongRelease", "label": { "en": "Hue released after hold", "sv": "Hue släpps efter långtryck" } }
+            {
+              "id": "Dot-Press",
+              "label": {
+                "en": "Dot pressed",
+                "sv": "Punkt trycks in",
+                "nl": "Punt ingedrukt",
+                "de": "Punkt gedrückt",
+                "fr": "Point appuyé",
+                "it": "Punto premuto",
+                "no": "Punkt trykket",
+                "es": "Punto pulsado",
+                "da": "Punkt trykket",
+                "ru": "Точка нажата",
+                "pl": "Naciśnięto kropkę",
+                "ko": "점 누름",
+                "ar": "تم الضغط على النقطة"
+              }
+            },
+            {
+              "id": "Dot-Hold",
+              "label": {
+                "en": "Dot hold started",
+                "sv": "Punkt hålls in",
+                "nl": "Punt vasthouden gestart",
+                "de": "Punkt halten gestartet",
+                "fr": "Maintien du point commencé",
+                "it": "Pressione prolungata del punto iniziata",
+                "no": "Hold på punkt startet",
+                "es": "Mantener punto iniciado",
+                "da": "Hold på punkt startet",
+                "ru": "Начато удержание точки",
+                "pl": "Rozpoczęto przytrzymanie kropki",
+                "ko": "점 길게 누르기 시작",
+                "ar": "بدأ الضغط المطول على النقطة"
+              }
+            },
+            {
+              "id": "Dot-Release",
+              "label": {
+                "en": "Dot released before hold",
+                "sv": "Punkt släpps före långtryck",
+                "nl": "Punt losgelaten vóór vasthouden",
+                "de": "Punkt vor Halten losgelassen",
+                "fr": "Point relâché avant maintien",
+                "it": "Punto rilasciato prima della pressione prolungata",
+                "no": "Punkt sluppet før hold",
+                "es": "Punto soltado antes de mantener",
+                "da": "Punkt sluppet før hold",
+                "ru": "Точка отпущена до удержания",
+                "pl": "Kropka zwolniona przed przytrzymaniem",
+                "ko": "길게 누르기 전 점 놓음",
+                "ar": "تم إفلات النقطة قبل الضغط المطول"
+              }
+            },
+            {
+              "id": "Dot-LongRelease",
+              "label": {
+                "en": "Dot released after hold",
+                "sv": "Punkt släpps efter långtryck",
+                "nl": "Punt losgelaten na vasthouden",
+                "de": "Punkt nach Halten losgelassen",
+                "fr": "Point relâché après maintien",
+                "it": "Punto rilasciato dopo la pressione prolungata",
+                "no": "Punkt sluppet etter hold",
+                "es": "Punto soltado después de mantener",
+                "da": "Punkt sluppet efter hold",
+                "ru": "Точка отпущена после удержания",
+                "pl": "Kropka zwolniona po przytrzymaniu",
+                "ko": "길게 누른 후 점 놓음",
+                "ar": "تم إفلات النقطة بعد الضغط المطول"
+              }
+            },
+            {
+              "id": "Hue-Press",
+              "label": {
+                "en": "Hue pressed",
+                "sv": "Hue trycks in",
+                "nl": "Hue ingedrukt",
+                "de": "Hue gedrückt",
+                "fr": "Hue appuyé",
+                "it": "Hue premuto",
+                "no": "Hue trykket",
+                "es": "Hue pulsado",
+                "da": "Hue trykket",
+                "ru": "Hue нажат",
+                "pl": "Naciśnięto Hue",
+                "ko": "Hue 누름",
+                "ar": "تم الضغط على Hue"
+              }
+            },
+            {
+              "id": "Hue-Hold",
+              "label": {
+                "en": "Hue hold started",
+                "sv": "Hue hålls in",
+                "nl": "Hue vasthouden gestart",
+                "de": "Hue halten gestartet",
+                "fr": "Maintien Hue commencé",
+                "it": "Pressione prolungata Hue iniziata",
+                "no": "Hold på Hue startet",
+                "es": "Mantener Hue iniciado",
+                "da": "Hold på Hue startet",
+                "ru": "Начато удержание Hue",
+                "pl": "Rozpoczęto przytrzymanie Hue",
+                "ko": "Hue 길게 누르기 시작",
+                "ar": "بدأ الضغط المطول على Hue"
+              }
+            },
+            {
+              "id": "Hue-Release",
+              "label": {
+                "en": "Hue released before hold",
+                "sv": "Hue släpps före långtryck",
+                "nl": "Hue losgelaten vóór vasthouden",
+                "de": "Hue vor Halten losgelassen",
+                "fr": "Hue relâché avant maintien",
+                "it": "Hue rilasciato prima della pressione prolungata",
+                "no": "Hue sluppet før hold",
+                "es": "Hue soltado antes de mantener",
+                "da": "Hue sluppet før hold",
+                "ru": "Hue отпущен до удержания",
+                "pl": "Hue zwolniono przed przytrzymaniem",
+                "ko": "길게 누르기 전 Hue 놓음",
+                "ar": "تم إفلات Hue قبل الضغط المطول"
+              }
+            },
+            {
+              "id": "Hue-LongRelease",
+              "label": {
+                "en": "Hue released after hold",
+                "sv": "Hue släpps efter långtryck",
+                "nl": "Hue losgelaten na vasthouden",
+                "de": "Hue nach Halten losgelassen",
+                "fr": "Hue relâché après maintien",
+                "it": "Hue rilasciato dopo la pressione prolungata",
+                "no": "Hue sluppet etter hold",
+                "es": "Hue soltado después de mantener",
+                "da": "Hue sluppet efter hold",
+                "ru": "Hue отпущен после удержания",
+                "pl": "Hue zwolniono po przytrzymaniu",
+                "ko": "길게 누른 후 Hue 놓음",
+                "ar": "تم إفلات Hue بعد الضغط المطول"
+              }
+            }
           ],
           "title": {
             "en": "Action",
-            "sv": "Händelse"
+            "sv": "Händelse",
+            "nl": "Actie",
+            "de": "Aktion",
+            "fr": "Action",
+            "it": "Azione",
+            "no": "Handling",
+            "es": "Acción",
+            "da": "Handling",
+            "ru": "Действие",
+            "pl": "Akcja",
+            "ko": "동작",
+            "ar": "الإجراء"
           }
         }
       ]

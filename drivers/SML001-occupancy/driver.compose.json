@@ -1,4 +1,10 @@
 {
+  "platforms": [
+    "local"
+  ],
+  "connectivity": [
+    "zigbee"
+  ],
   "name": {
     "en": "Occupancy Sensor"
   },
@@ -55,7 +61,19 @@
     "learnmode": {
       "image": "{{driverAssetsPath}}/icon.svg",
       "instruction": {
-        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green."
+        "en": "Hold the setup button on the back for at least 10 seconds until the LED is green.",
+        "nl": "Houd de setupknop aan de achterkant minimaal 10 seconden ingedrukt tot de LED groen is.",
+        "de": "Halte die Setup-Taste auf der Rückseite mindestens 10 Sekunden gedrückt, bis die LED grün ist.",
+        "fr": "Maintenez le bouton de configuration à l’arrière au moins 10 secondes jusqu’à ce que la LED soit verte.",
+        "it": "Tieni premuto il pulsante di configurazione sul retro per almeno 10 secondi finché il LED diventa verde.",
+        "sv": "Håll setup-knappen på baksidan intryckt i minst 10 sekunder tills LED-lampan lyser grönt.",
+        "no": "Hold oppsettknappen på baksiden inne i minst 10 sekunder til LED-en lyser grønt.",
+        "es": "Mantén pulsado el botón de configuración de la parte trasera al menos 10 segundos hasta que el LED sea verde.",
+        "da": "Hold opsætningsknappen på bagsiden nede i mindst 10 sekunder, indtil LED'en lyser grønt.",
+        "ru": "Удерживайте кнопку настройки сзади не менее 10 секунд, пока индикатор не станет зелёным.",
+        "pl": "Przytrzymaj przycisk konfiguracji z tyłu przez co najmniej 10 sekund, aż dioda zaświeci na zielono.",
+        "ko": "LED가 녹색이 될 때까지 뒷면의 설정 버튼을 최소 10초간 누르세요.",
+        "ar": "اضغط مطولًا على زر الإعداد في الخلف لمدة 10 ثوانٍ على الأقل حتى يضيء مؤشر LED بالأخضر."
       }
     }
   }

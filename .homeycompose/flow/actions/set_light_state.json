@@ -2,11 +2,33 @@
   "id": "set_light_state",
   "title": {
     "en": "Set light state",
-    "sv": "Ställ in ljusläge"
+    "sv": "Ställ in ljusläge",
+    "nl": "Lichtstatus instellen",
+    "de": "Lichtzustand einstellen",
+    "fr": "Définir l’état de la lumière",
+    "it": "Imposta stato luce",
+    "no": "Angi lysstatus",
+    "es": "Establecer estado de la luz",
+    "da": "Indstil lysstatus",
+    "ru": "Установить состояние света",
+    "pl": "Ustaw stan światła",
+    "ko": "조명 상태 설정",
+    "ar": "تعيين حالة الضوء"
   },
   "titleFormatted": {
     "en": "Set brightness to [[brightness]] and color to [[color]]",
-    "sv": "Ställ ljusstyrkan till [[brightness]] och färgen till [[color]]"
+    "sv": "Ställ ljusstyrkan till [[brightness]] och färgen till [[color]]",
+    "nl": "Stel de helderheid in op [[brightness]] en de kleur op [[color]]",
+    "de": "Helligkeit auf [[brightness]] und Farbe auf [[color]] setzen",
+    "fr": "Régler la luminosité sur [[brightness]] et la couleur sur [[color]]",
+    "it": "Imposta la luminosità su [[brightness]] e il colore su [[color]]",
+    "no": "Sett lysstyrken til [[brightness]] og fargen til [[color]]",
+    "es": "Establecer el brillo en [[brightness]] y el color en [[color]]",
+    "da": "Indstil lysstyrken til [[brightness]] og farven til [[color]]",
+    "ru": "Установить яркость [[brightness]] и цвет [[color]]",
+    "pl": "Ustaw jasność na [[brightness]] i kolor na [[color]]",
+    "ko": "밝기를 [[brightness]], 색상을 [[color]](으)로 설정",
+    "ar": "اضبط السطوع على [[brightness]] واللون على [[color]]"
   },
   "args": [
     {
@@ -15,7 +37,18 @@
       "filter": "driver_id=1742930P7|1743030P7|1743130P7|1743230P7|1743530P7|1743830P7|1743930P7|1744030P7|1744130P7|1745530P7|1745630P7|1746230P7|1746330P7|1746330P7_01|1746330P7_02|1746447P7|1746530P7|1746630P7|4090331P9|4090331P9_01|4090331P9_02|4090431P9|4090531P9|4090631P9|5045131P7|5060731P7_01|5060731P7_02|5062131P7|5062248P7|5062348P7|5062448P7|5063230P7|5063330P7|5063430P7|915005987101|915005997201|915005997601|915005997801|929002966401|929002966501|929003074701|929003128501|929003665001|929003736201|929004291001|929004608001|929004610402|HBL001|HBL002|HBL003|LCA001|LCD003|LCD010|LCE002|LCF002|LCF003|LCF005|LCG002|LCL001|LCL002|LCL003|LCL008|LCO003|LCO005|LCO006|LCS001|LCT000|LCT003|LCT012|LCT024|LCT026|LCU001|LCV001|LCV002|LCW001|LCW002|LCX028|LCY001|LCZ001|LGT002|LGT009|LLC010|LLC011|LLC013|LLC020|LST001|LST002|LST003",
       "title": {
         "en": "Light",
-        "sv": "Lampa"
+        "sv": "Lampa",
+        "nl": "Lamp",
+        "de": "Lampe",
+        "fr": "Lampe",
+        "it": "Luce",
+        "no": "Lys",
+        "es": "Luz",
+        "da": "Lys",
+        "ru": "Светильник",
+        "pl": "Światło",
+        "ko": "조명",
+        "ar": "ضوء"
       }
     },
     {
@@ -29,7 +62,18 @@
       "labelDecimals": 0,
       "title": {
         "en": "Brightness",
-        "sv": "Ljusstyrka"
+        "sv": "Ljusstyrka",
+        "nl": "Helderheid",
+        "de": "Helligkeit",
+        "fr": "Luminosité",
+        "it": "Luminosità",
+        "no": "Lysstyrke",
+        "es": "Brillo",
+        "da": "Lysstyrke",
+        "ru": "Яркость",
+        "pl": "Jasność",
+        "ko": "밝기",
+        "ar": "السطوع"
       }
     },
     {
@@ -37,7 +81,18 @@
       "name": "color",
       "title": {
         "en": "Color",
-        "sv": "Färg"
+        "sv": "Färg",
+        "nl": "Kleur",
+        "de": "Farbe",
+        "fr": "Couleur",
+        "it": "Colore",
+        "no": "Farge",
+        "es": "Color",
+        "da": "Farve",
+        "ru": "Цвет",
+        "pl": "Kolor",
+        "ko": "색상",
+        "ar": "اللون"
       }
     }
   ]

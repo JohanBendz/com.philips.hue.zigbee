@@ -3,16 +3,46 @@
     "en": "Hue Dymera - Bottom",
     "de": "Hue Dymera - Unten"
   },
-  "$extends": ["light_color_ambiance"],
+  "$extends": [
+    "light_color_ambiance"
+  ],
   "energy": {
-    "approximation": { "usageOn": 10.2, "usageOff": 0.05 }
+    "approximation": {
+      "usageOn": 10.2,
+      "usageOff": 0.05
+    }
   },
   "zigbee": {
-    "manufacturerName": ["Signify Netherlands B.V."],
-    "productId": ["LCW004", "LCW005"],
+    "manufacturerName": [
+      "Signify Netherlands B.V."
+    ],
+    "productId": [
+      "LCW004",
+      "LCW005"
+    ],
     "endpoints": {
-      "11": { "clusters": [0, 3, 4, 5, 6, 8, 768] },
-      "12": { "clusters": [0, 3, 4, 5, 6, 8, 768] }
+      "11": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768
+        ]
+      },
+      "12": {
+        "clusters": [
+          0,
+          3,
+          4,
+          5,
+          6,
+          8,
+          768
+        ]
+      }
     },
     "devices": {
       "top": {
@@ -21,23 +51,62 @@
           "en": "Hue Dymera - Top",
           "de": "Hue Dymera - Oben"
         },
-        "capabilities": ["onoff", "dim", "light_hue", "light_saturation", "light_temperature", "light_mode"],
+        "capabilities": [
+          "onoff",
+          "dim",
+          "light_hue",
+          "light_saturation",
+          "light_temperature",
+          "light_mode"
+        ],
         "capabilitiesOptions": {
-          "onoff": { "setOnDim": false },
-          "dim": { "opts": { "duration": true } },
-          "light_hue": { "opts": { "duration": true } },
-          "light_saturation": { "opts": { "duration": true } },
-          "light_temperature": { "opts": { "duration": true } }
+          "onoff": {
+            "setOnDim": false
+          },
+          "dim": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_hue": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_saturation": {
+            "opts": {
+              "duration": true
+            }
+          },
+          "light_temperature": {
+            "opts": {
+              "duration": true
+            }
+          }
         },
         "energy": {
-          "approximation": { "usageOn": 10.2, "usageOff": 0.05 }
+          "approximation": {
+            "usageOn": 10.2,
+            "usageOff": 0.05
+          }
         }
       }
     },
     "learnmode": {
       "instruction": {
         "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge. Two devices will be added: Bottom and Top.",
-        "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück. Zwei Geräte werden hinzugefügt: Unten und Oben."
+        "de": "Schalte die Leuchte ein. Falls die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück. Zwei Geräte werden hinzugefügt: Unten und Oben.",
+        "nl": "Schakel de lamp in. Als het koppelen niet start, reset je deze met een Hue-afstandsbediening of bridge. Er worden twee apparaten toegevoegd: Onder en Boven.",
+        "fr": "Allumez la lampe. Si l’association ne démarre pas, réinitialisez-la avec une télécommande ou un pont Hue. Deux appareils seront ajoutés : Bas et Haut.",
+        "it": "Accendi la luce. Se l’associazione non parte, reimpostala con un telecomando o bridge Hue. Verranno aggiunti due dispositivi: Inferiore e Superiore.",
+        "sv": "Slå på lampan. Om parkopplingen inte startar, återställ den med en Hue-fjärrkontroll eller bridge. Två enheter läggs till: Nedre och Övre.",
+        "no": "Slå på lyset. Hvis paringen ikke starter, tilbakestill det med en Hue-fjernkontroll eller bridge. To enheter legges til: Nedre og Øvre.",
+        "es": "Enciende la luz. Si el emparejamiento no comienza, restablécela con un mando o bridge Hue. Se añadirán dos dispositivos: Inferior y Superior.",
+        "da": "Tænd lyset. Hvis parringen ikke starter, nulstil det med en Hue-fjernbetjening eller bridge. To enheder tilføjes: Nederst og Øverst.",
+        "ru": "Включите светильник. Если сопряжение не начинается, сбросьте его с помощью пульта или моста Hue. Будут добавлены два устройства: Нижнее и Верхнее.",
+        "pl": "Włącz światło. Jeśli parowanie się nie rozpocznie, zresetuj je pilotem lub mostkiem Hue. Zostaną dodane dwa urządzenia: Dolne i Górne.",
+        "ko": "조명을 켜세요. 페어링이 시작되지 않으면 Hue 리모컨 또는 브리지로 재설정하세요. 아래쪽과 위쪽의 두 장치가 추가됩니다.",
+        "ar": "شغّل الضوء. إذا لم يبدأ الاقتران، فأعد ضبطه باستخدام جهاز تحكم Hue أو الجسر. ستتم إضافة جهازين: السفلي والعلوي."
       }
     }
   }

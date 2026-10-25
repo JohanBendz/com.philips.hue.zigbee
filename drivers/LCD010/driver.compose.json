@@ -30,7 +30,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge."
+        "en": "Power on the light. If pairing does not start, reset it using a Hue remote or bridge.",
+        "nl": "Schakel de lamp in. Als het koppelen niet start, reset je deze met een Hue-afstandsbediening of bridge.",
+        "de": "Schalte die Leuchte ein. Wenn die Kopplung nicht startet, setze sie mit einer Hue-Fernbedienung oder Bridge zurück.",
+        "fr": "Allumez la lampe. Si l’association ne démarre pas, réinitialisez-la avec une télécommande ou un pont Hue.",
+        "it": "Accendi la luce. Se l’associazione non parte, reimpostala con un telecomando o bridge Hue.",
+        "sv": "Slå på lampan. Om parkopplingen inte startar, återställ den med en Hue-fjärrkontroll eller bridge.",
+        "no": "Slå på lyset. Hvis paringen ikke starter, tilbakestill det med en Hue-fjernkontroll eller bridge.",
+        "es": "Enciende la luz. Si el emparejamiento no comienza, restablécela con un mando o bridge Hue.",
+        "da": "Tænd lyset. Hvis parringen ikke starter, nulstil det med en Hue-fjernbetjening eller bridge.",
+        "ru": "Включите светильник. Если сопряжение не начинается, сбросьте его с помощью пульта или моста Hue.",
+        "pl": "Włącz światło. Jeśli parowanie się nie rozpocznie, zresetuj je pilotem lub mostkiem Hue.",
+        "ko": "조명을 켜세요. 페어링이 시작되지 않으면 Hue 리모컨 또는 브리지로 재설정하세요.",
+        "ar": "شغّل الضوء. إذا لم يبدأ الاقتران، فأعد ضبطه باستخدام جهاز تحكم Hue أو الجسر."
       }
     }
   }

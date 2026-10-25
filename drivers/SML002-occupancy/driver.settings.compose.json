@@ -4,11 +4,33 @@
     "type": "radio",
     "label": {
       "en": "Motion Sensitivity",
-      "sv": "Rörelsekänslighet"
+      "sv": "Rörelsekänslighet",
+      "nl": "Bewegingsgevoeligheid",
+      "de": "Bewegungsempfindlichkeit",
+      "fr": "Sensibilité au mouvement",
+      "it": "Sensibilità al movimento",
+      "no": "Bevegelsesfølsomhet",
+      "es": "Sensibilidad al movimiento",
+      "da": "Bevægelsesfølsomhed",
+      "ru": "Чувствительность движения",
+      "pl": "Czułość ruchu",
+      "ko": "모션 감도",
+      "ar": "حساسية الحركة"
     },
     "hint": {
       "en": "Choose the motion sensitivity level. Newer Hue motion sensors support levels 0–4; older generations support 0–2. Changes take effect when the device comes online.",
-      "sv": "Välj nivån på rörelsekänsligheten. Nyare Hue-rörelsesensorer stöder nivå 0–4; äldre generationer stöder 0–2. Ändringar träder i kraft när enheten är online."
+      "sv": "Välj nivån på rörelsekänsligheten. Nyare Hue-rörelsesensorer stöder nivå 0–4; äldre generationer stöder 0–2. Ändringar träder i kraft när enheten är online.",
+      "nl": "Kies het gevoeligheidsniveau. Nieuwere Hue-bewegingssensoren ondersteunen 0–4; oudere generaties 0–2. Wijzigingen worden toegepast wanneer het apparaat online komt.",
+      "de": "Wähle die Bewegungsempfindlichkeit. Neuere Hue-Sensoren unterstützen 0–4, ältere Generationen 0–2. Änderungen werden übernommen, wenn das Gerät online ist.",
+      "fr": "Choisissez le niveau de sensibilité. Les capteurs Hue récents prennent en charge 0–4, les anciens 0–2. Les modifications s’appliquent lorsque l’appareil est en ligne.",
+      "it": "Scegli il livello di sensibilità. I sensori Hue più recenti supportano 0–4, le generazioni precedenti 0–2. Le modifiche si applicano quando il dispositivo torna online.",
+      "no": "Velg følsomhetsnivå. Nyere Hue-bevegelsessensorer støtter 0–4, eldre generasjoner 0–2. Endringer tas i bruk når enheten er online.",
+      "es": "Elige el nivel de sensibilidad. Los sensores Hue más recientes admiten 0–4; las generaciones anteriores 0–2. Los cambios se aplican cuando el dispositivo está en línea.",
+      "da": "Vælg følsomhedsniveau. Nyere Hue-bevægelsessensorer understøtter 0–4, ældre generationer 0–2. Ændringer træder i kraft, når enheden er online.",
+      "ru": "Выберите уровень чувствительности. Новые датчики Hue поддерживают 0–4, старые поколения 0–2. Изменения применяются, когда устройство выходит в сеть.",
+      "pl": "Wybierz poziom czułości. Nowsze czujniki Hue obsługują 0–4, starsze generacje 0–2. Zmiany zostaną zastosowane, gdy urządzenie będzie online.",
+      "ko": "모션 감도 수준을 선택하세요. 최신 Hue 모션 센서는 0–4, 이전 세대는 0–2를 지원합니다. 장치가 온라인 상태가 되면 변경 사항이 적용됩니다.",
+      "ar": "اختر مستوى حساسية الحركة. تدعم مستشعرات Hue الأحدث المستويات 0–4، والأجيال الأقدم 0–2. تُطبَّق التغييرات عندما يصبح الجهاز متصلاً."
     },
     "value": "2",
     "values": [
@@ -16,35 +38,90 @@
         "id": "0",
         "label": {
           "en": "Low (0)",
-          "sv": "Låg (0)"
+          "sv": "Låg (0)",
+          "nl": "Laag (0)",
+          "de": "Niedrig (0)",
+          "fr": "Faible (0)",
+          "it": "Bassa (0)",
+          "no": "Lav (0)",
+          "es": "Baja (0)",
+          "da": "Lav (0)",
+          "ru": "Низкая (0)",
+          "pl": "Niska (0)",
+          "ko": "낮음 (0)",
+          "ar": "منخفضة (0)"
         }
       },
       {
         "id": "1",
         "label": {
           "en": "Medium (1)",
-          "sv": "Medium (1)"
+          "sv": "Medium (1)",
+          "nl": "Gemiddeld (1)",
+          "de": "Mittel (1)",
+          "fr": "Moyenne (1)",
+          "it": "Media (1)",
+          "no": "Middels (1)",
+          "es": "Media (1)",
+          "da": "Mellem (1)",
+          "ru": "Средняя (1)",
+          "pl": "Średnia (1)",
+          "ko": "중간 (1)",
+          "ar": "متوسطة (1)"
         }
       },
       {
         "id": "2",
         "label": {
           "en": "High (2)",
-          "sv": "Hög (2)"
+          "sv": "Hög (2)",
+          "nl": "Hoog (2)",
+          "de": "Hoch (2)",
+          "fr": "Élevée (2)",
+          "it": "Alta (2)",
+          "no": "Høy (2)",
+          "es": "Alta (2)",
+          "da": "Høj (2)",
+          "ru": "Высокая (2)",
+          "pl": "Wysoka (2)",
+          "ko": "높음 (2)",
+          "ar": "عالية (2)"
         }
       },
       {
         "id": "3",
         "label": {
           "en": "Very high (3)",
-          "sv": "Mycket hög (3)"
+          "sv": "Mycket hög (3)",
+          "nl": "Zeer hoog (3)",
+          "de": "Sehr hoch (3)",
+          "fr": "Très élevée (3)",
+          "it": "Molto alta (3)",
+          "no": "Svært høy (3)",
+          "es": "Muy alta (3)",
+          "da": "Meget høj (3)",
+          "ru": "Очень высокая (3)",
+          "pl": "Bardzo wysoka (3)",
+          "ko": "매우 높음 (3)",
+          "ar": "عالية جدًا (3)"
         }
       },
       {
         "id": "4",
         "label": {
           "en": "Maximum (4)",
-          "sv": "Maximal (4)"
+          "sv": "Maximal (4)",
+          "nl": "Maximum (4)",
+          "de": "Maximum (4)",
+          "fr": "Maximum (4)",
+          "it": "Massima (4)",
+          "no": "Maksimal (4)",
+          "es": "Máxima (4)",
+          "da": "Maksimal (4)",
+          "ru": "Максимальная (4)",
+          "pl": "Maksymalna (4)",
+          "ko": "최대 (4)",
+          "ar": "قصوى (4)"
         }
       }
     ]
@@ -54,25 +131,69 @@
     "type": "radio",
     "label": {
       "en": "LED Indicator on movement",
-      "sv": "LED-indikator vid rörelse"
+      "sv": "LED-indikator vid rörelse",
+      "nl": "LED-indicator bij beweging",
+      "de": "LED-Anzeige bei Bewegung",
+      "fr": "Voyant LED lors d’un mouvement",
+      "it": "Indicatore LED al movimento",
+      "no": "LED-indikator ved bevegelse",
+      "es": "Indicador LED con movimiento",
+      "da": "LED-indikator ved bevægelse",
+      "ru": "LED-индикатор при движении",
+      "pl": "Wskaźnik LED przy ruchu",
+      "ko": "움직임 감지 시 LED 표시",
+      "ar": "مؤشر LED عند الحركة"
     },
     "hint": {
       "en": "Enable or disable the LED indicator when motion is detected. Changes will take effect when the device comes online.",
-      "sv": "Aktivera eller inaktivera LED-indikatorn när rörelse upptäcks. Ändringar träder i kraft när enheten är online."
+      "sv": "Aktivera eller inaktivera LED-indikatorn när rörelse upptäcks. Ändringar träder i kraft när enheten är online.",
+      "nl": "Schakel de LED-indicator bij beweging in of uit. Wijzigingen worden toegepast wanneer het apparaat online komt.",
+      "de": "Aktiviere oder deaktiviere die LED-Anzeige bei erkannter Bewegung. Änderungen werden übernommen, wenn das Gerät online ist.",
+      "fr": "Activez ou désactivez le voyant LED lorsqu’un mouvement est détecté. Les modifications s’appliquent lorsque l’appareil est en ligne.",
+      "it": "Abilita o disabilita l’indicatore LED quando viene rilevato movimento. Le modifiche si applicano quando il dispositivo torna online.",
+      "no": "Aktiver eller deaktiver LED-indikatoren når bevegelse oppdages. Endringer tas i bruk når enheten er online.",
+      "es": "Activa o desactiva el indicador LED cuando se detecta movimiento. Los cambios se aplican cuando el dispositivo está en línea.",
+      "da": "Aktivér eller deaktiver LED-indikatoren, når bevægelse registreres. Ændringer træder i kraft, når enheden er online.",
+      "ru": "Включите или отключите LED-индикатор при обнаружении движения. Изменения применяются, когда устройство выходит в сеть.",
+      "pl": "Włącz lub wyłącz wskaźnik LED po wykryciu ruchu. Zmiany zostaną zastosowane, gdy urządzenie będzie online.",
+      "ko": "움직임이 감지될 때 LED 표시를 켜거나 끕니다. 장치가 온라인 상태가 되면 변경 사항이 적용됩니다.",
+      "ar": "فعّل أو عطّل مؤشر LED عند اكتشاف الحركة. تُطبَّق التغييرات عندما يصبح الجهاز متصلاً."
     },
     "values": [
       {
         "id": "true",
         "label": {
           "en": "Enabled",
-          "sv": "Aktiverad"
+          "sv": "Aktiverad",
+          "nl": "Ingeschakeld",
+          "de": "Aktiviert",
+          "fr": "Activé",
+          "it": "Abilitato",
+          "no": "Aktivert",
+          "es": "Activado",
+          "da": "Aktiveret",
+          "ru": "Включено",
+          "pl": "Włączone",
+          "ko": "활성화",
+          "ar": "مفعّل"
         }
       },
       {
         "id": "false",
         "label": {
           "en": "Disabled",
-          "sv": "Inaktiverad"
+          "sv": "Inaktiverad",
+          "nl": "Uitgeschakeld",
+          "de": "Deaktiviert",
+          "fr": "Désactivé",
+          "it": "Disabilitato",
+          "no": "Deaktivert",
+          "es": "Desactivado",
+          "da": "Deaktiveret",
+          "ru": "Отключено",
+          "pl": "Wyłączone",
+          "ko": "비활성화",
+          "ar": "معطّل"
         }
       }
     ],
@@ -83,11 +204,33 @@
     "type": "number",
     "label": {
       "en": "Temperature offset (°C)",
-      "nl": "Temperatuur compensatie (°C)"
+      "nl": "Temperatuur compensatie (°C)",
+      "de": "Temperaturkorrektur (°C)",
+      "fr": "Correction de température (°C)",
+      "it": "Correzione temperatura (°C)",
+      "sv": "Temperaturkorrigering (°C)",
+      "no": "Temperaturkorrigering (°C)",
+      "es": "Corrección de temperatura (°C)",
+      "da": "Temperaturkorrektion (°C)",
+      "ru": "Поправка температуры (°C)",
+      "pl": "Korekta temperatury (°C)",
+      "ko": "온도 보정 (°C)",
+      "ar": "تصحيح درجة الحرارة (°C)"
     },
     "hint": {
       "en": "Set a correction to compensate a temperature offset.\nRange: -10 - 10, step size 0.1, \ndefault: 0 [°C]",
-      "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]"
+      "nl": "Stel een correctiewaarde in om een temperature verschil te compenseren.\nBereik: -10 - 10, stap grootte 0.1, \nstandaard: 0 [°C]",
+      "de": "Lege eine Korrektur für eine Temperaturabweichung fest.\nBereich: -10 - 10, Schritt 0,1,\nStandard: 0 [°C]",
+      "fr": "Définissez une correction de température.\nPlage : -10 - 10, pas 0,1,\npar défaut : 0 [°C]",
+      "it": "Imposta una correzione della temperatura.\nIntervallo: -10 - 10, passo 0,1,\npredefinito: 0 [°C]",
+      "sv": "Ange en korrigering för temperaturavvikelse.\nIntervall: -10 - 10, steg 0,1,\nstandard: 0 [°C]",
+      "no": "Angi en korreksjon for temperaturavvikelse.\nOmråde: -10 - 10, trinn 0,1,\nstandard: 0 [°C]",
+      "es": "Establece una corrección de temperatura.\nRango: -10 - 10, paso 0,1,\npredeterminado: 0 [°C]",
+      "da": "Angiv en korrektion for temperaturafvigelse.\nOmråde: -10 - 10, trin 0,1,\nstandard: 0 [°C]",
+      "ru": "Задайте поправку температуры.\nДиапазон: -10 - 10, шаг 0,1,\nпо умолчанию: 0 [°C]",
+      "pl": "Ustaw korektę temperatury.\nZakres: -10 - 10, krok 0,1,\ndomyślnie: 0 [°C]",
+      "ko": "온도 오차 보정값을 설정합니다.\n범위: -10 - 10, 단계 0.1,\n기본값: 0 [°C]",
+      "ar": "اضبط تصحيحًا لتعويض انحراف درجة الحرارة.\nالنطاق: -10 - 10، الخطوة 0.1،\nالافتراضي: 0 [°C]"
     },
     "value": 0,
     "attr": {
@@ -100,20 +243,56 @@
     "id": "temperature_decimals",
     "type": "radio",
     "label": {
-      "en": "Temperature reporting decimals"
+      "en": "Temperature reporting decimals",
+      "nl": "Decimalen temperatuurmeting",
+      "de": "Dezimalstellen der Temperaturmeldung",
+      "fr": "Décimales de température",
+      "it": "Decimali temperatura",
+      "sv": "Decimaler för temperaturrapportering",
+      "no": "Desimaler for temperaturrapportering",
+      "es": "Decimales de temperatura",
+      "da": "Decimaler for temperaturrapportering",
+      "ru": "Знаки после запятой температуры",
+      "pl": "Miejsca dziesiętne temperatury",
+      "ko": "온도 보고 소수 자릿수",
+      "ar": "المنازل العشرية لدرجة الحرارة"
     },
     "value": "1",
     "values": [
       {
         "id": "1",
         "label": {
-          "en": "Report temperature value with 1 decimal (21.4 °C)"
+          "en": "Report temperature value with 1 decimal (21.4 °C)",
+          "nl": "Rapporteer temperatuur met 1 decimaal (21,4 °C)",
+          "de": "Temperatur mit 1 Dezimalstelle melden (21,4 °C)",
+          "fr": "Signaler la température avec 1 décimale (21,4 °C)",
+          "it": "Riporta temperatura con 1 decimale (21,4 °C)",
+          "sv": "Rapportera temperatur med 1 decimal (21,4 °C)",
+          "no": "Rapporter temperatur med 1 desimal (21,4 °C)",
+          "es": "Informar temperatura con 1 decimal (21,4 °C)",
+          "da": "Rapportér temperatur med 1 decimal (21,4 °C)",
+          "ru": "Передавать температуру с 1 знаком (21,4 °C)",
+          "pl": "Raportuj temperaturę z 1 miejscem (21,4 °C)",
+          "ko": "온도를 소수점 1자리로 보고 (21.4 °C)",
+          "ar": "الإبلاغ عن الحرارة بمنزلة عشرية واحدة (21.4 °C)"
         }
       },
       {
         "id": "2",
         "label": {
-          "en": "Report temperature value with 2 decimals (21.37 °C)"
+          "en": "Report temperature value with 2 decimals (21.37 °C)",
+          "nl": "Rapporteer temperatuur met 2 decimalen (21,37 °C)",
+          "de": "Temperatur mit 2 Dezimalstellen melden (21,37 °C)",
+          "fr": "Signaler la température avec 2 décimales (21,37 °C)",
+          "it": "Riporta temperatura con 2 decimali (21,37 °C)",
+          "sv": "Rapportera temperatur med 2 decimaler (21,37 °C)",
+          "no": "Rapporter temperatur med 2 desimaler (21,37 °C)",
+          "es": "Informar temperatura con 2 decimales (21,37 °C)",
+          "da": "Rapportér temperatur med 2 decimaler (21,37 °C)",
+          "ru": "Передавать температуру с 2 знаками (21,37 °C)",
+          "pl": "Raportuj temperaturę z 2 miejscami (21,37 °C)",
+          "ko": "온도를 소수점 2자리로 보고 (21.37 °C)",
+          "ar": "الإبلاغ عن الحرارة بمنزلتين عشريتين (21.37 °C)"
         }
       }
     ]
@@ -122,10 +301,34 @@
     "id": "batteryThreshold",
     "type": "number",
     "label": {
-      "en": "Low Battery Alarm Threshold (%)"
+      "en": "Low Battery Alarm Threshold (%)",
+      "nl": "Drempel batterij-alarm (%)",
+      "de": "Schwelle für Batteriealarm (%)",
+      "fr": "Seuil d’alarme batterie faible (%)",
+      "it": "Soglia allarme batteria scarica (%)",
+      "sv": "Tröskel för lågt batteri (%)",
+      "no": "Terskel for lavt batteri (%)",
+      "es": "Umbral de batería baja (%)",
+      "da": "Tærskel for lavt batteri (%)",
+      "ru": "Порог низкого заряда батареи (%)",
+      "pl": "Próg niskiego poziomu baterii (%)",
+      "ko": "배터리 부족 알림 임계값 (%)",
+      "ar": "حد تنبيه انخفاض البطارية (%)"
     },
     "hint": {
-      "en": "This setting determines the threshold before a battery alarm is given."
+      "en": "This setting determines the threshold before a battery alarm is given.",
+      "nl": "Deze instelling bepaalt de drempel voor een batterij-alarm.",
+      "de": "Diese Einstellung legt die Schwelle für den Batteriealarm fest.",
+      "fr": "Ce réglage détermine le seuil de déclenchement de l’alarme batterie.",
+      "it": "Questa impostazione determina la soglia dell’allarme batteria.",
+      "sv": "Denna inställning bestämmer tröskeln för batterilarm.",
+      "no": "Denne innstillingen bestemmer terskelen for batterialarm.",
+      "es": "Este ajuste determina el umbral de la alarma de batería.",
+      "da": "Denne indstilling bestemmer tærsklen for batterialarm.",
+      "ru": "Эта настройка задаёт порог сигнала низкого заряда.",
+      "pl": "To ustawienie określa próg alarmu baterii.",
+      "ko": "이 설정은 배터리 알림 임계값을 결정합니다.",
+      "ar": "يحدد هذا الإعداد حد تنبيه البطارية."
     },
     "value": 20,
     "attr": {
@@ -139,11 +342,33 @@
     "type": "number",
     "label": {
       "en": "Motion cooldown / occupancy timeout (s)",
-      "sv": "Rörelse-cooldown / närvarotid (s)"
+      "sv": "Rörelse-cooldown / närvarotid (s)",
+      "nl": "Bewegings-cooldown / aanwezigheids-time-out (s)",
+      "de": "Bewegungs-Cooldown / Anwesenheits-Timeout (s)",
+      "fr": "Délai mouvement / occupation (s)",
+      "it": "Cooldown movimento / timeout presenza (s)",
+      "no": "Bevegelses-cooldown / tilstedeværelsestid (s)",
+      "es": "Cooldown de movimiento / tiempo de ocupación (s)",
+      "da": "Bevægelses-cooldown / tilstedeværelsestid (s)",
+      "ru": "Задержка движения / тайм-аут присутствия (с)",
+      "pl": "Cooldown ruchu / limit obecności (s)",
+      "ko": "모션 쿨다운 / 점유 타임아웃 (초)",
+      "ar": "فترة تهدئة الحركة / مهلة الإشغال (ث)"
     },
     "hint": {
       "en": "Seconds before the sensor reports unoccupied after motion. The normal Hue/Zigbee default is 90 seconds. The value is written to the Hue sensor when it wakes.",
-      "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Normalvärdet för Hue/Zigbee är 90 sekunder. Värdet skrivs till Hue-sensorn när den vaknar."
+      "sv": "Sekunder innan sensorn rapporterar att ingen närvaro längre finns efter rörelse. Normalvärdet för Hue/Zigbee är 90 sekunder. Värdet skrivs till Hue-sensorn när den vaknar.",
+      "nl": "Seconden voordat de sensor na beweging geen aanwezigheid meldt. De normale Hue/Zigbee-standaard is 90 seconden. De waarde wordt geschreven wanneer de sensor wakker wordt.",
+      "de": "Sekunden, bis der Sensor nach Bewegung keine Anwesenheit mehr meldet. Der normale Hue/Zigbee-Standard ist 90 Sekunden. Der Wert wird beim Aufwachen in den Sensor geschrieben.",
+      "fr": "Secondes avant que le capteur signale l’absence après un mouvement. La valeur Hue/Zigbee normale est 90 s. La valeur est écrite au réveil du capteur.",
+      "it": "Secondi prima che il sensore segnali assenza dopo un movimento. Il valore Hue/Zigbee normale è 90 secondi. Il valore viene scritto quando il sensore si riattiva.",
+      "no": "Sekunder før sensoren rapporterer ingen tilstedeværelse etter bevegelse. Normal Hue/Zigbee-standard er 90 sekunder. Verdien skrives når sensoren våkner.",
+      "es": "Segundos antes de que el sensor informe ausencia tras movimiento. El valor normal de Hue/Zigbee es 90 segundos. El valor se escribe cuando el sensor despierta.",
+      "da": "Sekunder før sensoren rapporterer ingen tilstedeværelse efter bevægelse. Hue/Zigbee-standard er 90 sekunder. Værdien skrives, når sensoren vågner.",
+      "ru": "Секунды до сообщения об отсутствии после движения. Стандарт Hue/Zigbee — 90 секунд. Значение записывается в датчик при пробуждении.",
+      "pl": "Sekundy do zgłoszenia braku obecności po ruchu. Standard Hue/Zigbee to 90 sekund. Wartość jest zapisywana po wybudzeniu czujnika.",
+      "ko": "모션 후 점유 없음으로 보고하기까지의 시간입니다. 일반 Hue/Zigbee 기본값은 90초이며 센서가 깨어날 때 기록됩니다.",
+      "ar": "الثواني قبل أن يبلغ المستشعر عن عدم الإشغال بعد الحركة. القيمة الافتراضية المعتادة لـ Hue/Zigbee هي 90 ثانية، وتُكتب القيمة عند استيقاظ المستشعر."
     },
     "value": 90,
     "attr": {
@@ -156,10 +381,34 @@
     "id": "minReportLux",
     "type": "number",
     "label": {
-      "en": "Min report interval for lux (s)"
+      "en": "Min report interval for lux (s)",
+      "nl": "Min. rapportinterval lux (s)",
+      "de": "Min. Meldeintervall Lux (s)",
+      "fr": "Intervalle min. lux (s)",
+      "it": "Intervallo min. lux (s)",
+      "sv": "Minsta rapportintervall lux (s)",
+      "no": "Min. rapportintervall lux (s)",
+      "es": "Intervalo mín. lux (s)",
+      "da": "Min. rapportinterval lux (s)",
+      "ru": "Мин. интервал отчёта освещённости (с)",
+      "pl": "Min. interwał raportu lux (s)",
+      "ko": "최소 조도 보고 간격 (초)",
+      "ar": "الحد الأدنى لفاصل تقرير الإضاءة (ث)"
     },
     "hint": {
-      "en": "Min interval before a report is sent to Homey (s)"
+      "en": "Min interval before a report is sent to Homey (s)",
+      "nl": "Min. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Min. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle min. avant envoi à Homey (s)",
+      "it": "Intervallo min. prima dell’invio a Homey (s)",
+      "sv": "Minsta intervall innan rapport skickas till Homey (s)",
+      "no": "Min. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo mín. antes de enviar a Homey (s)",
+      "da": "Min. interval før rapport sendes til Homey (s)",
+      "ru": "Мин. интервал перед отправкой в Homey (с)",
+      "pl": "Min. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최소 간격 (초)",
+      "ar": "الحد الأدنى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 60,
     "attr": {
@@ -172,10 +421,34 @@
     "id": "maxReportLux",
     "type": "number",
     "label": {
-      "en": "Max report interval for lux (s)"
+      "en": "Max report interval for lux (s)",
+      "nl": "Max. rapportinterval lux (s)",
+      "de": "Max. Meldeintervall Lux (s)",
+      "fr": "Intervalle max. lux (s)",
+      "it": "Intervallo max. lux (s)",
+      "sv": "Största rapportintervall lux (s)",
+      "no": "Maks. rapportintervall lux (s)",
+      "es": "Intervalo máx. lux (s)",
+      "da": "Maks. rapportinterval lux (s)",
+      "ru": "Макс. интервал отчёта освещённости (с)",
+      "pl": "Maks. interwał raportu lux (s)",
+      "ko": "최대 조도 보고 간격 (초)",
+      "ar": "الحد الأقصى لفاصل تقرير الإضاءة (ث)"
     },
     "hint": {
-      "en": "Max interval before a report is sent to Homey (s)"
+      "en": "Max interval before a report is sent to Homey (s)",
+      "nl": "Max. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Max. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle max. avant envoi à Homey (s)",
+      "it": "Intervallo max. prima dell’invio a Homey (s)",
+      "sv": "Största intervall innan rapport skickas till Homey (s)",
+      "no": "Maks. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo máx. antes de enviar a Homey (s)",
+      "da": "Maks. interval før rapport sendes til Homey (s)",
+      "ru": "Макс. интервал перед отправкой в Homey (с)",
+      "pl": "Maks. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최대 간격 (초)",
+      "ar": "الحد الأقصى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 300,
     "attr": {
@@ -188,10 +461,34 @@
     "id": "minReportTemp",
     "type": "number",
     "label": {
-      "en": "Min report interval for temperature (s)"
+      "en": "Min report interval for temperature (s)",
+      "nl": "Min. rapportinterval temperatuur (s)",
+      "de": "Min. Meldeintervall Temperatur (s)",
+      "fr": "Intervalle min. température (s)",
+      "it": "Intervallo min. temperatura (s)",
+      "sv": "Minsta rapportintervall temperatur (s)",
+      "no": "Min. rapportintervall temperatur (s)",
+      "es": "Intervalo mín. temperatura (s)",
+      "da": "Min. rapportinterval temperatur (s)",
+      "ru": "Мин. интервал отчёта температуры (с)",
+      "pl": "Min. interwał raportu temperatury (s)",
+      "ko": "최소 온도 보고 간격 (초)",
+      "ar": "الحد الأدنى لفاصل تقرير الحرارة (ث)"
     },
     "hint": {
-      "en": "Min interval before a report is sent to Homey (s)"
+      "en": "Min interval before a report is sent to Homey (s)",
+      "nl": "Min. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Min. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle min. avant envoi à Homey (s)",
+      "it": "Intervallo min. prima dell’invio a Homey (s)",
+      "sv": "Minsta intervall innan rapport skickas till Homey (s)",
+      "no": "Min. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo mín. antes de enviar a Homey (s)",
+      "da": "Min. interval før rapport sendes til Homey (s)",
+      "ru": "Мин. интервал перед отправкой в Homey (с)",
+      "pl": "Min. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최소 간격 (초)",
+      "ar": "الحد الأدنى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 60,
     "attr": {
@@ -204,10 +501,34 @@
     "id": "maxReportTemp",
     "type": "number",
     "label": {
-      "en": "Max report interval for temperature (s)"
+      "en": "Max report interval for temperature (s)",
+      "nl": "Max. rapportinterval temperatuur (s)",
+      "de": "Max. Meldeintervall Temperatur (s)",
+      "fr": "Intervalle max. température (s)",
+      "it": "Intervallo max. temperatura (s)",
+      "sv": "Största rapportintervall temperatur (s)",
+      "no": "Maks. rapportintervall temperatur (s)",
+      "es": "Intervalo máx. temperatura (s)",
+      "da": "Maks. rapportinterval temperatur (s)",
+      "ru": "Макс. интервал отчёта температуры (с)",
+      "pl": "Maks. interwał raportu temperatury (s)",
+      "ko": "최대 온도 보고 간격 (초)",
+      "ar": "الحد الأقصى لفاصل تقرير الحرارة (ث)"
     },
     "hint": {
-      "en": "Max interval before a report is sent to Homey (s)"
+      "en": "Max interval before a report is sent to Homey (s)",
+      "nl": "Max. interval voordat een rapport naar Homey wordt gestuurd (s)",
+      "de": "Max. Intervall vor einer Meldung an Homey (s)",
+      "fr": "Intervalle max. avant envoi à Homey (s)",
+      "it": "Intervallo max. prima dell’invio a Homey (s)",
+      "sv": "Största intervall innan rapport skickas till Homey (s)",
+      "no": "Maks. intervall før rapport sendes til Homey (s)",
+      "es": "Intervalo máx. antes de enviar a Homey (s)",
+      "da": "Maks. interval før rapport sendes til Homey (s)",
+      "ru": "Макс. интервал перед отправкой в Homey (с)",
+      "pl": "Maks. interwał przed raportem do Homey (s)",
+      "ko": "Homey로 보고하기 전 최대 간격 (초)",
+      "ar": "الحد الأقصى قبل إرسال تقرير إلى Homey (ث)"
     },
     "value": 300,
     "attr": {

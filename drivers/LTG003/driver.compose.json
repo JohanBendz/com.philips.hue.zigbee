@@ -33,7 +33,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the MR16 bulb to start pairing. If pairing does not automatically start, reset it using a Hue remote, Hue bridge or the Philips Hue app."
+        "en": "Power on the MR16 bulb to start pairing. If pairing does not automatically start, reset it using a Hue remote, Hue bridge or the Philips Hue app.",
+        "nl": "Schakel de MR16-lamp in om het koppelen te starten. Als het koppelen niet automatisch start, reset het apparaat dan met een Hue-afstandsbediening, Hue Bridge of de Philips Hue-app.",
+        "de": "Schalte die MR16-Lampe ein, um die Kopplung zu starten. Wenn die Kopplung nicht automatisch startet, setze das Gerät mit einer Hue-Fernbedienung, Hue Bridge oder der Philips Hue-App zurück.",
+        "fr": "Allumez l’ampoule MR16 pour lancer l’association. Si l’association ne démarre pas automatiquement, réinitialisez l’appareil avec une télécommande Hue, un pont Hue ou l’application Philips Hue.",
+        "it": "Accendi la lampadina MR16 per avviare l’associazione. Se l’associazione non parte automaticamente, reimposta il dispositivo con un telecomando Hue, Hue Bridge o l’app Philips Hue.",
+        "sv": "Slå på MR16-lampan för att starta parkopplingen. Om parkopplingen inte startar automatiskt, återställ enheten med en Hue-fjärrkontroll, Hue Bridge eller Philips Hue-appen.",
+        "no": "Slå på MR16-pæren for å starte paringen. Hvis paringen ikke starter automatisk, tilbakestill enheten med en Hue-fjernkontroll, Hue Bridge eller Philips Hue-appen.",
+        "es": "Enciende la bombilla MR16 para iniciar el emparejamiento. Si no comienza automáticamente, restablece el dispositivo con un mando Hue, Hue Bridge o la app Philips Hue.",
+        "da": "Tænd MR16-pæren for at starte parringen. Hvis parringen ikke starter automatisk, nulstil enheden med en Hue-fjernbetjening, Hue Bridge eller Philips Hue-appen.",
+        "ru": "Включите лампу MR16, чтобы начать сопряжение. Если сопряжение не начинается автоматически, сбросьте устройство с помощью пульта Hue, Hue Bridge или приложения Philips Hue.",
+        "pl": "Włącz żarówkę MR16, aby rozpocząć parowanie. Jeśli parowanie nie rozpocznie się automatycznie, zresetuj urządzenie pilotem Hue, Hue Bridge lub aplikacją Philips Hue.",
+        "ko": "MR16 전구를 켜 페어링을 시작하세요. 페어링이 자동으로 시작되지 않으면 Hue 리모컨, Hue Bridge 또는 Philips Hue 앱으로 장치를 재설정하세요.",
+        "ar": "شغّل مصباح MR16 لبدء الاقتران. إذا لم يبدأ الاقتران تلقائيًا، فأعد ضبط الجهاز باستخدام جهاز تحكم Hue أو Hue Bridge أو تطبيق Philips Hue."
       }
     }
   }

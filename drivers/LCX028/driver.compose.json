@@ -29,7 +29,19 @@
     },
     "learnmode": {
       "instruction": {
-        "en": "Power on the Festavia string lights to start pairing. If pairing does not automatically start, reset them using a Hue remote or Philips Hue bridge."
+        "en": "Power on the Festavia string lights to start pairing. If pairing does not automatically start, reset them using a Hue remote or Philips Hue bridge.",
+        "nl": "Schakel de Festavia-lichtslinger in om het koppelen te starten. Als het koppelen niet automatisch start, reset het apparaat dan met een Hue-afstandsbediening of Philips Hue Bridge.",
+        "de": "Schalte die Festavia-Lichterkette ein, um die Kopplung zu starten. Wenn die Kopplung nicht automatisch startet, setze das Gerät mit einer Hue-Fernbedienung oder Philips Hue Bridge zurück.",
+        "fr": "Allumez la guirlande lumineuse Festavia pour lancer l’association. Si l’association ne démarre pas automatiquement, réinitialisez l’appareil avec une télécommande Hue ou un pont Philips Hue.",
+        "it": "Accendi le luci a stringa Festavia per avviare l’associazione. Se l’associazione non parte automaticamente, reimposta il dispositivo con un telecomando Hue o un bridge Philips Hue.",
+        "sv": "Slå på Festavia-ljusslingan för att starta parkopplingen. Om parkopplingen inte startar automatiskt, återställ enheten med en Hue-fjärrkontroll eller Philips Hue Bridge.",
+        "no": "Slå på Festavia-lysslyngen for å starte paringen. Hvis paringen ikke starter automatisk, tilbakestill enheten med en Hue-fjernkontroll eller Philips Hue Bridge.",
+        "es": "Enciende la guirnalda Festavia para iniciar el emparejamiento. Si no comienza automáticamente, restablece el dispositivo con un mando Hue o Philips Hue Bridge.",
+        "da": "Tænd Festavia-lyskæden for at starte parringen. Hvis parringen ikke starter automatisk, nulstil enheden med en Hue-fjernbetjening eller Philips Hue Bridge.",
+        "ru": "Включите гирлянду Festavia, чтобы начать сопряжение. Если сопряжение не начинается автоматически, сбросьте устройство с помощью пульта Hue или Philips Hue Bridge.",
+        "pl": "Włącz łańcuch świetlny Festavia, aby rozpocząć parowanie. Jeśli parowanie nie rozpocznie się automatycznie, zresetuj urządzenie pilotem Hue lub Philips Hue Bridge.",
+        "ko": "Festavia 스트링 조명을(를) 켜 페어링을 시작하세요. 페어링이 자동으로 시작되지 않으면 Hue 리모컨 또는 Philips Hue Bridge를 사용해 장치를 재설정하세요.",
+        "ar": "شغّل سلسلة أضواء Festavia لبدء الاقتران. إذا لم يبدأ الاقتران تلقائيًا، فأعد ضبط الجهاز باستخدام جهاز تحكم Hue أو Philips Hue Bridge."
       }
     }
   }
