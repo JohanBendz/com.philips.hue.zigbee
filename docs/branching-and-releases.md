@@ -1,39 +1,37 @@
-# Branching and Homey release channels
+# Branching, release procedure and documentation ownership
 
-Updated 2026-10-25. Applies to `JohanBendz/com.philips.hue.zigbee`.
+This is the ongoing procedure. Current build/version, branch freeze, release scope and actual Test/Live publication belong in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776), the appropriate release issue and GitHub Releases.
 
-## Permanent publication branches
+## Branches and channels
 
-| Git branch | Responsibility | Current published baseline |
-| --- | --- | --- |
-| `main` (GitHub default) | Code of the latest **Homey Live** version, plus maintenance-only repository metadata/CI | App v2.3.1, Build 68 |
-| `dev` | Staging branch for the **next Homey Test** candidate | 2.4.0 candidate via #786, including the 2.3.2 Flow-filter fix; publication is recorded separately |
+| Branch | Responsibility |
+| --- | --- |
+| `main` | Source of the latest explicitly published Homey Live build; repository maintenance only between releases. |
+| `dev` | Staging source for the next approved Homey Test candidate. |
+| `develop-X.Y` | Version-scoped work or a frozen release candidate; never itself a Homey channel. |
+| `feature/*`, `fix/*`, `hotfix/*` | Isolated scoped changes, proposed through PRs for the approved target. |
+| `experiment/*`, `audit/*` | Investigation-only branches, with Draft PRs until independently accepted. |
 
-**Branch names are not Homey deployment channels.** Pushing or merging does not publish an app. Maintainer must explicitly publish to Homey Test or Live and record the version/build. `main` must never contain unverified changes intended for the next Test. Test candidates are merged into `dev`; Live promotions are merged from the *verified* Test release into `main` only after approval/publication. Avoid sweeping `dev` changes into Live when other experiments have landed between Test and release.
+Pushing/merging Git code **does not publish a Homey app**. Publishing Test or Live is an explicit maintainer action. Record exact app version, source commit, Homey Build ID, channel and verification in the release issue. Promote only a tested, approved release source to `main`; do not merge unrelated experiments along with it.
 
-## Other branches are temporary or version-scoped
+When a Test/Live branch is frozen, new feature work must stay on the selected future version branch. Apply bug fixes selectively to their affected release line, then forward-port approved fixes. Never overwrite publication branches with a historical release/feature branch.
 
-- `fix/*`, `feature/*`, `hotfix/*`: isolated work. Target `dev` only when the changes are intended for the next Test.
-- `experiment/*`, `audit/*`: isolated research; Draft PRs, never automatically merged or published.
-- `develop-2.4`: 2.4.0 release candidate with OTA/localization and the reconciled 2.3.2 Flow-filter correction. Keep scope frozen for direct fixes and release preparation. PR #786 is the integration path into `dev`; never force-overwrite publication branches.
-- `develop-2.5`: active exploratory 2.5.0 feature and migration baseline. Features currently in flight against it may remain there; when selecting the next 2.5 Test, bring only approved changes into `dev` after reconciling the 2.3.x and 2.4 histories.
-- `modernize-2026`: retained as emergency historical v2.1.2 rollback; not active development.
-- Former branches `issues-2026` (old 2.2.1 default), `issues-2026-next` (same v2.3.1 snapshot as new `main` at branch creation), `ota-2026`, `release/2.3.1-live-polish`: historical. Check PR and rollback references before manually deleting. Never force-overwrite `main` or `dev` with these.
+## Information placement
 
-## Near-term release sequence
+- `docs/` holds durable product architecture, implementation contracts, supported firmware mapping, and repeatable procedures.
+- **Issues** hold bug reports, investigation evidence, model requests, release plans, dated hardware tests, acceptance decisions and current scope.
+- **PRs** hold code and documentation changes, review findings, checks and implementation decisions.
+- **Milestones**, [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776) and GitHub Releases aggregate scheduling, current status and release history.
+- `README.txt` is the Homey App Store description, `.homeychangelog.json` is version-keyed Homey release notes, `CHANGELOG.md` is human-readable release history.
 
-1. **2.3.1** is Live; new `main` and `dev` start at the identical published source commit `0eb6bd2`. Repository CI/documentation-only commits after this baseline do not alter app runtime or app version.
-2. **PR #809** (2.3.2 Flow filters) is merged into `dev`; its device restrictions, device-scoped titles and regression tests are retained in the 2.4 candidate, with all 13 languages preserved. Committing a regenerated root `app.json` is **not** a prerequisite.
-3. **PR #786** prepares 2.4.0 as the next distinct Test candidate. The 2026-10-25 integration reconciles the current `dev` history, retains the 2.4.0 version, and refreshes only the already-enabled LTA015 firmware target. Merge/push does not confirm Homey Test publication.
-4. **PR #813** RWL022 battery experiment and **#803** LOM002 reporting experiment are *not* in the 2.3.2 candidate.
-5. When promoting a Test build to Live, record exact version, commit and Homey Build ID. Keep rollback reference; verify Flow compatibility and crash trend.
+Link to current issues/PRs instead of copying their state into permanent docs. Historical reports may be retained in the canonical issue discussion and commit-pinned Git history. Do not maintain parallel status sources across branches.
 
-## Validation and safety
+## Build and validation
 
-The validation workflow runs on pushes to `main`, `dev`, `develop-2.4` and `develop-2.5`, and on PRs. It does not publish releases.
+1. Respect the release-branch freeze stated in the current release issue.
+2. Run Homey CLI publish validation, tests, and whitespace checks on the targeted branch. Generate root `app.json` **before** any tests that inspect it.
+3. Build from the exact final source commit, verify the built manifest and device/Flow regression requirements, publish explicitly, and record build/source details with observations and rollback reference.
 
-**Important Homey Compose bootstrap rule:** the repository-root `app.json` **must exist and remain tracked**. We have established that the Compose workflow does not work if this file is absent. It is an output/bootstrap manifest, **not the source of truth**, and is explicitly allowed to be out of sync with `.homeycompose` files. Homey CLI overwrites/regenerates it during run/validation/build/publication. Never remove it or add it to `.gitignore`; do not include incidental generated changes in feature/fix PRs, and do not require a commit merely to synchronize it. Compose files plus release package metadata define the intended application. **Tests reading `app.json` must run after a CLI regeneration** (the GitHub CI workflow already validates before running `npm test`); directly invoking `npm test` without generating may read stale contents. For each actual Test/Live build verify the generated manifest and app version, without requiring a git-tracked manifest update.
+The root `app.json` **must stay present and tracked** to bootstrap Homey Compose. Compose declarations are the authoritative source; CLI regenerates root `app.json`. Never hand-edit or delete the root manifest, add it to `.gitignore`, or commit incidental regenerated changes to keep it artificially in sync.
 
-Recommended GitHub repository rules: require PR review and successful CI for `main`, disallow force-pushes/deletion and prefer only release-approved promotions. These controls are configured in GitHub Settings; this document does not assert they are already enabled.
-
-The [development dashboard](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776) tracks publication status and version-scoped investigations.
+GitHub branch protection / mandatory reviews are repository settings and are not assumed to be enabled by this document.

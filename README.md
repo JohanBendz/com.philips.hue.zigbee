@@ -37,7 +37,7 @@ The driver manifests under `drivers/` are the authoritative source for exact Zig
 
 ## Hue firmware updates
 
-Version **2.4.0** adds firmware updates through Homey's device-update screen for selected Hue lights and accessories. The declared scope covers **67 exact product IDs across 47 drivers**; see the [coverage list](docs/ota-firmware.md#current-coverage). An update is offered only when the exact device identity, firmware family and current version match an eligible image. Some older devices need several consecutive updates.
+Supported development versions include firmware updates through Homey's device-update screen for selected Hue lights and accessories. The declared scope covers **67 exact product IDs across 47 drivers**; see the [coverage list](docs/ota-firmware.md#current-coverage). An update is offered only when the exact device identity, firmware family and current version match an eligible image. Some older devices need several consecutive updates.
 
 Firmware updates require a supported Homey platform running **13.2.0 or newer** and Homey Mobile App **9.10.0 or newer**. The app itself requires Homey **12.9.0 or newer**. Homey Pro 2016–2019 models are not listed as OTA-supported by Athom. Follow any wake instructions shown for battery devices.
 
@@ -45,7 +45,7 @@ After the device restarts, its firmware version and update status may take a few
 
 Not every Hue device or hardware revision has OTA support. When reporting an update problem, include the exact model, starting/resulting firmware versions, Homey's update result and post-update behaviour. Report issues in [#668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
-Development and release status are tracked in the [OTA release handoff](docs/ota-test-release-2.4.0.md), with physical checks in the [hardware test plan](docs/ota-test-plan.md).
+OTA release status and physical results are tracked in [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668); the repeatable verification procedure is the [hardware test plan](docs/ota-test-plan.md).
 
 ## Requesting device support
 
@@ -78,9 +78,7 @@ The app uses Homey SDK 3, Homey Compose and the current Homey Zigbee driver stac
 
 ### Development and release branches
 
-`develop-2.4` is frozen for the 2.4.0 Test scope at `e7e9a07` (2026-10-07). Only direct bug fixes to 2.4 or earlier behaviour and necessary release preparation belong on that line while Test observations are collected.
-
-New features, device support, migrations and other planned changes branch from and target `develop-2.5` (version 2.5.0). Forward-port every accepted earlier-release bug fix to 2.5. Do not merge the whole 2.5 branch back into the frozen 2.4 line. See the [release-branch policy](docs/release-branches.md) for routing and the [dashboard](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776) for current publication status.
+See the [branching and release procedure](docs/branching-and-releases.md) for the ongoing development workflow. Current version scope, publication status and freezes live in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776) and the corresponding release issues and PRs.
 
 Requirements:
 
@@ -98,7 +96,7 @@ npm run run
 
 The root `app.json` is generated from Homey Compose, but the current Homey CLI expects that file to exist before validation starts. It is therefore kept in the repository as a generated baseline. Do not edit it manually or include incidental regenerated changes in normal pull requests.
 
-Pull requests and pushes to `develop-2.5` automatically run Homey publish validation, the regression test suite and `git diff --check`.
+The repository CI workflow checks Homey publish validation, regression tests and whitespace for configured branches and pull requests.
 
 ### Generated manifest
 
