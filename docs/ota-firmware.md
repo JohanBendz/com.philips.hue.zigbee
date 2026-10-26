@@ -1,12 +1,6 @@
 # Philips Hue Zigbee OTA firmware
 
-**2.5 development note (2026-10-25):** the four new pairing IDs in this line do not inherit firmware updates. Current 2.5 inventory is 402 supported IDs, 67 OTA-mapped and 335 unmapped; all 47 OTA drivers, 63 entries and 141 firmware files are unchanged. The release/package records below describe the separately frozen 2.4 candidate. See the [2.5 issue review](2.5-issue-review-2026-10-25.md).
-
-This branch uses Homey's native Zigbee firmware update support. Firmware binaries are bundled per driver and declared in `driver.firmware.compose.json`.
-
-The **2026-10-25** candidate is version **2.4.0**, prepared on `develop-2.4` for integration into the permanent `dev` Test-staging branch through [PR #786](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/786). OTA #758 is integrated. The candidate includes the 2.3.2 Flow-filter correction, all 13 app languages and the reviewed LTA015 firmware refresh. Homey runtime compatibility remains **`>=12.9.0`**. Publication is a separate maintainer action, recorded in [dashboard #776](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776). See the [current release handoff](ota-test-release-2.4.0.md).
-
-See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for coverage limits and the direct Hue-server cross-check. The release handoff supersedes that review's open version/channel preparation items. Catalogue consistency does not mean full Hue coverage.
+Homey native Zigbee firmware updates are declared per driver in `driver.firmware.compose.json`. This is a technical reference, not a release checklist. The current release, package verification and physical test findings belong in [OTA issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668). A shared Homey driver does not automatically approve OTA for every accepted product ID.
 
 ## Source and verification policy
 
@@ -21,32 +15,6 @@ See the [2026-10-03 readiness review](ota-review-2026-10-03.md) for coverage lim
 - `test/firmware.test.js` validates every bundled OTA file against the compose metadata, driver identity, binary header and declared integrity algorithm. It also checks SHA-512 against the reviewed upstream catalogue, preserves the complete image chain and its file/hardware-version limits, and rejects orphan files, unreviewed image types and accidental enablement of withheld models.
 - Every enabled product ID must match the fixed [model evidence register](ota-model-evidence.md). All 67 IDs have expected-family checks and source references; LTO001, LTW015 and LWA029 currently rely only on a curated device database and still need independent device captures. The checks reject unreviewed aliases, missing models and unsupported family additions.
 - The generated Homey manifest must contain exactly the same firmware declarations and battery wake instructions as the compose sources. Run publish validation before the regression suite.
-
-## Current verification — 2026-10-25
-
-Homey CLI **4.5.0** publish validation and **225 tests / 0 failures** pass on the reconciled candidate. All 11 app-global Flow cards retain the explicit Hue `driver_id` scope from #809; device-scoped titles and argument translations cover all 13 app languages. Runtime JavaScript and reporting/polling behaviour are unchanged from the frozen 2.4 baseline.
-
-The reviewed catalogue is now [Koenkk/zigbee-OTA `7798da234349eaa937b22f9aebad909a741d1e4b`](https://github.com/Koenkk/zigbee-OTA/blob/7798da234349eaa937b22f9aebad909a741d1e4b/index.json), index SHA-256 `d6d7d1afa46bfb056bc4c8730082105aec59d0734fc8ae1a531206dff1ae317d`. The audit reports **zero active-family changes** after the explicit refresh.
-
-Only LTA015's already-enabled `0x0129` target changed: `0x01000D06` → `0x01001200`. Upstream [archived the former image and added the replacement on 2026-10-18](https://github.com/Koenkk/zigbee-OTA/commit/6c1865a493531b62102eb2adbbf746b3c81deb75). The replacement was downloaded from its Signify `originalUrl`; its SHA-512 matches the catalogue. Its Zigbee header is version `0x0100`, manufacturer `0x100B`, image type `0x0129`, file version `0x01001200`, size **888,130 bytes**, with no optional hardware fields or catalogue version limits. The current upstream family has no prerequisite image; all other families' required intermediate chains are retained. No additional product IDs or image families are enabled.
-
-Coverage remains **47 drivers / 67 exact IDs / 21 families / 63 update entries / 141 files / 40 unique images / 157 references**. A native CLI build and archive inspection verify every packaged source file, firmware byte, production dependency and generated declaration; see [current package measurements](ota-test-release-2.4.0.md#package-verification). Existing hardware observations remain model-specific, and #812/#813 are separate battery test topics.
-
-## Catalogue verification — 2026-10-02
-
-Historical snapshot. The 2026-10-25 section above is the current catalogue baseline.
-
-The active firmware families were compared with [Koenkk/zigbee-OTA at `9f46fc5208eab9890dfe31696652428fa497850c`](https://github.com/Koenkk/zigbee-OTA/blob/9f46fc5208eab9890dfe31696652428fa497850c/index.json).
-
-- All **40 unique firmware images** match the upstream SHA-512 and file size.
-- All **21 enabled image types** include every image listed for that family at the reviewed source revision.
-- All **157 manifest file references** preserve the catalogue's `minFileVersion` / `maxFileVersion` limits. There were no source mismatches or missing chain images.
-- `test/fixtures/hue-ota-catalogue.json` records the source commit, whole-index SHA-256, original source URLs where present, image checksums and version constraints. Tests use this fixed reference without network access.
-- Mutation tests prove that deleting an intermediate image, removing a minimum version or widening a maximum version is rejected.
-
-This establishes consistency with the reviewed catalogue, not physical OTA success. New firmware requires a fresh source review and a deliberate catalogue-reference update. The reference is not automatically refreshed from `master`.
-
-Official [Hue lamp release notes](https://www.philips-hue.com/en-us/support/release-notes/lamps) and [accessory release notes](https://www.philips-hue.com/en-us/support/release-notes/accessories) provide platform/version context. Their human-readable software versions do not replace the numeric version and image type in the OTA header or prove a model-to-platform mapping.
 
 ## Manual catalogue maintenance
 
@@ -75,34 +43,9 @@ Catalogue-only image families are reported separately as information. Their pres
 
 The original audit on 2026-10-02, before the Develop integration, resolved to the reviewed `9f46fc5` revision: **0 active-family changes**, **69 upstream Hue images** and **17 catalogue-only image families**. At that baseline, 67 product IDs were mapped and 313 were unmapped. The current baseline has 398 supported IDs and 331 unmapped IDs. The 2026-10-05 check against upstream `62c7798c8d8a4712733c6cc668ea491a2637f329` again reports **zero active-family changes**; the fixed reviewed reference remains `9f46fc5`.
 
-## Packaging and merge verification — 2026-10-07
+## Firmware coverage and model-family mapping
 
-Historical measurements, superseded by the 2026-10-25 [release handoff](ota-test-release-2.4.0.md#package-verification).
-
-The current `develop-2.4` baseline `e33e6f2` is already included in reviewed OTA source `eb8b871`. Homey CLI **4.5.0** publish validation, **219 local tests**, the source PR CI and whitespace checks pass. All 67 model-evidence rows, 30 local documentation links/anchors and 691 file-version boundary scenarios were checked. There are no blocking code findings for the planned Test integration. The [release handoff](ota-test-release-2.4.0.md#prepared-candidate-verification) records the exact review scope and remaining Test observations.
-
-The 2026-10-07 upstream audit resolved to `10797024f00acd9530f10e8517a68823c59f3b3b` and again found **zero active-family changes** against the fixed `9f46fc5` reference. The reviewed catalogue and all firmware bytes are unchanged.
-
-A fresh native CLI `app build` and archive inspection confirms all **47 OTA drivers / 63 update entries**, English/Swedish post-restart help, battery wake instructions and all firmware files. Every packaged firmware byte and app runtime file matches the source. The pinned Zigbee libraries, production dependencies and CLI Homey shim are included. The earlier `f5dbfdd` verification archive omitted production dependencies; its measurements are superseded by this complete build.
-
-| Measurement | Result |
-| --- | ---: |
-| Firmware files in the source/build | 141 |
-| Firmware bytes, including per-driver copies | 51,894,298 |
-| Unique firmware image bytes | 13,141,920 |
-| Build file count | 1,105 |
-| Build file bytes, including firmware and dependencies | 64,758,250 |
-| Compressed CLI upload archive bytes | 59,246,063 |
-
-Archive SHA-256: `35beb66938e458f441f3939a7e4887e363a7bdb6fa160e7ce0fb046f1d792403`. This local package was built from `eb8b871`; the documentation follow-up changes excluded `docs/` files only. No merge into Develop, upload or installation was performed. Record the final release commit and rebuild at publication.
-
-The project-level `test/`, `docs/` and `scripts/` directories are excluded by `.homeyignore`. Firmware files remain in their declared driver asset directories. [Athom's Zigbee firmware documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates) states that firmware is stored separately after upload and downloaded when a device update starts. The upload archive size therefore does not establish installed App Store app size.
-
-See [the OTA hardware test plan](ota-test-plan.md) and [recorded hardware observations](ota-test-results.md) for Test follow-up.
-
-## Current coverage
-
-The branch currently contains **47 firmware-enabled Homey drivers** and **141 bundled firmware files**.
+The current checked-in mapping has **47 OTA-enabled drivers** and **141 firmware files**. Recheck these counts against the driver manifests when adding mappings.
 
 | Homey driver | Zigbee product ID(s) | Hue image type(s) | Battery wake instruction |
 | --- | --- | --- | --- |
@@ -204,7 +147,7 @@ The following product IDs are deliberately withheld while their platform/revisio
 
 Do not restore a single image-type mapping for these product IDs from model name alone.
 
-Homey also matches the image type reported by the device, so multiple reviewed platform variants can be supported for one product ID. The tests now require an explicit reviewed family set instead of a blanket one-family rule. No additional variant is enabled by that policy change; see the [model evidence review](ota-model-evidence.md#variant-observations-still-under-review), including the additional observations for LLC010 and LCL001, and the [earlier variant review](ota-review-2026-10-03.md#3-explicit-reviewed-variant-policy--implemented).
+Homey also matches the image type reported by the device, so multiple reviewed platform variants can be supported for one product ID. The tests now require an explicit reviewed family set instead of a blanket one-family rule. No additional variant is enabled by that policy change; see the [model evidence review](ota-model-evidence.md#variant-observations-still-under-review), including the additional observations for LLC010 and LCL001, and the [earlier variant review](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
 ## After the device restarts
 
@@ -212,7 +155,7 @@ The device-information firmware string (Basic cluster `swBuildId`) and the numer
 
 Firmware information and update status can take a few minutes to refresh after a device restarts. If Homey initially reports that it cannot verify success, preserve the message, wait a few minutes and check the status again before retrying. Rejoin alone is not proof of the installed version; confirm the resulting OTA version and normal device operation. A persistent error or unchanged version still needs investigation.
 
-The 2026-10-05 [LCT015 observation](ota-test-results.md#lct015--2026-10-05) initially showed `Unable to verify if update was successful`, then confirmed OTA version `0x01002A00` (`0.1b0 / 2.10b0`) and Hue software `1.116.12`. The delay was observed; its cause inside Homey has not been established. All firmware update changelogs contain this guidance in English and Swedish. Homey's built-in verification error text is owned by Homey.
+The 2026-10-05 [LCT015 observation](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) initially showed `Unable to verify if update was successful`, then confirmed OTA version `0x01002A00` (`0.1b0 / 2.10b0`) and Hue software `1.116.12`. The delay was observed; its cause inside Homey has not been established. All firmware update changelogs contain this guidance in English and Swedish. Homey's built-in verification error text is owned by Homey.
 
 ## Battery devices
 

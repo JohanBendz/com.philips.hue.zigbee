@@ -1,6 +1,6 @@
-# Hue remote battery simplification — issue #771
+# Hue remote battery capability handling
 
-Scope: `develop-2.4`, not published 2.3 Test / 2.2.1 Live.
+Technical behavior and regression contract for RDM001, RDM002 and RWL022. See [issue #771](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/771) for implementation history.
 
 RDM001, RDM002 and RWL022 previously called both
 `registerCapability('measure_battery', CLUSTER.POWER_CONFIGURATION)`
@@ -36,5 +36,4 @@ values (0, 100, 200, 255, invalid), SDK mapping, exactly one
 capability update per genuine report, source separation between report
 and wake read, existing availability and RWL022 reporting setup.
 
-Physical checks on RDM001, RDM002 and RWL022 should accompany the
-future 2.4 Homey Test. No extra reads/polling or report requests added.
+For regressions, verify RDM001, RDM002 and RWL022 with genuine reports and wake-up reads. No extra reads/polling or report requests added.

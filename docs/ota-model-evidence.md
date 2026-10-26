@@ -1,8 +1,8 @@
 # OTA model evidence register
 
-Reviewed **2026-10-03** for `ota-2026`, based on `develop-2.4`.
+This technical register corresponds to the source branch's declared OTA mapping. Actual Test release status and hardware observations are tracked in [OTA issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
 
-All **67 enabled product IDs** now have an explicit expected-family check in [the fixed model register](../test/fixtures/hue-ota-models.json). The register is reviewed against external model/platform records; it is not generated or refreshed by the catalogue-audit command. Firmware files, OTA declarations and model coverage are unchanged by this work.
+All **67 enabled product IDs** now have an explicit expected-family check in [the fixed model register](../test/fixtures/hue-ota-models.json). The register is reviewed against external model/platform records; it is not generated or refreshed by the catalogue-audit command. Update the register, fixture, firmware declarations and checks together whenever a supported model changes.
 
 **64 models** have an explicit entry in a maintained model table, an API fixture/capture, an OTA request or an owner hardware report. **LTO001, LTW015 and LWA029** currently rely only on Bifrost's curated device database. Its author describes it as a best-effort collection and does not link each original device capture. Their existing mappings are retained and guarded, with independent device evidence still open. A test fixture is evidence of the published model/platform record, not proof of a successful physical update.
 

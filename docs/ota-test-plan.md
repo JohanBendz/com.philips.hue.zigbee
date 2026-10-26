@@ -1,14 +1,8 @@
-# Philips Hue Zigbee OTA hardware test plan
+# Philips Hue Zigbee OTA hardware verification procedure
 
-Prepared **2026-10-02**, refreshed **2026-10-25** for `develop-2.4` → `dev`, tracked in [PR #786](https://github.com/JohanBendz/com.philips.hue.zigbee/pull/786) and [issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668).
-
-**Status: prepared for the planned 2.4.0 Homey Test release. A first LCT015 hardware observation confirms transfer, rejoin and the resulting version; post-update controls/Flows and app-restart checks remain pending.** See the [LCT015 result record](ota-test-results.md#lct015--2026-10-05). Further physical results are collected during Test. Catalogue checks, binary validation and publish validation establish the software baseline for those tests.
+This is a reusable test procedure, independent of a specific Test/Live candidate. Record version-specific observations, exact tested firmware/build and completion in [OTA issue #668](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) or the associated device issue. Follow the [OTA model evidence register](ota-model-evidence.md) to confirm the model and image-family mapping before starting.
 
 ## Setup and evidence
-
-The selected release is **2.4.0 on Homey Test**, staged through PR #786 from `develop-2.4` into `dev`. OTA #758 is already integrated. The 2026-10-25 candidate includes the 2.3.2 Flow-filter correction and the verified LTA015 `0x0129` target `0x01001200`. Record the exact final `dev` release commit and Homey Build ID when publishing; branch contents do not establish publication. See the [current handoff](ota-test-release-2.4.0.md) and [dashboard](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/776).
-
-The [model evidence register](ota-model-evidence.md) covers all 67 enabled IDs. Alongside the staged transfer checks, collect independent model/platform observations for LTO001, LTW015 and LWA029, whose existing mappings currently rely only on a curated database. Record any LLC010/LCL001 variant observations with the exact model and reported image type; the alternative families remain unapproved.
 
 According to [Athom's OTA documentation](https://apps.developer.homey.app/wireless/zigbee/zigbee-firmware-updates), the OTA feature requires a supported Homey platform with firmware **13.2.0 or newer**, and Homey Mobile App **9.10.0 or newer** when using the mobile app. Record the Homey model, Homey firmware and client version.
 
@@ -36,7 +30,7 @@ Start with one device at a time. Exact-model rows can be used independently depe
 | Observed transfer; functional checks pending | LCT000 | LCT015 | `0x010C` | `0x01002A00` | 2 |
 | Legacy SBL container check | LCT003 | LCT003 | `0x0104` | `0x4300740C` | 2 |
 
-Include a legacy SBL lamp as well as a modern `.zigbee` lamp. The [readiness review](ota-review-2026-10-03.md) identifies nine legacy SBL images with Hue-specific payload structure; a successful update on modern hardware does not verify that path.
+Include a legacy SBL lamp as well as a modern `.zigbee` lamp. The [readiness review](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/668) identifies nine legacy SBL images with Hue-specific payload structure; a successful update on modern hardware does not verify that path.
 
 For each device:
 
@@ -97,4 +91,4 @@ Copy one record per actual model and starting version into the OTA issue/PR. Kee
 | Evidence link / relevant sanitized log | |
 | Verdict: completed transfer, no update available, failed, or unavailable | |
 
-PR #758 can be reviewed and integrated for the planned Test release once the software checks pass. Physical results are Test work, not a prerequisite for starting Test. Use the recorded results and unresolved failures to decide the scope of any later Live promotion. Catalogue and mapping research can continue alongside testing; enable additional mappings only after their identity/platform evidence and complete firmware chains have been reviewed.
+Use documented results and remaining failures to decide which mappings can be offered more widely. Never enable a new image family without independent model/platform evidence and a verified image chain.

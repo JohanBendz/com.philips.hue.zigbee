@@ -1,4 +1,6 @@
-# Genuine Hue Zigbee traffic and Homey last-seen — issue #770
+# Homey last-seen telemetry from genuine Hue Zigbee traffic
+
+Implementation contract and design progression for `lib/HueLastSeen.js`. The stages below record design steps rather than a live work queue. See [completed issue #770](https://github.com/JohanBendz/com.philips.hue.zigbee/issues/770).
 
 Official Homey SDK v3 Device reference:
 https://apps-sdk-v3.developer.homey.app/Device.html#setLastSeenAt
@@ -25,7 +27,7 @@ before validating a payload. Part 2 introduces an explicit `validReport`
 gate while preserving that recovery behavior. SOC001 now distinguishes
 incoming reports/physical OnOff commands from explicit startup reads.
 
-## Remaining stages
+## Subsequent implementation stages
 
 1. Inspect the remaining remotes independently, including #769 raw event
    normalization, before expanding last-seen to additional families.
