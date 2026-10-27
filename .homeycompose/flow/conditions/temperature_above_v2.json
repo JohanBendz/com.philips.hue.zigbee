@@ -1,0 +1,21 @@
+{
+  "id": "temperature_above_v2",
+  "title": "Temperature is above",
+  "titleFormatted": {
+    "en": "Temperature is !{{above|below}} [[temperature]] degrees",
+    "sv": "Temperaturen är !{{över|under}} [[temperature]] grader",
+    "nl": "Temperatuur is !{{boven|onder}} [[temperature]] graden",
+    "de": "Temperatur ist !{{über|unter}} [[temperature]] Grad"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
+    },
+    {
+      "name": "temperature",
+      "type": "number"
+    }
+  ]
+}

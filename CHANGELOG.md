@@ -4,6 +4,16 @@ This file preserves the historical release notes for **Philips Hue, without the 
 
 For current development work, see the open issues and pull requests in this repository. Device support changes are verified against Homey Zigbee interviews and, where relevant, upstream Zigbee protocol implementations.
 
+### v2.3.3
+
+Restores compatibility for saved Flow cards after the 2.3.2 device-scoping change.
+
+- Preserves all 11 original app-global Flow cards with their published IDs, arguments and titles, marked as deprecated so existing automation references still resolve.
+- Introduces 11 device-specific replacements with new IDs for newly created Flows, retaining the Hue-only device filters from 2.3.2.
+- Both card generations use the same run listeners, preserving existing behavior without duplicating Zigbee logic.
+- Covers upgrade compatibility with schema snapshots from the published 2.3.1 release and regression tests for both card generations.
+- Does not include OTA, new device drivers or Zigbee runtime changes. Homey hardware upgrade verification is still required before publication.
+
 ### v2.3.2
 
 Hotfix for app-global Flow cards selecting devices owned by other Homey apps.

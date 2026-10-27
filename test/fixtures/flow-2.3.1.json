@@ -1,0 +1,553 @@
+{
+  "source": "main @ 9f9ae18cac2646035abe0990be5a93748399648e (published 2.3.1)",
+  "cards": {
+    "actions/alerts.json": {
+      "id": "Alert",
+      "title": {
+        "en": "Alert mode",
+        "sv": "Larm-läge",
+        "nl": "Waarschuwingsmodus",
+        "de": "Alarmmodus"
+      },
+      "titleFormatted": {
+        "en": "Set alert mode for [[device]] to [[alert_mode]]",
+        "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+        "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+        "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light",
+          "title": {
+            "en": "Select Light Device",
+            "sv": "Välj ljusenhet",
+            "nl": "Selecteer lichtapparaat",
+            "de": "Lichtgerät auswählen"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "alert_mode",
+          "title": {
+            "en": "Set an alert mode",
+            "sv": "Välj ett larm-läge",
+            "nl": "Stel een waarschuwingsmodus in",
+            "de": "Alarmmodus auswählen"
+          },
+          "titleFormatted": {
+            "en": "Set alert mode for [[device]] to [[alert_mode]]",
+            "sv": "Ställ in larm-läge för [[device]] till [[alert_mode]]",
+            "nl": "Stel waarschuwingsmodus in voor [[device]] op [[alert_mode]]",
+            "de": "Alarmmodus für [[device]] auf [[alert_mode]] setzen"
+          },
+          "values": [
+            {
+              "id": "blink",
+              "label": {
+                "en": "Blink (1 time)",
+                "sv": "Blinka (1 gång)",
+                "nl": "Knipperen (1 keer)",
+                "de": "Blinken (1 mal)"
+              }
+            },
+            {
+              "id": "breath",
+              "label": {
+                "en": "Breath (15 times)",
+                "sv": "Andas (15 gånger)",
+                "nl": "Ademen (15 keer)",
+                "de": "Atmen (15 mal)"
+              }
+            },
+            {
+              "id": "okay",
+              "label": {
+                "en": "Indicate OK",
+                "sv": "Indikera OK",
+                "nl": "Geef aan OK",
+                "de": "OK anzeigen"
+              }
+            },
+            {
+              "id": "channel_change",
+              "label": {
+                "en": "Indicate problem",
+                "sv": "Indikera problem",
+                "nl": "Geef een probleem aan",
+                "de": "Problem anzeigen"
+              }
+            },
+            {
+              "id": "finish_effect",
+              "label": {
+                "en": "Soft Stop",
+                "sv": "Mjuk stopp",
+                "nl": "Zachte stop",
+                "de": "Sanfter Stopp"
+              }
+            },
+            {
+              "id": "stop_effect",
+              "label": {
+                "en": "Hard Stop",
+                "sv": "Hård stopp",
+                "nl": "Harde stop",
+                "de": "Harter Stopp"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "actions/blink_light.json": {
+      "id": "Blink",
+      "title": {
+        "en": "Blink the light",
+        "sv": "Blinka ljuset",
+        "nl": "Knipper de lamp",
+        "de": "Blink das Licht"
+      },
+      "titleFormatted": {
+        "en": "Set blink type for [[device]] to [[blink_type]] with [[blinks]] blinks",
+        "sv": "Ställ in blinkningstyp för [[device]] till [[blink_type]] med [[blinks]] blinkningar",
+        "nl": "Stel knipper-type in voor [[device]] op [[blink_type]] met [[blinks]] keer knipperen",
+        "de": "Blinktyp für [[device]] auf [[blink_type]] mit [[blinks]] Blinkzeichen setzen"
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light"
+        },
+        {
+          "type": "dropdown",
+          "name": "blink_type",
+          "title": {
+            "en": "Long or short blink",
+            "sv": "Lång eller kort blinkning",
+            "nl": "Lang of kort knipperen",
+            "de": "Langes oder kurzes blinken"
+          },
+          "values": [
+            {
+              "id": "long",
+              "label": {
+                "en": "long blink",
+                "sv": "lång blinkning",
+                "nl": "lang knipperen",
+                "de": "langes blinken"
+              }
+            },
+            {
+              "id": "short",
+              "label": {
+                "en": "short blink",
+                "sv": "kort blinkning",
+                "nl": "kort knipperen",
+                "de": "kurzes Blinken"
+              }
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "name": "blinks",
+          "title": {
+            "en": "Blinks",
+            "sv": "Blinkningar",
+            "nl": "Knippert",
+            "de": "Blinkt"
+          },
+          "min": 1,
+          "max": 25,
+          "step": 1,
+          "placeholder": {
+            "en": "Number of blinks",
+            "sv": "Antal blinkningar",
+            "nl": "Aantal keer knipperen",
+            "de": "Anzahl der Blinkzeichen"
+          }
+        }
+      ]
+    },
+    "actions/start_dim.json": {
+      "id": "start_dim",
+      "title": {
+        "en": "Start dimming",
+        "sv": "Starta dimning",
+        "nl": "Start dimmen",
+        "de": "Dimmen starten"
+      },
+      "titleFormatted": {
+        "en": "Start dimming [[device]] [[direction]] at speed [[rate]]",
+        "sv": "Starta dimning av [[device]] [[direction]] med hastighet [[rate]]",
+        "nl": "Start dimmen van [[device]] [[direction]] met snelheid [[rate]]",
+        "de": "Dimmen von [[device]] [[direction]] mit Geschwindigkeit [[rate]] starten"
+      },
+      "hint": {
+        "en": "Sends the Zigbee 'move' command, so the light dims continuously until it is stopped with 'Stop dimming' or reaches its end stop. Use this with the hold action of a switch and pair it with 'Stop dimming' on the release action.",
+        "sv": "Skickar Zigbee-kommandot 'move', så att ljuset dimmas kontinuerligt tills det stoppas med 'Stoppa dimning' eller når sitt ändläge. Använd detta med en strömbrytares håll-händelse och kombinera med 'Stoppa dimning' vid släpp.",
+        "nl": "Stuurt het Zigbee 'move'-commando, waardoor de lamp vloeiend blijft dimmen totdat je 'Stop dimmen' stuurt of het eindpunt bereikt is. Gebruik dit bij de hold-actie van een schakelaar, samen met 'Stop dimmen' bij het loslaten.",
+        "de": "Sendet den Zigbee-Befehl 'move', sodass die Lampe kontinuierlich dimmt, bis sie mit 'Dimmen stoppen' angehalten wird oder den Endanschlag erreicht. Nutze dies bei der Halten-Aktion eines Schalters, zusammen mit 'Dimmen stoppen' beim Loslassen."
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=dim"
+        },
+        {
+          "type": "dropdown",
+          "name": "direction",
+          "title": {
+            "en": "Direction",
+            "sv": "Riktning",
+            "nl": "Richting",
+            "de": "Richtung"
+          },
+          "values": [
+            {
+              "id": "up",
+              "label": {
+                "en": "brighter",
+                "sv": "ljusare",
+                "nl": "feller",
+                "de": "heller"
+              }
+            },
+            {
+              "id": "down",
+              "label": {
+                "en": "dimmer",
+                "sv": "mörkare",
+                "nl": "zachter",
+                "de": "dunkler"
+              }
+            }
+          ]
+        },
+        {
+          "type": "number",
+          "name": "rate",
+          "title": {
+            "en": "Speed",
+            "sv": "Hastighet",
+            "nl": "Snelheid",
+            "de": "Geschwindigkeit"
+          },
+          "min": 1,
+          "max": 254,
+          "step": 1,
+          "placeholder": {
+            "en": "Brightness steps per second (1-254, try 50)",
+            "sv": "Ljusstyrkesteg per sekund (1-254, prova 50)",
+            "nl": "Helderheidsstappen per seconde (1-254, probeer 50)",
+            "de": "Helligkeitsschritte pro Sekunde (1-254, versuche 50)"
+          }
+        }
+      ]
+    },
+    "actions/stop_dim.json": {
+      "id": "stop_dim",
+      "title": {
+        "en": "Stop dimming",
+        "sv": "Stoppa dimning",
+        "nl": "Stop dimmen",
+        "de": "Dimmen stoppen"
+      },
+      "titleFormatted": {
+        "en": "Stop dimming [[device]]",
+        "sv": "Stoppa dimning av [[device]]",
+        "nl": "Stop dimmen van [[device]]",
+        "de": "Dimmen von [[device]] stoppen"
+      },
+      "hint": {
+        "en": "Sends the Zigbee 'stop' command to end a dim started with 'Start dimming', and reads back the brightness the light ended up at.",
+        "sv": "Skickar Zigbee-kommandot 'stop' för att avsluta en dimning som startats med 'Starta dimning', och läser tillbaka ljusstyrkan som lampan hamnade på.",
+        "nl": "Stuurt het Zigbee 'stop'-commando om een dimbeweging van 'Start dimmen' te beëindigen, en leest terug op welke helderheid de lamp is uitgekomen.",
+        "de": "Sendet den Zigbee-Befehl 'stop', um ein mit 'Dimmen starten' begonnenes Dimmen zu beenden, und liest die erreichte Helligkeit zurück."
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=dim"
+        }
+      ]
+    },
+    "actions/set_light_state.json": {
+      "id": "set_light_state",
+      "title": {
+        "en": "Set light state",
+        "sv": "Ställ in ljusläge"
+      },
+      "titleFormatted": {
+        "en": "Set [[device]] to [[brightness]] and [[color]]",
+        "sv": "Ställ [[device]] på [[brightness]] och [[color]]"
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=dim,light_hue,light_saturation",
+          "title": {
+            "en": "Light",
+            "sv": "Lampa"
+          }
+        },
+        {
+          "type": "range",
+          "name": "brightness",
+          "min": 0,
+          "max": 1,
+          "step": 0.01,
+          "label": "%",
+          "labelMultiplier": 100,
+          "labelDecimals": 0,
+          "title": {
+            "en": "Brightness",
+            "sv": "Ljusstyrka"
+          }
+        },
+        {
+          "type": "color",
+          "name": "color",
+          "title": {
+            "en": "Color",
+            "sv": "Färg"
+          }
+        }
+      ]
+    },
+    "actions/adjust_light_temperature.json": {
+      "id": "adjust_light_temperature",
+      "title": {
+        "en": "Adjust color temperature",
+        "sv": "Justera färgtemperatur"
+      },
+      "titleFormatted": {
+        "en": "Adjust [[device]] color temperature by [[delta]]",
+        "sv": "Justera färgtemperaturen för [[device]] med [[delta]]"
+      },
+      "hint": {
+        "en": "Positive values make the light warmer; negative values make it cooler.",
+        "sv": "Positiva värden gör ljuset varmare; negativa värden gör det kallare."
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=light_temperature",
+          "title": {
+            "en": "Light",
+            "sv": "Lampa"
+          }
+        },
+        {
+          "type": "range",
+          "name": "delta",
+          "min": -1,
+          "max": 1,
+          "step": 0.01,
+          "label": "%",
+          "labelMultiplier": 100,
+          "labelDecimals": 0,
+          "title": {
+            "en": "Change",
+            "sv": "Ändring"
+          }
+        }
+      ]
+    },
+    "actions/hue_effect.json": {
+      "id": "hue_effect",
+      "title": {
+        "en": "Set Hue effect",
+        "sv": "Ställ in Hue-effekt"
+      },
+      "titleFormatted": {
+        "en": "Set [[device]] effect to [[effect]]",
+        "sv": "Ställ effekten för [[device]] till [[effect]]"
+      },
+      "hint": {
+        "en": "Uses the native Signify effect protocol. Only lights that expose native Hue effect support can run these effects.",
+        "sv": "Använder Signifys inbyggda effektprotokoll. Endast lampor som exponerar stöd för Hue-effekter kan köra dem."
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=light_hue,light_saturation",
+          "title": {
+            "en": "Light",
+            "sv": "Lampa"
+          }
+        },
+        {
+          "type": "dropdown",
+          "name": "effect",
+          "values": [
+            {
+              "id": "none",
+              "label": {
+                "en": "Stop effect",
+                "sv": "Stoppa effekt"
+              }
+            },
+            {
+              "id": "candle",
+              "label": {
+                "en": "Candle",
+                "sv": "Levande ljus"
+              }
+            },
+            {
+              "id": "fireplace",
+              "label": {
+                "en": "Fireplace",
+                "sv": "Eldstad"
+              }
+            }
+          ],
+          "title": {
+            "en": "Effect",
+            "sv": "Effekt"
+          }
+        }
+      ]
+    },
+    "actions/hue_gradient_3.json": {
+      "id": "hue_gradient_3",
+      "title": {
+        "en": "Set 3-color Hue gradient",
+        "sv": "Ställ in Hue-gradient med 3 färger"
+      },
+      "titleFormatted": {
+        "en": "Set [[device]] gradient to [[color1]], [[color2]], [[color3]]",
+        "sv": "Ställ gradienten för [[device]] till [[color1]], [[color2]], [[color3]]"
+      },
+      "hint": {
+        "en": "For Hue gradient lights that expose Signify cluster 0xFC03, such as Gradient Signe. Unsupported lights fail safely.",
+        "sv": "För Hue-gradientlampor som exponerar Signify-kluster 0xFC03, till exempel Gradient Signe. Lampor utan stöd avvisas säkert."
+      },
+      "args": [
+        {
+          "type": "device",
+          "name": "device",
+          "filter": "class=light&capabilities=light_hue,light_saturation",
+          "title": {
+            "en": "Light",
+            "sv": "Lampa"
+          }
+        },
+        {
+          "type": "color",
+          "name": "color1",
+          "title": {
+            "en": "Color 1",
+            "sv": "Färg 1"
+          }
+        },
+        {
+          "type": "color",
+          "name": "color2",
+          "title": {
+            "en": "Color 2",
+            "sv": "Färg 2"
+          }
+        },
+        {
+          "type": "color",
+          "name": "color3",
+          "title": {
+            "en": "Color 3",
+            "sv": "Färg 3"
+          }
+        }
+      ]
+    },
+    "actions/suppress_sensor.json": {
+      "id": "suppress_sensor",
+      "title": {
+        "en": "Suppress sensor",
+        "sv": "Tysta sensorn",
+        "nl": "Onderdruk sensor",
+        "de": "Sensor unterdrücken"
+      },
+      "titleFormatted": {
+        "en": "Suppress the sensor [[device]] for [[duration]] seconds",
+        "sv": "Tysta sensorn [[device]] i [[duration]] sekunder",
+        "nl": "Onderdruk de sensor [[device]] voor [[duration]] seconden",
+        "de": "Sensor [[device]] für [[duration]] Sekunden unterdrücken"
+      },
+      "args": [
+        {
+          "name": "device",
+          "type": "device",
+          "filter": "class=sensor",
+          "title": {
+            "en": "Sensor",
+            "sv": "Sensor",
+            "nl": "Sensor",
+            "de": "Sensor"
+          }
+        },
+        {
+          "name": "duration",
+          "type": "number",
+          "placeholder": "30",
+          "label": {
+            "en": "time in seconds",
+            "sv": "tid i sekunder",
+            "nl": "tijd in seconden",
+            "de": "Zeit in Sekunden"
+          }
+        }
+      ]
+    },
+    "conditions/temperature_above.json": {
+      "id": "temperature_above",
+      "title": "Temperature is above",
+      "titleFormatted": {
+        "en": "[[device]] Temperature is !{{above|below}} [[temperature]] degrees",
+        "sv": "[[device]] Temperaturen är !{{över|under}} [[temperature]] grader",
+        "nl": "[[device]] Temperatuur is !{{boven|onder}} [[temperature]] graden",
+        "de": "[[device]] Temperatur ist !{{über|unter}} [[temperature]] Grad"
+      },
+      "args": [
+        {
+          "name": "device",
+          "type": "device",
+          "filter": "class=sensor"
+        },
+        {
+          "name": "temperature",
+          "type": "number"
+        }
+      ]
+    },
+    "conditions/luminance_above.json": {
+      "id": "luminance_above",
+      "title": "Luminance is above",
+      "titleFormatted": {
+        "en": "[[device]] Luminance is !{{above|below}} [[luminance]] lux",
+        "sv": "[[device]] Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+        "nl": "[[device]] Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+        "de": "[[device]] Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+      },
+      "args": [
+        {
+          "name": "device",
+          "type": "device",
+          "filter": "class=sensor"
+        },
+        {
+          "name": "luminance",
+          "type": "number"
+        }
+      ]
+    }
+  }
+}

@@ -32,22 +32,23 @@ function expectedDriverIds({ deviceClass, capabilities = [] }) {
 }
 
 const expectedByCard = {
-  Alert: expectedDriverIds({ deviceClass: 'light' }),
-  Blink: expectedDriverIds({ deviceClass: 'light' }),
-  start_dim: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim'] }),
-  stop_dim: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim'] }),
-  set_light_state: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim', 'light_hue', 'light_saturation'] }),
-  adjust_light_temperature: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_temperature'] }),
-  hue_effect: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_hue', 'light_saturation'] }),
-  hue_gradient_3: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_hue', 'light_saturation'] }),
-  suppress_sensor: ['SML001-occupancy', 'SML002-occupancy'],
-  temperature_above: expectedDriverIds({ deviceClass: 'sensor', capabilities: ['measure_temperature'] }),
-  luminance_above: expectedDriverIds({ deviceClass: 'sensor', capabilities: ['measure_luminance'] }),
+  Alert_v2: expectedDriverIds({ deviceClass: 'light' }),
+  Blink_v2: expectedDriverIds({ deviceClass: 'light' }),
+  start_dim_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim'] }),
+  stop_dim_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim'] }),
+  set_light_state_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['dim', 'light_hue', 'light_saturation'] }),
+  adjust_light_temperature_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_temperature'] }),
+  hue_effect_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_hue', 'light_saturation'] }),
+  hue_gradient_3_v2: expectedDriverIds({ deviceClass: 'light', capabilities: ['light_hue', 'light_saturation'] }),
+  suppress_sensor_v2: ['SML001-occupancy', 'SML002-occupancy'],
+  temperature_above_v2: expectedDriverIds({ deviceClass: 'sensor', capabilities: ['measure_temperature'] }),
+  luminance_above_v2: expectedDriverIds({ deviceClass: 'sensor', capabilities: ['measure_luminance'] }),
 };
 
-test('every app-global device Flow argument is scoped by driver_id', () => {
+test('every active app-global device Flow argument is scoped by driver_id', () => {
   for (const filename of flowFiles) {
     const card = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    if (card.deprecated === true) continue;
 
     for (const arg of card.args || []) {
       if (arg.type !== 'device') continue;
@@ -61,9 +62,10 @@ test('every app-global device Flow argument is scoped by driver_id', () => {
   }
 });
 
-test('global Flow cards expose exactly the intended Hue drivers', () => {
+test('active device-scoped Flow cards expose exactly the intended Hue drivers', () => {
   for (const filename of flowFiles) {
     const card = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    if (card.deprecated === true) continue;
     const deviceArg = (card.args || []).find(arg => arg.type === 'device');
 
     if (!deviceArg || !Object.hasOwn(expectedByCard, card.id)) continue;
@@ -76,11 +78,12 @@ test('global Flow cards expose exactly the intended Hue drivers', () => {
   }
 });
 
-test('known foreign driver IDs cannot be selected by Hue global Flow cards', () => {
+test('known foreign driver IDs cannot be selected by active Hue global Flow cards', () => {
   const foreign = new Set(['motionsensor', 'bulb', 'motion.ac02', 'tunable_white_bulb']);
 
   for (const filename of flowFiles) {
     const card = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    if (card.deprecated === true) continue;
 
     for (const arg of card.args || []) {
       if (arg.type !== 'device') continue;
@@ -99,6 +102,7 @@ test('known foreign driver IDs cannot be selected by Hue global Flow cards', () 
 test('device-scoped global cards do not use [[device]] in titleFormatted', () => {
   for (const filename of flowFiles) {
     const card = JSON.parse(fs.readFileSync(filename, 'utf8'));
+    if (card.deprecated === true) continue;
     const deviceArg = (card.args || []).find(arg => arg.type === 'device');
 
     if (!deviceArg || !/(?:^|&)driver_id=[^&]+/.test(String(deviceArg.filter || ''))) continue;
