@@ -1,0 +1,21 @@
+{
+  "id": "luminance_above_v2",
+  "title": "Luminance is above",
+  "titleFormatted": {
+    "en": "Luminance is !{{above|below}} [[luminance]] lux",
+    "sv": "Ljusstyrkan är !{{över|under}} [[luminance]] lux",
+    "nl": "Lichtsterkte is !{{boven|onder}} [[luminance]] lux",
+    "de": "Helligkeit ist !{{über|unter}} [[luminance]] Lux"
+  },
+  "args": [
+    {
+      "name": "device",
+      "type": "device",
+      "filter": "driver_id=SML001|SML001-occupancy|SML002|SML002-occupancy"
+    },
+    {
+      "name": "luminance",
+      "type": "number"
+    }
+  ]
+}
