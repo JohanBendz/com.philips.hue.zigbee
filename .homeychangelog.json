@@ -172,5 +172,8 @@
   },
   "2.3.2": {
     "en": "Restricts Hue Flow cards to devices from this app, preventing foreign-device references from causing Invalid Driver ID crashes."
+  },
+  "2.3.3": {
+    "en": "Restores compatibility with existing Hue Flow cards and adds improved device-specific cards for new Flows. Existing automations need no changes."
   }
 }
